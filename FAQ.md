@@ -119,11 +119,11 @@
 
     A: If your TurtleCoind.exe is fully synced, in simplewallet.exe, simply type `balance`
 
-* **Q: I'm seeing an error like this in TurtleCoind.exe: `2018-Jan-25 23:18:34.620941 WARNING Transaction 862689940f8860b4410a4eef7be326b05aedc6b14a26e68e503769017ee80359 is not valid. Reason: Transaction uses spent key image` Should I worry?**
+* **Q: I'm seeing an error like this in TurtleCoind.exe: `2018-Jan-25 23:18:34.620941 WARNING Transaction 862689940f8860b4410a4eef7be326b05aedc6b14a26e68e503769017ee80359 is not valid. Reason: Transaction uses spent key image`. Should I worry?**
 
     A: No, this is due to large transactions getting resubmitted on the network, and will be hidden from users in a later release of the software.
 
-* **Q: I'm seeing an error like this in TurtleCoind.exe: `2018-Jan-26 01:51:56.920444 INFO [45.50.5.81:24899 INC] Tx verification failed` Should I worry?**
+* **Q: I'm seeing an error like this in TurtleCoind.exe: `2018-Jan-26 01:51:56.920444 INFO [45.50.5.81:24899 INC] Tx verification failed`. Should I worry?**
 
     A: No, this is a variable that has not been assigned, and will be hidden from users in a later release of the software.
 
@@ -138,6 +138,10 @@
 * **Q: What does it mean if my balance is locked?**
     
     A: This is a transfer which hasn't been confirmed by the network yet. It will move into your main balance shortly.
+
+* **Q: In simplewallet.exe, I get an error `Error: failed to save new wallet: boost::filesystem::unique__path: Keyset as registered is invalid`. How can I fix it?
+
+    A: This is caused by a buggy crypto folder. Unfortunately, windows won't let us rename this folder, and we have to use a live linux USB to do it. I would suggest https://tutorials.ubuntu.com/tutorial/tutorial-create-a-usb-stick-on-windows for a user friendly linux distro. Once you have booted into linux, find your hard drive in the file explorer, and navigate to Users, then *Your Windows Username*, AppData, Roaming, Microsoft. You should see a folder called Crypto. Rename this to something, for example, CryptoBackup. Now, reboot back into windows, and try again. For more info, check out this forum post: https://forums.plex.tv/discussion/282149/conversion-failed-new-problem-with-codecs-and-maybe-something-else-since-1-8-0-4109-update
 
 ## Other
 
