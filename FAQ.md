@@ -133,7 +133,7 @@
 
 * **Q: Can I skip the syncing?**
 
-    A: Yes, you can currently use a public node with simplewallet. The keys stay on your PC, so it's secure. Run `simplewallet.exe --daemon-host daemon.turtle.link --daemon-port 11898` in a cmd. Thanks to @tom daemon.turtle.link p11898#7003 for running this node.
+    A: Yes, you can currently use a public node with simplewallet. The keys stay on your PC, so it's secure. Run `simplewallet.exe --daemon-host daemon.turtle.link --daemon-port 11898` in a cmd. Thanks to @tom daemon.turtle.link p11898 for running this node.
 
 * **Q: What does it mean if my balance is locked?**
     
@@ -151,6 +151,10 @@
 * **Q: Why does TRTL have such a high amount of tokens/small amount of decimal places?**
     
     A: Read the great post about the justification for it here: https://medium.com/@turtlecoin/one-trillion-turtles-coin-supply-and-unit-economics-5bfbea0aa1f1
+
+* **Q: Where can I get some free TRTL?**
+    
+    A: Head over to the faucet: https://faucet.trtl.me/ and enter your TRTL address. You can recieve 10 TRTL's, up to 10 times a day. Thanks to @madk for creating this.
 
 * **Q: I have a question which wasn't answered here, what should I do?**
 
