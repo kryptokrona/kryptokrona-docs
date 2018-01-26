@@ -123,6 +123,10 @@
 
     A: No, this is due to large transactions getting resubmitted on the network, and will be hidden from users in a later release of the software.
 
+* **Q: I'm seeing an error like this in TurtleCoind.exe: `2018-Jan-26 01:51:56.920444 INFO [45.50.5.81:24899 INC] Tx verification failed` Should I worry?**
+
+    A: No, this is a variable that has not been assigned, and will be hidden from users in a later release of the software.
+
 * **Q: How long does it take to sync TurtleCoind.exe?**
 
     A: Currently it takes around 1-2 hours. This number will increase as more people use the coin and the blockchain gets larger.
