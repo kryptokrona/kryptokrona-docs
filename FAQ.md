@@ -129,7 +129,11 @@
 
 * **Q: How long does it take to sync TurtleCoind.exe?**
 
-    A: Currently it takes around 1-2 hours. This number will increase as more people use the coin and the blockchain gets larger.
+    A: Currently it takes around 1-2 hours. This number will increase as more people use the coin and the blockchain gets larger. Want to skip the syncing? See "Can I skip the syncing?"
+
+* **Q: Can I skip the syncing?**
+
+    A: Yes, you can currently use a public node with simplewallet. The keys stay on your PC, so it's secure. Run `simplewallet.exe --daemon-host daemon.turtle.link --daemon-port 11898` in a cmd. Thanks to @tom daemon.turtle.link p11898#7003 for running this node.
 
 * **Q: What does it mean if my balance is locked?**
     
@@ -143,6 +147,10 @@
   * https://github.com/rocksteadytc/ooze
   * https://github.com/turtlecoin/turtle-wallet
   * https://github.com/turtlecoin/desktop-xamarin
+
+* **Q: Why does TRTL have such a high amount of tokens/small amount of decimal places?**
+    
+    A: Read the great post about the justification for it here: https://medium.com/@turtlecoin/one-trillion-turtles-coin-supply-and-unit-economics-5bfbea0aa1f1
 
 * **Q: I have a question which wasn't answered here, what should I do?**
 
