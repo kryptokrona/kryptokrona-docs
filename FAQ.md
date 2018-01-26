@@ -37,7 +37,7 @@
   * If you're using an amd card, there should be an intensity value you can lower in amd.txt.
   * If you're using just a CPU, you can delete the cores being used from cpu.txt.
 
-* **Q: How can I only mine with my gpu/cpu?**
+* **Q: How can I use just my gpu/cpu to mine?**
 
     A: If you are using xmr-stak, you can make a batch file to start the miner. You can then use the commands `--noCPU`, `--noNVIDIA`, and `--noAMD` as needed. For example, put the following in a .txt file, change the extension to .bat, and then double click the file: `xmr-stak.exe --noCPU`. This will run the miner without using the CPU.
 
@@ -55,7 +55,19 @@
 
 * **Q: I get a socket error when connecting to a pool. What am I doing wrong?**
 
-    A: Generally, this is due to an incorrectly configured config. In the directory where your xmr-stak.exe is, there should be a file called `config.txt`. Open this up, and check that it looks similar to this: `{"pool_address" : "eu.turtlepool.space:3333", "wallet_address" : "TRTLv2Fyavy8CXG8BPEbNeCHFZ1fuDCYCZ3vW5H5LXN4K2M2MHUpTENip9bbavpHvvPwb4NDkBWrNgURAd5DB38FHXWZyoBh4wW", "pool_password" : "x", "use_nicehash" : false, "use_tls" : false, "tls_fingerprint" : "", "pool_weight" : 10 },`. Your wallet address is the address starting with TRTL, not your wallet filename. Some users have experienced issues with their firewall or antivirus as well however, so perhaps try disabling these if you are experiencing this.
+    A: Generally, this is due to an incorrectly configured config. In the directory where your xmr-stak.exe is, there should be a file called `config.txt`. Open this up, and check that it looks similar to this: 
+
+    ```
+    {"pool_address" : "eu.turtlepool.space:3333",
+     "wallet_address" : "TRTLv2Fyavy8CXG8BPEbNeCHFZ1fuDCYCZ3vW5H5LXN4K2M2MHUpTENip9bbavpHvvPwb4NDkBWrNgURAd5DB38FHXWZyoBh4wW",
+     "pool_password" : "x",
+     "use_nicehash" : false,
+     "use_tls" : false,
+     "tls_fingerprint" : "",
+     "pool_weight" : 10 },
+    ```
+
+    Your wallet address is the address starting with TRTL, not your wallet filename. Some users have experienced issues with their firewall or antivirus as well however, so perhaps try disabling these if you are experiencing this issue.
 
 * **Q: What does pool weight mean?**
 
@@ -110,6 +122,10 @@
 * **Q: How long does it take to sync TurtleCoind.exe?**
 
     A: Currently it takes around 1-2 hours. This number will increase as more people use the coin and the blockchain gets larger.
+
+* **Q: What does it mean if my balance is locked?**
+    
+    A: This is a transfer which hasn't been confirmed by the network yet. It will move into your main balance shortly.
 
 ## Other
 
