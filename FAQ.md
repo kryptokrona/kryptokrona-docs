@@ -33,11 +33,11 @@
 * **Q: My PC is laggy when I'm mining. Can I fix this?**
 
     A:
-  * If you're using a nvidia card, open up nvidia.txt, in the same directory as the xmr-stak.exe. Try setting bfactor to 8 and bsleep to 100, and then reload your miner after saving the file. If it's still laggy, try increasing both values slightly. This will cause you to get less hashes per second, but can let you use your PC more effectively. You can try tweaking the value to increase your hashrate. Some people also achieve success by lowering the thread count.
-  * If you're using an amd card, there should be an intensity value you can lower in amd.txt.
+  * If you're using a Nvidia card, open up nvidia.txt, in the same directory as the xmr-stak.exe. Try setting bfactor to 8 and bsleep to 100, and then reload your miner after saving the file. If it's still laggy, try increasing both values slightly. This will cause you to get less hashes per second, but can let you use your PC more effectively. You can try tweaking the value to increase your hashrate. Some people also achieve success by lowering the thread count.
+  * If you're using an AMD card, there should be an intensity value you can lower in amd.txt.
   * If you're using just a CPU, you can delete the cores being used from cpu.txt.
 
-* **Q: How can I use just my gpu/cpu to mine?**
+* **Q: How can I use just my GPU/CPU to mine?**
 
     A: If you are using xmr-stak, you can make a batch file to start the miner. You can then use the commands `--noCPU`, `--noNVIDIA`, and `--noAMD` as needed. For example, put the following in a .txt file, change the extension to .bat, and then double click the file: `xmr-stak.exe --noCPU`. This will run the miner without using the CPU.
 
@@ -47,7 +47,7 @@
 
 * **Q: I got banned from my mining pool. Why?**
 
-    A: If you submit lots of invalid shares, a pool might ban you. The reason for invalid shares can be your hardware getting overworked, high ping to the pool, or your difficulty being set to low. You should get unbanned after approximately 20 minutes. This is a good time to setup some backup pools!
+    A: If you submit lots of invalid shares, a pool might ban you. Possible reasons for invalid shares can be your hardware getting overworked, high ping to the pool, or your difficulty being set too low. You should get unbanned after approximately 20 minutes. This is a good time to setup some backup pools!
 
 * **Q: Should I set up multiple pools?**
 
@@ -107,7 +107,7 @@
 
     A: In simplewallet.exe, type `export_keys`, and save these two. Then, type `reset`, and close TurtleCoind.exe and simplewallet.exe, and reopen them both.
 
-* **Q: How do I send money with turtlecoin?**
+* **Q: How do I send TRTL's?**
 
     A: In simplewallet.exe, enter `transfer 3 address amount`, where address is your address starting with TRTL, and amount is the amount you want to send. Currently, the fee to transfer is 0.1 TRTL's, so you need to send a tiny bit less than your entire balance.
 
@@ -142,6 +142,15 @@
 * **Q: In simplewallet.exe, I get an error `Error: failed to save new wallet: boost::filesystem::unique__path: Keyset as registered is invalid`. How can I fix it?**
 
     A: This is caused by some broken windows crypto keys. Navigate to C:/Users/*Your Windows Username*/AppData/Roaming/Microsoft/Crypto/RSA/. There should be a folder in there, with a long name, like `S-1-5-21-1416222650-108526586-4052533318-1000`. Enter this folder, and delete the files in there. Then reboot.
+
+* **Q: When I open TurtleCoind on a Mac, I get an error `Illegal instruction: 4`. How can I fix it?**
+
+    A: This is a known issue with older macs, and currently has no fix unfortunately, aside from compiling the binaries yourself. It is due to the version of libboost in the compiled software being incompatible with older macs. See https://github.com/turtlecoin/meta/issues/26. If you want to attempt to compile yourself, a rough guide is given below, a more in-depth guide will be created at some point. Thanks to @jprjr.
+  * Install homebrew
+  * Install boost and cmake with homebrew
+  * Download the turtle source, from https://github.com/turtlecoin/turtlecoin/
+  * Create a build directory, then run `cmake /path/to/source/directory`
+  * Run `make`
     
 ## Other
 
@@ -158,7 +167,7 @@
 
 * **Q: Where can I get some free TRTL?**
     
-    A: Head over to the faucet: https://faucet.trtl.me/ and enter your TRTL address. You can recieve 10 TRTL's, up to 3 times a day. Thanks to @madk for creating this.
+    A: Head over to the faucet: https://faucet.trtl.me/ and enter your TRTL address. You can receive 10 TRTL's, up to 3 times a day. Thanks to @madk for creating this.
 
 * **Q: I have a question which wasn't answered here, what should I do?**
 
