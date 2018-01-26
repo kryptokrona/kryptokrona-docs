@@ -141,8 +141,8 @@
 
 * **Q: In simplewallet.exe, I get an error `Error: failed to save new wallet: boost::filesystem::unique__path: Keyset as registered is invalid`. How can I fix it?
 
-    A: This is caused by a buggy crypto folder. Unfortunately, windows won't let us rename this folder, and we have to use a live linux USB to do it. I would suggest https://tutorials.ubuntu.com/tutorial/tutorial-create-a-usb-stick-on-windows for a user friendly linux distro. Once you have booted into linux, find your hard drive in the file explorer, and navigate to Users, then *Your Windows Username*, AppData, Roaming, Microsoft. You should see a folder called Crypto. Rename this to something, for example, CryptoBackup. Now, reboot back into windows, and try again. For more info, check out this forum post: https://forums.plex.tv/discussion/282149/conversion-failed-new-problem-with-codecs-and-maybe-something-else-since-1-8-0-4109-update
-
+    A: This is caused by a buggy crypto folder. Navigate to C:/Users/*Your Windows Username*/AppData/Roaming/Microsoft/Crypto/RSA/. There should be a folder in there, with a long name, like `S-1-5-21-1416222650-108526586-4052533318-1000`. Enter this folder, and delete the files in there. Then reboot.
+    
 ## Other
 
 * **Q: Are there any GUI wallets?**
