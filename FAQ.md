@@ -139,9 +139,9 @@
     
     A: This is a transfer which hasn't been confirmed by the network yet. It will move into your main balance shortly.
 
-* **Q: In simplewallet.exe, I get an error `Error: failed to save new wallet: boost::filesystem::unique__path: Keyset as registered is invalid`. How can I fix it?
+* **Q: In simplewallet.exe, I get an error `Error: failed to save new wallet: boost::filesystem::unique__path: Keyset as registered is invalid`. How can I fix it?**
 
-    A: This is caused by a buggy crypto folder. Navigate to C:/Users/*Your Windows Username*/AppData/Roaming/Microsoft/Crypto/RSA/. There should be a folder in there, with a long name, like `S-1-5-21-1416222650-108526586-4052533318-1000`. Enter this folder, and delete the files in there. Then reboot.
+    A: This is caused by some broken windows crypto keys. Navigate to C:/Users/*Your Windows Username*/AppData/Roaming/Microsoft/Crypto/RSA/. There should be a folder in there, with a long name, like `S-1-5-21-1416222650-108526586-4052533318-1000`. Enter this folder, and delete the files in there. Then reboot.
     
 ## Other
 
