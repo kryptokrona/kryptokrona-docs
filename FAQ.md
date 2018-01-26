@@ -81,6 +81,10 @@
 
     A: http://monerobenchmarks.info/ is a good source for this. Look up your CPU and GPU with these links: http://monerobenchmarks.info/searchCPU.php http://monerobenchmarks.info/searchGPU.php
 
+* **Q: I'm missing the file vcruntime140.dll. Where can I get this?**
+
+    A: Try installing this: https://www.microsoft.com/en-us/download/details.aspx?id=52685
+
 ## Wallet / TurtleCoind issues
 
 * **Q: I've opened the wallet, and I'm getting lots of red messages with an error like this: `2018-Jan-25 20:31:24.088189 ERROR   [BlockchainSynchronizer] Failed to query outdated pool transaction: NodeErrorCategory:7, Can't connect to daemon`**
