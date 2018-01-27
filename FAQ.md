@@ -84,6 +84,10 @@
 * **Q: I'm missing the file vcruntime140.dll. Where can I get this?**
 
     A: Try installing this: https://www.microsoft.com/en-us/download/details.aspx?id=52685
+    
+* **Q: I'm getting an error in xmr-stak: `MEMORY ALLOC FAILED: VirtualAlloc failed. Reboot might help`
+
+    A: This is nothing to worry about, and is because xmr-stak failed to set up largepages. This can slightly raise your hash rate, and xmr-stak attempts to set it up, but it needs a reboot to apply.
 
 ## Wallet / TurtleCoind issues
 
