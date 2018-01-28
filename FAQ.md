@@ -102,7 +102,11 @@
 * **Q: I've opened the wallet, and I'm getting lots of red messages with an error like this, and I can't type: `2018-Jan-25 21:59:57.595104 ERROR   [BlockchainSynchronizer] Failed to query outdated pool transaction: NodeErrorCategory:3, Network error`**
 
     A: Your daemon hasn't finished syncing yet. Keep TurtleCoind.exe open, and wait until you are 0 days behind the current block, and it should print out a green message saying "SYNCHRONISED OK"
+    
+* **Q: I've opened the wallet, and I'm getting lots of red messages with an error like this: `2019-Jan-29 01:24:48.088688 ERROR [BlockchainSynchronizer] Failed to query blocks: NodeErrorCategory:5, Internal node error`
 
+    A: Exit simplewallet.exe and TurtleCoind.exe, then reopen TurtleCoind.exe and simplewallet and wait for sync to complete if needed, then type `reset` in simplewallet.exe. You might need to repeat this process a few times.
+    
 * **Q: I made a paper wallet, how do I use it?**
 
     A: Once you've opened TurtleCoind.exe and let it sync, open up simplewallet.exe and type `i` to import. It will then ask you to choose a new wallet name, and a password. Once you have done that, it will prompt you for your two keys, the view key, and spend key. You should have got these when you made your paper wallet.
@@ -113,7 +117,7 @@
 
 * **Q: I think I should have more money in my balance than it is showing, what should I do?**
 
-    A: In simplewallet.exe, type `export_keys`, and save the view and spend key somewhere safe in case something goes wrong. Then, type `reset`, and close TurtleCoind.exe and simplewallet.exe, and reopen them both.
+    A: In simplewallet.exe, type `export_keys`, and save the view and spend key somewhere safe in case something goes wrong, if you haven't already. Then, type `reset`, and close TurtleCoind.exe and simplewallet.exe, and reopen them both. You might need to repeat this process a few times.
 
 * **Q: How do I send TRTL's?**
 
