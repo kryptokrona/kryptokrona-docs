@@ -48,14 +48,23 @@ Finally, we can run the miner with the following parameters:
 You'll need to select a pool to participate in for the first `-o` parameter. Pick one that is closest to your location. Make sure to include the port number as well. Here is the current list:
 
 **z-pool.com:3333 (EU North)**
+
 **hk.turtlepool.space:3333 (Hong Kong)**
+
 **pool.turtleco.in:3333 (USA West Coast)**
+
 **auspool.turtleco.in:3333 (AUS)**
+
 **eu.turtlepool.space:3333 (UK)**
+
 **us.turtlepool.space:3333 (USA South)**
+
 **ny.minetrtl.us:3333 (USA NYC)**
+
 **slowandsteady.fun:3333**
+
 **trtl.mine2gether.com:3335**
+
 **turtle.atpool.party:3333 (France)**
 
 For the `-u` parameter, simply paste your TurtleCoin wallet's address.
