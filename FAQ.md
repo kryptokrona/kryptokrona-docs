@@ -8,7 +8,7 @@
 
 * **Q: I'm using a Mac, can I still mine?**
 
-    A: Yes, you can follow the guide for windows, but you'll need to compile xmr-stak yourself: https://github.com/fireice-uk/xmr-stak/blob/master/doc/compile_MacOS.md
+    A: Yes, you can follow the guide for windows, but you'll need to compile xmr-stak yourself, and download the mac version of the wallet: http://latest.turtlecoin.lol https://github.com/fireice-uk/xmr-stak/blob/master/doc/compile_MacOS.md
 
 * **Q: I've started mining, how can I view my stats?**
 
@@ -88,6 +88,10 @@
 * **Q: I'm getting an error in xmr-stak: `MEMORY ALLOC FAILED: VirtualAlloc failed. Reboot might help`**
 
     A: This is nothing to worry about, and is because xmr-stak failed to set up largepages. This can slightly raise your hash rate, and xmr-stak attempts to set it up, but it needs a reboot to apply.
+    
+* **Q: Can I lower the 2% fee taken by xmr-stak?**
+
+    A: This is possible, however please note that these devs are independent from the TurtleCoin project and are doing some great work, so I would suggest leaving it as is. If you do wish to change/remove the dev fee, you will have to compile xmr-stak yourself, they have instructions to do this on their site - https://github.com/fireice-uk/xmr-stak/blob/master/doc/compile.md . Once you have downloaded the code, you need to change the file `donate-level.hpp` in the xmr-stak/xmr-stak/ folder.
 
 ## Wallet / TurtleCoind issues
 
@@ -109,7 +113,7 @@
 
 * **Q: I think I should have more money in my balance than it is showing, what should I do?**
 
-    A: In simplewallet.exe, type `export_keys`, and save these two. Then, type `reset`, and close TurtleCoind.exe and simplewallet.exe, and reopen them both.
+    A: In simplewallet.exe, type `export_keys`, and save the view and spend key somewhere safe in case something goes wrong. Then, type `reset`, and close TurtleCoind.exe and simplewallet.exe, and reopen them both.
 
 * **Q: How do I send TRTL's?**
 
@@ -149,12 +153,7 @@
 
 * **Q: When I open TurtleCoind on a Mac, I get an error `Illegal instruction: 4`. How can I fix it?**
 
-    A: This is a known issue with older macs, and currently has no fix unfortunately, aside from compiling the binaries yourself. It is due to the version of libboost in the compiled software being incompatible with older macs. See https://github.com/turtlecoin/meta/issues/26. If you want to attempt to compile yourself, a rough guide is given below, a more in-depth guide will be created at some point. Thanks to @jprjr.
-  * Install homebrew
-  * Install boost and cmake with homebrew
-  * Download the turtle source, from https://github.com/turtlecoin/turtlecoin/
-  * Create a build directory, then run `cmake /path/to/source/directory`
-  * Run `make`
+    A: This is a known issue with older macs or un-updated macs. The current advice is to use the new build which should fix it for most people - http://latest.turtlecoin.lol . If this doesn't fix it, compiling on your machine may fix it. See the instructions here - https://github.com/turtlecoin/turtlecoin#apple . The new build should work on machines High Sierra or upwards, unless they are quite old. Machines from 2013 have been confirmed working, whilst an older 2010 machine does not.
     
 ## Other
 
