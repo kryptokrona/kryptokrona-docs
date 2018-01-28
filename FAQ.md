@@ -103,7 +103,7 @@
 
     A: Your daemon hasn't finished syncing yet. Keep TurtleCoind.exe open, and wait until you are 0 days behind the current block, and it should print out a green message saying "SYNCHRONISED OK"
     
-* **Q: I've opened the wallet, and I'm getting lots of red messages with an error like this: `2019-Jan-29 01:24:48.088688 ERROR [BlockchainSynchronizer] Failed to query blocks: NodeErrorCategory:5, Internal node error`
+* **Q: I've opened the wallet, and I'm getting lots of red messages with an error like this: `2019-Jan-29 01:24:48.088688 ERROR [BlockchainSynchronizer] Failed to query blocks: NodeErrorCategory:5, Internal node error`**
 
     A: Exit simplewallet.exe and TurtleCoind.exe, then reopen TurtleCoind.exe and simplewallet and wait for sync to complete if needed, then type `reset` in simplewallet.exe. You might need to repeat this process a few times.
     
