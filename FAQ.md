@@ -126,6 +126,10 @@
 * **Q: How do I send money to exchanges / use payment ID?**
 
     A: In simplewallet.exe, type `transfer 3 addresstheygaveyou amount -p IDTHEYGAVEYOU`
+    
+* **Q: What is mixin?**
+
+    A: Mixin is how many times your transaction ix "mixed" with others for obfuscation and privacy. Most people suggest a mixin of 3. Larger mixin's will take longer to be confirmed unless a higher fee is used. A mixin of 0 can be used to have a non private transaction.
 
 * **Q: How can I view my balance?**
 
