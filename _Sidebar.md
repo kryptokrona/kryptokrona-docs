@@ -1,5 +1,5 @@
--Home
--General Info
--Getting Started
--Contributing
+- Home
+- General Info
+- Getting Started
+- Contributing
 
