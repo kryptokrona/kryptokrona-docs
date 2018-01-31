@@ -9,7 +9,7 @@ Download this latest release of TurtleCoin. https://github.com/turtlecoin/turtle
 
 3. In the TurtleCoin folder on your desktop, double click the TurtleCoind.exe file to start syncing your blockchain. Don't worry if you don't know what that means, but it lets our wallet talk to the network, so leave it running!
 
-4. You should be syncing and seeing yellow and white text. When you see green text, you are done syncing, it should only take 10-15 minutes.
+4. You should be syncing and seeing yellow and white text. When you see green text, you are done syncing, it should take around 1-2 hours.
 
 5. run simplewallet.exe. If you see an error that says you can't connect to daemon, that means you closed the TurtleCoind.exe window, or it means you're not done syncing.
 
