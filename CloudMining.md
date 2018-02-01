@@ -8,23 +8,31 @@
 See:  https://github.com/turtlecoin/turtlecoin/wiki/How-To-Mine-TurtleCoin-on-Windows
 
 
-###Get started with GCP
+### Get started with GCP
 See:  https://cloud.google.com/compute/docs/quickstart-linux
 
 
 ###  Mining Instructions For Debian Linux on GCP
 SSH into GCP instance and enter:
+
 `sudo apt install libmicrohttpd-dev libssl-dev cmake build-essential libhwloc-dev`
+
 `git clone https://github.com/fireice-uk/xmr-stak.git`
+
 `mkdir xmr-stak/build`
+
 `cd xmr-stak/build`
+
 `cmake -DCUDA_ENABLE=OFF -DOpenCL_ENABLE=OFF ..`
+
 `make install`
+
 `cd bin`
+
 `./xmr-stak`
 
 
-###Configure XMR-Stak Miner
+### Configure XMR-Stak Miner
 
 1. When it asks if you want to mine Monero or Aeon, choose `MONERO`
 
@@ -44,7 +52,7 @@ Add all of the pools in the list from step 6, and give them all a weight of 10 i
 8. DONE!! The miner will now start scanning your hardware and will begin mining.
 
 
-###Mining Pools
+### Mining Pools
 #### z-pool.com:3333 (EU North)
 
 #### hk.turtlepool.space:3333 (Hong Kong)
