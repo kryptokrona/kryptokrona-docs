@@ -52,6 +52,10 @@
 * **Q: Should I set up multiple pools?**
 
     A: Yes, in case you get banned, or a pool goes down for sometime, you can keep mining. A good amount to have would be at least three.
+    
+* **Q: Where can I find a list of pools?**
+
+    A: http://turtle-coin.com/#pools - This website also shows some other nice stats like hashrate, and min payout.
 
 * **Q: I get a socket error when connecting to a pool. What am I doing wrong?**
 
