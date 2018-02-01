@@ -194,7 +194,7 @@
 
 * **Q: Where can I get some free TRTL?**
     
-    A: Head over to the faucet: https://faucet.trtl.me/ and enter your TRTL address. You can receive 10 TRTL's, up to 3 times a day. Thanks to @madk for creating this.
+    A: Head over to the faucet: https://faucet.trtl.me/ and enter your TRTL address. The amount you can recieve is limited, to share the TRTL's for all. Thanks to @madk for creating this.
     
 * **Q: Are there any light wallets / mobile wallets?**
 
