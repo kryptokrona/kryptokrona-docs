@@ -203,6 +203,10 @@
 * **Q: What is the #raindance channel / how does it work?**
 
     A: Someone, or multiple people (possibly you!) donate to the bot. When it reaches 10,000 TRTL or more, it will make an announcement in the raindance channel, telling you rain is coming. A short time after, it will make an another announcement, giving you 60 seconds to PM/DM (private message/direct message) the bot, with your wallet address. Once the 60 seconds elapses, everyone who PM'd the bot their wallet address will get their share of the donated TRTL. For example, if 20,000 TRTL is donated, and 20 people PM the bot, each person will get 2000 TRTL each.
+    
+* **Q: Where is the blockchain stored?**
+
+    A: On Windows, it is in `appdata/roaming/turtlecoin`. On Mac and Linux, it is in `~/.turtlecoin`.
 
 * **Q: I have a question which wasn't answered here, what should I do?**
 
