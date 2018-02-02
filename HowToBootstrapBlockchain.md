@@ -6,6 +6,7 @@ This guide will help you install a recent copy of the Blockchain.  This should s
 1. Make sure TurtleCoind.exe is not running
 2. Open File Explorer and Type %APPDATA%\TurtleCoin and hit enter.
 ![file explorer](images/file_explorer.jpg)
+
 **Note: if the folder doesn't exist, just go to %APPDATA% instead and create the TurtleCoin folder**
 
 3. Delete the following if they exist
