@@ -187,3 +187,7 @@
 * **Q: I have a question which wasn't answered here, what should I do?**
 
     A: Join the discord, and come to the #help channel, we'll try and fix any issues: http://chat.turtlecoin.lol/
+
+* **Q: Can I bootstrap the blockchain so I don't have to sync from the beginning?**
+
+    A: Yes!  See [help.txt](https://s3-us-west-2.amazonaws.com/turtlecoin.blockchain.bootstrap/help.txt) for full details.  You can download the [blockindexes.bin](https://s3-us-west-2.amazonaws.com/turtlecoin.blockchain.bootstrap/blockindexes.bin) and [blocks.bin](https://s3-us-west-2.amazonaws.com/turtlecoin.blockchain.bootstrap/blocks.bin).  Curious on when these files were last updated?  See [date.txt](https://s3-us-west-2.amazonaws.com/turtlecoin.blockchain.bootstrap/date.txt).   
