@@ -71,7 +71,7 @@
      "pool_weight" : 10 },
     ```
 
-    Your wallet address is the address starting with TRTL, not your wallet filename. Some users have experienced issues with their firewall or antivirus as well however, so perhaps try disabling these if you are experiencing this issue.
+    Your wallet address is the address starting with TRTL, not your wallet filename. This error can also occur if the pool is having issues - try another pool and see if the error continues. Some users have experienced issues with their firewall or antivirus as well however, so perhaps try disabling these if you are experiencing this issue.
 
 * **Q: What does pool weight mean?**
 
