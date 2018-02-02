@@ -196,6 +196,10 @@
   * https://github.com/rocksteadytc/ooze
   * https://github.com/turtlecoin/turtle-wallet
   
+* **Q: I'm using the GUI wallet, and when I start it up I get an error: `Could not load file or assembly Newtonsoft.Json`**
+
+    A: You need to download the .zip file from the github, not just the .exe file - https://github.com/turtlecoin/desktop-xamarin/releases , you need all these files for the GUI to work.
+  
 * **Q: Why does TRTL have such a high amount of tokens/small amount of decimal places?**
 
     A: Read the great post about the justification for it here: https://medium.com/@turtlecoin/one-trillion-turtles-coin-supply-and-unit-economics-5bfbea0aa1f1
