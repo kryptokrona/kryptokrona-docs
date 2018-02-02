@@ -52,14 +52,14 @@
 * **Q: Should I set up multiple pools?**
 
     A: Yes, in case you get banned, or a pool goes down for sometime, you can keep mining. A good amount to have would be at least three.
-    
+
 * **Q: Where can I find a list of pools?**
 
     A: http://turtle-coin.com/#pools - This website also shows some other nice stats like hashrate, and min payout.
 
 * **Q: I get a socket error when connecting to a pool. What am I doing wrong?**
 
-    A: Generally, this is due to an incorrectly configured config. In the directory where your xmr-stak.exe is, there should be a file called `config.txt`. Open this up, and check that it looks similar to this: 
+    A: Generally, this is due to an incorrectly configured config. In the directory where your xmr-stak.exe is, there should be a file called `config.txt`. Open this up, and check that it looks similar to this:
 
     ```
     {"pool_address" : "eu.turtlepool.space:3333",
@@ -88,11 +88,11 @@
 * **Q: I'm missing the file vcruntime140.dll. Where can I get this?**
 
     A: Try installing this: https://www.microsoft.com/en-us/download/details.aspx?id=52685
-    
+
 * **Q: I'm getting an error in xmr-stak: `MEMORY ALLOC FAILED: VirtualAlloc failed. Reboot might help`**
 
     A: This is nothing to worry about, and is because xmr-stak failed to set up largepages. This can slightly raise your hash rate, and xmr-stak attempts to set it up, but it needs a reboot to apply.
-    
+
 * **Q: Can I lower the 2% fee taken by xmr-stak?**
 
     A: This is possible, however please note that these devs are independent from the TurtleCoin project and are doing some great work, so I would suggest leaving it as is. If you do wish to change/remove the dev fee, you will have to compile xmr-stak yourself, they have instructions to do this on their site - https://github.com/fireice-uk/xmr-stak/blob/master/doc/compile.md . Once you have downloaded the code, you need to change the file `donate-level.hpp` in the xmr-stak/xmr-stak/ folder.
@@ -106,11 +106,11 @@
 * **Q: I've opened the wallet, and I'm getting lots of red messages with an error like this, and I can't type: `2018-Jan-25 21:59:57.595104 ERROR   [BlockchainSynchronizer] Failed to query outdated pool transaction: NodeErrorCategory:3, Network error`**
 
     A: Your daemon hasn't finished syncing yet. Keep TurtleCoind.exe open, and wait until you are 0 days behind the current block, and it should print out a green message saying "SYNCHRONISED OK"
-    
+
 * **Q: I've opened the wallet, and I'm getting lots of red messages with an error like this: `2019-Jan-29 01:24:48.088688 ERROR [BlockchainSynchronizer] Failed to query blocks: NodeErrorCategory:5, Internal node error`**
 
     A: Exit simplewallet.exe and TurtleCoind.exe, then reopen TurtleCoind.exe and simplewallet and wait for sync to complete if needed, then type `reset` in simplewallet.exe. You might need to repeat this process a few times.
-    
+
 * **Q: I made a paper wallet, how do I use it?**
 
     A: Once you've opened TurtleCoind.exe and let it sync, open up simplewallet.exe and type `i` to import. It will then ask you to choose a new wallet name, and a password. Once you have done that, it will prompt you for your two keys, the view key, and spend key. You should have got these when you made your paper wallet.
@@ -130,7 +130,7 @@
 * **Q: How do I send money to exchanges / use payment ID?**
 
     A: In simplewallet.exe, type `transfer 3 addresstheygaveyou amount -p IDTHEYGAVEYOU`
-    
+
 * **Q: What is mixin?**
 
     A: Mixin is how many times your transaction ix "mixed" with others for obfuscation and privacy. Most people suggest a mixin of 3. Larger mixin's will take longer to be confirmed unless a higher fee is used. A mixin of 0 can be used to have a non private transaction.
@@ -155,8 +155,12 @@
 
     A: Yes, you can currently use a public node with simplewallet. The keys stay on your PC, so it's secure. Run `simplewallet.exe --daemon-host daemon.turtle.link --daemon-port 11898` in a cmd. Thanks to @tom daemon.turtle.link p11898 for running this node.
 
+* **Q: Can I speed up the syncing of the blockchain?***
+
+    A: You can grab a recent copy of the blockchain and incrementally sync from there.  See [How to Bootstrap the TurtleCoin Blockchain](HowToBootstrapBlockchain.md) for instructions.
+
 * **Q: What does it mean if my balance is locked?**
-    
+
     A: This is a transfer which hasn't been confirmed by the network yet. It will move into your main balance shortly.
 
 * **Q: In simplewallet.exe, I get an error `Error: failed to save new wallet: boost::filesystem::unique__path: Keyset as registered is invalid`. How can I fix it?**
@@ -166,7 +170,7 @@
 * **Q: When I open TurtleCoind on a Mac, I get an error `Illegal instruction: 4`. How can I fix it?**
 
     A: This is a known issue with older macs or un-updated macs. The current advice is to use the new build which should fix it for most people - http://latest.turtlecoin.lol . If this doesn't fix it, compiling on your machine may fix it. See the instructions here - https://github.com/turtlecoin/turtlecoin#apple . The new build should work on machines High Sierra or upwards, unless they are quite old. Machines from 2013 have been confirmed working, whilst an older 2010 machine does not.
-    
+
 ## Other
 
 * **Q: Are there any GUI wallets?**
@@ -177,17 +181,13 @@
   * https://github.com/turtlecoin/desktop-xamarin
 
 * **Q: Why does TRTL have such a high amount of tokens/small amount of decimal places?**
-    
+
     A: Read the great post about the justification for it here: https://medium.com/@turtlecoin/one-trillion-turtles-coin-supply-and-unit-economics-5bfbea0aa1f1
 
 * **Q: Where can I get some free TRTL?**
-    
+
     A: Head over to the faucet: https://faucet.trtl.me/ and enter your TRTL address. You can receive 10 TRTL's, up to 3 times a day. Thanks to @madk for creating this.
 
 * **Q: I have a question which wasn't answered here, what should I do?**
 
     A: Join the discord, and come to the #help channel, we'll try and fix any issues: http://chat.turtlecoin.lol/
-
-* **Q: Can I bootstrap the blockchain so I don't have to sync from the beginning?**
-
-    A: Yes!  See [help.txt](https://s3-us-west-2.amazonaws.com/turtlecoin.blockchain.bootstrap/help.txt) for full details.  You can download the [blockindexes.bin](https://s3-us-west-2.amazonaws.com/turtlecoin.blockchain.bootstrap/blockindexes.bin) and [blocks.bin](https://s3-us-west-2.amazonaws.com/turtlecoin.blockchain.bootstrap/blocks.bin).  Curious on when these files were last updated?  See [date.txt](https://s3-us-west-2.amazonaws.com/turtlecoin.blockchain.bootstrap/date.txt).   
