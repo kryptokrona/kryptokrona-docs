@@ -108,6 +108,10 @@
 * **Q: What is the miner executable / why isn't it working?**
 
     A: This is a solo miner, which is CPU only. This means to gain any TRTL, you have to find a block by yourself, which unless you have many powerful CPU's, is very unlikely. We strongly recommend using a pool, and a miner such as xmr-stak or xmrig. Nethertheless, if you want to try it out, open a command prompt in the same directory, and run `miner.exe --address TRTL...` replacing `TRTL...` with your full TRTL address. You need to have TurtleCoind.exe open and synced to use this miner, unlike the conventional miners where the pool hosts the daemon.
+    
+* **Q: Is there a calculator to see how much TRTL I'll make per day?**
+
+    A: http://mglolenstine.xyz/TRTLcalc/ - thanks to @LifE[MGlolenstine] for creating this
 
 ## Wallet / TurtleCoind issues
 
