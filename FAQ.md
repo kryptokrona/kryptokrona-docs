@@ -88,6 +88,10 @@
 * **Q: I'm missing the file vcruntime140.dll. Where can I get this?**
 
     A: Try installing this: https://www.microsoft.com/en-us/download/details.aspx?id=52685
+    
+* **Q: When I run xmr-stak I get an error: "The application was unable to start correctly (0x000007b)"**
+
+    A: Try installing this: https://go.microsoft.com/fwlink/?LinkId=746572
 
 * **Q: I'm getting an error in xmr-stak: `MEMORY ALLOC FAILED: VirtualAlloc failed. Reboot might help`**
 
