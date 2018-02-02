@@ -96,6 +96,14 @@
 * **Q: Can I lower the 2% fee taken by xmr-stak?**
 
     A: This is possible, however please note that these devs are independent from the TurtleCoin project and are doing some great work, so I would suggest leaving it as is. If you do wish to change/remove the dev fee, you will have to compile xmr-stak yourself, they have instructions to do this on their site - https://github.com/fireice-uk/xmr-stak/blob/master/doc/compile.md . Once you have downloaded the code, you need to change the file `donate-level.hpp` in the xmr-stak/xmr-stak/ folder.
+    
+* **Q: I can't get the miner working, is there an easier way to mine?**
+
+    A: You can try the webminer here: http://turtleminer.com/ You will get a lower hashrate than native mining, and it doesn't have GPU support, however it's very easy to setup. Thanks to @Mongboy for creating this.
+    
+* **Q: What is the miner executable / why isn't it working?**
+
+    A: This is a solo miner, which is CPU only. This means to gain any TRTL, you have to find a block by yourself, which unless you have many powerful CPU's, is very unlikely. We strongly recommend using a pool, and a miner such as xmr-stak or xmrig. Nethertheless, if you want to try it out, open a command prompt in the same directory, and run `miner.exe --address TRTL...` replacing `TRTL...` with your full TRTL address. You need to have TurtleCoind.exe open and synced to use this miner, unlike the conventional miners where the pool hosts the daemon.
 
 ## Wallet / TurtleCoind issues
 
@@ -122,10 +130,14 @@
 * **Q: I think I should have more money in my balance than it is showing, what should I do?**
 
     A: In simplewallet.exe, type `export_keys`, and save the view and spend key somewhere safe in case something goes wrong, if you haven't already. Then, type `reset`, and close TurtleCoind.exe and simplewallet.exe, and reopen them both. You might need to repeat this process a few times.
+    
+* **Q: I've tried resetting, but it isn't working. What should I do?**
+
+    A: In a command prompt, enter the following command: `simplewallet.exe --SYNC_FROM_ZERO --wallet-file your_wallet` replacing `your_wallet` with the name of your wallet file. This should be more effective at finding all the transactions. Thanks to @Ereptor for this fix.
 
 * **Q: How do I send TRTL's?**
 
-    A: In simplewallet.exe, enter `transfer 3 address amount`, where address is your address starting with TRTL, and amount is the amount you want to send. Currently, the fee to transfer is 0.1 TRTL's, so you need to send a tiny bit less than your entire balance.
+    A: In simplewallet.exe, enter `transfer 3 address amount`, where address is your address starting with TRTL, and amount is the amount you want to send. Currently, the fee to transfer is 0.1 TRTL's, so you need to send a tiny bit less than your entire balance. Currently it is recommended not to send much more than 500k TRTL's in one transfer.
 
 * **Q: How do I send money to exchanges / use payment ID?**
 
@@ -175,18 +187,30 @@
 
 * **Q: Are there any GUI wallets?**
 
-    A: Yes, there are currently 3 GUI wallets in development, along with some mobile wallets too. They may not be ready for full use yet, or working on your operating system however.
+    A: Yes, there are currently 3 GUI wallets in development, along with some mobile wallets too. They may not be ready for full use yet, or working on your operating system however. Currently, the desktop-xamarin wallet is the most supported and actively developed. Thanks to @therealcrypt for his great work on this.
+  * https://github.com/turtlecoin/desktop-xamarin
   * https://github.com/rocksteadytc/ooze
   * https://github.com/turtlecoin/turtle-wallet
-  * https://github.com/turtlecoin/desktop-xamarin
-
+  
 * **Q: Why does TRTL have such a high amount of tokens/small amount of decimal places?**
 
     A: Read the great post about the justification for it here: https://medium.com/@turtlecoin/one-trillion-turtles-coin-supply-and-unit-economics-5bfbea0aa1f1
 
 * **Q: Where can I get some free TRTL?**
 
-    A: Head over to the faucet: https://faucet.trtl.me/ and enter your TRTL address. You can receive 10 TRTL's, up to 3 times a day. Thanks to @madk for creating this.
+    A: Head over to the faucet: https://faucet.trtl.me/ and enter your TRTL address. The amount you can recieve is limited, to share the TRTL's for all. Thanks to @madk for creating this.
+    
+* **Q: Are there any light wallets / mobile wallets?**
+
+    A: None are ready for usage right now, but they are being worked on. Check the dev channels in discord to see how people are getting on, and feel free to join in if you're a programmer!
+
+* **Q: What is the #raindance channel / how does it work?**
+
+    A: Someone, or multiple people (possibly you!) donate to the bot. When it reaches 10,000 TRTL or more, it will make an announcement in the raindance channel, telling you rain is coming. A short time after, it will make an another announcement, giving you 60 seconds to PM/DM (private message/direct message) the bot, with your wallet address. Once the 60 seconds elapses, everyone who PM'd the bot their wallet address will get their share of the donated TRTL. For example, if 20,000 TRTL is donated, and 20 people PM the bot, each person will get 2000 TRTL each.
+    
+* **Q: Where is the blockchain stored?**
+
+    A: On Windows, it is in `appdata/roaming/turtlecoin`. On Mac and Linux, it is in `~/.turtlecoin`.
 
 * **Q: I have a question which wasn't answered here, what should I do?**
 
