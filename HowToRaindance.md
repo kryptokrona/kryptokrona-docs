@@ -19,13 +19,13 @@ A raindance is about to begin!
 When you see this message Rain Dance will begin soon. 
 Get you TRTL wallet address ready.
 
-**wait** and especially **don't click on and reactions or emotes yet. This will cause a disqualification!**
+**Wait** and especially **don't click on and reactions or emotes yet. This will cause a disqualification!**
 
 Wait for the “Quick, send me your wallet” message.
 
 ![file explorer](images/raindance/quick_rain.jpg)
 
-Click on TurtleBotRain to send your address as a PM to TurtleBotRain 
+Click on TurtleBotRain to send your address as a PM to TurtleBotRain.
 
 ![file explorer](images/raindance/turtlebotrain.jpg)
 
@@ -41,9 +41,18 @@ or
 
 **Emoji will be different for everyone**
 
+Now return to the raindance channel and react with the emoji you recieved in the PM.
+
+![file explorer](images/raindance/react.jpg)
+
+Only click the emoji listed in the PM.
+
 If you did everything correct you are included in the payout! Congrats!
 
 ![file explorer](images/raindance/payout.jpg)
+
+
+
 
 
 
