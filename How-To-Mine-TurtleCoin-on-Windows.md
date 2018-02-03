@@ -19,7 +19,7 @@
 
 7. You're done! Copy your **spend key** and **view key** and email them to yourself so that you can restore your wallet if it breaks or if you lose it!!!
 
-8. Go to http://chat.turtlecoin.lol and post your wallet address in #wallets and we will get you started with some TRTL to kick the tires a little bit :). You can also use the automated faucet for 10 TRTL's up to 10 times a day - http://faucet.trtl.me/
+8. Go to http://chat.turtlecoin.lol and post your wallet address in #wallets and we will get you started with some TRTL to kick the tires a little bit :). You can also use the automated faucet for between 1 and 3 TRTLs up to 3 times a day - http://faucet.trtl.me/
   
 ### Now let's get started mining!
 ### Skip to here if you've already made a wallet and sync'd your blockchain
