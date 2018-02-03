@@ -203,6 +203,12 @@
 * **Q: I'm using the GUI wallet, and when I start it up I get an error: `Could not load file or assembly Newtonsoft.Json`**
 
     A: You need to download the .zip file from the github, not just the .exe file - https://github.com/turtlecoin/desktop-xamarin/releases , you need all these files for the GUI to work.
+    
+* **Q: I'm using the GUI wallet, how do I get my private keys?**
+
+    A: 
+  * To get the view key, in method, type `getSpendKeys` and in the json box type `{'address':'TRTL...'}` replacing `TRTL...` with your full address.
+  * To get the spend key, in method, type `getViewKey`, and in the json box, type `{}`.
   
 * **Q: Why does TRTL have such a high amount of tokens/small amount of decimal places?**
 
@@ -218,7 +224,7 @@
 
 * **Q: What is the #raindance channel / how does it work?**
 
-    A: 
+    A: There is an in depth, graphical explanation [here](HowToRaindance.md) - thanks to @dlyz for this. Or, read on for a text explanation.
   * Someone, or multiple people (possibly you!) donate to the bot.
   * The balance of the bot reaches 10,000 TRTL or more.
   * The bot will make an announcement in the raindance channel that it will rain soon (TUT TUT, IT LOOKS LIKE RAIN...).
