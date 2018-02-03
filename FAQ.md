@@ -137,7 +137,7 @@
 
 * **Q: I think I should have more money in my balance than it is showing, what should I do?**
 
-    A: In simplewallet.exe, type `export_keys`, and save the view and spend key somewhere safe in case something goes wrong, if you haven't already. Then, type `reset`, and close TurtleCoind.exe and simplewallet.exe, and reopen them both. You might need to repeat this process a few times.
+    A: In simplewallet.exe, type `export_keys`, and save the view and spend key somewhere safe in case something goes wrong, if you haven't already. Then, close TurtleCoind.exe and simplewallet.exe, and reopen them both. Next, type `reset` in simplewallet.exe after reopening your wallet file. It should start resetting your wallet, but the progress might not be immediately obvious - wait a while, and it should start counting up the blocks and printing out your transactions as it gets to them. You might need to repeat this process a few times.
     
 * **Q: I've tried resetting, but it isn't working. What should I do?**
 
@@ -189,9 +189,9 @@
 
 * **Q: When I open TurtleCoind on a Mac, I get an error `Illegal instruction: 4`. How can I fix it?**
 
-    A: This is a known issue with older macs or un-updated macs. The current advice is to use the new build which should fix it for most people - http://latest.turtlecoin.lol . If this doesn't fix it, compiling on your machine may fix it. See the instructions here - https://github.com/turtlecoin/turtlecoin#apple . The new build should work on machines High Sierra or upwards, unless they are quite old. Machines from 2013 have been confirmed working, whilst an older 2010 machine does not.
-
-## Other
+    A: This is a known issue with older macs or un-updated macs. Try entering this into a terminal - `curl -sL "https://raw.githubusercontent.com/turtlecoin/turtlecoin/master/multi_installer.sh" | bash` This automated script should compile the software itself, and place the binaries in ./src once done. See https://github.com/turtlecoin/turtlecoin#ubuntu-1604-and-macos-1010 for more info.
+    
+## GUI Wallet(s)
 
 * **Q: Are there any GUI wallets?**
 
@@ -200,15 +200,17 @@
   * https://github.com/rocksteadytc/ooze
   * https://github.com/turtlecoin/turtle-wallet
   
-* **Q: I'm using the GUI wallet, and when I start it up I get an error: `Could not load file or assembly Newtonsoft.Json`**
+* **Q: I'm using the GUI xamarin wallet, and when I start it up I get an error: `Could not load file or assembly Newtonsoft.Json`**
 
     A: You need to download the .zip file from the github, not just the .exe file - https://github.com/turtlecoin/desktop-xamarin/releases , you need all these files for the GUI to work.
     
-* **Q: I'm using the GUI wallet, how do I get my private keys?**
+* **Q: I'm using the GUI xamarin wallet, how do I get my private keys?**
 
     A: 
   * To get the view key, in method, type `getSpendKeys` and in the json box type `{'address':'TRTL...'}` replacing `TRTL...` with your full address.
   * To get the spend key, in method, type `getViewKey`, and in the json box, type `{}`.
+
+## Other
   
 * **Q: Why does TRTL have such a high amount of tokens/small amount of decimal places?**
 
@@ -224,7 +226,7 @@
 
 * **Q: What is the #raindance channel / how does it work?**
 
-    A: There is an in depth, graphical explanation [here](HowToRaindance.md) - thanks to @dlyz for this. Or, read on for a text explanation.
+    A: There is an in depth, graphical explanation [here](https://github.com/turtlecoin/docs/blob/master/HowToRaindance.md) - thanks to @dlyz for this. Or, read on for a text explanation.
   * Someone, or multiple people (possibly you!) donate to the bot.
   * The balance of the bot reaches 10,000 TRTL or more.
   * The bot will make an announcement in the raindance channel that it will rain soon (TUT TUT, IT LOOKS LIKE RAIN...).
