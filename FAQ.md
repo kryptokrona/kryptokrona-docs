@@ -214,8 +214,8 @@ Did this guide help you out? Throw some shells my way: `TRTLv2Fyavy8CXG8BPEbNeCH
 * **Q: I'm using the GUI xamarin wallet, how do I get my private keys?**
 
     A: 
-  * To get the view key, in method, type `getSpendKeys` and in the json box type `{'address':'TRTL...'}` replacing `TRTL...` with your full address.
-  * To get the spend key, in method, type `getViewKey`, and in the json box, type `{}`.
+  * To get the spend key, in method, type `getSpendKeys` and in the json box type `{'address':'TRTL...'}` replacing `TRTL...` with your full address.
+  * To get the view key, in method, type `getViewKey`, and in the json box, type `{}`.
 
 ## Other
   
