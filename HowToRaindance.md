@@ -19,7 +19,7 @@ A raindance is about to begin!
 When you see this message Rain Dance will begin soon. 
 Get you TRTL wallet address ready.
 
-**Wait** and especially **don't click on and reactions or emotes yet. This will cause a disqualification!**
+**Wait** and especially **don't click on any reactions or emotes yet. This will cause a disqualification!**
 
 Wait for the “Quick, send me your wallet” message.
 
@@ -61,6 +61,41 @@ If you did everything correct you are included in the payout! Congrats!
 ![file explorer](images/raindance/forecast.jpg)
 
 If you type !rain **in the bots channel only** you should get a response back with how many turtles are needed for a raindance.
+
+
+## Notify
+
+
+![file explorer](images/raindance/notify.jpg)
+
+
+Enabling notifications for the raindance channel is easy.
+
+Click the dropdown arrow.
+
+![file explorer](images/raindance/notify1.jpg)
+
+Click on notification settings.
+
+![file explorer](images/raindance/notify2.jpg)
+
+Scroll down.
+
+![file explorer](images/raindance/notify3.jpg)
+
+Look for notification overrides.
+
+![file explorer](images/raindance/notify4.jpg)
+
+Select "raindance".
+
+![file explorer](images/raindance/notify5.jpg)
+
+Select "All".
+
+![file explorer](images/raindance/notify6.jpg)
+
+Done.
 
 
 
