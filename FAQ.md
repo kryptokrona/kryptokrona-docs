@@ -1,6 +1,10 @@
 # Frequently Asked Questions
 
-## Mining
+Did this guide help you out? Throw some shells my way: `TRTLv2Fyavy8CXG8BPEbNeCHFZ1fuDCYCZ3vW5H5LXN4K2M2MHUpTENip9bbavpHvvPwb4NDkBWrNgURAd5DB38FHXWZyoBh4wW`
+
+## Mining and xmr-stak
+
+### General mining questions
 
 * **Q: How do I get started mining?**
 
@@ -8,7 +12,7 @@
 
 * **Q: I'm using a Mac, can I still mine?**
 
-    A: Yes, you can follow the guide for windows, but you'll need to compile xmr-stak yourself, and download the mac version of the wallet: http://latest.turtlecoin.lol https://github.com/fireice-uk/xmr-stak/blob/master/doc/compile_MacOS.md
+    A: Yes, there is a guide available [here](https://github.com/turtlecoin/docs/blob/master/turtlecoin-mac-guide.md) - thanks to @wigging for creating this. 
 
 * **Q: I've started mining, how can I view my stats?**
 
@@ -18,10 +22,6 @@
 
     A: The values will always be slightly different, but if there is a large difference, it is likely you have just started mining. Your hashrate is calculated over time, and so will slowly go up to the correct level.
 
-* **Q: How do I view my hashrate?**
-
-    A: If you are using xmr-stak, press `h`. Alternatively, if you are using a pool, you can check your pool stats, see the above question.
-
 * **Q: I've been mining for a while, but my pending balance hasn't gone up?**
 
     A: On your pool website, check the time that the last block was found on your pool, and the average time to find a block. Your stats will only update when your pool finds a block, so if your pool doesn't find blocks very often, you will have slower updating stats. You will still earn the same amount of TRTL though!
@@ -29,21 +29,6 @@
 * **Q: I've been mining, but the balance in my wallet hasn't gone up?**
 
     A: To save money on fees, the pools send payouts in chunks. Check your pool website for your pending balance - see "I've started mining, how can I view my stats"
-
-* **Q: My PC is laggy when I'm mining. Can I fix this?**
-
-    A:
-  * If you're using a Nvidia card, open up nvidia.txt, in the same directory as the xmr-stak.exe. Try setting bfactor to 8 and bsleep to 100, and then reload your miner after saving the file. If it's still laggy, try increasing both values slightly. This will cause you to get less hashes per second, but can let you use your PC more effectively. You can try tweaking the value to increase your hashrate. Some people also achieve success by lowering the thread count.
-  * If you're using an AMD card, there should be an intensity value you can lower in amd.txt.
-  * If you're using just a CPU, you can delete the cores being used from cpu.txt.
-
-* **Q: How can I use just my GPU/CPU to mine?**
-
-    A: If you are using xmr-stak, you can make a batch file to start the miner. You can then use the commands `--noCPU`, `--noNVIDIA`, and `--noAMD` as needed. For example, put the following in a .txt file, change the extension to .bat, and then double click the file: `xmr-stak.exe --noCPU`. This will run the miner without using the CPU.
-
-* **Q: My miner is crashing on startup. What am I doing wrong?**
-
-    A: If you are using a nvidia card, try opening nvidia.txt in the same directory as the xmr-stak.exe, and lowering the value for threads until it stops crashing.
 
 * **Q: I got banned from my mining pool. Why?**
 
@@ -57,7 +42,53 @@
 
     A: http://turtle-coin.com/#pools - This website also shows some other nice stats like hashrate, and min payout.
 
-* **Q: I get a socket error when connecting to a pool. What am I doing wrong?**
+
+* **Q: What does pool weight mean?**
+
+    A: Pool weight determines what order pools are used in case another is unavailable. Higher weighted pools are used first. If all pools are the same weight, they will be used in the order they are in the config.
+
+* **Q: What pool should I chose?**
+
+    A: There are a few factors to consider when choosing a pool. One is your ping, you can find this out by pinging the server in command prompt, by typing `ping address.com`. Another is the hashrate of the pool. If you go on the pools website, you can see how often they find blocks. If the pool takes a long time to find a block, your stats will take a long time to update. Finally, the minimum payouts can be significant if you're a small miner. This is the amount you need to mine before you get paid. Most pools will list this under the "payment" tab.
+
+* **Q: How many hashes per second is good for my hardware?**
+
+    A: http://monerobenchmarks.info/ is a good source for this. Look up your CPU and GPU with these links: http://monerobenchmarks.info/searchCPU.php http://monerobenchmarks.info/searchGPU.php
+
+* **Q: I can't get the miner working, is there an easier way to mine?**
+
+    A: You can try the webminer here: http://turtleminer.com/ You will get a lower hashrate than native mining, and it doesn't have GPU support, however it's very easy to setup. Thanks to @Mongboy for creating this.
+    
+* **Q: What is the miner executable / why isn't it working?**
+
+    A: This is a solo miner, which is CPU only. This means to gain any TRTL, you have to find a block by yourself, which unless you have many powerful CPU's, is very unlikely. We strongly recommend using a pool, and a miner such as xmr-stak or xmrig. Nethertheless, if you want to try it out, open a command prompt in the same directory, and run `miner.exe --address TRTL...` replacing `TRTL...` with your full TRTL address. You need to have TurtleCoind.exe open and synced to use this miner, unlike the conventional miners where the pool hosts the daemon.
+    
+* **Q: Is there a calculator to see how much TRTL I'll mine per day?**
+
+    A: http://mglolenstine.xyz/TRTLcalc/ - thanks to @LifE[MGlolenstine] for creating this.
+
+### xmr-stak issues
+
+* **Q: How do I view my hashrate in xmr-stak?**
+
+    A: Press `h` in the xmr-stak window.
+    
+* **Q: My PC is laggy when I'm mining in xmr-stak. Can I fix this?**
+
+    A:
+  * If you're using a Nvidia card, open up nvidia.txt, in the same directory as the xmr-stak.exe. Try setting bfactor to 8 and bsleep to 100, and then reload your miner after saving the file. If it's still laggy, try increasing both values slightly. This will cause you to get less hashes per second, but can let you use your PC more effectively. You can try tweaking the value to increase your hashrate. Some people also achieve success by lowering the thread count.
+  * If you're using an AMD card, there should be an intensity value you can lower in amd.txt.
+  * If you're using just a CPU, you can delete the cores being used from cpu.txt.
+
+* **Q: How can I use just my GPU/CPU to mine in xmr-stak?**
+
+    A: If you are using xmr-stak, you can make a batch file to start the miner. You can then use the commands `--noCPU`, `--noNVIDIA`, and `--noAMD` as needed. For example, put the following in a .txt file, change the extension to .bat, and then double click the file: `xmr-stak.exe --noCPU`. This will run the miner without using the CPU.
+
+* **Q: My xmr-stak is crashing on startup, with an error about cuda. What am I doing wrong?**
+
+    A: If you are using a nvidia card, try opening nvidia.txt in the same directory as the xmr-stak.exe, and lowering the value for threads until it stops crashing.
+    
+* **Q: I get a socket error when connecting to a pool in xmr-stak. What am I doing wrong?**
 
     A: Generally, this is due to an incorrectly configured config. In the directory where your xmr-stak.exe is, there should be a file called `config.txt`. Open this up, and check that it looks similar to this:
 
@@ -72,19 +103,15 @@
     ```
 
     Your wallet address is the address starting with TRTL, not your wallet filename. This error can also occur if the pool is having issues - try another pool and see if the error continues. Some users have experienced issues with their firewall or antivirus as well however, so perhaps try disabling these if you are experiencing this issue.
+    
+* **Q: Can I lower the 2% fee taken by xmr-stak?**
 
-* **Q: What does pool weight mean?**
+    A: This is possible, however please note that these devs are independent from the TurtleCoin project and are doing some great work, so I would suggest leaving it as is. If you do wish to change/remove the dev fee, you will have to compile xmr-stak yourself, they have instructions to do this on their site - https://github.com/fireice-uk/xmr-stak/blob/master/doc/compile.md . Once you have downloaded the code, you need to change the file `donate-level.hpp` in the xmr-stak/xmr-stak/ folder.
+    
+* **Q: I'm getting an error in xmr-stak: `MEMORY ALLOC FAILED: VirtualAlloc failed. Reboot might help`**
 
-    A: Pool weight determines what order pools are used in case another is unavailable. A higher weight is a higher priority, so If you have three pools, with weight 3, 2, and 1, the pool with weight 3 will be used unless you disconnect from it, in which case you will go to the pool with weight 2, and then weight 1 if necessary.
-
-* **Q: What pool should I chose?**
-
-    A: There are a few factors to consider when choosing a pool. One is your ping, you can find this out by pinging the server in command prompt, by typing `ping address.com`. Another is the hashrate of the pool. If you go on the pools website, you can see how often they find blocks. If the pool takes a long time to find a block, your stats will take a long time to update. Finally, the minimum payouts can be significant if you're a small miner. This is the amount you need to mine before you get paid. Most pools will list this under the "payment" tab.
-
-* **Q: How many hashes per second is good for my hardware?**
-
-    A: http://monerobenchmarks.info/ is a good source for this. Look up your CPU and GPU with these links: http://monerobenchmarks.info/searchCPU.php http://monerobenchmarks.info/searchGPU.php
-
+    A: This is nothing to worry about, and is because xmr-stak failed to set up largepages. This can slightly raise your hash rate, and xmr-stak attempts to set it up, but it needs a reboot to apply.
+    
 * **Q: I'm missing the file vcruntime140.dll. Where can I get this?**
 
     A: Try installing this: https://www.microsoft.com/en-us/download/details.aspx?id=52685
@@ -93,27 +120,11 @@
 
     A: Try installing this: https://go.microsoft.com/fwlink/?LinkId=746572
 
-* **Q: I'm getting an error in xmr-stak: `MEMORY ALLOC FAILED: VirtualAlloc failed. Reboot might help`**
+## TurtleCoind / simplewallet issues
 
-    A: This is nothing to worry about, and is because xmr-stak failed to set up largepages. This can slightly raise your hash rate, and xmr-stak attempts to set it up, but it needs a reboot to apply.
+* **Q: When I open TurtleCoind on a Mac, I get an error `Illegal instruction: 4`. How can I fix it?**
 
-* **Q: Can I lower the 2% fee taken by xmr-stak?**
-
-    A: This is possible, however please note that these devs are independent from the TurtleCoin project and are doing some great work, so I would suggest leaving it as is. If you do wish to change/remove the dev fee, you will have to compile xmr-stak yourself, they have instructions to do this on their site - https://github.com/fireice-uk/xmr-stak/blob/master/doc/compile.md . Once you have downloaded the code, you need to change the file `donate-level.hpp` in the xmr-stak/xmr-stak/ folder.
-    
-* **Q: I can't get the miner working, is there an easier way to mine?**
-
-    A: You can try the webminer here: http://turtleminer.com/ You will get a lower hashrate than native mining, and it doesn't have GPU support, however it's very easy to setup. Thanks to @Mongboy for creating this.
-    
-* **Q: What is the miner executable / why isn't it working?**
-
-    A: This is a solo miner, which is CPU only. This means to gain any TRTL, you have to find a block by yourself, which unless you have many powerful CPU's, is very unlikely. We strongly recommend using a pool, and a miner such as xmr-stak or xmrig. Nethertheless, if you want to try it out, open a command prompt in the same directory, and run `miner.exe --address TRTL...` replacing `TRTL...` with your full TRTL address. You need to have TurtleCoind.exe open and synced to use this miner, unlike the conventional miners where the pool hosts the daemon.
-    
-* **Q: Is there a calculator to see how much TRTL I'll make per day?**
-
-    A: http://mglolenstine.xyz/TRTLcalc/ - thanks to @LifE[MGlolenstine] for creating this
-
-## Wallet / TurtleCoind issues
+    A: This is a known issue with older macs or un-updated macs. Try entering this into a terminal - `curl -sL "https://raw.githubusercontent.com/turtlecoin/turtlecoin/master/multi_installer.sh" | bash` This automated script should compile the software itself, and place the binaries in ./src once done. See https://github.com/turtlecoin/turtlecoin#ubuntu-1604-and-macos-1010 for more info.
 
 * **Q: I've opened the wallet, and I'm getting lots of red messages with an error like this: `2018-Jan-25 20:31:24.088189 ERROR   [BlockchainSynchronizer] Failed to query outdated pool transaction: NodeErrorCategory:7, Can't connect to daemon`**
 
@@ -121,19 +132,11 @@
 
 * **Q: I've opened the wallet, and I'm getting lots of red messages with an error like this, and I can't type: `2018-Jan-25 21:59:57.595104 ERROR   [BlockchainSynchronizer] Failed to query outdated pool transaction: NodeErrorCategory:3, Network error`**
 
-    A: Your daemon hasn't finished syncing yet. Keep TurtleCoind.exe open, and wait until you are 0 days behind the current block, and it should print out a green message saying "SYNCHRONISED OK"
+    A: Your daemon hasn't finished syncing yet. Keep TurtleCoind.exe open, and wait until you are 0 days behind the current block, and for the daemon to print out a green message saying "SYNCHRONISED OK"
 
 * **Q: I've opened the wallet, and I'm getting lots of red messages with an error like this: `2019-Jan-29 01:24:48.088688 ERROR [BlockchainSynchronizer] Failed to query blocks: NodeErrorCategory:5, Internal node error`**
 
-    A: Exit simplewallet.exe and TurtleCoind.exe, then reopen TurtleCoind.exe and simplewallet and wait for sync to complete if needed, then type `reset` in simplewallet.exe. You might need to repeat this process a few times.
-
-* **Q: I made a paper wallet, how do I use it?**
-
-    A: Once you've opened TurtleCoind.exe and let it sync, open up simplewallet.exe and type `i` to import. It will then ask you to choose a new wallet name, and a password. Once you have done that, it will prompt you for your two keys, the view key, and spend key. You should have got these when you made your paper wallet.
-
-* **Q: How do I backup my wallet?**
-
-    A: If your TurtleCoind.exe is open and synced, open simplewallet.exe, and type `export_keys`. Save the view and spend key somewhere safe, and you can use them to reimport your wallet if you lose it.
+    A: The wallet usually remains functional when this occurs, but if it bothers you, then just exit simplewallet.exe and TurtleCoind.exe, then reopen TurtleCoind.exe and simplewallet.exe.
 
 * **Q: I think I should have more money in my balance than it is showing, what should I do?**
 
@@ -142,6 +145,14 @@
 * **Q: I've tried resetting, but it isn't working. What should I do?**
 
     A: In a command prompt, enter the following command: `simplewallet.exe --SYNC_FROM_ZERO --wallet-file your_wallet` replacing `your_wallet` with the name of your wallet file. This should be more effective at finding all the transactions. Thanks to @Ereptor for this fix.
+    
+* **Q: I made a paper wallet, how do I use it?**
+
+    A: Once you've opened TurtleCoind.exe and let it sync, open up simplewallet.exe and type `i` to import. It will then ask you to choose a new wallet name, and a password. Once you have done that, it will prompt you for your two keys, the view key, and spend key. You should have got these when you made your paper wallet.
+
+* **Q: How do I backup my wallet?**
+
+    A: If your TurtleCoind.exe is open and synced, open simplewallet.exe, and type `export_keys`. Save the view and spend key somewhere safe, and you can use them to reimport your wallet if you lose it.
 
 * **Q: How do I send TRTL's?**
 
@@ -153,11 +164,11 @@
 
 * **Q: What is mixin?**
 
-    A: Mixin is how many times your transaction ix "mixed" with others for obfuscation and privacy. Most people suggest a mixin of 3. Larger mixin's will take longer to be confirmed unless a higher fee is used. A mixin of 0 can be used to have a non private transaction.
+    A: Mixin is how many times your transaction is "mixed" with others for obfuscation and privacy. Most people suggest a mixin of 3. Larger mixin's will take longer to be confirmed unless a higher fee is used. A mixin of 0 can be used to have a non private transaction.
 
 * **Q: How can I view my balance?**
 
-    A: If your TurtleCoind.exe is fully synced, in simplewallet.exe, simply type `balance`
+    A: If your TurtleCoind.exe is fully synced, in simplewallet.exe, simply type `balance`.
 
 * **Q: I'm seeing an error like this in TurtleCoind.exe: `2018-Jan-25 23:18:34.620941 WARNING Transaction 862689940f8860b4410a4eef7be326b05aedc6b14a26e68e503769017ee80359 is not valid. Reason: Transaction uses spent key image`. Should I worry?**
 
@@ -169,7 +180,7 @@
 
 * **Q: How long does it take to sync TurtleCoind.exe?**
 
-    A: Currently it takes around 1-2 hours. This number will increase as more people use the coin and the blockchain gets larger. Want to skip the syncing? See "Can I skip the syncing?"
+    A: Currently it takes around 1-2 hours. This number will increase as more people use the coin and the blockchain gets larger. Want to skip/speed up the syncing? See "Can I skip the syncing?" or "Can I speed up the syncing of the blockchain"
 
 * **Q: Can I skip the syncing?**
 
@@ -181,21 +192,17 @@
 
 * **Q: What does it mean if my balance is locked?**
 
-    A: This is a transfer which hasn't been confirmed by the network yet. It will move into your main balance shortly.
+    A: This is a transfer which hasn't been confirmed by the network yet. It will move into your main balance shortly, generally after 3 minutes.
 
 * **Q: In simplewallet.exe, I get an error `Error: failed to save new wallet: boost::filesystem::unique__path: Keyset as registered is invalid`. How can I fix it?**
 
     A: This is caused by some broken windows crypto keys. Navigate to C:/Users/*Your Windows Username*/AppData/Roaming/Microsoft/Crypto/RSA/. There should be a folder in there, with a long name, like `S-1-5-21-1416222650-108526586-4052533318-1000`. Enter this folder, and delete the files in there. Then reboot.
-
-* **Q: When I open TurtleCoind on a Mac, I get an error `Illegal instruction: 4`. How can I fix it?**
-
-    A: This is a known issue with older macs or un-updated macs. Try entering this into a terminal - `curl -sL "https://raw.githubusercontent.com/turtlecoin/turtlecoin/master/multi_installer.sh" | bash` This automated script should compile the software itself, and place the binaries in ./src once done. See https://github.com/turtlecoin/turtlecoin#ubuntu-1604-and-macos-1010 for more info.
     
 ## GUI Wallet(s)
 
 * **Q: Are there any GUI wallets?**
 
-    A: Yes, there are currently 3 GUI wallets in development, along with some mobile wallets too. They may not be ready for full use yet, or working on your operating system however. Currently, the desktop-xamarin wallet is the most supported and actively developed. Thanks to @therealcrypt for his great work on this.
+    A: Yes, there are currently 3 GUI wallets in development, along with some mobile wallets too. They may not be ready for full use yet, or working on your operating system however. Currently, the desktop-xamarin wallet is the most supported and actively developed. Please note, currently you cannot import via keys, or use payment ID with it. These will be added in later updates. Thanks to @therealcrypt for his great work on this.
   * https://github.com/turtlecoin/desktop-xamarin
   * https://github.com/rocksteadytc/ooze
   * https://github.com/turtlecoin/turtle-wallet
@@ -215,10 +222,16 @@
 * **Q: Why does TRTL have such a high amount of tokens/small amount of decimal places?**
 
     A: Read the great post about the justification for it here: https://medium.com/@turtlecoin/one-trillion-turtles-coin-supply-and-unit-economics-5bfbea0aa1f1
+    
+* **Q: How can I get some TRTL?**
 
-* **Q: Where can I get some free TRTL?**
-
-    A: Head over to the faucet: https://faucet.trtl.me/ and enter your TRTL address. The amount you can recieve is limited, to share the TRTL's for all. Thanks to @madk for creating this.
+    A:
+  * Mining - see http://mining.turtlecoin.lol
+  * Buying - see the #turtle-market channel in discord - http://chat.turtlecoin.lol
+  * Bounties - Bounties for developing TRTL software, spreading the word of TRTL, and many other things are often posted in the #bounties channel on discord. Checked the pinned messages for current bounties.
+  * Tips - People will sometimes tip each other for creating good TRTL memes in the #memes channel
+  * Raindance - see the #raindance channel in discord - and check out "What is the #raindance channel" to see how to use it.
+  * Faucet - Head over to the faucet: https://faucet.trtl.me/ and enter your TRTL address. The amount you can recieve is limited, to share the TRTL's for all. Thanks to @madk for creating this.
     
 * **Q: Are there any light wallets / mobile wallets?**
 
@@ -226,16 +239,11 @@
 
 * **Q: What is the #raindance channel / how does it work?**
 
-    A: There is an in depth, graphical explanation [here](https://github.com/turtlecoin/docs/blob/master/HowToRaindance.md) - thanks to @dlyz for this. Or, read on for a text explanation.
-  * Someone, or multiple people (possibly you!) donate to the bot.
-  * The balance of the bot reaches 10,000 TRTL or more.
-  * The bot will make an announcement in the raindance channel that it will rain soon (TUT TUT, IT LOOKS LIKE RAIN...).
-  * The bot adds 10 emotes to its message and changes the image and message to "QUICK, SEND ME YOUR WALLET ADDRESSES!"
-  * You now have 90 seconds to DM your wallet address to the bot. The bot will respond with an emote.
-  * React to the message in the raindance channel with the given emote.
-  * After 90 seconds, the bot will announce the payment, e.g. (20000 TRTL WAS GIVEN TO 42 TURTLES).
-  * This money is split evenly between everyone who correctly followed the instructions.
-  * Thank you to @MoonMoonDogo for creating this!
+    A: There is an in depth, graphical explanation [here](https://github.com/turtlecoin/docs/blob/master/HowToRaindance.md) - thanks to @dlyz for this.
+    
+* **Q: How do I register my wallet on discord?**
+
+    A: Head to the #wallet channel, and type `.registerwallet TRTL...` replacing `TRTL...` with your full TRTL address.
     
 * **Q: Where is the blockchain stored?**
 
