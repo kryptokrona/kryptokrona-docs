@@ -111,7 +111,7 @@ configurations shown below.
 - Currency:
 monero
 - Pool address:
-ny.minetrtl.us:333
+ny.minetrtl.us:3333
 - Username
 your-public-wallet-address
 - Password
