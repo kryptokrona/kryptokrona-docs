@@ -146,6 +146,10 @@ Did this guide help you out? Throw some shells my way: `TRTLv2Fyavy8CXG8BPEbNeCH
 
     A: In a command prompt, enter the following command: `simplewallet.exe --SYNC_FROM_ZERO --wallet-file your_wallet` replacing `your_wallet` with the name of your wallet file. This should be more effective at finding all the transactions. Thanks to @Ereptor for this fix.
     
+* **Q: I'm trying to open my wallet in simplewallet, but it says that I'm using the wrong password?**
+
+    A: This occurs if you open your wallet with the GUI wallet. The GUI wallet uses a different wallet format, so it can no longer be opened with simplewallet. It should have made a backup with your wallet, it should be called the same as your wallet, but with a .backup file extension. This should open fine with simplewallet. Feel free to rename it to something more convenient, like `cli-wallet`, for example. If you don't have a backup file, just export your keys from the GUI wallet, and use the import function in simplewallet.
+    
 * **Q: I made a paper wallet, how do I use it?**
 
     A: Once you've opened TurtleCoind.exe and let it sync, open up simplewallet.exe and type `i` to import. It will then ask you to choose a new wallet name, and a password. Once you have done that, it will prompt you for your two keys, the view key, and spend key. You should have got these when you made your paper wallet.
