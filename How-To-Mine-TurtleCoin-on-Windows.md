@@ -56,6 +56,8 @@
 
 #### turtle.atpool.party:3333 (France)
 
+#### trtlpool.ninja:5555 (US West Coast - Las Vegas, NV)
+
 To check your balance as you're mining, go to the URL of the first pool your put on your list and type your wallet address into the search box in the middle of the page and it will show you how much you've mined so far.
 ![image](https://user-images.githubusercontent.com/34389545/34903526-17cf3536-f7f9-11e7-98fd-580bdcf3faed.png)
 You can also see how far until the next payout by clicking "payments" at the top of the screen.
