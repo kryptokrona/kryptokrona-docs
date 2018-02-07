@@ -19,7 +19,7 @@
 
 7. You're done! Copy your **spend key** and **view key** and email them to yourself so that you can restore your wallet if it breaks or if you lose it!!!
 
-8. Go to http://chat.turtlecoin.lol and post your wallet address in #wallets and we will get you started with some TRTL to kick the tires a little bit :). You can also use the automated faucet for 10 TRTL's up to 10 times a day - http://faucet.trtl.me/
+8. Go to http://chat.turtlecoin.lol and post your wallet address in #wallets and we will get you started with some TRTL to kick the tires a little bit :). You can also use the automated faucet for between 1 and 3 TRTLs up to 3 times a day - http://faucet.trtl.me/
   
 ### Now let's get started mining!
 ### Skip to here if you've already made a wallet and sync'd your blockchain
@@ -55,6 +55,8 @@
 #### trtl.mine2gether.com:3335 
 
 #### turtle.atpool.party:3333 (France)
+
+#### trtlpool.ninja:5555 (US West Coast - Las Vegas, NV)
 
 To check your balance as you're mining, go to the URL of the first pool your put on your list and type your wallet address into the search box in the middle of the page and it will show you how much you've mined so far.
 ![image](https://user-images.githubusercontent.com/34389545/34903526-17cf3536-f7f9-11e7-98fd-580bdcf3faed.png)
