@@ -15,7 +15,7 @@ Download this latest release of TurtleCoin. https://github.com/turtlecoin/turtle
 
 6. To make a new wallet, press [G] for Generate Wallet, and give your wallet a name and password.
 
-8. You're done! **Copy your spend key and view key and email them to yourself** so that you can restore your wallet if it breaks or if you lose it!!!
+8. You're done! **Copy your spend key and view key and back them them up** so that you can restore your wallet if it breaks or if you lose it!!! Remember, these keys are the **only** way to restore your wallet - you need to keep them safely backed up and private! **Anyone with these keys can access your wallet from anywhere**
 
 Go to http://chat.turtlecoin.lol and post your wallet address in #wallets and we will get you started with some TRTL to kick the tires a little bit :)
   
