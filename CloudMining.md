@@ -69,7 +69,7 @@ Add all of the pools in the list from step 6, and give them all a weight of 10 i
 
 #### slowandsteady.fun:3333
 
-#### trtl.mine2gether.com:3335 
+#### trtl.mine2gether.com:3335 (Germany)
 
 #### turtle.atpool.party:3333 (France)
 
