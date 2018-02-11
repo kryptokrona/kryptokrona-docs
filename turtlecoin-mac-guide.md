@@ -1,9 +1,9 @@
-# TurtleCoin Mac Guide
+# TurtleCoin Mac Guide :apple: :turtle:
 
 This guide is for Mac users who want to get started with the TurtleCoin
 blockchain and wallet along with the xmr-stak miner. Suggestions for improving
 this document are welcome and can be submitted in the "Issues" section of this
-repo.
+repository.
 
 Show your support for this guide by sending some shells to:
 
@@ -76,7 +76,7 @@ blockchain and a second window for interfacing with the wallet.
 
 ```bash
 cd ~/Desktop/TurtleCoin
-./simplewallet 
+./simplewallet
 ```
 
 2. Follow the instructions in the terminal to create a new wallet.
@@ -86,16 +86,29 @@ free TRTLs.
 
 ## Miner
 
-To starting mining turtle coins on your Mac, the [xmr-stak](https://github.com/fireice-uk/xmr-stak) 
-miner can be complied from source.
+To starting mining turtle coins on your Mac, the [xmr-stak](https://github.com/fireice-uk/xmr-stak)
+miner can be complied from source. This requires the [Homebrew](https://brew.sh) package manager for macOS.
 
-1. Go to the [xmr-stak/releases](https://github.com/fireice-uk/xmr-stak/releases) 
+1. Go to the [xmr-stak/releases](https://github.com/fireice-uk/xmr-stak/releases)
 page and download the latest source code as a zip file.
 
 2. Place the file on your desktop at `~/Desktop/xmr-stak-2.2.0/`
 
-3. Follow the instructions in the [compile_MacOS](https://github.com/fireice-uk/xmr-stak/blob/master/doc/compile.md) 
-document to build the xmr-stak miner for your Mac.
+3. Instructions for building the xmr-stak miner for macOS are available in the [compile_MacOS](https://github.com/fireice-uk/xmr-stak/blob/master/doc/compile_MacOS.md)
+document. For CPU only mining, you can follow this installation procedure:
+
+```bash
+brew install hwloc
+brew install libmicrohttpd
+brew install gcc
+brew install openssl
+brew install cmake
+cmake . -DOPENSSL_ROOT_DIR=/usr/local/opt/openssl -DCUDA_ENABLE=OFF -DOpenCL_ENABLE=OFF
+make install
+```
+
+After the installation, you may want to remove cache and log files with the
+`brew cleanup` command.
 
 4. After the build is complete, go to the bin folder and run the miner.
 
@@ -104,23 +117,32 @@ cd ~/Desktop/xmr-stak-2.2.0/bin/
 ./xmr-stak
 ```
 
-5. To connect the miner with a turtle mining pool, you can use the
-configurations shown below.
+5. During the intial setup, xmr-stak with ask a series of questions to
+configure the miner with a mining pool. Below is an example of using the
+ny.minetrtl.us pool:
 
 ```bash
-- Currency:
+Please enter:
+- Currency: 'monero' or 'aeon'
 monero
-- Pool address:
+- Pool address: e.g. pool.usxmrpool.com:3333
 ny.minetrtl.us:3333
-- Username
-your-public-wallet-address
-- Password
+- Username (wallet address or pool login):
+TRTLuxbuW9uZfhAgmLpK8mfisSScfp325GiTHbD2he3eFHcrxbaHxaQRNJcnA42pbSejGaLEcCvGCeiHDr1Frz8YC71hbWUEVYa
+- Password (mostly empty or x):
 x
+- Does this pool port support TLS/SSL? Use no if unknown. (y/N)
+no
+- Do you want to use nicehash on this pool? (y/n)
+no
+- Do you want to use multiple pools? (y/n)
+no
 ```
 
-Answer no as `n` to the remaining questions. If the miner was successfully
-installed and configured, it will automatically begin mining turtle coins
-using the pool address.
+If the miner was successfully installed and configured, it will automatically
+begin mining turtle coins using the pool address. If you receive warnings
+about `MEMORY ALLOC FAILED: mmap failed` try to close all other programs then
+restart xmr-stak in the terminal.
 
 ## Pool
 
@@ -151,16 +173,18 @@ To mine turtle coins:
 
 ## Links
 
-Here are some links for further information about the TurtleCoin platform.
+Below is a summary of the websites and tools discussed in this guide:
 
 TurtleCoin website https://turtlecoin.lol
 
-Discord chat http://chat.turtlecoin.lol
+TurtleCoin Discord chat http://chat.turtlecoin.lol
 
 TRTL subreddit https://www.reddit.com/r/TRTL/
 
+Homebrew package manager for macOS https://brew.sh
+
 XMR-Stak miner https://github.com/fireice-uk/xmr-stak
 
-GitHub https://github.com/turtlecoin
+TurtleCoin GitHub https://github.com/turtlecoin
 
-Twitter https://twitter.com/_turtlecoin
+TurtleCoin Twitter https://twitter.com/_turtlecoin
