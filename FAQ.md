@@ -136,15 +136,15 @@ Did this guide help you out? Throw some shells my way: `TRTLv2Fyavy8CXG8BPEbNeCH
 
 * **Q: I've opened the wallet, and I'm getting lots of red messages with an error like this: `2019-Jan-29 01:24:48.088688 ERROR [BlockchainSynchronizer] Failed to query blocks: NodeErrorCategory:5, Internal node error`**
 
-    A: The wallet usually remains functional when this occurs, but if it bothers you, then just exit simplewallet.exe and TurtleCoind.exe, then reopen TurtleCoind.exe and simplewallet.exe.
+    A: Update to the latest version - this has been fixed! http://latest.turtlecoin.lol
 
 * **Q: I think I should have more money in my balance than it is showing, what should I do?**
 
-    A: In simplewallet.exe, type `export_keys`, and save the view and spend key somewhere safe in case something goes wrong, if you haven't already. Then, close TurtleCoind.exe and simplewallet.exe, and reopen them both. Next, type `reset` in simplewallet.exe after reopening your wallet file. It should start resetting your wallet, but the progress might not be immediately obvious - wait a while, and it should start counting up the blocks and printing out your transactions as it gets to them. You might need to repeat this process a few times.
+    A: Update to the latest version - this has been fixed! http://latest.turtlecoin.lol
     
 * **Q: I've tried resetting, but it isn't working. What should I do?**
 
-    A: In a command prompt, enter the following command: `simplewallet.exe --SYNC_FROM_ZERO --wallet-file your_wallet` replacing `your_wallet` with the name of your wallet file. This should be more effective at finding all the transactions. Thanks to @Ereptor for this fix.
+    A: In simplewallet.exe, type `export_keys`, and save the view and spend key somewhere safe in case something goes wrong, if you haven't already. Then, close TurtleCoind.exe and simplewallet.exe, and reopen them both. Next, type `reset` in simplewallet.exe after reopening your wallet file. It should start resetting your wallet, but the progress might not be immediately obvious - wait a while, and it should start counting up the blocks and printing out your transactions as it gets to them.
     
 * **Q: I'm trying to open my wallet in simplewallet, but it says that I'm using the wrong password?**
 
@@ -186,13 +186,13 @@ Did this guide help you out? Throw some shells my way: `TRTLv2Fyavy8CXG8BPEbNeCH
 
     A: Currently it takes around 1-2 hours. This number will increase as more people use the coin and the blockchain gets larger. Want to skip/speed up the syncing? See "Can I skip the syncing?" or "Can I speed up the syncing of the blockchain"
 
-* **Q: Can I skip the syncing?**
-
-    A: Yes, you can currently use a public node with simplewallet. The keys stay on your PC, so it's secure. Run `simplewallet.exe --daemon-host daemon.turtle.link --daemon-port 11898` in a cmd. Thanks to @tom daemon.turtle.link p11898 for running this node.
-
 * **Q: Can I speed up the syncing of the blockchain?***
 
     A: You can grab a recent copy of the blockchain and incrementally sync from there.  See [How to Bootstrap the TurtleCoin Blockchain](HowToBootstrapBlockchain.md) for instructions.
+    
+* **Q: Can I skip the syncing?**
+
+    A: Yes, you can currently use a public node with simplewallet. The keys stay on your PC, so it's secure. Run `simplewallet.exe --daemon-host daemon.turtle.link --daemon-port 11898` in a cmd. Thanks to @tom daemon.turtle.link p11898 for running this node.
 
 * **Q: What does it mean if my balance is locked?**
 
@@ -246,6 +246,10 @@ Did this guide help you out? Throw some shells my way: `TRTLv2Fyavy8CXG8BPEbNeCH
 * **Q: Where is the blockchain stored?**
 
     A: On Windows, it is in `appdata/roaming/turtlecoin`. On Mac and Linux, it is in `~/.turtlecoin`.
+    
+* **Q: Is there a blockchain explorer?**
+
+    A: Yes, there are two here: https://blocks.turtle.link/ and here: https://turtle-coin.com/
 
 * **Q: I have a question which wasn't answered here, what should I do?**
 
