@@ -52,7 +52,7 @@
 
 #### slowandsteady.fun:3333
 
-#### trtl.mine2gether.com:3335 
+#### trtl.mine2gether.com:3335 (Germany)
 
 #### turtle.atpool.party:3333 (France)
 
