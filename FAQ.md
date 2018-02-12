@@ -192,7 +192,7 @@ Did this guide help you out? Throw some shells my way: `TRTLv2Fyavy8CXG8BPEbNeCH
     
 * **Q: Can I skip the syncing?**
 
-    A: Yes, you can currently use a public node with simplewallet. The keys stay on your PC, so it's secure. Run `simplewallet.exe --daemon-host daemon.turtle.link --daemon-port 11898` in a cmd. Thanks to @tom daemon.turtle.link p11898 for running this node.
+    A: Yes, you can currently use a public node with simplewallet. The keys stay on your PC, so it's secure. Run `simplewallet.exe --daemon-host daemon.turtle.link --daemon-port 11898` in a cmd. Thanks to @tom for running this node.
 
 * **Q: What does it mean if my balance is locked?**
 
@@ -250,6 +250,14 @@ Did this guide help you out? Throw some shells my way: `TRTLv2Fyavy8CXG8BPEbNeCH
 * **Q: Is there a blockchain explorer?**
 
     A: Yes, there are two here: https://blocks.turtle.link/ and here: https://turtle-coin.com/
+    
+* **Q: Can I make a paper wallet?**
+
+    A: Yes, you can use the link here: http://turtlecoin.lol/wallet - If you want to run it locally on an offline computer for security, you can download the source code here, and open the html file in your browser - https://github.com/turtlecoin/paper-turtle
+    
+* **Q: Can I view the balance of my wallet online?**
+
+    A: Due to turtlecoin being a privacy coin, this is not possible. It should be possible in the future to allow users to give away just their view private key to view transactions, but this hasn't been implemented by anyone so far, and would allow that website to see every transaction that you make.
 
 * **Q: I have a question which wasn't answered here, what should I do?**
 
