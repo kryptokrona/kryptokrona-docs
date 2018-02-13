@@ -36,6 +36,8 @@
 
 6. When it asks which pool, put one or all of the following, **start with the one closest to you**, if you want to use multiple pools (multiple pools is a good idea for if the one you're mining on goes down)
 
+#### trtl.flashpool.club:3333 (EU)
+
 #### z-pool.com:3333 (EU North)
 
 #### hk.turtlepool.space:3333 (Hong Kong)
