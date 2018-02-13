@@ -15,7 +15,7 @@ See:  https://cloud.google.com/compute/docs/quickstart-linux
 ###  Mining Instructions For Debian Linux on GCP
 SSH into GCP instance and enter:
 
-`sudo apt install libmicrohttpd-dev libssl-dev cmake build-essential libhwloc-dev`
+`sudo apt install libmicrohttpd-dev libssl-dev cmake build-essential libhwloc-dev git`
 
 `git clone https://github.com/fireice-uk/xmr-stak.git`
 
