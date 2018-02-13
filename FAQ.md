@@ -207,7 +207,6 @@ Did this guide help you out? Throw some shells my way: `TRTLv2Fyavy8CXG8BPEbNeCH
 
     A: Yes, there are currently 3 GUI wallets in development, along with some mobile wallets too. They may not be ready for full use yet, or working on your operating system however. Currently, the desktop-xamarin wallet is the most supported and actively developed. Please note, currently you cannot import via keys. This will be added in later updates. Thanks to @therealcrypt for his great work on this.
   * <https://github.com/turtlecoin/desktop-xamarin>
-  * <https://github.com/rocksteadytc/ooze>
   * <https://github.com/turtlecoin/turtle-wallet>
 
 * **Q: I'm using the GUI xamarin wallet, and when I start it up I get an error: `Could not load file or assembly Newtonsoft.Json`**
