@@ -1,4 +1,4 @@
-# TurtleCoin Mac Guide :apple: :turtle:
+# Getting Started Mac Guide :apple: :turtle:
 
 This guide is for Mac users who want to get started with the TurtleCoin
 blockchain and wallet along with the xmr-stak miner. Suggestions for improving
@@ -84,7 +84,7 @@ cd ~/Desktop/TurtleCoin
 3. To test your wallet, go to [faucet.trtl.me](https://faucet.trtl.me) for
 free TRTLs.
 
-## Miner
+## Miner (CPU only)
 
 To starting mining turtle coins on your Mac, the [xmr-stak](https://github.com/fireice-uk/xmr-stak)
 miner can be complied from source. This requires the [Homebrew](https://brew.sh) package manager for macOS.
@@ -143,6 +143,18 @@ If the miner was successfully installed and configured, it will automatically
 begin mining turtle coins using the pool address. If you receive warnings
 about `MEMORY ALLOC FAILED: mmap failed` try to close all other programs then
 restart xmr-stak in the terminal.
+
+## Miner (GPU and CPU)
+
+If you want to mine with your GPU and CPU, follow the steps above but enable
+the OpenCL option:
+
+```bash
+cmake . -DOPENSSL_ROOT_DIR=/usr/local/opt/openssl -DCUDA_ENABLE=OFF -DOpenCL_ENABLE=ON
+```
+
+Mining with the GPU may give a better hash rate but it can also slow down your
+system to an unusable state.
 
 ## Pool
 

@@ -1,4 +1,4 @@
-# How to Participate in raindance
+# How to Participate in a Raindance
 
 This guide will walk you through the process.
 
@@ -14,7 +14,7 @@ When TurtleBotRain posts in the raindance channel it means a Raindance is about 
 
 ![A Raindance is about to begin](images/raindance/tuttut.jpg)
 
-When you see this message the RainDance will begin soon. 
+When you see this message the RainDance will begin soon.
 Get your TRTL wallet address ready.
 
 **Wait** and especially **don't click on any reactions or emotes yet. This will cause a disqualification!**
