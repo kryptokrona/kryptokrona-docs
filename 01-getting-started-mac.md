@@ -1,4 +1,4 @@
-# TurtleCoin Mac Guide :apple: :turtle:
+# Getting Started Mac Guide :apple: :turtle:
 
 This guide is for Mac users who want to get started with the TurtleCoin
 blockchain and wallet along with the xmr-stak miner. Suggestions for improving
