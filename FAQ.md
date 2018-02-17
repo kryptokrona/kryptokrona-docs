@@ -12,7 +12,7 @@ Did this guide help you out? Throw some shells my way: `TRTLv2Fyavy8CXG8BPEbNeCH
 
 * **Q: I'm using a Mac, can I still mine?**
 
-    A: Yes, there is a guide available [here](https://github.com/turtlecoin/docs/blob/master/turtlecoin-mac-guide.md) - thanks to @wigging for creating this.
+    A: Yes, there is a guide available [here](https://github.com/turtlecoin/docs/blob/master/01-getting-started-mac.md) - thanks to @wigging for creating this.
 
 * **Q: I've started mining, how can I view my stats?**
 
@@ -135,11 +135,11 @@ Did this guide help you out? Throw some shells my way: `TRTLv2Fyavy8CXG8BPEbNeCH
 
 * **Q: I've opened the wallet, and I'm getting lots of red messages with an error like this: `2019-Jan-29 01:24:48.088688 ERROR [BlockchainSynchronizer] Failed to query blocks: NodeErrorCategory:5, Internal node error`**
 
-    A: Update to the latest version - this has been fixed! <http://latest.turtlecoin.lol>
+    A: Update to the latest version - this has been fixed in v0.3.2! <http://latest.turtlecoin.lol>
 
 * **Q: I think I should have more money in my balance than it is showing, what should I do?**
 
-    A: Update to the latest version - this has been fixed! <http://latest.turtlecoin.lol>
+    A: Update to the latest version - this has been fixed in v0.3.2! <http://latest.turtlecoin.lol>
 
 * **Q: I've tried resetting, but it isn't working. What should I do?**
 
@@ -187,7 +187,7 @@ Did this guide help you out? Throw some shells my way: `TRTLv2Fyavy8CXG8BPEbNeCH
 
 * **Q: Can I speed up the syncing of the blockchain?***
 
-    A: You can grab a recent copy of the blockchain and incrementally sync from there.  See [How to Bootstrap the TurtleCoin Blockchain](HowToBootstrapBlockchain.md) for instructions.
+    A: You can grab a recent copy of the blockchain and incrementally sync from there.  See [How to Bootstrap the TurtleCoin Blockchain](https://github.com/turtlecoin/docs/blob/master/02-how-to-bootstrap-blockchain.md) for instructions.
 
 * **Q: Can I skip the syncing?**
 
@@ -235,7 +235,7 @@ Did this guide help you out? Throw some shells my way: `TRTLv2Fyavy8CXG8BPEbNeCH
 
 * **Q: What is the #raindance channel / how does it work?**
 
-    A: There is an in depth, graphical explanation [here](https://github.com/turtlecoin/docs/blob/master/HowToRaindance.md) - thanks to @dlyz for this.
+    A: There is an in depth, graphical explanation [here](https://github.com/turtlecoin/docs/blob/master/03-how-to-raindance.md) - thanks to @dlyz for this.
 
 * **Q: How do I register my wallet on discord?**
 
