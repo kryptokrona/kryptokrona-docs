@@ -121,6 +121,18 @@ Did this guide help you out? Throw some shells my way: `TRTLv2Fyavy8CXG8BPEbNeCH
 
 ## TurtleCoind / simplewallet issues
 
+* **Q: I'm getting an error "Wrong password" when opening my wallet, by I know the password is correct**
+
+    A: If you have opened your wallet with the GUI wallet, it is no longer openable by simplewallet, as they use two different formats. Open this wallet with the GUI, and export your keys. Then, open simplewallet and choose import, and give your wallet a new name, for example, `cli-wallet.bin`. Keep this copy for use with simplewallet, and use the other copy for using with the GUI.
+
+* **Q: I'm seeing an error in TurtleCoind `Proof of work to weak for block...` and the syncing has stuck**
+
+    A: This occurs because of the blockchain forking, generally when one mining pool has a very large hashrate. This can be fixed by resyncing the correct blockchain from scratch. See "How can I resync the blockchain?"
+
+* **Q: How can I resync the blockchain?**
+
+    A: Close down any turtle related software, then go to %appdata%, and delete the turtlecoin folder. Reopen TurtleCoind/GUI and let it resync. Alternatively, see [How to Bootstrap the TurtleCoin Blockchain](https://github.com/turtlecoin/docs/blob/master/02-how-to-bootstrap-blockchain.md) for instructions on how to bootstrap for a quicker sync.
+
 * **Q: When I open TurtleCoind on a Mac, I get an error `Illegal instruction: 4`. How can I fix it?**
 
     A: This is a known issue with older macs or un-updated macs. Try entering this into a terminal - `curl -sL "https://raw.githubusercontent.com/turtlecoin/turtlecoin/master/multi_installer.sh" | bash` This automated script should compile the software itself, and place the binaries in ./src once done. See <https://github.com/turtlecoin/turtlecoin#ubuntu-1604-and-macos-1010> for more info.
@@ -185,7 +197,7 @@ Did this guide help you out? Throw some shells my way: `TRTLv2Fyavy8CXG8BPEbNeCH
 
     A: Currently it takes around 1-2 hours. This number will increase as more people use the coin and the blockchain gets larger. Want to skip/speed up the syncing? See "Can I skip the syncing?" or "Can I speed up the syncing of the blockchain"
 
-* **Q: Can I speed up the syncing of the blockchain?***
+* **Q: Can I speed up the syncing of the blockchain?**
 
     A: You can grab a recent copy of the blockchain and incrementally sync from there.  See [How to Bootstrap the TurtleCoin Blockchain](https://github.com/turtlecoin/docs/blob/master/02-how-to-bootstrap-blockchain.md) for instructions.
 
@@ -212,6 +224,14 @@ Did this guide help you out? Throw some shells my way: `TRTLv2Fyavy8CXG8BPEbNeCH
 * **Q: I'm using the GUI xamarin wallet, and when I start it up I get an error: `Could not load file or assembly Newtonsoft.Json`**
 
     A: You need to download the .zip file from the github, not just the .exe file - <https://github.com/turtlecoin/desktop-xamarin/releases> , you need all these files for the GUI to work.
+
+* **Q: I'm using the GUI xamarin wallet, and it fails to connect to the daemon**
+
+    A: There are multiple reasons this can occur. Try opening walletd.log and scrolling to the bottom to determine what is occuring.
+  * A wrong password - check walletd.log to check if this is occuring. If you are sure your password is correct, this link could be helpful - <https://github.com/turtlecoin/desktop-xamarin/issues/14>
+  * You have another walletd.exe or TurtleCoind.exe process running. Only one of these can be running at once, and the GUI launches it's own. Check task manager and close down any of these processes and try again.
+  * walletd is importing blocks from the DB, which takes a while and so the GUI thinks it has crashed. Solution here - <https://github.com/turtlecoin/desktop-xamarin/issues/17#issuecomment-366790435>
+  * If all else fails, if you have your private keys then you can instead import your wallet into simplewallet. 
 
 ## Other
 
