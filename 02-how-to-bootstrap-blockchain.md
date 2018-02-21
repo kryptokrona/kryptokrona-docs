@@ -16,12 +16,11 @@ This guide will help you install a recent copy of the Blockchain.  This should s
  * "DB" folder
 
 
-4. Download these two files:
+4. Download this ZIP file:
 
- * https://s3-us-west-2.amazonaws.com/turtlecoin.blockchain.bootstrap/blockindexes.bin
- * https://s3-us-west-2.amazonaws.com/turtlecoin.blockchain.bootstrap/blocks.bin
+ * https://s3.amazonaws.com/trtlpeers/trtl_block_204235.zip
 
-5. Move the two new downloaded files the %APPDATA%\TurtleCoin folder
+5. Extract the zip into your %APPDATA%\TurtleCoin folder, there should now be two files in there
 6. Start TurtleCoind.exe like you normally do
 7. See [Expected Results](#ExpectedResults) section below
 
@@ -34,32 +33,31 @@ This guide will help you install a recent copy of the Blockchain.  This should s
 ![findergoto.jpg](images/findergoto.jpg)
 
 4. Delete the files: blockindexes.bin and blocks.bin and "DB" folder if they exist
-5. Download these two files:
-	* https://s3-us-west-2.amazonaws.com/turtlecoin.blockchain.bootstrap/blockindexes.bin
-	* https://s3-us-west-2.amazonaws.com/turtlecoin.blockchain.bootstrap/blocks.bin
-6. Move the two new downloaded files blockindexes.bin and blocks.bin into the  ~/.TurtleCoin/ folder
+5. Download this ZIP file:
+	* https://s3.amazonaws.com/trtlpeers/trtl_block_204235.zip
+6. Extract the zip into your ~/.TurtleCoin/ folder, there should now be two files in there
 7. Start TurtleCoind like you normally do
 8. See [Expected Results](#ExpectedResults) section below
 
 ## Expected Results if done correctly <a name="ExpectedResults"></a>
 
-When you start TurtleCoind you should see this: (the blocksize, ie: 150246 in this example will be a different number - that's ok)
+When you start TurtleCoind you should see this: (the blocksize, ie: 204236 in this example may be a different number - that's ok)
 ```
-2018-Feb-01 18:43:37.216471 INFO    Initializing core...
-2018-Feb-01 18:43:37.225492 INFO    Importing blocks from blockchain storage
-2018-Feb-01 18:43:37.741587 INFO    Imported block with index 1000 / 150246
-2018-Feb-01 18:43:38.258202 INFO    Imported block with index 2000 / 150246
-2018-Feb-01 18:43:38.928033 INFO    Imported block with index 3000 / 150246
-2018-Feb-01 18:43:39.454094 INFO    Imported block with index 4000 / 150246
-2018-Feb-01 18:43:40.142969 INFO    Imported block with index 5000 / 150246
-2018-Feb-01 18:43:40.830674 INFO    Imported block with index 6000 / 150246
+2018-Feb-21 17:43:37.216471 INFO    Initializing core...
+2018-Feb-21 17:43:37.225492 INFO    Importing blocks from blockchain storage
+2018-Feb-21 17:43:37.741587 INFO    Imported block with index 1000 / 204236
+2018-Feb-21 17:43:38.258202 INFO    Imported block with index 2000 / 204236
+2018-Feb-21 17:43:38.928033 INFO    Imported block with index 3000 / 204236
+2018-Feb-21 17:43:39.454094 INFO    Imported block with index 4000 / 204236
+2018-Feb-21 17:43:40.142969 INFO    Imported block with index 5000 / 204236
+2018-Feb-21 17:43:40.830674 INFO    Imported block with index 6000 / 204236
 ```
 
 After it completes it will start syncing incrementally like so:
 ```
-2018-Feb-01 18:47:48.075930 INFO    Imported block with index 150000 / 150246
-2018-Feb-01 18:47:48.860470 INFO    Core initialized OK
-2018-Feb-01 18:47:48.860470 INFO    Initializing p2p server...
+2018-Feb-21 17:47:48.075930 INFO    Imported block with index 204000 / 204236
+2018-Feb-21 17:47:48.860470 INFO    Core initialized OK
+2018-Feb-21 17:47:48.860470 INFO    Initializing p2p server...
 ```
 
 
