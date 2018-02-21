@@ -52,7 +52,7 @@ exit
 ```
 
 3. To speed things up, you can download a recent copy of the blockchain by
-following the instructions for Mac and Linux at [HowToBootstrapBlockchain](https://github.com/turtlecoin/docs/blob/master/HowToBootstrapBlockchain.md).
+following the instructions for Mac and Linux at [HowToBootstrapBlockchain](https://github.com/turtlecoin/docs/blob/master/02-how-to-bootstrap-blockchain.md).
 
 4. After you download the blockchain from Step 3, start the syncing process
 again from within the `~/Desktop/TurtleCoin` folder.
