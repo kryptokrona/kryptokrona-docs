@@ -15,7 +15,7 @@ See:  https://cloud.google.com/compute/docs/quickstart-linux
 ###  Mining Instructions For Debian Linux on GCP
 SSH into GCP instance and enter:
 
-`sudo apt install libmicrohttpd-dev libssl-dev cmake build-essential libhwloc-dev`
+`sudo apt install libmicrohttpd-dev libssl-dev cmake build-essential libhwloc-dev git`
 
 `git clone https://github.com/fireice-uk/xmr-stak.git`
 
@@ -69,7 +69,7 @@ Add all of the pools in the list from step 6, and give them all a weight of 10 i
 
 #### slowandsteady.fun:3333
 
-#### trtl.mine2gether.com:3335 
+#### trtl.mine2gether.com:3335 (Germany)
 
 #### turtle.atpool.party:3333 (France)
 

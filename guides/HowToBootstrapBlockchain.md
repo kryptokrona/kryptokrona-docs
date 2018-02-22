@@ -1,15 +1,15 @@
 # How to Bootstrap the TurtleCoin Blockchain
 
-This guide will help you install a recent copy of the Blockchain.  This should significantally speed up the task of getting the Blockchain synced up before you can use your wallet.
+This guide will help you install a recent copy of the blockchain. This should significantly speed up the task of getting the blockchain synced up so you can use your wallet.
 
 ## Windows:
-1. Make sure TurtleCoind.exe is not running
+1. Make sure TurtleCoind.exe is not running.
 2. Open File Explorer and Type %APPDATA%\TurtleCoin and hit enter.
 ![file explorer](images/file_explorer.jpg)
 
-**Note: if the folder doesn't exist, just go to %APPDATA% instead and create the TurtleCoin folder**
+**Note: if the folder doesn't exist, just go to %APPDATA% instead and create the TurtleCoin folder.**
 
-3. Delete the following if they exist
+3. Delete the following if they exist:
 
  * blockindexes.bin
  * blocks.bin
@@ -21,29 +21,30 @@ This guide will help you install a recent copy of the Blockchain.  This should s
  * https://s3-us-west-2.amazonaws.com/turtlecoin.blockchain.bootstrap/blockindexes.bin
  * https://s3-us-west-2.amazonaws.com/turtlecoin.blockchain.bootstrap/blocks.bin
 
-5. Move the two new downloaded files the %APPDATA%\TurtleCoin folder
-6. Start TurtleCoind.exe like you normally do
-7. See [Expected Results](#ExpectedResults) section below
+5. Move the two new downloaded files the %APPDATA%\TurtleCoin folder.
+6. Start TurtleCoind.exe like you normally do.
+7. See [Expected Results](#ExpectedResults) section below.
 
 
 
 ## Mac & Linux:
-1. Make sure TurtleCoind is not running
-2. Open "Finder"
-3. Use this shortcut "Command+Shift+G" to bring up Go to folder
+1. Make sure TurtleCoind is not running.
+2. Open "Finder".
+3. Use this shortcut "Command+Shift+G" to bring up 'Go to Folder':
 ![findergoto.jpg](images/findergoto.jpg)
 
-4. Delete the files: blockindexes.bin and blocks.bin and "DB" folder if they exist
+4. Delete the files: blockindexes.bin, blocks.bin, and the "DB" folder if it exists
 5. Download these two files:
 	* https://s3-us-west-2.amazonaws.com/turtlecoin.blockchain.bootstrap/blockindexes.bin
 	* https://s3-us-west-2.amazonaws.com/turtlecoin.blockchain.bootstrap/blocks.bin
-6. Move the two new downloaded files blockindexes.bin and blocks.bin into the  ~/.TurtleCoin/ folder
-7. Start TurtleCoind like you normally do
-8. See [Expected Results](#ExpectedResults) section below
+6. Move the two downloaded files blockindexes.bin and blocks.bin into the  ~/.TurtleCoin/ folder
+7. Start TurtleCoind like you normally do.
+8. See the [Expected Results](#ExpectedResults) section below.
 
-## Expected Results if done correctly <a name="ExpectedResults"></a>
+## Expected Results if Done Correctly <a name="ExpectedResults"></a>
 
-When you start TurtleCoind you should see this: (the blocksize, ie: 150246 in this example will be a different number - that's ok)
+When you start TurtleCoind you should see this:
+(the blocksize, ie: 150246 in this example will be a different number - that's ok)
 ```
 2018-Feb-01 18:43:37.216471 INFO    Initializing core...
 2018-Feb-01 18:43:37.225492 INFO    Importing blocks from blockchain storage
@@ -63,5 +64,5 @@ After it completes it will start syncing incrementally like so:
 ```
 
 
-If you found it to be useful, you can tip me at this address:
+If you found this useful, you can tip me at this address:
 **TRTLv2fZMTGXh5shmiJZwPFhRx571Se942obz3tLsRqBPaUK1THGV5bEpLD3m7vNpB5mPvsn3K5uN7dcW7E2RRj27c25MRq6WpB**
