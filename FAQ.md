@@ -233,6 +233,14 @@ Did this guide help you out? Throw some shells my way: `TRTLv2Fyavy8CXG8BPEbNeCH
   * walletd is importing blocks from the DB, which takes a while and so the GUI thinks it has crashed. Solution here - <https://github.com/turtlecoin/desktop-xamarin/issues/17#issuecomment-366790435>
   * If all else fails, if you have your private keys then you can instead import your wallet into simplewallet. 
 
+* **Q: I'm using the GUI xamarin wallet, and it fails to connect to the daemon**
+
+    A: There are multiple reasons this can occur. Try opening walletd.log and scrolling to the bottom to determine what is occuring.
+  * A wrong password - check walletd.log to check if this is occuring. If you are sure your password is correct, this link could be helpful - <https://github.com/turtlecoin/desktop-xamarin/issues/14>
+  * You have another walletd.exe or TurtleCoind.exe process running. Only one of these can be running at once, and the GUI launches it's own. Check task manager and close down any of these processes and try again.
+  * walletd is importing blocks from the DB, which takes a while and so the GUI thinks it has crashed. Solution here - <https://github.com/turtlecoin/desktop-xamarin/issues/17#issuecomment-366790435>
+  * If all else fails, if you have your private keys then you can instead import your wallet into simplewallet. 
+
 ## Other
 
 * **Q: Why does TRTL have such a high amount of tokens/small amount of decimal places?**
