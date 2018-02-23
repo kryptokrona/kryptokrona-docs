@@ -12,7 +12,7 @@ Did this guide help you out? Throw some shells my way: `TRTLv2Fyavy8CXG8BPEbNeCH
 
 * **Q: I'm using a Mac, can I still mine?**
 
-    A: Yes, there is a guide available [here](https://github.com/turtlecoin/docs/blob/master/turtlecoin-mac-guide.md) - thanks to @wigging for creating this.
+    A: Yes, there is a guide available [here](https://github.com/turtlecoin/docs/blob/master/01-getting-started-mac.md) - thanks to @wigging for creating this.
 
 * **Q: I've started mining, how can I view my stats?**
 
@@ -121,6 +121,18 @@ Did this guide help you out? Throw some shells my way: `TRTLv2Fyavy8CXG8BPEbNeCH
 
 ## TurtleCoind / simplewallet issues
 
+* **Q: I'm getting an error "Wrong password" when opening my wallet, by I know the password is correct**
+
+    A: If you have opened your wallet with the GUI wallet, it is no longer openable by simplewallet, as they use two different formats. Open this wallet with the GUI, and export your keys. Then, open simplewallet and choose import, and give your wallet a new name, for example, `cli-wallet.bin`. Keep this copy for use with simplewallet, and use the other copy for using with the GUI.
+
+* **Q: I'm seeing an error in TurtleCoind `Proof of work to weak for block...` and the syncing has stuck**
+
+    A: This occurs because of the blockchain forking, generally when one mining pool has a very large hashrate. This can be fixed by resyncing the correct blockchain from scratch. See "How can I resync the blockchain?"
+
+* **Q: How can I resync the blockchain?**
+
+    A: Close down any turtle related software, then go to %appdata%, and delete the turtlecoin folder. Reopen TurtleCoind/GUI and let it resync. Alternatively, see [How to Bootstrap the TurtleCoin Blockchain](https://github.com/turtlecoin/docs/blob/master/02-how-to-bootstrap-blockchain.md) for instructions on how to bootstrap for a quicker sync.
+
 * **Q: When I open TurtleCoind on a Mac, I get an error `Illegal instruction: 4`. How can I fix it?**
 
     A: This is a known issue with older macs or un-updated macs. Try entering this into a terminal - `curl -sL "https://raw.githubusercontent.com/turtlecoin/turtlecoin/master/multi_installer.sh" | bash` This automated script should compile the software itself, and place the binaries in ./src once done. See <https://github.com/turtlecoin/turtlecoin#ubuntu-1604-and-macos-1010> for more info.
@@ -135,11 +147,11 @@ Did this guide help you out? Throw some shells my way: `TRTLv2Fyavy8CXG8BPEbNeCH
 
 * **Q: I've opened the wallet, and I'm getting lots of red messages with an error like this: `2019-Jan-29 01:24:48.088688 ERROR [BlockchainSynchronizer] Failed to query blocks: NodeErrorCategory:5, Internal node error`**
 
-    A: Update to the latest version - this has been fixed! <http://latest.turtlecoin.lol>
+    A: Update to the latest version - this has been fixed in v0.3.2! <http://latest.turtlecoin.lol>
 
 * **Q: I think I should have more money in my balance than it is showing, what should I do?**
 
-    A: Update to the latest version - this has been fixed! <http://latest.turtlecoin.lol>
+    A: Update to the latest version - this has been fixed in v0.3.2! <http://latest.turtlecoin.lol>
 
 * **Q: I've tried resetting, but it isn't working. What should I do?**
 
@@ -185,9 +197,9 @@ Did this guide help you out? Throw some shells my way: `TRTLv2Fyavy8CXG8BPEbNeCH
 
     A: Currently it takes around 1-2 hours. This number will increase as more people use the coin and the blockchain gets larger. Want to skip/speed up the syncing? See "Can I skip the syncing?" or "Can I speed up the syncing of the blockchain"
 
-* **Q: Can I speed up the syncing of the blockchain?***
+* **Q: Can I speed up the syncing of the blockchain?**
 
-    A: You can grab a recent copy of the blockchain and incrementally sync from there.  See [How to Bootstrap the TurtleCoin Blockchain](HowToBootstrapBlockchain.md) for instructions.
+    A: You can grab a recent copy of the blockchain and incrementally sync from there.  See [How to Bootstrap the TurtleCoin Blockchain](https://github.com/turtlecoin/docs/blob/master/02-how-to-bootstrap-blockchain.md) for instructions.
 
 * **Q: Can I skip the syncing?**
 
@@ -213,6 +225,14 @@ Did this guide help you out? Throw some shells my way: `TRTLv2Fyavy8CXG8BPEbNeCH
 
     A: You need to download the .zip file from the github, not just the .exe file - <https://github.com/turtlecoin/desktop-xamarin/releases> , you need all these files for the GUI to work.
 
+* **Q: I'm using the GUI xamarin wallet, and it fails to connect to the daemon**
+
+    A: There are multiple reasons this can occur. Try opening walletd.log and scrolling to the bottom to determine what is occuring.
+  * A wrong password - check walletd.log to check if this is occuring. If you are sure your password is correct, this link could be helpful - <https://github.com/turtlecoin/desktop-xamarin/issues/14>
+  * You have another walletd.exe or TurtleCoind.exe process running. Only one of these can be running at once, and the GUI launches it's own. Check task manager and close down any of these processes and try again.
+  * walletd is importing blocks from the DB, which takes a while and so the GUI thinks it has crashed. Solution here - <https://github.com/turtlecoin/desktop-xamarin/issues/17#issuecomment-366790435>
+  * If all else fails, if you have your private keys then you can instead import your wallet into simplewallet. 
+
 ## Other
 
 * **Q: Why does TRTL have such a high amount of tokens/small amount of decimal places?**
@@ -235,7 +255,7 @@ Did this guide help you out? Throw some shells my way: `TRTLv2Fyavy8CXG8BPEbNeCH
 
 * **Q: What is the #raindance channel / how does it work?**
 
-    A: There is an in depth, graphical explanation [here](https://github.com/turtlecoin/docs/blob/master/HowToRaindance.md) - thanks to @dlyz for this.
+    A: There is an in depth, graphical explanation [here](https://github.com/turtlecoin/docs/blob/master/03-how-to-raindance.md) - thanks to @dlyz for this.
 
 * **Q: How do I register my wallet on discord?**
 
