@@ -88,9 +88,30 @@ Simplewallet has a class inside of it, refresh_progress_reporter_t. This can be 
 
 ### simple_wallet(System::Dispatcher &dispatcher, const CryptoNote::Currency &currency, Logging::LoggerManager &log) - Constructor
 
-Enter description here...
+This creates an instance of the simple_wallet class.
+The dispatcher argument is defined in src/Platform/{Linux/Windows/OSX}/System/Dispatcher.cpp. That is, it is platform independent, and there is an implementation for each platform. Not sure what it does yet.
+
+The currency argument contains all the information about TRTL's parameters. For example, the maximum amount of coins, the amount of TRTL per block, the number of decimal places, and much more. Check src/CryptoNoteConfig.h for more info.
+
+This is a pretty simple constructor, it assigns the variables we passed in to the global class variables, sets up the log file (simplewallet.log), and assigns a few variables to their default values. Then, it sets up the handlers on the `m_consoleHandler` variable. It binds each of the simplewallet commands, like `balance`, `transfer`, `reset`, etc, to a function in the simple_wallet class. This is used both to print out how to use the commands (when you type `help` and it lists them commands and their usage), and to call the actual function when you type in the command.
 
 ### bool init(const boost::program_options::variables_map &vm)
+
+This function is pretty large, and does the whole wallet setup. It starts by parsing the command line arguments, and checking that the daemon address/port/host cli arguments don't conflict. Then it checks if a wallet file to open or a new wallet file to create/import has been specified on the command line. If not, it will prompt the user for what they wish to do, open, generate, import, mnemonic import, or exit. Then, it asks the user for a wallet name to open/import/ etc.
+
+We'll then do a little more error checking, that the user hasn't specified both wallet arguments, and that the wallet file they want to import/generate to doesn't already exist. Then we'll parse the daemon address if needed or set to their default values. Next, we'll read in the password if not specified on the cli. If we're importing/generating we'll prompt for the password twice, to make sure it's not typo'd, locking the user out of their wallet.
+
+We then set up the node rpcproxy with the daemon host and port, and the logger. As you may recall, this is used for talking to the daemon. More error checking, that the node setup successfully. We give the node a pointer to the simple_wallet class, which allows it to call back into our functions when new data is available, for example, when the user receives a payment, it will call back into a simple_wallet function to print this out.
+
+If we're generating a new wallet, we'll go ahead and do this, using the new_wallet() function, passing in the wallet filename and the password. More error checking occurs, and we print out the newly created wallet address to a file, with a .address file extension. For example, if the wallet was named `turtle`, the address file will be `turtle.address`. 
+
+If we're importing a wallet, then we'll prompt the user for either the private spend and view key, or the mnemonic seed, as specified. If importing via mnemonics, we'll parse the mnemonic into a private spend key, then derive a private view key from that. If importing via keys, we'll parse them from strings into the keys themselves. If the private keys were specified on the command line, we'll skip this step. 
+
+We'll then create the wallet, again using the new_wallet() function, this time with the private keys passed in as well. We'll write out an address file as well, as before.
+
+Finally, if we're not generating, or importing, we'll attempt to open the wallet. This uses the tryToOpenWalletOrLoadKeysOrThrow() function. We pass in a reference to the WalletLegacy class, the password, the filename, and the logger. We'll give both the WalletLegacy and the node a pointer to our simple_wallet class again.
+
+If on the cli we specified to quit after the open/import/generate operation, we'll exit instantly. If not, we'll exit this function and continue on to the console interface where users can type commands. 
 
 ### bool deinit()
 
