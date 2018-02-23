@@ -12,7 +12,7 @@ Did this guide help you out? Throw some shells my way: `TRTLv2Fyavy8CXG8BPEbNeCH
 
 * **Q: I'm using a Mac, can I still mine?**
 
-    A: Yes, there is a guide available [here](https://github.com/turtlecoin/docs/blob/master/01-getting-started-mac.md) - thanks to [@wigging](https://github.com/wigging) for creating this.
+    A: Yes, there is a guide available [here](https://github.com/turtlecoin/turtlecoin-wiki/blob/master/guides/01-getting-started-mac.md) - thanks to [@wigging](https://github.com/wigging) for creating this.
 
 * **Q: I've started mining, how can I view my stats?**
 
@@ -131,11 +131,11 @@ Did this guide help you out? Throw some shells my way: `TRTLv2Fyavy8CXG8BPEbNeCH
 
 * **Q: How can I re-sync the blockchain?**
 
-    A: Close down any turtlecoin related software, then go to %appdata%, and delete the turtlecoin folder. Reopen TurtleCoind/GUI and let it re-sync. Alternatively, see [How to Bootstrap the TurtleCoin Blockchain](https://github.com/turtlecoin/docs/blob/master/02-how-to-bootstrap-blockchain.md) for instructions on how to bootstrap for a quicker sync.
+    A: Close down any turtlecoin related software, then go to %appdata%, and delete the turtlecoin folder. Reopen TurtleCoind/GUI and let it re-sync. Alternatively, see [How to Bootstrap the TurtleCoin Blockchain](https://github.com/turtlecoin-wiki/docs/blob/master/guides/02-how-to-bootstrap-blockchain.md) for instructions on how to bootstrap for a quicker sync.
 
 * **Q: When I open TurtleCoind on a Mac, I get an error `Illegal instruction: 4`. How can I fix it?**
 
-    A: This is a known issue with older macs or un-updated macs. Try entering this into a terminal - `curl -sL "https://raw.githubusercontent.com/turtlecoin/turtlecoin/master/multi_installer.sh" | bash` This automated script should compile the software itself, and place the binaries in ./src once done. See <https://github.com/turtlecoin/turtlecoin#ubuntu-1604-and-macos-1010> for more info.
+    A: This is a known issue with older macs or un-updated macs. Try entering this into a terminal - `curl -sL "https://raw.githubusercontent.com/turtlecoin/turtlecoin/master/multi_installer.sh" | bash` This automated script should compile the software itself, and place the binaries in ./src once done. See <https://github.com/turtlecoin/turtlecoin#ubuntu-1604-and-macos-1010> for more info. If this fails, try instead following the instructions to compile manually - <https://github.com/turtlecoin/turtlecoin#apple>
 
 * **Q: I've opened the wallet, and I'm getting lots of red messages with an error like this: `2018-Jan-25 20:31:24.088189 ERROR   [BlockchainSynchronizer] Failed to query outdated pool transaction: NodeErrorCategory:7, Can't connect to daemon`**
 
@@ -199,7 +199,7 @@ Did this guide help you out? Throw some shells my way: `TRTLv2Fyavy8CXG8BPEbNeCH
 
 * **Q: Can I speed up the syncing of the blockchain?**
 
-    A: You can grab a recent copy of the blockchain and incrementally sync from there.  See [How to Bootstrap the TurtleCoin Blockchain](https://github.com/turtlecoin/docs/blob/master/02-how-to-bootstrap-blockchain.md) for instructions.
+    A: You can grab a recent copy of the blockchain and incrementally sync from there.  See [How to Bootstrap the TurtleCoin Blockchain](https://github.com/turtlecoin-wiki/docs/blob/master/guides/02-how-to-bootstrap-blockchain.md) for instructions.
 
 * **Q: Can I skip the syncing?**
 
@@ -228,7 +228,7 @@ Did this guide help you out? Throw some shells my way: `TRTLv2Fyavy8CXG8BPEbNeCH
 * **Q: I'm using the GUI Xamarin wallet, and it fails to connect to the daemon.**
 
     A: There are multiple reasons this can occur. Try opening walletd.log and scrolling to the bottom to determine what is occurring.
-  * A wrong password - check walletd.log to check if this is occurring. If you are sure your password is correct, this link could be helpful - <https://github.com/turtlecoin/desktop-xamarin/issues/14>
+  * A wrong password - check walletd.log to check if this is occurring. If you are sure your password is correct, this link could be helpful - <https://github.com/turtlecoin/desktop-xamarin/issues/20>
   * You have another walletd.exe or TurtleCoind.exe process running. Only one of these can be running at once, and the GUI launches its own. Check task manager and close down any of these processes and try again.
   * walletd is importing blocks from the DB, which takes a while and so the GUI thinks it has crashed. Solution here - <https://github.com/turtlecoin/desktop-xamarin/issues/17#issuecomment-366790435>
   * If all else fails, if you have your private keys then you can instead import your wallet into simplewallet. 
@@ -246,7 +246,7 @@ Did this guide help you out? Throw some shells my way: `TRTLv2Fyavy8CXG8BPEbNeCH
   * Buying - TRTL is currently available on these exchanges: [TradeOgre](https://tradeogre.com/exchange/BTC-TRTL) and [TradeSatoshi](https://tradesatoshi.com/Exchange/?market=TRTL_BTC)
   * Bounties - Bounties for developing TRTL software, spreading the word of TRTL, and many other things are often posted in the #bounties channel on discord. Check the pinned messages for current bounties.
   * Tips - People will sometimes tip each other for creating good TRTL memes in the #memes channel.
-  * Raindance - see the #raindance channel in discord - and check out [How to Raindance](https://github.com/turtlecoin/docs/blob/master/HowToRaindance.md) to see how to use it.
+  * Raindance - see the #raindance channel in discord - and check out [How to Raindance](https://github.com/turtlecoin/turtlecoin-wiki/blob/master/guides/03-how-to-raindance.md) to see how to use it.
   * Faucet - Head over to the faucet: <https://faucet.trtl.me/> and enter your TRTL address. The amount you can receive is limited, to share the TRTL for all. Thanks to @madk for creating this.
 
 * **Q: Are there any light wallets / mobile wallets?**
@@ -255,7 +255,7 @@ Did this guide help you out? Throw some shells my way: `TRTLv2Fyavy8CXG8BPEbNeCH
 
 * **Q: What is the #raindance channel / how does it work?**
 
-    A: There is an in depth, graphical explanation [here](https://github.com/turtlecoin/docs/blob/master/03-how-to-raindance.md) - thanks to @dlyz for this.
+    A: There is an in depth, graphical explanation [here](https://github.com/turtlecoin-wiki/docs/blob/master/guides/03-how-to-raindance.md) - thanks to @dlyz for this.
 
 * **Q: How do I register my wallet on discord?**
 
