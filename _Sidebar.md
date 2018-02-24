@@ -26,7 +26,9 @@
 - Guides
   - Bootstrapping the Blockchain
   - Mining
-    - Setup
+    - xmr-stak
+    - ccminer
+    - web miner
     - Mining Pools
     - Cloud Mining
   - Participating in Raindance
