@@ -1,38 +1,38 @@
-- [Home]
+- [[Home]]
 
 - About TurtleCoin
-  - [Background and History]
-  - [Technical Data]
-  - [Core Developers]
-  - [Community]
-  - [Contributing]
-  - [Supporting]
+  - [[Background and History]]
+  - [[Technical Data]]
+  - [[Core Developers]]
+  - [[Community]]
+  - [[Contributing]]
+  - [[Supporting]]
 
-- [Getting Started]
-  - [Downloading]
-  - [Installing]
-    - [Windows]
-    - [Linux]
-    - [Mac]
-  - [Synchronizing the BlockChain]
-  - [Using Simplewallet]
-    - [Creating a Wallet]
-    - [Exporting Keys]
-    - [Viewing Balance]
-    - [Sending Transactions]
-    - [Saving]
+- [[Getting Started]]
+  - [[Downloading]]
+  - [[Installing]]
+    - [[Windows]]
+    - [[Linux]]
+    - [[Mac]]
+  - [[Synchronizing the BlockChain]]
+  - [[Using Simplewallet]]
+    - [[Creating a Wallet]]
+    - [[Exporting Keys]]
+    - [[Viewing Balance]]
+    - [[Sending Transactions]]
+    - [[Saving]]
 
-- [Frequently Asked Questions]
+- [[Frequently Asked Questions]]
 
 - Guides
-  - [Bootstrapping the Blockchain]
-  - [Mining]
+  - [[Bootstrapping the Blockchain]]
+  - [[Mining]]
     - xmr-stak
     - ccminer
     - web miner
     - Mining Pools
     - Cloud Mining
-  - [Participating in Raindance]
+  - [[Participating in Raindance]]
   - Other
 
 - TRTL Development
