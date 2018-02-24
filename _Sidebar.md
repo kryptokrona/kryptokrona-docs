@@ -14,17 +14,22 @@
     - Linux
     - Mac
   - Synchronizing the BlockChain
-  - Using w/ Simplewallet
+  - Using Simplewallet
     - Creating a Wallet
     - Exporting Keys
     - Viewing Balance
     - Sending Transactions
     - Saving
 
+- Frequently Asked Questions
+
 - Guides
+  - Bootstrapping the Blockchain
   - Mining
-    - Mining Pools
     - Setup
+    - Mining Pools
+    - Cloud Mining
+  - Participating in Raindance
   - Other
 
 - TRTL Development
@@ -38,7 +43,9 @@
 - Cryptocurrency Fundamentals
   - How a Blockchain Works
   - Basic Concepts
-    - Hashes & Encryption
+    - Hashes & Encryption3
     - Wallets, Keys & Addresses
     - Transactions
     - Proof-of-Work
+
+- Contributors
