@@ -4,6 +4,7 @@
   - [Background and History]
   - [Technical Data]
   - [Core Developers]
+  - [Community]
   - [Contributing]
   - [Supporting]
 
