@@ -18,7 +18,7 @@ For the SBC, download the latest non-desktop version of Raspbian (https://www.ra
 This may take a few minutes. Next, we'll have to install some required tools to compile and run the miner. Enter this command:
 
 	
-	apt-get install automake autoconf pkg-config libcurl4-openssl-dev libjansson-dev libssl-dev libgmp-dev make g++
+	apt-get install git automake autoconf pkg-config libcurl4-openssl-dev libjansson-dev libssl-dev libgmp-dev make g++
 	
 
 ## Install the Miner
@@ -33,6 +33,7 @@ Let's now move to that directory and install the miner:
 
 	
 	cd cpuminer-multi
+	./autogen.sh
 	./configure --disable-assembly CFLAGS="-Ofast -march=native" --with-crypto --with-curl
 	sudo make install
 	
