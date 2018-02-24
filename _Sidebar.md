@@ -1,4 +1,4 @@
-- Home
+- [Home]
 
 - About TurtleCoin
   - Background/History
@@ -10,6 +10,9 @@
 - Getting Started
   - Downloading
   - Installing
+    - Windows
+    - Linux
+    - Mac
   - Synchronizing the BlockChain
   - Using w/ Simplewallet
     - Creating a Wallet
@@ -19,13 +22,6 @@
     - Saving
 
 - Guides
-  - Cryptocurrency Fundamentals
-    - How a Blockchain Works
-    - Basic Concepts
-      - Hashes & Encryption
-      - Wallets, Keys & Addresses
-      - Transactions
-      - Proof-of-Work
   - Mining
     - Mining Pools
     - Setup
@@ -39,3 +35,10 @@
     - Other Projects
   - 3rd-Party Integrations
 
+- Cryptocurrency Fundamentals
+  - How a Blockchain Works
+  - Basic Concepts
+    - Hashes & Encryption
+    - Wallets, Keys & Addresses
+    - Transactions
+    - Proof-of-Work
