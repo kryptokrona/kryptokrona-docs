@@ -1,8 +1,6 @@
 # Mining TurtleCoin with an SBC
 
-This guide will get you started mining TurtleCoin on a Raspberry Pi or similar SBC. If you found it to be useful, you can tip me at this address:
-
-**TRTLv23Fa8TfDErxVHjSnQXc8dwAHBuvGcy21DcC7DAFGMxvYy8PTajXqcjDxosuRd1GJCd5GbYCnhQCBJbE7ur4LMnf75t3v2Y**
+This guide will get you started mining TurtleCoin on a Raspberry Pi or similar SBC
 
 ## Setup
 
