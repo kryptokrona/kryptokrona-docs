@@ -8,19 +8,20 @@
   - [[Contributing]]
   - [[Supporting]]
 
-- [[Getting Started]]
-  - [[Downloading]]
-  - [[Installing]]
-    - [[Windows]]
-    - [[Linux]]
-    - [[Mac]]
-  - [[Synchronizing the BlockChain]]
-  - [[Using Simplewallet]]
-    - [[Creating a Wallet]]
-    - [[Exporting Keys]]
-    - [[Viewing Balance]]
-    - [[Sending Transactions]]
-    - [[Saving]]
+- [Getting Started](Getting-Started)
+  - [Downloading](Getting-Started#downloading)
+  - [Installing](Getting-Started#installing)
+    - [Windows](Getting-Started#installing-on-windows)
+    - [[Mac]](Getting-Started#installing-on-mac)
+    - [Linux](Getting-Started#installing-on-linux)
+  - [Synchronizing the Blockchain](Getting-Started#synchronizing-the-blockchain)
+  - [Using Simplewallet](Getting-Started#using-simplewallet)
+    - [Creating a Wallet](Getting-Started#creating-a-wallet)
+    - [Viewing Wallet Address](Getting-Started#viewing-wallet-address)
+    - [Exporting Keys](Getting-Started#exporting-keys)
+    - [Viewing Wallet Balance](Getting-Started#viewing-wallet-balance)
+    - [Sending TurtleCoin Transactions](Getting-Started#sending-turtlecoin-transactions)
+    - [Saving the Wallet](Getting-Started#saving-the-wallet)
 
 - [[Frequently Asked Questions]]
 
