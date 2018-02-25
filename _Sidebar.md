@@ -26,12 +26,14 @@
 
 - Guides
   - [[Bootstrapping the Blockchain]]
-  - [[Mining]]
-    - xmr-stak
-    - ccminer
-    - web miner
-    - Mining Pools
-    - Cloud Mining
+  - [Mining](Mining)
+    - [Mining Software](Mining#mining-software)
+      - [XMR-Stak](Mining#xmr-stak)
+      - ccminer
+      - web miner
+    - [Mining Pools](Mining#mining-pools)
+    - (Cloud Mining)(Mining#cloud-mining)
+    - [Mining with SBC](Mining-with-SBC)
   - [[Participating in Raindance]]
   - Other
 
