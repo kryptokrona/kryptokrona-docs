@@ -58,8 +58,24 @@ XMR-Stak will prioritize the first/highest weightt pool, and fall back to the ot
 Done!! The miner will now start scanning your hardware and will begin mining. Cowabunga dude!  
 After the first run of XMR-Stak, it will save your configuration in a `config.txt` file in the same directory from which XMR-Stak is running. Run XMR-Stak again from the same directory to reuse the configuration.
 
-
 ## Mining Pools
+
+- auspool.turtleco.in
+- cryptoknight.cc/turtle
+- etnchina.io/trtl
+- slowandsteady.fun
+- trtl.mine2gether.com
+- trtl.ninja
+- trtl.flashpool.club
+- trtl.blockchainera.net
+- trtlpool.ninja
+- eu.turtlepool.space
+- us.turtlepool.space
+- hk.turtlepool.space
+- turtlecoinpool.ml
+- turtle.mining.garden
+- turtle.atpool.party
+- z-pool.com
 
 ## Checking Balances and Payments
 
