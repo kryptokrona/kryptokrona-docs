@@ -25,6 +25,7 @@
 - [[Frequently Asked Questions]]
 
 - Guides
+  - Alternative Installation Methods
   - [[Bootstrapping the Blockchain]]
   - [Mining](Mining)
     - [Mining Software](Mining#mining-software)
