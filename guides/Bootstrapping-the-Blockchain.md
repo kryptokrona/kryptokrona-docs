@@ -61,7 +61,3 @@ After it completes it will start syncing incrementally like so:
 2018-Feb-01 18:47:48.860470 INFO    Core initialized OK
 2018-Feb-01 18:47:48.860470 INFO    Initializing p2p server...
 ```
-
-
-If you found this useful, you can tip me at this address:
-**TRTLv2fZMTGXh5shmiJZwPFhRx571Se942obz3tLsRqBPaUK1THGV5bEpLD3m7vNpB5mPvsn3K5uN7dcW7E2RRj27c25MRq6WpB**
