@@ -32,7 +32,7 @@
       - ccminer
       - web miner
     - [Mining Pools](Mining#mining-pools)
-    - (Cloud Mining)(Mining#cloud-mining)
+    - [Cloud Mining](Mining#cloud-mining)
     - [Mining with SBC](Mining-with-SBC)
   - [[Participating in Raindance]]
   - Other
