@@ -6,7 +6,7 @@ This guide will walk you through the process.
 
 ![Raindance Channel](images/raindance/rain1.jpg)
 
-A raindance can happen when the TurtleBotRain wallet has accumulated 5,000 or more TRTL. It can also be triggered at-will by an admin.
+A raindance can happen when the TurtleBotRain wallet has accumulated 5,000 or more TRTL.
 
 ![Forecast](images/raindance/forecast.jpg)
 
