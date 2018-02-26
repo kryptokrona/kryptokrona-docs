@@ -95,10 +95,3 @@ Select "All".
 ![Select All](images/raindance/notify6.jpg)
 
 Done.
-
-
-
--dylz
-**TRTLv16L6zSUVFWutFJ7jfDJp5ZbLL5UzCfEPAczJeSodTG8Q7ZJeNFVab1dTL1eztEVcavf6frfnPhGHaZrwDfagJ1Eq4dt5ew**
-
--beezTEM (editor)
