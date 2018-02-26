@@ -33,9 +33,8 @@ This guide will help you install a recent copy of the blockchain. This should si
 ![findergoto.jpg](../images/findergoto.jpg)
 
 4. Delete the files: blockindexes.bin, blocks.bin, and the "DB" folder if it exists
-5. Download these two files:
-	* https://s3-us-west-2.amazonaws.com/turtlecoin.blockchain.bootstrap/blockindexes.bin
-	* https://s3-us-west-2.amazonaws.com/turtlecoin.blockchain.bootstrap/blocks.bin
+5. Download the zip file with the largest block number here:
+	* https://turtle-blockchain.s3.amazonaws.com/index.html
 6. Move the two downloaded files blockindexes.bin and blocks.bin into the  ~/.TurtleCoin/ folder
 7. Start TurtleCoind like you normally do.
 8. See the [Expected Results](#ExpectedResults) section below.
