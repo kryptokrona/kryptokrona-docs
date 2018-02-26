@@ -12,7 +12,7 @@
   - [Downloading](Getting-Started#downloading)
   - [Installing](Getting-Started#installing)
     - [Windows](Getting-Started#installing-on-windows)
-    - [[Mac]](Getting-Started#installing-on-mac)
+    - [Mac](Getting-Started#installing-on-mac)
     - [Linux](Getting-Started#installing-on-linux)
   - [Synchronizing the Blockchain](Getting-Started#synchronizing-the-blockchain)
   - [Using Simplewallet](Getting-Started#using-simplewallet)
