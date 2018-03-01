@@ -16,7 +16,7 @@ For the SBC, download the latest non-desktop version of Raspbian (https://www.ra
 This may take a few minutes. Next, we'll have to install some required tools to compile and run the miner. Enter this command:
 
 	
-	apt-get install git automake autoconf pkg-config libcurl4-openssl-dev libjansson-dev libssl-dev libgmp-dev make g++
+	sudo apt-get install git automake autoconf pkg-config libcurl4-openssl-dev libjansson-dev libssl-dev libgmp-dev make g++
 	
 
 ## Install the Miner
@@ -41,7 +41,7 @@ Let's now move to that directory and install the miner:
 Finally, we can run the miner with the following parameters:
 
 	
-	cpuminer -a cryptonight -o stratum+tcp:[YOUR POOL HERE] -u [YOUR WALLET ADDRESS HERE] -p x
+	cpuminer -a cryptonight -o stratum+tcp://[YOUR POOL HERE] -u [YOUR WALLET ADDRESS HERE] -p x
 	
 	
 You'll need to select a pool to participate in for the first `-o` parameter. Pick one that is closest to your location. Make sure to include the port number as well. Here is the current list:
