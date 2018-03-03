@@ -37,7 +37,7 @@
     - [Cloud Mining](Mining#cloud-mining)
     - [Mining with SBC](Mining-with-SBC)
   - [[Participating in Raindance]]
-  - Other
+  - [Using Simplewallet with Remote Nodes](Using-Simplewallet-with-Remote-Nodes)
 
 - TRTL Development
   - Connecting with Developers
