@@ -2,12 +2,12 @@
 :turtle: :turtle: :turtle: Documentation for all things TurtleCoin:turtle: :turtle: :turtle:
 
 ## About
-This reposity is the **official** home of all TurtleCoin documentation and should be regarded *single source of truth* for all 'official' or officially supported TurtleCoin projects. Because of the distributed, open, community-driven nature of our development teams, we believe the easiest approach to managing our documentation is to organize all of it in this central repository. This helps to avoid duplication and inconsistency and relieves contributors from having to track down and edit multiple documents in multiple places.  
+This reposity is the **official** home of all TurtleCoin documentation and should be regarded as the *single source of truth* for all 'official' or officially supported TurtleCoin projects. Because of the distributed, open, community-driven nature of our development teams, we believe the easiest approach to managing our documentation is to organize all of it in this central repository. This helps to avoid duplication and inconsistency and relieves contributors from having to track down and edit multiple documents in multiple places.  
 The community makes a best-effort to keep documentation accurate and up-to-date, but please be aware that it may not always reflect reality - code changes may be released before documentation is updated.
 
 ## Instances of the Wiki
 
-The official production TurtleCoin Wiki is at http://github.com/turtlecoin/turtlecoin/wiki. This is the URL that should be used for externally linking to the wiki (or any articles/pages within it)
+The official production TurtleCoin Wiki is at http://github.com/turtlecoin/turtlecoin/wiki. This is the URL that should be used for externally linking to the wiki (or any articles/pages within it).
 
 This repo, http://github.com/turtlecoin/turtlecoin-wiki, holds the raw markdown that the wiki is built from.
 
