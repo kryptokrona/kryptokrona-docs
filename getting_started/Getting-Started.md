@@ -4,16 +4,19 @@
 
 Binary distributions can be found at https://github.com/turtlecoin/turtlecoin/releases/latest.
 
-Select the appropriate file for the target platform (Windows, Max, Linux)
+Select the appropriate file for the target platform (Windows, Mac, Linux)
 
 ## Installing
 
 ### Installing on Windows
-### Installing on Mac
 
-### Installing on Linux
+Download the binary zip and extract it, there's nothing else to install.
 
-Download the binary tarball and extract it (`tar -xzvf turtlecoin...tar.gz`). `cd` into the newely-created directory (e.g. *turtlecoin-v0.3.2*).
+### Installing on Linux / Mac
+
+Download the binary tarball (make sure you get mac for mac and linux for linux) and extract it (`tar -xzvf turtlecoin...tar.gz`). `cd` into the newly-created directory (e.g. *turtlecoin-v0.3.2*).
+
+To make the binaries available system-wide, you can copy them to `/usr/local/bin`.
 
 ## Synchronizing the Blockchain
 
@@ -22,9 +25,9 @@ Because the blockchain is constantly growing, the file size is always increasing
 
 ### Windows
 
-### Mac
+Run the `TurtleCoind.exe` executable from the Windows binary zip.
 
-### Linux
+### Linux / Mac
 
 ```bash
 ./TurtleCoind
@@ -34,11 +37,11 @@ Because the blockchain is constantly growing, the file size is always increasing
 
 With TurtleCoind still running in the background or another terminal/shell/command prompt, open Simplewallet in a new shell:
 
-### Windows
+#### Windows
 
-### Mac
+Run the `simplewallet.exe` executable from the Windows binary zip.
 
-#### Linux
+#### Linux / Mac
 
 ```bash
 ./simplewallet
