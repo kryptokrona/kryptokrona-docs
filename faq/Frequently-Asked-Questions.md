@@ -74,7 +74,7 @@ Did this guide help you out? Throw some shells my way: `TRTLv2Fyavy8CXG8BPEbNeCH
 
 * **Q: My PC is laggy when I'm mining in xmr-stak. Can I fix this?**
 
-    A:
+    A: This could be caused by multiple issues:
   * If you're using a Nvidia card, open up nvidia.txt, in the same directory as xmr-stak.exe. Try setting bfactor to 8 and bsleep to 100, and then reload your miner after saving the file. If it's still laggy, try increasing both values slightly. This will cause you to get less hashes per second, but can let you use your PC more effectively. You can try tweaking the value to increase your hashrate. Some people also achieve success by lowering the thread count.
   * If you're using an AMD card, there should be an intensity value that you can lower in amd.txt.
   * If you're using just a CPU, you can delete the cores being used from cpu.txt.
@@ -241,7 +241,7 @@ Did this guide help you out? Throw some shells my way: `TRTLv2Fyavy8CXG8BPEbNeCH
 
 * **Q: How can I get some TRTL?**
 
-    A:
+    A: There are multiple ways to acquire TRTL, for example:
   * Mining - see <http://mining.turtlecoin.lol>
   * Buying - TRTL is currently available on these exchanges: [TradeOgre](https://tradeogre.com/exchange/BTC-TRTL) and [TradeSatoshi](https://tradesatoshi.com/Exchange/?market=TRTL_BTC)
   * Bounties - Bounties for developing TRTL software, spreading the word of TRTL, and many other things are often posted in the #bounties channel on discord. Check the pinned messages for current bounties.
