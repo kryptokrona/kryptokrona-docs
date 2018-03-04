@@ -9,13 +9,13 @@ Download this latest release of TurtleCoin. https://github.com/turtlecoin/turtle
 
 3. In the TurtleCoin folder on your desktop, double click the TurtleCoind.exe file to start syncing your blockchain. Don't worry if you don't know what that means, but it lets our wallet talk to the network, so leave it running!
 
-4. You should be syncing and seeing yellow and white text. When you see green text, you are done syncing, it should take around 1-2 hours.
+4. You should be syncing and seeing yellow and white text. When you see green text, you are done syncing, it should take around 1-2 hours. Alternatively, see [How to Bootstrap the TurtleCoin Blockchain](https://github.com/turtlecoin-wiki/docs/blob/master/guides/02-how-to-bootstrap-blockchain.md) for instructions on how to bootstrap for a quicker sync.
 
-5. run simplewallet.exe. If you see an error that says you can't connect to daemon, that means you closed the TurtleCoind.exe window, or it means you're not done syncing.
+5. Run simplewallet.exe. If you see an error that says you can't connect to daemon, that means you closed the TurtleCoind.exe window, or it means you're not done syncing.
 
 6. To make a new wallet, press [G] for Generate Wallet, and give your wallet a name and password.
 
 8. You're done! **Copy your spend key and view key and back them them up** so that you can restore your wallet if it breaks or if you lose it!!! Remember, these keys are the **only** way to restore your wallet - you need to keep them safely backed up and private! **Anyone with these keys can access your wallet from anywhere**
 
-Go to http://chat.turtlecoin.lol and post your wallet address in #wallets and we will get you started with some TRTL to kick the tires a little bit :)
+Go to http://chat.turtlecoin.lol and post your wallet address in #wallets and we will get you started with some TRTL to kick the tires a little bit. :)
   
