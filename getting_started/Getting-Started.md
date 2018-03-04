@@ -14,7 +14,7 @@ Download the binary zip and extract it, there's nothing else to install.
 
 ### Installing on Linux / Mac
 
-Download the binary tarball (make sure you get mac for mac and linux for linux) and extract it (`tar -xzvf turtlecoin...tar.gz`). `cd` into the newely-created directory (e.g. *turtlecoin-v0.3.2*).
+Download the binary tarball (make sure you get mac for mac and linux for linux) and extract it (`tar -xzvf turtlecoin...tar.gz`). `cd` into the newly-created directory (e.g. *turtlecoin-v0.3.2*).
 
 To make the binaries available system-wide, you can copy them to `/usr/local/bin`.
 
