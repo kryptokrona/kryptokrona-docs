@@ -1,24 +1,32 @@
 # Getting Started
 
-## Download
+## Downloading
 
 Binary distributions can be found at https://github.com/turtlecoin/turtlecoin/releases/latest.
 
-Select the appropriate file for the target platform (Windows, Mac, Linux)
+Select the appropriate file for the target platform (Windows, Mac, Linux). Windows binaries are provided in *.zip* format, while Mac and Linux are provided in *.tar.gz* format.
 
 ## Installing
 
 ### Installing on Windows
 
-Download the binary zip and extract it, there's nothing else to install.
+Extract the *.zip* file (`turtlecoin...-windows.zip`).
 
 ### Installing on Mac
 
+Extract the *.tar.gz* file:
+
+```bash
+tar -xzf turtlecoin..-mac.tar.gz
+```
+
 ### Installing on Linux
 
-Download the binary tarball (make sure you get mac for mac and linux for linux) and extract it (`tar -xzvf turtlecoin...tar.gz`). `cd` into the newly-created directory (e.g. *turtlecoin-v0.3.2*).
+Extract the *.tar.gz* file: 
 
-To make the binaries available system-wide, you can copy them to `/usr/local/bin`.
+```bash
+tar -xzf turtlecoin..-linux.tar.gz
+```
 
 ## Synchronizing the Blockchain
 
@@ -27,25 +35,37 @@ Because the blockchain is constantly growing, the file size is always increasing
 
 ### Windows
 
-Run the `TurtleCoind.exe` executable from the Windows binary zip.
+Run the `TurtleCoind.exe` executable extracted from the Windows binary zip:
+
+```powershell
+PS C:\Downloads\turtlecoin-windows> TurtleCoind.exe
+```
 
 ### Mac
 
-### Linux
+Run the `TurtleCoind` binary extracted from the Mac binary tarball:
 
 ```bash
-./TurtleCoind
+:~/Downloads/turtlecoin-mac$ ./TurtleCoind
 ```
 
-### Using Simplewallet
+### Linux
 
-With TurtleCoind still running in the background or another terminal/shell/command prompt, open Simplewallet in a new shell:
+Run the `TurtleCoind` binary extracted from the Linux binary tarball:
+
+```bash
+:~/Downloads/turtlecoin-linux$ ./TurtleCoind
+```
+
+## Using Simplewallet
+
+With `TurtleCoind` still running in the background or another terminal/shell/command prompt, open Simplewallet in a new shell:
 
 #### Windows
 
 Run the `simplewallet.exe` executable from the Windows binary zip.
 
-### Mac
+#### Mac
 
 #### Linux
 
@@ -53,7 +73,7 @@ Run the `simplewallet.exe` executable from the Windows binary zip.
 ./simplewallet
 ```
 
-### Generating a Wallet
+### Creating a Wallet
 
 In the running *simplewallet* client:  
 Press `G` to generate new wallet.  
