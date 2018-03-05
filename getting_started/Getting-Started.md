@@ -12,7 +12,9 @@ Select the appropriate file for the target platform (Windows, Mac, Linux)
 
 Download the binary zip and extract it, there's nothing else to install.
 
-### Installing on Linux / Mac
+### Installing on Mac
+
+### Installing on Linux
 
 Download the binary tarball (make sure you get mac for mac and linux for linux) and extract it (`tar -xzvf turtlecoin...tar.gz`). `cd` into the newly-created directory (e.g. *turtlecoin-v0.3.2*).
 
@@ -27,7 +29,9 @@ Because the blockchain is constantly growing, the file size is always increasing
 
 Run the `TurtleCoind.exe` executable from the Windows binary zip.
 
-### Linux / Mac
+### Mac
+
+### Linux
 
 ```bash
 ./TurtleCoind
@@ -41,7 +45,9 @@ With TurtleCoind still running in the background or another terminal/shell/comma
 
 Run the `simplewallet.exe` executable from the Windows binary zip.
 
-#### Linux / Mac
+### Mac
+
+#### Linux
 
 ```bash
 ./simplewallet
