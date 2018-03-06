@@ -2,14 +2,14 @@
 
 This guide will walk you through the process.
 
-Here's a quick screen recording video of a raindance taking place:
+Here's a quick screen recording video of a raindance taking place:  
 [TurtleCoin - Participating in Raindance on Vimeo](https://vimeo.com/258816694)
 
 ## raindance
 
 ![Raindance Channel](images/raindance/rain1.jpg)
 
-A raindance can happen when the TurtleBotRain wallet has accumulated 5,000 or more TRTL. It can also be triggered at-will by an admin.
+A raindance can happen when the TurtleBotRain wallet has accumulated 5,000 or more TRTL.
 
 ![Forecast](images/raindance/forecast.jpg)
 
