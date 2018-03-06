@@ -2,6 +2,9 @@
 
 This guide will walk you through the process.
 
+Here's a quick screen recording video of a raindance taking place:  
+[TurtleCoin - Participating in Raindance on Vimeo](https://vimeo.com/258816694)
+
 ## raindance
 
 ![Raindance Channel](images/raindance/rain1.jpg)
