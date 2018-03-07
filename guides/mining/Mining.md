@@ -53,7 +53,7 @@ Enter `n`
 
 7. `Do you want to use multiple pools? (y/n)`  
 Enter `y` if you would like to add more pools. Give them all a weight of 10 if you're tired of reading, or if you want the best experience, give the pools nearest to you a higher number, and the ones further from you a lower number.  
-XMR-Stak will prioritize the first/highest weightt pool, and fall back to the others if it cannot connect.
+XMR-Stak will prioritize the first/highest weight pool, and fall back to the others if it cannot connect.
 
 Done!! The miner will now start scanning your hardware and will begin mining. Cowabunga dude!  
 After the first run of XMR-Stak, it will save your configuration in a `config.txt` file in the same directory from which XMR-Stak is running. Run XMR-Stak again from the same directory to reuse the configuration.
