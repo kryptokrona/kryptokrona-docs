@@ -24,6 +24,7 @@
     - [Saving the Wallet](Getting-Started#saving-the-wallet)
 
 - [[Frequently Asked Questions]]
+  - [Paper Wallet / Cold Storage?](Frequently-Asked-Questions#Paper-wallet-cold-storage)
 
 - Guides
   - Alternative Installation Methods
