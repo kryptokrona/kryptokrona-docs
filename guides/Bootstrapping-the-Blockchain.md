@@ -5,7 +5,8 @@ This guide will help you install a recent copy of the blockchain. This should si
 ## Windows:
 1. Make sure TurtleCoind.exe, walletd.exe, and the GUI is not running.
 2. Open File Explorer and Type %APPDATA%\TurtleCoin and hit enter.
-![file explorer](../images/file_explorer.jpg)
+
+![file explorer](https://github.com/turtlecoin/turtlecoin-wiki/blob/master/images/file_explorer.jpg)
 
 **Note: if the folder doesn't exist, just go to %APPDATA% instead and create the TurtleCoin folder.**
 
@@ -30,7 +31,8 @@ This guide will help you install a recent copy of the blockchain. This should si
 1. Make sure TurtleCoind, walletd, and the GUI is not running.
 2. Open "Finder".
 3. Use this shortcut "Command+Shift+G" to bring up 'Go to Folder':
-![findergoto.jpg](../images/findergoto.jpg)
+
+![findergoto.jpg](https://github.com/turtlecoin/turtlecoin-wiki/blob/master/images/findergoto.jpg)
 
 4. Delete the files: blockindexes.bin, blocks.bin, and the "DB" folder if it exists
 5. Download the zip file with the largest block number here:
