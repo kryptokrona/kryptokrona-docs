@@ -1,8 +1,8 @@
 # Using a remote daemon with Simple Wallet
 
-Sick of having to download and process all the blocks in order to check you balance or make a transfer?
+Sick of having to download and process the entire blockchain in order to check you balance or make a transfer?
 
-Well, there is an easy way to quickly get up and running. You can use a remote node running a Turtle coin daemon so you don't have to run one locally to sync your wallet.
+There is an easy way to quickly get your wallet up and running. You can use a remote node running a TurtleCoin daemon so you don't have to run one locally to sync your wallet.
 
 ## How to do it
 
@@ -10,22 +10,27 @@ Well, there is an easy way to quickly get up and running. You can use a remote n
 
 1. Use the following command to start simplewallet
 
-       simplewallet.exe --daemon-host daemon.turtle.link --daemon-port 11898
+```text
+simplewallet.exe --daemon-host <daemon-host> --daemon-port <daemon-port>
+```
+Simply replace *<daemon-host>* and *<daemon-port>* with values from one of the public remote daemons available below.
 
 You can now follow your normal process to access your wallet.
 
-*At this time this is the only remote node that I am aware of. If you know of any others please feel free to add to the list below.*
 
 ## I don't want to have to type this every time
 
-Me neither, simply create a new batch file with the following then double-click to run it:
+Create a new batch file (.bat) with the following lines inside and then double-click on the file to run it:
 
-    @echo off
-    simplewallet.exe --daemon-host daemon.turtle.link --daemon-port 11898
-    pause
+```text
+@echo off
+simplewallet.exe --daemon-host <daemon-host> --daemon-port <daemon-port>
+pause
+```
 
 ## List of known remote daemons
 
-| Server | Port |
-|--|--|
-| daemon.turtle.link | 11898 |
+| Server | Port | Website |
+|--|--|--|
+| daemon.turtle.link | 11898 | http://turtle.link
+| public.turtlenode.io | 11898 | https://turtlenode.io
