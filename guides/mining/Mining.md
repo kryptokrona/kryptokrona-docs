@@ -57,7 +57,7 @@ XMR-Stak will prioritize the first/highest weight pool, and fall back to the oth
 
 Done!! The miner will now start scanning your hardware and will begin mining. Cowabunga dude!  
 
-XMR-Stak will save your configuration in `config.txt` in the same directory from which XMR-Stak was first run. Run XMR-Stak again from the same directory to reuse the configuration.
+XMR-Stak will save your configuration in `config.txt` in the same directory from which it was first run. Run XMR-Stak again from the same directory to reuse the configuration.
 
 ## Mining Pools
 
