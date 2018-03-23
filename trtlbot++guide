@@ -1,17 +1,18 @@
-Go to #wallets and type `.register <walletaddress>` After your wallet address has been registered, PM `trtlbot++` with `.deposit`. He will give you a command to copy/paste into the CLI Wallet. Do that, and replace `<amount>` with however much you want to send and press enter.
+Go to #wallets and type `.register <walletaddress>`. 
+After your wallet address has been registered, PM `trtlbot++` with `.deposit`. He will give you a command to copy/paste into the CLI Wallet. Do that, and replace `<amount>` with however much you want to send and press enter.
 
 If you use the GUI wallet,  copy the part from `3` to `<amount>` and enter that as the wallet address. Then copy the part after `-p` and enter that as the payment address. In amount, mention how much you want to send and set the mixin as 3 and press send.
 
-When you recieve the payment, the bot will tell you it has received it. Now you can tip people.. To tip, type `.tip <amount> @<person>`. `<amount>` is how much you will tip the person. `<@person>` is whom you'll tip it to.
+When the bot recieves the payment, the bot will let you know. Now you can tip people.. To tip, type `.tip <amount> @<person>`. `<amount>` is how much you will tip the person. `<@person>` is whom you'll tip it to.
 
 For ex, `.tip 1 @RockSteady#7588`. 
 
-Reacting with the emoji :almost100: on someone's message will tip them 99 trtl.
+Reacting with the emoji :almost100: on someone's message will tip them 99 TRTL.
 
 If someone has tipped someone, then reacting with :tip:  on the message on which they tipped(`.tip 1 @RockSteady#7588`) will send the recipient (in this case, RockSteady) with the same amount he was originally tipped (in this case, 1). So the recipient (RockSteady) gets 2 TRTL.
 
-The minimum you can send in 0.11 TRTL. The bot will take an extra 0.1 trtl on top of what you tipped to account for fees. So if you tipped 1 TRTL,  1.1 TRTL will be pulled from you account so that the full 1 TRTL reaches the recipient
+The minimum you can send is 0.11 TRTL. The bot will take an extra 0.1 TRTL on top of what you tipped to account for fees. So if you tipped 1 TRTL,  1.1 TRTL will be pulled from you account so that the full 1 TRTL reaches the recipient
 
 If you try to tip someone who isn't registed, the bot will react with :sos: and PM him with instructions on how to register. Or you could link him to this guide :)
 
-That's it~ Enjoy tipping and getting tipped :)
+That's it! Enjoy tipping and getting tipped :)
