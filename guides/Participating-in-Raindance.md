@@ -2,37 +2,36 @@
 
 This guide will walk you through the process.
 
-Here's a quick screen recording video of a raindance taking place:  
+Here's a quick screen recording of a raindance taking place:  
 [TurtleCoin - Participating in Raindance on Vimeo](https://vimeo.com/258816694)
 
 ## raindance
 
 ![Raindance Channel](images/raindance/rain1.jpg)
 
-A raindance can happen when the TurtleBotRain wallet has accumulated 5,000 or more TRTL.
+A raindance happens when the TurtleBotRain wallet has accumulated 5,000 or more TRTL.
 
 ![Forecast](images/raindance/forecast.jpg)
 
-When TurtleBotRain posts in the #raindance channel it means a Raindance is about to begin!
+When TurtleBotRain posts in the #raindance channel, it means a raindance is about to begin!
 
 ![A Raindance is about to begin](images/raindance/tuttut.jpg)
 
-When you see this message the RainDance will begin soon.
+When you see this message the raindance will begin soon.
 Get your TRTL wallet address ready.
 
 **Wait** and especially **don't click on any reactions or emotes yet. This will cause a disqualification!**
 
-Wait for the “Quick, send me your wallet” message.
+Wait for the “Quick, send me your wallet addresses!” message.
 
 ![Quick, send your wallet!](images/raindance/quick_rain.jpg)
 
-Click on TurtleBotRain to send your address in a private message to TurtleBotRain.
-
+Click on TurtleBotRain to send your address in a private message to it.
 ![Click on this](images/raindance/turtlebotrain.jpg)
 
 ![DM the bot](images/raindance/pm_bot.jpg)
 
-You should receive a private message back that looks like something like this:
+You should receive a private message back that will look like something like this:
 
 ![You get a response](images/raindance/respo1.jpg)
 
@@ -62,7 +61,7 @@ TurtleBotRain will reply with the amount that you'll receive.
 
 ![Forecast](images/raindance/forecast.jpg)
 
-If you type !rain **in the bots channel only** you should get a response back with how many turtles are needed for a raindance.
+If you type `!rain` **in the bots channel only** you should get a response back with how many turtles are needed for the next raindance.
 
 
 ## Notify
