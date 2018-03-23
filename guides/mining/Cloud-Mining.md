@@ -75,5 +75,6 @@ Add all of the pools in the list from step 6, and give them all a weight of 10 i
 
 #### trtlpool.ninja:5555 (US West Coast - Las Vegas, NV)
  
+#### pool.trtl.semipool.com:3333 (US Miami, FR Paris)
 
 Credits: Thanks to Bebop TC.  This document borrows heavily from https://github.com/turtlecoin/turtlecoin-wiki/blob/master/How-To-Mine-TurtleCoin-on-Windows.md. 
