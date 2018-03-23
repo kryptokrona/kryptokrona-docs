@@ -1,13 +1,12 @@
 # Mining TurtleCoin with an SBC
 
-This guide will get you started mining TurtleCoin on a Raspberry Pi or similar SBC
+This guide will get you started mining TurtleCoin on a Raspberry Pi or similar SBC(single-board computer)
 
 ## Setup
 
-Make sure you've already installed TurtleCoin and created a wallet on your PC. You'll need the wallet address to store any coins you mine. Follow the guide here:
-https://github.com/turtlecoin/turtlecoin/wiki/Getting-Started-w--TurtleCoin-on-Windows 
+Make sure you've already created a wallet on your PC. You'll need the wallet address to store any coins you mine. Follow the guide [here](https://github.com/turtlecoin/turtlecoin/wiki/Getting-Started-w--TurtleCoin-on-Windows) to get started.
 
-For the SBC, download the latest non-desktop version of Raspbian (https://www.raspberrypi.org/downloads). Follow their installation guide on how to write the OS image onto the MicroSD card. Once you've plugged in the SD Card, booted the raspberry pi, and connected it to the internet, run the following commands:
+For the SBC, download the latest non-desktop version of [Raspbian](https://www.raspberrypi.org/downloads). Follow their installation guide on how to write the OS image onto the MicroSD card. Once you've plugged in the SD Card, booted the Raspberry Pi, and connected it to the internet, run the following commands:
 
 	
 	sudo apt-get update && sudo apt-get upgrade
@@ -66,7 +65,17 @@ You'll need to select a pool to participate in for the first `-o` parameter. Pic
 
 **turtle.atpool.party:3333 (France)**
 
-**trtlpool.ninja:5555 (Las Vegas, NV - USA West)**
+**78.46.85.142:4902** (CryptoKnight)
+
+**118.31.18.78:5555** (ETNChina)
+
+**trtl.flashpool.club:5555** (for `Claymore-cryptonote-10.2`, use port `7443` ONLY)
+
+**trtl.blockchainera.net:6666**
+
+**pool.trtl.ninja:5555**
+
+**turtle.mining.garden:5555**
 
 For the `-u` parameter, simply paste your TurtleCoin wallet's address.
 
