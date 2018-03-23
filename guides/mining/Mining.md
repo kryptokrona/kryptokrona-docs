@@ -68,7 +68,6 @@ After the first run of XMR-Stak, it will save your configuration in a `config.tx
 - trtl.ninja
 - trtl.flashpool.club
 - trtl.blockchainera.net
-- trtlpool.ninja
 - eu.turtlepool.space
 - us.turtlepool.space
 - hk.turtlepool.space
