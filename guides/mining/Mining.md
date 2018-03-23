@@ -76,6 +76,7 @@ XMR-Stak will save your configuration in `config.txt` in the same directory from
 - turtle.mining.garden
 - turtle.atpool.party
 - z-pool.com
+- trtl.semipool.com
 
 ## Checking Balances and Payments
 
