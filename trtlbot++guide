@@ -27,5 +27,5 @@ If you try to tip someone who isn't registered, the bot will react with :sos: an
 
 That's it! Enjoy tipping and getting tipped :)
 
-*
-Sadly, trying to tip "Roles" (like `@dev-turtle`, `@everyone`, `@here` etc) and expecting the bot to automatically tip everyone with that said role won't work, as it has not been programmed to do so :(*
+
+*Sadly, trying to tip "Roles" (like `@dev-turtle`, `@everyone`, `@here` etc) and expecting the bot to automatically tip everyone with that said role won't work, as it has not been programmed to do so :(*
