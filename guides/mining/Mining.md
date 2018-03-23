@@ -69,7 +69,6 @@ XMR-Stak will save your configuration in `config.txt` in the same directory from
 - trtl.ninja
 - trtl.flashpool.club
 - trtl.blockchainera.net
-- trtlpool.ninja
 - eu.turtlepool.space
 - us.turtlepool.space
 - hk.turtlepool.space
