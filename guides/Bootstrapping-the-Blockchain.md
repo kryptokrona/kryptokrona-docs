@@ -3,7 +3,7 @@
 This guide will help you install a recent copy of the blockchain. This should significantly speed up the task of getting the blockchain synced up so you can use your wallet.
 
 ## Windows:
-1. Make sure TurtleCoind.exe, simplewallet.exe, and/or the GUI are not running.
+1. Make sure `TurtleCoind.exe`, `walletd.exe`, and/or the GUI wallet are not running.
 
 2. Open File Explorer and Type `%APPDATA%\TurtleCoin` and hit enter.
 
@@ -16,6 +16,16 @@ This guide will help you install a recent copy of the blockchain. This should si
  * blockindexes.bin
  * blocks.bin
  * "DB" folder
+ 
+    Note: In case it is unable to delete the files due to it being used by some other program, follow these steps-
+    - Open Task Manager with the shortcut `Ctrl + Shift+ Escape`
+    - Click on `Processes`
+    - Click on `Image Name`
+    - Scroll to the bottom
+    - Click on `walletd.exe`
+    - Click on `End Process`
+    - Click on `End Process` again
+    - Try to delete them again
 
 
 4. Download the zip file with the largest block number here:
@@ -31,7 +41,7 @@ This guide will help you install a recent copy of the blockchain. This should si
 
 
 ## Mac & Linux:
-1. Make sure TurtleCoind, simplewallet, and/or the GUI are not running.
+1. Make sure TurtleCoind, walletd, and/or the GUI are not running.
 
 2. Open "Finder".
 
