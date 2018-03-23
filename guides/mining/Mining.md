@@ -39,8 +39,8 @@ Enter `monero`
 Choose a pool from any of the [available pools](#mining-pools) that is **closest to you** and enter its URL (you will be able to add more later)
 
 3. `Username (Wallet address or pool username):`  
-Enter your wallet's public TRTL address * .  
- * If you have not yet downloaded and ran the TurleCoin core sofwate to sync the blockchain and create a wallet, you can make a [paper wallet]( http://turtlecoin.lol/wallet) to start mining toward now, and import the wallet later.
+Enter your public TRTL address.  
+ * If you have not yet downloaded and ran the TurtleCoin core software to sync the blockchain and create a wallet, you can make a [paper wallet]( http://turtlecoin.lol/wallet) to start mining towards now, and import the wallet later.
 
 4. `Password:`  
 Enter `x`
@@ -56,7 +56,8 @@ Enter `y` if you would like to add more pools. Give them all a weight of 10 if y
 XMR-Stak will prioritize the first/highest weight pool, and fall back to the others if it cannot connect.
 
 Done!! The miner will now start scanning your hardware and will begin mining. Cowabunga dude!  
-After the first run of XMR-Stak, it will save your configuration in a `config.txt` file in the same directory from which XMR-Stak is running. Run XMR-Stak again from the same directory to reuse the configuration.
+
+XMR-Stak will save your configuration in `config.txt` in the same directory from which XMR-Stak was first run. Run XMR-Stak again from the same directory to reuse the configuration.
 
 ## Mining Pools
 
@@ -79,9 +80,9 @@ After the first run of XMR-Stak, it will save your configuration in a `config.tx
 
 ## Checking Balances and Payments
 
-To check the earned balance, payments from the pool, and statistics, go to the URL of the pool you are mining on type your public TRTL wallet address into the search box in the middle of the page.
+To check the earned balance, payments from the pool, and statistics, go to the URL of the pool you are mining on type your public TRTL wallet address into the search box in the middle of the page(location may vary based on pool).
 ![image](https://user-images.githubusercontent.com/34389545/34903526-17cf3536-f7f9-11e7-98fd-580bdcf3faed.png)
-You can also see how far until the next payout by clicking "payments" at the top of the screen.
+You can also see how far until the next payout by clicking "Payments" at the top of the screen(again, location may vary based on pool).
 ![image](https://user-images.githubusercontent.com/34389545/34903536-36bb8904-f7f9-11e7-8b92-d886ba15bdc5.png)
 
 ## Cloud Mining
