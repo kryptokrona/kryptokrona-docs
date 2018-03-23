@@ -13,6 +13,6 @@ If someone has tipped someone, then reacting with :tip:  on the message on which
 
 The minimum you can send is 0.11 TRTL. The bot will take an extra 0.1 TRTL on top of what you tipped to account for fees. So if you tipped 1 TRTL,  1.1 TRTL will be pulled from you account so that the full 1 TRTL reaches the recipient
 
-If you try to tip someone who isn't registed, the bot will react with :sos: and PM him with instructions on how to register. Or you could link him to this guide :)
+If you try to tip someone who isn't registered, the bot will react with :sos: and PM him with instructions on how to register. Or you could link him to this guide :)
 
 That's it! Enjoy tipping and getting tipped :)
