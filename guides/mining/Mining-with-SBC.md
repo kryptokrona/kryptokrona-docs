@@ -80,5 +80,3 @@ You'll need to select a pool to participate in for the first `-o` parameter. Pic
 For the `-u` parameter, simply paste your TurtleCoin wallet's address.
 
 After entering this command, the miner will start scanning your hardware and begin to mine. Happy mining!
-
-We will help you!! - http://chat.turtlecoin.lol
