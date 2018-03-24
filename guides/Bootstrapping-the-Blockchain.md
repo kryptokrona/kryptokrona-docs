@@ -62,7 +62,7 @@ This guide will help you install a recent copy of the blockchain. This should si
 
 ## Expected Results if Done Correctly <a name="ExpectedResults"></a>
 
-When you start TurtleCoind you should see this. Note that the blocksize (150246) this example will be a different number.
+When you start TurtleCoind you should see this. Note that the blocksize (150246) in this example will be a different number.
 ```
 2018-Feb-01 18:43:37.216471 INFO    Initializing core...
 2018-Feb-01 18:43:37.225492 INFO    Importing blocks from blockchain storage
