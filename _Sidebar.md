@@ -39,7 +39,7 @@
     - [Mining with SBC](Mining-with-SBC)
   - [[Participating in Raindance]]
   - [Using Simplewallet with Remote Nodes](Using-Simplewallet-with-Remote-Nodes)
-  - [Using trtlbot++](https://github.com/turtlecoin/turtlecoin/wiki/Using-trtlbot-plus-plus.md)
+  - [Using trtlbot++](Using-trtlbot-plus-plus)
 
 - TRTL Development
   - Connecting with Developers
