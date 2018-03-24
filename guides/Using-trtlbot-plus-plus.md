@@ -51,7 +51,40 @@ To tip someone, type `.tip <amount> <@person>`.
 `<amount>` is how much you will tip the person. 
 `<@person>` is whom you'll tip it to.
 
-For example, `.tip 1 @RockSteady#7588` will tip user called "RockSteady" ` 1 TRTL.
+For example, `.tip 1 @RockSteady#7588` will tip the user called "RockSteady"  1 TRTL.
+
+### Adding a Message when tipping
+
+***The syntax for tipping someone is- `.tip <amount> <@person>`***
+     
+- Trying to add a message before it, will not work. 
+ For example, `hey .tip 1 @RockSteady#7588` will **not** send RockSteady 1 TRTL.
+
+- Trying to add it on a seperate line in 1 message will not work.
+  For example,
+  ``` heyo there.
+      I'm tipping you
+    
+      .tip 1 @RockSteady#7588```
+  will **not** send RockSteady 1 TRTL.
+
+- Trying to add a message *after* it will *will* work.
+- For example, `.tip 1 @RockSteady#7588 hey` **will* send RockSteady 1 TRTL
+
+- But, trying to add a message after the command on a seperate line in an existing message will not work.
+  For example,
+  ``` .tip 1 @RockSteady#7588
+
+       hey```
+  will **not** send RockSteady 1 TRTL.
+  
+- If you make a typo in the command, like `.tpi 1 @RockSteady#7588` and trying to edit the message to fix the typo, like- `.tip 1 @RockSteady#7588` will **not** work.
+  
+**Basically, keep these in mind-**  
+
+* Any text must go **after** the command
+* The command must be it's **own message**
+* Trying to **edit** the command will *not* work
 
 ### Tipping with Emojis
 
@@ -59,13 +92,30 @@ Reacting with the emoji :almost100: on someone's message will tip them 99 TRTL.
 
 If someone has tipped someone, then reacting with :tip: on the message on which they tipped(`.tip 1 @RockSteady#7588`) will send the recipient (in this case, RockSteady) with the same amount he was originally tipped (in this case, 1). So the recipient (RockSteady) gets 2 TRTL.
 
+### Tipping Multiple People
+
+The syntax for tipping multiple people is- `.tip 1 <@person1 @person2>`
+For example, `.tip 1 @RockSteady#7588 @bebop#2640`
+
+This will tip RockSteady *and* bebop 1 TRTL **each** (it will not divide the 1 TRTL in between the 2)
+The bot will still pull a fee of 0.1 TRTL extra from your balance.
+
+This can be used to tip - so far - an unlimited amount of people, given that you have enough balance.
+The bot will PM you after it has sent the payments to everyone, letting you know the TX Hash, your updated balance, and how many people it sent it to, along with the number of 
+- successful payments(the payment went through)
+- unsuccessful payments (the payment did not go through for some reason)
+
+If you tip multiple people, some who have registered their wallets and some who haven't, the bot will react with :almost100: and :sos: for both(only once).
+However, it will not let you know whose wallet has not been registered, simply the amount of people it did send it to(so you can deduce the no. of people it was not able to send to by subtracting the number of successful payments from the number of people you tipped).
+
+*Sadly, trying to tip "Roles" (like `@dev-turtle`, `@everyone`, `@here` etc) and expecting the bot to automatically tip everyone with that said role won't work, as it has not been programmed to do so :(*
+
 #### Information which is nice to know
 
-The minimum you can send is 0.11 TRTL. The bot will take an extra 0.1 TRTL on top of what you tipped to account for fees. So if you tipped 1 TRTL,  1.1 TRTL will be pulled from you account so that the full 1 TRTL reaches the recipient
+The minimum you can send is 0.11 TRTL. The bot will take an extra 0.1 TRTL on top of what you tipped to account for fees. 
+So if you tipped 1 TRTL,  1.1 TRTL will be pulled from your account so that the full 1 TRTL reaches the recipient
 
 If you try to tip someone who isn't registered, the bot will react with :sos: and PM him with instructions on how to register. Or you could link him to this guide :)
-
-That's it! Enjoy tipping and getting tipped :)
 
 ## Security of trtlbot++'s wallet
 
@@ -84,4 +134,5 @@ and ends it with-
 So rest assured, as trtlbot++'s wallet is extremely secure, and in the rare occasion that anything *does* happen, you can relax knowing that you'll get it back :)
 
 
-*Sadly, trying to tip "Roles" (like `@dev-turtle`, `@everyone`, `@here` etc) and expecting the bot to automatically tip everyone with that said role won't work, as it has not been programmed to do so :(*
+
+That's it! Enjoy tipping and getting tipped :)
