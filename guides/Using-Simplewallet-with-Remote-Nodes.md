@@ -6,7 +6,7 @@ There is an easy way to quickly get your wallet up and running. You can use a re
 
 ## How to do it
 
-1. Open up a command prompt window and navigate to the folder that contains simplewallet.exe.
+1. Open up a command prompt window and navigate to the folder that contains `simplewallet.exe`.
 
 1. Use the following command to start simplewallet:
 
