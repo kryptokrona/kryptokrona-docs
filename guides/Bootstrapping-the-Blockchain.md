@@ -17,15 +17,15 @@ This guide will help you install a recent copy of the blockchain. This should si
  * blocks.bin
  * "DB" folder
  
-    Note: In case it is unable to delete the files due to it being used by some other program, follow these steps-
-    - Open Task Manager with the shortcut `Ctrl + Shift+ Escape`
-    - Click on `Processes`
-    - Click on `Image Name`
-    - Scroll to the bottom
-    - Click on `walletd.exe`
-    - Click on `End Process`
-    - Click on `End Process` again
-    - Try to delete them again
+    Note: In case it is unable to delete the files due to it being used by some other program, follow these steps:
+    - Open Task Manager with the shortcut `Ctrl + Shift+ Escape`.
+    - Click on `Processes`.
+    - Click on `Image Name`.
+    - Scroll to the bottom.
+    - Click on `walletd.exe`.
+    - Click on `End Process`.
+    - Click on `End Process` again.
+    - Try to delete them again.
 
 
 4. Download the zip file with the largest block number here:
