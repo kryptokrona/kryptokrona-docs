@@ -131,7 +131,7 @@ If you try to tip someone who isn't registered, the bot will react with :sos: an
 
 ## Security of trtlbot++'s wallet
 
-trtlbot++ was created and is owned by @krruzic. When he was asked about the security of trtlbot++'s wallet, he said-
+trtlbot++ was created and is owned by @krruzic(@madk#1044  in the chat). When he was asked about the security of trtlbot++'s wallet, he said-
 
 "the wallet is pretty secure. All ports are closed except 80, whatever minecraft is and my SSH port. The SSH has no root login and only two valid keys. ~~One of the keys is for an account that has no permissions to go anywhere but one folder (I may revoke this key)~~ *[This key has since been revoked]*. There are other security features but I don't want to reveal any possible attack surfaces by accident."
 
