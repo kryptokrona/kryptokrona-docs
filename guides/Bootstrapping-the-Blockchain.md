@@ -17,22 +17,22 @@ This guide will help you install a recent copy of the blockchain. This should si
  * blocks.bin
  * "DB" folder
  
-    Note: In case it is unable to delete the files due to it being used by some other program, follow these steps-
-    - Open Task Manager with the shortcut `Ctrl + Shift+ Escape`
-    - Click on `Processes`
-    - Click on `Image Name`
-    - Scroll to the bottom
-    - Click on `walletd.exe`
-    - Click on `End Process`
-    - Click on `End Process` again
-    - Try to delete them again
+    Note: In case it is unable to delete the files due to it being used by some other program, follow these steps:
+    - Open Task Manager with the shortcut `Ctrl + Shift+ Escape`.
+    - Click on `Processes`.
+    - Click on `Image Name`.
+    - Scroll to the bottom.
+    - Click on `walletd.exe`.
+    - Click on `End Process`.
+    - Click on `End Process` again.
+    - Try to delete them again.
 
 
 4. Download the zip file with the largest block number here:
 
  * https://turtle-blockchain.s3.amazonaws.com/index.html
 
-5. Move the two new downloaded files the %APPDATA%\TurtleCoin folder.
+5. Move the two new downloaded files the `%APPDATA%\TurtleCoin` folder.
 
 6. Start TurtleCoind.exe or the GUI like you normally do.
 
@@ -43,9 +43,9 @@ This guide will help you install a recent copy of the blockchain. This should si
 ## Mac & Linux:
 1. Make sure TurtleCoind, walletd, and/or the GUI are not running.
 
-2. Open "Finder".
+2. Open `Finder`.
 
-3. Use this shortcut "Command+Shift+G" to bring up 'Go to Folder':
+3. Use this shortcut `Command+Shift+G` to bring up `Go to Folder`:
 
 ![findergoto.jpg](https://github.com/turtlecoin/turtlecoin-wiki/blob/master/images/findergoto.jpg)
 
@@ -54,7 +54,7 @@ This guide will help you install a recent copy of the blockchain. This should si
 5. Download the zip file with the largest block number here:
 	* https://turtle-blockchain.s3.amazonaws.com/index.html
 	
-6. Move the two downloaded files blockindexes.bin and blocks.bin into the  ~/.TurtleCoin/ folder
+6. Move the two downloaded files blockindexes.bin and blocks.bin into the `~/.TurtleCoin/` folder.
 
 7. Start TurtleCoind or the GUI like you normally do.
 
@@ -62,8 +62,7 @@ This guide will help you install a recent copy of the blockchain. This should si
 
 ## Expected Results if Done Correctly <a name="ExpectedResults"></a>
 
-When you start TurtleCoind you should see this:
-(the blocksize, ie: 150246 in this example will be a different number - that's ok)
+When you start TurtleCoind you should see this. Note that the blocksize (150246) in this example will be a different number.
 ```
 2018-Feb-01 18:43:37.216471 INFO    Initializing core...
 2018-Feb-01 18:43:37.225492 INFO    Importing blocks from blockchain storage

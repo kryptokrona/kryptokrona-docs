@@ -27,6 +27,7 @@ Wait for the “Quick, send me your wallet addresses!” message.
 ![Quick, send your wallet!](images/raindance/quick_rain.jpg)
 
 Click on TurtleBotRain to send your address in a private message to it.
+
 ![Click on this](images/raindance/turtlebotrain.jpg)
 
 ![DM the bot](images/raindance/pm_bot.jpg)
