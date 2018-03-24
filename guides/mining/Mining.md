@@ -16,7 +16,7 @@ TurtleCoin can be mined with a number of mining tools, particularly just about a
 
 2. Make a folder called **TurtleCoin Miner** on your desktop and unzip the file you just downloaded for XMR-Stak in there.
 
-3. Double-click on `xmr-stak.exe`
+3. Double-click on `xmr-stak.exe`.
 
 4. Click yes when it asks if you want to run as Administrator. This is so that the program can see what hardware you're running.
 
@@ -33,23 +33,23 @@ See https://github.com/fireice-uk/xmr-stak/blob/master/doc/compile.md and https:
 Upon first launching XMR-Stak, the software will ask you several setup and configuration questions.
 
 1. `Currency: 'monero' or 'aeon'?`  
-Enter `monero`
+Enter `monero`.
 
 2. `Pool address:`  
-Choose a pool from any of the [available pools](#mining-pools) that is **closest to you** and enter its URL (you will be able to add more later)
+Choose a pool from any of the [available pools](#mining-pools) that is **closest to you** and enter its URL (you will be able to add more later).
 
 3. `Username (Wallet address or pool username):`  
 Enter your public TRTL address.  
  * If you have not yet downloaded and ran the TurtleCoin core software to sync the blockchain and create a wallet, you can make a [paper wallet]( http://turtlecoin.lol/wallet) to start mining towards now, and import the wallet later.
 
 4. `Password:`  
-Enter `x`
+Enter `x`.
 
 5. `Does this pool port support TLS/SSL? Use no if unknown. (y/N)`  
 In most cases, `N` is fine.
 
 6. `Do you want to use nicehash on this pool? (y/n)`  
-Enter `n`
+Enter `n`.
 
 7. `Do you want to use multiple pools? (y/n)`  
 Enter `y` if you would like to add more pools. Give them all a weight of 10 if you're tired of reading, or if you want the best experience, give the pools nearest to you a higher number, and the ones further from you a lower number.  
@@ -109,7 +109,7 @@ cd bin
 
 ./xmr-stak
 ```
-Now, follow the [XMR-Stak Setup and Configuration](#xmr--stack-setup-and-configuration) instructions
+Now, follow the [XMR-Stak Setup and Configuration](#xmr--stack-setup-and-configuration) instructions.
 
 ## Mining with RaspberryPi/SBC
 
