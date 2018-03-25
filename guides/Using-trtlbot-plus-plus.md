@@ -26,7 +26,7 @@ Then I will replace `<amount>` with how much I want to send to trtlbot++, let's 
 
 Then press enter to send your transaction.
 
-- See[Expected Results](https://github.com/turtlecoin/turtlecoin-wiki/blob/master/guides/Using-trtlbot-plus-plus.md#expected-results) section below
+- See[Expected Results](https://github.com/turtlecoin/turtlecoin/wiki/Using-trtlbot-plus-plus#expected-results) section below
 
 ### GUI Wallet
 
@@ -42,7 +42,7 @@ Then I will copy the part from `3` to `<amount>`; that is, `TRTLv12WtKJAzTNtxSkb
 
 Then I'll copy the part after `-p`; that is, `ac8889dfb7c93471a9a43c287f3fa40854b64454e62eb0006b13e510e6ad8a8e` and enter that as the Payment ID.
 
-- See[Expected Results](https://github.com/turtlecoin/turtlecoin-wiki/blob/master/guides/Using-trtlbot-plus-plus.md#expected-results) section below
+- See[Expected Results](https://github.com/turtlecoin/turtlecoin/wiki/Using-trtlbot-plus-plus#expected-results) section below
 
 ***PLEASE ENTER YOUR OWN VALUES WHICH THE BOT SENDS YOU!***
 
