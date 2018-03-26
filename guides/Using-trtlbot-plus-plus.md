@@ -26,7 +26,7 @@ Then I will replace `<amount>` with how much I want to send to trtlbot++, let's 
 
 Then press enter to send your transaction.
 
-- See[Expected Results](https://github.com/turtlecoin/turtlecoin/wiki/Using-trtlbot-plus-plus#expected-results) section below
+- See [Expected Results](https://github.com/turtlecoin/turtlecoin/wiki/Using-trtlbot-plus-plus#expected-results) section below
 
 ### GUI Wallet
 
@@ -42,7 +42,7 @@ Then I will copy the part from `3` to `<amount>`; that is, `TRTLv12WtKJAzTNtxSkb
 
 Then I'll copy the part after `-p`; that is, `ac8889dfb7c93471a9a43c287f3fa40854b64454e62eb0006b13e510e6ad8a8e` and enter that as the Payment ID.
 
-- See[Expected Results](https://github.com/turtlecoin/turtlecoin/wiki/Using-trtlbot-plus-plus#expected-results) section below
+- See [Expected Results](https://github.com/turtlecoin/turtlecoin/wiki/Using-trtlbot-plus-plus#expected-results) section below
 
 ***PLEASE ENTER YOUR OWN VALUES WHICH THE BOT SENDS YOU!***
 
@@ -125,7 +125,7 @@ However, it will not let you know whose wallet has not been registered, simply t
 
 The minimum you can send is 0.11 TRTL, and the bot will take an extra 0.1 TRTL on top of what you tipped to account for fees. 
 
-So if you tipped 1 TRTL,  1.1 TRTL will be pulled from your account so that the full 1 TRTL reaches the recipient
+So if you tipped 1 TRTL, 1.1 TRTL will be pulled from your account so that the full 1 TRTL reaches the recipient
 
 If you try to tip someone who isn't registered, the bot will react with :sos: and PM him with instructions on how to register. Or you could also link him to this guide :)
 
