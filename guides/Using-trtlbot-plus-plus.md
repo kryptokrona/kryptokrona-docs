@@ -3,9 +3,9 @@
 
 ## Registering your wallet
 
-Go to #wallets and type `.register <walletaddress>`. 
+Go to #wallets and type `.registerwallet <walletaddress>`. 
 
-For example, you would type- `.register TRTLv3pFrFm2yk4cYNtKf5fxV1b594tNrZfEV2CYWJsTSqr9BWoWMrUNpQaeD9StrzQrxpRQKPCdd1FfvT6D6dAg4pY6iB7sqsG`
+For example, you would type- `.registerwallet TRTLv3pFrFm2yk4cYNtKf5fxV1b594tNrZfEV2CYWJsTSqr9BWoWMrUNpQaeD9StrzQrxpRQKPCdd1FfvT6D6dAg4pY6iB7sqsG`
 
 ## Depositing Turtle
 
