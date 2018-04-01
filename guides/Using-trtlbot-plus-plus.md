@@ -128,9 +128,7 @@ The minimum you can send is 0.11 TRTL, and the bot will take an extra 0.1 TRTL o
 
 So if you tipped 1 TRTL, 1.1 TRTL will be pulled from your account so that the full 1 TRTL reaches the recipient
 
-If you try to tip someone who isn't registered, the bot will react with :sos: and PM him with instructions on how to register. 
-
-You could also link him to this guide :) (`!tag how2tip`)
+If you try to tip someone who isn't registered, the bot will react with :sos: and PM him with instructions on how to register their wallet and tip. 
 
 ## Security of trtlbot++'s wallet
 
