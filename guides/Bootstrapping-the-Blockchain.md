@@ -3,8 +3,9 @@
 This guide will help you install a recent copy of the blockchain. This should significantly speed up the task of getting the blockchain synced up so you can use your wallet.
 
 ## Windows:
-1. Make sure TurtleCoind.exe, walletd.exe, and the GUI is not running.
-2. Open File Explorer and Type %APPDATA%\TurtleCoin and hit enter.
+1. Make sure `TurtleCoind.exe`, `walletd.exe`, and/or the GUI wallet are not running.
+
+2. Open File Explorer and Type `%APPDATA%\TurtleCoin` and hit enter.
 
 ![file explorer](https://github.com/turtlecoin/turtlecoin-wiki/blob/master/images/file_explorer.jpg)
 
@@ -15,36 +16,53 @@ This guide will help you install a recent copy of the blockchain. This should si
  * blockindexes.bin
  * blocks.bin
  * "DB" folder
+ 
+    Note: In case it is unable to delete the files due to them being used by some other program, follow these steps:
+    - Open Task Manager with the shortcut `Ctrl + Shift+ Escape`.
+    - Click on `Processes`.
+    - Click on `Image Name`.
+    - Scroll to the bottom.
+    - Click on `walletd.exe`.
+    - Click on `End Process`.
+    - Click on `End Process` again.
+    - Try to delete them again.
 
 
 4. Download the zip file with the largest block number here:
 
  * https://turtle-blockchain.s3.amazonaws.com/index.html
 
-5. Move the two new downloaded files the %APPDATA%\TurtleCoin folder.
+5. Move the two new downloaded files the `%APPDATA%\TurtleCoin` folder.
+
 6. Start TurtleCoind.exe or the GUI like you normally do.
+
 7. See [Expected Results](#ExpectedResults) section below.
 
 
 
 ## Mac & Linux:
-1. Make sure TurtleCoind, walletd, and the GUI is not running.
-2. Open "Finder".
-3. Use this shortcut "Command+Shift+G" to bring up 'Go to Folder':
+1. Make sure TurtleCoind, walletd, and/or the GUI are not running.
+
+2. Open `Finder`.
+
+3. Use this shortcut `Command+Shift+G` to bring up `Go to Folder`:
 
 ![findergoto.jpg](https://github.com/turtlecoin/turtlecoin-wiki/blob/master/images/findergoto.jpg)
 
 4. Delete the files: blockindexes.bin, blocks.bin, and the "DB" folder if it exists
+
 5. Download the zip file with the largest block number here:
 	* https://turtle-blockchain.s3.amazonaws.com/index.html
-6. Move the two downloaded files blockindexes.bin and blocks.bin into the  ~/.TurtleCoin/ folder
+	
+6. Move the two downloaded files blockindexes.bin and blocks.bin into the `~/.TurtleCoin/` folder.
+
 7. Start TurtleCoind or the GUI like you normally do.
+
 8. See the [Expected Results](#ExpectedResults) section below.
 
 ## Expected Results if Done Correctly <a name="ExpectedResults"></a>
 
-When you start TurtleCoind you should see this:
-(the blocksize, ie: 150246 in this example will be a different number - that's ok)
+When you start TurtleCoind you should see this. Note that the blocksize (150246) in this example will be a different number.
 ```
 2018-Feb-01 18:43:37.216471 INFO    Initializing core...
 2018-Feb-01 18:43:37.225492 INFO    Importing blocks from blockchain storage
