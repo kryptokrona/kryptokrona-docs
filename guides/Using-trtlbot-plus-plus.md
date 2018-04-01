@@ -111,10 +111,11 @@ This will tip RockSteady *and* bebop 1 TRTL **each** (it will not divide the 1 T
 
 The bot will still pull a fee of 0.1 TRTL extra from your balance.
 
+
 This can be used to tip - so far - an unlimited amount of people, given that you have enough balance.
 The bot will PM you after it has sent the payments to everyone, letting you know the TX Hash, your updated balance, and how many people it sent it to, along with the number of 
-- successful payments(the payment went through)
-- unsuccessful payments (the payment did not go through for some reason)
+- successful payments(the recipent had registered their wallet and the payment was successfully sent)
+- unsuccessful payments (the recipent had not registered their wallet and/or the payment was not successfully sent)
 
 If you tip multiple people, some who have registered their wallets and some who haven't, the bot will react with :almost100: and :sos: for both(only once).
 However, it will not let you know whose wallet has not been registered, simply the amount of people it did send it to(so you can deduce the no. of people it was not able to send to by subtracting the number of successful payments from the number of people you tipped).
