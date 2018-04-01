@@ -79,14 +79,14 @@ For example, `.tip 1 @RockSteady#7588` will tip the user called "RockSteady"  1 
 - Trying to add a message *after* it will **will** work.
 - For example, `.tip 1 @RockSteady#7588 hey` **will** send RockSteady 1 TRTL
 
-- But, trying to add a message after the command on a seperate line in an existing message will not work.
+- Trying to add a message after the command on a seperate line in an existing message **will** work.
   For example,
   ``` 
   .tip 1 @RockSteady#7588
 
   hey
   ```
-  will **not** send RockSteady 1 TRTL.
+  will send RockSteady 1 TRTL.
   
 - If you make a typo in the command, like `.tpi 1 @RockSteady#7588` and trying to edit the message to fix the typo, like- `.tip 1 @RockSteady#7588` will **not** work.
   
@@ -127,7 +127,9 @@ The minimum you can send is 0.11 TRTL, and the bot will take an extra 0.1 TRTL o
 
 So if you tipped 1 TRTL, 1.1 TRTL will be pulled from your account so that the full 1 TRTL reaches the recipient
 
-If you try to tip someone who isn't registered, the bot will react with :sos: and PM him with instructions on how to register. Or you could also link him to this guide :)
+If you try to tip someone who isn't registered, the bot will react with :sos: and PM him with instructions on how to register. 
+
+You could also link him to this guide :) (`!tag how2tip`)
 
 ## Security of trtlbot++'s wallet
 
