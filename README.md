@@ -11,11 +11,11 @@ The official production TurtleCoin Wiki is at http://github.com/turtlecoin/turtl
 
 This repo, http://github.com/turtlecoin/turtlecoin-wiki, holds the raw markdown that the wiki is built from.
 
-This repo's Github wiki (http://github.com/turtlecoin/turtlecoin-wiki/wiki) serves as a live 'test site' for testing changes to the wiki before pushing to the official production TurtleCoin Wiki.
+This repo's GitHub wiki (http://github.com/turtlecoin/turtlecoin-wiki/wiki) serves as a live 'test site' for testing changes to the wiki before pushing to the official production TurtleCoin Wiki.
 
 ## Contributing
 
-Changes, edits, and other contributions to the TurtleCoin documentation can be submitted as a Github [Pull Request](https://github.com/turtlecoin/turtlecoin-wiki/pulls) to this repository, or as a Github Issue on this repo's [Issues page](https://github.com/turtlecoin/turtlecoin-wiki/issues).  
+Changes, edits, and other contributions to the TurtleCoin documentation can be submitted as a GitHub [Pull Request](https://github.com/turtlecoin/turtlecoin-wiki/pulls) to this repository, or as a GitHub Issue on this repo's [Issues page](https://github.com/turtlecoin/turtlecoin-wiki/issues).  
 Please be granular and make a single commit per change/set of related changes (or file an Issue for each change if not directly submitting PR's). This will make reviewing changes easier and increase the speed and efficiency of getting your changes merged in.
 
 ## Thanks and Contributors
