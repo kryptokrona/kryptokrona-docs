@@ -50,7 +50,7 @@ Then I'll copy the part after `-p`; that is, `ac8889dfb7c93471a9a43c287f3fa40854
 
 When the bot recieves the payment, it will send you a PM letting you know. Now you can tip people! 
 
-![receive](https://i.imgur.com/54bVTcP.png)
+![receive](images/dep.png)
 
 ## Tipping People
 To tip someone, type `.tip <amount> <@person>`. 
