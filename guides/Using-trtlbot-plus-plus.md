@@ -59,9 +59,7 @@ To tip others, type `.balance`. trtlbot++ will PM you with how much balance you 
 If it shows `0.00`, then make sure you have [deposited](https://github.com/turtlecoin/turtlecoin/wiki/Using-trtlbot-plus-plus#depositing-turtle) some TRTL and it has [bee
 n received](https://github.com/turtlecoin/turtlecoin/wiki/Using-trtlbot-plus-plus#expected-results)
 
-(img of balance received. waiting for deposit img to work before doing this)
-
-
+![receive](images/dep.png)
 
 ## Tipping People
 To tip someone, type `.tip <amount> <@person>`. 
@@ -103,6 +101,9 @@ So if you tipped 1 TRTL, 1.1 TRTL will be pulled from your account so that the f
   hey
   ```
   will send RockSteady 1 TRTL.
+  
+  Trying to add a message *between* the *amount* and the *recipient* **will** work.
+  For example, `.tip  1 hey @RockSteady#7588` **will** send RockSteady 1 TRTL.
   
 - If you make a typo in the command, like `.tpi 1 @RockSteady#7588` and trying to edit the message to fix the typo, like- `.tip 1 @RockSteady#7588` will **not** work.
   
