@@ -88,6 +88,9 @@ For example, `.tip 1 @RockSteady#7588` will tip the user called "RockSteady"  1 
   ```
   will send RockSteady 1 TRTL.
   
+  Trying to add a message *between* the *amount* and the *recipient* **will** work.
+  For example, `.tip  1 hey @RockSteady#7588` **will** send RockSteady 1 TRTL.
+  
 - If you make a typo in the command, like `.tpi 1 @RockSteady#7588` and trying to edit the message to fix the typo, like- `.tip 1 @RockSteady#7588` will **not** work.
   
 **Basically, keep these in mind-**  
