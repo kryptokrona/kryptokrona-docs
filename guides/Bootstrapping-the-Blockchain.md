@@ -7,7 +7,7 @@ This guide will help you install a recent copy of the blockchain. This should si
 
 2. Open File Explorer and Type `%APPDATA%\TurtleCoin` and hit enter.
 
-![file explorer](https://github.com/turtlecoin/turtlecoin-wiki/blob/master/images/file_explorer.jpg)
+![file explorer](images/bootstrap/file_explorer.jpg)
 
 **Note: if the folder doesn't exist, just go to %APPDATA% instead and create the TurtleCoin folder.**
 
@@ -47,7 +47,7 @@ This guide will help you install a recent copy of the blockchain. This should si
 
 3. Use the shortcut `Command + Shift + G` to bring up `Go to Folder`:
 
-![findergoto.jpg](https://github.com/turtlecoin/turtlecoin-wiki/blob/master/images/findergoto.jpg)
+![findergoto.jpg](images/bootstrap/findergoto.jpg)
 
 4. Delete the following if they exist: 
 
