@@ -28,9 +28,7 @@ This guide will help you install a recent copy of the blockchain. This should si
     - Try to delete them again.
 
 
-4. Download the `.zip` file with the largest number(in its name) from here:
-
- * https://turtle-blockchain.s3.amazonaws.com/index.html
+4. [Download](https://f000.backblazeb2.com/file/turtle-blockchain/latest.zip) the latest snapshot of the blockchain.
 
 5. Move the two new downloaded files to the `%APPDATA%\TurtleCoin` folder.
 
@@ -57,9 +55,8 @@ This guide will help you install a recent copy of the blockchain. This should si
 
 * "DB" folder 
 
-5. Download the `.zip` file with the largest number(in its name) from here:
 
-  * https://turtle-blockchain.s3.amazonaws.com/index.html
+5. [Download](https://f000.backblazeb2.com/file/turtle-blockchain/latest.zip) the latest snapshot of the blockchain.
 	
 6. Move the two new downloaded files, `blockindexes.bin` and `blocks.bin` into the `~/.TurtleCoin/` folder.
 
