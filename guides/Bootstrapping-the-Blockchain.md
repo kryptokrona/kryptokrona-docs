@@ -9,7 +9,7 @@ This guide will help you install a recent copy of the blockchain. This should si
 
 ![file explorer](images/bootstrap/file_explorer.jpg)
 
-**Note: if the folder doesn't exist, just go to %APPDATA% instead and create the TurtleCoin folder.**
+**Note: if the folder doesn't exist, just go to `%APPDATA%` instead and create the `TurtleCoin` folder.**
 
 3. Delete the following if they exist:
 
@@ -28,20 +28,20 @@ This guide will help you install a recent copy of the blockchain. This should si
     - Try to delete them again.
 
 
-4. Download the zip file with the largest block number here:
+4. Download the `.zip` file with the largest number(in its name) from here:
 
  * https://turtle-blockchain.s3.amazonaws.com/index.html
 
-5. Move the two new downloaded files the `%APPDATA%\TurtleCoin` folder.
+5. Move the two new downloaded files to the `%APPDATA%\TurtleCoin` folder.
 
-6. Start `TurtleCoind.exe` or the GUI like you normally do.
+6. Start `TurtleCoind.exe` or the GUI wallet like you normally do.
 
 7. See [Expected Results](#ExpectedResults) section below.
 
 
 
 ## Mac & Linux:
-1. Make sure `TurtleCoind`, `walletd`, and/or the GUI are not running.
+1. Make sure `TurtleCoind`, `walletd`, and/or the GUI wallet are not running.
 
 2. Open `Finder`.
 
@@ -57,8 +57,9 @@ This guide will help you install a recent copy of the blockchain. This should si
 
 * "DB" folder 
 
-5. Download the zip file with the largest block number here:
-	* https://turtle-blockchain.s3.amazonaws.com/index.html
+5. Download the `.zip` file with the largest number(in its name) from here:
+
+  * https://turtle-blockchain.s3.amazonaws.com/index.html
 	
 6. Move the two new downloaded files, `blockindexes.bin` and `blocks.bin` into the `~/.TurtleCoin/` folder.
 
@@ -68,7 +69,7 @@ This guide will help you install a recent copy of the blockchain. This should si
 
 ## Expected Results if Done Correctly <a name="ExpectedResults"></a>
 
-When you start `TurtleCoind` you should see this. Note that the blocksize (150246) in this example will be a different number.
+When you start `TurtleCoind` you should see this. Note that the blocksize (150246) in this example will be a different number:
 ```
 2018-Feb-01 18:43:37.216471 INFO    Initializing core...
 2018-Feb-01 18:43:37.225492 INFO    Importing blocks from blockchain storage
@@ -87,4 +88,4 @@ After it completes it will start syncing incrementally like so:
 2018-Feb-01 18:47:48.860470 INFO    Initializing p2p server...
 ```
 
-If you are using the GUI, you can instead view the progress by opening `walletd.log` and scrolling to the bottom.
+If you are using the GUI wallet, you can instead view the progress by opening `walletd.log` and scrolling to the bottom.
