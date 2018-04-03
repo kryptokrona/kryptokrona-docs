@@ -50,6 +50,19 @@ Then I'll copy the part after `-p`; that is, `ac8889dfb7c93471a9a43c287f3fa40854
 
 When the bot recieves the payment, it will send you a PM letting you know. Now you can tip people! 
 
+ ![received](https://github.com/turtlecoin/turtlecoin-wiki/blob/master/images/dep.png)
+
+## Checking your Balance
+
+Before you can tip, you need to know how much balance you have. Balance is the amount of TRTL you have in your tipjar wallet to tip to others.
+
+To tip others, type `.balance`. trtlbot++ will PM you with how much balance you have remaining in your tipjar wallet.
+
+If it shows `0.00`, then make sure you have [deposited](https://github.com/turtlecoin/turtlecoin/wiki/Using-trtlbot-plus-plus#depositing-turtle) some TRTL and it has [bee
+n received](https://github.com/turtlecoin/turtlecoin/wiki/Using-trtlbot-plus-plus#expected-results)
+
+![receive](images/dep.png)
+
 ## Tipping People
 To tip someone, type `.tip <amount> <@person>`. 
 
@@ -57,6 +70,9 @@ To tip someone, type `.tip <amount> <@person>`.
 `<@person>` is whom you'll tip it to.
 
 For example, `.tip 1 @RockSteady#7588` will tip the user called "RockSteady"  1 TRTL.
+
+*The minimum you can send is 0.11 TRTL, and the bot will take an extra 0.1 TRTL on top of what you tipped to account for fees
+So if you tipped 1 TRTL, 1.1 TRTL will be pulled from your account so that the full 1 TRTL reaches the recipient*
 
 ### Adding a Message when tipping
 
@@ -87,6 +103,9 @@ For example, `.tip 1 @RockSteady#7588` will tip the user called "RockSteady"  1 
   hey
   ```
   will send RockSteady 1 TRTL.
+  
+  Trying to add a message *between* the *amount* and the *recipient* **will** work.
+  For example, `.tip  1 hey @RockSteady#7588` **will** send RockSteady 1 TRTL.
   
 - If you make a typo in the command, like `.tpi 1 @RockSteady#7588` and trying to edit the message to fix the typo, like- `.tip 1 @RockSteady#7588` will **not** work.
   
@@ -122,13 +141,17 @@ However, it will not let you know whose wallet has not been registered, simply t
 
 *Sadly, trying to tip "Roles" (like `@dev-turtle`, `@everyone`, `@here` etc) and expecting the bot to automatically tip everyone with that said role won't work, as it has not been programmed to do so :(*
 
-#### Miscellaenous information and tips
+### What happens when you tip someone/you get tipped
 
-The minimum you can send is 0.11 TRTL, and the bot will take an extra 0.1 TRTL on top of what you tipped to account for fees. 
+When you tip someone, then the desired amount + 0.1 TRTL is pulled from your tipjar wallet balance and sent to the recipient's registered wallet (if he has not registered his wallet, he cannot receive tips).
 
-So if you tipped 1 TRTL, 1.1 TRTL will be pulled from your account so that the full 1 TRTL reaches the recipient
+When you get tipped, then the sender sends the desired amount + 0.1 TRTL, pulled from his tipjar wallet balance, directly to your registered wallet(if you haven't registered your wallet, you can't receive tips).
 
-If you try to tip someone who isn't registered, the bot will react with :sos: and PM him with instructions on how to register their wallet and tip. 
+It *does not* send the TRTL to your tipjar balance. It sends it *directly* to your **wallet**.
+This is to ensure that more and more TRTL is introduced into the ecosystem, rather than the same TRTL being circulated around.
+
+
+- If you try to tip someone who isn't registered, the bot will react with :sos: and PM him with instructions on how to register their wallet and tip. 
 
 ## Security of trtlbot++'s wallet
 
