@@ -55,7 +55,7 @@ This guide will help you install a recent copy of the blockchain. This should si
 
 * "DB" folder 
 
-4. [Download](https://f000.backblazeb2.com/file/turtle-blockchain/latest.zip) the latest snapshot of the blockchain.
+5. [Download](https://f000.backblazeb2.com/file/turtle-blockchain/latest.zip) the latest snapshot of the blockchain.
 	
 6. Move the two new downloaded files, `blockindexes.bin` and `blocks.bin` into the `~/.TurtleCoin/` folder.
 
