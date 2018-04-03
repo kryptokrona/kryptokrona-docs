@@ -50,6 +50,8 @@ Then I'll copy the part after `-p`; that is, `ac8889dfb7c93471a9a43c287f3fa40854
 
 When the bot recieves the payment, it will send you a PM letting you know. Now you can tip people! 
 
+ ![received](https://github.com/turtlecoin/turtlecoin-wiki/blob/master/images/dep.png)
+
 ## Checking your Balance
 
 Before you can tip, you need to know how much balance you have. Balance is the amount of TRTL you have in your tipjar wallet to tip to others.
@@ -146,11 +148,10 @@ When you tip someone, then the desired amount + 0.1 TRTL is pulled from your tip
 When you get tipped, then the sender sends the desired amount + 0.1 TRTL, pulled from his tipjar wallet balance, directly to your registered wallet(if you haven't registered your wallet, you can't receive tips).
 
 It *does not* send the TRTL to your tipjar balance. It sends it *directly* to your **wallet**.
-This is to ensure that more and more TRTL is introduced into the ecosystem, rather than the same TRTL being circualted around.
+This is to ensure that more and more TRTL is introduced into the ecosystem, rather than the same TRTL being circulated around.
 
-#### Miscellaenous information and tips
 
-If you try to tip someone who isn't registered, the bot will react with :sos: and PM him with instructions on how to register their wallet and tip. 
+- If you try to tip someone who isn't registered, the bot will react with :sos: and PM him with instructions on how to register their wallet and tip. 
 
 ## Security of trtlbot++'s wallet
 
