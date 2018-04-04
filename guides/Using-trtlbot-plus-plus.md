@@ -56,12 +56,11 @@ When the bot recieves the payment, it will send you a PM letting you know. Now y
 
 Before you can tip, you need to know how much balance you have. Balance is the amount of TRTL you have in your tipjar wallet to tip to others.
 
-To tip others, type `.balance`. trtlbot++ will PM you with how much balance you have remaining in your tipjar wallet.
+To check your balance, type `.balance`. trtlbot++ will PM you with how much balance you have remaining in your tipjar wallet.
 
-If it shows `0.00`, then make sure you have [deposited](https://github.com/turtlecoin/turtlecoin/wiki/Using-trtlbot-plus-plus#depositing-turtle) some TRTL and it has [bee
-n received](https://github.com/turtlecoin/turtlecoin/wiki/Using-trtlbot-plus-plus#expected-results)
+![balance](images/trtlbot-plus-plus/balance.png)
 
-![receive](images/dep.png)
+If it shows `0.00`, then make sure you have [deposited](https://github.com/turtlecoin/turtlecoin/wiki/Using-trtlbot-plus-plus#depositing-turtle) some TRTL and it has [been received](https://github.com/turtlecoin/turtlecoin/wiki/Using-trtlbot-plus-plus#expected-results)
 
 ## Tipping People
 To tip someone, type `.tip <amount> <@person>`. 
