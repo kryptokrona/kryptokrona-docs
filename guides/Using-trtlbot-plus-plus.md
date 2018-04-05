@@ -115,9 +115,9 @@ So if you tipped 1 TRTL, 1.1 TRTL will be pulled from your account so that the f
 
 ### Tipping with Emojis
 
-Reacting with the emoji :almost100: on someone's message will tip them 99 TRTL.
+Reacting with the emoji ![99](images/trtlbot-plus-plus/almost100.png) on someone's message will tip them 99 TRTL.
 
-If someone has tipped someone, then reacting with :tip: on the message on which they tipped the person(`.tip 1 @RockSteady#7588`) will send the recipient (in this case, RockSteady) with the same amount he was originally tipped (in this case, 1). So the recipient (RockSteady) gets 2 TRTL.
+If someone has tipped someone, then reacting with ![tip](images/trtlbot-plus-plus/tip.png) on the message on which they tipped the person(`.tip 1 @RockSteady#7588`) will send the recipient (in this case, RockSteady) with the same amount he was originally tipped (in this case, 1). So the recipient (RockSteady) gets 2 TRTL.
 
 ### Tipping Multiple People
 
@@ -145,6 +145,7 @@ However, it will not let you know whose wallet has not been registered, simply t
 When you tip someone, then the desired amount + 0.1 TRTL is pulled from your tipjar wallet balance and sent to the recipient's registered wallet (if he has not registered his wallet, he cannot receive tips).
 
 When you get tipped, then the sender sends the desired amount + 0.1 TRTL, pulled from his tipjar wallet balance, directly to your registered wallet(if you haven't registered your wallet, you can't receive tips).
+It also reacts to the message on which the person was tipped (`.tip 1 @RockSteady#7588`) with ![moneywings](images/trtlbot-plus-plus/money_with_wings.png)
 
 It *does not* send the TRTL to your tipjar balance. It sends it *directly* to your **wallet**.
 This is to ensure that more and more TRTL is introduced into the ecosystem, rather than the same TRTL being circulated around.
