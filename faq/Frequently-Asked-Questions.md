@@ -10,7 +10,8 @@
 
 * **Q: I'm using a Mac, can I still mine?**
 
-    A: Not yet, no. We're working on it.
+    A: Yes, of course! We're working on a guide.
+    
 * **Q: I've started mining, how can I view my stats?**
 
     A: Take the pool address, and remove the port number. For example, if your pool address is `slowandsteady.fun:3333`, go to the website `slowandsteady.fun`. There should be a spot for you to put in your TRTL address, and you can then view your hashrate, pending balance, payouts, and more.
