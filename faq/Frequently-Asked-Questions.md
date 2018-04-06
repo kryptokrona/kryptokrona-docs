@@ -1,7 +1,5 @@
 # Frequently Asked Questions
 
-Did this guide help you out? Throw some shells my way: `TRTLv2Fyavy8CXG8BPEbNeCHFZ1fuDCYCZ3vW5H5LXN4K2M2MHUpTENip9bbavpHvvPwb4NDkBWrNgURAd5DB38FHXWZyoBh4wW`
-
 ## Mining and xmr-stak
 
 ### General mining questions
@@ -12,8 +10,8 @@ Did this guide help you out? Throw some shells my way: `TRTLv2Fyavy8CXG8BPEbNeCH
 
 * **Q: I'm using a Mac, can I still mine?**
 
-    A: Yes, there is a guide available [here](https://github.com/turtlecoin/turtlecoin-wiki/blob/master/guides/01-getting-started-mac.md) - thanks to [@wigging](https://github.com/wigging) for creating this.
-
+    A: Yes, of course! We're working on a guide.
+    
 * **Q: I've started mining, how can I view my stats?**
 
     A: Take the pool address, and remove the port number. For example, if your pool address is `slowandsteady.fun:3333`, go to the website `slowandsteady.fun`. There should be a spot for you to put in your TRTL address, and you can then view your hashrate, pending balance, payouts, and more.
