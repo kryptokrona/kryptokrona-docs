@@ -18,5 +18,5 @@ That night, December 9th, 2017, TurtleCoin was born.
 
 # Why?
 
-Too many projects are bringing in too much funding despite most having no damn product. We figured, "why not do the whole thing in reverse? Start with a fun project, make it as simple and accessible as possible, and let it grow on its own."
+Too many projects are bringing in too much funding despite most having no damn product. We figured, "Why not do the whole thing in reverse? Start with a fun project, make it as simple and accessible as possible, and let it grow on its own."
 We have a strong belief in our no-funding strategy; if we make a cool product, the value will create itself. If you think we're wrong, we're happy to talk about it.
