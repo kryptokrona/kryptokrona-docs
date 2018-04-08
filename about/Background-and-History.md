@@ -20,6 +20,8 @@ It was born from the idea that there are too many projects out there, which desp
 
 Instead, TurtleCoin's goal is to create a fun project which is easy to use and then let it grow on its own. We have a strong belief in our no-funding strategy; if we make a cool product, the value will create itself.
 
+TurtleCoin was created with **No** Pre-mine, **No** ICO, and **No** Shenanigans.
+
 ## Our background
 
 Most of us are full-time developers on other projects, and this is our way to give back to the community with something fun.
