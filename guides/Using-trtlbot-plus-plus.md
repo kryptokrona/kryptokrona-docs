@@ -9,7 +9,7 @@ For example, you would type- `.registerwallet TRTLv3pFrFm2yk4cYNtKf5fxV1b594tNrZ
 
 ## Depositing Turtle
 
-After your wallet address has been registered, PM `trtlbot++` with `.deposit`. 
+After your wallet address has been registered, type `.deposit`.  in the #bots channel.
 
 ### CLI Wallet
 
@@ -119,6 +119,9 @@ Reacting with the emoji ![99](images/trtlbot-plus-plus/almost100.png) on someone
 
 If someone has tipped someone, then reacting with ![tip](images/trtlbot-plus-plus/rsz_tip.png) on the message on which they tipped the person(`.tip 1 @RockSteady#7588`) will send the recipient (in this case, RockSteady) with the same amount he was originally tipped (in this case, 1). So the recipient (RockSteady) gets 2 TRTL.
 
+Reacting with ![tip](images/trtlbot-plus-plus/rsz_tip.png) on a message where in a person was tipping with the emoji ![99](images/trtlbot-plus-plus/almost100.png) will **not** tip the original poster of the message 99 TRTL.
+You *can* react with the emoji ![99](images/trtlbot-plus-plus/almost100.png) however, to tip the person 99 TRTL.
+
 ### Tipping Multiple People
 
 The syntax for tipping multiple people is- `.tip 1 <@person1 @person2>`
@@ -153,7 +156,7 @@ This is to ensure that more and more TRTL is introduced into the ecosystem, rath
 
 - If you try to tip someone who isn't registered, the bot will react with :sos: and PM him with instructions on how to register their wallet and tip. 
 
-## Security of trtlbot++'s wallet
+## Security of trtlbot++'s tipjar (wallet)
 
 trtlbot++ was created and is owned by @krruzic (@madk#1044  in the chat). When he was asked about the security of trtlbot++'s wallet, he said-
 
@@ -168,6 +171,22 @@ and ends it with-
 "I'm not gonna up and run with the tipjar like the doge tipbot guy either :)"
 
 So rest assured, trtlbot++'s wallet is extremely secure, and in the rare occasion that anything *does* happen, you can relax knowing that you'll get it back :)
+
+## Other Commands
+
+trtlbot++ isn't just a tip bot, it's so much more! Here's a table of it's other commands, what each of them do, and how to use them(which aren't explained above).
+
+| Name | Usage |  Description |
+|:-:|:-:|:-:|
+| faucet |  `.faucet` | Returns information about current amount of TRTL in the faucet's wallet. |
+| updatewallet | `.update wallet <walletaddress>` | Updates your currently registered wallet address in case of a change(is not a replacement for .register). |
+| marketcap | `.mcap` |  Returns current Market Cap. Cannot be used in the main TurtleCoin Discord, only in the [Market one](https://discord.gg/7ykuEBE). |
+| price | `.price` | Returns current price. Cannot be used in the main TurtleCoin Discord, only in the [Market one](https://discord.gg/7ykuEBE). |
+| wallet | `.wallet @(user)` | PM's you with the wallet address of the user tagged. If you type only `.wallet` it will pm you with your own wallet address. | 
+| hashrate | `.hashrate` | Returns current network hashrate. | 
+| height | `.height` | Returns current blockchain height. | 
+| difficulty | `.difficulty` | Returns current network difficulty. | 
+| supply | `.supply` | Returns current circulating supply. |
 
 
 
