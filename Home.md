@@ -12,8 +12,8 @@ It was born from the idea that there are too many projects out there, which desp
 
 ## Quick Navigation
 
-| **[About TurtleCoin]** | **[Wallets]** | **[Mining]** | **[Contributing]** |
-|-------------------------------------|-------------------------------|-----------------------------------|---------------------------------------------|
+| **About TurtleCoin** | **Wallets** | **Mining** | **Contributing** |
+|----------------------|-------------|------------|------------------|
 | ![Logo](images/table_logo.png) | ![Wallets](images/table_wallet.png) | ![Mining](images/table_mine.png) | ![Dev](images/table_dev.png) |
 | [About TurtleCoin]() | [Setting up a new Wallet]() | [Mining TurtleCoin]() | [Developer Documentation]() |
 | Learn more about Turtlecoin and the community | A guide on setting up a TurtleCoin wallet to start receiving some turtles! | A step-by-step guide to start mining TurtleCoin | Technical documentation on TurtleCoin and information on joining the Dev team |
