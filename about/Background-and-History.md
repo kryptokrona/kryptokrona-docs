@@ -18,4 +18,4 @@ Instead, TurtleCoin's goal is to create a fun project which is easy to use and t
 
 Most of us are full-time developers on other projects, and this is our way to give back to the community with something fun.
 
-We also have a very wide range of people in the community, people from all walks of life that contribute to the community one way or another. This is what makes the TurtleCoin community so great!
+We also have a wide range of people in the community, people from all walks of life that contribute to the community one way or another. This is what makes the TurtleCoin community so great!
