@@ -183,7 +183,7 @@ trtlbot++ isn't just a tip bot, it's so much more! Here's a table of it's other 
 | difficulty | `.difficulty` | Returns current network difficulty. | 
 | supply | `.supply` | Returns current circulating supply. |
 | faucet |  `.faucet` | Returns information about current amount of TRTL in the faucet's wallet. |
-| updatewallet | `.updatewallet <walletaddress>` | Updates your currently registered wallet address in case of a change(is not a replacement for `.registerwallet <walletaddress` ). |
+| updatewallet | `.updatewallet <walletaddress>` | Updates your currently registered wallet address in case of a change(is not a replacement for `.registerwallet <walletaddress>` ). |
 | wallet | `.wallet @(user)` | PM's you with the wallet address of the user tagged. If you type only `.wallet` it will PM you with your own wallet address. | 
 | marketcap | `.mcap` |  Returns current Market Cap. Cannot be used in the main TurtleCoin Discord, only in the [Market one](https://discord.gg/7ykuEBE). |
 | price | `.price` | Returns current price. Cannot be used in the main TurtleCoin Discord, only in the [Market one](https://discord.gg/7ykuEBE). |
