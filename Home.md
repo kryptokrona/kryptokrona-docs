@@ -12,8 +12,9 @@ It was born from the idea that there are too many projects out there, which desp
 
 ## Quick Navigation
 
-| **[About TurtleCoin][about page]**     | **[Wallets][Wallet Guides]**     | **[Mining][Mining Guides]**           | **[Contributing][For Developers]**           |
+| **[About TurtleCoin]**     | **[Wallets]**     | **[Mining]**           | **[Contributing]**           |
 |-------------------------------------|-------------------------------|-----------------------------------|---------------------------------------------|
+| [![i1][techdocs-image]][techdocs] | [![i2][setup-image]][setup] | [![i3][roadmap-image]][roadmap] | [![i4][contributing-image]][contributing] |
 | [![i1][techdocs-image]][techdocs] | [![i2][setup-image]][setup] | [![i3][roadmap-image]][roadmap] | [![i4][contributing-image]][contributing] |
 
 ## Questions or need help?
