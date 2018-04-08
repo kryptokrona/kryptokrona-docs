@@ -6,7 +6,7 @@ This wiki is the main source of documentation for newcomers to the TurtleCoin pr
 
 ## What is TurtleCoin?
 
-TurtleCoin is a fast, easy and private cryptocurrency which allows you to send money to friends and buisnesses.
+TurtleCoin is a fast, easy and private cryptocurrency which allows you to send money to friends and businesses.
 
 One of TurtleCoin main goals is to make things as simple and as accessible as possible for everyday people, creating a cryptocurrency which is inviting, fun and friendly.
 
