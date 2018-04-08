@@ -6,7 +6,7 @@ This wiki is the main source of documentation for newcomers to the TurtleCoin pr
 
 # What is TurtleCoin?
 
-TurtleCoin is a cryptocurrency created in December 2017.
+TurtleCoin is a cryptocurrency which was created in December 2017.
 
 It was born from the idea that there are too many projects out there, which despite having no real product are bringing tons of funding. One of TurtleCoin main goals is to make things as simple and as accessible as possible for everyday people, a fun and friendly cryptocurrency with low barriers of entry.
 
