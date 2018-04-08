@@ -26,4 +26,4 @@ Most of us are full-time developers on other projects, and this is our way to gi
 
 We also have a wide range of people in the community, people from all walks of life that contribute to the community one way or another. Our community and dev team is growing by the week and this is what makes the TurtleCoin community so great!
 
-![Team Location](images/team_locations.png)
+![Team Location](https://github.com/holytastyguacamole/turtlecoin-wiki/blob/master/images/team_locations.png)
