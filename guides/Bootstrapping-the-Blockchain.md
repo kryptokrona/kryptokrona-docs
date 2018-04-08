@@ -5,11 +5,11 @@ This guide will help you install a recent copy of the blockchain. This should si
 ## Windows:
 1. Make sure `TurtleCoind.exe`, `walletd.exe`, and/or the GUI wallet are not running.
 
-2. Open File Explorer and Type `%APPDATA%\TurtleCoin` and hit enter.
+2. Open File Explorer and type `%APPDATA%\TurtleCoin` and hit enter.
 
 ![file explorer](images/bootstrap/file_explorer.jpg)
 
-**Note: if the folder doesn't exist, just go to `%APPDATA%` instead and create the `TurtleCoin` folder.**
+**Note: if the folder doesn't exist, just go to `%APPDATA%` instead and create a folder named `TurtleCoin`.**
 
 3. Delete the following if they exist:
 
