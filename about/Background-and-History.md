@@ -4,7 +4,7 @@ TurtleCoin is a fast, easy and private cryptocurrency which allows you to send m
 
 One of TurtleCoin main goals is to make things as simple and as accessible as possible for everyday people, creating a cryptocurrency which is inviting, fun and friendly.
 
-TurtleCoin's code is forked from the Bytecoin code and it has the same privacy features you'll find in Monero and Aeon. Every transaction is private unless you choose to make it public.
+TurtleCoin's code is forked from the Bytecoin code, and it has the same privacy features you'll find in Monero and Aeon. Every transaction is private unless you choose to make it public.
 
 ## How and why was it created?
 
