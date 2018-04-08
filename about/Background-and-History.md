@@ -14,14 +14,6 @@ It was born from the idea that there are too many projects out there, which desp
 
 Instead, TurtleCoin's goal is to create a fun project which is easy to use and then let it grow on its own. We have a strong belief in our no-funding strategy; if we make a cool product, the value will create itself.
 
-## How we started it
-
-One chilly December night, RockSteady and Bebop were having a beer too many while discussing the madness around fake, flimsy ICOs with no product. Bebop surmised that it just wouldn't be possible to put out a real project now days without a serious team, doing serious marketing, and bringing in serious funding.
-
-RockSteady leaned in closely, stroked his beard intently, and had only one response..
-
-"Hold my beer."
-
-That night, December 9th, 2017, TurtleCoin was born.
-
 ## Our background
+
+Most of us are full-time developers on other projects, and this is our way to give back to the community with something fun.
