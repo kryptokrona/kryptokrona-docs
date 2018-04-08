@@ -12,9 +12,13 @@ To get started with a Paperwallet, you can use the following link: [http://turtl
 
 ## Simple Wallet (A.K.A. CLI Wallet)
 
+Before you get started with Simple Wallet, you should know that it is essentially a DOS program. You have to type the commands into the DOS window, you cannot use your mouse. (Currently, as of 1st of April 2018, this is the most stable wallet) 
+
 To set up Simple Wallet, follow this guide: [Getting Started](https://github.com/turtlecoin/turtlecoin/wiki/Getting-Started#using-simplewallet)  
 
 ## Graphic Wallet (A.K.A GUI Wallet)
+
+If you are 
 
 ## Web Wallet 
 
