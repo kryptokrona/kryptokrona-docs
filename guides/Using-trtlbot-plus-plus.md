@@ -1,7 +1,7 @@
-# How to use trtlbot++
+# How to Use trtlbot++
 
 
-## Registering your wallet
+## Registering your Wallet
 
 Go to #wallets and type `.registerwallet <walletaddress>`. 
 
@@ -73,7 +73,7 @@ For example, `.tip 1 @RockSteady#7588` will tip the user called "RockSteady"  1 
 *The minimum you can send is 0.11 TRTL, and the bot will take an extra 0.1 TRTL on top of what you tipped to account for fees
 So if you tipped 1 TRTL, 1.1 TRTL will be pulled from your account so that the full 1 TRTL reaches the recipient*
 
-### Adding a Message when tipping
+### Adding a Message when Tipping
 
 ***The syntax for tipping someone is- `.tip <amount> <@person>`***
      
@@ -155,7 +155,7 @@ This is to ensure that more and more TRTL is introduced into the ecosystem, rath
 
 ## Security of trtlbot++'s wallet
 
-trtlbot++ was created and is owned by @krruzic (@madk#1044  in the chat). When he was asked about the security of trtlbot++'s wallet, he said-
+trtlbot++ was created and is owned by [@krruzic](https://github.com/krruzic)(@madk#1044  in the chat). When he was asked about the security of trtlbot++'s wallet, he said-
 
 "the wallet is pretty secure. All ports are closed except 80, whatever minecraft is and my SSH port. The SSH has no root login and only two valid keys. ~~One of the keys is for an account that has no permissions to go anywhere but one folder (I may revoke this key)~~ *[This key has since been revoked]*. There are other security features but I don't want to reveal any possible attack surfaces by accident."
 
