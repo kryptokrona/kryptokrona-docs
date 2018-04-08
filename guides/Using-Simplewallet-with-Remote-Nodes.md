@@ -37,5 +37,5 @@ pause
 
 | Host | Port | Website |
 |--|--|--|
-| daemon.turtle.link | 11898 | http://turtle.link
+| daemon.turtle.link | 11898 | https://turtle.link
 | public.turtlenode.io | 11898 | https://turtlenode.io
