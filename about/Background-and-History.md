@@ -6,6 +6,12 @@ One of TurtleCoin main goals is to make things as simple and as accessible as po
 
 TurtleCoin's code is forked from the Bytecoin code, and it has the same privacy features you'll find in Monero and Aeon. Every transaction is private unless you choose to make it public.
 
+Some of the main features of TurtleCoin include:
+* On-chain privacy
+* Only two decimal places
+* Fast transactions
+* User-centric developers
+
 ## How and why was it created?
 
 TurtleCoin was created in December 2017 by RockSteady.
@@ -18,4 +24,6 @@ Instead, TurtleCoin's goal is to create a fun project which is easy to use and t
 
 Most of us are full-time developers on other projects, and this is our way to give back to the community with something fun.
 
-We also have a wide range of people in the community, people from all walks of life that contribute to the community one way or another. This is what makes the TurtleCoin community so great!
+We also have a wide range of people in the community, people from all walks of life that contribute to the community one way or another. Our community and dev team is growing by the week and this is what makes the TurtleCoin community so great!
+
+![Team Location](images/team_locations.png)
