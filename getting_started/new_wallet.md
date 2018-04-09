@@ -14,9 +14,13 @@ You should print this wallet and keep your keys in a safe place, until you are r
 
 ## Simple Wallet (A.K.A. CLI Wallet)
 
-Before you get started with Simple Wallet, you should know that it is essentially a DOS program. You have to type the commands into the DOS window, you cannot use your mouse. (Currently, as of 1st of April 2018, this is the most stable wallet) 
+Before you get started with Simple Wallet, you should know that it is essentially a DOS program. You have to type the commands into the DOS window, you cannot use your mouse. (Currently, as of 8th of April 2018, this is the most stable wallet) 
 
-To set up Simple Wallet, follow this guide: [Getting Started](https://github.com/turtlecoin/turtlecoin/wiki/Getting-Started#using-simplewallet)  
+This is what simple wallet looks like:
+
+![Simplewallet](https://github.com/holytastyguacamole/turtlecoin-wiki/blob/master/images/simplewallet.png)
+
+To set up Simple Wallet, simply follow this guide: [Getting Started](https://github.com/turtlecoin/turtlecoin/wiki/Getting-Started#using-simplewallet)  
 
 ## Graphic Wallet (A.K.A GUI Wallet)
 
