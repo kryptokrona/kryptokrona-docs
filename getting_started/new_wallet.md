@@ -54,7 +54,7 @@ Our Web Wallet is still being developed and it is in the Beta testing stage. If 
 
 If you have created a new wallet and you are itching to see how it works, you can either jump on our Discord channel and say hello to the community (chances are someone will tip you some coins as a welcome!).
 
-Otherwise, you can try to use our free [Turtle Faucet](https://faucet.trtl.me/). Simply key in your wallet address and start claiming some free Turtles!
+Otherwise, you can use our free [Turtle Faucet](https://faucet.trtl.me/). Simply key in your wallet address and start claiming some free Turtles!
 
 ## Having issues?
 
