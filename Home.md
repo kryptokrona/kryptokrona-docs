@@ -15,7 +15,7 @@ One of TurtleCoin's main goals is to make things as simple and as accessible as 
 | **About TurtleCoin** | **Wallets** | **Mining** | **Contributing** |
 |:----------------------:|:-------------:|:------------:|:------------------:|
 | ![Logo](images/table_logo.png) | ![Wallets](images/table_wallet.png) | ![Mining](images/table_mine.png) | ![Dev](images/table_dev.png) |
-| [About TurtleCoin](/about/Background-and-History.md) | [Setting up a new Wallet](getting_started/new_wallet.md) | [Mining TurtleCoin]() | [Developer Documentation]() |
+| [About TurtleCoin](/about/Background-and-History.md) | [Setting up a new Wallet](getting_started/new_wallet.md) | [Mining TurtleCoin](getting_started/new_miner.md) | [Developer Documentation]() |
 | Learn more about Turtlecoin and the community | A guide on setting up a TurtleCoin wallet to start receiving some turtles! | A step-by-step guide to start mining TurtleCoin | Technical documentation on TurtleCoin and information on joining the Dev team |
 
 ## Questions or need help?
