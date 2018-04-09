@@ -20,7 +20,7 @@ One of TurtleCoin main goals is to make things as simple and as accessible as po
 
 ## Questions or need help?
 
-Check out our [Discord](https://discord.gg/RJaeQqm) or [Reddit page](https://www.reddit.com/r/TRTL/) to get in touch.
+Check out our [Discord](https://discord.gg/RJaeQqm) or [Reddit sub](https://www.reddit.com/r/TRTL/) to get in touch.
 
 ## Contributing
 
