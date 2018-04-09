@@ -24,6 +24,7 @@
     - [Saving the Wallet](Getting-Started#saving-the-wallet)
 
 - [[Frequently Asked Questions]]
+  - [Paper Wallet / Cold Storage?](Frequently-Asked-Questions#paper-wallet--cold-storage)
 
 - Guides
   - Alternative Installation Methods
@@ -37,7 +38,8 @@
     - [Cloud Mining](Mining#cloud-mining)
     - [Mining with SBC](Mining-with-SBC)
   - [[Participating in Raindance]]
-  - Other
+  - [Using Simplewallet with Remote Nodes](Using-Simplewallet-with-Remote-Nodes)
+  - [Using trtlbot++](Using-trtlbot-plus-plus)
 
 - TRTL Development
   - Connecting with Developers

@@ -1,7 +1,5 @@
 # Frequently Asked Questions
 
-Did this guide help you out? Throw some shells my way: `TRTLv2Fyavy8CXG8BPEbNeCHFZ1fuDCYCZ3vW5H5LXN4K2M2MHUpTENip9bbavpHvvPwb4NDkBWrNgURAd5DB38FHXWZyoBh4wW`
-
 ## Mining and xmr-stak
 
 ### General mining questions
@@ -12,8 +10,8 @@ Did this guide help you out? Throw some shells my way: `TRTLv2Fyavy8CXG8BPEbNeCH
 
 * **Q: I'm using a Mac, can I still mine?**
 
-    A: Yes, there is a guide available [here](https://github.com/turtlecoin/turtlecoin-wiki/blob/master/guides/01-getting-started-mac.md) - thanks to [@wigging](https://github.com/wigging) for creating this.
-
+    A: Yes, of course! We're working on a guide.
+    
 * **Q: I've started mining, how can I view my stats?**
 
     A: Take the pool address, and remove the port number. For example, if your pool address is `slowandsteady.fun:3333`, go to the website `slowandsteady.fun`. There should be a spot for you to put in your TRTL address, and you can then view your hashrate, pending balance, payouts, and more.
@@ -74,7 +72,7 @@ Did this guide help you out? Throw some shells my way: `TRTLv2Fyavy8CXG8BPEbNeCH
 
 * **Q: My PC is laggy when I'm mining in xmr-stak. Can I fix this?**
 
-    A:
+    A: This could be caused by multiple issues:
   * If you're using a Nvidia card, open up nvidia.txt, in the same directory as xmr-stak.exe. Try setting bfactor to 8 and bsleep to 100, and then reload your miner after saving the file. If it's still laggy, try increasing both values slightly. This will cause you to get less hashes per second, but can let you use your PC more effectively. You can try tweaking the value to increase your hashrate. Some people also achieve success by lowering the thread count.
   * If you're using an AMD card, there should be an intensity value that you can lower in amd.txt.
   * If you're using just a CPU, you can delete the cores being used from cpu.txt.
@@ -233,6 +231,20 @@ Did this guide help you out? Throw some shells my way: `TRTLv2Fyavy8CXG8BPEbNeCH
   * walletd is importing blocks from the DB, which takes a while and so the GUI thinks it has crashed. Solution here - <https://github.com/turtlecoin/desktop-xamarin/issues/17#issuecomment-366790435>
   * If all else fails, if you have your private keys then you can instead import your wallet into simplewallet. 
 
+## Paper Wallet / Cold Storage?
+
+* **Q: Wait, What's Cold Storage?**
+
+    A: The term Cold Storage refers to a wallet that has been created via an offline means. The preferred way to do this is via a computer than has never ever been connected to the internet, commonly referred to as an air gapped device. Why is this a thing? If done properly it means it is near impossible for the keys to be secrectly intercepted since the data is never viewable by other compute devices. You see above/elsewhere wallet files are being created via the wallet software, these files might be stored unencyprted, If unencypted then the keys can be read by malicious software and balance's of those wallets transferred, Thus to protect against that scenario you could transfer any TRTL balance to one of these Cold Storage addresses. Please remember to keep secure/secret backups of your keys. If you lose the keys you lose any balance that was transferred to that wallet. You can use the paper wallet files below, to generate a Cold Storage address & keys. 
+    
+* **Q: Can I make a paper wallet?**
+
+    A: Yes, you can use the link here: <http://turtlecoin.lol/wallet> - If you want to run it locally on an offline computer for security, you can download the source code [here](https://github.com/turtlecoin/paper-turtle), and open the html file in your browser.
+
+* **Q: Can I view the balance of my wallet online?**
+
+    A: Due to turtlecoin being a privacy coin, this is not possible. It should be possible in the future to allow users to give away just their view private key to view transactions, but this hasn't been implemented by anyone so far, and would allow that website to see every transaction that you make.
+
 ## Other
 
 * **Q: Why does TRTL have such a high amount of tokens/small amount of decimal places?**
@@ -241,7 +253,7 @@ Did this guide help you out? Throw some shells my way: `TRTLv2Fyavy8CXG8BPEbNeCH
 
 * **Q: How can I get some TRTL?**
 
-    A:
+    A: There are multiple ways to acquire TRTL, for example:
   * Mining - see <http://mining.turtlecoin.lol>
   * Buying - TRTL is currently available on these exchanges: [TradeOgre](https://tradeogre.com/exchange/BTC-TRTL) and [TradeSatoshi](https://tradesatoshi.com/Exchange/?market=TRTL_BTC)
   * Bounties - Bounties for developing TRTL software, spreading the word of TRTL, and many other things are often posted in the #bounties channel on discord. Check the pinned messages for current bounties.
@@ -268,14 +280,6 @@ Did this guide help you out? Throw some shells my way: `TRTLv2Fyavy8CXG8BPEbNeCH
 * **Q: Is there a blockchain explorer?**
 
     A: Yes, there are two: <https://blocks.turtle.link/> and <https://turtle-coin.com/>
-
-* **Q: Can I make a paper wallet?**
-
-    A: Yes, you can use the link here: <http://turtlecoin.lol/wallet> - If you want to run it locally on an offline computer for security, you can download the source code [here](https://github.com/turtlecoin/paper-turtle), and open the html file in your browser.
-
-* **Q: Can I view the balance of my wallet online?**
-
-    A: Due to turtlecoin being a privacy coin, this is not possible. It should be possible in the future to allow users to give away just their view private key to view transactions, but this hasn't been implemented by anyone so far, and would allow that website to see every transaction that you make.
 
 * **Q: I have a question which wasn't answered here, what should I do?**
 

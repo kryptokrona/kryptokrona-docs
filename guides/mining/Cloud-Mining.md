@@ -36,9 +36,9 @@ SSH into GCP instance and enter:
 
 1. When it asks if you want to mine Monero or Aeon, choose `MONERO`
 
-2. When it asks which pool, put one in from the list below.  Start with the one closest to you.  Multiple pools is a good idea for if the one you're mining on goes down.
+2. When it asks which pool to use, put one in from the list below. Start with the one closest to you. Multiple pools is a good idea in case the one you're mining on goes down.
 
-3.  When it asks for "Username" just type in your TRTL wallet address. If you don't want to sync a blockchain and make your wallet later, you can make a paper wallet here http://turtlecoin.lol/wallet
+3. When it asks for "Username" just type in your TRTL wallet address. If you don't want to sync a blockchain and make your wallet later, you can make a paper wallet [here](https://turtlecoin.lol/wallet)
 
 4. Password is `x`
 
@@ -49,10 +49,11 @@ SSH into GCP instance and enter:
 7. Do you want to use multiple pools? `yes`
 Add all of the pools in the list from step 6, and give them all a weight of 10 if you're tired of reading, or if you want the best experience, give the pools nearest to you a higher number, and the ones further from you a lower number.
 
-8. DONE!! The miner will now start scanning your hardware and will begin mining.
+8. Done! The miner will now start scanning your hardware and will begin mining.
 
 
 ### Mining Pools
+
 #### z-pool.com:3333 (EU North)
 
 #### hk.turtlepool.space:3333 (Hong Kong)
@@ -73,7 +74,18 @@ Add all of the pools in the list from step 6, and give them all a weight of 10 i
 
 #### turtle.atpool.party:3333 (France)
 
-#### trtlpool.ninja:5555 (US West Coast - Las Vegas, NV)
- 
+#### 78.46.85.142:4902 (CryptoKnight)
 
-Credits: Thanks to Bebop TC.  This document borrows heavily from https://github.com/turtlecoin/turtlecoin-wiki/blob/master/How-To-Mine-TurtleCoin-on-Windows.md. 
+#### 118.31.18.78:5555 (ETNChina)
+
+#### trtl.flashpool.club:5555 (for `Claymore-cryptonote-10.2`, use port `7443` ONLY)
+
+#### trtl.blockchainera.net:6666
+
+#### pool.trtl.ninja:5555
+
+#### turtle.mining.garden:5555
+ 
+#### pool.trtl.semipool.com:3333 (US Miami, FR Paris)
+
+Credits: Thanks to Bebop TC.  This document borrows heavily from https://github.com/turtlecoin/turtlecoin-wiki/blob/master/How-To-Mine-TurtleCoin-on-Windows. 
