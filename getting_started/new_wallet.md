@@ -1,6 +1,6 @@
 # Setting up a new wallet
 
-The easiest way to set up a wallet and start *receiving* funds is to use the paper wallet. However, you will need to use either a CLI (Command Line Interface), GUI (Graphic User Interface) or Web Wallet if you want to check your balance or send funds to other people.
+The easiest way to set up a wallet and start *receiving* funds is to use the paper wallet. However, you will need to use either a CLI (Command Line Interface), GUI (Graphical User Interface) or Web Wallet if you want to check your balance or send funds to other people.
 
 ## Paper Wallet
 
@@ -16,7 +16,7 @@ You should print this wallet and keep your keys in a safe place, until you are r
 
 Before you get started with Simple Wallet, you should know that it is essentially a DOS program. You have to type the commands into the DOS window, you cannot use your mouse. (Currently, as of 8th of April 2018, this is the most stable wallet) 
 
-This is what Simplewallet looks like:
+This is what the Simplewallet looks like:
 
 ![Simplewallet](https://github.com/holytastyguacamole/turtlecoin-wiki/blob/master/images/screenshot_simplewallet.png)
 
@@ -30,7 +30,7 @@ If you prefer to use a GUI wallet, there are currently two which are being devel
 
 You can download the latest version of Xamarin Wallet **[here](https://github.com/turtlecoin/turtle-wallet-xamarin/releases)**.
 
-This is what Xamarin Wallet looks like:
+This is what the Xamarin Wallet looks like:
 
 ![Xamarin Wallet](https://github.com/holytastyguacamole/turtlecoin-wiki/blob/master/images/screenshot_xamarin.png)
 
