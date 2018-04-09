@@ -26,15 +26,26 @@ To set up Simple Wallet, simply follow this guide: [Getting Started](https://git
 
 If you prefer to use a GUI wallet, there are currently two which are being developed regularly:
 
-1. [Xamarin Wallet](https://github.com/turtlecoin/turtle-wallet-xamarin/releases)
+1. [Xamarin Wallet](https://github.com/turtlecoin/turtle-wallet-xamarin)
+
+You can download the latest version of Xamarin Wallet [here](https://github.com/turtlecoin/turtle-wallet-xamarin/releases).
 
 This is what Xamarin Wallet looks like:
 
 ![Xamarin Wallet](https://github.com/holytastyguacamole/turtlecoin-wiki/blob/master/images/screenshot_xamarin.png)
 
-2. [Nest Wallet](https://github.com/turtlecoin/turtle-wallet-go/releases)
+2. [Nest Wallet](https://github.com/turtlecoin/turtle-wallet-go)
+
+You can download the latest version of Nest Wallet [here](https://github.com/turtlecoin/turtle-wallet-go/releases)
 
 This is what Nest Wallet looks like:
 
+![Nest Wallet](https://github.com/holytastyguacamole/turtlecoin-wiki/blob/master/images/screenshot_nest.png)
+
 ## Web Wallet 
 
+Our Web Wallet is still in beta testing stage.
+
+## Having issues?
+
+Come join our [Discord channel](https://discord.gg/RJaeQqm) and ask someone in our friendly community for help!
