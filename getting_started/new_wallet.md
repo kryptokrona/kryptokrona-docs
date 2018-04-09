@@ -6,11 +6,11 @@ The easiest way to set up a wallet and start *receiving* funds is to use the pap
 
 **Before you get started:** The main purpose of a Paperwallet is to quickly create a wallet to start receiving funds. You will not be able to spend or send your funds to other people until you set up an electronic wallet.
 
-To get started with a Paperwallet, you can use the following link: [http://turtlecoin.lol/wallet](http://turtlecoin.lol/wallet) and follow the instructions on the page. Alternatively, if you want to create your wallet while you are offline, you can download the wallet generator [here](https://github.com/turtlecoin/paper-turtle).
+To get started with a Paperwallet, you can use this link: [http://turtlecoin.lol/wallet](http://turtlecoin.lol/wallet) and follow the instructions on the page. Alternatively, if you want to create your wallet while you are offline, you can download the wallet generator [here](https://github.com/turtlecoin/paper-turtle).
 
 You should print this wallet and keep your keys in a safe place, until you are ready to import them into a electronic wallet.
 
-**Remember:** Do NOT give your 'Spend Key' and 'View Key' to anybody.
+**Remember:** DO NOT give your 'Spend Key' and 'View Key' to anybody.
 
 ## Simple Wallet (A.K.A. CLI Wallet)
 
