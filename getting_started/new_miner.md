@@ -23,7 +23,7 @@ You can download xmr-stak **[here](https://github.com/brandonlehmann/xmr-stak/tr
 
 ### 2. [XMRig](https://github.com/xmrig/xmrig)
 
-XMRig is a little bit different to xmr-stak, you need to dowload a cpu and gpu miner separately and run two sepparate instances in your computer. One will use your CPU and the other one will use your GPU. You can download them here:
+XMRig is a little bit different to xmr-stak, you need to dowload a cpu and gpu miner separately and run two separate instances in your computer. One will use your CPU and the other one will use your GPU. You can download them here:
 
 1. Download CPU mining xmrig **[here](https://github.com/xmrig/xmrig/releases)**.
 2. Download NVIDIA mining xmrig **[here](https://github.com/xmrig/xmrig-nvidia/releases)**.
@@ -33,11 +33,33 @@ In order to get started mining TurtleCoin, please choose from the following guid
 
 ### 3. Cloud Mining
 
-### 4. Pi Mining
+Please follow [this Guide](https://github.com/turtlecoin/turtlecoin-wiki/blob/master/guides/mining/Cloud-Mining.md) to mine with cloud computing.
+
+### 4. SBC/Raspberry Pi Mining
+
+Please follow [this Guide](https://github.com/turtlecoin/turtlecoin-wiki/blob/master/guides/mining/Mining-with-SBC.md) to mine with a SBC or Rasperry Pi.
 
 ### 5. Mobile Mining
 
 ## Pools
+
+The guides listed above are for pool mining. Here are some of the TurtleCoin mining pools:
+
+* [auspool.turtleco.in](https://auspool.turtleco.in/)
+* [cryptoknight.cc/turtle](https://cryptoknight.cc/turtle)
+* [etnchina.io/trtl](http://etnchina.io/trtl)
+* [slowandsteady.fun](https://slowandsteady.fun)
+* [trtl.mine2gether.com](https://trtl.mine2gether.com)
+* [trtl.ninja](https://trtl.ninja)
+* [trtl.flashpool.club](https://trtl.flashpool.club)
+* [trtl.blockchainera.net](https://trtl.blockchainera.net)
+* [eu.turtlepool.space](https://eu.turtlepool.space)
+* [us.turtlepool.space](https://us.turtlepool.space)
+* [hk.turtlepool.space](https://hk.turtlepool.space)
+* [turtle.mining.garden](https://turtle.mining.garden)
+* [turtle.atpool.party](https://turtle.atpool.party)
+* [z-pool.com](https://z-pool.com)
+* [trtl.semipool.com](https://trtl.semipool.com)
 
 ## Questions or need help?
 
