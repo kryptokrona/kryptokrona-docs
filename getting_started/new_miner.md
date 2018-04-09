@@ -1,7 +1,7 @@
 
 # Start mining TurtleCoin
 
-Mining is essentially the process of using your computer to help verify and secure a cryptocurrency network, in our case, it is the TurtleCoin network. By doing this, you will be rewarded some TurtleCoin.
+Mining is essentially the process of using your computer to help verify and secure a cryptocurrency network, in our case, it is the TurtleCoin network. By doing this, you will be rewarded with some TurtleCoin.
 
 If you want to learn about Cryptocurrencies, mining is a great place to start!
 
