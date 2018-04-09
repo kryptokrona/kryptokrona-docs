@@ -41,10 +41,12 @@ Please follow [this Guide](https://github.com/turtlecoin/turtlecoin-wiki/blob/ma
 
 **Please note:** Using your mobile to mine TurtleCoin is not effective (possible even a dumb idea) and should only be done for the lulz.
 
-1. Download Pickaxe from your App Store
-2. Select a Turtlecoin
-3. Go to settings and input your wallet and the address for whichever pool you want to use (including the port)
-3. Start Mining!
+1. ~~Download Pickaxe from your App Store~~
+2. ~~Select a Turtlecoin~~
+3. ~~Go to settings and input your wallet and the address for whichever pool you want to use (including the port)~~
+3. ~~Start Mining!~~
+
+Starting from block 350,000 TurtleCoin forked to use a different algorithm. Currently the mobile miner does not work with the latest change.
 
 ## Pools
 
