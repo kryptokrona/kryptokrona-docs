@@ -1,11 +1,11 @@
 
-# Start mining TurtleCoin
+# Start Mining TurtleCoin
 
 Mining is essentially the process of using your computer to help verify and secure a cryptocurrency network, in our case, it is the TurtleCoin network. By doing this, you will be rewarded with some TurtleCoin.
 
-If you want to learn about Cryptocurrencies, mining is a great place to start!
+If you want to learn about cryptocurrencies, mining is a great place to start!
 
-## How to mine TurtleCoin?
+## How to Mine TurtleCoin?
 
 **Please note:** Unfortunately because of some bad people using mining software in malware, most anti-viruses will detect the programs below as unsafe. It is **likely** you will need to add exeptions and exclusions to your antivirus software in order to make things work properly. 
 
@@ -31,15 +31,15 @@ XMRig is a little bit different to xmr-stak, you need to dowload a cpu and gpu m
 
 ### 3. Cloud Mining
 
-Please follow [this Guide](https://github.com/turtlecoin/turtlecoin-wiki/blob/master/guides/mining/Cloud-Mining.md) to mine with cloud computing.
+Please follow [this guide](https://github.com/turtlecoin/turtlecoin-wiki/blob/master/guides/mining/Cloud-Mining.md) to mine with cloud computing.
 
 ### 4. SBC/Raspberry Pi Mining
 
-Please follow [this Guide](https://github.com/turtlecoin/turtlecoin-wiki/blob/master/guides/mining/Mining-with-SBC.md) to mine with a SBC or Rasperry Pi.
+Please follow [this guide](https://github.com/turtlecoin/turtlecoin-wiki/blob/master/guides/mining/Mining-with-SBC.md) to mine with a SBC or Rasperry Pi.
 
 ### 5. Mobile Mining
 
-**Please note:** Using your mobile to mine TurtleCoin is not effective (possible even a dumb idea) and should only be done for the lulz.
+**Please note:** Using your mobile to mine TurtleCoin is not effective and should only be done for the lulz. It may also cause the phone to overheat and result in premature silicon degradation, shortening the lifespan of your phone.
 
 1. ~~Download Pickaxe from your App Store~~
 2. ~~Select a Turtlecoin~~
@@ -68,6 +68,6 @@ The guides listed above will generally use a pool for mining. Here are some of t
 * [z-pool.com](https://z-pool.com)
 * [trtl.semipool.com](https://trtl.semipool.com)
 
-## Questions or need help?
+## Have Questions or Need Help?
 
-Check out our [Discord](https://discord.gg/RJaeQqm) or [Reddit sub](https://www.reddit.com/r/TRTL/) to get in touch.
+Check out our [Discord](https://discord.gg/RJaeQqm) or [subreddit](https://www.reddit.com/r/TRTL/) to get in touch.
