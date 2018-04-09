@@ -29,8 +29,6 @@ XMRig is a little bit different to xmr-stak, you need to dowload a cpu and gpu m
 2. Download NVIDIA mining xmrig **[here](https://github.com/xmrig/xmrig-nvidia/releases)**.
 3. Download AMD mining xmrig **[here](https://github.com/xmrig/xmrig-amd/releases)**.
 
-In order to get started mining TurtleCoin, please choose from the following guides below.
-
 ### 3. Cloud Mining
 
 Please follow [this Guide](https://github.com/turtlecoin/turtlecoin-wiki/blob/master/guides/mining/Cloud-Mining.md) to mine with cloud computing.
