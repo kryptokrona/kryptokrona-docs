@@ -41,7 +41,7 @@ Please follow [this Guide](https://github.com/turtlecoin/turtlecoin-wiki/blob/ma
 
 ### 5. Mobile Mining
 
-**Please note:** Using your mobile to mine TurtleCoin is not effective (could even be called a dumb idea) and should only be done for the lulz.
+**Please note:** Using your mobile to mine TurtleCoin is not effective (possible even a dumb idea) and should only be done for the lulz.
 
 1. Download Pickaxe from your App Store
 2. Select a Turtlecoin
