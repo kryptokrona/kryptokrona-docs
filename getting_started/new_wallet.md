@@ -18,7 +18,7 @@ Before you get started with Simple Wallet, you should know that it is essentiall
 
 This is what simple wallet looks like:
 
-![Simplewallet]()
+![Simplewallet](https://github.com/holytastyguacamole/turtlecoin-wiki/blob/master/images/screenshot_simplewallet.png)
 
 To set up Simple Wallet, simply follow this guide: [Getting Started](https://github.com/turtlecoin/turtlecoin/wiki/Getting-Started#using-simplewallet)  
 
