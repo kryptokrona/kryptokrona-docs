@@ -68,6 +68,6 @@ The guides listed above will generally use a pool for mining. Here are some of t
 * [z-pool.com](https://z-pool.com)
 * [trtl.semipool.com](https://trtl.semipool.com)
 
-## Questions or need help?
+## Have Questions or Need Help?
 
 Check out our [Discord](https://discord.gg/RJaeQqm) or [subreddit](https://www.reddit.com/r/TRTL/) to get in touch.
