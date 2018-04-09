@@ -10,13 +10,12 @@ There is an easy way to quickly get your wallet up and running. You can use a re
 
 1. Use the following command to start simplewallet:
 
-```text
-simplewallet.exe --daemon-host <daemon-host> --daemon-port <daemon-port>
-```
-Replace `<daemon-host>` and `<daemon-port>` with values from one of the public remote daemons available below.
+`simplewallet.exe --remote-daemon host:port`
+Replace `host:port` with values from one of the public remote daemons available below.
 
 You can now follow your normal process to access your wallet.
 
+Example- `simplewallet.exe --remote-daemon daemon.turtle.link:11898`
 
 ## I don't want to have to type this every time
 
@@ -36,7 +35,7 @@ pause
 
 ## List of known remote daemons
 
-| Server | Port | Website |
+| Host | Port | Website |
 |--|--|--|
-| daemon.turtle.link | 11898 | http://turtle.link
+| daemon.turtle.link | 11898 | https://turtle.link
 | public.turtlenode.io | 11898 | https://turtlenode.io
