@@ -21,6 +21,8 @@ Please be granular and make a single commit per change/set of related changes (o
 ## Thanks and Contributors
 - @ZedPea
 - @AC
+- @Sajo811
+- @holytastyguacamole
 - the TurtleCoin community.
 
 ...more to be listed soon!
