@@ -11,7 +11,7 @@ If you want to learn about Cryptocurrencies, mining is a great place to start!
 
 Unless you know what you are doing, please ***only*** download from the links below.
 
-There are currently two miners (programs) which you can use to start mining TurtleCoin:
+There are currently a few different ways in which you can start mining TurtleCoin:
 
 ### 1. [XMR-Stak](https://github.com/fireice-uk/xmr-stak)
 
@@ -50,9 +50,9 @@ Please follow [this Guide](https://github.com/turtlecoin/turtlecoin-wiki/blob/ma
 
 ## Pools
 
-The guides listed above are for pool mining. Here are some of the TurtleCoin mining pools:
+The guides listed above will generally use a pool for mining. Here are some of the TurtleCoin mining pools:
 
-* [auspool.turtleco.in](https://auspool.turtleco.in/)
+* [auspool.turtleco.in](https://auspool.turtleco.in)
 * [cryptoknight.cc/turtle](https://cryptoknight.cc/turtle)
 * [etnchina.io/trtl](http://etnchina.io/trtl)
 * [slowandsteady.fun](https://slowandsteady.fun)
