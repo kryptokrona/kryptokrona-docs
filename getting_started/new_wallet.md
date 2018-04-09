@@ -18,13 +18,19 @@ Before you get started with Simple Wallet, you should know that it is essentiall
 
 This is what simple wallet looks like:
 
-![Simplewallet](https://github.com/holytastyguacamole/turtlecoin-wiki/blob/master/images/simplewallet.png)
+![Simplewallet]()
 
 To set up Simple Wallet, simply follow this guide: [Getting Started](https://github.com/turtlecoin/turtlecoin/wiki/Getting-Started#using-simplewallet)  
 
 ## Graphic Wallet (A.K.A GUI Wallet)
 
-If you are 
+If you prefer to use a GUI wallet, there are currently two which are being developed regularly:
+
+1. [Xamarin Wallet](https://github.com/turtlecoin/turtle-wallet-xamarin/releases)
+
+
+
+2. [Nest Wallet](https://github.com/turtlecoin/turtle-wallet-go/releases)
 
 ## Web Wallet 
 
