@@ -1,8 +1,8 @@
 # XMR-Stak Guide for TurtleCoin
 
-#### Downloading and Installing
+## Downloading and Installing
 
-##### Windows
+### Windows
 
 1. Download and install [XMR-Stak Unified Miner](https://github.com/fireice-uk/xmr-stak/releases/latest) - This will auto-detect your hardware, and tune everything for you.
 
@@ -14,11 +14,11 @@
 
 5. Check [XMR-Stak Setup and Configuration](https://github.com/turtlecoin/turtlecoin/wiki/Mining#xmr-stak-setup-and-configuration)
 
-##### Mac
+### Mac
 
 See https://github.com/fireice-uk/xmr-stak/blob/master/doc/compile.md and https://github.com/fireice-uk/xmr-stak/blob/master/doc/compile_MacOS.md
 
-#### XMR-Stak Setup and Configuration
+### XMR-Stak Setup and Configuration
 
 Upon first launching XMR-Stak, the software will ask you several setup and configuration questions.
 
