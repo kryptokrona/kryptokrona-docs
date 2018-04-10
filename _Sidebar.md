@@ -33,7 +33,7 @@
 - [Participating in Raindance]
 
 - [Frequently Asked Questions](turtlecoin-wiki/faq/Frequently-Asked-Questions)
-
+<!--
 - TurtleCoin Development
   - Connecting with Developers
   - Contributing
@@ -41,6 +41,7 @@
     - TurtleCoin Core
     - Other Projects
   - 3rd-Party Integrations
+-->
 <!--
 - Cryptocurrency Fundamentals
   - How a Blockchain Works
