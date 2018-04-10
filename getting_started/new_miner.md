@@ -72,4 +72,4 @@ The guides listed above will generally use a pool for mining. Here are some of t
 
 ## Questions or need help?
 
-Check out our [Discord](https://discord.gg/RJaeQqm) or [Reddit sub](https://www.reddit.com/r/TRTL/) to get in touch.
+Check out our [Discord](https://discord.gg/RJaeQqm) or [subreddit](https://www.reddit.com/r/TRTL/) to get in touch.
