@@ -1,7 +1,7 @@
 - [Home]
 
-- [About TurtleCoin]
-  - [Background and History]
+- [About TurtleCoin](turtlecoin-wiki/about/Background-and-History)
+  - [Background and History](turtlecoin-wiki/about/Background-and-History#how-and-why-was-it-created?)
  
 - [Getting Started](Getting-Started)
   - [Downloading](Getting-Started#downloading)
@@ -28,7 +28,7 @@
   - [Using trtlbot++](Using-trtlbot-plus-plus)
   - [Paper Wallet / Cold Storage?](Frequently-Asked-Questions#paper-wallet--cold-storage)
 
-- [Frequently Asked Questions]
+- [Frequently Asked Questions](turtlecoin-wiki/faq/Frequently-Asked-Questions)
 
 - TurtleCoin Development
   - Connecting with Developers
@@ -37,7 +37,7 @@
     - TurtleCoin Core
     - Other Projects
   - 3rd-Party Integrations
-
+<!--
 - Cryptocurrency Fundamentals
   - How a Blockchain Works
   - Basic Concepts
@@ -45,5 +45,5 @@
     - Wallets, Keys & Addresses
     - Transactions
     - Proof-of-Work
-
+-->
 - Contributors
