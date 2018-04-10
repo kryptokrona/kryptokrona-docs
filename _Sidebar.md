@@ -19,14 +19,14 @@
     - [Mining Software](Mining#mining-software)
       - [XMR-Stak](Mining#xmr-stak)
       - [ccminer]
-      - [web miner]
-    - [Mining Pools](Mining#mining-pools)
-    - [Cloud Mining](Mining#cloud-mining)
-    - [Mining with SBC](Mining-with-SBC)
+      - [web miner]    
+     - [Mining Pools](Mining#mining-pools)
+     - [Cloud Mining](Mining#cloud-mining)
+     - [Mining with SBC](Mining-with-SBC)
   - [Participating in Raindance]
   - [Using Simplewallet with Remote Nodes](Using-Simplewallet-with-Remote-Nodes)
   - [Using trtlbot++](Using-trtlbot-plus-plus)
-  - [Paper Wallet / Cold Storage?](Frequently-Asked-Questions#paper-wallet--cold-storage)
+  - [Paper Wallet / Cold Storage](Frequently-Asked-Questions#paper-wallet--cold-storage)
 
 - [Frequently Asked Questions](turtlecoin-wiki/faq/Frequently-Asked-Questions)
 
