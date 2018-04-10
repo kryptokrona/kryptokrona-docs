@@ -2,13 +2,8 @@
 
 Xmr-Stak is a unified miner, which means the same program will be used to mine with both your CPU and your GPU. It will automatically detect your hardware and adjust the settings accordingly.
 
-## Downloading and Installing
-
+## Downloading and Installing for Windows
  
-
-
-### Windows
-
 1. Download and install [TRTL-Stak Unified Miner](https://github.com/turtlecoin/trtl-stak/releases/latest), a modified version of XMR-Stak to work with TurtleCoin's algorithm changes. It will auto-detect your hardware, and tune everything for you.
   - If you want to mine with your CPU, download the file called `xmr-stak-turtlecoin-win64-CPU-CUDA9-OpenCL.zip`
   - If you want to mine with an AMD GPU, download the file called `xmr-stak-turtlecoin-win64-CPU-CUDA9-OpenCL.zip`
@@ -24,7 +19,7 @@ Xmr-Stak is a unified miner, which means the same program will be used to mine w
 
 5. Check [XMR-Stak Setup and Configuration](https://github.com/turtlecoin/turtlecoin/wiki/xmrstak-guide#xmr-stak-setup-and-configuration)
 
-### Mac
+### ## Downloading and Installing for Mac
 
 See https://github.com/turtlecoin/trtl-stak/blob/add_turtlecoin/doc/compile.md and https://github.com/turtlecoin/trtl-stak/blob/add_turtlecoin/doc/compile_macOS.md
 
@@ -79,7 +74,6 @@ Leave it empty and press enter.
 In most cases, `N` is fine.
 
 8. `- Do you want to use nicehash on this pool? (y/n)`  
--Enter `n`.
 
 Enter `n`(in case you do, enter `y`).
 
