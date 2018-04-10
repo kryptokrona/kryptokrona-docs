@@ -225,6 +225,31 @@ The configuration of the device it mines(CPU/AMD/NVIDIA) will be saved in `cpu.t
 
 Run TRTL-Stak again from the same directory to reuse the configuration.
 
+### XMRig
+
+#### Downloading and Installing
+
+XMRig has separate miners for CPU and GPU. You can download them from here:
+
+* [XMRig CPU Miner](https://github.com/xmrig/xmrig/releases)
+* [XMRig GPU Nvidia Miner](https://github.com/xmrig/xmrig-nvidia/releases)
+* [XMRig GPU AMD Miner](https://github.com/xmrig/xmrig-amd/releases)
+
+**Note:** You will need to download and run two separate instances if you want to mine with your GPU and CPU at the same time.
+
+1. After you have downloaded your miners, Download and install [XMR-Stak Unified Miner](https://github.com/fireice-uk/xmr-stak/releases/latest) - This will auto-detect your hardware, and tune everything for you.
+
+2. Make a folder called **TurtleCoin Miner** on your desktop and unzip the file you just downloaded for XMR-Stak in there.
+
+3. Double-click on `xmr-stak.exe`.
+
+4. Click yes when it asks if you want to run as Administrator. This is so that the program can see what hardware you're running.
+
+5. Check [XMR-Stak Setup and Configuration](https://github.com/turtlecoin/turtlecoin/wiki/Mining#xmr-stak-setup-and-configuration)
+
+##### Windows
+
+
 ## Mining Pools
 
 - auspool.turtleco.in
