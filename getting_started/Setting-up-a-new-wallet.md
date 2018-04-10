@@ -59,7 +59,7 @@ This is what the Simplewallet looks like:
 
 ![Simplewallet](https://github.com/holytastyguacamole/turtlecoin-wiki/blob/master/images/screenshot_simplewallet.png)
 
-To set up Simple Wallet, simply follow this guide: [Getting Started](https://github.com/turtlecoin/turtlecoin/wiki/Getting-Started)  
+To set up Simple Wallet, simply follow [this guide](https://github.com/turtlecoin/turtlecoin/wiki/Getting-Started-with-simple-wallet)  
 
 ## Graphical Wallet (A.K.A GUI Wallet)
 
