@@ -30,7 +30,7 @@
     - [Xamarin Wallet]
     - [Web Wallet]
     - [Paper Wallet / Cold Storage](Frequently-Asked-Questions#paper-wallet--cold-storage)
-- [Participating in Raindance]
+  - [Participating in Raindance]
 
 - [Frequently Asked Questions](turtlecoin-wiki/faq/Frequently-Asked-Questions)
 <!--
