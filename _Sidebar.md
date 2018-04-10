@@ -1,4 +1,4 @@
-- [Home]
+- [Home](Home)
 
 - [About TurtleCoin](turtlecoin-wiki/about/Background-and-History)
   - [Background and History](turtlecoin-wiki/about/Background-and-History#how-and-why-was-it-created?)
