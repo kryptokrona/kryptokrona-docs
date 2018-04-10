@@ -18,8 +18,7 @@
   - [Mining](Mining)
     - [Mining Software](Mining#mining-software)
       - [XMR-Stak](Mining#xmr-stak)
-      - [ccminer]
-      - [web miner]    
+      - [XMRig](Mining#xmrig)
      - [Mining Pools](Mining#mining-pools)
      - [Cloud Mining](Mining#cloud-mining)
      - [Mining with SBC](Mining-with-SBC)
