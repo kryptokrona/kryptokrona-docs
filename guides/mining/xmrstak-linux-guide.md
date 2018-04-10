@@ -1,10 +1,10 @@
-## Linux
+# Linux Guide
 
 Native binaries may be available for your distribution's package manager. 
 
 If no binaries are available, or you prefer to compile, follow these instructions-
 
-### Ubuntu 16.04
+## Ubuntu 16.04
 
 *Guide sponsored by Monerise*
 
