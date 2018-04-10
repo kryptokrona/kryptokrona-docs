@@ -19,11 +19,11 @@ Xmr-Stak is a unified miner, which means the same program will be used to mine w
 
 5. Check [XMR-Stak Setup and Configuration](https://github.com/turtlecoin/turtlecoin/wiki/xmrstak-guide#xmr-stak-setup-and-configuration)
 
-### ## Downloading and Installing for Mac
+## Downloading and Installing for Mac
 
 See https://github.com/turtlecoin/trtl-stak/blob/add_turtlecoin/doc/compile.md and https://github.com/turtlecoin/trtl-stak/blob/add_turtlecoin/doc/compile_macOS.md
 
-### XMR-Stak Setup and Configuration
+## XMR-Stak Setup and Configuration
 
 Upon first launching TRTL-Stak, the software will ask you several setup and configuration questions.
 
