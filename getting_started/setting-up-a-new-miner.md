@@ -17,7 +17,7 @@ There are currently a few different ways in which you can start mining TurtleCoi
 
 Xmr-Stak is a unified miner, which means the same program will be used to mine with both your CPU and your GPU. It will automatically detect your hardware and adjust the settings accordingly.
 
-Please follow [this guide](https://github.com/turtlecoin/turtlecoin-wiki/wiki/Mining) to start mining TurtleCoin with xmr-stak.
+Please follow [this guide](turtlecoin-wiki/guides/mining/xmrstak-guide) to start mining TurtleCoin with xmr-stak.
 
 You can download xmr-stak **[here](https://github.com/brandonlehmann/xmr-stak/tree/add_turtlecoin/builds)**.
 
@@ -28,6 +28,8 @@ XMRig is a little bit different to xmr-stak, you need to dowload a cpu and gpu m
 1. Download CPU mining xmrig **[here](https://github.com/xmrig/xmrig/releases)**.
 2. Download NVIDIA mining xmrig **[here](https://github.com/xmrig/xmrig-nvidia/releases)**.
 3. Download AMD mining xmrig **[here](https://github.com/xmrig/xmrig-amd/releases)**.
+
+Please follow [this guide](turtlecoin-wiki/guides/mining/mxrig-guide) to start mining TurtleCoin with xmrig.
 
 ### 3. Cloud Mining
 

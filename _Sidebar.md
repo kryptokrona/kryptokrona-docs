@@ -1,13 +1,8 @@
-- [[Home]]
+- [Home](Home)
 
-- About TurtleCoin
-  - [[Background and History]]
-  - [[Technical Data]]
-  - [[Core Developers]]
-  - [[Community]]
-  - [[Contributing]]
-  - [[Supporting]]
-
+- [About TurtleCoin](turtlecoin-wiki/about/Background-and-History)
+  - [Background and History](turtlecoin-wiki/about/Background-and-History#how-and-why-was-it-created?)
+ 
 - [Getting Started](Getting-Started)
   - [Downloading](Getting-Started#downloading)
   - [Installing](Getting-Started#installing)
@@ -16,45 +11,43 @@
     - [Linux](Getting-Started#installing-on-linux)
   - [Synchronizing the Blockchain](Getting-Started#synchronizing-the-blockchain)
   - [Using Simplewallet](Getting-Started#using-simplewallet)
-    - [Creating a Wallet](Getting-Started#creating-a-wallet)
-    - [Viewing Wallet Address](Getting-Started#viewing-wallet-address)
-    - [Exporting Keys](Getting-Started#exporting-keys)
-    - [Viewing Wallet Balance](Getting-Started#viewing-wallet-balance)
-    - [Sending TurtleCoin Transactions](Getting-Started#sending-turtlecoin-transactions)
-    - [Saving the Wallet](Getting-Started#saving-the-wallet)
 
-- [[Frequently Asked Questions]]
-  - [Paper Wallet / Cold Storage?](Frequently-Asked-Questions#paper-wallet--cold-storage)
-
-- Guides
-  - Alternative Installation Methods
-  - [[Bootstrapping the Blockchain]]
+- [Guides]
+  - [Alternative Installation Methods]
+  - [Bootstrapping the Blockchain]
   - [Mining](Mining)
-    - [Mining Software](Mining#mining-software)
-      - [XMR-Stak](Mining#xmr-stak)
-      - ccminer
-      - web miner
-    - [Mining Pools](Mining#mining-pools)
-    - [Cloud Mining](Mining#cloud-mining)
-    - [Mining with SBC](Mining-with-SBC)
-  - [[Participating in Raindance]]
-  - [Using Simplewallet with Remote Nodes](Using-Simplewallet-with-Remote-Nodes)
+    - [Mining Software]()
+      - [XMR-Stak](turtlecoin-wiki/guides/mining/xmrstak-guide)
+      - [XMRig](turtlecoin-wiki/guides/mining/mxrig-guide)
+     - [Mining Pools](turtlecoin-wiki/guides/mining/pools)
+     - [Cloud Mining](turtlecoin-wiki/guides/mining/Cloud-Mining)
+     - [Mining with SBC](turtlecoin-wiki/guides/mining/Mining-with-SBC)
   - [Using trtlbot++](Using-trtlbot-plus-plus)
+  - [Wallets]
+    - [Using Simplewallet with Remote Nodes](Using-Simplewallet-with-Remote-Nodes)
+    - [Nest Wallet]
+    - [Xamarin Wallet]
+    - [Web Wallet]
+    - [Paper Wallet / Cold Storage](Frequently-Asked-Questions#paper-wallet--cold-storage)
+  - [Participating in Raindance]
 
-- TRTL Development
+- [Frequently Asked Questions](turtlecoin-wiki/faq/Frequently-Asked-Questions)
+<!--
+- TurtleCoin Development
   - Connecting with Developers
   - Contributing
   - TurtleCoin Projects
     - TurtleCoin Core
     - Other Projects
   - 3rd-Party Integrations
-
+-->
+<!--
 - Cryptocurrency Fundamentals
   - How a Blockchain Works
   - Basic Concepts
-    - Hashes & Encryption3
+    - Hashes & Encryption
     - Wallets, Keys & Addresses
     - Transactions
     - Proof-of-Work
-
+-->
 - Contributors
