@@ -5,9 +5,11 @@ However, you will need to use either a CLI (Command Line Interface), GUI (Graphi
 
 ## Paper Wallet
 
-**Before you get started:** The main purpose of a paperwallet is to quickly create a wallet to start receiving funds. You will not be able to spend or send your funds to other people until you set up a CLI, GUI or Web Wallet.
+The main purpose of a paperwallet is to quickly create a wallet to start receiving funds. 
 
-To set up a paper wallet, simply follow [this guide](https://github.com/turtlecoin/turtlecoin/wiki/Setting-up-a-paper-wallet)
+**You will not be able to spend or send your funds to other people until you set up a CLI, GUI or Web Wallet.**
+
+To set up a paper wallet, simply follow [this guide](https://github.com/turtlecoin/turtlecoin/wiki/Setting-up-a-paper-wallet).
 
 ## Simple Wallet (A.K.A. CLI Wallet)
 
