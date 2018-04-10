@@ -12,13 +12,19 @@ TurtleCoin can be mined with a number of mining tools, particularly just about a
 
 ##### Windows
 
-1. Download and install [XMR-Stak Unified Miner](https://github.com/fireice-uk/xmr-stak/releases/latest) - This will auto-detect your hardware, and tune everything for you.
+1. Download and install [TRTL-Stak Unified Miner](https://github.com/turtlecoin/trtl-stak/releases/latest), a modified version f XMR-Stak to work with TurtleCoin's algorithm changes. It will auto-detect your hardware, and tune everything for you.
+
+  - If you want to mine with your CPU, download the file called `xmr-stak-turtlecoin-win64-CPU-CUDA9-OpenCL.zip`
+  - If you want to mine with an AMD GPU, download the file called `xmr-stak-turtlecoin-win64-CPU-CUDA9-OpenCL.zip`
+  - If you want to mine with a nVidia GPU, it depends-
+    * For 7XX series GPU's and older, download `xmr-stak-turtlecoin-win64-CPU-CUDA8-OpenCL.zip`
+    * For any cards newer than the 9XX series, download `xmr-stak-turtlecoin-win64-CPU-CUDA9-OpenCL.zip`
 
 2. Make a folder called **TurtleCoin Miner** on your desktop and unzip the file you just downloaded for XMR-Stak in there.
 
 3. Double-click on `xmr-stak.exe`.
 
-4. Click yes when it asks if you want to run as Administrator. This is so that the program can see what hardware you're running.
+4. Click `Yes` when it asks if you want to run as Administrator. This is so that the program can see what hardware you're running.
 
 5. Check [XMR-Stak Setup and Configuration](https://github.com/turtlecoin/turtlecoin/wiki/Mining#xmr-stak-setup-and-configuration)
 
@@ -68,7 +74,7 @@ If no binaries are available, or you prefer to compile, follow these instruction
 
 3. Clone the package- 
 
-      `git clone https://github.com/fireice-uk/xmr-stak.git`
+      `git clone https://github.com/turtlecoin/trtl-stak.git`
 
 4. To remove donations, type-
 
@@ -132,38 +138,117 @@ If no binaries are available, or you prefer to compile, follow these instruction
 
 ##### Mac
 
-See https://github.com/fireice-uk/xmr-stak/blob/master/doc/compile.md and https://github.com/fireice-uk/xmr-stak/blob/master/doc/compile_MacOS.md
+See https://github.com/turtlecoin/trtl-stak/blob/add_turtlecoin/doc/compile.md and https://github.com/turtlecoin/trtl-stak/blob/add_turtlecoin/doc/compile_macOS.md
 
-#### XMR-Stak Setup and Configuration
+#### TRTL-Stak Setup and Configuration
 
-Upon first launching XMR-Stak, the software will ask you several setup and configuration questions.
+Upon first launching TRTL-Stak, the software will ask you several setup and configuration questions.
 
-1. `Currency: 'monero' or 'aeon'?`  
-Enter `monero`.
+1. `Please enter:
+- Do you want to use the HTTP interface?
+Unlike the screen display, browser interface is not affected by the GPU lag.
+If you don't want to use it, please enter 0, otherwise enter port number that th
+e miner should listen on`
 
-2. `Pool address:`  
+Enter `0`, if you are like most people, and do not need to remotely check your hashrate.
+
+If you do need to, then enter a port number. 
+Let's take the port number as `0101` and your IP address as `26.24.105.14` as an example.
+
+To check the hashrate, enter in the address bar of your web browser, `<26.24.105.14>:<0101>`. It should show a page with your rig's hashrate.
+If you are checking from the same IP address, you can alternatively enter, `localhost:<0101>`
+
+Make sure to enter your own IP address if you enable this feature. You can choose any port you want!
+
+2. `Please enter:
+- Please enter the currency that you want to mine:
+        - aeon7
+        - cryptonight
+        - cryptonight_lite
+        - edollar
+        - electroneum
+        - graft
+        - intense
+        - karbo
+        - monero7
+        - stellite
+        - sumokoin
+        - turtlecoin`
+        
+        
+Enter `turtlecoin`
+
+
+3. `- Pool address: e.g. pool.example.com:3333 `
+
 Choose a pool from any of the [available pools](#mining-pools) that is **closest to you** and enter its URL (you will be able to add more later).
 
-3. `Username (Wallet address or pool username):`  
-Enter your public TRTL address.  
- * If you have not yet downloaded and ran the TurtleCoin core software to sync the blockchain and create a wallet, you can make a [paper wallet]( http://turtlecoin.lol/wallet) to start mining towards now, and import the wallet later.
+4. `- Username (Wallet address or pool login):`  
 
-4. `Password:`  
+Enter your public TRTL address.  
+
+ * If you have not yet downloaded and ran the TurtleCoin core software to sync the blockchain and create a wallet, you can make a [paper wallet](https://github.com/turtlecoin/turtlecoin/wiki/Setting-up-a-new-wallet#paper-wallet) to start mining towards now, and import the wallet later.
+
+5. `- Password (mostly empty or x):`  
+
 Enter `x`.
 
-5. `Does this pool port support TLS/SSL? Use no if unknown. (y/N)`  
+6. `- Rig identifier for pool-side statistics (needs pool support). Can be empty:`
+
+Leave it empty and press enter.
+
+7. `- Does this pool port support TLS/SSL? Use no if unknown. (y/N)`  
+
 In most cases, `N` is fine.
 
-6. `Do you want to use nicehash on this pool? (y/n)`  
-Enter `n`.
+8. `- Do you want to use nicehash on this pool? (y/n)`  
 
-7. `Do you want to use multiple pools? (y/n)`  
-Enter `y` if you would like to add more pools. Give them all a weight of 10 if you're tired of reading, or if you want the best experience, give the pools nearest to you a higher number, and the ones further from you a lower number.  
-XMR-Stak will prioritize the first/highest weight pool, and fall back to the others if it cannot connect.
+Enter `n`(in case you do, enter `y`).
 
-Done!! The miner will now start scanning your hardware and will begin mining. Cowabunga dude!  
+9. `- Do you want to use multiple pools? (y/n)`  
 
-XMR-Stak will save your configuration in `config.txt` in the same directory from which it was first run. Run XMR-Stak again from the same directory to reuse the configuration.
+Enter `y` if you would like to add more pools. 
+Give them all a weight of `10` if you're tired of reading, or if you want the best experience, give the pools nearest to you a higher number, and the ones further from you a lower number.  
+
+TRTL-Stak will prioritize the highest weight pool, and fall back to the others if it cannot connect.
+If they are all given the same weight, it will connect to them in order of how they are listed, form top to bottom, in the configuration file.
+
+
+If you are on Windows 7/8, it will ask for administrator permission again. Click `Yes` to grant it permission.
+If you are on Windows 10, it will not ask for it again.
+
+Done! The miner will now start scanning your hardware and will begin mining. Cowabunga dude!  
+
+TRTL-Stak will save your configuration in `config.txt`  in the same directory from which it was first run. 
+Your configuration for pools(algorithm to mine, address, port etc) will be saved in `pools.txt`
+The configuration of the device it mines(CPU/AMD/NVIDIA) will be saved in `cpu.txt`, `amd.txt` or `nvidia.txt`, respectively.
+
+Run TRTL-Stak again from the same directory to reuse the configuration.
+
+### XMRig
+
+#### Downloading and Installing
+
+XMRig has separate miners for CPU and GPU. You can download them from here:
+
+* [XMRig CPU Miner](https://github.com/xmrig/xmrig/releases)
+* [XMRig GPU Nvidia Miner](https://github.com/xmrig/xmrig-nvidia/releases)
+* [XMRig GPU AMD Miner](https://github.com/xmrig/xmrig-amd/releases)
+
+**Note:** You will need to download and run two separate instances if you want to mine with your GPU and CPU at the same time.
+
+1. After you have downloaded your miners, Download and install [XMR-Stak Unified Miner](https://github.com/fireice-uk/xmr-stak/releases/latest) - This will auto-detect your hardware, and tune everything for you.
+
+2. Make a folder called **TurtleCoin Miner** on your desktop and unzip the file you just downloaded for XMR-Stak in there.
+
+3. Double-click on `xmr-stak.exe`.
+
+4. Click yes when it asks if you want to run as Administrator. This is so that the program can see what hardware you're running.
+
+5. Check [XMR-Stak Setup and Configuration](https://github.com/turtlecoin/turtlecoin/wiki/Mining#xmr-stak-setup-and-configuration)
+
+##### Windows
+
 
 ## Mining Pools
 
@@ -187,8 +272,11 @@ XMR-Stak will save your configuration in `config.txt` in the same directory from
 ## Checking Balances and Payments
 
 To check the earned balance, payments from the pool, and statistics, go to the URL of the pool you are mining on type your public TRTL wallet address into the search box in the middle of the page(location may vary based on pool).
+
 ![image](https://user-images.githubusercontent.com/34389545/34903526-17cf3536-f7f9-11e7-98fd-580bdcf3faed.png)
+
 You can also see how far until the next payout by clicking "Payments" at the top of the screen(again, location may vary based on pool).
+
 ![image](https://user-images.githubusercontent.com/34389545/34903536-36bb8904-f7f9-11e7-8b92-d886ba15bdc5.png)
 
 ## Cloud Mining
@@ -197,7 +285,8 @@ You can also see how far until the next payout by clicking "Payments" at the top
 
 Get started with GCP at https://cloud.google.com/compute/docs/quickstart-linux. Once you have a GCP instance, SSH into it and enter:
 
-```bash
+```
+bash
 
 sudo apt install libmicrohttpd-dev libssl-dev cmake build-essential libhwloc-dev git
 
@@ -215,7 +304,7 @@ cd bin
 
 ./xmr-stak
 ```
-Now, follow the [XMR-Stak Setup and Configuration](#xmr--stack-setup-and-configuration) instructions.
+Now, follow the [TRTL-Stak Setup and Configuration](#trtl--stack-setup-and-configuration) instructions.
 
 ## Mining with RaspberryPi/SBC
 

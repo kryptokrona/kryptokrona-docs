@@ -270,7 +270,7 @@ A: You need to also open up `TurtleCoind.exe` and let it sync. TurtleCoind is yo
   Thus to protect against that scenario you could transfer any TRTL balance to one of these cold storage addresses. Please remember to keep secure/secret backups of your keys. If you lose the keys you lose any balance that was transferred to that wallet. 
   You can use the paper wallet files below, to generate a Cold Storage address & keys. 
     
-    #### Q: Can I make a paper wallet?**
+#### Q: Can I make a paper wallet?**
 
   A: Yes, you can view the guide [here](https://github.com/turtlecoin/turtlecoin/wiki/setting-up-a-new-wallet#paper-wallet)
 
