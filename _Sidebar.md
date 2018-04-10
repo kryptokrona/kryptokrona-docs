@@ -24,9 +24,10 @@
      - [Cloud Mining](Mining#cloud-mining)
      - [Mining with SBC](Mining-with-SBC)
   - [Participating in Raindance]
-  - [Using Simplewallet with Remote Nodes](Using-Simplewallet-with-Remote-Nodes)
-  - [Using trtlbot++](Using-trtlbot-plus-plus)
-  - [Paper Wallet / Cold Storage](Frequently-Asked-Questions#paper-wallet--cold-storage)
+    - [Using trtlbot++](Using-trtlbot-plus-plus)
+  - [Wallets]
+    - [Paper Wallet / Cold Storage](Frequently-Asked-Questions#paper-wallet--cold-storage)
+    - [Using Simplewallet with Remote Nodes](Using-Simplewallet-with-Remote-Nodes)
 
 - [Frequently Asked Questions](turtlecoin-wiki/faq/Frequently-Asked-Questions)
 
