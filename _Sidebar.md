@@ -23,15 +23,14 @@
      - [Mining Pools](Mining#mining-pools)
      - [Cloud Mining](Mining#cloud-mining)
      - [Mining with SBC](Mining-with-SBC)
-  - [Participating in Raindance]
-    - [Using trtlbot++](Using-trtlbot-plus-plus)
+  - [Using trtlbot++](Using-trtlbot-plus-plus)
   - [Wallets]
     - [Using Simplewallet with Remote Nodes](Using-Simplewallet-with-Remote-Nodes)
     - [Nest Wallet]
     - [Xamarin Wallet]
     - [Web Wallet]
     - [Paper Wallet / Cold Storage](Frequently-Asked-Questions#paper-wallet--cold-storage)
-
+- [Participating in Raindance]
 
 - [Frequently Asked Questions](turtlecoin-wiki/faq/Frequently-Asked-Questions)
 
