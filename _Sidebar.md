@@ -1,13 +1,8 @@
-- [[Home]]
+- [Home]
 
-- About TurtleCoin
-  - [[Background and History]]
-  - [[Technical Data]]
-  - [[Core Developers]]
-  - [[Community]]
-  - [[Contributing]]
-  - [[Supporting]]
-
+- [About TurtleCoin]
+  - [Background and History]
+ 
 - [Getting Started](Getting-Started)
   - [Downloading](Getting-Started#downloading)
   - [Installing](Getting-Started#installing)
@@ -16,32 +11,26 @@
     - [Linux](Getting-Started#installing-on-linux)
   - [Synchronizing the Blockchain](Getting-Started#synchronizing-the-blockchain)
   - [Using Simplewallet](Getting-Started#using-simplewallet)
-    - [Creating a Wallet](Getting-Started#creating-a-wallet)
-    - [Viewing Wallet Address](Getting-Started#viewing-wallet-address)
-    - [Exporting Keys](Getting-Started#exporting-keys)
-    - [Viewing Wallet Balance](Getting-Started#viewing-wallet-balance)
-    - [Sending TurtleCoin Transactions](Getting-Started#sending-turtlecoin-transactions)
-    - [Saving the Wallet](Getting-Started#saving-the-wallet)
 
-- [[Frequently Asked Questions]]
-  - [Paper Wallet / Cold Storage?](Frequently-Asked-Questions#paper-wallet--cold-storage)
-
-- Guides
-  - Alternative Installation Methods
-  - [[Bootstrapping the Blockchain]]
+- [Guides]
+  - [Alternative Installation Methods]
+  - [Bootstrapping the Blockchain]
   - [Mining](Mining)
     - [Mining Software](Mining#mining-software)
       - [XMR-Stak](Mining#xmr-stak)
-      - ccminer
-      - web miner
+      - [ccminer]
+      - [web miner]
     - [Mining Pools](Mining#mining-pools)
     - [Cloud Mining](Mining#cloud-mining)
     - [Mining with SBC](Mining-with-SBC)
-  - [[Participating in Raindance]]
+  - [Participating in Raindance]
   - [Using Simplewallet with Remote Nodes](Using-Simplewallet-with-Remote-Nodes)
   - [Using trtlbot++](Using-trtlbot-plus-plus)
+  - [Paper Wallet / Cold Storage?](Frequently-Asked-Questions#paper-wallet--cold-storage)
 
-- TRTL Development
+- [Frequently Asked Questions]
+
+- TurtleCoin Development
   - Connecting with Developers
   - Contributing
   - TurtleCoin Projects
@@ -52,7 +41,7 @@
 - Cryptocurrency Fundamentals
   - How a Blockchain Works
   - Basic Concepts
-    - Hashes & Encryption3
+    - Hashes & Encryption
     - Wallets, Keys & Addresses
     - Transactions
     - Proof-of-Work
