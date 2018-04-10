@@ -26,8 +26,12 @@
   - [Participating in Raindance]
     - [Using trtlbot++](Using-trtlbot-plus-plus)
   - [Wallets]
-    - [Paper Wallet / Cold Storage](Frequently-Asked-Questions#paper-wallet--cold-storage)
     - [Using Simplewallet with Remote Nodes](Using-Simplewallet-with-Remote-Nodes)
+    - [Nest Wallet]
+    - [Xamarin Wallet]
+    - [Web Wallet]
+    - [Paper Wallet / Cold Storage](Frequently-Asked-Questions#paper-wallet--cold-storage)
+
 
 - [Frequently Asked Questions](turtlecoin-wiki/faq/Frequently-Asked-Questions)
 
