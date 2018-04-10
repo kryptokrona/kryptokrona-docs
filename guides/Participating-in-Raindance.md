@@ -98,13 +98,3 @@ Select "All".
 ![Select All](images/raindance/notify6.jpg)
 
 Done.
-
-**Note: If notifications don't work, follow these steps-**
-
-1. Go to `User Settings` (the little gear icon to the right of your name in the bottom left)
-
-2. Click on `Notifications`
-
-3. Enable `Enable Desktop Notifications`
-
-![desktopnotify](images/raindance/notif.png)
