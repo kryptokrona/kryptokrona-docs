@@ -15,7 +15,7 @@ Replace `host:port` with values from one of the public remote daemons available 
 
 You can now follow your normal process to access your wallet.
 
-Example- `simplewallet.exe --remote-daemon daemon.turtle.link:11898`
+Example- `simplewallet.exe --remote-daemon public.turtlenode.io:11898`
 
 ## I don't want to have to type this every time
 
