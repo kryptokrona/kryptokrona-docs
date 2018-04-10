@@ -16,12 +16,12 @@
   - [Alternative Installation Methods]
   - [Bootstrapping the Blockchain]
   - [Mining](Mining)
-    - [Mining Software](Mining#mining-software)
-      - [XMR-Stak](Mining#xmr-stak)
-      - [XMRig](Mining#xmrig)
-     - [Mining Pools](Mining#mining-pools)
-     - [Cloud Mining](Mining#cloud-mining)
-     - [Mining with SBC](Mining-with-SBC)
+    - [Mining Software]()
+      - [XMR-Stak](turtlecoin-wiki/guides/mining/xmrstak-guide)
+      - [XMRig](turtlecoin-wiki/guides/mining/mxrig-guide)
+     - [Mining Pools](turtlecoin-wiki/guides/mining/pools)
+     - [Cloud Mining](turtlecoin-wiki/guides/mining/Cloud-Mining)
+     - [Mining with SBC](turtlecoin-wiki/guides/mining/Mining-with-SBC)
   - [Using trtlbot++](Using-trtlbot-plus-plus)
   - [Wallets]
     - [Using Simplewallet with Remote Nodes](Using-Simplewallet-with-Remote-Nodes)
