@@ -57,7 +57,6 @@ The guides listed above will generally use a pool for mining. Here are some of t
 * [auspool.turtleco.in](https://auspool.turtleco.in)
 * [cryptoknight.cc/turtle](https://cryptoknight.cc/turtle)
 * [etnchina.io/trtl](http://etnchina.io/trtl)
-* [slowandsteady.fun](https://slowandsteady.fun)
 * [trtl.mine2gether.com](https://trtl.mine2gether.com)
 * [trtl.ninja](https://trtl.ninja)
 * [trtl.flashpool.club](https://trtl.flashpool.club)
