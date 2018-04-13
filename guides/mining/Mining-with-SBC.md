@@ -59,8 +59,6 @@ You'll need to select a pool to participate in for the first `-o` parameter. Pic
 
 **ny.minetrtl.us:3333 (USA NYC)**
 
-**slowandsteady.fun:3333**
-
 **trtl.mine2gether.com:3335**
 
 **turtle.atpool.party:3333 (France)**
