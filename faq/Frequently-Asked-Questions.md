@@ -12,7 +12,7 @@ Did this guide help you out? Throw some shells my way: `TRTLv2Fyavy8CXG8BPEbNeCH
 
 * **Q: I'm using a Mac, can I still mine?**
 
-    A: Yes, there is a guide available [here](https://github.com/turtlecoin/turtlecoin-wiki/blob/master/guides/01-getting-started-mac.md) - thanks to [@wigging](https://github.com/wigging) for creating this.
+    A: Yes, there is a guide available [here](https://github.com/turtlecoin/turtlecoin/wiki/Mining) - thanks to [@wigging](https://github.com/wigging) for creating this.
 
 * **Q: I've started mining, how can I view my stats?**
 
