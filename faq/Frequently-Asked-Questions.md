@@ -16,7 +16,7 @@ Did this guide help you out? Throw some shells my way: `TRTLv2Fyavy8CXG8BPEbNeCH
 
 * **Q: I've started mining, how can I view my stats?**
 
-    A: Take the pool address, and remove the port number. For example, if your pool address is `slowandsteady.fun:3333`, go to the website `slowandsteady.fun`. There should be a spot for you to put in your TRTL address, and you can then view your hashrate, pending balance, payouts, and more.
+    A: Take the pool address, and remove the port number. For example, if your pool address is `turtlepool.space:3333`, go to the website `turtlepool.space`. There should be a spot for you to put in your TRTL address, and you can then view your hashrate, pending balance, payouts, and more.
 
 * **Q: Why is the hashrate on the pool website different to what is shown in my miner?**
 
