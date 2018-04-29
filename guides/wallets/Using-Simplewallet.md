@@ -1,10 +1,18 @@
-# Getting Started with Simplewallet
+# Using SimpleWallet
+
+## Screenshots
+
+Here's a quick image of SimpleWallet in action-
+
+![simplewallet](guides/wallets/images/screenshot_simplewallet.png)
 
 ## Downloading
 
-Binary distributions can be found at https://github.com/turtlecoin/turtlecoin/releases/latest.
+Binary distributions can be found [here](https://github.com/turtlecoin/turtlecoin/releases/latest).
 
-Select the appropriate file for the target platform (Windows, Mac, Linux). Windows binaries are provided in *.zip* format, while Mac and Linux are provided in *.tar.gz* format.
+Select the appropriate file for the target platform (Windows, Mac, Linux). 
+
+Windows binaries are provided in `.zip` format, while Mac and Linux are provided in `.tar.gz` format.
 
 ## Installing
 
@@ -31,14 +39,32 @@ tar -xzf turtlecoin..-linux.tar.gz
 ## Synchronizing the Blockchain
 
 Running `TurtleCoind` will start the *TurtleCoind* network daemon, which will connect to the network and begin downloading and verifying the TurtleCoin blockchain.  
-Because the blockchain is constantly growing, the file size is always increasing, and *TurtleCoind* must verify each block (CPU intensive). To save time, consider downloading a cached 'bootstrap' of the blockchain (see [Bootstrapping the Blockchain](Bootstrapping-the-Blockchain) for more info).
 
+Because the blockchain is constantly growing, the file size is always increasing, and *TurtleCoind* must verify each block (CPU intensive). 
+
+To save time, consider downloading a cached 'bootstrap' of the blockchain (see [Bootstrapping the Blockchain](Bootstrapping-the-Blockchain) for more info).
+
+#### Using Checkpoints
+
+In **versions 0.4.3** you can sync a fresh chain from 0 much quicker by using checkpoints. Follow these steps-
+  * On [this link](https://github.com/turtlecoin/checkpoints/raw/master/checkpoints.csv), right click -> `Save Link As..` 
+  * Save in the directory where your wallet and daemon are
+  * Open Command Prompt/the terminal in the directory where you saved it
+  * Type, for Windows,  
+  ```
+  TurtleCoind.exe --load-checkpoints checkpoints.csv
+  ```
+  Or, for **Mac and Linux**, type
+  ```
+  ./TurtleCoind --load-checkpoints checkpoints.csv
+  ```
 ### Windows
 
 Run the `TurtleCoind.exe` executable extracted from the Windows binary zip:
 
-```powershell
-PS C:\Downloads\turtlecoin-windows> TurtleCoind.exe
+```
+cd Downloads\turtlecoin-windows
+TurtleCoind.exe
 ```
 
 ### Mac
@@ -46,7 +72,7 @@ PS C:\Downloads\turtlecoin-windows> TurtleCoind.exe
 Run the `TurtleCoind` binary extracted from the Mac binary tarball:
 
 ```bash
-:~/Downloads/turtlecoin-mac$ ./TurtleCoind
+./TurtleCoind
 ```
 
 ### Linux
@@ -54,16 +80,65 @@ Run the `TurtleCoind` binary extracted from the Mac binary tarball:
 Run the `TurtleCoind` binary extracted from the Linux binary tarball:
 
 ```bash
-:~/Downloads/turtlecoin-linux$ ./TurtleCoind
+./TurtleCoind
 ```
 
-## Using Simplewallet
+#### Using a Remote Node<a name="using-remote-node"></a>
 
-With `TurtleCoind` still running in the background or another terminal/shell/command prompt, open Simplewallet in a new shell:
+In case you don't want to download the blockchain and verify it everytime, you can instead use a Remote Node to quickly sync the blockchain.
+
+##### How to do it
+
+1. Open up a command prompt window and navigate to the folder that contains *simplewallet*.
+2. Use the following command to start SimpleWallet on Windows:
+
+```
+simplewallet.exe --remote-daemon host:port
+```
+
+Or, for **Mac and Linux**,
+
+```
+./simplewallet --remote-daemon host:port
+```
+
+Replace `host:port` with values from one of the public remote daemons available below.
+
+You can now follow your normal process to access your wallet.
+
+For example-
+
+```
+simplewallet.exe --remote-daemon public.turtlenode.io:11898
+```
+
+##### Making a Script to do it automatically
+
+1. Open NotePad and type the following lines inside:
+
+```text
+@echo off
+simplewallet.exe --remote-daemon host:port
+pause
+```
+
+1. Replace`host:port` with one of the values from the table below
+2. Save the filename as `start.bat` and save the file as `All files`.
+3. Double click on the file to start the daemon.
+
+##### Known remote daemons
+
+|         Host         | Port  |        Website        |
+| :------------------: | :---: | :-------------------: |
+| public.turtlenode.io | 11898 | https://turtlenode.io |
+
+## Using SimpleWallet
+
+With `TurtleCoind` still running in the background or another terminal/shell/command prompt, open SimpleWallet in a new shell:
 
 #### Windows
 
-Run the `simplewallet.exe` executable from the Windows binary zip.
+Run the `simplewallet.exe` executable from the extracted folder.
 
 #### Mac
 
@@ -80,24 +155,32 @@ Run the `simplewallet.exe` executable from the Windows binary zip.
 ### Creating a Wallet
 
 In the running *simplewallet* client:  
-Press `G` to generate new wallet.  
-Enter a filename for the wallet (default is _wallet.bin_).  
-Enter a passphrase for the wallet. *Warning:* There is no passphrase confirmation, so enter it carefully!
+
+* Press `G` to generate a new wallet.  
+* Enter a filename for the wallet (for example,`trtl`).  
+* Enter a strong password to encrypt the wallet with, and confirm it.
 
 ```
-[O]pen existing wallet, [G]enerate new wallet file, [I]mport wallet or [E]xit.
-G
-Specify wallet file name (e.g., wallet.bin).
-Wallet file name: mynewwallet
-password: ************
-Sync from timestamp: 1520712597
+Welcome, please choose an option below:
+
+        [G] - Generate a new wallet address
+        [O] - Open a wallet already on your system
+        [S] - Regenerate your wallet using a seed phrase of words
+        [I] - Import your wallet using a View Key and Spend Key
+        [V] - Import a view only wallet (Unable to send transactions)
+
+or, press CTRL_C to exit: G
+What would you like to call your new wallet?: trtl
+Give your new wallet a password: *******************
+Confirm your new password: *******************
 
 Welcome to your new wallet, here is your payment address:
-TRTLv_this_is_your_public_address_ok_to_share_key_Rq6WpB
+TRTLv_this_is_your_public_address_ok_to_share_key_Wpk
 
-Please copy your secret keys and store them in a secure location:
-view key: really_long_random_view_key_do_not_share_this
-spend key: really_long_random_spend_key_do_not_share_this
+Please copy your secret keys and mnemonic seed and store them in a secure location:
+Private spend key: really_long_random_spend_key_do_not_share_this
+Private view key: really_long_random_view_key_do_not_share_this
+Mnemonic seed: 25_random_words_do_not_share_this
 
 If you lose these your wallet cannot be recreated!
 ```
@@ -105,49 +188,69 @@ If you lose these your wallet cannot be recreated!
 ### Opening a Wallet
 
 In the running *simplewallet* client:  
-Press `O` to open an existing wallet file.  
-Enter the filename given for the wallet when it was created.  
-Enter the passphrase given for the wallet when it was created.
+
+* Press `O` to open an existing wallet file.  
+* Enter the filename given for the wallet when it was created.  
+* Enter the passphrase given for the wallet when it was created.
 
 ```
-What do you want to do?
-[O]pen existing wallet, [G]enerate new wallet file, [I]mport wallet or [E]xit.
-O
-Specify wallet file name (e.g., wallet.bin).
-Wallet file name: mynewwallet
-password: ************
-2018-Mar-11 13:14:44.295114 INFO    Loading wallet...
-Sync from timestamp: 1520712597
-2018-Mar-11 13:14:44.376288 INFO    Opened wallet: TRTLv_this_is_your_public_address_ok_to_share_key_Rq6WpB
-2018-Mar-11 13:14:44.383305 INFO    **********************************************************************
-Use "help" command to see the list of available commands.
-**********************************************************************
+Welcome, please choose an option below:
+
+        [G] - Generate a new wallet address
+        [O] - Open a wallet already on your system
+        [S] - Regenerate your wallet using a seed phrase of words
+        [I] - Import your wallet using a View Key and Spend Key
+        [V] - Import a view only wallet (Unable to send transactions)
+
+or, press CTRL_C to exit: O
+What is the name of the wallet you want to open?: trtl
+Enter password: **********
+
+Making initial contact with TurtleCoind.
+Please wait, this sometimes can take a long time...
+
+Your wallet TRTLv_this_is_your_public_address_ok_to_share_key_Wpk  has been successfully opened!
+
+Scanning through the blockchain to find transactions that belong to you.
+Please wait, this will take some time.
+
+Finished scanning blockchain!
+
+Use the help command to see the list of available commands.
+Use exit when closing to ensure your wallet file doesn't get corrupted.
+
+[TRTL trtl]:
 ```
 
 ### Viewing Wallet Address
 
-To view a wallet's public address, in the running _simplewallet_ client, after opening a wallet, type `address` and press `enter`.
+To view a wallet's public address, in the running _simplewallet_ client, after opening a wallet, type `address` and press enter.
 
 ```
-[wallet TRTLv2]: address
-2018-Mar-11 13:16:14.995828 INFO    TRTLv_this_is_your_public_address_ok_to_share_key_Rq6WpB
-[wallet TRTLv2]:
+[TRTL trtl]: address
+TRTLv_this_is_your_public_address_ok_to_share_key_Wpk
+[TRTL trtl]:
 ```
 
 ### Exporting Keys
 
 Each TurtleCoin  wallet is, essentially, just a pair of keys (*View Key* and *Spend Key*) from which the public address is derived.  
-It is **very** important to export these keys and back them up somewhere that is safe and secure (meaning somewhere reliable/permanent that no one else can access). In the event of a lost or corrupted wallet file, computer crash, etc., the *View Key* and *Spend Key* are the only way to restore a wallet and recover the funds it holds.
-Remember that **anyone with access to the View Key and Spend Keys will be able to access this wallet and take the funds it holds! Anyone with these keys will also be able to view all prior transactions from this wallet. Keep them secure!**
+It is **very** important to export these keys and back them up somewhere that is safe and secure (meaning somewhere reliable/permanent that no one else can access). 
+
+In the event of a lost or corrupted wallet file, computer crash, etc., the *View Key* and *Spend Key* are the only way to restore a wallet and recover the funds it holds.
+
+**DO NOT SHARE IT WITH ANYONE**. **Anyone who has these can *access your funds* and has *complete control* over your wallet.**
 
 In the running *simplewallet* client, after opening a wallet, type `export_keys` and press `enter`.  
 The *View Key* and *Spend Key* will appear. Copy them and store them **safely and securely**.
 
 ```
-[wallet TRTLv2]: export_keys
-Spend secret key: really_long_random_spend_key_do_not_share_this
-View secret key: really_long_random_view_key_do_not_share_this
-[wallet TRTLv2]:
+[TRTL trtl]: export_keys
+Enter password: **********
+Private spend key: really_long_random_spend_key_do_not_share_this
+Private view key: really_long_random_view_key_do_not_share_this
+Mnemonic seed: 25_random_words_do_not_share_this
+[TRTL trtl]:
 ```
 
 ### Viewing Wallet Balance
@@ -155,70 +258,212 @@ View secret key: really_long_random_view_key_do_not_share_this
 In the running _simplewallet_ client, after opening a wallet, type `balance` and press enter to see the wallet's balance.
 
 ```
-[wallet TRTLv2]: balance
-2018-Mar-11 13:23:47.265365 INFO    available balance: 1000.10, locked amount: 100.10
-[wallet TRTLv2]:
+[TRTL trtl]: balance
+Available balance: 1000.00 TRTL
+Locked (unconfirmed) balance: 100.00 TRTL
+Total balance: 1100.00 TRTL
+[TRTL trtl]:
 ```
 
-### Sending TurtleCoin Transactions
+### Sending TurtleCoin Transactions<a name="tx-trtl"></a>
 
-In the running _simplewallet_ client, after opening a wallet, type:
+In the running _simplewallet_ client, after opening a wallet..
 
-```
-transfer <mixin> <destination_address> <amount>
-```
+- type:`transfer`
+
+
+- type/paste the address you want to send the TRTL to and press enter
+
+- type the amount of TRTL you want to send (like `100`) and press enter
+
+- press enter to use the default fee of 0.1 TRTL (or set it higher if you're sending a large amount of TRTL)
+
+- press enter to use the default mixin of 5 (or set it higher if you want a more private transaction)
+
+- enter the payment ID if you have one (usually not needed). Check the [payment ID section](#tx-trtl-p-id) if you're not sure when/how to use it.
+
+- confirm that the details are correct and enter `y`. If something is amiss, enter `n` and follow the steps again. 
+
+- enter your password
+
+  Your transaction should be sent!
 
 Example:
 
-```
-transfer 8 TRTLuy1h55aUuVp7HUcv16biZEArk8RRH93KMWBFCMjijj5iSraHyCMd3Eu1H7b8aZQTeK4rhfm8cSgH2WWVN5Rt3am4Z2BWTY6 100000000
-```
+![transfer](guides/wallets/images/transfer-simple.png)
 
-Mixin is how many times a transaction is "mixed" with others for obfuscation and privacy. Most people suggest a mixin of 5 or more. Larger mixin's will take longer to be confirmed unless a higher fee is used. A mixin of 0 can be used to have a non private transaction.
+Mixin is how many times a transaction is "mixed" with others for obfuscation and privacy. 
 
-#### Payment ID
+Most people suggest a mixin of `5` or more. Larger mixin's will take longer to be confirmed unless a higher fee is used. A mixin of `0` can be used to have a non-private transaction(it is strongly advised not to do so though).
 
-Because transactions on the TurtleCoin blockchain are privatized, in some situations a payment ID is necessary for the recipient to be able to determine where the payment came from, for instance when depositing to an exchange or other service.  
-To send a transaction with a payment ID, use the `-p` flag:
+#### Optimizing your Wallet
 
-```
-transfer 8 TRTLuy1h55aUuVp7HUcv16biZEArk8RRH93KMWBFCMjijj5iSraHyCMd3Eu1H7b8aZQTeK4rhfm8cSgH2WWVN5Rt3am4Z2BWTY6 100000000 -p abcdefghijklmnop
-```
+When you send a transaction you have to include the "key images" of previous payments. So if you're sending 6000 TRTL you might need to include 6 x 1000 TRTL payments from mining to make it up. 
 
-Note that, typically, the service/recipient will generate and provide the required payment ID.
+If, however, you had a bigger 6000 payment from somewhere, you could just include that and the transaction would be 6 times smaller.
 
-### Saving the Wallet
+Fusion transactions take all your small payments and combine them into big ones, so you can send large ones at once
 
-'Live' wallets loaded into the *simplewallet* client must be synced with the blockchain in order to properly calculate balance, view transaction history, etc. It is important to properly save the wallet data before exiting *simplewallet* so that the synchronized data is not lost.
-
-To save a wallet's data, in the running *simplewallet* client, with an open wallet, type `save` and press `enter`
+To quickly optimize your wallet, for larger transactions which aren't nearing your full balance and you want to do it quickly, type*(this can take some time)*-
 
 ```
-[wallet TRTLv2]: save
-2018-Mar-11 13:24:40.473511 INFO    Wallet data saved
-[wallet TRTLv2]:
+quick_optimize
 ```
+
+and press `y`
+
+
+
+If you want to fully optimize your wallet, preparing your wallet to send upto your full balance, type*(this can take some time)*-
+
+````
+full_optimize
+````
+
+and press `y`
+
+
+
+That's it! It will display a message `(Full) optmization completed!` when it's done.
+
+![optimize](guides/wallets/images/optimize-simple.png)
+
+#### Payment ID<a name="tx-trtl-p-id"></a>
+
+Because transactions on the TurtleCoin blockchain are privatized, in some situations a payment ID  is necessary for the recipient to be able to determine where the payment came from, for instance when depositing to an exchange or other service.
+
+**You need it if you're sending TRTL to an exchange, the tipbot**.
+
+To send a transaction with a payment ID, enter it when prompted to.
+
+![p-id](guides/wallets/images/p-id-simple.png)
+
+Note that, typically, the service/recipient will generate and provide the required payment ID. 
+
+### Exiting the Wallet
+
+"Live" wallets loaded into the *simplewallet* client must be synced with the blockchain in order to properly calculate balance, view transaction history, etc. 
+
+It is important to properly save the wallet data before exiting *simplewallet* so that the synchronized data is not lost.
+
+To save a wallet's data and exit, in the running *simplewallet* client, with an open wallet, type `exit` and press `enter`
+
+```
+[TRTL trtl]: exit
+Saving and exiting wallet, please wait...
+Done
+(the wallet closes)
+```
+
+### Recovering your Wallet
+
+#### Private Spend and View Keys<a name="recover-spend-view-keys"></a>
+
+In the running _simplewallet_ client, 
+
+* type `I` 
+
+
+* Enter your private spend and view key
+
+* Set a name for your new wallet(for example, `trtl`)
+
+* Specify a strong password to encrypt your wallet with and confirm it
+
+  ```
+  Welcome, please choose an option below:
+
+          [G] - Generate a new wallet address
+          [O] - Open a wallet already on your system
+          [S] - Regenerate your wallet using a seed phrase of words
+          [I] - Import your wallet using a View Key and Spend Key
+          [V] - Import a view only wallet (Unable to send transactions)
+
+  or, press CTRL_C to exit: I
+  Private Spend Key: 0ef591a21666ea8b4b613306d948eaa4a8a5a2d9a83289487277267b0574e
+  404
+  Private View Key: 692732003133cd11c1c09f9d0e25f19852241a757a33f4c16b5546abb628b9
+  0d
+  What would you like to call your new wallet?: trtl
+  Give your new wallet a password: **********
+  Confirm your new password: **********
+
+  Making initial contact with TurtleCoind.
+  Please wait, this sometimes can take a long time...
+  ```
+
+    Once done, press enter. The wallet will then begin synchronizing with the blockchain. When done, it will open and you can access it's other features.
+
+#### 25 Word Mnemonic Seed
+
+In the running *simplewallet* client,
+
+- type `S`
+
+
+- Enter your 25 word mnemonic seed
+
+- Set a name for your new wallet(for example, `trtl`)
+
+- Specify a strong password to encrypt your wallet with and confirm it
+
+  ```
+  Welcome, please choose an option below:
+
+          [G] - Generate a new wallet address
+          [O] - Open a wallet already on your system
+          [S] - Regenerate your wallet using a seed phrase of words
+          [I] - Import your wallet using a View Key and Spend Key
+          [V] - Import a view only wallet (Unable to send transactions)
+
+  or, press CTRL_C to exit: S
+  Mnemonic Phrase (25 words):  nanny dangerous strained bias whale lunar inwardly
+  shipped soapy sincerely faked utopia empty fishing ceiling gained ongoing uneven
+   oasis ashtray movement dating dwindling elope ashtray
+  What would you like to call your new wallet?: trtl
+  Give your new wallet a password: **********
+  Confirm your new password: **********
+
+  Making initial contact with TurtleCoind.
+  Please wait, this sometimes can take a long time...
+  ```
+
+  Once done, press enter. The wallet will then begin synchronizing with the blockchain. When done, it will open and you can access it's other features.
+
+### Other Commands
+
+Following is a table of other commands not covered previously, how to use them, and what they do.
+
+|        Name        |        Usage         |                         Description                          |
+| :----------------: | :------------------: | :----------------------------------------------------------: |
+|       reset        |       `reset`        | Discards any cached data and rechecks the blockchain for transactions. |
+| blockchain height  |     `bc_height`      |              Returns current blockchain height.              |
+| incoming transfers | `incoming_transfers` |                Lists all incoming transfers.                 |
+| outgoing transfers | `outgoing_transfers` |                Lists all outgoing transfers.                 |
+|   list transfers   |   `list_transfers`   |         Lists all transfers, incoming and outgoing.          |
+|        save        |        `save`        |      Saves your current wallet state without closing it      |
 
 ### Help
 
-You can always type 'help' to see a list of commands and a short description of each command.
+You can always type `help` to see a list of commands and a short description of each command.
 
 ```
-[wallet TRTLv2]: help
-2018-Mar-11 13:26:00.953478 INFO    Commands:
-  address              Show current wallet public address
-  balance              Show current wallet balance
-  bc_height            Show blockchain height
-  exit                 Close wallet
-  export_keys          Show the secret keys of the opened wallet
-  help                 Show this help
-  incoming_transfers   Show incoming transfers
-  list_transfers       Show all known transfers
-  payments             payments <payment_id_1> [<payment_id_2> ... <payment_id_N>] - Show payments <payment_id_1>, ... <payment_id_N>
-  reset                Discard cache data and start synchronizing from the start
-  save                 Save wallet synchronized data
-  set_log              set_log <level> - Change current log level, <level> is a number 0-4
-  transfer             transfer <mixin_count> <addr_1> <amount_1> [<addr_2> <amount_2> ... <addr_N> <amount_N>] [-p payment_id] [-f fee] - Transfer <amount_1>,... <amount_N> to <address_1>,... <address_N>, respectively. <mixin_count> is the number of transactions yours is indistinguishable from (from 0 to maximum available)
-
-[wallet TRTLv2]:
+[TRTL trtl]: help
+Available commands:
+help                     List this help message
+reset                    Discard cached data and recheck for transactions
+bc_height                Show the blockchain height
+balance                  Display how much TRTL you have
+export_keys              Export your private keys
+address                  Displays your payment address
+exit                     Exit and save your wallet
+save                     Save your wallet state
+incoming_transfers       Show incoming transfers
+outgoing_transfers       Show outgoing transfers
+list_transfers           Show all transfers
+quick_optimize           Quickly optimize your wallet to send large amounts
+full_optimize            Fully optimize your wallet to send large amounts
+transfer                 Send TRTL to someone
+[TRTL trtl]:
 ```
+

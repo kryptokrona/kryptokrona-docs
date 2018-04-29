@@ -1,22 +1,21 @@
-# Our background
+# How and Why was TurtleCoin Created?
 
-Most TurtleCoin Contributors have thick, luscious beards. FACT.
+TurtleCoin was created on December 9th, 2017 by RockSteady and Bebop.
 
-This gives us +10xp Chin Stroke abilities, and enhances our patience and diagnostic skills. 
+It was born from the idea that there were too many projects out there, which despite having no real product, were bringing in tons of funding. 
 
-The truth is, most of us are full-time developers on other projects, and this is our way to give back to the community with something fun.
+TurtleCoin decided to do it the opposite way.
+It's goal is to create a fun project which is easy to use and then let it grow on its own. 
+We have a strong belief in our no-funding strategy; if we make a cool product, the value will create itself.
 
-# How we started it
+TurtleCoin was created with **No** Pre-Mine, **No** ICO, and **No** Shenanigans.
 
-One chilly December night, RockSteady and Bebop were having a beer too many while discussing the madness around fake, flimsy ICOs with no product. Bebop surmised that it just wouldn't be possible to put out a real project now days without a serious team, doing serious marketing, and bringing in serious funding.
+# Our Background
 
-RockSteady leaned in closely, stroked his beard intently, and had only one response..
+Most of us are full-time developers on other projects, and this is our way to give back to the community with something fun.
 
-"Hold my beer."
+We also have a wide range of people in the community, people from all walks of life that contribute to the community one way or another. 
 
-That night, December 9th, 2017, TurtleCoin was born.
+Our community and dev team are growing by the week and this is what makes the TurtleCoin community so great!
 
-# Why?
 
-Too many projects are bringing in too much funding despite most having no damn product. We figured, "why not do the whole thing in reverse? Start with a fun project, make it as simple and accessible as possible, and let it grow on its own."
-We have a strong belief in our no-funding strategy; if we make a cool product, the value will create itself. If you think we're wrong, we're happy to talk about it.
