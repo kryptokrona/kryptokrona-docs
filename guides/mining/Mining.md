@@ -26,7 +26,7 @@ Native binaries may be available for your distribution's package manager. If no 
 
 ##### Mac
 
-See https://github.com/fireice-uk/xmr-stak/blob/master/doc/compile.md and https://github.com/fireice-uk/xmr-stak/blob/master/doc/compile_MacOS.md
+See https://github.com/fireice-uk/xmr-stak/blob/master/doc/compile.md and https://github.com/fireice-uk/xmr-stak/blob/master/doc/compile.md
 
 #### XMR-Stak Setup and Configuration
 
