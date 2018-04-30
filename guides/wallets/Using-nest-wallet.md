@@ -26,7 +26,6 @@ Extract the `.zip` file (`TurtleCoin-Nest-x.xx-Mac.zip`).
 
 ### Installing on Linux
 
-Extract the `.tar.gz` file.
 Extract the `.tar.gz` file (`TurtleCoin-Nest-x.xx-Linux.tar.gz`).
 
 ```
