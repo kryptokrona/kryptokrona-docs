@@ -1,49 +1,48 @@
-- [[Home]]
+- [Home](Home)
 
-- About TurtleCoin
-  - [[Background and History]]
-  - [[Technical Data]]
-  - [[Core Developers]]
-  - [[Community]]
-  - [[Contributing]]
-  - [[Supporting]]
+- [About TurtleCoin](About-TurtleCoin)
+  - [Background and History](Background-and-History)
+  - [Community](Community)
+  - [Contributing](Contributing)
+
+    ​
 
 - [Getting Started](Getting-Started)
-  - [Downloading](Getting-Started#downloading)
-  - [Installing](Getting-Started#installing)
-    - [Windows](Getting-Started#installing-on-windows)
-    - [Mac](Getting-Started#installing-on-mac)
-    - [Linux](Getting-Started#installing-on-linux)
-  - [Synchronizing the Blockchain](Getting-Started#synchronizing-the-blockchain)
-  - [Using Simplewallet](Getting-Started#using-simplewallet)
-    - [Creating a Wallet](Getting-Started#creating-a-wallet)
-    - [Viewing Wallet Address](Getting-Started#viewing-wallet-address)
-    - [Exporting Keys](Getting-Started#exporting-keys)
-    - [Viewing Wallet Balance](Getting-Started#viewing-wallet-balance)
-    - [Sending TurtleCoin Transactions](Getting-Started#sending-turtlecoin-transactions)
-    - [Saving the Wallet](Getting-Started#saving-the-wallet)
+  - [Setting up a Wallet](Getting-Started#new-wallet)
+  - [Mining TurtleCoin](Getting-Started#mining)
+  - [Socialize!](Getting-Started#socialize)
 
-- [[Frequently Asked Questions]]
-  - [Paper Wallet / Cold Storage?](Frequently-Asked-Questions#paper-wallet--cold-storage)
+- [Frequently Asked Questions](Frequently-Asked-Questions)
+
+  * [Mining Questions](Frequently-Asked-Questions#mining-questions)
+  * [XMR-Stak Issues](Frequently-Asked-Questions#xmr-stak-issues)
+  * [TurtleCoind/SimpleWallet Issues](Frequently-Asked-Questions#tcoind-simplewallet-issues)
+  * [GUI Wallets](Frequently-Asked-Questions#gui-wallets)
+
+  - [Paper Wallet / Cold Storage?](Frequently-Asked-Questions#paper-wallet-cold-storage)
+  - [Others](Frequently-Asked-Questions#other)
 
 - Guides
-  - Alternative Installation Methods
-  - [[Bootstrapping the Blockchain]]
-  - [Mining](Mining)
-    - [Mining Software](Mining#mining-software)
-      - [XMR-Stak](Mining#xmr-stak)
-      - ccminer
-      - web miner
-    - [Mining Pools](Mining#mining-pools)
-    - [Cloud Mining](Mining#cloud-mining)
-    - [Mining with SBC](Mining-with-SBC)
-  - [[Participating in Raindance]]
-  - [Using Simplewallet with Remote Nodes](Using-Simplewallet-with-Remote-Nodes)
+  - [Bootstrapping the Blockchain](Bootstrapping-the-Blockchain)
   - [Using trtlbot++](Using-trtlbot-plus-plus)
+  - [Mining](Mining)
+    - [Mining Software](Mining#how-to-mine)
+      - [XMR-Stak](XMR-Stak-Guide)
+      - [XMR-Stak on Linux](XMR-Stak-Linux-Guide)
+      - [XMRIG](XMRig-Guide)
+    - [Mining Pools](Pools)
+    - [Cloud Mining](Cloud-Mining)
+    - [Mining with SBC](Mining-with-SBC)
+  - [Wallets](Making-a-Wallet)
+    * [GUI Wallets](Making-a-GUI-Wallet)
+      * [WinForms Wallet](Using-WinForms-Wallet)
+      * [Nest Wallet](Using-Nest-Wallet)
+    * [SimpleWallet (CLI)](Using-SimpleWallet)
+    * [Paper Wallet](Making-a-Paper-Wallet)
+    * [Recovering your Wallet](Recovering-your-Wallet)
 
 - TRTL Development
   - Connecting with Developers
-  - Contributing
   - TurtleCoin Projects
     - TurtleCoin Core
     - Other Projects
@@ -52,9 +51,9 @@
 - Cryptocurrency Fundamentals
   - How a Blockchain Works
   - Basic Concepts
-    - Hashes & Encryption3
+    - Hashes & Encryption
     - Wallets, Keys & Addresses
     - Transactions
     - Proof-of-Work
 
-- Contributors
+- [Contributors](Contributors)

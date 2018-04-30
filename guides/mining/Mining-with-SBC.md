@@ -1,80 +1,43 @@
-# Mining TurtleCoin with an SBC
+# How to Mine TurtleCoin with an SBC
 
 This guide will get you started mining TurtleCoin on a Raspberry Pi or similar SBC(single-board computer)
 
 ## Setup
 
-Make sure you've already created a wallet on your PC. You'll need the wallet address to store any coins you mine. Follow the guide [here](https://github.com/turtlecoin/turtlecoin/wiki/Getting-Started) to get started(follow the guide for linux).
+Make sure you've already created a wallet on your PC. You'll need the wallet address to store any coins you mine. Follow the guide [here](Using-Simplewallet) to get started(follow the guide for Linux).
 
 For the SBC, download the latest non-desktop version of [Raspbian](https://www.raspberrypi.org/downloads). Follow their installation guide on how to write the OS image onto the MicroSD card. Once you've plugged in the SD Card, booted the Raspberry Pi, and connected it to the internet, run the following commands:
 
-	
+
 	sudo apt-get update && sudo apt-get upgrade
-    
 
 This may take a few minutes. Next, we'll have to install some required tools to compile and run the miner. Enter this command:
 
-	
+
 	sudo apt-get install git automake autoconf pkg-config libcurl4-openssl-dev libjansson-dev libssl-dev libgmp-dev make g++
-	
 
 ## Install the Miner
 
-Next, we need to obtain a CPU miner. Use cpuminer-multi:
+Next, we need to obtain a CPU miner. We'll use `rPi-xmrig-gcc7.3.0`
 
-	
-	git clone https://github.com/tpruvot/cpuminer-multi
-	
-	
-Let's now move to that directory and install the miner:
+1. Download the `.zip` source code from the [Releases page](https://github.com/auto-joe/rPi-xmrig-gcc7.3.0/releases/latest)
 
-	
-	cd cpuminer-multi
-	./autogen.sh
-	./configure --disable-assembly CFLAGS="-Ofast -march=native" --with-crypto --with-curl
-	sudo make install
-	
-	
+
+2. Download it to a directory of your choice and extract it to a folder called `rPi-xmrig`, or anything of your choice
+
+
 ## Configure and Run the Miner
 
-Finally, we can run the miner with the following parameters:
+Run the miner with the following parameters:
 
-	
-	cpuminer -a cryptonight -o stratum+tcp://[YOUR POOL HERE] -u [YOUR WALLET ADDRESS HERE] -p x
-	
-	
-You'll need to select a pool to participate in for the first `-o` parameter. Pick one that is closest to your location. Make sure to include the port number as well. Here is the current list:
 
-**z-pool.com:3333 (EU North)**
+	./start.sh --algo=cryptonight-lite --variant=1 --user=[public address] --url=[pool address]
 
-**hk.turtlepool.space:3333 (Hong Kong)**
+* Instead of `[public address]`, simply paste your TurtleCoin wallet's address.
 
-**pool.turtleco.in:3333 (USA West Coast)**
+  If you don't have one yet, you can generate a [paper wallet](Making-a-Paper-Wallet) to mine towards for now, and later import into a CLI or GUI wallet.
+* In place of `[pool address]`, you'll need to choose a pool to mine towards. You can check the full list [here](Pools).
 
-**auspool.turtleco.in:3333 (AUS)**
+After entering this command, the miner will start scanning your hardware and begin to mine. 
 
-**eu.turtlepool.space:3333 (UK)**
-
-**us.turtlepool.space:3333 (USA South)**
-
-**ny.minetrtl.us:3333 (USA NYC)**
-
-**trtl.mine2gether.com:3335**
-
-**turtle.atpool.party:3333 (France)**
-
-**78.46.85.142:4902** (CryptoKnight)
-
-**118.31.18.78:5555** (ETNChina)
-
-**trtl.flashpool.club:5555** (for `Claymore-cryptonote-10.2`, use port `7443` ONLY)
-
-**trtl.blockchainera.net:6666**
-
-**pool.trtl.ninja:5555**
-
-**turtle.mining.garden:5555**
-
-For the `-u` parameter, simply paste your TurtleCoin wallet's address.
-
-After entering this command, the miner will start scanning your hardware and begin to mine. Happy mining!
+Happy mining! :)
