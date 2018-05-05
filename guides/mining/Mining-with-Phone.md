@@ -17,6 +17,8 @@ To mine TurtleCoin, we'll use the Tony Monero app.
 5. If your device is supported, you will be brought to a screen with a success message.
 6. Check [Tony Monero Configuration](#tony-xmr-config)
 
+You should note that by using the Tony Monero app, you will be contributing 10% of your hashpower to the developers wallet (while you are mining)
+
 ## Tony Monero Configuration<a name="tony-xmr-config"></a>
 
 1. Leave `Profile selection` as default for now.
@@ -30,7 +32,7 @@ To mine TurtleCoin, we'll use the Tony Monero app.
 
 ## Expected Results
 
-The miner should not start mining, and the stats displayed show start updating, displaying your hashrate and the like(it may take a few minutes to update)
+The miner should now start mining, and the stats displayed show start updating, displaying your hashrate and the like(it may take a few minutes to update)
 
 You can tap the question marks on the right if you're unsure of what each value means
 
