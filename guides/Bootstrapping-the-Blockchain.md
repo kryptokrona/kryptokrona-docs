@@ -7,16 +7,18 @@ This guide will help you install a recent copy of the blockchain. This should si
 
 2. Open File Explorer and type `%APPDATA%\TurtleCoin` and hit enter.
 
-![file explorer](images/bootstrap/file_explorer.jpg)
+![file explorer](guides/images/bootstrap/file_explorer.jpg)
 
 **Note: if the folder doesn't exist, just go to `%APPDATA%` instead and create a folder named `TurtleCoin`.**
 
 3. Delete the following if they exist:
 
  * blockindexes.bin
+
  * blocks.bin
+
  * "DB" folder
- 
+
     Note: In case it is unable to delete the files due to them being used by some other program, follow these steps:
     - Open Task Manager with the shortcut `Ctrl + Shift+ Escape`.
     - Click on `Processes`.
@@ -26,6 +28,10 @@ This guide will help you install a recent copy of the blockchain. This should si
     - Click on `End Process`.
     - Click on `End Process` again.
     - Try to delete them again.
+
+    ![closewallet](guides/images/bootstrap/close_walletd.png)
+
+    ​
 
 
 4. [Download](https://f000.backblazeb2.com/file/turtle-blockchain/latest.zip) the latest snapshot of the blockchain.
@@ -45,7 +51,7 @@ This guide will help you install a recent copy of the blockchain. This should si
 
 3. Use the shortcut `Command + Shift + G` to bring up `Go to Folder`:
 
-![findergoto.jpg](images/bootstrap/findergoto.jpg)
+![findergoto.jpg](guides/images/bootstrap/findergoto.jpg)
 
 4. Delete the following if they exist: 
 
