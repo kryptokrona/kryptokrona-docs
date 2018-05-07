@@ -3,7 +3,7 @@
 
 ## Registering your Wallet
 
-Go to the `#wallets` channel in the [Discord server](https://discord.gg/J7g99EE) and type `.registerwallet <walletaddress>`. 
+Go to the `#wallets` channel in the [Discord server](https://discord.gg/J7g99EE), type `.registerwallet TRTL...`, and replace `TRTL...` with your wallet address. 
 
 For example, you would type- 
 
@@ -17,38 +17,29 @@ For example, you would type-
 
 After your wallet address has been registered, type `.deposit` in the #bots channel.
 
-### CLI Wallet
+* Copy the first line of code he gives and enter it as the address
+* Then copy the second line of code he gives and enter it as the address
+* After that, enter the amount of mixin and amount you want to use/send and send the transaction!
 
-- Copy/paste the command he gives you into the CLI Wallet. 
-- Replace `<amount>` with however much you want to send and press enter.
+#### CLI Wallet
 
-For example, if I PM the bot `.deposit` and get back this-
-
-```transfer 3 TRTLv12WtKJAzTNtxSkbcXf7mjeVApSqRYACtoJE2X52UBSce7qGAQ1JQgG3MmArnZSbkJXKqBXiPX2Mno7xD4tqD3p8SySoBc5 <amount> -p ac8889dfb7c93471a9a43c287f3fa40854b64454e62eb0006b13e510e6ad8a8e```
-
-Then I will replace `<amount>` with how much I want to send to trtlbot++, let's say 100. So the command I will enter is-
-
-```transfer 3 TRTLv12WtKJAzTNtxSkbcXf7mjeVApSqRYACtoJE2X52UBSce7qGAQ1JQgG3MmArnZSbkJXKqBXiPX2Mno7xD4tqD3p8SySoBc5 100 -p ac8889dfb7c93471a9a43c287f3fa40854b64454e62eb0006b13e510e6ad8a8e```
-
-Then press enter to send your transaction.
+Follow the steps given [here](using-simplewallet#sending-turtlecoin-transactions) and replace the values of the address and payment ID with the ones provided (**!! PAYMENT ID IS IMPORTANT !!**).
 
 - See [Expected Results](#expected-results) section below
 
-### GUI Wallet
+#### GUI Wallet
 
-- Copy the part from `3` to `<amount>` and enter that as the wallet address. 
-- Then, copy the part after `-p` and enter that as the payment address. 
-- In amount, mention how much you want to send, set the mixin as 3 and press send.
+##### Nest Wallet
 
-For example, if I PM the bot `.deposit` and get back this-
+Follow the steps given [here](using-nest-wallet#sending-turtlecoin-transactions) and replace the values of the address and Payment ID with the ones provided (**!! PAYMENT ID IS IMPORTANT !!**)
 
-```transfer 3 TRTLv12WtKJAzTNtxSkbcXf7mjeVApSqRYACtoJE2X52UBSce7qGAQ1JQgG3MmArnZSbkJXKqBXiPX2Mno7xD4tqD3p8SySoBc5 <amount> -p ac8889dfb7c93471a9a43c287f3fa40854b64454e62eb0006b13e510e6ad8a8e```
+##### WinForms Wallet
 
-Then I will copy the part from `3` to `<amount>`; that is, `TRTLv12WtKJAzTNtxSkbcXf7mjeVApSqRYACtoJE2X52UBSce7qGAQ1JQgG3MmArnZSbkJXKqBXiPX2Mno7xD4tqD3p8SySoBc5` and enter that as the address.
+Follow the steps given [here](using-winforms-wallet#sending-turtlecoin-transactions) and replace the values of the address(recipient) and Payment ID with the ones provided (**!! PAYMENT ID IS IMPORTANT !!**)
 
-Then I'll copy the part after `-p`; that is, `ac8889dfb7c93471a9a43c287f3fa40854b64454e62eb0006b13e510e6ad8a8e` and enter that as the Payment ID.
 
-- See [Expected Results](#expected-results) section below
+
+* See [Expected Results](#expected-results) section below
 
 ***PLEASE ENTER YOUR OWN VALUES WHICH THE BOT SENDS YOU!***
 
@@ -189,8 +180,8 @@ trtlbot++ isn't just a tip bot, it's so much more! Here's a table of it's other 
 | difficulty | `.difficulty` | Returns current network difficulty. |
 | supply | `.supply` | Returns current circulating supply. |
 | faucet |  `.faucet` | Returns information about current amount of TRTL in the faucet's wallet. |
-| updatewallet | `.updatewallet <walletaddress>` | Updates your currently registered wallet address in case of a change(is not a replacement for `.registerwallet <walletaddress>` ). |
-| wallet | `.wallet @(user)` | PM's you with the wallet address of the user tagged. If you type only `.wallet` it will PM you with your own wallet address. |
+| updatewallet | `.updatewallet TRTL...` | Updates your currently registered wallet address in case of a change(is not a replacement for `.registerwallet TRTL...` ). |
+| wallet | `.wallet @<user>` | PM's you with the wallet address of the user tagged(`.wallet @Sajo8#2953`). If you type only `.wallet` it will PM you with your own wallet address. |
 | marketcap | `.mcap` | Returns current Market Cap. Cannot be used in the main TurtleCoin Discord, only in the [Market one](https://discord.gg/HS7kn3d). |
 | price | `.price` | Returns current price. Cannot be used in the main TurtleCoin Discord, only in the [Market one](https://discord.gg/HS7kn3d). |
 
