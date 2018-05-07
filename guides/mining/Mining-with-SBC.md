@@ -28,7 +28,7 @@ Next, we need to obtain a CPU miner. We'll use `rPi-xmrig-gcc7.3.0`
 
 ## Configure and Run the Miner
 
-Open the file `start.sh` and edit the existing parameters with these-
+Open the file `start.sh` with a text editor and replace the existing parameters with these-
 
 
 ```shell
