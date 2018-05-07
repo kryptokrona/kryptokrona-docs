@@ -175,6 +175,15 @@ A: Try installing this: <https://go.microsoft.com/fwlink/?LinkId=746572>
 A: This occurs because of the blockchain forking, generally when one mining pool has a very large hashrate. T
   This can be fixed by re-syncing the correct blockchain from scratch. See the question below.
 
+#### Q: I'm getting a "corrupted blockchain" error like this?
+```
+2018-May-07 15:52:19.877323 INFO    initializing core
+2018-May-07 15:52:19.908530 INFO    Importing blocks from blockchain storage
+2018-May-07 15:52:19.908530 ERROR   Corrupted blockchain. Block with index 428973 and hash aafa7fd33d476535188bdd9e86ba51bb5e058be8e52367b78e9c0c03e74299c5 has previous block hash 2c0cf6c07612b9e1ea19c6922a56746b83cb42c7b11edfc4b185572225bb0f20, but parent has hash 26189359b64d4bb357a04b102a42a01d2771a3f3d80db3ca1b7395a2aeaede4a. Resynchronize your daemon please.
+2018-May-07 15:52:19.924135 INFO    Closing DB.
+```
+A: Re-sync your daemon from scratch(see below question), [bootstrap the blockchain](bootstrapping-the-blockchain.md) or sync [using checkpoints](using-simplewallet.md#using-checkpoints)
+
 #### Q: How can I re-sync the blockchain?
 
 A: Close any TurtleCoin-related software, then go to `%APPDATA%`, and delete the `TurtleCoin` folder. 
