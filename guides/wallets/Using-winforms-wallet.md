@@ -1,4 +1,4 @@
-# WinForms wallet
+# Using WinForms Wallet
 
 ## Screenshots
 
