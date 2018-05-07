@@ -28,15 +28,26 @@ Next, we need to obtain a CPU miner. We'll use `rPi-xmrig-gcc7.3.0`
 
 ## Configure and Run the Miner
 
-Run the miner with the following parameters:
+Open the file `start.sh` and edit the existing parameters with these-
 
 
-	./start.sh --algo=cryptonight-lite --variant=1 --user=[public address] --url=[pool address]
+```shell
+./xmrig -algo=cryptonight-lite --variant=1 --user=[public address] --pass=x --url=[pool address]
+```
 
 * Instead of `[public address]`, simply paste your TurtleCoin wallet's address.
 
   If you don't have one yet, you can generate a [paper wallet](Making-a-Paper-Wallet) to mine towards for now, and later import into a CLI or GUI wallet.
+
 * In place of `[pool address]`, you'll need to choose a pool to mine towards. You can check the full list [here](Pools).
+
+Then start the miner-
+
+```shell
+./start.sh
+```
+
+
 
 After entering this command, the miner will start scanning your hardware and begin to mine. 
 
