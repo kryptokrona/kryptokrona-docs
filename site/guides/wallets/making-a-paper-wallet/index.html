@@ -1,0 +1,902 @@
+
+
+
+
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+        <meta name="description" content="Wiki for TurtleCoin">
+      
+      
+      
+        <meta name="author" content="Sajo8">
+      
+      
+        <meta name="lang:clipboard.copy" content="Copy to clipboard">
+      
+        <meta name="lang:clipboard.copied" content="Copied to clipboard">
+      
+        <meta name="lang:search.language" content="en">
+      
+        <meta name="lang:search.pipeline.stopwords" content="True">
+      
+        <meta name="lang:search.pipeline.trimmer" content="True">
+      
+        <meta name="lang:search.result.none" content="No matching documents">
+      
+        <meta name="lang:search.result.one" content="1 matching document">
+      
+        <meta name="lang:search.result.other" content="# matching documents">
+      
+        <meta name="lang:search.tokenizer" content="[\s\-]+">
+      
+      <link rel="shortcut icon" href="../../../assets/images/fav.png">
+      <meta name="generator" content="mkdocs-0.17.3, mkdocs-material-2.7.3">
+    
+    
+      
+        <title>Paper Wallet - TurtleCoin Wiki</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/application.8d40d89b.css">
+      
+        <link rel="stylesheet" href="../../../assets/stylesheets/application-palette.6079476c.css">
+      
+    
+    
+      <script src="../../../assets/javascripts/modernizr.1aa3b519.js"></script>
+    
+    
+      <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+      
+      <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    
+    
+    
+  </head>
+  
+    
+    
+    <body dir="ltr" data-md-color-primary="blue" data-md-color-accent="teal">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+          <svg xmlns="http://www.w3.org/2000/svg" width="416" height="448"
+    viewBox="0 0 416 448" id="github">
+  <path fill="currentColor" d="M160 304q0 10-3.125 20.5t-10.75 19-18.125
+        8.5-18.125-8.5-10.75-19-3.125-20.5 3.125-20.5 10.75-19 18.125-8.5
+        18.125 8.5 10.75 19 3.125 20.5zM320 304q0 10-3.125 20.5t-10.75
+        19-18.125 8.5-18.125-8.5-10.75-19-3.125-20.5 3.125-20.5 10.75-19
+        18.125-8.5 18.125 8.5 10.75 19 3.125 20.5zM360
+        304q0-30-17.25-51t-46.75-21q-10.25 0-48.75 5.25-17.75 2.75-39.25
+        2.75t-39.25-2.75q-38-5.25-48.75-5.25-29.5 0-46.75 21t-17.25 51q0 22 8
+        38.375t20.25 25.75 30.5 15 35 7.375 37.25 1.75h42q20.5 0
+        37.25-1.75t35-7.375 30.5-15 20.25-25.75 8-38.375zM416 260q0 51.75-15.25
+        82.75-9.5 19.25-26.375 33.25t-35.25 21.5-42.5 11.875-42.875 5.5-41.75
+        1.125q-19.5 0-35.5-0.75t-36.875-3.125-38.125-7.5-34.25-12.875-30.25-20.25-21.5-28.75q-15.5-30.75-15.5-82.75
+        0-59.25 34-99-6.75-20.5-6.75-42.5 0-29 12.75-54.5 27 0 47.5 9.875t47.25
+        30.875q36.75-8.75 77.25-8.75 37 0 70 8 26.25-20.5
+        46.75-30.25t47.25-9.75q12.75 25.5 12.75 54.5 0 21.75-6.75 42 34 40 34
+        99.5z" />
+</svg>
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="search" autocomplete="off">
+    <label class="md-overlay" data-md-component="overlay" for="drawer"></label>
+    
+      <a href="#setting-up-a-paper-wallet" tabindex="1" class="md-skip">
+        Skip to content
+      </a>
+    
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href="../../../Home/" title="TurtleCoin Wiki" class="md-header-nav__button md-logo">
+          
+            <img src="../../../assets/images/logo.png" width="24" height="24">
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          
+            
+              <span class="md-header-nav__topic">
+                TurtleCoin Wiki
+              </span>
+              <span class="md-header-nav__topic">
+                Paper Wallet
+              </span>
+            
+          
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          
+            <label class="md-icon md-icon--search md-header-nav__button" for="search"></label>
+            
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+          
+        
+      </div>
+      
+        <div class="md-flex__cell md-flex__cell--shrink">
+          <div class="md-header-nav__source">
+            
+
+
+  
+
+
+  <a href="https://github.com/Sajo811/turtledocs/" title="Go to repository" class="md-source" data-md-source="github">
+    
+      <div class="md-source__icon">
+        <svg viewBox="0 0 24 24" width="24" height="24">
+          <use xlink:href="#github" width="24" height="24"></use>
+        </svg>
+      </div>
+    
+    <div class="md-source__repository">
+      sajo811/turtledocs
+    </div>
+  </a>
+
+          </div>
+        </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+        
+      
+      
+        
+
+  
+
+<nav class="md-tabs md-tabs--active" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../../Home/" title="Home" class="md-tabs__link md-tabs__link--active">
+          Home
+        </a>
+      
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+      
+      <main class="md-main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="drawer">
+    <span class="md-nav__button md-logo">
+      
+        <img src="../../../assets/images/logo.png" width="48" height="48">
+      
+    </span>
+    TurtleCoin Wiki
+  </label>
+  
+    <div class="md-nav__source">
+      
+
+
+  
+
+
+  <a href="https://github.com/Sajo811/turtledocs/" title="Go to repository" class="md-source" data-md-source="github">
+    
+      <div class="md-source__icon">
+        <svg viewBox="0 0 24 24" width="24" height="24">
+          <use xlink:href="#github" width="24" height="24"></use>
+        </svg>
+      </div>
+    
+    <div class="md-source__repository">
+      sajo811/turtledocs
+    </div>
+  </a>
+
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-1" type="checkbox" id="nav-1" checked>
+    
+    <label class="md-nav__link" for="nav-1">
+      Home
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-1">
+        Home
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../Home/" title="Home" class="md-nav__link">
+      Home
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../about/About-Turtlecoin/" title="About TurtleCoin" class="md-nav__link">
+      About TurtleCoin
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../Getting-Started/" title="Getting Started" class="md-nav__link">
+      Getting Started
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../Frequently-Asked-Questions/" title="Frequently Asked Questions" class="md-nav__link">
+      Frequently Asked Questions
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-5" type="checkbox" id="nav-1-5" checked>
+    
+    <label class="md-nav__link" for="nav-1-5">
+      Guides
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-1-5">
+        Guides
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Bootstrapping-the-blockchain/" title="Bootstrapping the Blockchain" class="md-nav__link">
+      Bootstrapping the Blockchain
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../rainborg-wat-dat/" title="RainBorg? Wat Dat?" class="md-nav__link">
+      RainBorg? Wat Dat?
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../using-trtlbot-plus-plus/" title="Using trtlbot++" class="md-nav__link">
+      Using trtlbot++
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-5-4" type="checkbox" id="nav-1-5-4">
+    
+    <label class="md-nav__link" for="nav-1-5-4">
+      Mining
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-1-5-4">
+        Mining
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../mining/Pools/" title="Pools" class="md-nav__link">
+      Pools
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../mining/cloud-mining/" title="Cloud Mining" class="md-nav__link">
+      Cloud Mining
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../mining/mining-with-sbc/" title="Mining with a SBC" class="md-nav__link">
+      Mining with a SBC
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../mining/mining-with-phone/" title="Mining with your Mobile Phone" class="md-nav__link">
+      Mining with your Mobile Phone
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../mining/xmr-stak-guide/" title="XMR-Stak" class="md-nav__link">
+      XMR-Stak
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../mining/xmr-stak-linux-guide/" title="XMR-Stak on Linux" class="md-nav__link">
+      XMR-Stak on Linux
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../mining/XMRIG-Guide/" title="XMRig" class="md-nav__link">
+      XMRig
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-5-5" type="checkbox" id="nav-1-5-5" checked>
+    
+    <label class="md-nav__link" for="nav-1-5-5">
+      Wallets
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-1-5-5">
+        Wallets
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../making-a-wallet/" title="Making a Wallet" class="md-nav__link">
+      Making a Wallet
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-5-5-2" type="checkbox" id="nav-1-5-5-2">
+    
+    <label class="md-nav__link" for="nav-1-5-5-2">
+      GUI Wallets
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="4">
+      <label class="md-nav__title" for="nav-1-5-5-2">
+        GUI Wallets
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../using-nest-wallet/" title="Nest Wallet" class="md-nav__link">
+      Nest Wallet
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../using-winforms-wallet/" title="WinForms Wallet" class="md-nav__link">
+      WinForms Wallet
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../using-simplewallet/" title="SimpleWallet (CLI)" class="md-nav__link">
+      SimpleWallet (CLI)
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="toc">
+        Paper Wallet
+      </label>
+    
+    <a href="./" title="Paper Wallet" class="md-nav__link md-nav__link--active">
+      Paper Wallet
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#making-a-paper-wallet-on-an-internet-connected-machine" title="Making A Paper Wallet on an Internet-Connected Machine" class="md-nav__link">
+    Making A Paper Wallet on an Internet-Connected Machine
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#making-a-paper-wallet-on-an-air-gapped-machine" title="Making a Paper Wallet on an Air-Gapped Machine" class="md-nav__link">
+    Making a Paper Wallet on an Air-Gapped Machine
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../recovering-your-wallet/" title="Recovering your Wallet" class="md-nav__link">
+      Recovering your Wallet
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#making-a-paper-wallet-on-an-internet-connected-machine" title="Making A Paper Wallet on an Internet-Connected Machine" class="md-nav__link">
+    Making A Paper Wallet on an Internet-Connected Machine
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#making-a-paper-wallet-on-an-air-gapped-machine" title="Making a Paper Wallet on an Air-Gapped Machine" class="md-nav__link">
+    Making a Paper Wallet on an Air-Gapped Machine
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                  <a href="https://github.com/Sajo811/turtledocs/edit/master/docs/guides/wallets/making-a-paper-wallet.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
+                
+                
+                <h1 id="setting-up-a-paper-wallet">Setting Up a Paper Wallet<a class="headerlink" href="#setting-up-a-paper-wallet" title="Permanent link">&para;</a></h1>
+<p>The main purpose of a paperwallet is to quickly create a wallet to start receiving funds. </p>
+<p><strong>You will not be able to spend or send your funds to other people until you set up a CLI, GUI or Web Wallet.</strong></p>
+<p>There are two options for a paper wallet.</p>
+<h2 id="making-a-paper-wallet-on-an-internet-connected-machine">Making A Paper Wallet on an Internet-Connected Machine<a class="headerlink" href="#making-a-paper-wallet-on-an-internet-connected-machine" title="Permanent link">&para;</a></h2>
+<p>Go to <a href="https://turtlecoin.lol/wallet">this link</a> and follow these steps-</p>
+<ul>
+<li>Click on <code>Generate a Wallet</code></li>
+<li>Mash your keyboard and start entering a bunch of random letters, numbers and signs in the field. Make sure you toggle on Caps Lock repeatedly! (Don't go too crazy - otherwise you might end up shutting down your PC!)</li>
+<li>After you're done mashing your keyboard, press <code>Generate Wallet</code></li>
+<li>The letters and numbers in the green box, starting with <code>TRTL</code>, is your public address. You can share it freely. We recommend <a href="../Using-trtlbot-plus-plus#registering-your-wallet">registering it with trtlbot++</a> in the Discord so that you can access it easily.   </li>
+<li>Save the <code>Seed Phrase</code>, the 25 words in the red box, safely. <strong>DO NOT SHARE IT WITH ANYONE</strong>. <strong>Anyone who has access to this can <em>access your funds</em> and has <em>complete control</em> over your wallet.</strong></li>
+<li>Save the <code>Spend Key</code> and the <code>View Key</code>, the two very long strings of (seemingly) random letters and numbers, safely.  <strong>DO NOT SHARE IT WITH ANYONE</strong>. <strong>Anyone who has access to this can <em>access your funds</em> and has <em>complete control</em> over your wallet.</strong></li>
+</ul>
+<h2 id="making-a-paper-wallet-on-an-air-gapped-machine">Making a Paper Wallet on an Air-Gapped Machine<a class="headerlink" href="#making-a-paper-wallet-on-an-air-gapped-machine" title="Permanent link">&para;</a></h2>
+<p>Go to <a href="https://github.com/turtlecoin/paper-turtle">this GitHub repository</a>.</p>
+<p>To use it, follow these steps:</p>
+<p><strong>Windows</strong>
+  - Click on <code>Clone or Download</code></p>
+<ul>
+<li>
+<p>Click on <code>Download ZIP</code></p>
+</li>
+<li>
+<p>Extract the <code>.zip</code> file to a directory of your choice (say, <code>C:/paper</code>)</p>
+</li>
+<li>
+<p>Copy/paste the file through a flash drive to your air-gapped machine.</p>
+</li>
+<li>
+<p>Open the folder where you pasted the file, (say <code>C:/paper</code>) and double click on <code>index.html</code></p>
+</li>
+<li>
+<p>Click on <code>Generate a Wallet</code></p>
+</li>
+<li>
+<p>Mash your keyboard and start entering a bunch of random letters, numbers and signs in the field. Make sure you toggle on Caps Lock repeatedly, and don't go too crazy - otherwise you might end up shutting down your PC!</p>
+</li>
+<li>
+<p>After you're done mashing your keyboard, press <code>Generate Wallet</code></p>
+</li>
+<li>
+<p>The letters and numbers in the green box, starting with <code>TRTL</code>, is your public address. You can share it freely. We recommend <a href="../Using-trtlbot-plus-plus#registering-your-wallet">registering it with trtlbot++</a> in the Discord so that you can access it easily.   </p>
+</li>
+<li>
+<p>Save the <code>Seed Phrase</code>, the 25 words in the red box, safely. </p>
+<p><strong>DO NOT SHARE IT WITH ANYONE</strong>. <strong>Anyone who has this can <em>access your funds</em> and has <em>complete control</em> over your wallet.</strong></p>
+</li>
+<li>
+<p>Save the <code>Spend Key</code> and the <code>View Key</code>, the two very long strings of (seemingly) random letters and numbers, safely.  </p>
+<p><strong>DO NOT SHARE IT WITH ANYONE</strong>. <strong>Anyone who has these can <em>access your funds</em> and has <em>complete control</em> over your wallet.</strong></p>
+</li>
+</ul>
+<p><strong>Linux</strong>
+  - Open the terminal</p>
+<ul>
+<li>
+<p>Type, <code>git clone https://github.com/turtlecoin/paper-turtle.git</code>and press enter </p>
+</li>
+<li>
+<p>Then enter <code>cd paper-turtle</code></p>
+</li>
+<li>
+<p>After doing so, enter <code>index.html</code></p>
+</li>
+<li>
+<p>A page should open up in your browser</p>
+</li>
+<li>
+<p>Click on <code>Generate a Wallet</code></p>
+</li>
+<li>
+<p>Mash your keyboard and start entering a bunch of random letters, numbers and signs in the field. Make sure you toggle on Caps Lock repeatedly, and don't go too crazy - otherwise you might end up shutting down your PC!</p>
+</li>
+<li>
+<p>After you're done mashing your keyboard, press <code>Generate Wallet</code></p>
+</li>
+<li>
+<p>The letters and numbers in the green box, starting with <code>TRTL</code>, is your public address. You can share it freely. We recommend <a href="../Using-trtlbot-plus-plus#registering-your-wallet">registering it with trtlbot++</a> in the Discord so that you can access it easily.   </p>
+</li>
+<li>
+<p>Save the <code>Seed Phrase</code>, the 25 words in the red box, safely.</p>
+<p><strong>DO NOT SHARE IT WITH ANYONE</strong>. <strong>Anyone who has this can <em>access your funds</em> and has <em>complete control</em> over your wallet.</strong></p>
+</li>
+<li>
+<p>Save the <code>Spend Key</code> and the <code>View Key</code>, the two very long strings of (seemingly) random letters and numbers, safely.  </p>
+<p><strong>DO NOT SHARE IT WITH ANYONE</strong>. <strong>Anyone who has these can <em>access your funds</em> and has <em>complete control</em> over your wallet.</strong></p>
+</li>
+</ul>
+<p><strong>Remember:</strong> <em>DO NOT give your <code>Spend Key</code>, <code>View Key</code> or <code>Seed Phrase</code> to anybody.</em>
+Also, count and make sure the Seed Phrase you've saved is <em>25 words, no more, no less.</em></p>
+                
+                  
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../using-simplewallet/" title="SimpleWallet (CLI)" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                SimpleWallet (CLI)
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="../recovering-your-wallet/" title="Recovering your Wallet" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                Recovering your Wallet
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        powered by
+        <a href="http://www.mkdocs.org">MkDocs</a>
+        and
+        <a href="https://squidfunk.github.io/mkdocs-material/">
+          Material for MkDocs</a>
+      </div>
+      
+        
+  <div class="md-footer-social">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+      <a href="https://github.com/sajo811" class="md-footer-social__link fa fa-github"></a>
+    
+  </div>
+
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../../assets/javascripts/application.b438e6c5.js"></script>
+      
+      <script>app.initialize({version:"0.17.3",url:{base:"../../.."}})</script>
+      
+    
+    
+      
+    
+  </body>
+</html>

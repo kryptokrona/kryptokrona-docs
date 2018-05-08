@@ -1,0 +1,958 @@
+
+
+
+
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+        <meta name="description" content="Wiki for TurtleCoin">
+      
+      
+      
+        <meta name="author" content="Sajo8">
+      
+      
+        <meta name="lang:clipboard.copy" content="Copy to clipboard">
+      
+        <meta name="lang:clipboard.copied" content="Copied to clipboard">
+      
+        <meta name="lang:search.language" content="en">
+      
+        <meta name="lang:search.pipeline.stopwords" content="True">
+      
+        <meta name="lang:search.pipeline.trimmer" content="True">
+      
+        <meta name="lang:search.result.none" content="No matching documents">
+      
+        <meta name="lang:search.result.one" content="1 matching document">
+      
+        <meta name="lang:search.result.other" content="# matching documents">
+      
+        <meta name="lang:search.tokenizer" content="[\s\-]+">
+      
+      <link rel="shortcut icon" href="../../../assets/images/fav.png">
+      <meta name="generator" content="mkdocs-0.17.3, mkdocs-material-2.7.3">
+    
+    
+      
+        <title>XMR-Stak - TurtleCoin Wiki</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/application.8d40d89b.css">
+      
+        <link rel="stylesheet" href="../../../assets/stylesheets/application-palette.6079476c.css">
+      
+    
+    
+      <script src="../../../assets/javascripts/modernizr.1aa3b519.js"></script>
+    
+    
+      <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+      
+      <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    
+    
+    
+  </head>
+  
+    
+    
+    <body dir="ltr" data-md-color-primary="blue" data-md-color-accent="teal">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+          <svg xmlns="http://www.w3.org/2000/svg" width="416" height="448"
+    viewBox="0 0 416 448" id="github">
+  <path fill="currentColor" d="M160 304q0 10-3.125 20.5t-10.75 19-18.125
+        8.5-18.125-8.5-10.75-19-3.125-20.5 3.125-20.5 10.75-19 18.125-8.5
+        18.125 8.5 10.75 19 3.125 20.5zM320 304q0 10-3.125 20.5t-10.75
+        19-18.125 8.5-18.125-8.5-10.75-19-3.125-20.5 3.125-20.5 10.75-19
+        18.125-8.5 18.125 8.5 10.75 19 3.125 20.5zM360
+        304q0-30-17.25-51t-46.75-21q-10.25 0-48.75 5.25-17.75 2.75-39.25
+        2.75t-39.25-2.75q-38-5.25-48.75-5.25-29.5 0-46.75 21t-17.25 51q0 22 8
+        38.375t20.25 25.75 30.5 15 35 7.375 37.25 1.75h42q20.5 0
+        37.25-1.75t35-7.375 30.5-15 20.25-25.75 8-38.375zM416 260q0 51.75-15.25
+        82.75-9.5 19.25-26.375 33.25t-35.25 21.5-42.5 11.875-42.875 5.5-41.75
+        1.125q-19.5 0-35.5-0.75t-36.875-3.125-38.125-7.5-34.25-12.875-30.25-20.25-21.5-28.75q-15.5-30.75-15.5-82.75
+        0-59.25 34-99-6.75-20.5-6.75-42.5 0-29 12.75-54.5 27 0 47.5 9.875t47.25
+        30.875q36.75-8.75 77.25-8.75 37 0 70 8 26.25-20.5
+        46.75-30.25t47.25-9.75q12.75 25.5 12.75 54.5 0 21.75-6.75 42 34 40 34
+        99.5z" />
+</svg>
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="search" autocomplete="off">
+    <label class="md-overlay" data-md-component="overlay" for="drawer"></label>
+    
+      <a href="#how-to-set-up-xmr-stak" tabindex="1" class="md-skip">
+        Skip to content
+      </a>
+    
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href="../../../Home/" title="TurtleCoin Wiki" class="md-header-nav__button md-logo">
+          
+            <img src="../../../assets/images/logo.png" width="24" height="24">
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          
+            
+              <span class="md-header-nav__topic">
+                TurtleCoin Wiki
+              </span>
+              <span class="md-header-nav__topic">
+                XMR-Stak
+              </span>
+            
+          
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          
+            <label class="md-icon md-icon--search md-header-nav__button" for="search"></label>
+            
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+          
+        
+      </div>
+      
+        <div class="md-flex__cell md-flex__cell--shrink">
+          <div class="md-header-nav__source">
+            
+
+
+  
+
+
+  <a href="https://github.com/Sajo811/turtledocs/" title="Go to repository" class="md-source" data-md-source="github">
+    
+      <div class="md-source__icon">
+        <svg viewBox="0 0 24 24" width="24" height="24">
+          <use xlink:href="#github" width="24" height="24"></use>
+        </svg>
+      </div>
+    
+    <div class="md-source__repository">
+      sajo811/turtledocs
+    </div>
+  </a>
+
+          </div>
+        </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+        
+      
+      
+        
+
+  
+
+<nav class="md-tabs md-tabs--active" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../../Home/" title="Home" class="md-tabs__link md-tabs__link--active">
+          Home
+        </a>
+      
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+      
+      <main class="md-main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="drawer">
+    <span class="md-nav__button md-logo">
+      
+        <img src="../../../assets/images/logo.png" width="48" height="48">
+      
+    </span>
+    TurtleCoin Wiki
+  </label>
+  
+    <div class="md-nav__source">
+      
+
+
+  
+
+
+  <a href="https://github.com/Sajo811/turtledocs/" title="Go to repository" class="md-source" data-md-source="github">
+    
+      <div class="md-source__icon">
+        <svg viewBox="0 0 24 24" width="24" height="24">
+          <use xlink:href="#github" width="24" height="24"></use>
+        </svg>
+      </div>
+    
+    <div class="md-source__repository">
+      sajo811/turtledocs
+    </div>
+  </a>
+
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-1" type="checkbox" id="nav-1" checked>
+    
+    <label class="md-nav__link" for="nav-1">
+      Home
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-1">
+        Home
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../Home/" title="Home" class="md-nav__link">
+      Home
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../about/About-Turtlecoin/" title="About TurtleCoin" class="md-nav__link">
+      About TurtleCoin
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../Getting-Started/" title="Getting Started" class="md-nav__link">
+      Getting Started
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../Frequently-Asked-Questions/" title="Frequently Asked Questions" class="md-nav__link">
+      Frequently Asked Questions
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-5" type="checkbox" id="nav-1-5" checked>
+    
+    <label class="md-nav__link" for="nav-1-5">
+      Guides
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-1-5">
+        Guides
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Bootstrapping-the-blockchain/" title="Bootstrapping the Blockchain" class="md-nav__link">
+      Bootstrapping the Blockchain
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../rainborg-wat-dat/" title="RainBorg? Wat Dat?" class="md-nav__link">
+      RainBorg? Wat Dat?
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../using-trtlbot-plus-plus/" title="Using trtlbot++" class="md-nav__link">
+      Using trtlbot++
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-5-4" type="checkbox" id="nav-1-5-4" checked>
+    
+    <label class="md-nav__link" for="nav-1-5-4">
+      Mining
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-1-5-4">
+        Mining
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Pools/" title="Pools" class="md-nav__link">
+      Pools
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../cloud-mining/" title="Cloud Mining" class="md-nav__link">
+      Cloud Mining
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../mining-with-sbc/" title="Mining with a SBC" class="md-nav__link">
+      Mining with a SBC
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../mining-with-phone/" title="Mining with your Mobile Phone" class="md-nav__link">
+      Mining with your Mobile Phone
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="toc">
+        XMR-Stak
+      </label>
+    
+    <a href="./" title="XMR-Stak" class="md-nav__link md-nav__link--active">
+      XMR-Stak
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#downloading-and-installing-for-windows" title="Downloading and Installing for Windows" class="md-nav__link">
+    Downloading and Installing for Windows
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#downloading-and-installing-for-mac" title="Downloading and Installing for Mac" class="md-nav__link">
+    Downloading and Installing for Mac
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#downloading-and-installing-for-linux" title="Downloading and Installing for Linux" class="md-nav__link">
+    Downloading and Installing for Linux
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#xmr-stak-setup-and-configuration" title="XMR-Stak Setup and Configuration" class="md-nav__link">
+    XMR-Stak Setup and Configuration
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../xmr-stak-linux-guide/" title="XMR-Stak on Linux" class="md-nav__link">
+      XMR-Stak on Linux
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../XMRIG-Guide/" title="XMRig" class="md-nav__link">
+      XMRig
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-5-5" type="checkbox" id="nav-1-5-5">
+    
+    <label class="md-nav__link" for="nav-1-5-5">
+      Wallets
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-1-5-5">
+        Wallets
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../wallets/making-a-wallet/" title="Making a Wallet" class="md-nav__link">
+      Making a Wallet
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-5-5-2" type="checkbox" id="nav-1-5-5-2">
+    
+    <label class="md-nav__link" for="nav-1-5-5-2">
+      GUI Wallets
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="4">
+      <label class="md-nav__title" for="nav-1-5-5-2">
+        GUI Wallets
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../wallets/using-nest-wallet/" title="Nest Wallet" class="md-nav__link">
+      Nest Wallet
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../wallets/using-winforms-wallet/" title="WinForms Wallet" class="md-nav__link">
+      WinForms Wallet
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../wallets/using-simplewallet/" title="SimpleWallet (CLI)" class="md-nav__link">
+      SimpleWallet (CLI)
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../wallets/making-a-paper-wallet/" title="Paper Wallet" class="md-nav__link">
+      Paper Wallet
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../wallets/recovering-your-wallet/" title="Recovering your Wallet" class="md-nav__link">
+      Recovering your Wallet
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#downloading-and-installing-for-windows" title="Downloading and Installing for Windows" class="md-nav__link">
+    Downloading and Installing for Windows
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#downloading-and-installing-for-mac" title="Downloading and Installing for Mac" class="md-nav__link">
+    Downloading and Installing for Mac
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#downloading-and-installing-for-linux" title="Downloading and Installing for Linux" class="md-nav__link">
+    Downloading and Installing for Linux
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#xmr-stak-setup-and-configuration" title="XMR-Stak Setup and Configuration" class="md-nav__link">
+    XMR-Stak Setup and Configuration
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                  <a href="https://github.com/Sajo811/turtledocs/edit/master/docs/guides/mining/xmr-stak-guide.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
+                
+                
+                <h1 id="how-to-set-up-xmr-stak">How to Set Up XMR-Stak<a class="headerlink" href="#how-to-set-up-xmr-stak" title="Permanent link">&para;</a></h1>
+<p>XMR-Stak is a unified miner, which means the same program will be used to mine with both your CPU and your GPU. It will automatically detect your hardware and adjust the settings accordingly.</p>
+<h2 id="downloading-and-installing-for-windows">Downloading and Installing for Windows<a class="headerlink" href="#downloading-and-installing-for-windows" title="Permanent link">&para;</a></h2>
+<ol>
+<li>
+<p>Download and install <a href="https://github.com/fireice-uk/xmr-stak/releases/latest">XMR-Stak Unified Miner</a>. It will auto-detect your hardware, and tune everything for you.</p>
+</li>
+<li>
+<p>Make a folder called <code>TurtleCoin Miner</code> on your Desktop and unzip the files you just downloaded for XMR-Stak in there.</p>
+</li>
+<li>
+<p>Double-click on <code>xmr-stak.exe</code>.</p>
+</li>
+</ol>
+<p>##### To start XMR-Stak without using your CPU/GPU, follow these steps:<a name="xmr-stak-no-cpu-gpu"></a></p>
+<ul>
+<li>
+<p>Open Command Prompt</p>
+</li>
+<li>
+<p>Type <code>cd Desktop\TurtleCoin Miner</code></p>
+<ul>
+<li>To start XMR-Stak without utilising the CPU, type <code>xmr-stak.exe --noCPU</code></li>
+<li>To start XMR-Stak without utilizing your nVidia GPU, type <code>xmr-stak.exe --noNVIDIA</code></li>
+<li>To start XMR-Stak without utilizing your AMD GPU, type <code>xmr-stak.exe --noAMD</code></li>
+<li>To start XMR-Stak without utilizing either of your GPU's, type <code>xmr-stak.exe --noAMD --noNVIDIA</code></li>
+</ul>
+<p><strong>If you want to use both your CPU and your GPU, ignore these steps. Just launch <code>xmr-stak.exe</code></strong></p>
+</li>
+<li>
+<p>Click <code>Yes</code> when it asks if you want to run as Administrator. This is so that the program can see what hardware you're running.</p>
+</li>
+<li>
+<p>Check <a href="#setup-and-config">XMR-Stak Setup and Configuration</a></p>
+</li>
+</ul>
+<h2 id="downloading-and-installing-for-mac">Downloading and Installing for Mac<a class="headerlink" href="#downloading-and-installing-for-mac" title="Permanent link">&para;</a></h2>
+<p>See <a href="https://github.com/fireice-uk/xmr-stak/blob/master/doc/compile.md">https://github.com/fireice-uk/xmr-stak/blob/master/doc/compile.md</a> and <a href="https://github.com/fireice-uk/xmr-stak/blob/master/doc/compile_macOS.md">https://github.com/fireice-uk/xmr-stak/blob/master/doc/compile_macOS.md</a></p>
+<h2 id="downloading-and-installing-for-linux">Downloading and Installing for Linux<a class="headerlink" href="#downloading-and-installing-for-linux" title="Permanent link">&para;</a></h2>
+<p>View <a href="../XMR-Stak-Linux-Guide">this guide</a> to get started with XMR-Stak on Linux</p>
+<h2 id="xmr-stak-setup-and-configuration">XMR-Stak Setup and Configuration<a name="setup-and-config"></a><a class="headerlink" href="#xmr-stak-setup-and-configuration" title="Permanent link">&para;</a></h2>
+<p>Upon first launching XMR-Stak, the software will ask you several setup and configuration questions.</p>
+<ol>
+<li><code>Please enter: - Do you want to use the HTTP interface? Unlike the screen display, browser interface is not affected by the GPU lag. If you don't want to use it, please enter 0, otherwise enter port number that the miner should listen on</code></li>
+</ol>
+<p>Enter <code>0</code>, if you are like most people, and do not need to remotely check your hashrate.</p>
+<p>If you do need to, then enter a port number. 
+Let's take the port number as <code>0101</code> and your IP address as <code>26.24.105.14</code> as an example.</p>
+<p>To check the hashrate, enter in the address bar of your web browser, <code>&lt;26.24.105.14&gt;:&lt;0101&gt;</code>. It should show a page with your rig's hashrate.
+If you are checking from the same IP address, you can alternatively enter, <code>localhost:&lt;0101&gt;</code></p>
+<p>Make sure to enter your own IP address if you enable this feature. You can choose any port you want!</p>
+<ol>
+<li>``` </li>
+</ol>
+<p>Please enter: 
+   - Please enter the currency that you want to mine:</p>
+<ul>
+<li>aeon7</li>
+<li>bbscoin</li>
+<li>croat</li>
+<li>cryptonight</li>
+<li>cryptonight_heavy</li>
+<li>cryptonight_lite</li>
+<li>cryptonight_lite_v7</li>
+<li>cryptonight_v7</li>
+<li>edollar</li>
+<li>electroneum</li>
+<li>graft</li>
+<li>haven</li>
+<li>intense</li>
+<li>karbo</li>
+<li>monero7</li>
+<li>stellite</li>
+<li>sumokoin</li>
+</ul>
+<p><code>``
+Enter</code>cryptonight_lite_v7`</p>
+<ol>
+<li><code>- Pool address: e.g. pool.example.com:3333</code></li>
+</ol>
+<p>Choose a pool from any of the <a href="../Pools">available pools</a> that is <strong>closest to you</strong> and enter its URL (you will be able to add more later).</p>
+<ol>
+<li><code>- Username (Wallet address or pool login):</code>  </li>
+</ol>
+<p>If you have not yet downloaded and ran the TurtleCoin core software to sync the blockchain and create a wallet, you can make a <a href="../Making-a-Paper-Wallet">paper wallet</a> to start mining towards now, and import the wallet later.</p>
+<ol>
+<li><code>- Password (mostly empty or x):</code>  </li>
+</ol>
+<p>Enter <code>x</code>.</p>
+<ol>
+<li><code>- Rig identifier for pool-side statistics (needs pool support). Can be empty:</code></li>
+</ol>
+<p>Leave it empty and press enter.</p>
+<ol>
+<li><code>- Does this pool port support TLS/SSL? Use no if unknown. (y/N)</code>  </li>
+</ol>
+<p>In most cases, <code>N</code> is fine.</p>
+<ol>
+<li><code>- Do you want to use nicehash on this pool? (y/n)</code>  </li>
+</ol>
+<p>Enter <code>n</code>(in case you do, enter <code>y</code>).</p>
+<ol>
+<li>
+<p><code>- Do you want to use multiple pools? (y/n)</code>  </p>
+</li>
+<li>
+<p>Enter <code>y</code> if you would like to add more pools. </p>
+</li>
+<li>Give them all a weight of <code>10</code> if you're tired of reading, or if you want the best experience, give the pools nearest to you a higher number, and the ones further from you a lower number.  </li>
+<li>XMR-Stak will prioritize the highest weight pool, and fall back to the others if it cannot connect.</li>
+<li>If they are all given the same weight, it will connect to them in order of how they are listed, form top to bottom, in the configuration file.</li>
+<li>If you are on Windows &#8542;, it will ask for administrator permission again. Click <code>Yes</code> to grant it permission.</li>
+<li>If you are on Windows 10, it will not ask for it again.</li>
+</ol>
+<p>Done! The miner will now start scanning your hardware and will begin mining. Awesome!</p>
+<p>XMR-Stak will save your configuration in <code>config.txt</code>  in the same directory from which it was first run. 
+Your configuration for pools(algorithm to mine, address, port etc) will be saved in <code>pools.txt</code>
+The configuration of the device it mines(CPU/AMD/NVIDIA) will be saved in <code>cpu.txt</code>, <code>amd.txt</code> or <code>nvidia.txt</code>, respectively.</p>
+<p>Run XMR-Stak again from the same directory to reuse the configuration.</p>
+                
+                  
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../mining-with-phone/" title="Mining with your Mobile Phone" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                Mining with your Mobile Phone
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="../xmr-stak-linux-guide/" title="XMR-Stak on Linux" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                XMR-Stak on Linux
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        powered by
+        <a href="http://www.mkdocs.org">MkDocs</a>
+        and
+        <a href="https://squidfunk.github.io/mkdocs-material/">
+          Material for MkDocs</a>
+      </div>
+      
+        
+  <div class="md-footer-social">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+      <a href="https://github.com/sajo811" class="md-footer-social__link fa fa-github"></a>
+    
+  </div>
+
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../../assets/javascripts/application.b438e6c5.js"></script>
+      
+      <script>app.initialize({version:"0.17.3",url:{base:"../../.."}})</script>
+      
+    
+    
+      
+    
+  </body>
+</html>

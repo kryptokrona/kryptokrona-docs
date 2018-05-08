@@ -1,0 +1,87 @@
+# proj info
+site_name: 'TurtleCoin Wiki'
+site_description: 'Wiki for TurtleCoin'
+site_author: 'Sajo8'
+
+# repo
+repo_name: 'sajo811/turtledocs'
+repo_url: 'https://github.com/Sajo811/turtledocs'
+
+# config
+theme:
+  name: 'material'
+  font: false
+  logo: 'assets/images/logo.png'
+  favicon: 'assets/images/fav.png'
+  palette:
+    primary: 'blue'
+    accent: 'teal'
+  language: 'en'
+  direction: 'ltr'
+  feature:
+    tabs: true
+
+# customization
+extra:
+  search:
+    language: 'en'
+  social:
+    - type: 'github'
+      link: 'https://github.com/sajo811'
+
+# extensions
+markdown_extensions:
+  - admonition
+  - codehilite:
+      guess_lang: false
+  - toc:
+      permalink: true
+
+  #pymdown stuff from here on out
+  - pymdownx.arithmatex
+  - pymdownx.betterem:
+      smart_enable: all
+  - pymdownx.caret
+  - pymdownx.critic
+  - pymdownx.details
+  - pymdownx.emoji:
+      emoji_generator: !!python/name:pymdownx.emoji.to_svg
+  - pymdownx.inlinehilite
+  - pymdownx.magiclink
+  - pymdownx.mark
+  - pymdownx.smartsymbols
+  - pymdownx.superfences
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.tilde
+
+# directory org
+pages:
+    - Home:
+      - Home: Home.md
+      - Getting Started: Getting-Started.md
+    - About:
+      - About TurtleCoin: about/About-Turtlecoin.md
+    - FAQ:   
+      - Frequently Asked Questions: Frequently-Asked-Questions.md
+    - Guides:
+      - Bootstrapping the Blockchain: guides/Bootstrapping-the-blockchain.md
+      - RainBorg? Wat Dat?: guides/rainborg-wat-dat.md
+      - Using trtlbot++: guides/using-trtlbot-plus-plus.md
+      - Mining:
+        - XMR-Stak: guides/mining/xmr-stak-guide.md
+        - XMR-Stak on Linux: guides/mining/xmr-stak-linux-guide.md
+        - XMRig: guides/mining/XMRIG-Guide.md
+        - Pools: guides/mining/Pools.md
+        - Cloud Mining: guides/mining/cloud-mining.md
+        - Mining with a SBC: guides/mining/mining-with-sbc.md
+        - Mining with your Mobile Phone: guides/mining/mining-with-phone.md     
+      - Wallets:
+        - Making a Wallet: guides/wallets/making-a-wallet.md
+        - GUI Wallets:
+           - Nest Wallet: guides/wallets/using-nest-wallet.md
+           - WinForms Wallet: guides/wallets/using-winforms-wallet.md
+        - SimpleWallet (CLI): guides/wallets/using-simplewallet.md
+        - Paper Wallet: guides/wallets/making-a-paper-wallet.md
+        - Recovering your Wallet: guides/wallets/recovering-your-wallet.md
+

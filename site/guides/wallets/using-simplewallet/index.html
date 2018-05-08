@@ -1,0 +1,1748 @@
+
+
+
+
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+        <meta name="description" content="Wiki for TurtleCoin">
+      
+      
+      
+        <meta name="author" content="Sajo8">
+      
+      
+        <meta name="lang:clipboard.copy" content="Copy to clipboard">
+      
+        <meta name="lang:clipboard.copied" content="Copied to clipboard">
+      
+        <meta name="lang:search.language" content="en">
+      
+        <meta name="lang:search.pipeline.stopwords" content="True">
+      
+        <meta name="lang:search.pipeline.trimmer" content="True">
+      
+        <meta name="lang:search.result.none" content="No matching documents">
+      
+        <meta name="lang:search.result.one" content="1 matching document">
+      
+        <meta name="lang:search.result.other" content="# matching documents">
+      
+        <meta name="lang:search.tokenizer" content="[\s\-]+">
+      
+      <link rel="shortcut icon" href="../../../assets/images/fav.png">
+      <meta name="generator" content="mkdocs-0.17.3, mkdocs-material-2.7.3">
+    
+    
+      
+        <title>SimpleWallet (CLI) - TurtleCoin Wiki</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/application.8d40d89b.css">
+      
+        <link rel="stylesheet" href="../../../assets/stylesheets/application-palette.6079476c.css">
+      
+    
+    
+      <script src="../../../assets/javascripts/modernizr.1aa3b519.js"></script>
+    
+    
+      <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+      
+      <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    
+    
+    
+  </head>
+  
+    
+    
+    <body dir="ltr" data-md-color-primary="blue" data-md-color-accent="teal">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+          <svg xmlns="http://www.w3.org/2000/svg" width="416" height="448"
+    viewBox="0 0 416 448" id="github">
+  <path fill="currentColor" d="M160 304q0 10-3.125 20.5t-10.75 19-18.125
+        8.5-18.125-8.5-10.75-19-3.125-20.5 3.125-20.5 10.75-19 18.125-8.5
+        18.125 8.5 10.75 19 3.125 20.5zM320 304q0 10-3.125 20.5t-10.75
+        19-18.125 8.5-18.125-8.5-10.75-19-3.125-20.5 3.125-20.5 10.75-19
+        18.125-8.5 18.125 8.5 10.75 19 3.125 20.5zM360
+        304q0-30-17.25-51t-46.75-21q-10.25 0-48.75 5.25-17.75 2.75-39.25
+        2.75t-39.25-2.75q-38-5.25-48.75-5.25-29.5 0-46.75 21t-17.25 51q0 22 8
+        38.375t20.25 25.75 30.5 15 35 7.375 37.25 1.75h42q20.5 0
+        37.25-1.75t35-7.375 30.5-15 20.25-25.75 8-38.375zM416 260q0 51.75-15.25
+        82.75-9.5 19.25-26.375 33.25t-35.25 21.5-42.5 11.875-42.875 5.5-41.75
+        1.125q-19.5 0-35.5-0.75t-36.875-3.125-38.125-7.5-34.25-12.875-30.25-20.25-21.5-28.75q-15.5-30.75-15.5-82.75
+        0-59.25 34-99-6.75-20.5-6.75-42.5 0-29 12.75-54.5 27 0 47.5 9.875t47.25
+        30.875q36.75-8.75 77.25-8.75 37 0 70 8 26.25-20.5
+        46.75-30.25t47.25-9.75q12.75 25.5 12.75 54.5 0 21.75-6.75 42 34 40 34
+        99.5z" />
+</svg>
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="search" autocomplete="off">
+    <label class="md-overlay" data-md-component="overlay" for="drawer"></label>
+    
+      <a href="#using-simplewallet" tabindex="1" class="md-skip">
+        Skip to content
+      </a>
+    
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href="../../../Home/" title="TurtleCoin Wiki" class="md-header-nav__button md-logo">
+          
+            <img src="../../../assets/images/logo.png" width="24" height="24">
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          
+            
+              <span class="md-header-nav__topic">
+                TurtleCoin Wiki
+              </span>
+              <span class="md-header-nav__topic">
+                SimpleWallet (CLI)
+              </span>
+            
+          
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          
+            <label class="md-icon md-icon--search md-header-nav__button" for="search"></label>
+            
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+          
+        
+      </div>
+      
+        <div class="md-flex__cell md-flex__cell--shrink">
+          <div class="md-header-nav__source">
+            
+
+
+  
+
+
+  <a href="https://github.com/Sajo811/turtledocs/" title="Go to repository" class="md-source" data-md-source="github">
+    
+      <div class="md-source__icon">
+        <svg viewBox="0 0 24 24" width="24" height="24">
+          <use xlink:href="#github" width="24" height="24"></use>
+        </svg>
+      </div>
+    
+    <div class="md-source__repository">
+      sajo811/turtledocs
+    </div>
+  </a>
+
+          </div>
+        </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+        
+      
+      
+        
+
+  
+
+<nav class="md-tabs md-tabs--active" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../../Home/" title="Home" class="md-tabs__link md-tabs__link--active">
+          Home
+        </a>
+      
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+      
+      <main class="md-main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="drawer">
+    <span class="md-nav__button md-logo">
+      
+        <img src="../../../assets/images/logo.png" width="48" height="48">
+      
+    </span>
+    TurtleCoin Wiki
+  </label>
+  
+    <div class="md-nav__source">
+      
+
+
+  
+
+
+  <a href="https://github.com/Sajo811/turtledocs/" title="Go to repository" class="md-source" data-md-source="github">
+    
+      <div class="md-source__icon">
+        <svg viewBox="0 0 24 24" width="24" height="24">
+          <use xlink:href="#github" width="24" height="24"></use>
+        </svg>
+      </div>
+    
+    <div class="md-source__repository">
+      sajo811/turtledocs
+    </div>
+  </a>
+
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-1" type="checkbox" id="nav-1" checked>
+    
+    <label class="md-nav__link" for="nav-1">
+      Home
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-1">
+        Home
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../Home/" title="Home" class="md-nav__link">
+      Home
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../about/About-Turtlecoin/" title="About TurtleCoin" class="md-nav__link">
+      About TurtleCoin
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../Getting-Started/" title="Getting Started" class="md-nav__link">
+      Getting Started
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../Frequently-Asked-Questions/" title="Frequently Asked Questions" class="md-nav__link">
+      Frequently Asked Questions
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-5" type="checkbox" id="nav-1-5" checked>
+    
+    <label class="md-nav__link" for="nav-1-5">
+      Guides
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-1-5">
+        Guides
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Bootstrapping-the-blockchain/" title="Bootstrapping the Blockchain" class="md-nav__link">
+      Bootstrapping the Blockchain
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../rainborg-wat-dat/" title="RainBorg? Wat Dat?" class="md-nav__link">
+      RainBorg? Wat Dat?
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../using-trtlbot-plus-plus/" title="Using trtlbot++" class="md-nav__link">
+      Using trtlbot++
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-5-4" type="checkbox" id="nav-1-5-4">
+    
+    <label class="md-nav__link" for="nav-1-5-4">
+      Mining
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-1-5-4">
+        Mining
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../mining/Pools/" title="Pools" class="md-nav__link">
+      Pools
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../mining/cloud-mining/" title="Cloud Mining" class="md-nav__link">
+      Cloud Mining
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../mining/mining-with-sbc/" title="Mining with a SBC" class="md-nav__link">
+      Mining with a SBC
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../mining/mining-with-phone/" title="Mining with your Mobile Phone" class="md-nav__link">
+      Mining with your Mobile Phone
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../mining/xmr-stak-guide/" title="XMR-Stak" class="md-nav__link">
+      XMR-Stak
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../mining/xmr-stak-linux-guide/" title="XMR-Stak on Linux" class="md-nav__link">
+      XMR-Stak on Linux
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../mining/XMRIG-Guide/" title="XMRig" class="md-nav__link">
+      XMRig
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-5-5" type="checkbox" id="nav-1-5-5" checked>
+    
+    <label class="md-nav__link" for="nav-1-5-5">
+      Wallets
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-1-5-5">
+        Wallets
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../making-a-wallet/" title="Making a Wallet" class="md-nav__link">
+      Making a Wallet
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-5-5-2" type="checkbox" id="nav-1-5-5-2">
+    
+    <label class="md-nav__link" for="nav-1-5-5-2">
+      GUI Wallets
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="4">
+      <label class="md-nav__title" for="nav-1-5-5-2">
+        GUI Wallets
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../using-nest-wallet/" title="Nest Wallet" class="md-nav__link">
+      Nest Wallet
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../using-winforms-wallet/" title="WinForms Wallet" class="md-nav__link">
+      WinForms Wallet
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="toc">
+        SimpleWallet (CLI)
+      </label>
+    
+    <a href="./" title="SimpleWallet (CLI)" class="md-nav__link md-nav__link--active">
+      SimpleWallet (CLI)
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#screenshots" title="Screenshots" class="md-nav__link">
+    Screenshots
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#downloading" title="Downloading" class="md-nav__link">
+    Downloading
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#installing" title="Installing" class="md-nav__link">
+    Installing
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#installing-on-windows" title="Installing on Windows" class="md-nav__link">
+    Installing on Windows
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#installing-on-mac" title="Installing on Mac" class="md-nav__link">
+    Installing on Mac
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#installing-on-linux" title="Installing on Linux" class="md-nav__link">
+    Installing on Linux
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#synchronizing-the-blockchain" title="Synchronizing the Blockchain" class="md-nav__link">
+    Synchronizing the Blockchain
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#using-checkpoints" title="Using Checkpoints" class="md-nav__link">
+    Using Checkpoints
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#windows" title="Windows" class="md-nav__link">
+    Windows
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mac" title="Mac" class="md-nav__link">
+    Mac
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#linux" title="Linux" class="md-nav__link">
+    Linux
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#using-a-remote-node" title="Using a Remote Node" class="md-nav__link">
+    Using a Remote Node
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#how-to-do-it" title="How to do it" class="md-nav__link">
+    How to do it
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#making-a-script-to-do-it-automatically" title="Making a Script to do it automatically" class="md-nav__link">
+    Making a Script to do it automatically
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#known-remote-daemons" title="Known remote daemons" class="md-nav__link">
+    Known remote daemons
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#using-simplewallet_1" title="Using SimpleWallet" class="md-nav__link">
+    Using SimpleWallet
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#windows_1" title="Windows" class="md-nav__link">
+    Windows
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mac_1" title="Mac" class="md-nav__link">
+    Mac
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#linux_1" title="Linux" class="md-nav__link">
+    Linux
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#creating-a-wallet" title="Creating a Wallet" class="md-nav__link">
+    Creating a Wallet
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#opening-a-wallet" title="Opening a Wallet" class="md-nav__link">
+    Opening a Wallet
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#viewing-wallet-address" title="Viewing Wallet Address" class="md-nav__link">
+    Viewing Wallet Address
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exporting-keys" title="Exporting Keys" class="md-nav__link">
+    Exporting Keys
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#viewing-wallet-balance" title="Viewing Wallet Balance" class="md-nav__link">
+    Viewing Wallet Balance
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sending-turtlecoin-transactions" title="Sending TurtleCoin Transactions" class="md-nav__link">
+    Sending TurtleCoin Transactions
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#optimizing-your-wallet" title="Optimizing your Wallet" class="md-nav__link">
+    Optimizing your Wallet
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#payment-id" title="Payment ID" class="md-nav__link">
+    Payment ID
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exiting-the-wallet" title="Exiting the Wallet" class="md-nav__link">
+    Exiting the Wallet
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#recovering-your-wallet" title="Recovering your Wallet" class="md-nav__link">
+    Recovering your Wallet
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#private-spend-and-view-keys" title="Private Spend and View Keys" class="md-nav__link">
+    Private Spend and View Keys
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#25-word-mnemonic-seed" title="25 Word Mnemonic Seed" class="md-nav__link">
+    25 Word Mnemonic Seed
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#other-commands" title="Other Commands" class="md-nav__link">
+    Other Commands
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#help" title="Help" class="md-nav__link">
+    Help
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../making-a-paper-wallet/" title="Paper Wallet" class="md-nav__link">
+      Paper Wallet
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../recovering-your-wallet/" title="Recovering your Wallet" class="md-nav__link">
+      Recovering your Wallet
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#screenshots" title="Screenshots" class="md-nav__link">
+    Screenshots
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#downloading" title="Downloading" class="md-nav__link">
+    Downloading
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#installing" title="Installing" class="md-nav__link">
+    Installing
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#installing-on-windows" title="Installing on Windows" class="md-nav__link">
+    Installing on Windows
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#installing-on-mac" title="Installing on Mac" class="md-nav__link">
+    Installing on Mac
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#installing-on-linux" title="Installing on Linux" class="md-nav__link">
+    Installing on Linux
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#synchronizing-the-blockchain" title="Synchronizing the Blockchain" class="md-nav__link">
+    Synchronizing the Blockchain
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#using-checkpoints" title="Using Checkpoints" class="md-nav__link">
+    Using Checkpoints
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#windows" title="Windows" class="md-nav__link">
+    Windows
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mac" title="Mac" class="md-nav__link">
+    Mac
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#linux" title="Linux" class="md-nav__link">
+    Linux
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#using-a-remote-node" title="Using a Remote Node" class="md-nav__link">
+    Using a Remote Node
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#how-to-do-it" title="How to do it" class="md-nav__link">
+    How to do it
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#making-a-script-to-do-it-automatically" title="Making a Script to do it automatically" class="md-nav__link">
+    Making a Script to do it automatically
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#known-remote-daemons" title="Known remote daemons" class="md-nav__link">
+    Known remote daemons
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#using-simplewallet_1" title="Using SimpleWallet" class="md-nav__link">
+    Using SimpleWallet
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#windows_1" title="Windows" class="md-nav__link">
+    Windows
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mac_1" title="Mac" class="md-nav__link">
+    Mac
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#linux_1" title="Linux" class="md-nav__link">
+    Linux
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#creating-a-wallet" title="Creating a Wallet" class="md-nav__link">
+    Creating a Wallet
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#opening-a-wallet" title="Opening a Wallet" class="md-nav__link">
+    Opening a Wallet
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#viewing-wallet-address" title="Viewing Wallet Address" class="md-nav__link">
+    Viewing Wallet Address
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exporting-keys" title="Exporting Keys" class="md-nav__link">
+    Exporting Keys
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#viewing-wallet-balance" title="Viewing Wallet Balance" class="md-nav__link">
+    Viewing Wallet Balance
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sending-turtlecoin-transactions" title="Sending TurtleCoin Transactions" class="md-nav__link">
+    Sending TurtleCoin Transactions
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#optimizing-your-wallet" title="Optimizing your Wallet" class="md-nav__link">
+    Optimizing your Wallet
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#payment-id" title="Payment ID" class="md-nav__link">
+    Payment ID
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exiting-the-wallet" title="Exiting the Wallet" class="md-nav__link">
+    Exiting the Wallet
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#recovering-your-wallet" title="Recovering your Wallet" class="md-nav__link">
+    Recovering your Wallet
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#private-spend-and-view-keys" title="Private Spend and View Keys" class="md-nav__link">
+    Private Spend and View Keys
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#25-word-mnemonic-seed" title="25 Word Mnemonic Seed" class="md-nav__link">
+    25 Word Mnemonic Seed
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#other-commands" title="Other Commands" class="md-nav__link">
+    Other Commands
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#help" title="Help" class="md-nav__link">
+    Help
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                  <a href="https://github.com/Sajo811/turtledocs/edit/master/docs/guides/wallets/using-simplewallet.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
+                
+                
+                <h1 id="using-simplewallet">Using SimpleWallet<a class="headerlink" href="#using-simplewallet" title="Permanent link">&para;</a></h1>
+<h2 id="screenshots">Screenshots<a class="headerlink" href="#screenshots" title="Permanent link">&para;</a></h2>
+<p>Here's a quick image of SimpleWallet in action-</p>
+<p><img alt="simplewallet" src="../guides/wallets/images/screenshot_simplewallet.png" /></p>
+<h2 id="downloading">Downloading<a class="headerlink" href="#downloading" title="Permanent link">&para;</a></h2>
+<p>Binary distributions can be found <a href="https://github.com/turtlecoin/turtlecoin/releases/latest">here</a>.</p>
+<p>Select the appropriate file for the target platform (Windows, Mac, Linux). </p>
+<p>Windows binaries are provided in <code>.zip</code> format, while Mac and Linux are provided in <code>.tar.gz</code> format.</p>
+<h2 id="installing">Installing<a class="headerlink" href="#installing" title="Permanent link">&para;</a></h2>
+<h3 id="installing-on-windows">Installing on Windows<a class="headerlink" href="#installing-on-windows" title="Permanent link">&para;</a></h3>
+<p>Extract the <em>.zip</em> file (<code>turtlecoin...-windows.zip</code>).</p>
+<h3 id="installing-on-mac">Installing on Mac<a class="headerlink" href="#installing-on-mac" title="Permanent link">&para;</a></h3>
+<p>Extract the <em>.tar.gz</em> file:</p>
+<div class="codehilite"><pre><span></span>tar -xzf turtlecoin..-mac.tar.gz
+</pre></div>
+
+<h3 id="installing-on-linux">Installing on Linux<a class="headerlink" href="#installing-on-linux" title="Permanent link">&para;</a></h3>
+<p>Extract the <em>.tar.gz</em> file: </p>
+<div class="codehilite"><pre><span></span>tar -xzf turtlecoin..-linux.tar.gz
+</pre></div>
+
+<h2 id="synchronizing-the-blockchain">Synchronizing the Blockchain<a class="headerlink" href="#synchronizing-the-blockchain" title="Permanent link">&para;</a></h2>
+<p>Running <code>TurtleCoind</code> will start the <em>TurtleCoind</em> network daemon, which will connect to the network and begin downloading and verifying the TurtleCoin blockchain.  </p>
+<p>Because the blockchain is constantly growing, the file size is always increasing, and <em>TurtleCoind</em> must verify each block (CPU intensive). </p>
+<p>To save time, consider downloading a cached 'bootstrap' of the blockchain (see <a href="../Bootstrapping-the-Blockchain">Bootstrapping the Blockchain</a> for more info).</p>
+<h4 id="using-checkpoints">Using Checkpoints<a class="headerlink" href="#using-checkpoints" title="Permanent link">&para;</a></h4>
+<p>In <strong>versions 0.4.3+</strong> you can sync a fresh chain from block 0 much quicker by using checkpoints. Follow these steps-
+  * On <a href="https://github.com/turtlecoin/checkpoints/raw/master/checkpoints.csv">this link</a>, right click -&gt; <code>Save Link As..</code> 
+  * Save in the directory where your wallet and daemon are
+  * Open Command Prompt/the terminal in the directory where you saved it
+  * Type, for Windows,<br />
+  <div class="codehilite"><pre><span></span>TurtleCoind.exe --load-checkpoints checkpoints.csv
+</pre></div>
+  Or, for <strong>Mac and Linux</strong>, type
+  <div class="codehilite"><pre><span></span>./TurtleCoind --load-checkpoints checkpoints.csv
+</pre></div></p>
+<h3 id="windows">Windows<a class="headerlink" href="#windows" title="Permanent link">&para;</a></h3>
+<p>Run the <code>TurtleCoind.exe</code> executable extracted from the Windows binary zip:</p>
+<div class="codehilite"><pre><span></span>cd Downloads\turtlecoin-windows
+TurtleCoind.exe
+</pre></div>
+
+<h3 id="mac">Mac<a class="headerlink" href="#mac" title="Permanent link">&para;</a></h3>
+<p>Run the <code>TurtleCoind</code> binary extracted from the Mac binary tarball:</p>
+<div class="codehilite"><pre><span></span>./TurtleCoind
+</pre></div>
+
+<h3 id="linux">Linux<a class="headerlink" href="#linux" title="Permanent link">&para;</a></h3>
+<p>Run the <code>TurtleCoind</code> binary extracted from the Linux binary tarball:</p>
+<div class="codehilite"><pre><span></span>./TurtleCoind
+</pre></div>
+
+<h4 id="using-a-remote-node">Using a Remote Node<a name="using-remote-node"></a><a class="headerlink" href="#using-a-remote-node" title="Permanent link">&para;</a></h4>
+<p>In case you don't want to download the blockchain and verify it everytime, you can instead use a Remote Node to quickly sync the blockchain.</p>
+<h5 id="how-to-do-it">How to do it<a class="headerlink" href="#how-to-do-it" title="Permanent link">&para;</a></h5>
+<ol>
+<li>Open up a command prompt window and navigate to the folder that contains <em>simplewallet</em>.</li>
+<li>Use the following command to start SimpleWallet on Windows:</li>
+</ol>
+<div class="codehilite"><pre><span></span>simplewallet.exe --remote-daemon host:port
+</pre></div>
+
+<p>Or, for <strong>Mac and Linux</strong>,</p>
+<div class="codehilite"><pre><span></span>./simplewallet --remote-daemon host:port
+</pre></div>
+
+<p>Replace <code>host:port</code> with values from one of the public remote daemons available below.</p>
+<p>You can now follow your normal process to access your wallet.</p>
+<p>For example-</p>
+<div class="codehilite"><pre><span></span>simplewallet.exe --remote-daemon public.turtlenode.io:11898
+</pre></div>
+
+<h5 id="making-a-script-to-do-it-automatically">Making a Script to do it automatically<a class="headerlink" href="#making-a-script-to-do-it-automatically" title="Permanent link">&para;</a></h5>
+<ol>
+<li>Open NotePad and type the following lines inside:</li>
+</ol>
+<div class="codehilite"><pre><span></span>@echo off
+simplewallet.exe --remote-daemon host:port
+pause
+</pre></div>
+
+<ol>
+<li>Replace<code>host:port</code> with one of the values from the table below</li>
+<li>Save the filename as <code>start.bat</code> and save the file as <code>All files</code>.</li>
+<li>Double click on the file to start the daemon.</li>
+</ol>
+<h5 id="known-remote-daemons">Known remote daemons<a class="headerlink" href="#known-remote-daemons" title="Permanent link">&para;</a></h5>
+<table>
+<thead>
+<tr>
+<th align="center">Host</th>
+<th align="center">Port</th>
+<th align="center">Website</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">public.turtlenode.io</td>
+<td align="center">11898</td>
+<td align="center"><a href="https://turtlenode.io">https://turtlenode.io</a></td>
+</tr>
+</tbody>
+</table>
+<h2 id="using-simplewallet_1">Using SimpleWallet<a class="headerlink" href="#using-simplewallet_1" title="Permanent link">&para;</a></h2>
+<p>With <code>TurtleCoind</code> still running in the background or another terminal/shell/command prompt, open SimpleWallet in a new shell:</p>
+<h4 id="windows_1">Windows<a class="headerlink" href="#windows_1" title="Permanent link">&para;</a></h4>
+<p>Run the <code>simplewallet.exe</code> executable from the extracted folder.</p>
+<h4 id="mac_1">Mac<a class="headerlink" href="#mac_1" title="Permanent link">&para;</a></h4>
+<div class="codehilite"><pre><span></span>./simplewallet
+</pre></div>
+
+<h4 id="linux_1">Linux<a class="headerlink" href="#linux_1" title="Permanent link">&para;</a></h4>
+<div class="codehilite"><pre><span></span>./simplewallet
+</pre></div>
+
+<h3 id="creating-a-wallet">Creating a Wallet<a class="headerlink" href="#creating-a-wallet" title="Permanent link">&para;</a></h3>
+<p>In the running <em>simplewallet</em> client:  </p>
+<ul>
+<li>Press <code>G</code> to generate a new wallet.  </li>
+<li>Enter a filename for the wallet (for example,<code>trtl</code>).  </li>
+<li>Enter a strong password to encrypt the wallet with, and confirm it.</li>
+</ul>
+<div class="codehilite"><pre><span></span>Welcome, please choose an option below:
+
+        [G] - Generate a new wallet address
+        [O] - Open a wallet already on your system
+        [S] - Regenerate your wallet using a seed phrase of words
+        [I] - Import your wallet using a View Key and Spend Key
+        [V] - Import a view only wallet (Unable to send transactions)
+
+or, press CTRL_C to exit: G
+What would you like to call your new wallet?: trtl
+Give your new wallet a password: *******************
+Confirm your new password: *******************
+
+Welcome to your new wallet, here is your payment address:
+TRTLv_this_is_your_public_address_ok_to_share_key_Wpk
+
+Please copy your secret keys and mnemonic seed and store them in a secure location:
+Private spend key: really_long_random_spend_key_do_not_share_this
+Private view key: really_long_random_view_key_do_not_share_this
+Mnemonic seed: 25_random_words_do_not_share_this
+
+If you lose these your wallet cannot be recreated!
+</pre></div>
+
+<h3 id="opening-a-wallet">Opening a Wallet<a class="headerlink" href="#opening-a-wallet" title="Permanent link">&para;</a></h3>
+<p>In the running <em>simplewallet</em> client:  </p>
+<ul>
+<li>Press <code>O</code> to open an existing wallet file.  </li>
+<li>Enter the filename given for the wallet when it was created.  </li>
+<li>Enter the passphrase given for the wallet when it was created.</li>
+</ul>
+<div class="codehilite"><pre><span></span>Welcome, please choose an option below:
+
+        [G] - Generate a new wallet address
+        [O] - Open a wallet already on your system
+        [S] - Regenerate your wallet using a seed phrase of words
+        [I] - Import your wallet using a View Key and Spend Key
+        [V] - Import a view only wallet (Unable to send transactions)
+
+or, press CTRL_C to exit: O
+What is the name of the wallet you want to open?: trtl
+Enter password: **********
+
+Making initial contact with TurtleCoind.
+Please wait, this sometimes can take a long time...
+
+Your wallet TRTLv_this_is_your_public_address_ok_to_share_key_Wpk  has been successfully opened!
+
+Scanning through the blockchain to find transactions that belong to you.
+Please wait, this will take some time.
+
+Finished scanning blockchain!
+
+Use the help command to see the list of available commands.
+Use exit when closing to ensure your wallet file doesn&#39;t get corrupted.
+
+[TRTL trtl]:
+</pre></div>
+
+<h3 id="viewing-wallet-address">Viewing Wallet Address<a class="headerlink" href="#viewing-wallet-address" title="Permanent link">&para;</a></h3>
+<p>To view a wallet's public address, in the running <em>simplewallet</em> client, after opening a wallet, type <code>address</code> and press enter.</p>
+<div class="codehilite"><pre><span></span>[TRTL trtl]: address
+TRTLv_this_is_your_public_address_ok_to_share_key_Wpk
+[TRTL trtl]:
+</pre></div>
+
+<h3 id="exporting-keys">Exporting Keys<a class="headerlink" href="#exporting-keys" title="Permanent link">&para;</a></h3>
+<p>Each TurtleCoin  wallet is, essentially, just a pair of keys (<em>View Key</em> and <em>Spend Key</em>) from which the public address is derived.<br />
+It is <strong>very</strong> important to export these keys and back them up somewhere that is safe and secure (meaning somewhere reliable/permanent that no one else can access). </p>
+<p>In the event of a lost or corrupted wallet file, computer crash, etc., the <em>View Key</em> and <em>Spend Key</em> are the only way to restore a wallet and recover the funds it holds.</p>
+<p><strong>DO NOT SHARE IT WITH ANYONE</strong>. <strong>Anyone who has these can <em>access your funds</em> and has <em>complete control</em> over your wallet.</strong></p>
+<p>In the running <em>simplewallet</em> client, after opening a wallet, type <code>export_keys</code> and press <code>enter</code>.<br />
+The <em>View Key</em> and <em>Spend Key</em> will appear. Copy them and store them <strong>safely and securely</strong>.</p>
+<div class="codehilite"><pre><span></span>[TRTL trtl]: export_keys
+Enter password: **********
+Private spend key: really_long_random_spend_key_do_not_share_this
+Private view key: really_long_random_view_key_do_not_share_this
+Mnemonic seed: 25_random_words_do_not_share_this
+[TRTL trtl]:
+</pre></div>
+
+<h3 id="viewing-wallet-balance">Viewing Wallet Balance<a class="headerlink" href="#viewing-wallet-balance" title="Permanent link">&para;</a></h3>
+<p>In the running <em>simplewallet</em> client, after opening a wallet, type <code>balance</code> and press enter to see the wallet's balance.</p>
+<div class="codehilite"><pre><span></span>[TRTL trtl]: balance
+Available balance: 1000.00 TRTL
+Locked (unconfirmed) balance: 100.00 TRTL
+Total balance: 1100.00 TRTL
+[TRTL trtl]:
+</pre></div>
+
+<h3 id="sending-turtlecoin-transactions">Sending TurtleCoin Transactions<a name="tx-trtl"></a><a class="headerlink" href="#sending-turtlecoin-transactions" title="Permanent link">&para;</a></h3>
+<p>In the running <em>simplewallet</em> client, after opening a wallet..</p>
+<ul>
+<li>
+<p>type:<code>transfer</code></p>
+</li>
+<li>
+<p>type/paste the address you want to send the TRTL to and press enter</p>
+</li>
+<li>
+<p>type the amount of TRTL you want to send (like <code>100</code>) and press enter</p>
+</li>
+<li>
+<p>press enter to use the default fee of 0.1 TRTL (or set it higher if you're sending a large amount of TRTL)</p>
+</li>
+<li>
+<p>press enter to use the default mixin of 5 (or set it higher if you want a more private transaction)</p>
+</li>
+<li>
+<p>enter the payment ID if you have one (usually not needed). Check the <a href="#tx-trtl-p-id">payment ID section</a> if you're not sure when/how to use it.</p>
+</li>
+<li>
+<p>confirm that the details are correct and enter <code>y</code>. If something is amiss, enter <code>n</code> and follow the steps again. </p>
+</li>
+<li>
+<p>enter your password</p>
+</li>
+</ul>
+<p>Your transaction should be sent!</p>
+<p>Example:</p>
+<p><img alt="transfer" src="../guides/wallets/images/transfer-simple.png" /></p>
+<p>Mixin is how many times a transaction is "mixed" with others for obfuscation and privacy. </p>
+<p>Most people suggest a mixin of <code>5</code> or more. Larger mixin's will take longer to be confirmed unless a higher fee is used. A mixin of <code>0</code> can be used to have a non-private transaction(it is strongly advised not to do so though).</p>
+<h4 id="optimizing-your-wallet">Optimizing your Wallet<a class="headerlink" href="#optimizing-your-wallet" title="Permanent link">&para;</a></h4>
+<p>When you send a transaction you have to include the "key images" of previous payments. So if you're sending 6000 TRTL you might need to include 6 x 1000 TRTL payments from mining to make it up. </p>
+<p>If, however, you had a bigger 6000 payment from somewhere, you could just include that and the transaction would be 6 times smaller.</p>
+<p>Fusion transactions take all your small payments and combine them into big ones, so you can send large ones at once</p>
+<p>To quickly optimize your wallet, for larger transactions which aren't nearing your full balance and you want to do it quickly, type <em>(this can take some time)</em>-</p>
+<div class="codehilite"><pre><span></span>quick_optimize
+</pre></div>
+
+<p>and press <code>y</code></p>
+<p>If you want to fully optimize your wallet, preparing your wallet to send upto your full balance, type <em>(this can take some time)</em>-</p>
+<div class="codehilite"><pre><span></span>full_optimize
+</pre></div>
+
+<p>and press <code>y</code></p>
+<p>That's it! It will display a message <code>(Full) optmization completed!</code> when it's done.</p>
+<p><img alt="optimize" src="../guides/wallets/images/optimize-simple.png" /></p>
+<h4 id="payment-id">Payment ID<a name="tx-trtl-p-id"></a><a class="headerlink" href="#payment-id" title="Permanent link">&para;</a></h4>
+<p>Because transactions on the TurtleCoin blockchain are privatized, in some situations a payment ID  is necessary for the recipient to be able to determine where the payment came from, for instance when depositing to an exchange or other service.</p>
+<p><strong>You need it if you're sending TRTL to an exchange, the tipbot or RainBorg</strong>.</p>
+<p>To send a transaction with a payment ID, enter it when prompted to.</p>
+<p><img alt="p-id" src="../guides/wallets/images/p-id-simple.png" /></p>
+<p>Note that, typically, the service/recipient will generate and provide the required payment ID. </p>
+<h3 id="exiting-the-wallet">Exiting the Wallet<a class="headerlink" href="#exiting-the-wallet" title="Permanent link">&para;</a></h3>
+<p>"Live" wallets loaded into the <em>simplewallet</em> client must be synced with the blockchain in order to properly calculate balance, view transaction history, etc. </p>
+<p>It is important to properly save the wallet data before exiting <em>simplewallet</em> so that the synchronized data is not lost.</p>
+<p>To save a wallet's data and exit, in the running <em>simplewallet</em> client, with an open wallet, type <code>exit</code> and press <code>enter</code></p>
+<div class="codehilite"><pre><span></span>[TRTL trtl]: exit
+Saving and exiting wallet, please wait...
+Done
+(the wallet closes)
+</pre></div>
+
+<h3 id="recovering-your-wallet">Recovering your Wallet<a class="headerlink" href="#recovering-your-wallet" title="Permanent link">&para;</a></h3>
+<h4 id="private-spend-and-view-keys">Private Spend and View Keys<a name="recover-spend-view-keys"></a><a class="headerlink" href="#private-spend-and-view-keys" title="Permanent link">&para;</a></h4>
+<p>In the running <em>simplewallet</em> client, </p>
+<ul>
+<li>
+<p>type <code>I</code> </p>
+</li>
+<li>
+<p>Enter your private spend and view key</p>
+</li>
+<li>
+<p>Set a name for your new wallet (for example, <code>trtl</code>)</p>
+</li>
+<li>
+<p>Specify a strong password to encrypt your wallet with and confirm it</p>
+</li>
+</ul>
+<div class="codehilite"><pre><span></span>Welcome, please choose an option below:
+
+        [G] - Generate a new wallet address
+        [O] - Open a wallet already on your system
+        [S] - Regenerate your wallet using a seed phrase of words
+        [I] - Import your wallet using a View Key and Spend Key
+        [V] - Import a view only wallet (Unable to send transactions)
+
+or, press CTRL_C to exit: I
+Private Spend Key: 0ef591a21666ea8b4b613306d948eaa4a8a5a2d9a83289487277267b0574e
+404
+Private View Key: 692732003133cd11c1c09f9d0e25f19852241a757a33f4c16b5546abb628b9
+0d
+What would you like to call your new wallet?: trtl
+Give your new wallet a password: **********
+Confirm your new password: **********
+
+Making initial contact with TurtleCoind.
+Please wait, this sometimes can take a long time...
+</pre></div>
+
+<div class="codehilite"><pre><span></span>Once done, press enter. The wallet will then begin synchronizing with the blockchain. When done, it will open and you can access it&#39;s other features.
+</pre></div>
+
+
+<h4 id="25-word-mnemonic-seed">25 Word Mnemonic Seed<a class="headerlink" href="#25-word-mnemonic-seed" title="Permanent link">&para;</a></h4>
+<p>In the running <em>simplewallet</em> client,</p>
+<ul>
+<li>
+<p>type <code>S</code></p>
+</li>
+<li>
+<p>Enter your 25 word mnemonic seed</p>
+</li>
+<li>
+<p>Set a name for your new wallet (for example, <code>trtl</code>)</p>
+</li>
+<li>
+<p>Specify a strong password to encrypt your wallet with and confirm it</p>
+</li>
+</ul>
+<div class="codehilite"><pre><span></span>Welcome, please choose an option below:
+
+        [G] - Generate a new wallet address
+        [O] - Open a wallet already on your system
+        [S] - Regenerate your wallet using a seed phrase of words
+        [I] - Import your wallet using a View Key and Spend Key
+        [V] - Import a view only wallet (Unable to send transactions)
+
+or, press CTRL_C to exit: S
+Mnemonic Phrase (25 words):  nanny dangerous strained bias whale lunar inwardly
+shipped soapy sincerely faked utopia empty fishing ceiling gained ongoing uneven
+ oasis ashtray movement dating dwindling elope ashtray
+What would you like to call your new wallet?: trtl
+Give your new wallet a password: **********
+Confirm your new password: **********
+
+Making initial contact with TurtleCoind.
+Please wait, this sometimes can take a long time...
+</pre></div>
+
+<p>Once done, press enter. The wallet will then begin synchronizing with the blockchain. When done, it will open and you can access it's other features.</p>
+<h3 id="other-commands">Other Commands<a class="headerlink" href="#other-commands" title="Permanent link">&para;</a></h3>
+<p>Following is a table of other commands not covered previously, how to use them, and what they do.</p>
+<table>
+<thead>
+<tr>
+<th align="center">Name</th>
+<th align="center">Usage</th>
+<th align="center">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">reset</td>
+<td align="center"><code>reset</code></td>
+<td align="center">Discards any cached data and rechecks the blockchain for transactions.</td>
+</tr>
+<tr>
+<td align="center">blockchain height</td>
+<td align="center"><code>bc_height</code></td>
+<td align="center">Returns current blockchain height.</td>
+</tr>
+<tr>
+<td align="center">incoming transfers</td>
+<td align="center"><code>incoming_transfers</code></td>
+<td align="center">Lists all incoming transfers.</td>
+</tr>
+<tr>
+<td align="center">outgoing transfers</td>
+<td align="center"><code>outgoing_transfers</code></td>
+<td align="center">Lists all outgoing transfers.</td>
+</tr>
+<tr>
+<td align="center">list transfers</td>
+<td align="center"><code>list_transfers</code></td>
+<td align="center">Lists all transfers, incoming and outgoing.</td>
+</tr>
+<tr>
+<td align="center">save</td>
+<td align="center"><code>save</code></td>
+<td align="center">Saves your current wallet state without closing it</td>
+</tr>
+</tbody>
+</table>
+<h3 id="help">Help<a class="headerlink" href="#help" title="Permanent link">&para;</a></h3>
+<p>You can always type <code>help</code> to see a list of commands and a short description of each command.</p>
+<div class="codehilite"><pre><span></span>[TRTL trtl]: help
+Available commands:
+help                     List this help message
+reset                    Discard cached data and recheck for transactions
+bc_height                Show the blockchain height
+balance                  Display how much TRTL you have
+export_keys              Export your private keys
+address                  Displays your payment address
+exit                     Exit and save your wallet
+save                     Save your wallet state
+incoming_transfers       Show incoming transfers
+outgoing_transfers       Show outgoing transfers
+list_transfers           Show all transfers
+quick_optimize           Quickly optimize your wallet to send large amounts
+full_optimize            Fully optimize your wallet to send large amounts
+transfer                 Send TRTL to someone
+[TRTL trtl]:
+</pre></div>
+                
+                  
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../using-winforms-wallet/" title="WinForms Wallet" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                WinForms Wallet
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="../making-a-paper-wallet/" title="Paper Wallet" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                Paper Wallet
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        powered by
+        <a href="http://www.mkdocs.org">MkDocs</a>
+        and
+        <a href="https://squidfunk.github.io/mkdocs-material/">
+          Material for MkDocs</a>
+      </div>
+      
+        
+  <div class="md-footer-social">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+      <a href="https://github.com/sajo811" class="md-footer-social__link fa fa-github"></a>
+    
+  </div>
+
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../../assets/javascripts/application.b438e6c5.js"></script>
+      
+      <script>app.initialize({version:"0.17.3",url:{base:"../../.."}})</script>
+      
+    
+    
+      
+    
+  </body>
+</html>
