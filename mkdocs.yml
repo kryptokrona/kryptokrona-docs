@@ -10,16 +10,22 @@ repo_url: 'https://github.com/Sajo811/turtledocs'
 # config
 theme:
   name: 'material'
-  font: false
-  logo: 'assets/images/logo.png'
-  favicon: 'assets/images/fav.png'
+  custom_dir: 'theme'
+  font: 
+    text: 'Roboto'
+    code: 'Roboto Mono'
+  logo: 'images/logo.png'
+  favicon: 'images/fav.png'
   palette:
-    primary: 'blue'
-    accent: 'teal'
+    primary: 'green'
+    accent: 'light green'
   language: 'en'
   direction: 'ltr'
   feature:
     tabs: true
+  # 404 page
+  static_templates:
+    - 404.html
 
 # customization
 extra:
@@ -37,7 +43,7 @@ markdown_extensions:
   - toc:
       permalink: true
 
-  #pymdown stuff from here on out
+  #pymdown extensions
   - pymdownx.arithmatex
   - pymdownx.betterem:
       smart_enable: all
@@ -58,10 +64,14 @@ markdown_extensions:
 # directory org
 pages:
     - Home:
-      - Home: Home.md
+      - Home: index.md
       - Getting Started: Getting-Started.md
     - About:
       - About TurtleCoin: about/About-Turtlecoin.md
+      - Background and History: about/background-and-history.md
+      - Our Community: about/community.md
+      - Contributing: about/contributing.md
+      - Technical Data: about/technical-data.md
     - FAQ:   
       - Frequently Asked Questions: Frequently-Asked-Questions.md
     - Guides:

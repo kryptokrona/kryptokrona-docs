@@ -55,15 +55,20 @@
     
       <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
       
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono">
+        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+      
       <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     
+    
+      <link rel="stylesheet" href="../stylesheets/_config.scss">
     
     
   </head>
   
     
     
-    <body dir="ltr" data-md-color-primary="blue" data-md-color-accent="teal">
+    <body dir="ltr" data-md-color-primary="green" data-md-color-accent="light-green">
   
     <svg class="md-svg">
       <defs>
@@ -103,7 +108,7 @@
   <nav class="md-header-nav md-grid">
     <div class="md-flex">
       <div class="md-flex__cell md-flex__cell--shrink">
-        <a href="../Home/" title="TurtleCoin Wiki" class="md-header-nav__button md-logo">
+        <a href=".." title="TurtleCoin Wiki" class="md-header-nav__button md-logo">
           
             <img src="../assets/images/logo.png" width="24" height="24">
           
@@ -203,8 +208,47 @@
   
     <li class="md-tabs__item">
       
-        <a href="../Home/" title="Home" class="md-tabs__link md-tabs__link--active">
+        <a href=".." title="Home" class="md-tabs__link">
           Home
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../about/About-Turtlecoin/" title="About" class="md-tabs__link">
+          About
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="./" title="FAQ" class="md-tabs__link md-tabs__link--active">
+          FAQ
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../guides/Bootstrapping-the-blockchain/" title="Guides" class="md-tabs__link">
+          Guides
         </a>
       
     </li>
@@ -260,12 +304,10 @@
       
       
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+  <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-1" type="checkbox" id="nav-1" checked>
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-1" type="checkbox" id="nav-1">
     
     <label class="md-nav__link" for="nav-1">
       Home
@@ -283,11 +325,47 @@
 
 
   <li class="md-nav__item">
-    <a href="../Home/" title="Home" class="md-nav__link">
+    <a href=".." title="Home" class="md-nav__link">
       Home
     </a>
   </li>
 
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Getting-Started/" title="Getting Started" class="md-nav__link">
+      Getting Started
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
+    
+    <label class="md-nav__link" for="nav-2">
+      About
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        About
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
         
           
           
@@ -307,11 +385,73 @@
 
 
   <li class="md-nav__item">
-    <a href="../Getting-Started/" title="Getting Started" class="md-nav__link">
-      Getting Started
+    <a href="../about/background-and-history/" title="Background and History" class="md-nav__link">
+      Background and History
     </a>
   </li>
 
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../about/community/" title="Our Community" class="md-nav__link">
+      Our Community
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../about/contributing/" title="Contributing" class="md-nav__link">
+      Contributing
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../about/technical-data/" title="Technical Data" class="md-nav__link">
+      Technical Data
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3" checked>
+    
+    <label class="md-nav__link" for="nav-3">
+      FAQ
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        FAQ
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
         
           
           
@@ -563,6 +703,13 @@
           <li class="md-nav__item">
   <a href="#q-im-seeing-an-error-in-turtlecoind-proof-of-work-too-weak-for-block-and-the-syncing-stopped" title="Q: I'm seeing an error in TurtleCoind Proof of work too weak for block... and the syncing stopped." class="md-nav__link">
     Q: I'm seeing an error in TurtleCoind Proof of work too weak for block... and the syncing stopped.
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#q-im-getting-a-corrupted-blockchain-error-like-this" title="Q: I'm getting a "corrupted blockchain" error like this?" class="md-nav__link">
+    Q: I'm getting a "corrupted blockchain" error like this?
   </a>
   
 </li>
@@ -867,20 +1014,25 @@
   </li>
 
         
-          
-          
-          
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
 
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-5" type="checkbox" id="nav-1-5">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
     
-    <label class="md-nav__link" for="nav-1-5">
+    <label class="md-nav__link" for="nav-4">
       Guides
     </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
-      <label class="md-nav__title" for="nav-1-5">
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-4">
         Guides
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -929,17 +1081,53 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-5-4" type="checkbox" id="nav-1-5-4">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-4" type="checkbox" id="nav-4-4">
     
-    <label class="md-nav__link" for="nav-1-5-4">
+    <label class="md-nav__link" for="nav-4-4">
       Mining
     </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
-      <label class="md-nav__title" for="nav-1-5-4">
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-4-4">
         Mining
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
         
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../guides/mining/xmr-stak-guide/" title="XMR-Stak" class="md-nav__link">
+      XMR-Stak
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../guides/mining/xmr-stak-linux-guide/" title="XMR-Stak on Linux" class="md-nav__link">
+      XMR-Stak on Linux
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../guides/mining/XMRIG-Guide/" title="XMRig" class="md-nav__link">
+      XMRig
+    </a>
+  </li>
+
         
           
           
@@ -989,42 +1177,6 @@
   </li>
 
         
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../guides/mining/xmr-stak-guide/" title="XMR-Stak" class="md-nav__link">
-      XMR-Stak
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../guides/mining/xmr-stak-linux-guide/" title="XMR-Stak on Linux" class="md-nav__link">
-      XMR-Stak on Linux
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../guides/mining/XMRIG-Guide/" title="XMRig" class="md-nav__link">
-      XMRig
-    </a>
-  </li>
-
-        
       </ul>
     </nav>
   </li>
@@ -1037,13 +1189,13 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-5-5" type="checkbox" id="nav-1-5-5">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-5" type="checkbox" id="nav-4-5">
     
-    <label class="md-nav__link" for="nav-1-5-5">
+    <label class="md-nav__link" for="nav-4-5">
       Wallets
     </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
-      <label class="md-nav__title" for="nav-1-5-5">
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-4-5">
         Wallets
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -1068,13 +1220,13 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-5-5-2" type="checkbox" id="nav-1-5-5-2">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-5-2" type="checkbox" id="nav-4-5-2">
     
-    <label class="md-nav__link" for="nav-1-5-5-2">
+    <label class="md-nav__link" for="nav-4-5-2">
       GUI Wallets
     </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="4">
-      <label class="md-nav__title" for="nav-1-5-5-2">
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-4-5-2">
         GUI Wallets
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -1142,11 +1294,6 @@
     <a href="../guides/wallets/recovering-your-wallet/" title="Recovering your Wallet" class="md-nav__link">
       Recovering your Wallet
     </a>
-  </li>
-
-        
-      </ul>
-    </nav>
   </li>
 
         
@@ -1398,6 +1545,13 @@
           <li class="md-nav__item">
   <a href="#q-im-seeing-an-error-in-turtlecoind-proof-of-work-too-weak-for-block-and-the-syncing-stopped" title="Q: I'm seeing an error in TurtleCoind Proof of work too weak for block... and the syncing stopped." class="md-nav__link">
     Q: I'm seeing an error in TurtleCoind Proof of work too weak for block... and the syncing stopped.
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#q-im-getting-a-corrupted-blockchain-error-like-this" title="Q: I'm getting a "corrupted blockchain" error like this?" class="md-nav__link">
+    Q: I'm getting a "corrupted blockchain" error like this?
   </a>
   
 </li>
@@ -1829,6 +1983,13 @@
 <h4 id="q-im-seeing-an-error-in-turtlecoind-proof-of-work-too-weak-for-block-and-the-syncing-stopped">Q: I'm seeing an error in TurtleCoind <code>Proof of work too weak for block...</code> and the syncing stopped.<a class="headerlink" href="#q-im-seeing-an-error-in-turtlecoind-proof-of-work-too-weak-for-block-and-the-syncing-stopped" title="Permanent link">&para;</a></h4>
 <p>A: This occurs because of the blockchain forking, generally when one mining pool has a very large hashrate. T
   This can be fixed by re-syncing the correct blockchain from scratch. See the question below.</p>
+<h4 id="q-im-getting-a-corrupted-blockchain-error-like-this">Q: I'm getting a "corrupted blockchain" error like this?<a class="headerlink" href="#q-im-getting-a-corrupted-blockchain-error-like-this" title="Permanent link">&para;</a></h4>
+<p><div class="codehilite"><pre><span></span>2018-May-07 15:52:19.877323 INFO    initializing core
+2018-May-07 15:52:19.908530 INFO    Importing blocks from blockchain storage
+2018-May-07 15:52:19.908530 ERROR   Corrupted blockchain. Block with index 428973 and hash aafa7fd33d476535188bdd9e86ba51bb5e058be8e52367b78e9c0c03e74299c5 has previous block hash 2c0cf6c07612b9e1ea19c6922a56746b83cb42c7b11edfc4b185572225bb0f20, but parent has hash 26189359b64d4bb357a04b102a42a01d2771a3f3d80db3ca1b7395a2aeaede4a. Resynchronize your daemon please.
+2018-May-07 15:52:19.924135 INFO    Closing DB.
+</pre></div>
+A: Re-sync your daemon from scratch(see below question), <a href="guides/Bootstrapping-the-Blockchain.md">bootstrap the blockchain</a> or sync <a href="../guides/wallets/using-simplewallet/#using-checkpoints">using checkpoints</a></p>
 <h4 id="q-how-can-i-re-sync-the-blockchain">Q: How can I re-sync the blockchain?<a class="headerlink" href="#q-how-can-i-re-sync-the-blockchain" title="Permanent link">&para;</a></h4>
 <p>A: Close any TurtleCoin-related software, then go to <code>%APPDATA%</code>, and delete the <code>TurtleCoin</code> folder. 
   Reopen TurtleCoind/GUI and let it re-sync. </p>
@@ -1963,7 +2124,7 @@
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid">
         
-          <a href="../Getting-Started/" title="Getting Started" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../about/technical-data/" title="Technical Data" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-flex__cell md-flex__cell--shrink">
               <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
             </div>
@@ -1972,7 +2133,7 @@
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                Getting Started
+                Technical Data
               </span>
             </div>
           </a>
@@ -1995,15 +2156,19 @@
       </nav>
     </div>
   
-  <div class="md-footer-meta md-typeset">
+   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
       <div class="md-footer-copyright">
-        
-        powered by
-        <a href="http://www.mkdocs.org">MkDocs</a>
-        and
-        <a href="https://squidfunk.github.io/mkdocs-material/">
-          Material for MkDocs</a>
+        	
+        <a href="https://turtlecoin.lol">&copy; 2017-2018 TurtleCoin</a>
+        <br>
+        Fun. Fast. Easy.
+        <br>
+        Licensed under the 
+        <a href="https://opensource.org/licenses/MIT"> MIT License </a>
+       <br> <br> 	
+        <a href="https://github.com/turtlecoin/turtlecoin-wiki">
+          Help improve these documents!</a>
       </div>
       
         
@@ -2017,8 +2182,8 @@
 
       
     </div>
-  </div>
-</footer>
+</div>
+</footer> 
       
     </div>
     

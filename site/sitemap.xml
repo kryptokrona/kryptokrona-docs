@@ -4,26 +4,86 @@
     
         
     <url>
-     <loc>/Home/</loc>
-     <lastmod>2018-05-07</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-        
-    <url>
-     <loc>/about/About-Turtlecoin/</loc>
-     <lastmod>2018-05-07</lastmod>
+     <loc>/</loc>
+     <lastmod>2018-05-09</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/Getting-Started/</loc>
-     <lastmod>2018-05-07</lastmod>
+     <lastmod>2018-05-09</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    
+
+    
+        
+    <url>
+     <loc>/about/About-Turtlecoin/</loc>
+     <lastmod>2018-05-09</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
+     <loc>/about/background-and-history/</loc>
+     <lastmod>2018-05-09</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/about/community/</loc>
+     <lastmod>2018-05-09</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/about/contributing/</loc>
+     <lastmod>2018-05-09</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/about/technical-data/</loc>
+     <lastmod>2018-05-09</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    
+
+    
+        
+    <url>
      <loc>/Frequently-Asked-Questions/</loc>
-     <lastmod>2018-05-07</lastmod>
+     <lastmod>2018-05-09</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    
+
+    
+        
+    <url>
+     <loc>/guides/Bootstrapping-the-blockchain/</loc>
+     <lastmod>2018-05-09</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/guides/rainborg-wat-dat/</loc>
+     <lastmod>2018-05-09</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/guides/using-trtlbot-plus-plus/</loc>
+     <lastmod>2018-05-09</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc></loc>
+     <lastmod></lastmod>
      <changefreq>daily</changefreq>
     </url>
         
