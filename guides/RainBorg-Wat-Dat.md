@@ -99,7 +99,9 @@ Every time RainBorg rains down tips on chatty Turtles she'll post a message in t
 They look something like this:
 
 > **TUT TUT**
+>
 > Huzzah, 500 TRTL just rained on 4 chatty turtles in #mining, they each got 125 TRTL!
+>
 > ![TRTL in rain](guides/images/rainborg/rainborg-rain.png)
 
 
