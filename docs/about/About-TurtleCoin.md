@@ -9,14 +9,20 @@ TurtleCoin's code is forked from the Bytecoin code, and it has majorly the same 
 Some of the main features of TurtleCoin include:
 
 - On-chain privacy
+
 - Only two decimal places
+
 - Fast transactions
+
 - User-centric developers
+
 - Easy to mine 
+
 - Easy to use
+
 - Amazing community
 
-
+  
 
 To learn more about us, check out our other various articles, describing:
 
@@ -28,6 +34,6 @@ To learn more about us, check out our other various articles, describing:
 
 - [it's Technical Data](technical-data.md)
 
-  ​
+  
 
-  We recommend you take some time off and read them, to get acquainted with TurtleCoin!
+We recommend you take some time off and read them, to get acquainted with TurtleCoin!

@@ -4,7 +4,7 @@
 
 Here's a quick image of SimpleWallet in action-
 
-![simplewallet](guides/wallets/images/screenshot_simplewallet.png)
+![simplewallet](/images/screenshot_simplewallet.png)
 
 ## Downloading
 
@@ -290,7 +290,7 @@ In the running _simplewallet_ client, after opening a wallet..
 
 Example:
 
-![transfer](guides/wallets/images/transfer-simple.png)
+![transfer](/images/transfer-simple.png)
 
 Mixin is how many times a transaction is "mixed" with others for obfuscation and privacy. 
 
@@ -326,7 +326,7 @@ and press `y`
 
 That's it! It will display a message `(Full) optmization completed!` when it's done.
 
-![optimize](guides/wallets/images/optimize-simple.png)
+![optimize](/images/optimize-simple.png)
 
 #### Payment ID<a name="tx-trtl-p-id"></a>
 
@@ -336,7 +336,7 @@ Because transactions on the TurtleCoin blockchain are privatized, in some situat
 
 To send a transaction with a payment ID, enter it when prompted to.
 
-![p-id](guides/wallets/images/p-id-simple.png)
+![p-id](/images/p-id-simple.png)
 
 Note that, typically, the service/recipient will generate and provide the required payment ID. 
 

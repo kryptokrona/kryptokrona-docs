@@ -66,6 +66,7 @@ pages:
     - Home:
       - Home: index.md
       - Getting Started: Getting-Started.md
+      - Contributors: Contributors.md
     - About:
       - About TurtleCoin: about/About-Turtlecoin.md
       - Background and History: about/background-and-history.md
@@ -75,10 +76,12 @@ pages:
     - FAQ:   
       - Frequently Asked Questions: Frequently-Asked-Questions.md
     - Guides:
-      - Bootstrapping the Blockchain: guides/Bootstrapping-the-blockchain.md
+      - Bootstrapping the Blockchain: guides/Bootstrapping-the-Blockchain.md
       - RainBorg? Wat Dat?: guides/rainborg-wat-dat.md
       - Using trtlbot++: guides/using-trtlbot-plus-plus.md
+      - Participating in Raindance(defunct): guides/participating-in-raindance.md
       - Mining:
+        - How to Mine TRTL: guides/mining/mining.md
         - XMR-Stak: guides/mining/xmr-stak-guide.md
         - XMR-Stak on Linux: guides/mining/xmr-stak-linux-guide.md
         - XMRig: guides/mining/XMRIG-Guide.md

@@ -68,7 +68,7 @@ SSH into the GCP instance and follow these steps-
 
 11. If you see something like this, that means it’s working!
 
-![workubuntu](guides/mining/images/xmrstak-ubuntuwork.png)
+![workubuntu](images/xmrstak-ubuntuwork.png)
 
 ## XMR-Stak Setup and Configuration
 

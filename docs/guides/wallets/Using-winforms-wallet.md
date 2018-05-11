@@ -4,7 +4,7 @@
 
 Here's a quick image of WinForms wallet in action-
 
-![winforms](guides/wallets/images/screenshot_winforms.png)
+![winforms](images/screenshot_winforms.png)
 
 ## Downloading
 
@@ -58,7 +58,7 @@ After that, give your wallet a name (for example, `trtl`) and set a strong passw
 
 Once done, click `Create Wallet`.
 
-![create1](guides/wallets/images/winf-make.png)
+![create1](images/winf-make.png)
 
 The wallet will then begin synchronizing with the blockchain. When done, it will open and you can access it's other features.
 
@@ -78,7 +78,7 @@ Upon opening your wallet the address is in the middle of the page.
 
 To copy it, you can click on the button which says `Copy Address`.
 
-![address](guides/wallets/images/winf-add.png)
+![address](images/winf-add.png)
 
 ### Exporting Keys
 
@@ -98,13 +98,13 @@ To back up your keys, follow these steps-
 
 * Save your View Key and Spend key in a safe and secure place.
 
-  ![backup](guides/wallets/images/winf-keys.png)
+  ![backup](images/winf-keys.png)
 
 ### Viewing Wallet Balance
 
 Upon opening your wallet, your balance is located in the top right.
 
-![balance](guides/wallets/images/winf-balance.png)
+![balance](images/winf-balance.png)
 
 ### Sending TurtleCoin Transactions
 
@@ -121,7 +121,7 @@ Upon opening your wallet, your balance is located in the top right.
 
 Once done, click `Send`.
 
-![send](guides/wallets/images/winf-tx.png)
+![send](images/winf-tx.png)
 
 ### Saving the Wallet
 
@@ -144,7 +144,7 @@ Upon opening `TurtleWallet.exe`, you will be met with an opening screen. To impo
 - enter your View and Spend key in the bottom two boxes
 - Press `Import Wallet`
 
-![import](guides/wallets/images/winf-impory.png)
+![import](images/winf-impory.png)
 
 The wallet will then begin synchronizing with the blockchain. When done, it will open and you can access it's other features.
 

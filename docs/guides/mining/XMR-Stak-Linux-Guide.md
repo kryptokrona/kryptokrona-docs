@@ -104,7 +104,7 @@ If no binaries are available, or you prefer to compile, follow these instruction
   
 15. If you see something like this, that means it’s working!
 
-![workubuntu](guides/mining/images/xmrstak-ubuntuwork.png)
+![workubuntu](images/xmrstak-ubuntuwork.png)
 
 ## XMR-Stak Setup and Configuration<a name="setup-and-config"></a>
 
@@ -189,7 +189,7 @@ Done! The miner will now start scanning your hardware and will begin mining. Awe
 
 
 XMR-Stak will save your configuration in `config.txt`  in the same directory from which it was first run. 
- 
+
 Your configuration for pools(algorithm to mine, address, port etc) will be saved in `pools.txt`
 The configuration of the device it mines(CPU/AMD/NVIDIA) will be saved in `cpu.txt`, `amd.txt` or `nvidia.txt`, respectively.
 

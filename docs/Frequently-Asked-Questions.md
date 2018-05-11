@@ -90,7 +90,7 @@ Web miner currently isn't working. You can hop onto the [Discord](https://discor
 #### Q: What is the miner executable / why isn't it working?
 
 A: This is a solo miner, which is CPU only. This means to gain any TRTL, you have to find a block by yourself, which unless you have many powerful CPUs, is very unlikely. 
-  We strongly recommend using a pool, and a miner such as xmr-stak or xmrig. 
+  We strongly recommend using a pool, and a miner such as XMR-Stak or xmrig. 
   Nevertheless, if you want to try it out, open a command prompt in the same directory, and run 
 
 ```
@@ -99,38 +99,49 @@ miner.exe --address TRTL...
 
  replacing `TRTL...` with your full TRTL address. 
 
-  You need to have `TurtleCoind.exe` open and synced to use this miner, unlike conventional miners, where the pool hosts the daemon.
+  You need to have SimpleWallet open and synced to use this miner, unlike conventional miners, where the pool hosts the daemon.
 
 #### Q: Is there a calculator to see how much TRTL I'll mine per day?
 
 A: Your pool's homepage should have one - enter your hashrate and it'll give an estimate of how much TRTL you'll mine per day.
 
-### xmr-stak issues
+### XMR-Stak Issues
 
-#### Q: How do I view my hashrate in xmr-stak?
+#### Q: How do I view my hashrate in XMR-Stak?
 
-A: Press `h` in the xmr-stak window.
+A: Press `h` in the XMR-Stak window.
 
-#### Q: My PC is laggy when I'm mining in xmr-stak. Can I fix this?
+#### Q: My PC is laggy when I'm mining in XMR-Stak. Can I fix this?
 
 A: This could be caused by multiple issues:
-  * If you're using a Nvidia card, open up `nvidia.txt`, in the same directory as `xmr-stak.exe`. Try setting `bfactor` to `8` and `bsleep` to `100`, and then reload your miner after saving the file. 
+
+
+
+  * If you're using a Nvidia card, open up `nvidia.txt`, in the same directory as `XMR-Stak.exe`. Try setting `bfactor` to `8` and `bsleep` to `100`, and then reload your miner after saving the file. 
+
     If it's still laggy, try increasing both values slightly. This will cause you to get less hashes per second, but can let you use your PC more effectively. You can try tweaking the value to increase your hashrate. 
+
     Some people also achieve success by lowering the thread count.
+
+    
+
   * If you're using an AMD card, lower the value of `intensity` in `amd.txt`.
+
   * If you're using just a CPU, you can delete the cores being used from `cpu.txt`.
 
-#### Q: How can I use just my GPU/CPU to mine in xmr-stak?
+#### Q: How can I use just my GPU/CPU to mine in XMR-Stak?
 
-A: If you're using XMR-Stak, you can start the miner with a certain command. Check [this out](XMR-Stak-Guide#xmr-stak-no-cpu-gpu) for more info.
+A: If you're using XMR-Stak, you can start the miner with a certain command. Check [this out](XMR-Stak-Guide#XMR-Stak-no-cpu-gpu) for more info.
 
-#### Q: My xmr-stak is crashing on startup, with an error about CUDA. What am I doing wrong?
+#### Q: My XMR-Stak is crashing on startup, with an error about CUDA. What am I doing wrong?
 
-A: If you are using a Nvidia card, try opening `nvidia.txt` in the same directory as `xmr-stak.exe`, and lowering the value of `threads` until it stops crashing.
+A: If you are using a Nvidia card, try opening `nvidia.txt` in the same directory as `XMR-Stak.exe`, and lowering the value of `threads` until it stops crashing.
 
-#### Q: I get a socket error when connecting to a pool in xmr-stak. What am I doing wrong?
+#### Q: I get a socket error when connecting to a pool in XMR-Stak. What am I doing wrong?
 
-A: Generally, this is due to an incorrectly configured config. In the directory where `xmr-stak.exe` is, there should be a file called `config.txt`. Open this up, and check that it looks similar to this:
+A: Generally, this is due to an incorrectly configured config. In the directory where `XMR-Stak.exe` is, there should be a file called `config.txt`. 
+
+Open this up, and check that it looks similar to this:
 
     ```
     {"pool_address" : "eu.turtlepool.space:3333",
@@ -144,35 +155,39 @@ A: Generally, this is due to an incorrectly configured config. In the directory 
      ```
 
   Your wallet address is the address starting with `TRTL`, not your wallet filename. 
+
   This error can also occur if the pool is having issues - try another pool and see if the error continues. 
 
 Some users have experienced issues with their firewall or antivirus as well however, so perhaps try disabling these if you are experiencing this issue.
 
-#### Q: Can I lower the 2% fee taken by xmr-stak?
+#### Q: Can I lower the 2% fee taken by XMR-Stak?
 
-A: This is possible, however please note that these devs are independent from the TurtleCoin project and are doing some great work, so I would suggest leaving it as is. 
-  If you do wish to change/remove the dev fee, you will have to compile xmr-stak yourself, they have instructions to do this on their [GitHub](https://github.com/fireice-uk/xmr-stak/blob/master/doc/compile.md), or you can check out the [Linux guide](XMR-Stak-Linux-Guide#ubuntu-16-04)
-  Once you have downloaded the code, you need to change the file `donate-level.hpp` in the `xmr-stak/xmr-stak/` folder.
+A: This is possible, however please note that these devs are independent from the TurtleCoin project and are doing some great work, so we would suggest leaving it as is. 
 
-#### Q: I'm getting an error in xmr-stak: `MEMORY ALLOC FAILED: VirtualAlloc failed. Reboot might help`
+  If you do wish to change/remove the dev fee, you will have to compile XMR-Stak yourself, they have instructions to do this on their [GitHub](https://github.com/fireice-uk/XMR-Stak/blob/master/doc/compile.md), or you can check out the [Linux guide](XMR-Stak-Linux-Guide#ubuntu-16-04)
 
-A: This is nothing to worry about, and is because xmr-stak failed to set up largepages. 
+  Once you have downloaded the code, you need to change the file `donate-level.hpp` in the `XMR-Stak/XMR-Stak/` folder.
 
-This can slightly raise your hash rate, and xmr-stak attempts to set it up, but it needs a reboot to apply.
+#### Q: I'm getting an error in XMR-Stak: `MEMORY ALLOC FAILED: VirtualAlloc failed. Reboot might help`
+
+A: This is nothing to worry about, and is because XMR-Stak failed to set up largepages. 
+
+This can slightly raise your hash rate, and XMR-Stak attempts to set it up, but it needs a reboot to apply.
 
 #### Q: I'm missing the file `vcruntime140.dll`. Where can I get this?
 
 A: Try installing this: <https://www.microsoft.com/en-us/download/details.aspx?id=52685>
 
-#### Q: When I run xmr-stak I get an error: "The application was unable to start correctly (0x000007b)"
+#### Q: When I run XMR-Stak I get an error: "The application was unable to start correctly (0x000007b)"
 
-A: Try installing this: <https://go.microsoft.com/fwlink/?LinkId=746572>
+A: Try installing this: <https://go.microsoft.com/fwlink/?LinkId=746572
 
 ## TurtleCoind / SimpleWallet Issues<a name="tcoind-simplewallet-issues"></a>
 
 #### Q: I'm seeing an error in TurtleCoind `Proof of work too weak for block...` and the syncing stopped.
 
-A: This occurs because of the blockchain forking, generally when one mining pool has a very large hashrate. T
+A: This occurs because of the blockchain forking, generally when one mining pool has a very large hashrate. 
+
   This can be fixed by re-syncing the correct blockchain from scratch. See the question below.
 
 #### Q: I'm getting a "corrupted blockchain" error like this?
@@ -194,37 +209,60 @@ Alternatively, check [this guide](Bootstrapping-the-Blockchain) for instructions
 #### Q: When I open TurtleCoind on a Mac, I get an error `Illegal instruction: 4`. How can I fix it?
 
 A: This is a known issue with older macs or un-updated macs. 
-    Try entering this into a terminal - `curl -sL "https://raw.githubusercontent.com/turtlecoin/turtlecoin/master/multi_installer.sh" | bash` 
-    This automated script should compile the software itself, and place the binaries in ./src once done. 
-    See <https://github.com/turtlecoin/turtlecoin#ubuntu-1604-and-macos-1010> for more info. 
-    If this fails, try instead following the instructions to compile manually - <https://github.com/turtlecoin/turtlecoin#apple>
+
+​    Try entering this into a terminal -
+
+```
+curl -sL "https://raw.githubusercontent.com/turtlecoin/turtlecoin/master/multi_installer.sh" | bash
+```
+
+​    This automated script should compile the software itself, and place the binaries in ./src once done. 
+
+​    See [here](https://github.com/turtlecoin/turtlecoin#ubuntu-1604-and-macos-1010) for more info. 
+
+​    If this fails, try instead following the instructions to [compile manually]( https://github.com/turtlecoin/turtlecoin#apple)
     
-#### Q: I've opened the wallet, and I'm getting lots of red messages with an error like this: `2018-Jan-25 20:31:24.088189 ERROR   [BlockchainSynchronizer] Failed to query outdated pool transaction: NodeErrorCategory:7, Can't connect to daemon`
 
-A: You need to also open up `TurtleCoind.exe` and let it sync. TurtleCoind is your connection to the network, and needs to be open and synced whenever you want to use your wallet.
+#### Q: I've opened the wallet, and I'm getting lots of red messages like "It looks like TurtleCoind isn't open!"...
 
-#### Q: I've opened the wallet, and I'm getting lots of red messages with an error like this, and I can't type: `2018-Jan-25 21:59:57.595104 ERROR   [BlockchainSynchronizer] Failed to query outdated pool transaction: NodeErrorCategory:3, Network error`
+```
+It looks like TurtleCoind isn't open!
 
-  A: Your daemon hasn't finished syncing yet. Keep `TurtleCoind.exe` open, and wait until you are 0 days behind the current block, and for the daemon to print out a green message saying `SYNCHRONISED OK`.
+Ensure TurtleCoind is open and has finished initializing.
+If it's still not working, try restarting TurtleCoind. The daemon sometimes gets
+ stuck.
+Alternatively, perhaps TurtleCoind can't communicate with any peers.
 
-#### Q: I've opened the wallet, and I'm getting lots of red messages with an error like this: `2019-Jan-29 01:24:48.088688 ERROR [BlockchainSynchronizer] Failed to query blocks: NodeErrorCategory:5, Internal node error`
+The wallet can't function until it can communicate with the network.
+```
 
-  A: Update to the [latest version](http://latest.turtlecoin.lol) and re-sync!
+A: You need to also open up SimpleWallet and let it sync. TurtleCoind is your connection to the network, and needs to be open and synced whenever you want to use your wallet.
+
+#### Q: I've opened the wallet, and I'm getting lots of messages like "Your TurtleCoind isn't fully synced yet!"..
+
+```
+Until you are fully synced, you won't be able to send transactions, and your balance may be missing or incorrect!
+```
+
+  A: Your daemon hasn't finished syncing yet. Keep SimpleWallet open, and wait until you are 0 days behind the current block, and for the daemon to print out a green message saying `Successfully synchronized with the TurtleCoin Network.`
 
 #### Q: I think I should have more money in my balance than it is showing, what should I do?
 
-  A: Update to the [latest version](http://latest.turtlecoin.lol) and re-sync!
+  A: Re-sync your daemon from scratch(see [here](#q-how-can-i-re-sync-the-blockchain)), [bootstrap the blockchain](http://127.0.0.1:8000/guides/Bootstrapping-the-Blockchain/) or sync [using checkpoints](http://127.0.0.1:8000/guides/wallets/using-simplewallet/#using-checkpoints) . If it still doesn't work, then [update](latest.turtlecoin.lol) your wallet!
 
 #### Q: I've tried resetting, but it isn't working. What should I do?
 
-  A: In `simplewallet.exe`, type `export_keys`, and save the view and spend key somewhere safe in case something goes wrong, if you haven't already. 
-  Then, close and reopen `TurtleCoind.exe` and `simplewallet.exe`. 
-  Next, type `reset` in `simplewallet.exe` after reopening your wallet file.
-  It should start resetting your wallet, but the progress might not be immediately obvious - wait a while, and it should start counting up the blocks and printing out your transactions as it gets to them.
+A: 
+
+* In SimpleWallet, type `export_keys`, and save the view and spend key somewhere safe in case something goes wrong, if you haven't already. 
+
+*  Then, close and reopen SimpleWallet and SimpleWallet. 
+*  Type `reset` in SimpleWallet after reopening your wallet file.
+*  It should start resetting your wallet, but the progress might not be immediately obvious - wait a while, and it should start counting up the blocks and printing out your transactions as it gets to them.
 
 #### Q: How do I backup my wallet?
 
-  A: If `TurtleCoind.exe` is open and synced, open `simplewallet.exe,` and type `export_keys`. 
+  A: If SimpleWallet is open and synced, open it, and type `export_keys`. 
   Save the view and spend key somewhere safe, and you can use them to reimport your wallet if you lose it.
 
 #### Q: How do I send TRTL?
@@ -237,23 +275,19 @@ A: You need to also open up `TurtleCoind.exe` and let it sync. TurtleCoind is yo
 
 #### Q: What is mixin?
 
-  A: Mixin is how many times your transaction is "mixed" with others for obfuscation and privacy. Most people suggest a mixin of 3. Larger mixins will take longer to be confirmed unless a higher fee is used. A mixin of 0 can be used to have a public transaction(though it is strongly recommended not to do so).
+  A: Mixin is how many times your transaction is "mixed" with others for obfuscation and privacy. Most people suggest a mixin of `5` or above. 
+
+Larger mixins will take longer to be confirmed unless a higher fee is used. 
+
+A mixin of `0` can be used to have a public transaction(though it is strongly recommended not to do so).
 
 #### Q: How can I view my balance?
 
-  A: If `TurtleCoind.exe` is fully synced, in `simplewallet.exe`, simply type `balance`.
-
-#### Q: I'm seeing an error like this in TurtleCoind.exe: `2018-Jan-25 23:18:34.620941 WARNING Transaction 862689940f8860b4410a4eef7be326b05aedc6b14a26e68e503769017ee80359 is not valid. Reason: Transaction uses spent key image`. Should I worry?
-
-  A: No, this is due to large transactions getting resubmitted on the network, and will be hidden from users in a later release of the software.
-
-#### Q: I'm seeing an error like this in TurtleCoind.exe: `2018-Jan-26 01:51:56.920444 INFO [45.50.5.81:24899 INC] Tx verification failed`. Should I worry?
-
-  A: No, this is a variable that has not been assigned, and will be hidden from users in a later release of the software.
+  A: If SimpleWallet is fully synced, in SimpleWallet, simply type `balance`.
 
 #### Q: How long does it take to sync TurtleCoind.exe?
 
-  A: Currently it takes around a few hours. This number will increase as more people use TRTL and the blockchain gets larger. If you'd like to speed up the process, check out the question below.
+  A: Currently it takes a couple of hours. This number will increase as more people use TRTL and the blockchain gets larger. If you'd like to speed up the process, check out the question below.
 
 #### Q: Can I speed up the syncing of the blockchain?
 
@@ -270,10 +304,10 @@ A: You need to also open up `TurtleCoind.exe` and let it sync. TurtleCoind is yo
 #### Q: In simplewallet.exe, I get an error `Error: failed to save new wallet: boost::filesystem::unique__path: Keyset as registered is invalid`. How can I fix it?
 
   A: This is caused by some broken Windows crypto keys. In the address bar in Windows Explorer, type `%AppData%/Microsoft/Crypto/RSA/`. 
+
   There should be a folder in there, with a long name, like `S-1-5-21-1416222650-108526586-4052533318-1000`. 
-  Go into this folder and delete the files in there. Then reboot.
 
-
+  Go into this folder and delete the files in there. Then reboot, and try again.
 
 ## GUI Wallet(s)<a name="gui-wallets"></a>
 
@@ -284,25 +318,33 @@ A: You need to also open up `TurtleCoind.exe` and let it sync. TurtleCoind is yo
 * [Xamarin Wallet](https://github.com/turtlecoin/turtle-wallet-xamarin)
 * [Nest Wallet](https://github.com/turtlecoin/turtle-wallet-go)
 
-To view a guide on using them, check [this](Making-a-GUI-Wallet).
-
-#### Q: I'm using the GUI Xamarin wallet, and when I start it up I get an error: `Could not load file or assembly Newtonsoft.Json`
-
-  A: You need to download the .zip file from the github, not just the .exe file - <https://github.com/turtlecoin/desktop-xamarin/releases>, you need all of these files for the GUI to work.
+To view a guide on using them, you can go [here](guides/wallets/making-a-wallet/#graphical-wallet-gui-wallet)
 
 #### Q: I'm using the GUI Xamarin wallet, and it fails to connect to the daemon.
 
   A: There are multiple reasons this can occur. Try opening `walletd.log` and scrolling to the bottom to determine what is occurring.
-  * A wrong password - check `walletd.log` to check if this is occurring. If you are sure your password is correct, this link could be helpful - <https://github.com/turtlecoin/desktop-xamarin/issues/20>
-  * You have another `walletd.exe` or `TurtleCoind.exe` process running. Only one of these can be running at once, and the GUI launches its own. Check Task Manager and close down any of these processes and try again.
+  * A wrong password - check `walletd.log` to check if this is occurring. If you are sure your password is correct, this link could be helpful - <https://github.com/turtlecoin/desktop-xamarin/issues/20
+
+    
+
+  * You have another `walletd.exe` or SimpleWallet process running. Only one of these can be running at once, and the GUI launches its own. Check Task Manager and close down any of these processes and try again.
+
+    
+
   * `walletd` is importing blocks from the DB, which takes a while and so the GUI thinks it has crashed. Solution here - <https://github.com/turtlecoin/desktop-xamarin/issues/17#issuecomment-366790435>
+
+    
+
   * If all else fails, if you have your private keys then you can instead import your wallet into SimpleWallet. 
+
+    
+
     * If that is not a desirable option, come and ask for help over at [the Discord](https://discord.gg/J7g99EE)
 
 ## Paper Wallet / Cold Storage?<a name="paper-wallet-cold-storage"></a>
 #### Q: Wait, What's Cold Storage?
 
-  A: The term "Cold Storage" refers to a wallet that has been created via an offline means. 
+  A: The term "cold storage" refers to a wallet that has been created via an offline means. 
 
 The preferred way to do this is via a computer than has never ever been connected to the internet, commonly referred to as an air gapped device. 
 
@@ -315,15 +357,15 @@ The preferred way to do this is via a computer than has never ever been connecte
 
 #### Q: Can I make a paper wallet? 
 
-A: Yes, you can view the guide [here](Making-a-Paper-Wallet)
+A: Yes, you can view the guide [here](guides/wallets/Making-a-Paper-Wallet)
 
 #### Q: I made a paper wallet, how do I use it?
 
-  A: You can check out [this guide](Recovering-your-Wallet) for steps on how to import your paper wallet into a wallet of your choice(choose a wallet and import the keys).
+  A: You can check out [this guide](guides/wallets/Recovering-your-Wallet) for steps on how to import your paper wallet into a wallet of your choice(choose a wallet and import the keys).
 
 #### Q: Can I view the balance of my wallet online?
 
-  A: Due to TurtleCoin being a privacy coin, this is not possible. 
+  A: Due to TurtleCoin being a cryptonote coin(private), this is not possible. 
 
   It should be possible in the future to allow users to give away just their Private View Key to view transactions, but this hasn't been implemented by anyone so far, and would allow that website to see every transaction that you make.
 
@@ -336,11 +378,11 @@ A: Yes, you can view the guide [here](Making-a-Paper-Wallet)
 
   A: There are multiple ways to acquire TRTL, for example:
 
-  * Mining - see [here](Mining)
+  * Mining - see [here](guides/mining/Mining)
   * Buying - TRTL is currently available on these exchanges: [TradeOgre](https://tradeogre.com/exchange/BTC-TRTL) and [TradeSatoshi](https://tradesatoshi.com/Exchange/?market=TRTL_BTC)
   * Bounties - Bounties for developing TRTL software, spreading the word of TRTL, and many other things are often posted in the #bounties channel on discord. Check the pinned messages for current bounties.
-  * Tips - People will sometimes tip each other, especially if you make spicy memes in the #memes channel
-  * Rain - Good active Turtles get rained on, check out what the [RainBorg](RainBorg-Wat-Dat) is to see how to use it.
+  * Tips - People will sometimes tip each other, especially if you make spicy memes in the `#memes` channel
+  * Rain - Good active Turtles get rained on, check out what the [RainBorg](guides/RainBorg-Wat-Dat) is to see how to use it.
   * Faucet - Head over to the [faucet](https://faucet.trtl.me/) and enter your TRTL address. 
     The amount you can receive is limited(1 TRTL, thrice a day), to share the TRTL for all. Thanks to @madk for creating this.
 
@@ -350,11 +392,11 @@ A: Yes, you can view the guide [here](Making-a-Paper-Wallet)
 
 #### Q: What is RainBorg / how does it work?
 
-  A: There is an in depth, graphical explanation [here](RainBorg-Wat-Dat) 
+  A: There is an in depth, graphical explanation [here](guides/RainBorg-Wat-Dat) 
 
 #### Q: How do I register my wallet on Discord?
 
-  A: You can check out this guide [here](Using-trtlbot-plus-plus#registering-your-wallet). 
+  A: You can check out this guide [here](guides/Using-trtlbot-plus-plus#registering-your-wallet). 
 
 #### Q: Where is the blockchain stored?
 
