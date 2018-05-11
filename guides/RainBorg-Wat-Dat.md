@@ -2,7 +2,7 @@
 
 Back in the day, we had the [#raindance bot](Participating-in-Raindance), then people took advantage of the bot and it was retired. Now we have RainBorg!
 
-<img src="guides/images/rainborg/rainborg-avatar.png" width="194" height="208" alt="RainBorg Avatar" />
+![rainborg avatar](guides/images/rainborg/rainborg-avatar.png)
 
 This bot monitors chat activity. Once a certain criterion is met, RainBorg sends out a tip using the tipbot, [trtlbot++](Using-trtlbot-plus-plus), to people who have recently been chatting away.
 
@@ -98,11 +98,12 @@ Yes she'll respond to `$` commands:
 Every time RainBorg rains down tips on chatty Turtles she'll post a message in the #raindance channel.
 They look something like this:
 
-<blockquote>
-<strong>TUT TUT</strong>
-<p>Huzzah, 500 TRTL just rained on 4 chatty turtles in #mining, they each got 125 TRTL!</p>
-<img src="guides/images/rainborg/rainborg-rain.png" width="256" height="256" alt="turtle in the rain" />
-</blockquote>
+> **TUT TUT**
+>
+> Huzzah, 500 TRTL just rained on 4 chatty turtles in #mining, they each got 125 TRTL!
+>
+> ![TRTL in rain](guides/images/rainborg/rainborg-rain.png)
+
 
 # Anything not covered here?
 
