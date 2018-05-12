@@ -2,7 +2,9 @@
 
 Mining is essentially the process of using your computer to help verify and secure a cryptocurrency network, in our case, it is the TurtleCoin network. By doing this, you will be rewarded with some TurtleCoin.
 
-If you want to learn about cryptocurrencies, mining is a great place to start!
+
+
+## Mining Instructions For Debian Linux on GCP
 
 ## How to Mine TurtleCoin?<a name="how-to-mine"></a>
 
@@ -46,6 +48,3 @@ Please follow [this guide](Mining-with-Phone) to mine with your mobile phone.
 
 You may view a comprehensive list of pools [here](Pools).
 
-## Have Questions or Need Help?
-
-Check out our [Discord](https://discord.gg/J7g99EE) or [subreddit](https://www.reddit.com/r/TRTL/) to get in touch.

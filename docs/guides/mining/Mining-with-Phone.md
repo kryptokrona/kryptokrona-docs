@@ -36,7 +36,7 @@ The miner should now start mining, and the stats displayed show start updating, 
 
 You can tap the question marks on the right if you're unsure of what each value means
 
-![phone-mining](images/rsz_phone-mine.png)
+![phone-mining](C:/Users/user/Documents/pages/production/docs/guides/mining/images/rsz_phone-mine.png)
 
 
 

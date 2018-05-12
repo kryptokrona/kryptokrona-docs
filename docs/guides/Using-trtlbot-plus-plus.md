@@ -75,7 +75,17 @@ So if you tipped 1 TRTL, 1.1 TRTL will be pulled from your account so that the f
 ***The syntax for tipping someone is- `.tip <amount> <@person>`***
      
 - Trying to add a message before it, will not work. 
- For example, `hey .tip 1 @RockSteady#7588` will **not** send RockSteady 1 TRTL.
+   For example, 
+
+   ```
+   hey .tip 1 @RockSteady#7588
+   ```
+
+    
+
+   will **not** send RockSteady 1 TRTL.
+
+   ---
 
 - Trying to add it on a seperate line in 1 message will not work.
   For example,
@@ -85,11 +95,24 @@ So if you tipped 1 TRTL, 1.1 TRTL will be pulled from your account so that the f
     
   .tip 1 @RockSteady#7588
   ```
-  
+
   will **not** send RockSteady 1 TRTL.
 
+  ---
+
 - Trying to add a message *after* it will **will** work.
-- For example, `.tip 1 @RockSteady#7588 hey` **will** send RockSteady 1 TRTL
+
+- For example, 
+
+   ```
+   .tip 1 @RockSteady#7588 hey
+   ```
+
+    
+
+   **will** send RockSteady 1 TRTL
+
+   ---
 
 - Trying to add a message after the command on a seperate line in an existing message **will** work.
   For example,
@@ -98,17 +121,32 @@ So if you tipped 1 TRTL, 1.1 TRTL will be pulled from your account so that the f
 
   hey
   ```
-  will send RockSteady 1 TRTL.
-  
-  Trying to add a message *between* the *amount* and the *recipient* **will** work.
-  For example, `.tip  1 hey @RockSteady#7588` **will** send RockSteady 1 TRTL.
-  
-- If you make a typo in the command, like `.tpi 1 @RockSteady#7588` and trying to edit the message to fix the typo, like- `.tip 1 @RockSteady#7588` will **not** work.
-  
+  **will** send RockSteady 1 TRTL.
+
+  ---
+
+  * Trying to add a message *between* the *amount* and the *recipient* **will** work.
+
+  For example, 
+
+  ```
+  .tip  1 hey @RockSteady#7588
+  ```
+
+   **will** send RockSteady 1 TRTL.
+
+  ---
+
+- If you make a typo in the command, and try to edit the message to fix the typo, it will **not** work.
+
+   ​
 **Basically, keep these in mind-**  
 
 * Any text must go **after** the command
+  - It may also go in **between** the **amount** and **recipient**
 * Trying to **edit** the command will *not* work
+
+
 
 ### Tipping with Emojis
 
@@ -129,13 +167,15 @@ This will tip RockSteady *and* bebop 1 TRTL **each** (it will not divide the 1 T
 
 The bot will still pull a fee of 0.1 TRTL extra from your balance.
 
-
-This can be used to tip - so far - an unlimited amount of people, given that you have enough balance.
+This can be used to tip - so far - an unlimited amount of people, given that you have enough balance.  
 The bot will PM you after it has sent the payments to everyone, letting you know the TX Hash, your updated balance, and how many people it sent it to, along with the number of 
+
+
+
 - successful payments (the recipent had registered their wallet and the payment was successfully sent)
 - unsuccessful payments (the recipent had not registered their wallet and/or the payment was not successfully sent)
 
-If you tip multiple people, some who have registered their wallets and some who haven't, the bot will react with :almost100: and :sos: for both(only once).
+If you tip multiple people, some who have registered their wallets and some who haven't, the bot will react with ![99](images/trtlbot-plus-plus/almost100.png) and :sos: for both(only once).  
 However, it will not let you know whose wallet has not been registered, simply the amount of people it did send it to (so you can deduce the number of people it was not able to send to by subtracting the number of successful payments from the number of people you tipped).
 
 *Sadly, trying to tip "Roles" (like `@dev-turtle`, `@everyone`, `@here` etc) and expecting the bot to automatically tip everyone with that said role won't work, as it has not been programmed to do so :(*
@@ -145,9 +185,9 @@ However, it will not let you know whose wallet has not been registered, simply t
 When you tip someone, the desired amount plus 0.1 TRTL is pulled from your tipjar wallet balance and sent to the recipient's registered wallet (if he has not registered a wallet, he cannot receive tips).
 
 When you get tipped, the sender sends the desired amount plus 0.1 TRTL, pulled from his tipjar wallet balance, directly to your registered wallet (if you haven't registered a wallet, you can't receive tips).
-It also reacts to the message on which the person was tipped (`.tip 1 @RockSteady#7588`) with ![moneywings](images/trtlbot-plus-plus/rsz_money_with_wings.png)
+It also reacts to the message on which the person was tipped (`.tip 1 @RockSteady#7588`) with ![moneywings](images/trtlbot-plus-plus/rsz_money_with_wings.png).
 
-It *does not* send the TRTL to your tipjar balance. It sends it *directly* to your **wallet**.
+It *does not* send the TRTL to your tipjar balance. It sends it *directly* to your **wallet**.  
 This is to ensure that more and more TRTL is introduced into the ecosystem, rather than the same TRTL being circulated around.
 
 

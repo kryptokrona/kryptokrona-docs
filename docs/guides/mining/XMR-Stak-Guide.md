@@ -1,41 +1,38 @@
-# How to Set Up XMR-Stak 
+# How to Set Up XMR-Stak
 
 XMR-Stak is a unified miner, which means the same program will be used to mine with both your CPU and your GPU. It will automatically detect your hardware and adjust the settings accordingly.
 
 ## Downloading and Installing for Windows
 
 1. Download and install [XMR-Stak Unified Miner](https://github.com/fireice-uk/xmr-stak/releases/latest). It will auto-detect your hardware, and tune everything for you.
-
 2. Make a folder called `TurtleCoin Miner` on your Desktop and unzip the files you just downloaded for XMR-Stak in there.
-
 3. Double-click on `xmr-stak.exe`.
 
-   ##### To start XMR-Stak without using your CPU/GPU, follow these steps:<a name="xmr-stak-no-cpu-gpu"></a>
+#### To start XMR-Stak without usinsg your CPU/GPU, follow these steps <a name= "#xmr-stak-no-cpu-gpu"> </a>
 
-   * Open Command Prompt
+- Open Command Prompt
 
-   * Type `cd Desktop\TurtleCoin Miner`
+- Type `cd Desktop\TurtleCoin Miner`
 
-     * To start XMR-Stak without utilising the CPU, type `xmr-stak.exe --noCPU`
-     * To start XMR-Stak without utilizing your nVidia GPU, type `xmr-stak.exe --noNVIDIA`
-     * To start XMR-Stak without utilizing your AMD GPU, type `xmr-stak.exe --noAMD`
-     * To start XMR-Stak without utilizing either of your GPU's, type `xmr-stak.exe --noAMD --noNVIDIA`
+  - To start XMR-Stak without utilising the CPU, type `xmr-stak.exe --noCPU`
+  - To start XMR-Stak without utilizing your nVidia GPU, type `xmr-stak.exe --noNVIDIA`
+  - To start XMR-Stak without utilizing your AMD GPU, type `xmr-stak.exe --noAMD`
+  - To start XMR-Stak without utilizing either of your GPU's, type `xmr-stak.exe --noAMD --noNVIDIA`
 
-     **If you want to use both your CPU and your GPU, ignore these steps. Just launch `xmr-stak.exe`**
+  **If you want to use both your CPU and your GPU, ignore these steps. Just launch `xmr-stak.exe`**
 
-4. Click `Yes` when it asks if you want to run as Administrator. This is so that the program can see what hardware you're running.
-
-5. Check [XMR-Stak Setup and Configuration](#setup-and-config)
+1. Click `Yes` when it asks if you want to run as Administrator. This is so that the program can see what hardware you're running.
+2. Check [XMR-Stak Setup and Configuration](#setup-and-config)
 
 ## Downloading and Installing for Mac
 
-See https://github.com/fireice-uk/xmr-stak/blob/master/doc/compile.md and https://github.com/fireice-uk/xmr-stak/blob/master/doc/compile_macOS.md
+See [here](https://github.com/fireice-uk/xmr-stak/blob/master/doc/compile.md) and [here](https://github.com/fireice-uk/xmr-stak/blob/master/doc/compile_macOS.md).
 
 
 
 ## Downloading and Installing for Linux
 
-View [this guide](XMR-Stak-Linux-Guide) to get started with XMR-Stak on Linux
+View [this guide](XMR-Stak-Linux-Guide) to get started with XMR-Stak on Linux.
 
 
 

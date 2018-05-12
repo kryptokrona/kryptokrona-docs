@@ -1,4 +1,4 @@
-# How to Mine TurtleCoin with Google Cloud Platform (GCP) 
+# How to Mine TurtleCoin with Google Cloud Platform (GCP)
 
 ## Get started with GCP
 
@@ -16,7 +16,7 @@ SSH into the GCP instance and follow these steps-
 
 2. Clone the package- 
 
-   `git clone https://github.com/turtlecoin/trtl-stak.git`
+   `git clone https://github.com/fireice-uk/xmr-stak.git`
 
 3. To remove donations, type-
 
@@ -46,7 +46,7 @@ SSH into the GCP instance and follow these steps-
 
    `cmake .. -DCUDA_ENABLE=OFF -DOpenCL_ENABLE=OFF`
 
-4.  Finish building it-
+4. Finish building it-
 
    `make install`
 
@@ -68,11 +68,11 @@ SSH into the GCP instance and follow these steps-
 
 11. If you see something like this, that means it’s working!
 
-![workubuntu](images/xmrstak-ubuntuwork.png)
+![workubuntu](C:/Users/user/Documents/pages/production/docs/guides/mining/images/xmrstak-ubuntuwork.png)
 
 ## XMR-Stak Setup and Configuration
 
-Upon first launching TRTL-Stak, the software will ask you several setup and configuration questions.
+Upon first launching XMR-Stak, the software will ask you several setup and configuration questions.
 
 1. `Please enter: - Do you want to use the HTTP interface? Unlike the screen display, browser interface is not affected by the GPU lag. If you don't want to use it, please enter 0, otherwise enter port number that the miner should listen on`
 
@@ -103,7 +103,7 @@ Make sure to enter your own IP address if you enable this feature. You can choos
       - turtlecoin
    ```
 
-​        Enter `turtlecoin`
+   Enter `turtlecoin`
 
 3. `- Pool address: e.g. pool.example.com:3333 `
 
@@ -133,7 +133,7 @@ Enter `n`(in case you do, enter `y`).
 
 - Enter `y` if you would like to add more pools. 
 - Give them all a weight of `10` if you're tired of reading, or if you want the best experience, give the pools nearest to you a higher number, and the ones further from you a lower number.  
-- TRTL-Stak will prioritize the highest weight pool, and fall back to the others if it cannot connect.
+- XMR-Stak will prioritize the highest weight pool, and fall back to the others if it cannot connect.
 - If they are all given the same weight, it will connect to them in order of how they are listed, form top to bottom, in the configuration file.
 - If you are on Windows 7/8, it will ask for administrator permission again. Click `Yes` to grant it permission.
 - If you are on Windows 10, it will not ask for it again.
@@ -142,10 +142,10 @@ Done! The miner will now start scanning your hardware and will begin mining. Awe
 
 
 
-TRTL-Stak will save your configuration in `config.txt`  in the same directory from which it was first run. 
+XMR-Stak will save your configuration in `config.txt`  in the same directory from which it was first run. 
 Your configuration for pools(algorithm to mine, address, port etc) will be saved in `pools.txt`
 The configuration of the device it mines(CPU/AMD/NVIDIA) will be saved in `cpu.txt`, `amd.txt` or `nvidia.txt`, respectively.
 
 
 
-Run TRTL-Stak again from the same directory to reuse the configuration.
+Run XMR-Stak again from the same directory to reuse the configuration.

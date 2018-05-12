@@ -18,4 +18,3 @@ We also have a wide range of people in the community, people from all walks of l
 
 Our community and dev team are growing by the week and this is what makes the TurtleCoin community so great!
 
-
