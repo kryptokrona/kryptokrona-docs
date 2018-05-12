@@ -1,19 +1,19 @@
 # Wallet RPC API
 
-Bytecoin RPC Wallet is a HTTP server which provides JSON 2.0 RPC interface for Bytecoin payment operations and address management.
+TurtleCoin RPC Wallet is a HTTP server which provides JSON 2.0 RPC interface for TurtleCoin payment operations and address management.
 
 
 
 ## Interacting with the API
 
-To make a JSON PRC request to your Bytecoin RPC Wallet you should use a POST request that looks like this:
+To make a JSON PRC request to your TurtleCoin RPC Wallet you should use a POST request that looks like this:
 
 `http://<service address>:<service port>/json_rpc`
 
 Parameter            | Description
 -------------------- | ------------------------------------------------------------ 
-`<service address>`  | IP of Bytecoin RPC Wallet, if RPC Wallet is located on local machine it is either 127.0.0.1 or localhost
-`<service port>`     | Bytecoin RPC Wallet port, by default it is binded to 8070 port, but it can be manually binded to any port you want, read more about this here.
+`<service address>`  | IP of TurtleCoin RPC Wallet, if RPC Wallet is located on local machine it is either 127.0.0.1 or localhost
+`<service port>`     | TurtleCoin RPC Wallet port, by default it is binded to 8070 port, but it can be manually binded to any port you want, read more about this here.
 
 
 
@@ -310,7 +310,7 @@ Argument        | Mandatory     | Description                                   
 --------------- | ------------- | ---------------------------------------------------------------------------------------- | -------
 addresses       | No            | Array of strings, where each string is an address to take the funds from                 | array
 transfers       | Yes           | Array of address (string), amount (int64)                                                | array
-fee             | Yes           | Transaction fee. Minimal fee in Bytecoin network is .01 BCN. This parameter should be specified in minimal available BCN units. For example, if your fee is .01 BCN, you should pass it as 1000000  | uint64 
+fee             | Yes           | Transaction fee. Minimal fee in TurtleCoin network is .01 BCN. This parameter should be specified in minimal available BCN units. For example, if your fee is .01 BCN, you should pass it as 1000000  | uint64 
 unlockTime      | No            | Height of the block until which transaction is going to be locked for spending.          | uint64
 anonymity       | Yes           | Privacy level (a discrete number from 1 to infinity). Level 6 and higher is recommended  | uint64
 extra           | No            | String of variable length. Can contain A-Z, 0-9 characters.                              | string
@@ -339,7 +339,7 @@ Argument        | Mandatory     | Description                                   
 --------------- | ------------- | ---------------------------------------------------------------------------------------- | -------
 addresses       | No            | Array of strings, where each string is an address                                        | array
 transfers       | Yes           | Array of address (string), amount (int64)                                                | array
-fee             | Yes           | Transaction fee. Minimal fee in Bytecoin network is .01 BCN. This parameter should be specified in minimal available BCN units. For example, if your fee is .01 BCN, you should pass it as 1000000 | uint64
+fee             | Yes           | Transaction fee. Minimal fee in TurtleCoin network is .01 BCN. This parameter should be specified in minimal available BCN units. For example, if your fee is .01 BCN, you should pass it as 1000000 | uint64
 unlockTime      | No	        | Height of the block until which transaction is going to be locked for spending.	       | uint64
 anonymity       | Yes           | Privacy level (a discrete number from 1 to infinity). Level 6 and higher is recommended. | uint64
 extra           | No            | String of variable length. Can contain A-Z, 0-9 characters.                              | string
