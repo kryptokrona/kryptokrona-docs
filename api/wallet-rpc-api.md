@@ -14,12 +14,35 @@ Currently we support the following official client bindings:
 npm install turtlecoin-walletd-rpc-js
 ```
 
+```php
+composer require turtlecoin/turtlecoin-walletd-rpc-php
+```
+
+```python
+pip install turtlecoin
+```
+
 ## Interacting with the API
 
 > API endpoint example
 
 ```
 http://localhost:8070/json_rpc
+```
+
+> Instantiation / Configuration
+
+```php
+<?php
+use TurtleCoin\Walletd;
+
+$config = [
+    'rpcHost'     => 'http://127.0.0.1',
+    'rpcPort'     => 8070,
+    'rpcPassword' => 'test',
+];
+
+$walletd = new Walletd\Client($config);
 ```
 
 To make a JSON PRC request to your TurtleCoin RPC Wallet you should use a POST request that looks like this:
@@ -34,6 +57,33 @@ Parameter            | Description
 
 
 ## reset
+
+```shell
+// 
+```
+
+```javascript
+// 
+```
+
+```php
+<?php
+use TurtleCoin\Walletd;
+
+$walletd = new Walletd\Client($config);
+
+$key = 'YOUR PRIVATE VIEW KEY';
+
+$walletd->reset($key);
+```
+
+```python
+// 
+```
+
+```go
+// 
+```
 
 `reset()` method allows you to re-sync your wallet.
 
