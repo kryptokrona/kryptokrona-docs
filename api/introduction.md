@@ -14,4 +14,10 @@
            (___|  (___|   (___|  (___|
 ```
 
-If you want to integrate Bytecoin into your service - this part of the wiki will assist you to do just that. With the help of our Bytecoin RPC Wallet or Daemon & Simplewallet pair you will be able to integrate Bytecoin within several minutes.
+This website documents the public APIs of TurtleCoin.
+
+You can view code examples in the dark area to the right; switch the programming language of the examples with the tabs in the top right.
+
+We also have some specific language bindings to make integration easier. You can switch the programming language of the examples with the tabs in the top right.
+
+If anything is missing or seems incorrect, please check the [GitHub issues](https://github.com/ar-x/turtlecoin-wiki/issues) for existing known issues or [create a new issue](https://github.com/ar-x/turtlecoin-wiki/issues/new).
