@@ -48,6 +48,7 @@ You cannot recover your wallet directly with your 25 word mnemonic seed through 
 
 - Follow [this guide](Using-Nest-Wallet#private-view-and-spend-keys) for steps on recovering your wallet with your private view and spend keys with Nest Wallet.
 
+
 #### WinForms Wallet<a name="25-winforms-wallet"></a>
 
 You cannot recover your wallet directly with your 25 word mnemonic seed through WinForms Wallet, you have to derive the private spend and view keys first. Follow these steps-
@@ -61,4 +62,6 @@ You cannot recover your wallet directly with your 25 word mnemonic seed through 
 - Your Private View and Spend Keys will be in the bottom most box, in red.
 
 - Follow [this guide](Using-WinForms-Wallet#private-view-and-spend-keys) for steps on recovering your wallet with your private view and spend keys with WinForms Wallet.
+
+
 

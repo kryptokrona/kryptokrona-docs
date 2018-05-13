@@ -92,11 +92,11 @@ In the event of a lost or corrupted wallet file, computer crash, etc., the *View
 
 To back up your keys, follow these steps-
 
-- Upon opening your wallet, click `BACKUP KEYS`, located at the bottom of your wallet.
+* Upon opening your wallet, click `BACKUP KEYS`, located at the bottom of your wallet.
 
-- Enter your wallet password and press `Unlock Keys`.
+* Enter your wallet password and press `Unlock Keys`.
 
-- Save your View Key and Spend key in a safe and secure place.
+* Save your View Key and Spend key in a safe and secure place.
 
   ![backup](images/winf-keys.png)
 
@@ -108,16 +108,17 @@ Upon opening your wallet, your balance is located in the top right.
 
 ### Sending TurtleCoin Transactions
 
-- Upon opening your wallet, in the bottom right will be written `SEND TRTL`, click it.
-- To send a transaction, enter the recipient's address next to `Recipient`and the amount you want to send next to `Amount`.
-- Because transactions on the TurtleCoin blockchain are privatized, in some situations a payment ID is necessary for the recipient to be able to determine where the payment came from, for instance when depositing to an exchange or other service.
+* Upon opening your wallet, in the bottom right will be written `SEND TRTL`, click it.
+* To send a transaction, enter the recipient's address next to `Recipient`and the amount you want to send next to `Amount`.
+* Because transactions on the TurtleCoin blockchain are privatized, in some situations a payment ID is necessary for the recipient to be able to determine where the payment came from, for instance when depositing to an exchange or other service.
 
-​        Usually the service/recipient will generate and provide the required payment ID.
+  Usually the service/recipient will generate and provide the required payment ID.
 
-​        To include a Payment ID, simply enter it next to ` Payment ID`. *Note: It is optional, if it doesn't              give a payment ID it is most likely not required*
+  To include a Payment ID, simply enter it next to ` Payment ID`. 
+  *Note: It is optional, if it doesn't give a payment ID it is most likely not required*
 
-- Next is the `Mixin`, which is how many times your transaction will be mixed with others for obfuscation and privacy. The suggested amount is `3`.
-- For the `Fee`, it is alright to leave it at `.1%`. If you send more than 1,000,000 TRTL at a time, it is best to set a fee of `1%`.
+* Next is the `Mixin`, which is how many times your transaction will be mixed with others for obfuscation and privacy. The suggested amount is `3`.
+* For the `Fee`, it is alright to leave it at `.1%`. If you send more than 1,000,000 TRTL at a time, it is best to set a fee of `1%`.
 
 Once done, click `Send`.
 
@@ -132,6 +133,7 @@ To close the wallet safely, follow these steps-
 - Click on `Yes` on the popup that appears.
 
 - Click `OK` on the message which says `Saving the wallet, please wait`.
+
 
 ### Recovering your Wallet
 

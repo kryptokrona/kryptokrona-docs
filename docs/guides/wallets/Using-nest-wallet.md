@@ -112,17 +112,17 @@ It is **very** important to export these keys and back them up somewhere that is
 
 To back up your View Key and Spend Key, follow these steps-
 
-- Click on `Wallet` on the top left
+* Click on `Wallet` on the top left
 
-- Click on `Backup wallet`
+* Click on `Backup wallet`
 
   ![backup](images/nest-backup1.png)
 
-- A window like this should appear-
+* A window like this should appear-
 
   ![backup](images/nest-backup2.png)
 
-- Copy and safely store the `Private View Key` and `Private Spend Key`.
+* Copy and safely store the `Private View Key` and `Private Spend Key`.
 
 ### Viewing Wallet Balance
 
@@ -145,7 +145,7 @@ Usually the service/recipient will generate and provide the required payment ID.
 
 To include a Payment ID, simply enter it under `(optional) Payment ID`.
 
-![send](C:/Users/user/Documents/pages/production/docs/guides/wallets/images/nest-tx.png)
+![send](images/nest-tx.png)
 
 #### Changing Mixin and Fee
 
@@ -153,7 +153,7 @@ Currently, it is not possible to change the mixin (set to 4) or fee (set to 1 TR
 
 For now remember, that 1 TRTL ontop of what you're sending will be deducted. So don't send your full balance!
 
-### Saving the Wallet
+ ### Saving the Wallet
 
 To safely close the wallet, simply close it as you normally would; by clicking the `X` at the top right/left, depending on your OS.
 
@@ -165,9 +165,9 @@ If you want to recover your wallet with your Private View and Spend Key, it is r
 
 Upon opening Nest Wallet, *in the boxes under `Import wallet from keys`*-
 
-- enter the name you want to give your wallet
-- enter the password you want to encrypt your wallet with
-- enter your View and Spend key in the bottom two boxes
+* enter the name you want to give your wallet
+* enter the password you want to encrypt your wallet with
+* enter your View and Spend key in the bottom two boxes
 
 ![restore](images/nest-recover.png)
 

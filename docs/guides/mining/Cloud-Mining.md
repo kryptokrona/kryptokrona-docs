@@ -1,4 +1,4 @@
-# How to Mine TurtleCoin with Google Cloud Platform (GCP)
+# How to Mine TurtleCoin with Google Cloud Platform (GCP) 
 
 ## Get started with GCP
 
@@ -47,6 +47,7 @@ SSH into the GCP instance and follow these steps-
    `cmake .. -DCUDA_ENABLE=OFF -DOpenCL_ENABLE=OFF`
 
 7. Finish building it-
+
 
    `make install`
 

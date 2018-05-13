@@ -11,7 +11,6 @@
 #### Q: I'm using a Mac, can I still mine?
 
  A: Yes, of course! We're working on a guide.
-
 #### Q: I've started mining, how can I view my stats?
 
 A: Visit your pool's homepage. There should be a spot for you to put in your TRTL address, and you can then view your hashrate, pending balance, payouts, and more.
@@ -36,11 +35,11 @@ A: To save money on fees, the pools send payouts in chunks. [Check your pool web
 
 A: If you submit lots of invalid shares, a pool might ban you. Possible reasons for invalid shares can be 
 
-- your hardware getting overworked, 
+* your hardware getting overworked, 
 
-- high ping to the pool, 
+* high ping to the pool, 
 
-- or your difficulty being set too low. 
+* or your difficulty being set too low. 
 
   Try lowering any overclocks, choosing a pool closer to you or setting a higher difficulty port. 
 
@@ -66,13 +65,13 @@ If all pools are the same weight, they will be used in the top to bottom order t
 
 A: There are a few factors to consider when choosing a pool. 
 
-- One is your ping, you can find this out by pinging the server in a command prompt by typing `ping address.com`, where `address.com` is the pool address. 
+* One is your ping, you can find this out by pinging the server in a command prompt by typing `ping address.com`, where `address.com` is the pool address. 
 
-- Another is the hashrate of the pool. If you go on the pool's website, you can see how often they find blocks. 
+* Another is the hashrate of the pool. If you go on the pool's website, you can see how often they find blocks. 
 
   If the pool takes a long time to find a block, your stats will take a long time to update. 
 
-- Finally, the minimum payouts can be significant if you're a small miner. 
+* Finally, the minimum payouts can be significant if you're a small miner. 
 
   This is the amount you need to mine before you get paid. Most pools will list this under the "Payments" tab.
 
@@ -118,16 +117,17 @@ A: This could be caused by multiple issues:
 
 
 
-- If you're using a Nvidia card, open up `nvidia.txt`, in the same directory as `XMR-Stak.exe`. Try setting `bfactor` to `8` and `bsleep` to `100`, and then reload your miner after saving the file. 
+  * If you're using a Nvidia card, open up `nvidia.txt`, in the same directory as `XMR-Stak.exe`. Try setting `bfactor` to `8` and `bsleep` to `100`, and then reload your miner after saving the file. 
 
-  If it's still laggy, try increasing both values slightly. This will cause you to get less hashes per second, but can let you use your PC more effectively. You can try tweaking the value to increase your hashrate. 
+    If it's still laggy, try increasing both values slightly. This will cause you to get less hashes per second, but can let you use your PC more effectively. You can try tweaking the value to increase your hashrate. 
 
-  Some people also achieve success by lowering the thread count.
+    Some people also achieve success by lowering the thread count.
 
 
-- If you're using an AMD card, lower the value of `intensity` in `amd.txt`.
+  * If you're using an AMD card, lower the value of `intensity` in `amd.txt`.
 
-- If you're using just a CPU, you can delete the cores being used from `cpu.txt`.
+  * If you're using just a CPU, you can delete the cores being used from `cpu.txt`.
+
 
 #### Q: How can I use just my GPU/CPU to mine in XMR-Stak?
 
@@ -143,15 +143,16 @@ A: Generally, this is due to an incorrectly configured config. In the directory 
 
 Open this up, and check that it looks similar to this:
 
-```
-{"pool_address" : "eu.turtlepool.space:3333",
- "wallet_address" : "TRTLv2Fyavy8CXG8BPEbNeCHFZ1fuDCYCZ3vW5H5LXN4K2M2MHUpTENip9bbavpHvvPwb4NDkBWrNgURAd5DB38FHXWZyoBh4wW",
- "pool_password" : "x",
- "use_nicehash" : false,
- "use_tls" : false,
- "tls_fingerprint" : "",
- "pool_weight" : 10 },
-```
+    ```
+    {"pool_address" : "eu.turtlepool.space:3333",
+     "wallet_address" : "TRTLv2Fyavy8CXG8BPEbNeCHFZ1fuDCYCZ3vW5H5LXN4K2M2MHUpTENip9bbavpHvvPwb4NDkBWrNgURAd5DB38FHXWZyoBh4wW",
+     "pool_password" : "x",
+     "use_nicehash" : false,
+     "use_tls" : false,
+     "tls_fingerprint" : "",
+     "pool_weight" : 10 },
+       
+     ```
 
   Your wallet address is the address starting with `TRTL`, not your wallet filename. 
 
@@ -190,14 +191,12 @@ A: This occurs because of the blockchain forking, generally when one mining pool
   This can be fixed by re-syncing the correct blockchain from scratch. See the question below.
 
 #### Q: I'm getting a "corrupted blockchain" error like this?
-
 ```
 2018-May-07 15:52:19.877323 INFO    initializing core
 2018-May-07 15:52:19.908530 INFO    Importing blocks from blockchain storage
 2018-May-07 15:52:19.908530 ERROR   Corrupted blockchain. Block with index 428973 and hash aafa7fd33d476535188bdd9e86ba51bb5e058be8e52367b78e9c0c03e74299c5 has previous block hash 2c0cf6c07612b9e1ea19c6922a56746b83cb42c7b11edfc4b185572225bb0f20, but parent has hash 26189359b64d4bb357a04b102a42a01d2771a3f3d80db3ca1b7395a2aeaede4a. Resynchronize your daemon please.
 2018-May-07 15:52:19.924135 INFO    Closing DB.
 ```
-
 A: Re-sync your daemon from scratch(see below question), [bootstrap the blockchain](guides/Bootstrapping-the-Blockchain.md) or sync [using checkpoints](guides/wallets/using-simplewallet.md#using-checkpoints)
 
 #### Q: How can I re-sync the blockchain?
@@ -255,10 +254,11 @@ Until you are fully synced, you won't be able to send transactions, and your bal
 
 A: 
 
-- In SimpleWallet, type `export_keys`, and save the view and spend key somewhere safe in case something goes wrong, if you haven't already. 
-- Then, close and reopen SimpleWallet and SimpleWallet. 
-- Type `reset` in SimpleWallet after reopening your wallet file.
-- It should start resetting your wallet, but the progress might not be immediately obvious - wait a while, and it should start counting up the blocks and printing out your transactions as it gets to them.
+* In SimpleWallet, type `export_keys`, and save the view and spend key somewhere safe in case something goes wrong, if you haven't already. 
+
+*  Then, close and reopen SimpleWallet and SimpleWallet. 
+*  Type `reset` in SimpleWallet after reopening your wallet file.
+*  It should start resetting your wallet, but the progress might not be immediately obvious - wait a while, and it should start counting up the blocks and printing out your transactions as it gets to them.
 
 #### Q: How do I backup my wallet?
 
@@ -315,31 +315,29 @@ A mixin of `0` can be used to have a public transaction(though it is strongly re
 
   A: Yes, there are currently 2 GUI wallets actively in development, along with some mobile wallets too. However, they may not be ready for full use yet, and may not work on your operating system.
 
-- [Xamarin Wallet](https://github.com/turtlecoin/turtle-wallet-xamarin)
-- [Nest Wallet](https://github.com/turtlecoin/turtle-wallet-go)
+* [Xamarin Wallet](https://github.com/turtlecoin/turtle-wallet-xamarin)
+* [Nest Wallet](https://github.com/turtlecoin/turtle-wallet-go)
 
 To view a guide on using them, you can go [here](guides/wallets/making-a-wallet/#graphical-wallet-gui-wallet)
 
 #### Q: I'm using the GUI Xamarin wallet, and it fails to connect to the daemon.
 
   A: There are multiple reasons this can occur. Try opening `walletd.log` and scrolling to the bottom to determine what is occurring.
-
-- A wrong password - check `walletd.log` to check if this is occurring. If you are sure your password is correct, this link could be helpful - <https://github.com/turtlecoin/desktop-xamarin/issues/20
-
-
-- You have another `walletd.exe` or SimpleWallet process running. Only one of these can be running at once, and the GUI launches its own. Check Task Manager and close down any of these processes and try again.
+  * A wrong password - check `walletd.log` to check if this is occurring. If you are sure your password is correct, this link could be helpful - <https://github.com/turtlecoin/desktop-xamarin/issues/20
 
 
-- `walletd` is importing blocks from the DB, which takes a while and so the GUI thinks it has crashed. Solution here - <https://github.com/turtlecoin/desktop-xamarin/issues/17#issuecomment-366790435>
+  * You have another `walletd.exe` or SimpleWallet process running. Only one of these can be running at once, and the GUI launches its own. Check Task Manager and close down any of these processes and try again.
 
 
-- If all else fails, if you have your private keys then you can instead import your wallet into SimpleWallet. 
+  * `walletd` is importing blocks from the DB, which takes a while and so the GUI thinks it has crashed. Solution here - <https://github.com/turtlecoin/desktop-xamarin/issues/17#issuecomment-366790435>
 
-* If that is not a desirable option, come and ask for help over at [the Discord](https://discord.gg/J7g99EE)
 
+  * If all else fails, if you have your private keys then you can instead import your wallet into SimpleWallet. 
+
+
+  * If that is not a desirable option, come and ask for help over at [the Discord](https://discord.gg/J7g99EE)
 
 ## Paper Wallet / Cold Storage?<a name="paper-wallet-cold-storage"></a>
-
 #### Q: Wait, What's Cold Storage?
 
   A: The term "cold storage" refers to a wallet that has been created via an offline means. 
@@ -353,7 +351,7 @@ The preferred way to do this is via a computer than has never ever been connecte
 
   Thus to protect against that scenario you could transfer any TRTL balance to one of these cold storage addresses. Please remember to keep secure/secret backups of your keys. If you lose the keys you lose any balance that was transferred to that wallet. 
 
-#### Q: Can I make a paper wallet?
+#### Q: Can I make a paper wallet? 
 
 A: Yes, you can view the guide [here](guides/wallets/Making-a-Paper-Wallet)
 
@@ -368,7 +366,6 @@ A: Yes, you can view the guide [here](guides/wallets/Making-a-Paper-Wallet)
   It should be possible in the future to allow users to give away just their Private View Key to view transactions, but this hasn't been implemented by anyone so far, and would allow that website to see every transaction that you make.
 
 ## Other
-
 #### Q: Why does TRTL have such a high amount of tokens/small amount of decimal places?
 
   A: Read a great post about the justification for it [here](https://medium.com/@turtlecoin/one-trillion-turtles-coin-supply-and-unit-economics-5bfbea0aa1f1).
@@ -377,13 +374,13 @@ A: Yes, you can view the guide [here](guides/wallets/Making-a-Paper-Wallet)
 
   A: There are multiple ways to acquire TRTL, for example:
 
-- Mining - see [here](guides/mining/Mining)
-- Buying - TRTL is currently available on these exchanges: [TradeOgre](https://tradeogre.com/exchange/BTC-TRTL) and [TradeSatoshi](https://tradesatoshi.com/Exchange/?market=TRTL_BTC)
-- Bounties - Bounties for developing TRTL software, spreading the word of TRTL, and many other things are often posted in the #bounties channel on discord. Check the pinned messages for current bounties.
-- Tips - People will sometimes tip each other, especially if you make spicy memes in the `#memes` channel
-- Rain - Good active Turtles get rained on, check out what the [RainBorg](guides/RainBorg-Wat-Dat) is to see how to use it.
-- Faucet - Head over to the [faucet](https://faucet.trtl.me/) and enter your TRTL address. 
-  The amount you can receive is limited(1 TRTL, thrice a day), to share the TRTL for all. Thanks to @madk for creating this.
+  * Mining - see [here](guides/mining/Mining)
+  * Buying - TRTL is currently available on these exchanges: [TradeOgre](https://tradeogre.com/exchange/BTC-TRTL) and [TradeSatoshi](https://tradesatoshi.com/Exchange/?market=TRTL_BTC)
+  * Bounties - Bounties for developing TRTL software, spreading the word of TRTL, and many other things are often posted in the #bounties channel on discord. Check the pinned messages for current bounties.
+  * Tips - People will sometimes tip each other, especially if you make spicy memes in the `#memes` channel
+  * Rain - Good active Turtles get rained on, check out what the [RainBorg](guides/RainBorg-Wat-Dat) is to see how to use it.
+  * Faucet - Head over to the [faucet](https://faucet.trtl.me/) and enter your TRTL address. 
+    The amount you can receive is limited(1 TRTL, thrice a day), to share the TRTL for all. Thanks to @madk for creating this.
 
 #### Q: Are there any light wallets / mobile wallets?
 
@@ -405,9 +402,9 @@ A: Yes, you can view the guide [here](guides/wallets/Making-a-Paper-Wallet)
 
   A: Yes, there are currently a few-
 
-- https://blocks.turtle.link
-- https://turtle-coin.com
-- https://explorer.trtlpwr.cc
+* https://blocks.turtle.link
+* https://turtle-coin.com
+* https://explorer.trtlpwr.cc
 
 #### Q: How do I make sure a pool isn't forked?
 

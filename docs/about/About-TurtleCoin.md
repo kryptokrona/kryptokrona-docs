@@ -22,11 +22,17 @@ Some of the main features of TurtleCoin include:
 
 - Amazing community
 
+  
+
 To learn more about us, check out our other various articles, describing:
 
 - [Our Background and History](Background-and-History)
+
 - [Our Community](Community)
+
 - [How to Contribute](Contributing)
+
 - [it's Technical Data](technical-data.md)
 
 We recommend you take some time off and read them, to get acquainted with TurtleCoin!
+

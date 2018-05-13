@@ -4,8 +4,7 @@
 
 
 
-# How to Participate in a Raindance
-
+#  How to Participate in a Raindance
 This guide will walk you through the process.
 
 Here's a quick screen recording of a raindance taking place:  
@@ -60,18 +59,18 @@ TurtleBotRain will reply with the amount that you'll receive.
 ![Payout!](images/raindance/payout.jpg)
 
 
-
-
-
 ## !rain
 
 ![Forecast](images/raindance/forecast.jpg)
 
 If you type `!rain` **in the bots channel only** you should get a response back with how many turtles are needed for the next raindance.
 
+
 ## Notify
 
+
 ![Notification](images/raindance/notify.jpg)
+
 
 Enabling notifications for the #raindance channel is easy.
 

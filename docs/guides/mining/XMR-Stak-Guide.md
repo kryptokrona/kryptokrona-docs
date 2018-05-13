@@ -1,4 +1,4 @@
-# How to Set Up XMR-Stak
+# How to Set Up XMR-Stak 
 
 XMR-Stak is a unified miner, which means the same program will be used to mine with both your CPU and your GPU. It will automatically detect your hardware and adjust the settings accordingly.
 
@@ -54,8 +54,9 @@ If you are checking from the same IP address, you can alternatively enter, `loca
 
 Make sure to enter your own IP address if you enable this feature. You can choose any port you want(uptil 9999)!
 
-2. ``` 
-   
+
+
+2. ````
    Please enter: 
    - Please enter the currency that you want to mine:
 
@@ -76,9 +77,13 @@ Make sure to enter your own IP address if you enable this feature. You can choos
    - monero7
    - stellite
    - sumokoin
+   ````
 
-   ```
-Enter `cryptonight_lite_v7`
+   ​
+
+   Enter `cryptonight_lite_v7`
+
+   ​
 
 3. `- Pool address: e.g. pool.example.com:3333`
 

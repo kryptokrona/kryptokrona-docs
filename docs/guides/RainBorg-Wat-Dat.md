@@ -64,11 +64,12 @@ _No Payment ID equals a tip for the tipbot operator, it will not be donated to R
 
 The tips are sent out to turtles in these channels.
 
- - \#general *(more tips sent here as this is the main channel)*
- - \#help *(everyone appreciates being helped, lend a hand, get some tips!)*
- - \#mining *(the miners are important, let's tip them as well)*
- - \#dev_general *(these guys, amiright!?)*
- - \#dev_marketing *(spread the word!)*
+  - \#general *(more tips sent here as this is the main channel)*
+  - \#help *(everyone appreciates being helped, lend a hand, get some tips!)*
+  - \#mining *(the miners are important, let's tip them as well)*
+  - \#dev_general *(these guys, amiright!?)*
+  - \#dev_marketing *(spread the word!)*
+
 
 ## Chatting right? So no chat = no TRTL?
 
@@ -77,8 +78,9 @@ Pretty much.
 - The active chatters get rained on.  
 
   - The inactive chatters don't.  
-  
+
     - It's simple.  
+
 
 ### Hold up, I was active like 2mins ago then all these others got TRTL and I didn't
 
@@ -98,11 +100,11 @@ There is a way to get unsolicited tips though, [be a good Turtle](https://medium
 
 Yes she'll respond to `$` commands:
 
- - `$help` - you get a DM with a list of commands from RainBorg
- - `$balance` - Check the bot's tip balance, will show in the channel
- - `$donate` - you get a DM with details on how to send a donation to the bot's tip balance
- - `$optout` - Opt out of receiving tips from the bot
- - `$optin` - Opt back into receiving tips from the bot
+  - `$help` - you get a DM with a list of commands from RainBorg
+  - `$balance` - Check the bot's tip balance, will show in the channel
+  - `$donate` - you get a DM with details on how to send a donation to the bot's tip balance
+  - `$optout` - Opt out of receiving tips from the bot
+  - `$optin` - Opt back into receiving tips from the bot
 
 ## Stats
 

@@ -4,10 +4,10 @@ Name: TurtleCoin
 
 Algorithm: [CryptoNote](http://cryptonote.org)
 
-- ASIC resistant
-- Enhanced Privacy
-- Elastic Blocks
-- Fair Mining
+* ASIC resistant
+* Enhanced Privacy
+* Elastic Blocks
+* Fair Mining
 
 Block time: `30` second target block time - made by and for miners.  
 

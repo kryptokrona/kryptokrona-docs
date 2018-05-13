@@ -3,8 +3,8 @@
 This guide will help you install a recent copy of the blockchain. This should significantly speed up the task of getting the blockchain synced up so you can use your wallet.
 
 ## Windows:
-
 1. Make sure `TurtleCoind.exe`, `walletd.exe`, and/or the GUI wallet are not running.
+
 2. Open File Explorer and type `%APPDATA%\TurtleCoin` and hit enter.
 
 ![file explorer](images/bootstrap/file_explorer.jpg)
@@ -14,15 +14,16 @@ This guide will help you install a recent copy of the blockchain. This should si
 
 3. Delete the following if they exist:
 
-- blockindexes.bin
+ * blockindexes.bin
 
-- blocks.bin
+ * blocks.bin
 
-- "DB" folder
+ * "DB" folder
 
   ---
 
-  **Note**: In case it is unable to delete the files due to them being used by some other program, follow these steps:
+
+    **Note**: In case it is unable to delete the files due to them being used by some other program, follow these steps:
 
   - Open Task Manager with the shortcut `Ctrl + Shift+ Escape`.
   
@@ -52,8 +53,16 @@ This guide will help you install a recent copy of the blockchain. This should si
 
 7. See [Expected Results](#ExpectedResults) section below.
 
-## Mac & Linux:
 
+5. Move the two new downloaded files to the `%APPDATA%\TurtleCoin` folder.
+
+6. Start `TurtleCoind.exe` or the GUI wallet like you normally do.
+
+7. See [Expected Results](#ExpectedResults) section below.
+
+
+
+## Mac & Linux:
 1. Make sure `TurtleCoind`, `walletd`, and/or the GUI wallet are not running.
 
 2. Open `Finder`.
@@ -64,9 +73,13 @@ This guide will help you install a recent copy of the blockchain. This should si
 
 4. Delete the following if they exist: 
 
-- blockindexes.bin 
-- blocks.bin 
-- "DB" folder 
+* blockindexes.bin 
+
+* blocks.bin 
+
+* "DB" folder 
+
+
 
 5. [Download](https://f000.backblazeb2.com/file/turtle-blockchain/latest.zip) the latest snapshot of the blockchain.
 
@@ -79,7 +92,6 @@ This guide will help you install a recent copy of the blockchain. This should si
 ## Expected Results if Done Correctly <a name="ExpectedResults"></a>
 
 When you start `TurtleCoind` you should see this. Note that the blocksize (150246) in this example will be a different number:
-
 ```
 2018-Feb-01 18:43:37.216471 INFO    Initializing core...
 2018-Feb-01 18:43:37.225492 INFO    Importing blocks from blockchain storage
@@ -92,7 +104,6 @@ When you start `TurtleCoind` you should see this. Note that the blocksize (15024
 ```
 
 After it completes it will start syncing incrementally like so:
-
 ```
 2018-Feb-01 18:47:48.075930 INFO    Imported block with index 150000 / 150246
 2018-Feb-01 18:47:48.860470 INFO    Core initialized OK

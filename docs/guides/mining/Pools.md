@@ -78,14 +78,15 @@ PPLNS does not pay out per block found, rather it pays based on the number of sh
 
 How it works is, 
 
-- you start mining with a PPLNS pool. 
-- Rather than paying you out based on the number of shares you submitted since you started mining/the last block was found, it will pay depending on how many shares you submitted in a period of time, called the window, which is an estimate of the time in which the pool in question finds a block. 
-- So, after you start mining, it will take a few hours for you to earn your normal earnings - and since the effect of pool hoppers is lessened, you may make comparatively more than other methods. 
+* you start mining with a PPLNS pool. 
+* Rather than paying you out based on the number of shares you submitted since you started mining/the last block was found, it will pay depending on how many shares you submitted in a period of time, called the window, which is an estimate of the time in which the pool in question finds a block. 
+* So, after you start mining, it will take a few hours for you to earn your normal earnings - and since the effect of pool hoppers is lessened, you may make comparatively more than other methods. 
 
 Basically, you get paid based on 
 
 - the number of shares you submitted
 - and how long you have been mining.
+
 
 
 

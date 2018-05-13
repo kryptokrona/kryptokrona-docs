@@ -1,3 +1,4 @@
+
  # Contributing to TurtleCoin
 
 To help contribute and improve the TurtleCoin project, you can: 
@@ -10,3 +11,4 @@ To help contribute and improve the TurtleCoin project, you can:
   The #bounties channel in the Discord has a list of bounties (pinned) offered to users who can help improve functionality in existing tools/make a tool which can be used.
 
 * help improve this wiki by submitting a pull request/making an issue over at it's [GitHub Repo](https://github.com/turtlecoin/turtlcoin-wiki).
+
