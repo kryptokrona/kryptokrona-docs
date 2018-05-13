@@ -126,6 +126,7 @@ A: This could be caused by multiple issues:
 
 
 - If you're using an AMD card, lower the value of `intensity` in `amd.txt`.
+
 - If you're using just a CPU, you can delete the cores being used from `cpu.txt`.
 
 #### Q: How can I use just my GPU/CPU to mine in XMR-Stak?
@@ -143,7 +144,6 @@ A: Generally, this is due to an incorrectly configured config. In the directory 
 Open this up, and check that it looks similar to this:
 
 ```
-​```
 {"pool_address" : "eu.turtlepool.space:3333",
  "wallet_address" : "TRTLv2Fyavy8CXG8BPEbNeCHFZ1fuDCYCZ3vW5H5LXN4K2M2MHUpTENip9bbavpHvvPwb4NDkBWrNgURAd5DB38FHXWZyoBh4wW",
  "pool_password" : "x",
@@ -151,8 +151,6 @@ Open this up, and check that it looks similar to this:
  "use_tls" : false,
  "tls_fingerprint" : "",
  "pool_weight" : 10 },
-   
- ```
 ```
 
   Your wallet address is the address starting with `TRTL`, not your wallet filename. 
@@ -213,17 +211,17 @@ Alternatively, check [this guide](Bootstrapping-the-Blockchain) for instructions
 
 A: This is a known issue with older macs or un-updated macs. 
 
-​    Try entering this into a terminal -
+Try entering this into a terminal -
 
 ```
 curl -sL "https://raw.githubusercontent.com/turtlecoin/turtlecoin/master/multi_installer.sh" | bash
 ```
 
-​    This automated script should compile the software itself, and place the binaries in ./src once done. 
+This automated script should compile the software itself, and place the binaries in ./src once done. 
 
-​    See [here](https://github.com/turtlecoin/turtlecoin#ubuntu-1604-and-macos-1010) for more info. 
+See [here](https://github.com/turtlecoin/turtlecoin#ubuntu-1604-and-macos-1010) for more info. 
 
-​    If this fails, try instead following the instructions to [compile manually]( https://github.com/turtlecoin/turtlecoin#apple)
+If this fails, try instead following the instructions to [compile manually]( https://github.com/turtlecoin/turtlecoin#apple)
     
 
 #### Q: I've opened the wallet, and I'm getting lots of red messages like "It looks like TurtleCoind isn't open!"...
@@ -337,9 +335,8 @@ To view a guide on using them, you can go [here](guides/wallets/making-a-wallet/
 
 - If all else fails, if you have your private keys then you can instead import your wallet into SimpleWallet. 
 
-```
 * If that is not a desirable option, come and ask for help over at [the Discord](https://discord.gg/J7g99EE)
-```
+
 
 ## Paper Wallet / Cold Storage?<a name="paper-wallet-cold-storage"></a>
 
@@ -348,6 +345,7 @@ To view a guide on using them, you can go [here](guides/wallets/making-a-wallet/
   A: The term "cold storage" refers to a wallet that has been created via an offline means. 
 
 The preferred way to do this is via a computer than has never ever been connected to the internet, commonly referred to as an air gapped device. 
+
 
  Why is this a thing? If done properly it means it is near impossible for the keys to be secretly intercepted since the data is never viewable by other compute devices. 
 
