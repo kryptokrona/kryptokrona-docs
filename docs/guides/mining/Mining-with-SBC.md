@@ -24,8 +24,7 @@ Next, we need to obtain a CPU miner. We'll use `rPi-xmrig-gcc7.3.0`
 
 1. Download the `.zip` source code from the [Releases page](https://github.com/auto-joe/rPi-xmrig-gcc7.3.0/releases/latest)
 
-
-1. Download it to a directory of your choice and extract it to a folder called `rPi-xmrig`, or anything of your choice
+2. Download it to a directory of your choice and extract it to a folder called `rPi-xmrig`, or anything of your choice
 
 ## Configure and Run the Miner
 
@@ -46,8 +45,6 @@ Then start the miner-
 ```shell
 ./start.sh
 ```
-
-
 
 After entering this command, the miner will start scanning your hardware and begin to mine. 
 
