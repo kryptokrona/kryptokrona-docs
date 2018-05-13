@@ -34,41 +34,41 @@ SSH into the GCP instance and follow these steps-
   `constexpr double fDevDonationLevel = 0.0 / 100.0;`
   ```
 
-1. Make a directory- 
+4. Make a directory- 
 
    `mkdir xmr-stak/build`
 
-2. Move over there-  
+5. Move over there-  
 
    `cd xmr-stak/build`
 
-3. Run cmake-
+6. Run cmake-
 
    `cmake .. -DCUDA_ENABLE=OFF -DOpenCL_ENABLE=OFF`
 
-4. Finish building it-
+7. Finish building it-
 
    `make install`
 
-5. XMR-Stak will now be located in `/home/user/xmr-stak/build/bin`
+8. XMR-Stak will now be located in `/home/user/xmr-stak/build/bin`
 
-6. In the terminal, type- (install if not installed)-
+9. In the terminal, type- (install if not installed)-
 
    `ccmake ..`
 
-7. Using the Up and Down arrows, scroll to the 2nd page. Then, on `XMR-STAK_CURRENCY`, press enter to change it to `monero` (if needed, you can make personal tweaks by reading the descriptions of each value)
+10. Using the Up and Down arrows, scroll to the 2nd page. Then, on `XMR-STAK_CURRENCY`, press enter to change it to `monero` (if needed, you can make personal tweaks by reading the descriptions of each value)
 
-8. Once you're done, press `c` and then `g` on your keyboard. 
+11. Once you're done, press `c` and then `g` on your keyboard. 
 
-9. Type- 
+12. Type- 
 
    `./xmr-stak`
 
-10. Check [XMR-Stak Setup and Configuration](#xmr-stak-setup-and-configuration)
+13. Check [XMR-Stak Setup and Configuration](#xmr-stak-setup-and-configuration)
 
-11. If you see something like this, that means it’s working!
+14. If you see something like this, that means it’s working!
 
-![workubuntu](C:/Users/user/Documents/pages/production/docs/guides/mining/images/xmrstak-ubuntuwork.png)
+![workubuntu](images/xmrstak-ubuntuwork.png)
 
 ## XMR-Stak Setup and Configuration
 
@@ -103,7 +103,7 @@ Make sure to enter your own IP address if you enable this feature. You can choos
       - turtlecoin
    ```
 
-   Enter `turtlecoin`
+ Enter `turtlecoin`
 
 3. `- Pool address: e.g. pool.example.com:3333 `
 
