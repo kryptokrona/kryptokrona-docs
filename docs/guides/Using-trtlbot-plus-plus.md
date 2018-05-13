@@ -45,7 +45,7 @@ Follow the steps given [here](using-winforms-wallet#sending-turtlecoin-transacti
 
 #### Expected Results
 
-When the bot recieves the payment, it will send you a PM letting you know. Now you can tip people! 
+When the bot receives the payment, it will send you a PM letting you know. Now you can tip people! 
 
  ![received](images/trtlbot-plus-plus/dep.png)
 
