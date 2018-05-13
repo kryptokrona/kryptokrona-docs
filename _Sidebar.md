@@ -55,5 +55,6 @@
     - Wallets, Keys & Addresses
     - Transactions
     - Proof-of-Work
+  - [Smart Contracts](smart-contract.md)
 
 - [Contributors](Contributors)
