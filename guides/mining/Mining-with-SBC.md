@@ -32,7 +32,7 @@ Open the file `start.sh` with a text editor and replace the existing parameters 
 
 
 ```shell
-./xmrig -algo=cryptonight-lite --variant=1 --user=[public address] --pass=x --url=[pool address]
+./xmrig -a=cryptonight-lite --variant=1 -u=[public address] -p=x -o=[pool address]
 ```
 
 * Instead of `[public address]`, simply paste your TurtleCoin wallet address.
