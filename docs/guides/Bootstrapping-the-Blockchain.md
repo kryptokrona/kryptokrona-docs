@@ -7,12 +7,12 @@ This guide will help you install a recent copy of the blockchain. This should si
 1. Make sure `TurtleCoind.exe`, `walletd.exe`, and/or the GUI wallet are not running.
 2. Open File Explorer and type `%APPDATA%\TurtleCoin` and hit enter.
 
-![file explorer](C:/Users/user/Documents/pages/production/docs/guides/images/bootstrap/file_explorer.jpg)
+![file explorer](images/bootstrap/file_explorer.jpg)
 
 !!! note
     If the folder doesn't exist, just go to `%APPDATA%` instead and create a folder named `TurtleCoin`.
 
-1. Delete the following if they exist:
+3. Delete the following if they exist:
 
 - blockindexes.bin
 
@@ -20,48 +20,61 @@ This guide will help you install a recent copy of the blockchain. This should si
 
 - "DB" folder
 
-  ------
+  ---
 
   **Note**: In case it is unable to delete the files due to them being used by some other program, follow these steps:
 
   - Open Task Manager with the shortcut `Ctrl + Shift+ Escape`.
-
-
+  
   - Click on `Processes`.
+  
   - Click on `Image Name`.
+  
   - Scroll to the bottom.
+  
   - Click on `walletd.exe`.
+  
   - Click on `End Process`.
+  
   - Click on `End Process` again.
+  
   - Try to delete them againn
 
-  ![closewallet](C:/Users/user/Documents/pages/production/docs/guides/images/bootstrap/close_walletd.png)
+  ![closewallet](images/bootstrap/close_walletd.png)
 
-------
+---
 
-1. [Download](https://f000.backblazeb2.com/file/turtle-blockchain/latest.zip) the latest snapshot of the blockchain.
-2. Move the two new downloaded files to the `%APPDATA%\TurtleCoin` folder.
-3. Start `TurtleCoind.exe` or the GUI wallet like you normally do.
-4. See [Expected Results](#ExpectedResults) section below.
+4. [Download](https://f000.backblazeb2.com/file/turtle-blockchain/latest.zip) the latest snapshot of the blockchain.
+
+5. Move the two new downloaded files to the `%APPDATA%\TurtleCoin` folder.
+
+6. Start `TurtleCoind.exe` or the GUI wallet like you normally do.
+
+7. See [Expected Results](#ExpectedResults) section below.
 
 ## Mac & Linux:
 
 1. Make sure `TurtleCoind`, `walletd`, and/or the GUI wallet are not running.
+
 2. Open `Finder`.
+
 3. Use the shortcut `Command + Shift + G` to bring up `Go to Folder`:
 
-![findergoto.jpg](C:/Users/user/Documents/pages/production/docs/guides/images/bootstrap/findergoto.jpg)
+![findergoto.jpg](images/bootstrap/findergoto.jpg)
 
-1. Delete the following if they exist: 
+4. Delete the following if they exist: 
 
 - blockindexes.bin 
 - blocks.bin 
 - "DB" folder 
 
-1. [Download](https://f000.backblazeb2.com/file/turtle-blockchain/latest.zip) the latest snapshot of the blockchain.
-2. Move the two new downloaded files, `blockindexes.bin` and `blocks.bin` into the `~/.TurtleCoin/` folder.
-3. Start `TurtleCoind` or the GUI like you normally do.
-4. See the [Expected Results](#ExpectedResults) section below.
+5. [Download](https://f000.backblazeb2.com/file/turtle-blockchain/latest.zip) the latest snapshot of the blockchain.
+
+6. Move the two new downloaded files, `blockindexes.bin` and `blocks.bin` into the `~/.TurtleCoin/` folder.
+
+7. Start `TurtleCoind` or the GUI like you normally do.
+
+8. See the [Expected Results](#ExpectedResults) section below.
 
 ## Expected Results if Done Correctly <a name="ExpectedResults"></a>
 
