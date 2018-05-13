@@ -38,11 +38,11 @@ View [this guide](Using-Simplewallet#25-word-mnemonic-seed) for steps on recover
 
 You cannot recover your wallet directly with your 25 word mnemonic seed through Nest Wallet, you have to derive the private spend and view keys first. Follow these steps-
 
-- Go to [this paper wallet generator](https://turtlecoin.lol/wallet)
-- Click on `Restore keys from seed phrase`
-- Enter your 25 word mnemonic seed and press `Restore Keys`
-- Your Private View and Spend Keys will be in the bottom-most box, in red.
-- Follow [this guide](Using-Nest-Wallet#private-view-and-spend-keys) for steps on recovering your wallet with your private view and spend keys with Nest Wallet.
+* Go to [this paper wallet generator](https://turtlecoin.lol/wallet)
+* Click on `Restore keys from seed phrase`
+* Enter your 25 word mnemonic seed and press `Restore Keys`
+* Your Private View and Spend Keys will be in the bottom-most box, in red.
+* Follow [this guide](Using-Nest-Wallet#private-view-and-spend-keys) for steps on recovering your wallet with your private view and spend keys with Nest Wallet.
 
 #### WinForms Wallet<a name="25-winforms-wallet"></a>
 
@@ -53,4 +53,6 @@ You cannot recover your wallet directly with your 25 word mnemonic seed through 
 - Enter your 25 word mnemonic seed and press `Restore Keys`
 - Your Private View and Spend Keys will be in the bottom most box, in red.
 - Follow [this guide](Using-WinForms-Wallet#private-view-and-spend-keys) for steps on recovering your wallet with your private view and spend keys with WinForms Wallet.
+
+
 

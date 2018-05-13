@@ -1,4 +1,4 @@
-# How to Mine TurtleCoin with Google Cloud Platform (GCP)
+# How to Mine TurtleCoin with Google Cloud Platform (GCP) 
 
 ## Get started with GCP
 
@@ -46,7 +46,7 @@ SSH into the GCP instance and follow these steps-
 
    `cmake .. -DCUDA_ENABLE=OFF -DOpenCL_ENABLE=OFF`
 
-4. Finish building it-
+4.  Finish building it-
 
    `make install`
 
@@ -68,7 +68,7 @@ SSH into the GCP instance and follow these steps-
 
 11. If you see something like this, that means it’s working!
 
-![workubuntu](C:/Users/user/Documents/pages/production/docs/guides/mining/images/xmrstak-ubuntuwork.png)
+![workubuntu](images/xmrstak-ubuntuwork.png)
 
 ## XMR-Stak Setup and Configuration
 
@@ -103,7 +103,7 @@ Make sure to enter your own IP address if you enable this feature. You can choos
       - turtlecoin
    ```
 
-   Enter `turtlecoin`
+​        Enter `turtlecoin`
 
 3. `- Pool address: e.g. pool.example.com:3333 `
 

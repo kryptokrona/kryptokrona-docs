@@ -4,7 +4,7 @@
 
 Here's a quick image of SimpleWallet in action-
 
-![simplewallet](C:/Users/user/Documents/pages/production/docs/guides/wallets/images/screenshot_simplewallet.png)
+![simplewallet](/images/screenshot_simplewallet.png)
 
 ## Downloading
 
@@ -47,22 +47,17 @@ To save time, consider downloading a cached 'bootstrap' of the blockchain (see [
 #### Using Checkpoints
 
 In **versions 0.4.3+** you can sync a fresh chain from block 0 much quicker by using checkpoints. Follow these steps-
-
-- On [this link](https://github.com/turtlecoin/checkpoints/raw/master/checkpoints.csv), right click -> `Save Link As..` 
-- Save in the directory where your wallet and daemon are
-- Open Command Prompt/the terminal in the directory where you saved it
-- Type, for Windows,  
-
-```
+  * On [this link](https://github.com/turtlecoin/checkpoints/raw/master/checkpoints.csv), right click -> `Save Link As..` 
+  * Save in the directory where your wallet and daemon are
+  * Open Command Prompt/the terminal in the directory where you saved it
+  * Type, for Windows,  
+  ```
   TurtleCoind.exe --load-checkpoints checkpoints.csv
-```
-
+  ```
   Or, for **Mac and Linux**, type
-
-```
+  ```
   ./TurtleCoind --load-checkpoints checkpoints.csv
-```
-
+  ```
 ### Windows
 
 Run the `TurtleCoind.exe` executable extracted from the Windows binary zip:
@@ -161,9 +156,9 @@ Run the `simplewallet.exe` executable from the extracted folder.
 
 In the running *simplewallet* client:  
 
-- Press `G` to generate a new wallet.  
-- Enter a filename for the wallet (for example,`trtl`).  
-- Enter a strong password to encrypt the wallet with, and confirm it.
+* Press `G` to generate a new wallet.  
+* Enter a filename for the wallet (for example,`trtl`).  
+* Enter a strong password to encrypt the wallet with, and confirm it.
 
 ```
 Welcome, please choose an option below:
@@ -194,9 +189,9 @@ If you lose these your wallet cannot be recreated!
 
 In the running *simplewallet* client:  
 
-- Press `O` to open an existing wallet file.  
-- Enter the filename given for the wallet when it was created.  
-- Enter the passphrase given for the wallet when it was created.
+* Press `O` to open an existing wallet file.  
+* Enter the filename given for the wallet when it was created.  
+* Enter the passphrase given for the wallet when it was created.
 
 ```
 Welcome, please choose an option below:
@@ -295,7 +290,7 @@ In the running _simplewallet_ client, after opening a wallet..
 
 Example:
 
-![transfer](C:/Users/user/Documents/pages/production/docs/guides/wallets/images/transfer-simple.png)
+![transfer](/images/transfer-simple.png)
 
 Mixin is how many times a transaction is "mixed" with others for obfuscation and privacy. 
 
@@ -321,9 +316,9 @@ and press `y`
 
 If you want to fully optimize your wallet, preparing your wallet to send upto your full balance, type *(this can take some time)*-
 
-```
+````
 full_optimize
-```
+````
 
 and press `y`
 
@@ -331,7 +326,7 @@ and press `y`
 
 That's it! It will display a message `(Full) optmization completed!` when it's done.
 
-![optimize](C:/Users/user/Documents/pages/production/docs/guides/wallets/images/optimize-simple.png)
+![optimize](/images/optimize-simple.png)
 
 #### Payment ID<a name="tx-trtl-p-id"></a>
 
@@ -341,7 +336,7 @@ Because transactions on the TurtleCoin blockchain are privatized, in some situat
 
 To send a transaction with a payment ID, enter it when prompted to.
 
-![p-id](C:/Users/user/Documents/pages/production/docs/guides/wallets/images/p-id-simple.png)
+![p-id](/images/p-id-simple.png)
 
 Note that, typically, the service/recipient will generate and provide the required payment ID. 
 
@@ -366,14 +361,14 @@ Done
 
 In the running _simplewallet_ client, 
 
-- type `I` 
+* type `I` 
 
 
-- Enter your private spend and view key
+* Enter your private spend and view key
 
-- Set a name for your new wallet (for example, `trtl`)
+* Set a name for your new wallet (for example, `trtl`)
 
-- Specify a strong password to encrypt your wallet with and confirm it
+* Specify a strong password to encrypt your wallet with and confirm it
 
   ```
   Welcome, please choose an option below:

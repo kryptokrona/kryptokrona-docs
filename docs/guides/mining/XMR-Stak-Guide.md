@@ -1,4 +1,4 @@
-# How to Set Up XMR-Stak
+# How to Set Up XMR-Stak 
 
 XMR-Stak is a unified miner, which means the same program will be used to mine with both your CPU and your GPU. It will automatically detect your hardware and adjust the settings accordingly.
 
@@ -21,8 +21,8 @@ XMR-Stak is a unified miner, which means the same program will be used to mine w
 
   **If you want to use both your CPU and your GPU, ignore these steps. Just launch `xmr-stak.exe`**
 
-1. Click `Yes` when it asks if you want to run as Administrator. This is so that the program can see what hardware you're running.
-2. Check [XMR-Stak Setup and Configuration](#setup-and-config)
+4. Click `Yes` when it asks if you want to run as Administrator. This is so that the program can see what hardware you're running.
+5. Check [XMR-Stak Setup and Configuration](#setup-and-config)
 
 ## Downloading and Installing for Mac
 
@@ -40,7 +40,9 @@ View [this guide](XMR-Stak-Linux-Guide) to get started with XMR-Stak on Linux.
 
 Upon first launching XMR-Stak, the software will ask you several setup and configuration questions.
 
-1. `Please enter: - Do you want to use the HTTP interface? Unlike the screen display, browser interface is not affected by the GPU lag. If you don't want to use it, please enter 0, otherwise enter port number that the miner should listen on`
+1. ```
+   Please enter: - Do you want to use the HTTP interface? Unlike the screen display, browser interface is not affected by the GPU lag. If you don't want to use it, please enter 0, otherwise enter port number that the miner should listen on
+   ```
 
 Enter `0`, if you are like most people, and do not need to remotely check your hashrate.
 
@@ -52,8 +54,9 @@ If you are checking from the same IP address, you can alternatively enter, `loca
 
 Make sure to enter your own IP address if you enable this feature. You can choose any port you want!
 
-2. ``` 
-   
+
+
+2. ````
    Please enter: 
    - Please enter the currency that you want to mine:
 
@@ -74,9 +77,13 @@ Make sure to enter your own IP address if you enable this feature. You can choos
    - monero7
    - stellite
    - sumokoin
+   ````
 
-   ```
-Enter `cryptonight_lite_v7`
+   ​
+
+   Enter `cryptonight_lite_v7`
+
+   ​
 
 3. `- Pool address: e.g. pool.example.com:3333`
 
