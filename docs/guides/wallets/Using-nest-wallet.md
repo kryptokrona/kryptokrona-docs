@@ -4,7 +4,7 @@
 
 Here's a quick image of Nest Wallet in action-
 
-![nest](C:/Users/user/Documents/pages/production/docs/guides/wallets/images/screenshot_nest.png)	
+![nest](images/screenshot_nest.png)	
 
 ## Downloading
 
@@ -40,7 +40,7 @@ Nest Wallet automatically synchronizes from a Public Node, ensuring that you qui
 
 If you would rather sync from a local copy of the blockchain, select `Local blockchain` before opening your wallet.
 
-![local](C:/Users/user/Documents/pages/production/docs/guides/wallets/images/nest_localsync.png)
+![local](images/nest_localsync.png)
 
 ## Using Nest Wallet
 
@@ -66,7 +66,7 @@ Upon opening Nest Wallet, you will be greeted with a screen.
 
 On the screen will be written `Create a new wallet`.
 
-![create](C:/Users/user/Documents/pages/production/docs/guides/wallets/images/nest_make.png)
+![create](images/nest_make.png)
 
 Under it will be a box into which you can type something.
 
@@ -84,7 +84,7 @@ Upon opening Nest Wallet, you will be greeted with a screen.
 
 On the screen will be written `Open an existing wallet`.
 
-![open](C:/Users/user/Documents/pages/production/docs/guides/wallets/images/nest_open.png)
+![open](images/nest_open.png)
 
 Under it will be a box.
 
@@ -98,7 +98,7 @@ Once done, click `OPEN`.
 
 Upon opening your wallet, your wallet address will be in the middle of the wallet screen. Press the button next to it to copy it to your clipboard.
 
-![address](C:/Users/user/Documents/pages/production/docs/guides/wallets/images/nest-address.png)
+![address](images/nest-address.png)
 
 ### Exporting Keys
 
@@ -116,11 +116,11 @@ To back up your View Key and Spend Key, follow these steps-
 
 - Click on `Backup wallet`
 
-  ![backup](C:/Users/user/Documents/pages/production/docs/guides/wallets/images/nest-backup1.png)
+  ![backup](images/nest-backup1.png)
 
 - A window like this should appear-
 
-  ![backup](C:/Users/user/Documents/pages/production/docs/guides/wallets/images/nest-backup2.png)
+  ![backup](images/nest-backup2.png)
 
 - Copy and safely store the `Private View Key` and `Private Spend Key`.
 
@@ -128,7 +128,7 @@ To back up your View Key and Spend Key, follow these steps-
 
 Upon opening your wallet, your balance will be on the top of the wallet screen.
 
-![balance](C:/Users/user/Documents/pages/production/docs/guides/wallets/images/nest-balance.png)
+![balance](images/nest-balance.png)
 
 ### Sending TurtleCoin Transactions
 
@@ -169,7 +169,7 @@ Upon opening Nest Wallet, *in the boxes under `Import wallet from keys`*-
 - enter the password you want to encrypt your wallet with
 - enter your View and Spend key in the bottom two boxes
 
-![restore](C:/Users/user/Documents/pages/production/docs/guides/wallets/images/nest-recover.png)
+![restore](images/nest-recover.png)
 
 Once done, click `IMPORT`. The wallet will be restored and begin syncing with the blockchain.
 
