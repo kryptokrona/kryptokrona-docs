@@ -32,10 +32,10 @@ Open the file `start.sh` with a text editor and replace the existing parameters 
 
 
 ```shell
-./xmrig -a=cryptonight-lite --variant=1 -u=[public address] -p=x -o=[pool address]
+./xmrig -a cryptonight-lite --variant=1 -u TRTL... -p x -o [pool address]
 ```
 
-* Instead of `[public address]`, simply paste your TurtleCoin wallet address.
+* Instead of `TRTL...`, simply paste your TurtleCoin wallet address.
 
   If you don't have one yet, you can generate a [paper wallet](Making-a-Paper-Wallet) to mine towards for now, and later import into a CLI or GUI wallet.
 
