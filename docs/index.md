@@ -1,4 +1,4 @@
-![TurtleCoin Logo](C:/Users/user/Documents/pages/production/docs/images/turtlecoin_logo.png)
+![TurtleCoin Logo](images/turtlecoin_logo.png)
 
 # 🐢 🐢 🐢 Welcome to the TurtleCoin Wiki 🐢 🐢 🐢
 
