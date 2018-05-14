@@ -69,35 +69,35 @@ pages:
       - Contributors: Contributors.md
     - About:
       - About TurtleCoin: about/About-TurtleCoin.md
-      - Background and History: about/background-and-history.md
-      - Our Community: about/community.md
-      - Contributing: about/contributing.md
-      - Technical Data: about/technical-data.md
+      - Background and History: about/Background-and-History.md
+      - Our Community: about/Community.md
+      - Contributing: about/Contributing.md
+      - Technical Data: about/Technical-Data.md
     - FAQ:   
       - Frequently Asked Questions: Frequently-Asked-Questions.md
     - Guides:
       - Bootstrapping the Blockchain: guides/Bootstrapping-the-Blockchain.md
-      - RainBorg? Wat Dat?: guides/rainborg-wat-dat.md
-      - Using trtlbot++: guides/using-trtlbot-plus-plus.md
-      - Participating in Raindance(defunct): guides/participating-in-raindance.md
+      - RainBorg? Wat Dat?: guides/Rainborg-Wat-Dat.md
+      - Using trtlbot++: guides/Using-trtlbot-plus-plus.md
+      - Participating in Raindance(defunct): guides/Participating-in-Raindance.md
       - Mining:
-        - How to Mine TRTL: guides/mining/mining.md
-        - XMR-Stak: guides/mining/xmr-stak-guide.md
-        - XMR-Stak on Linux: guides/mining/xmr-stak-linux-guide.md
+        - How to Mine TRTL: guides/mining/Mining.md
+        - XMR-Stak: guides/mining/XMR-Stak-Guide.md
+        - XMR-Stak on Linux: guides/mining/XMR-Stak-Linux-Guide.md
         - XMRig: guides/mining/XMRIG-Guide.md
         - Pools: guides/mining/Pools.md
-        - Cloud Mining: guides/mining/cloud-mining.md
-        - Mining with a SBC: guides/mining/mining-with-sbc.md
-        - Mining with your Mobile Phone: guides/mining/mining-with-phone.md     
+        - Cloud Mining: guides/mining/Cloud-Mining.md
+        - Mining with a SBC: guides/mining/Mining-with-SBC.md
+        - Mining with your Mobile Phone: guides/mining/Mining-with-Phone.md     
       - Wallets:
-        - Making a Wallet: guides/wallets/making-a-wallet.md
+        - Making a Wallet: guides/wallets/Making-a-Wallet.md
         - GUI Wallets:
-          - Nest Wallet: guides/wallets/using-nest-wallet.md
-          - WinForms Wallet: guides/wallets/using-winforms-wallet.md
+          - Nest Wallet: guides/wallets/Using-nest-wallet.md
+          - WinForms Wallet: guides/wallets/Using-winforms-wallet.md
         - CLI Wallet:
-          - SimpleWallet: guides/wallets/using-simplewallet.md
-          - Using Checkpoints: guides/wallets/using-checkpoints.md
-        - Paper Wallet: guides/wallets/making-a-paper-wallet.md
+          - SimpleWallet: guides/wallets/Using-Simplewallet.md
+          - Using Checkpoints: guides/wallets/Using-checkpoints.md
+        - Paper Wallet: guides/wallets/Making-a-paper-wallet.md
         - Recovering your Wallet: guides/wallets/recovering-your-wallet.md
       - CryptoCurrency Fundamentals:
         - Smart Contracts: guides/crypto-funda/smart-contract.md
