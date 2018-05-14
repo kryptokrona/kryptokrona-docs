@@ -805,10 +805,46 @@
           
 
 
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-6-3" type="checkbox" id="nav-4-6-3">
+    
+    <label class="md-nav__link" for="nav-4-6-3">
+      CLI Wallet
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-4-6-3">
+        CLI Wallet
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
   <li class="md-nav__item">
-    <a href="../../wallets/using-simplewallet/" title="SimpleWallet (CLI)" class="md-nav__link">
-      SimpleWallet (CLI)
+    <a href="../../wallets/using-simplewallet/" title="SimpleWallet" class="md-nav__link">
+      SimpleWallet
     </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../wallets/using-checkpoints/" title="Using Checkpoints" class="md-nav__link">
+      Using Checkpoints
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
   </li>
 
         
@@ -832,6 +868,42 @@
   <li class="md-nav__item">
     <a href="../../wallets/recovering-your-wallet/" title="Recovering your Wallet" class="md-nav__link">
       Recovering your Wallet
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-7" type="checkbox" id="nav-4-7">
+    
+    <label class="md-nav__link" for="nav-4-7">
+      CryptoCurrency Fundamentals
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-4-7">
+        CryptoCurrency Fundamentals
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../crypto-funda/smart-contract/" title="Smart Contracts" class="md-nav__link">
+      Smart Contracts
     </a>
   </li>
 
@@ -927,16 +999,16 @@
 <p>Download the <code>.zip</code> source code from the <a href="https://github.com/auto-joe/rPi-xmrig-gcc7.3.0/releases/latest">Releases page</a></p>
 </li>
 <li>
-<p>Download it to a directory of your choice and extract it to a folder called <code>rPi-xmrig</code>, or anything of your choice</p>
+<p>Download it to a directory of your choice and extract it to a folder called <code>rPi-xmrig</code>, or anything of your choice.</p>
 </li>
 </ol>
 <h2 id="configure-and-run-the-miner">Configure and Run the Miner<a class="headerlink" href="#configure-and-run-the-miner" title="Permanent link">&para;</a></h2>
 <p>Open the file <code>start.sh</code> with a text editor and replace the existing parameters with these-</p>
-<div class="codehilite"><pre><span></span>./xmrig -algo<span class="o">=</span>cryptonight-lite --variant<span class="o">=</span><span class="m">1</span> --user<span class="o">=[</span>public address<span class="o">]</span> --pass<span class="o">=</span>x --url<span class="o">=[</span>pool address<span class="o">]</span>
+<div class="codehilite"><pre><span></span>./xmrig -a cryptonight-lite --variant<span class="o">=</span><span class="m">1</span> -u TRTL... -p x -o <span class="o">[</span>pool address<span class="o">]</span>
 </pre></div>
 
 <ul>
-<li>Instead of <code>[public address]</code>, simply paste your TurtleCoin wallet address.</li>
+<li>Instead of <code>TRTL...</code>, simply paste your TurtleCoin wallet address.</li>
 </ul>
 <p>If you don't have one yet, you can generate a <a href="../Making-a-Paper-Wallet">paper wallet</a> to mine towards for now, and later import into a CLI or GUI wallet.</p>
 <ul>

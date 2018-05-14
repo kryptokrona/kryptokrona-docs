@@ -1272,10 +1272,46 @@
           
 
 
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-6-3" type="checkbox" id="nav-4-6-3">
+    
+    <label class="md-nav__link" for="nav-4-6-3">
+      CLI Wallet
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-4-6-3">
+        CLI Wallet
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
   <li class="md-nav__item">
-    <a href="../guides/wallets/using-simplewallet/" title="SimpleWallet (CLI)" class="md-nav__link">
-      SimpleWallet (CLI)
+    <a href="../guides/wallets/using-simplewallet/" title="SimpleWallet" class="md-nav__link">
+      SimpleWallet
     </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../guides/wallets/using-checkpoints/" title="Using Checkpoints" class="md-nav__link">
+      Using Checkpoints
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
   </li>
 
         
@@ -1299,6 +1335,42 @@
   <li class="md-nav__item">
     <a href="../guides/wallets/recovering-your-wallet/" title="Recovering your Wallet" class="md-nav__link">
       Recovering your Wallet
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-7" type="checkbox" id="nav-4-7">
+    
+    <label class="md-nav__link" for="nav-4-7">
+      CryptoCurrency Fundamentals
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-4-7">
+        CryptoCurrency Fundamentals
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../guides/crypto-funda/smart-contract/" title="Smart Contracts" class="md-nav__link">
+      Smart Contracts
     </a>
   </li>
 
@@ -1846,7 +1918,7 @@
 <h2 id="mining-and-xmr-stak">Mining and XMR-Stak<a class="headerlink" href="#mining-and-xmr-stak" title="Permanent link">&para;</a></h2>
 <h3 id="general-mining-questions">General mining questions<a name="mining-questions"></a><a class="headerlink" href="#general-mining-questions" title="Permanent link">&para;</a></h3>
 <h4 id="q-how-do-i-get-started-mining">Q: How do I get started mining?<a class="headerlink" href="#q-how-do-i-get-started-mining" title="Permanent link">&para;</a></h4>
-<p>A: You can check <a href="../Mining">this guide</a></p>
+<p>A: You can check <a href="../guides/mining/Mining">this guide</a></p>
 <h4 id="q-im-using-a-mac-can-i-still-mine">Q: I'm using a Mac, can I still mine?<a class="headerlink" href="#q-im-using-a-mac-can-i-still-mine" title="Permanent link">&para;</a></h4>
 <p>A: Yes, of course! We're working on a guide.</p>
 <h4 id="q-ive-started-mining-how-can-i-view-my-stats">Q: I've started mining, how can I view my stats?<a class="headerlink" href="#q-ive-started-mining-how-can-i-view-my-stats" title="Permanent link">&para;</a></h4>
@@ -1983,13 +2055,13 @@ A: Re-sync your daemon from scratch(see below question), <a href="../guides/Boot
 <p>Alternatively, check <a href="../Bootstrapping-the-Blockchain">this guide</a> for instructions on how to bootstrap for a quicker sync.</p>
 <h4 id="q-when-i-open-turtlecoind-on-a-mac-i-get-an-error-illegal-instruction-4-how-can-i-fix-it">Q: When I open TurtleCoind on a Mac, I get an error <code>Illegal instruction: 4</code>. How can I fix it?<a class="headerlink" href="#q-when-i-open-turtlecoind-on-a-mac-i-get-an-error-illegal-instruction-4-how-can-i-fix-it" title="Permanent link">&para;</a></h4>
 <p>A: This is a known issue with older macs or un-updated macs. </p>
-<p>​    Try entering this into a terminal -</p>
+<p>Try entering this into a terminal -</p>
 <div class="codehilite"><pre><span></span>curl -sL &quot;https://raw.githubusercontent.com/turtlecoin/turtlecoin/master/multi_installer.sh&quot; | bash
 </pre></div>
 
-<p>​    This automated script should compile the software itself, and place the binaries in ./src once done. </p>
-<p>​    See <a href="https://github.com/turtlecoin/turtlecoin#ubuntu-1604-and-macos-1010">here</a> for more info. </p>
-<p>​    If this fails, try instead following the instructions to <a href="https://github.com/turtlecoin/turtlecoin#apple">compile manually</a></p>
+<p>This automated script should compile the software itself, and place the binaries in ./src once done. </p>
+<p>See <a href="https://github.com/turtlecoin/turtlecoin#ubuntu-1604-and-macos-1010">here</a> for more info. </p>
+<p>If this fails, try instead following the instructions to <a href="https://github.com/turtlecoin/turtlecoin#apple">compile manually</a></p>
 <h4 id="q-ive-opened-the-wallet-and-im-getting-lots-of-red-messages-like-it-looks-like-turtlecoind-isnt-open">Q: I've opened the wallet, and I'm getting lots of red messages like "It looks like TurtleCoind isn't open!"...<a class="headerlink" href="#q-ive-opened-the-wallet-and-im-getting-lots-of-red-messages-like-it-looks-like-turtlecoind-isnt-open" title="Permanent link">&para;</a></h4>
 <div class="codehilite"><pre><span></span>It looks like TurtleCoind isn&#39;t open!
 
@@ -2066,9 +2138,9 @@ The wallet can&#39;t function until it can communicate with the network.
 </li>
 <li>
 <p>If all else fails, if you have your private keys then you can instead import your wallet into SimpleWallet. </p>
-<ul>
-<li>If that is not a desirable option, come and ask for help over at <a href="https://discord.gg/J7g99EE">the Discord</a></li>
-</ul>
+</li>
+<li>
+<p>If that is not a desirable option, come and ask for help over at <a href="https://discord.gg/J7g99EE">the Discord</a></p>
 </li>
 </ul>
 <h2 id="paper-wallet-cold-storage">Paper Wallet / Cold Storage?<a name="paper-wallet-cold-storage"></a><a class="headerlink" href="#paper-wallet-cold-storage" title="Permanent link">&para;</a></h2>
