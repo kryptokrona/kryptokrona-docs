@@ -95,6 +95,9 @@ pages:
            - Nest Wallet: guides/wallets/using-nest-wallet.md
            - WinForms Wallet: guides/wallets/using-winforms-wallet.md
         - SimpleWallet (CLI): guides/wallets/using-simplewallet.md
+          - Using Checkpoints: guides/walelts/using-checkpoints.md
         - Paper Wallet: guides/wallets/making-a-paper-wallet.md
         - Recovering your Wallet: guides/wallets/recovering-your-wallet.md
+      - CryptoCurrency Fundamentals:
+        - Smart Contracts: guides/crypto-funda/smart-contract.md
 

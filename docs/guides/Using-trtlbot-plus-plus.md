@@ -154,7 +154,7 @@ Reacting with the emoji ![99](images/trtlbot-plus-plus/almost100.png) on someone
 
 If someone has tipped someone, then reacting with ![tip](images/trtlbot-plus-plus/rsz_tip.png) on the message on which they tipped the person (`.tip 1 @RockSteady#7588`) will send the recipient (in this case, RockSteady) the same amount he was originally tipped (in this case, 1). So the recipient (RockSteady) gets 2 TRTL.
 
-Reacting with ![tip](images/trtlbot-plus-plus/rsz_tip.png) on a message where in a person was tipping with the emoji ![99](images/trtlbot-plus-plus/almost100.png) will **not** tip the original poster of the message 99 TRTL.
+Reacting with ![tip](images/trtlbot-plus-plus/rsz_tip.png) on a message where in a person was tipped with the emoji ![99](images/trtlbot-plus-plus/almost100.png) will **not** tip the original poster of the message 99 TRTL.
 You *can* react with the emoji ![99](images/trtlbot-plus-plus/almost100.png) (again) however, to tip the person 99 TRTL.
 
 ### Tipping Multiple People
