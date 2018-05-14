@@ -74,7 +74,9 @@ Type what you want the name of your wallet to be. For example, `trtl`.
 
 
 
-Next to it will be another box. In it, type a password to protect your wallet. You will need to enter it every time you open the wallet. Make sure to choose a strong one! *There is no confirmation, type it carefully!*
+Next to it will be another box. In it, type a password to protect your wallet, and then confirm it.
+
+ You will need to enter it every time you open the wallet. Make sure to choose a strong one! 
 
 Once done, press `CREATE`.
 
@@ -112,17 +114,11 @@ It is **very** important to export these keys and back them up somewhere that is
 
 To back up your View Key and Spend Key, follow these steps-
 
-* Click on `Wallet` on the top left
-
 * Click on `Backup wallet`
 
-  ![backup](images/nest-backup1.png)
+  ![backup](images/nest-backup.png)
 
-* A window like this should appear-
-
-  ![backup](images/nest-backup2.png)
-
-* Copy and safely store the `Private View Key` and `Private Spend Key`.
+* Copy(click on `Copy to clipboard` to do it quickly) and safely store the `Private View Key` and `Private Spend Key`. You can register the wallet with [trtlbot++](guides/Using-trtlbot-plus-plus#registering-your-wallet).
 
 ### Viewing Wallet Balance
 
