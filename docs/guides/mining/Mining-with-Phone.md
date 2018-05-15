@@ -38,8 +38,6 @@ You can tap the question marks on the right if you're unsure of what each value 
 
 ![phone-mining](images/rsz_phone-mine.png)
 
-
-
 Congratulations! You're now mining with your phone!
 
 

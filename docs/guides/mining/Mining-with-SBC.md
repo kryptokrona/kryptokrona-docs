@@ -4,7 +4,7 @@ This guide will get you started mining TurtleCoin on a Raspberry Pi or similar S
 
 ## Setup
 
-Make sure you've already created a wallet on your PC. You'll need the wallet address to store any coins you mine. Follow the guide [here](Using-Simplewallet) to get started (follow the guide for Linux).
+Make sure you've already created a wallet on your PC. You'll need the wallet address to store any coins you mine. Follow the guide [here](../Using-Simplewallet) to get started (follow the guide for Linux).
 
 For the SBC, download the latest non-desktop version of [Raspbian](https://www.raspberrypi.org/downloads). Follow their installation guide on how to write the OS image onto the MicroSD card. Once you've plugged in the SD Card, booted the Raspberry Pi, and connected it to the internet, run the following commands:
 
@@ -36,7 +36,7 @@ Open the file `start.sh` with a text editor and replace the existing parameters 
 
 * Instead of `TRTL...`, simply paste your TurtleCoin wallet address.
 
-  If you don't have one yet, you can generate a [paper wallet](Making-a-Paper-Wallet) to mine towards for now, and later import into a CLI or GUI wallet.
+  If you don't have one yet, you can generate a [paper wallet](../Making-a-paper-wallet) to mine towards for now, and later import into a CLI or GUI wallet.
 
 * In place of `[pool address]`, you'll need to choose a pool to mine towards. You can check the full list [here](Pools).
 

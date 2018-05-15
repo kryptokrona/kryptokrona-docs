@@ -2,7 +2,7 @@
 
 Name: TurtleCoin  
 
-Algorithm: [CryptoNote](http://cryptonote.org)
+Algorithm: [CryptoNote](https://cryptonote.org)
 
 * ASIC resistant
 * Enhanced Privacy

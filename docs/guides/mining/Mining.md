@@ -26,7 +26,7 @@ If you're on Linux, check [this guide](XMR-Stak-Linux-Guide).
 
 XMRig is a little bit different to XMR-Stak, you need to download a CPU and GPU miner separately and run two separate instances in your computer. One will use your CPU and the other one will use your GPU. 
 
-Please follow [this guide](XMRig-Guide) to start mining TurtleCoin with XMRig.
+Please follow [this guide](XMRIG-Guide) to start mining TurtleCoin with XMRig.
 
 ### 3. Cloud Mining
 

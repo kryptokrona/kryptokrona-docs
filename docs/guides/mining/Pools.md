@@ -11,6 +11,7 @@ Here are some of the TurtleCoin mining pools (arranged alphabetically):
 |        [CryptoKnight](https://cryptoknight.cc/turtle)        |             0%              |                   100 TRTL                   |        Germany         |                    Seems to be very shady                    |
 |     [CryptoNote Social](https://cryptonote.social/trtl)      |     0%, (Proportional)      | 0 TRTL(anything higher than transaction fee) |       California       | **No payments page, be wary.** Read `details details details` section carefully. |
 | [Funky Penguin NZ](https://trtl.heigh-ho.funkypenguin.co.nz) | 0.0987654321%, Proportional |                  1000 TRTL                   |      New Zealand       |                              -                               |
+|     [GNTL TRTL Poo](https://trtl.pool.gntl.co.uk/#/home)     | 0.1%, PPLNS <br /> 1%, Solo | Wallet: 500 TRTL <br />Exchange: 10000 TRTL  |     United Kingdom     |                     Supports solo mining                     |
 |         [Mine2Gether](https://trtl.mine2gether.com)          |     0.1%, Proportional      |                   500 TRTL                   |        Germany         |                              -                               |
 |              [MineTRTL](http://ny.minetrtl.us)               |     0.1%, Proportional      |                   500 TRTL                   |        New York        |                           No HTTPS                           |
 |    [Tortuga Amor Mining Pool](http://mine.tortugamor.cf)     |             0%              |                  0.01 TRTL                   |          USA           |                           No HTTPS                           |
@@ -28,7 +29,7 @@ Here are some of the TurtleCoin mining pools (arranged alphabetically):
 |     [TurtlePool Space, US](https://us.turtlepool.space)      |     0.1%, Proportional      |                  1000 TRTL                   |         Dallas         |                              -                               |
 | [TurtlePower ChallengeCoin](http://turtlepower.challengecoin.io) |      1%, Proportional       |                   500 TRTL                   |          USA           |                           No HTTPS                           |
 |              [YouPool](https://youpool.io/TRTL)              |            0.2%             |                  1000 TRTL                   |         China          |                              -                               |
-|                 [z-pool](https://z-pool.com)                 |     0.1%, Proportional      |                   500 TRTL                   |        Germany         |                                                              |
+|                 [z-pool](https://z-pool.com)                 |     0.1%, Proportional      |                   500 TRTL                   |        Germany         |                              -                               |
 
 ## Definition of Fees
 
