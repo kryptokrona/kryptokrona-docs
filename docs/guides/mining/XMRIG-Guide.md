@@ -56,7 +56,7 @@ Needs to be compiled. Instructions [here](https://github.com/xmrig/xmrig/wiki/OS
 
 - Instead of `[public address]`, simply paste your TurtleCoin wallet's address. Make sure to keep the `"`!
 
-- If you don't have one yet, you can generate a [paper wallet](../Making-a-paper-wallet) to mine towards for now, and later import into a CLI or GUI wallet.
+- If you don't have one yet, you can generate a [paper wallet](../wallets/Making-a-paper-wallet) to mine towards for now, and later import into a CLI or GUI wallet.
 
   ​
 
