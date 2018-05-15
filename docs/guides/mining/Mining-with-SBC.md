@@ -36,7 +36,7 @@ Open the file `start.sh` with a text editor and replace the existing parameters 
 
 * Instead of `TRTL...`, simply paste your TurtleCoin wallet address.
 
-  If you don't have one yet, you can generate a [paper wallet](../Making-a-paper-wallet) to mine towards for now, and later import into a CLI or GUI wallet.
+  If you don't have one yet, you can generate a [paper wallet](../wallets/Making-a-paper-wallet) to mine towards for now, and later import into a CLI or GUI wallet.
 
 * In place of `[pool address]`, you'll need to choose a pool to mine towards. You can check the full list [here](Pools).
 
