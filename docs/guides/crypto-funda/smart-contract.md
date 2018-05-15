@@ -1,5 +1,5 @@
 # What is a Smart Contract?
-A **Smart Contract** is a piece of code that is stored in the blockchain network. It consists of conditions that everyone using the contract must agree on. Every computer in the network will get the same result and in turn people will know that the outcome is always correct.
+A **smart contract** is a piece of code that is stored in the blockchain network. It consists of conditions that everyone using the contract must agree on. Every computer in the network will get the same result and in turn people will know that the outcome is always correct.
 ## What are our thoughts on Smart Contracts?
 
 This is a quote from RockSteady expounding on the idea and potential process of Smart Contracts:

@@ -16,11 +16,11 @@ View [this guide](Using-Simplewallet#private-spend-and-view-keys) for steps on r
 
 #### Nest Wallet<a name="keys-nest-wallet"></a>
 
-View [this guide](Using-Nest-Wallet#private-view-and-spend-keys) for steps on recovering your wallet with your private view and spend keys with Nest Wallet.
+View [this guide](Using-nest-wallet#private-view-and-spend-keys) for steps on recovering your wallet with your private view and spend keys with Nest Wallet.
 
 #### WinForms Wallet<a name="keys-winforms-wallet"></a>
 
-View [this guide](Using-WinForms-Wallet#private-view-and-spend-keys) for steps on recovering your wallet with your private view and spend keys with WinForms Wallet.
+View [this guide](Using-winforms-wallet#private-view-and-spend-keys) for steps on recovering your wallet with your private view and spend keys with WinForms Wallet.
 
 ## 25 Word Mnemonic Seed
 
@@ -46,7 +46,7 @@ You cannot recover your wallet directly with your 25 word mnemonic seed through 
 
 - Your Private View and Spend Keys will be in the bottom-most box, in red.
 
-- Follow [this guide](Using-Nest-Wallet#private-view-and-spend-keys) for steps on recovering your wallet with your private view and spend keys with Nest Wallet.
+- Follow [this guide](Using-nest-wallet#private-view-and-spend-keys) for steps on recovering your wallet with your private view and spend keys with Nest Wallet.
 
 
 #### WinForms Wallet<a name="25-winforms-wallet"></a>
@@ -61,7 +61,7 @@ You cannot recover your wallet directly with your 25 word mnemonic seed through 
 
 - Your Private View and Spend Keys will be in the bottom most box, in red.
 
-- Follow [this guide](Using-WinForms-Wallet#private-view-and-spend-keys) for steps on recovering your wallet with your private view and spend keys with WinForms Wallet.
+- Follow [this guide](Using-winforms-wallet#private-view-and-spend-keys) for steps on recovering your wallet with your private view and spend keys with WinForms Wallet.
 
 
 

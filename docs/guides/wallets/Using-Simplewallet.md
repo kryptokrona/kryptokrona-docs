@@ -43,7 +43,7 @@ Running `TurtleCoind` will start the *TurtleCoind* network daemon, which will co
 
 Because the blockchain is constantly growing, the file size is always increasing, and *TurtleCoind* must verify each block (CPU intensive). 
 
-To save time, consider downloading a cached 'bootstrap' of the blockchain (see [Bootstrapping the Blockchain](Bootstrapping-the-Blockchain) for more info).
+To save time, consider downloading a cached 'bootstrap' of the blockchain (see [Bootstrapping the Blockchain](../Bootstrapping-the-Blockchain) for more info).
 
 #### Using Checkpoints
 
@@ -51,12 +51,7 @@ In **versions 0.4.3+** you can sync a fresh chain from block 0 much quicker by u
 
 ### Windows
 
-Run the `TurtleCoind.exe` executable extracted from the Windows binary zip:
-
-```
-cd Downloads\turtlecoin-windows
-TurtleCoind.exe
-```
+Double-click to run the `TurtleCoind.exe` executable extracted from the Windows binary zip.
 
 ### Mac
 

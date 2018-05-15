@@ -171,4 +171,4 @@ Once done, click `IMPORT`. The wallet will be restored and begin syncing with th
 
 #### 25 Mnemonic Seed
 
-View [this guide](Recovering-your-Wallet#25-nest-wallet) for steps on recovering your wallet with your 25 word mnemonic seed.
+View [this guide](recovering-your-wallet#25-nest-wallet) for steps on recovering your wallet with your 25 word mnemonic seed.

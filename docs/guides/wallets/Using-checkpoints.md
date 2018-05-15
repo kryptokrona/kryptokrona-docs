@@ -4,7 +4,7 @@
 
 - Right click [this link](https://github.com/turtlecoin/checkpoints/raw/master/checkpoints.csv) and choose `Save link as...` to download checkpoints.csv
 - Place checkpoints.csv in the same folder as your daemon(TurtleCoind) and wallet(SimpleWallet).
-- You can get them both [from here](https://latest.turtlecoin.lol) if you don't have them already.
+- You can get them both [from here](http://latest.turtlecoin.lol) if you don't have them already.
 
 - Make sure you shut down any GUI wallets, or any other instances of TurtleCoind.
 
@@ -64,8 +64,8 @@ If you did the steps correctly, you should see something like this output.
 2,2ef060801dd27327533580cfa538849f9e1968d13418f2dd2535774a8c494bf4
 ```
 
-- If you absolutely can't get it working, you can make a new text file, copy all the content from here into it: https://raw.githubusercontent.com/turtlecoin/checkpoints/master/checkpoints.csv
-- Then save as checkpoints.csv (Select the filetype as `All Files (*.*)` in Windows)
+- If you absolutely can't get it working, you can make a new text file, copy all the content from [here](https://raw.githubusercontent.com/turtlecoin/checkpoints/master/checkpoints.csv) into it.
+- Then save it as `checkpoints.csv` (Select the filetype as `All Files (*.*)` in Windows)
 
 ### Failed to load checkpoints
 
@@ -76,7 +76,7 @@ If you did the steps correctly, you should see something like this output.
 ```
 
 - If you see output like the above, it means the file isn't present in the directory you are in.
-- Make sure you have placed the checkpoints.csv file in the same directory as TurtleCoind.
+- Make sure you have placed the `checkpoints.csv` file in the same directory as TurtleCoind.
 
 ### TurtleCoind.exe is not recognized / No such file or directory
 

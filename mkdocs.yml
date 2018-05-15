@@ -92,6 +92,7 @@ pages:
       - Wallets:
         - Making a Wallet: guides/wallets/Making-a-Wallet.md
         - GUI Wallets:
+          - Overview of GUI Wallets: guides/wallets/Making-a-GUI-Wallet.md
           - Nest Wallet: guides/wallets/Using-nest-wallet.md
           - WinForms Wallet: guides/wallets/Using-winforms-wallet.md
         - CLI Wallet:
