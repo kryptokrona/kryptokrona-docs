@@ -42,6 +42,8 @@
     * [Paper Wallet](Making-a-Paper-Wallet)
     * [Recovering your Wallet](Recovering-your-Wallet)
     * [Using Remote Nodes](Using-remote-nodes)
+  - [Compiling TurtleCoin from Source](Compiling-From-Source)
+    * [CentOS 7](Compiling-From-Source#centos-7)
 
 - TRTL Development
   - Connecting with Developers
