@@ -38,7 +38,7 @@
       * [WinForms Wallet](Using-WinForms-Wallet)
       * [Nest Wallet](Using-Nest-Wallet)
     * [SimpleWallet (CLI)](Using-SimpleWallet)
-      * [Using Checkpints](Using-checkpoints)
+      * [Using Checkpoints](Using-checkpoints)
     * [Paper Wallet](Making-a-Paper-Wallet)
     * [Recovering your Wallet](Recovering-your-Wallet)
     * [Using Remote Nodes](Using-remote-nodes)
