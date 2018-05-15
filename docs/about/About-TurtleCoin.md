@@ -32,7 +32,7 @@ To learn more about us, check out our other various articles, describing:
 
 - [How to Contribute](Contributing)
 
-- [it's Technical Data](Technical-Data.md)
+- [it's Technical Data](Technical-Data)
 
 We recommend you take some time off and read them, to get acquainted with TurtleCoin!
 
