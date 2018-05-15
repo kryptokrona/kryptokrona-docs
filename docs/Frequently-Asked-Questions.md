@@ -51,7 +51,7 @@ A: Yes, in case you get banned, or a pool goes down for some time, you can keep 
 
 #### Q: Where can I find a list of pools?
 
-A: [Here](Pools) is a list. It also has other nifty stats like the pool's fee, minimum payout and server location.
+A: [Here](guides/mining/Pools) is a list. It also has other nifty stats like the pool's fee, minimum payout and server location.
 
 #### Q: What does "pool weight" mean in XMR-Stak?
 
@@ -75,7 +75,7 @@ A: There are a few factors to consider when choosing a pool.
 
   This is the amount you need to mine before you get paid. Most pools will list this under the "Payments" tab.
 
-  You can check [this list](Pools) of pools. It specifies each pool's minimum payout as well as server location.
+  You can check [this list](guides/mining/Pools) of pools. It specifies each pool's minimum payout as well as server location.
 
 #### Q: How many hashes per second is good for my hardware?
 
@@ -89,9 +89,11 @@ Web miner currently isn't working. You can hop onto the [Discord](https://discor
 
 #### Q: What is the miner executable / why isn't it working?
 
-A: This is a solo miner, which is CPU only. This means to gain any TRTL, you have to find a block by yourself, which unless you have many powerful CPUs, is very unlikely. 
-  We strongly recommend using a pool, and a miner such as XMR-Stak or xmrig. 
-  Nevertheless, if you want to try it out, open a command prompt in the same directory, and run 
+A: This is a solo miner, which is CPU only. This means to gain any TRTL, you have to find a block by yourself, which unless you have many powerful CPUs, is very unlikely.   
+
+We strongly recommend using a pool, and a miner such as XMR-Stak or xmrig.   
+
+Nevertheless, if you want to try it out, open a command prompt in the same directory, and run 
 
 ```
 miner.exe --address TRTL...
@@ -131,7 +133,7 @@ A: This could be caused by multiple issues:
 
 #### Q: How can I use just my GPU/CPU to mine in XMR-Stak?
 
-A: If you're using XMR-Stak, you can start the miner with a certain command. Check [this out](XMR-Stak-Guide#XMR-Stak-no-cpu-gpu) for more info.
+A: If you're using XMR-Stak, you can start the miner with a certain command. Check [this out](guides/mining/XMR-Stak-Guide#XMR-Stak-no-cpu-gpu) for more info.
 
 #### Q: My XMR-Stak is crashing on startup, with an error about CUDA. What am I doing wrong?
 
@@ -143,7 +145,6 @@ A: Generally, this is due to an incorrectly configured config. In the directory 
 
 Open this up, and check that it looks similar to this:
 
-    ```
     {"pool_address" : "eu.turtlepool.space:3333",
      "wallet_address" : "TRTLv2Fyavy8CXG8BPEbNeCHFZ1fuDCYCZ3vW5H5LXN4K2M2MHUpTENip9bbavpHvvPwb4NDkBWrNgURAd5DB38FHXWZyoBh4wW",
      "pool_password" : "x",
@@ -151,8 +152,6 @@ Open this up, and check that it looks similar to this:
      "use_tls" : false,
      "tls_fingerprint" : "",
      "pool_weight" : 10 },
-       
-     ```
 
   Your wallet address is the address starting with `TRTL`, not your wallet filename. 
 
@@ -164,7 +163,7 @@ Some users have experienced issues with their firewall or antivirus as well howe
 
 A: This is possible, however please note that these devs are independent from the TurtleCoin project and are doing some great work, so we would suggest leaving it as is. 
 
-  If you do wish to change/remove the dev fee, you will have to compile XMR-Stak yourself, they have instructions to do this on their [GitHub](https://github.com/fireice-uk/XMR-Stak/blob/master/doc/compile.md), or you can check out the [Linux guide](XMR-Stak-Linux-Guide#ubuntu-16-04)
+  If you do wish to change/remove the dev fee, you will have to compile XMR-Stak yourself, they have instructions to do this on their [GitHub](https://github.com/fireice-uk/XMR-Stak/blob/master/doc/compile.md), or you can check out the [Linux guide](guides/mining/XMR-Stak-Linux-Guide#ubuntu-16-04)
 
   Once you have downloaded the code, you need to change the file `donate-level.hpp` in the `XMR-Stak/XMR-Stak/` folder.
 
@@ -180,7 +179,7 @@ A: Try installing this: <https://www.microsoft.com/en-us/download/details.aspx?i
 
 #### Q: When I run XMR-Stak I get an error: "The application was unable to start correctly (0x000007b)"
 
-A: Try installing this: <https://go.microsoft.com/fwlink/?LinkId=746572
+A: Try installing this: <https://go.microsoft.com/fwlink/?LinkId=746572>
 
 ## TurtleCoind / SimpleWallet Issues<a name="tcoind-simplewallet-issues"></a>
 
@@ -197,14 +196,14 @@ A: This occurs because of the blockchain forking, generally when one mining pool
 2018-May-07 15:52:19.908530 ERROR   Corrupted blockchain. Block with index 428973 and hash aafa7fd33d476535188bdd9e86ba51bb5e058be8e52367b78e9c0c03e74299c5 has previous block hash 2c0cf6c07612b9e1ea19c6922a56746b83cb42c7b11edfc4b185572225bb0f20, but parent has hash 26189359b64d4bb357a04b102a42a01d2771a3f3d80db3ca1b7395a2aeaede4a. Resynchronize your daemon please.
 2018-May-07 15:52:19.924135 INFO    Closing DB.
 ```
-A: Re-sync your daemon from scratch(see below question), [bootstrap the blockchain](guides/Bootstrapping-the-Blockchain.md) or sync [using checkpoints](guides/wallets/using-simplewallet.md#using-checkpoints)
+A: Re-sync your daemon from scratch(see below question), [bootstrap the blockchain](guides/Bootstrapping-the-Blockchain.md) or sync [using checkpoints](guides/wallets/Using-checkpoints)
 
 #### Q: How can I re-sync the blockchain?
 
 A: Close any TurtleCoin-related software, then go to `%APPDATA%`, and delete the `TurtleCoin` folder. 
   Reopen TurtleCoind/GUI and let it re-sync. 
 
-Alternatively, check [this guide](Bootstrapping-the-Blockchain) for instructions on how to bootstrap for a quicker sync.
+Alternatively, check [this guide](guides/Bootstrapping-the-Blockchain) for instructions on how to bootstrap for a quicker sync.
 
 #### Q: When I open TurtleCoind on a Mac, I get an error `Illegal instruction: 4`. How can I fix it?
 
@@ -220,7 +219,7 @@ This automated script should compile the software itself, and place the binaries
 
 See [here](https://github.com/turtlecoin/turtlecoin#ubuntu-1604-and-macos-1010) for more info. 
 
-If this fails, try instead following the instructions to [compile manually]( https://github.com/turtlecoin/turtlecoin#apple)
+If this fails, try instead following the instructions to [compile manually](https://github.com/turtlecoin/turtlecoin#apple)
     
 
 #### Q: I've opened the wallet, and I'm getting lots of red messages like "It looks like TurtleCoind isn't open!"...
@@ -248,7 +247,7 @@ Until you are fully synced, you won't be able to send transactions, and your bal
 
 #### Q: I think I should have more money in my balance than it is showing, what should I do?
 
-  A: Re-sync your daemon from scratch(see [here](#q-how-can-i-re-sync-the-blockchain)), [bootstrap the blockchain](http://127.0.0.1:8000/guides/Bootstrapping-the-Blockchain/) or sync [using checkpoints](http://127.0.0.1:8000/guides/wallets/using-simplewallet/#using-checkpoints) . If it still doesn't work, then [update](latest.turtlecoin.lol) your wallet!
+  A: Re-sync your daemon from scratch(see [here](#q-how-can-i-re-sync-the-blockchain)), [bootstrap the blockchain](guides/Bootstrapping-the-Blockchain/) or sync [using checkpoints](guides/wallets/Using-checkpoints) . If it still doesn't work, then [update](latest.turtlecoin.lol) your wallet!
 
 #### Q: I've tried resetting, but it isn't working. What should I do?
 
@@ -267,11 +266,11 @@ A:
 
 #### Q: How do I send TRTL?
 
-  A: You can check [this out](Using-SimpleWallet#tx-trtl) for steps on how to send TRTL to someone.
+  A: You can check [this out](guides/wallets/Using-Simplewallet#tx-trtl) for steps on how to send TRTL to someone.
 
 #### Q: How do I send money to exchanges / use payment ID?
 
-  A: You can check [this out](Using-SimpleWallet#tx-trtl-p-id) for steps on how to send TRTL with the payment ID.
+  A: You can check [this out](guides/wallets/Using-Simplewallet#tx-trtl-p-id) for steps on how to send TRTL with the payment ID.
 
 #### Q: What is mixin?
 
@@ -291,11 +290,11 @@ A mixin of `0` can be used to have a public transaction(though it is strongly re
 
 #### Q: Can I speed up the syncing of the blockchain?
 
-  A: You can grab a recent copy of the blockchain and incrementally sync from there. See [How to Bootstrap the TurtleCoin Blockchain](Bootstrapping-the-Blockchain) for instructions.
+  A: You can grab a recent copy of the blockchain and incrementally sync from there. See [here](guides/Bootstrapping-the-Blockchain) for instructions.
 
 #### Q: Can I skip the syncing?
 
-  A: Yes, you can currently use a public node with simplewallet. The keys stay on your PC, so it's secure. Check [this guide](Using-SimpleWallet#using-remote-node) for more information.
+  A: Yes, you can currently use a public node with SimpleWallet. The keys stay on your PC, so it's secure. Check [this guide](guides/wallets/Using-remote-nodes) for more information.
 
 #### Q: What does it mean if my balance is locked?
 
@@ -318,18 +317,18 @@ A mixin of `0` can be used to have a public transaction(though it is strongly re
 * [Xamarin Wallet](https://github.com/turtlecoin/turtle-wallet-xamarin)
 * [Nest Wallet](https://github.com/turtlecoin/turtle-wallet-go)
 
-To view a guide on using them, you can go [here](guides/wallets/making-a-wallet/#graphical-wallet-gui-wallet)
+To view a guide on using them, you can go [here](guides/wallets/Making-a-Wallet/#graphical-wallet-gui-wallet)
 
 #### Q: I'm using the GUI Xamarin wallet, and it fails to connect to the daemon.
 
   A: There are multiple reasons this can occur. Try opening `walletd.log` and scrolling to the bottom to determine what is occurring.
-  * A wrong password - check `walletd.log` to check if this is occurring. If you are sure your password is correct, this link could be helpful - <https://github.com/turtlecoin/desktop-xamarin/issues/20
+  * A wrong password - check `walletd.log` to check if this is occurring. If you are sure your password is correct, [this link](https://github.com/turtlecoin/desktop-xamarin/issues/20) could be helpful.
 
 
   * You have another `walletd.exe` or SimpleWallet process running. Only one of these can be running at once, and the GUI launches its own. Check Task Manager and close down any of these processes and try again.
 
 
-  * `walletd` is importing blocks from the DB, which takes a while and so the GUI thinks it has crashed. Solution here - <https://github.com/turtlecoin/desktop-xamarin/issues/17#issuecomment-366790435>
+  * `walletd` is importing blocks from the DB, which takes a while and so the GUI thinks it has crashed. Check the [solution here](https://github.com/turtlecoin/desktop-xamarin/issues/17#issuecomment-366790435)
 
 
   * If all else fails, if you have your private keys then you can instead import your wallet into SimpleWallet. 
@@ -353,11 +352,11 @@ The preferred way to do this is via a computer than has never ever been connecte
 
 #### Q: Can I make a paper wallet? 
 
-A: Yes, you can view the guide [here](guides/wallets/Making-a-Paper-Wallet)
+A: Yes, you can view the guide [here](guides/wallets/Making-a-paper-wallet)
 
 #### Q: I made a paper wallet, how do I use it?
 
-  A: You can check out [this guide](guides/wallets/Recovering-your-Wallet) for steps on how to import your paper wallet into a wallet of your choice(choose a wallet and import the keys).
+  A: You can check out [this guide](guides/wallets/recovering-your-wallet) for steps on how to import your paper wallet into a wallet of your choice(choose a wallet and import the keys).
 
 #### Q: Can I view the balance of my wallet online?
 
