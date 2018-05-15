@@ -53,13 +53,6 @@ This guide will help you install a recent copy of the blockchain. This should si
 7. See [Expected Results](#ExpectedResults) section below.
 
 
-5. Move the two new downloaded files to the `%APPDATA%\TurtleCoin` folder.
-
-6. Start `TurtleCoind.exe` or the GUI wallet like you normally do.
-
-7. See [Expected Results](#ExpectedResults) section below.
-
-
 
 ## Mac & Linux:
 1. Make sure `TurtleCoind`, `walletd`, and/or the GUI wallet are not running.
