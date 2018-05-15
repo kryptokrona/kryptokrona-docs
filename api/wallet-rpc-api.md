@@ -30,7 +30,7 @@ pip install turtlecoin
 http://localhost:8070/json_rpc
 ```
 
-> Instantiation / Configuration
+> Configuration and instantiation
 
 ```php
 <?php
@@ -59,7 +59,7 @@ Parameter            | Description
 ## reset
 
 ```shell
-// 
+curl -d '{"jsonrpc":"2.0","id":1,"password":"passw0rd","method":"reset","params":{"viewSecretKey":"qehawikl7rl2hochu1ikezl8wubrucidaf4qa3hlm6pru7itrudrekayifeveslx"}}'  http://localhost:8070/json_rpc
 ```
 
 ```javascript
@@ -72,9 +72,11 @@ use TurtleCoin\Walletd;
 
 $walletd = new Walletd\Client($config);
 
-$key = 'YOUR PRIVATE VIEW KEY';
+$secretViewKey = 'qehawikl7rl2hochu1ikezl8wubrucidaf4qa3hlm6pru7itrudrekayifeveslx';
 
-$walletd->reset($key);
+$response = $walletd->reset($secretViewKey);
+
+echo $response->getBody()->getContents();
 ```
 
 ```python
@@ -83,6 +85,16 @@ $walletd->reset($key);
 
 ```go
 // 
+```
+
+> Expected output:
+
+```json
+{
+  "id":1,
+  "jsonrpc":"2.0",
+  "result":{}
+}
 ```
 
 `reset()` method allows you to re-sync your wallet.
@@ -104,6 +116,43 @@ No output in case of success.
 
 ## save
 
+```shell
+curl -d '{"jsonrpc":"2.0","id":1,"password":"passw0rd","method":"save","params":{}}'  http://localhost:8070/json_rpc
+```
+
+```javascript
+// 
+```
+
+```php
+<?php
+use TurtleCoin\Walletd;
+
+$walletd = new Walletd\Client($config);
+
+$response = $walletd->save();
+
+echo $response->getBody()->getContents();
+```
+
+```python
+// 
+```
+
+```go
+// 
+```
+
+> Expected output:
+
+```json
+{
+  "id":1,
+  "jsonrpc":"2.0",
+  "result":{}
+}
+```
+
 `save()` method allows you to save your wallet by request.
 
 No input.
@@ -112,6 +161,45 @@ No output in case of success.
 
 
 ## getViewKey
+
+```shell
+curl -d '{"jsonrpc":"2.0","id":1,"password":"passw0rd","method":"getViewKey","params":{}}'  http://localhost:8070/json_rpc
+```
+
+```javascript
+// 
+```
+
+```php
+<?php
+use TurtleCoin\Walletd;
+
+$walletd = new Walletd\Client($config);
+
+$response = $walletd->getViewKey();
+
+echo $response->getBody()->getContents();
+```
+
+```python
+// 
+```
+
+```go
+// 
+```
+
+> Expected output:
+
+```json
+{
+  "id":1,
+  "jsonrpc":"2.0",
+  "result":{
+    "viewSecretKey":"qehawikl7rl2hochu1ikezl8wubrucidaf4qa3hlm6pru7itrudrekayifeveslx"
+  }
+}
+```
 
 `getViewKey()` method returns your view key.
 
