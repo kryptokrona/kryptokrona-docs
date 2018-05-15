@@ -23,7 +23,7 @@ After your wallet address has been registered, type `.deposit` in the #bots chan
 
 #### CLI Wallet
 
-Follow the steps given [here](using-simplewallet#sending-turtlecoin-transactions) and replace the values of the address and payment ID with the ones provided (**!! PAYMENT ID IS IMPORTANT !!**).
+Follow the steps given [here](wallets/Using-Simplewallet#sending-turtlecoin-transactions) and replace the values of the address and payment ID with the ones provided (**!! PAYMENT ID IS IMPORTANT !!**).
 
 - See [Expected Results](#expected-results) section below
 
@@ -31,11 +31,11 @@ Follow the steps given [here](using-simplewallet#sending-turtlecoin-transactions
 
 ##### Nest Wallet
 
-Follow the steps given [here](using-nest-wallet#sending-turtlecoin-transactions) and replace the values of the address and Payment ID with the ones provided (**!! PAYMENT ID IS IMPORTANT !!**)
+Follow the steps given [here](wallets/Using-nest-wallet#sending-turtlecoin-transactions) and replace the values of the address and Payment ID with the ones provided (**!! PAYMENT ID IS IMPORTANT !!**)
 
 ##### WinForms Wallet
 
-Follow the steps given [here](using-winforms-wallet#sending-turtlecoin-transactions) and replace the values of the address(recipient) and Payment ID with the ones provided (**!! PAYMENT ID IS IMPORTANT !!**)
+Follow the steps given [here](wallets/Using-winforms-wallet#sending-turtlecoin-transactions) and replace the values of the address(recipient) and Payment ID with the ones provided (**!! PAYMENT ID IS IMPORTANT !!**)
 
 
 

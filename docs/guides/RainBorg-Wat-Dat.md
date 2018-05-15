@@ -1,10 +1,10 @@
 # RainBorg? Wat Dat?
 
-Back in the day, we had the [#raindance bot](Participating-in-Raindance), then people took advantage of the bot and it was retired. Now we have RainBorg!
+Back in the day, we had the [#raindance bot](guides/Participating-in-Raindance), then people took advantage of the bot and it was retired. Now we have RainBorg!
 
 ![rainavatar](images/rainborg/rainborg-avatar.png)
 
-This bot monitors chat activity. Once certain critera are met, RainBorg sends out a tip using the tipbot, [trtlbot++](Using-trtlbot-plus-plus), to people who have recently been chatting away.
+This bot monitors chat activity. Once certain critera are met, RainBorg sends out a tip using the tipbot, [trtlbot++](guides/Using-trtlbot-plus-plus), to people who have recently been chatting away.
 
 ## What are the criteria to get tips?
 
@@ -28,7 +28,7 @@ The only way it stops being anonymous is if you post in chat and disclose your d
 
 ## Give me details!
 
-Right, to get started, simply register your wallet with [trtlbot++](Using-trtlbot-plus-plus#registering-your-wallet).
+Right, to get started, simply register your wallet with [trtlbot++](guides/Using-trtlbot-plus-plus#registering-your-wallet).
 
 Go to the  `#wallets` channel in the [Discord server](https://discord.gg/J7g99EE), type `.registerwallet TRTL...`, and replace `TRTL...` with your wallet address. 
 
@@ -94,7 +94,7 @@ This is not how it works or why it was set up... gaming the system or attempting
 
 People on the exile list never get added to the tip-list. Focus on being an engaged member of the community and let the tip mistress, RainBorg, handle raining tips on the people, she is most capable.  
 
-There is a way to get unsolicited tips though, [be a good Turtle](https://medium.com/@turtlecoin/how-to-be-a-good-turtle-20a427028a18) and check out the tipbot, [trtlbot++](Using-trtlbot-plus-plus).
+There is a way to get unsolicited tips though, [be a good Turtle](https://medium.com/@turtlecoin/how-to-be-a-good-turtle-20a427028a18) and check out the tipbot, [trtlbot++](guides/Using-trtlbot-plus-plus).
 
 ## Commands
 

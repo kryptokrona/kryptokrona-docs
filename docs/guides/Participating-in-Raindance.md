@@ -1,4 +1,4 @@
-## THIS GUIDE IS OUT OF DATE. RAINBOT IS DEFUNCT. VIEW [THIS GUIDE FOR MORE](RainBorg-Wat-Dat)
+## THIS GUIDE IS OUT OF DATE. RAINBOT IS DEFUNCT. VIEW [THIS GUIDE FOR MORE](guides/RainBorg-Wat-Dat)
 
 *For posterity, the original guide is below.*
 

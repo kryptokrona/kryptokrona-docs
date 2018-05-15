@@ -34,7 +34,7 @@ Running `TurtleWallet.exe` will automatically open `walletd.exe` and begin synch
 
 Because the blockchain is constantly growing, the file size is always increasing, and `TurtleCoind.exe` must verify each block (CPU intensive). 
 
-To save time, consider downloading a cached 'bootstrap' of the blockchain (see [Bootstrapping the Blockchain](Bootstrapping-the-Blockchain) for more info).
+To save time, consider downloading a cached 'bootstrap' of the blockchain (see [Bootstrapping the Blockchain](guides/Bootstrapping-the-Blockchain) for more info).
 
 ## Using WinForms Wallet
 
@@ -154,4 +154,4 @@ The wallet will then begin synchronizing with the blockchain. When done, it will
 
 #### 25 Mnemonic Seed
 
-View [this guide](Recovering-your-Wallet#25-winforms-wallet) for steps on recovering your wallet with your 25 word mnemonic seed.
+View [this guide](guides/wallets/recovering-your-wallet#25-winforms-wallet) for steps on recovering your wallet with your 25 word mnemonic seed.
