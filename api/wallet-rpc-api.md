@@ -59,11 +59,7 @@ Parameter            | Description
 ## reset
 
 ```shell
-curl -d '{"jsonrpc":"2.0","id":1,"password":"passw0rd","method":"reset","params":{"viewSecretKey":"qehawikl7rl2hochu1ikezl8wubrucidaf4qa3hlm6pru7itrudrekayifeveslx"}}'  http://localhost:8070/json_rpc
-```
-
-```javascript
-// 
+curl -d '{"jsonrpc":"2.0","id":1,"password":"passw0rd","method":"reset","params":{"viewSecretKey":"xxxxx..."}}'  http://localhost:8070/json_rpc
 ```
 
 ```php
@@ -77,14 +73,6 @@ $secretViewKey = 'qehawikl7rl2hochu1ikezl8wubrucidaf4qa3hlm6pru7itrudrekayifeves
 $response = $walletd->reset($secretViewKey);
 
 echo $response->getBody()->getContents();
-```
-
-```python
-// 
-```
-
-```go
-// 
 ```
 
 > Expected output:
@@ -109,7 +97,7 @@ viewSecretKey    | No          | Private view key | string
 No output in case of success.
 
 <aside class="notice">
-  If the view_secret_key was not pointed out reset() methods resets the wallet and re-syncs it. If the view_secret_key argument was pointed out reset() method substitutes the existing wallet with a new one with a specified view_secret_key and creates an address for it.
+  If the <code>viewSecretKey</code> argument is not provided, the <code>reset()</code> method resets the wallet and re-syncs it. If the <code>viewSecretKey</code> argument is provided, the <code>reset()</code> method substitutes the existing wallet with a new one with the specified key and creates an address for it.
 </aside>
 
 
@@ -118,10 +106,6 @@ No output in case of success.
 
 ```shell
 curl -d '{"jsonrpc":"2.0","id":1,"password":"passw0rd","method":"save","params":{}}'  http://localhost:8070/json_rpc
-```
-
-```javascript
-// 
 ```
 
 ```php
@@ -133,14 +117,6 @@ $walletd = new Walletd\Client($config);
 $response = $walletd->save();
 
 echo $response->getBody()->getContents();
-```
-
-```python
-// 
-```
-
-```go
-// 
 ```
 
 > Expected output:
@@ -166,10 +142,6 @@ No output in case of success.
 curl -d '{"jsonrpc":"2.0","id":1,"password":"passw0rd","method":"getViewKey","params":{}}'  http://localhost:8070/json_rpc
 ```
 
-```javascript
-// 
-```
-
 ```php
 <?php
 use TurtleCoin\Walletd;
@@ -181,14 +153,6 @@ $response = $walletd->getViewKey();
 echo $response->getBody()->getContents();
 ```
 
-```python
-// 
-```
-
-```go
-// 
-```
-
 > Expected output:
 
 ```json
@@ -196,7 +160,7 @@ echo $response->getBody()->getContents();
   "id":1,
   "jsonrpc":"2.0",
   "result":{
-    "viewSecretKey":"qehawikl7rl2hochu1ikezl8wubrucidaf4qa3hlm6pru7itrudrekayifeveslx"
+    "viewSecretKey":"xxxxx..."
   }
 }
 ```
@@ -214,6 +178,21 @@ viewSecretKey    | Private view key | string
 
 
 ## getSpendKeys
+
+```shell
+curl -d '{"jsonrpc":"2.0","id":1,"password":"passw0rd","method":"getSpendKeys","params":{"address":"TRTLxxxx..."}}'  http://localhost:8070/json_rpc
+```
+
+```json
+{
+  "id":1,
+  "jsonrpc":"2.0",
+  "result":{
+    "spendSecretKey":"xxxxx...",
+    "spendPublicKey":"xxxxx..."
+  }
+}
+```
 
 `getSpendKeys()` method returns your spend keys.
 
@@ -234,6 +213,23 @@ spendPublicKey    | Public spend key     | string
 
 ## getStatus
 
+```shell
+curl -d '{"jsonrpc":"2.0","id":1,"password":"passw0rd","method":"getStatus","params":{}}'  http://localhost:8070/json_rpc
+```
+
+```json
+{
+  "id":1,
+  "jsonrpc":"2.0",
+  "result":{
+    "blockCount":455956,
+    "knownBlockCount":455955,
+    "lastBlockHash":"8d6f81d5e0353f9411a121970cab8c2da6f9d19f3388d2314c8206d29d3375b3",
+    "peerCount":8
+  }
+}
+```
+
 `getStatus()` method returns information about the current RPC Wallet state: block_count, known_block_count, last_block_hash and peer_count.
 
 No input.
@@ -251,6 +247,23 @@ peerCount        | Connected peers number	                                      
 
 ## getAddresses
 
+```shell
+curl -d '{"jsonrpc":"2.0","id":1,"password":"passw0rd","method":"getAddresses","params":{}}'  http://localhost:8070/json_rpc
+```
+
+```json
+{
+  "id":1,
+  "jsonrpc":"2.0",
+  "result":{
+    "addresses":[
+      "TRTLxxxx...",
+      "TRTLxxxx..."
+    ]
+  }
+}
+```
+
 `getAddresses()` method returns an array of your RPC Wallet's addresses.
 
 No input.
@@ -265,6 +278,20 @@ addresses	      | Array of strings, where each string is an address	  | array
 
 ## createAddress
 
+```shell
+curl -d '{"jsonrpc":"2.0","id":1,"password":"passw0rd","method":"createAddress","params":{}}'  http://localhost:8070/json_rpc
+```
+
+```json
+{
+  "id":1,
+  "jsonrpc":"2.0",
+  "result":{
+    "address":"TRTLxxxx..."
+  }
+}
+```
+
 `createAddress()` method creates an additional address in your wallet.
 
 **Input**
@@ -277,6 +304,18 @@ publicSpendKey           | No           | Public spend key. If `publicSpendKey` 
 
 
 ## deleteAddress
+
+```shell
+curl -d '{"jsonrpc":"2.0","id":1,"password":"passw0rd","method":"deleteAddress","params":{"address":"TRTLxxxx..."}}'  http://localhost:8070/json_rpc
+```
+
+```json
+{
+  "id":1,
+  "jsonrpc":"2.0",
+  "result":{}
+}
+```
 
 `deleteAddress()` method deletes a specified address.
 
@@ -294,7 +333,32 @@ In case of success returns an empty JSON object.
 
 ## getBalance
 
+```shell
+curl -d '{"jsonrpc":"2.0","id":1,"password":"passw0rd","method":"getBalance","params":{"address":"TRTLxxxx..."}}'  http://localhost:8070/json_rpc
+```
+
+```json
+{
+  "id":1,
+  "jsonrpc":"2.0",
+  "result":{}
+}
+```
+
 `getBalance()` method returns a balance for a specified address.
+
+**Input**
+
+Argument         | Mandatory    | Description                                          | Format
+---------------- | ------------ | ---------------------------------------------------- | -------
+address          | No           | Valid and existing address in this particular wallet | string
+
+**Output**
+
+Argument              | Description                                             | Format
+--------------------- | ------------------------------------------------------- | ------
+availableBalance      | Available balance of the specified address              | int
+lockedAmount          | Locked amount of the specified address                  | int
 
 <aside class="notice">
   If address is not specified, returns a cumulative balance of all RPC Wallet's addresses.
