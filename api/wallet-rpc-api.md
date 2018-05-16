@@ -582,6 +582,24 @@ transfers           | array of address (string), amount (uint64)                
 
 ## getUnconfirmedTransactionHashes
 
+```shell
+curl -d '{"jsonrpc":"2.0","id":1,"password":"passw0rd","method":"getUnconfirmedTransactionHashes","params":{}}' http://localhost:8070/json_rpc
+```
+
+> Expected output:
+
+```json
+{
+  "id":1,
+  "jsonrpc":"2.0",
+  "result":{
+    "transactionHashes":[
+      "55a23..."
+    ]
+  }
+}
+```
+
 `getUnconfirmedTransactionHashes()` method returns information about the current unconfirmed transaction pool or for a specified addresses.
 
 Transaction consists of transfers. Transfer is an amount-address pair. There could be several transfers in a single transaction.
@@ -605,6 +623,38 @@ transactionHashes      | Array of strings, where each string is a hash of an unc
 
 
 ## getTransaction
+
+```shell
+curl -d '{"jsonrpc":"2.0","id":1,"password":"passw0rd","method":"getTransaction","params":{"transactionHash":"55a23..."}}' http://localhost:8070/json_rpc
+```
+
+> Expected output:
+
+```json
+{
+  "id":1,
+  "jsonrpc":"2.0",
+  "result":{
+    "transaction":{
+      "amount":5000,
+      "blockIndex":456635,
+      "extra":"0134b...",
+      "fee":10,
+      "isBase":false,
+      "paymentId":"ac9c5...",
+      "state":0,
+      "timestamp":1526477499,
+      "transactionHash":"55a23...",
+      "transfers":[
+        {"address":"TRTLxxxx...","amount":5000,"type":0},
+        {"address":"","amount":-10000,"type":0},
+        {"address":"","amount":4990,"type":0}
+      ],
+      "unlockTime":0
+    }
+  }
+}
+```
 
 `getTransaction()` method returns information about a particular transaction.
 
@@ -641,6 +691,22 @@ transfers           | array of address (string), amount (uint64)                
 
 ## sendTransaction
 
+```shell
+curl -d '{"jsonrpc":"2.0","id":1,"password":"passw0rd","method":"sendTransaction","params":{"transfers":[{"address":"TRTLxxxx...","amount":"5000"}],"fee":10,"anonymity":3,"changeAddress":"TRTLyyyy..."}}' http://localhost:8070/json_rpc
+```
+
+> Expected output:
+
+```json
+{
+  "id":1,
+  "jsonrpc":"2.0",
+  "result":{
+    "transactionHash":"ae57e..."
+  }
+}
+```
+
 `sendTransaction()` method allows you to send transaction to one or several addresses. Also, it allows you to use a payment_id for a transaction to a single address.
 
 **Input**
@@ -669,6 +735,22 @@ transactionHash	      | Hash of the sent transaction		| string
 
 
 ## createDelayedTransaction
+
+```shell
+curl -d '{"jsonrpc":"2.0","id":1,"password":"passw0rd","method":"createDelayedTransaction","params":{"transfers":[{"address":"TRTLxxxx...","amount":"5000"}],"fee":10,"anonymity":3,"changeAddress":"TRTLyyyy..."}}' http://localhost:8070/json_rpc
+```
+
+> Expected output:
+
+```json
+{
+  "id":1,
+  "jsonrpc":"2.0",
+  "result":{
+    "transactionHash":"ae57e..."
+  }
+}
+```
 
 `createDelayedTransaction()` method creates a delayed transaction. Such transactions are not sent into the network automatically and should be pushed using `sendDelayedTransaction` method.
 
@@ -700,6 +782,22 @@ transactionHash	      | Hash of the sent transaction		| string
 
 ## getDelayedTransactionHashes
 
+```shell
+curl -d '{"jsonrpc":"2.0","id":1,"password":"passw0rd","method":"getDelayedTransactionHashes","params":{}}' http://localhost:8070/json_rpc
+```
+
+> Expected output:
+
+```json
+{
+  "id":1,
+  "jsonrpc":"2.0",
+  "result":{
+    "transactionHashes":["b3e374..."]
+  }
+}
+```
+
 `getDelayedTransactionHashes()` method returns hashes of delayed transactions.
 
 No input.
@@ -713,6 +811,20 @@ transactionHashes	  | Array of strings, where each string is a transaction hash	
 
 
 ## deleteDelayedTransaction
+
+```shell
+curl -d '{"jsonrpc":"2.0","id":1,"password":"passw0rd","method":"deleteDelayedTransaction","params":{"transactionHash":"b3e37..."}}' http://localhost:8070/json_rpc
+```
+
+> Expected output:
+
+```json
+{
+  "id":1,
+  "jsonrpc":"2.0",
+  "result":{}
+}
+```
 
 `deleteDelayedTransaction()` method deletes a specified delayed transaction.
 
@@ -730,6 +842,20 @@ In case of success returns an empty JSON object.
 
 ## sendDelayedTransaction
 
+```shell
+curl -d '{"jsonrpc":"2.0","id":1,"password":"passw0rd","method":"sendDelayedTransaction","params":{"transactionHash":"c37cd..."}}' http://localhost:8070/json_rpc
+```
+
+> Expected output:
+
+```json
+{
+  "id":1,
+  "jsonrpc":"2.0",
+  "result":{}
+}
+```
+
 `sendDelayedTransaction()` method sends a specified delayed transaction.
 
 **Input**
@@ -745,6 +871,22 @@ In case of success returns an empty JSON object.
 
 
 ## sendFusionTransaction
+
+```shell
+curl -d '{"jsonrpc":"2.0","id":1,"password":"passw0rd","method":"sendFusionTransaction","params":{"threshold":1000000,"anonymity":3,"addresses":["TRTLxxxx...","TRTLyyyy..."],"destinationAddress":"TRTLzzzz..."}}' http://localhost:8070/json_rpc
+```
+
+> Expected output:
+
+```json
+{
+  "id":1,
+  "jsonrpc":"2.0",
+  "result":{
+    "transactionHash":"93faed..."
+  }
+}
+```
 
 `sendFusionTransaction()` method allows you to send a fusion transaction, by taking funds from selected addresses and 
 transferring them to the destination address.
@@ -774,6 +916,23 @@ transactionHash	      | Hash of the sent transaction		| string
 
 ## estimateFusion
 
+```shell
+curl -d '{"jsonrpc":"2.0","id":1,"password":"passw0rd","method":"estimateFusion","params":{"threshold":1000000,"addresses":["TRTLxxxx...","TRTLyyyy..."]}}' http://localhost:8070/json_rpc
+```
+
+> Expected output:
+
+```json
+{
+  "id":1,
+  "jsonrpc":"2.0",
+  "result":{
+    "fusionReadyCount":0,
+    "totalOutputCount":8
+  }
+}
+```
+
 `estimateFusion()` method counts the number of unspent outputs of the specified addresses and returns how many of those outputs can be optimized.
 This method is used to understand if a fusion transaction can be created. If `fusionReadyCount` returns a value = 0, then a fusion transaction cannot be created.
 
@@ -783,6 +942,7 @@ Argument            | Mandatory  | Description                                  
 ------------------- | ---------- | ---------------------------------------------------------------------------------------------------- | -------
 threshold           | Yes        | Value that determines which outputs will be optimized. Only the outputs, lesser than the threshold value, will be included into a fusion transaction. | string
 addresses           | No         | Array of strings, where each string is an address to take the funds from.	                        | string
+
 **Output**
 
 Argument            | Description                                                 | Format
