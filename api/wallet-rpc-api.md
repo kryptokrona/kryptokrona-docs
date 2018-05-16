@@ -707,20 +707,20 @@ curl -d '{"jsonrpc":"2.0","id":1,"password":"passw0rd","method":"sendTransaction
 }
 ```
 
-`sendTransaction()` method allows you to send transaction to one or several addresses. Also, it allows you to use a payment_id for a transaction to a single address.
+`sendTransaction()` method allows you to send transaction(s) to one or several addresses. Also, it allows you to use a payment_id for a transaction to a single address.
 
 **Input**
 
 Argument        | Mandatory     | Description                                                                              | Format
 --------------- | ------------- | ---------------------------------------------------------------------------------------- | -------
 addresses       | No            | Array of strings, where each string is an address to take the funds from                 | array
-transfers       | Yes           | Array of address (string), amount (int64)                                                | array
-fee             | Yes           | Transaction fee. Minimal fee in TurtleCoin network is .01 BCN. This parameter should be specified in minimal available BCN units. For example, if your fee is .01 BCN, you should pass it as 1000000  | uint64 
-unlockTime      | No            | Height of the block until which transaction is going to be locked for spending.          | uint64
-anonymity       | Yes           | Privacy level (a discrete number from 1 to infinity). Level 6 and higher is recommended  | uint64
+transfers       | Yes           | Array of objects, address: (string address), amount: (int amount)                        | array
+fee             | Yes           | Transaction fee. Minimal fee in TurtleCoin network is 0.10 TRTL. As with other amounts use whole units, 1 TRTL = 100 units, so 0.1 TRTL = 10 units | int
+unlockTime      | No            | The block height at which the transaction will be unlocked for spending.                 | int
+anonymity       | Yes           | Privacy (mixin) level (a discrete number from 0 to > than 0). 6 and higher is recommended| int
 extra           | No            | String of variable length. Can contain A-Z, 0-9 characters.                              | string
 paymentId       | No            | payment_id                                                                               | string 
-changeAddress   | No            | Valid and existing in this container address.                                            | string 
+changeAddress   | No            | Valid and existing address in this container.                                            | string 
 
 * If container contains only 1 address, `changeAddress` field can be left empty and the change is going to be sent to this address.
 * If addresses field contains only 1 address, `changeAddress` can be left empty and the change is going to be sent to this address.
