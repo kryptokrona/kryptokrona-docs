@@ -37,9 +37,9 @@ http://localhost:8070/json_rpc
 use TurtleCoin\Walletd;
 
 $config = [
-    'rpcHost'     => 'http://127.0.0.1',
+    'rpcHost'     => 'http://localhost',
     'rpcPort'     => 8070,
-    'rpcPassword' => 'test',
+    'rpcPassword' => 'passw0rd',
 ];
 
 $walletd = new Walletd\Client($config);
