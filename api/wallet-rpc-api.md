@@ -37,9 +37,9 @@ http://localhost:8070/json_rpc
 use TurtleCoin\Walletd;
 
 $config = [
-    'rpcHost'     => 'http://127.0.0.1',
+    'rpcHost'     => 'http://localhost',
     'rpcPort'     => 8070,
-    'rpcPassword' => 'test',
+    'rpcPassword' => 'passw0rd',
 ];
 
 $walletd = new Walletd\Client($config);
@@ -59,11 +59,7 @@ Parameter            | Description
 ## reset
 
 ```shell
-curl -d '{"jsonrpc":"2.0","id":1,"password":"passw0rd","method":"reset","params":{"viewSecretKey":"qehawikl7rl2hochu1ikezl8wubrucidaf4qa3hlm6pru7itrudrekayifeveslx"}}'  http://localhost:8070/json_rpc
-```
-
-```javascript
-// 
+curl -d '{"jsonrpc":"2.0","id":1,"password":"passw0rd","method":"reset","params":{"viewSecretKey":"xxxxx..."}}' http://localhost:8070/json_rpc
 ```
 
 ```php
@@ -72,19 +68,11 @@ use TurtleCoin\Walletd;
 
 $walletd = new Walletd\Client($config);
 
-$secretViewKey = 'qehawikl7rl2hochu1ikezl8wubrucidaf4qa3hlm6pru7itrudrekayifeveslx';
+$secretViewKey = 'xxxxx...';
 
 $response = $walletd->reset($secretViewKey);
 
 echo $response->getBody()->getContents();
-```
-
-```python
-// 
-```
-
-```go
-// 
 ```
 
 > Expected output:
@@ -109,7 +97,7 @@ viewSecretKey    | No          | Private view key | string
 No output in case of success.
 
 <aside class="notice">
-  If the view_secret_key was not pointed out reset() methods resets the wallet and re-syncs it. If the view_secret_key argument was pointed out reset() method substitutes the existing wallet with a new one with a specified view_secret_key and creates an address for it.
+  If the <code>viewSecretKey</code> argument is not provided, the <code>reset()</code> method resets the wallet and re-syncs it. If the <code>viewSecretKey</code> argument is provided, the <code>reset()</code> method substitutes the existing wallet with a new one with the specified key and creates an address for it.
 </aside>
 
 
@@ -117,11 +105,7 @@ No output in case of success.
 ## save
 
 ```shell
-curl -d '{"jsonrpc":"2.0","id":1,"password":"passw0rd","method":"save","params":{}}'  http://localhost:8070/json_rpc
-```
-
-```javascript
-// 
+curl -d '{"jsonrpc":"2.0","id":1,"password":"passw0rd","method":"save","params":{}}' http://localhost:8070/json_rpc
 ```
 
 ```php
@@ -133,14 +117,6 @@ $walletd = new Walletd\Client($config);
 $response = $walletd->save();
 
 echo $response->getBody()->getContents();
-```
-
-```python
-// 
-```
-
-```go
-// 
 ```
 
 > Expected output:
@@ -163,11 +139,7 @@ No output in case of success.
 ## getViewKey
 
 ```shell
-curl -d '{"jsonrpc":"2.0","id":1,"password":"passw0rd","method":"getViewKey","params":{}}'  http://localhost:8070/json_rpc
-```
-
-```javascript
-// 
+curl -d '{"jsonrpc":"2.0","id":1,"password":"passw0rd","method":"getViewKey","params":{}}' http://localhost:8070/json_rpc
 ```
 
 ```php
@@ -181,14 +153,6 @@ $response = $walletd->getViewKey();
 echo $response->getBody()->getContents();
 ```
 
-```python
-// 
-```
-
-```go
-// 
-```
-
 > Expected output:
 
 ```json
@@ -196,7 +160,7 @@ echo $response->getBody()->getContents();
   "id":1,
   "jsonrpc":"2.0",
   "result":{
-    "viewSecretKey":"qehawikl7rl2hochu1ikezl8wubrucidaf4qa3hlm6pru7itrudrekayifeveslx"
+    "viewSecretKey":"xxxxx..."
   }
 }
 ```
@@ -214,6 +178,23 @@ viewSecretKey    | Private view key | string
 
 
 ## getSpendKeys
+
+```shell
+curl -d '{"jsonrpc":"2.0","id":1,"password":"passw0rd","method":"getSpendKeys","params":{"address":"TRTLxxxx..."}}' http://localhost:8070/json_rpc
+```
+
+> Expected output:
+
+```json
+{
+  "id":1,
+  "jsonrpc":"2.0",
+  "result":{
+    "spendSecretKey":"xxxxx...",
+    "spendPublicKey":"xxxxx..."
+  }
+}
+```
 
 `getSpendKeys()` method returns your spend keys.
 
@@ -234,6 +215,25 @@ spendPublicKey    | Public spend key     | string
 
 ## getStatus
 
+```shell
+curl -d '{"jsonrpc":"2.0","id":1,"password":"passw0rd","method":"getStatus","params":{}}' http://localhost:8070/json_rpc
+```
+
+> Expected output:
+
+```json
+{
+  "id":1,
+  "jsonrpc":"2.0",
+  "result":{
+    "blockCount":455956,
+    "knownBlockCount":455955,
+    "lastBlockHash":"8d6f8...",
+    "peerCount":8
+  }
+}
+```
+
 `getStatus()` method returns information about the current RPC Wallet state: block_count, known_block_count, last_block_hash and peer_count.
 
 No input.
@@ -251,6 +251,25 @@ peerCount        | Connected peers number	                                      
 
 ## getAddresses
 
+```shell
+curl -d '{"jsonrpc":"2.0","id":1,"password":"passw0rd","method":"getAddresses","params":{}}' http://localhost:8070/json_rpc
+```
+
+> Expected output:
+
+```json
+{
+  "id":1,
+  "jsonrpc":"2.0",
+  "result":{
+    "addresses":[
+      "TRTLxxxx...",
+      "TRTLxxxx..."
+    ]
+  }
+}
+```
+
 `getAddresses()` method returns an array of your RPC Wallet's addresses.
 
 No input.
@@ -265,6 +284,22 @@ addresses	      | Array of strings, where each string is an address	  | array
 
 ## createAddress
 
+```shell
+curl -d '{"jsonrpc":"2.0","id":1,"password":"passw0rd","method":"createAddress","params":{}}' http://localhost:8070/json_rpc
+```
+
+> Expected output:
+
+```json
+{
+  "id":1,
+  "jsonrpc":"2.0",
+  "result":{
+    "address":"TRTLxxxx..."
+  }
+}
+```
+
 `createAddress()` method creates an additional address in your wallet.
 
 **Input**
@@ -277,6 +312,20 @@ publicSpendKey           | No           | Public spend key. If `publicSpendKey` 
 
 
 ## deleteAddress
+
+```shell
+curl -d '{"jsonrpc":"2.0","id":1,"password":"passw0rd","method":"deleteAddress","params":{"address":"TRTLxxxx..."}}' http://localhost:8070/json_rpc
+```
+
+> Expected output:
+
+```json
+{
+  "id":1,
+  "jsonrpc":"2.0",
+  "result":{}
+}
+```
 
 `deleteAddress()` method deletes a specified address.
 
@@ -294,15 +343,65 @@ In case of success returns an empty JSON object.
 
 ## getBalance
 
+```shell
+curl -d '{"jsonrpc":"2.0","id":1,"password":"passw0rd","method":"getBalance","params":{"address":"TRTLxxxx..."}}' http://localhost:8070/json_rpc
+```
+
+> Expected output:
+
+```json
+{
+  "id":1,
+  "jsonrpc":"2.0",
+  "result":{
+    "availableBalance":10000,
+    "lockedAmount":0
+  }
+}
+```
+
 `getBalance()` method returns a balance for a specified address.
 
+**Input**
+
+Argument         | Mandatory    | Description                                          | Format
+---------------- | ------------ | ---------------------------------------------------- | -------
+address          | No           | Valid and existing address in this particular wallet | string
+
+**Output**
+
+Argument              | Description                                           | Format
+--------------------- | ----------------------------------------------------- | ------
+availableBalance      | Available balance of the specified address in shells  | int
+lockedAmount          | Locked amount of the specified address in shells      | int
+
 <aside class="notice">
-  If address is not specified, returns a cumulative balance of all RPC Wallet's addresses.
+  If address is not specified, returns a cumulative balance of all RPC Wallet's addresses. Also note, balances are expressed in shells, so a balance of 10000 is equal to 100.00 turtles.
 </aside>
 
 
 
 ## getBlockHashes
+
+```shell
+curl -d '{"jsonrpc":"2.0","id":1,"password":"passw0rd","method":"getBlockHashes","params":{"firstBlockIndex":0,"blockCount":3}}' http://localhost:8070/json_rpc
+```
+
+> Expected output:
+
+```json
+{
+  "id":1,
+  "jsonrpc":"2.0",
+  "result":{
+    "blockHashes":[
+      "7fb97...",
+      "8c973...",
+      "2ef06..."
+    ]
+  }
+}
+```
 
 `getBlockHashes()` method returns an array of block hashes for a specified block range.
 
@@ -322,6 +421,31 @@ blockHashes		      | Array of strings, where each element is a block hash	| arra
 
 
 ## getTransactionHashes
+
+```shell
+curl -d '{"jsonrpc":"2.0","id":1,"password":"passw0rd","method":"getTransactionHashes","params":{"firstBlockIndex":400000,"blockCount":100000}}' http://localhost:8070/json_rpc
+```
+
+> Expected output:
+
+```json
+{
+  "id":1,
+  "jsonrpc":"2.0",
+  "result":{
+    "items":[
+      {
+        "blockHash":"f0d8c...",
+        "transactionHashes":["529ea..."]
+      },
+      {
+        "blockHash":"4a1ae...",
+        "transactionHashes":["2e709..."]
+      }
+    ]
+  }
+}
+```
 
 `getTransactionHashes()` method returns an array of block and transaction hashes. Transaction consists of transfers.
 Transfer is an amount-address pair. There could be several transfers in a single transaction.
@@ -352,6 +476,67 @@ items	   | **Array of**                                        |	               
 
 
 ## getTransactions
+
+```shell
+curl -d '{"jsonrpc":"2.0","id":1,"password":"passw0rd","method":"getTransactions","params":{"firstBlockIndex":400000,"blockCount":100000}}' http://localhost:8070/json_rpc
+```
+
+> Expected output:
+
+```json
+{
+  "id":1,
+  "jsonrpc":"2.0",
+  "result":{
+    "items":[
+      {
+        "blockHash":"f0d8c...",
+        "transactions":[
+          {
+            "amount":10000,
+            "blockIndex":456018,
+            "extra":"01bd0...",
+            "fee":10,
+            "isBase":false,
+            "paymentId":"b6fc6...",
+            "state":0,
+            "timestamp":1526458339,
+            "transactionHash":"529ea...",
+            "transfers":[
+              {"address":"TRTLxxxx...","amount":10000,"type":0},
+              {"address":"","amount":-100000,"type":0},
+              {"address":"","amount":89990,"type":0}
+            ],
+            "unlockTime":0
+          }
+        ]
+      },
+      {
+        "blockHash":"4a1ae...",
+        "transactions":[
+          {
+            "amount":5000,
+            "blockIndex":456076,
+            "extra":"018c1...",
+            "fee":10,
+            "isBase":false,
+            "paymentId":"55255...",
+            "state":0,
+            "timestamp":1526460243,
+            "transactionHash":"2e709...",
+            "transfers":[
+              {"address":"TRTLxxxx...","amount":5000,"type":0},
+              {"address":"","amount":-8000,"type":0},
+              {"address":"","amount":2990,"type":0}
+            ],
+            "unlockTime":0
+          }
+        ]
+      }
+    ]
+  }
+}
+```
 
 `getTransactions()` method returns an array of block and transaction hashes.
 Transaction consists of transfers. Transfer is an amount-address pair. There could be several transfers in a single transaction.
