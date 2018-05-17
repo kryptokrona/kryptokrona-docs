@@ -13,32 +13,29 @@ This guide will help you install a recent copy of the blockchain. This should si
     If the folder doesn't exist, just go to `%APPDATA%` instead and create a folder named `TurtleCoin`.
 
 3. Delete the following if they exist:
-
- * blockindexes.bin
-
- * blocks.bin
-
- * "DB" folder
+    * blockindexes.bin
+    * blocks.bin
+    * `DB` folder
 
 ---
 
 **Note**: In case it is unable to delete the files due to them being used by some other program, follow these steps:
 
-  - Open Task Manager with the shortcut `Ctrl + Shift+ Escape`.
+* Open Task Manager with the shortcut `Ctrl + Shift+ Escape`.
   
-  - Click on `Processes`.
+* Click on `Processes`.
   
-  - Click on `Image Name`.
+* C ck on `Image Name`.
   
-  - Scroll to the bottom.
+* Scroll to the bottom.
   
-  - Click on `walletd.exe`.
+* Click on `walletd.exe`
   
-  - Click on `End Process`.
+* Click on `End Process`.
   
-  - Click on `End Process` again.
+* Click on `End Process` again.
   
-  - Try to delete them againn
+* Try to delete them again.
 
   ![closewallet](images/bootstrap/close_walletd.png)
 
