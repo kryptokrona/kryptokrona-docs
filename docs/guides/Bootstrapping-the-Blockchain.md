@@ -7,51 +7,49 @@ This guide will help you install a recent copy of the blockchain. This should si
 
 2. Open File Explorer and type `%APPDATA%\TurtleCoin` and hit enter.
 
-![file explorer](images/bootstrap/file_explorer.jpg)
+    ![file explorer](images/bootstrap/file_explorer.jpg)
 
-!!! note
-    If the folder doesn't exist, just go to `%APPDATA%` instead and create a folder named `TurtleCoin`.
+    !!! note
+        If the folder doesn't exist, just go to `%APPDATA%` instead and create a folder named `TurtleCoin`.
 
 3. Delete the following if they exist:
     * blockindexes.bin
-
     * blocks.bin
-
     * "DB" folder
 
 
----
+    ---
+    
+    **Note**: In case it is unable to delete the files due to them being used by some other program, follow these steps:
+    
+    * Open Task Manager with the shortcut `Ctrl + Shift+ Escape`.
+      
+    * Click on `Processes`.
+      
+    * Click on `Image Name`.
+      
+    * Scroll to the bottom.
+      
+    * Click on `walletd.exe`
+      
+    * Click on `End Process`.
+      
+    * Click on `End Process` again.
+      
+    * Try to delete them again.
+    
+    ![closewallet](images/bootstrap/close_walletd.png)
+    
+    ---
 
-**Note**: In case it is unable to delete the files due to them being used by some other program, follow these steps:
 
-* Open Task Manager with the shortcut `Ctrl + Shift+ Escape`.
-  
-* Click on `Processes`.
-  
-* C ck on `Image Name`.
-  
-* Scroll to the bottom.
-  
-* Click on `walletd.exe`
-  
-* Click on `End Process`.
-  
-* Click on `End Process` again.
-  
-* Try to delete them again.
+4. [Download](https://f000.backblazeb2.com/file/turtle-blockchain/latest.zip) the latest snapshot of the blockchain.
 
-  ![closewallet](images/bootstrap/close_walletd.png)
+5. Move the two new downloaded files to the `%APPDATA%\TurtleCoin` folder.
 
----
+6. Start `TurtleCoind.exe` or the GUI wallet like you normally do.
 
-
-  4. [Download](https://f000.backblazeb2.com/file/turtle-blockchain/latest.zip) the latest snapshot of the blockchain.
-
-  5. Move the two new downloaded files to the `%APPDATA%\TurtleCoin` folder.
-
-  6. Start `TurtleCoind.exe` or the GUI wallet like you normally do.
-
-  7. See [Expected Results](#ExpectedResults) section below.
+7. See [Expected Results](#ExpectedResults) section below.
 
 
 
