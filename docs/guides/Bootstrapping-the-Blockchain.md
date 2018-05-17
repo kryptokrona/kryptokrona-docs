@@ -7,10 +7,10 @@ This guide will help you install a recent copy of the blockchain. This should si
 
 2. Open File Explorer and type `%APPDATA%\TurtleCoin` and hit enter.
 
-![file explorer](images/bootstrap/file_explorer.jpg)
+    ![file explorer](images/bootstrap/file_explorer.jpg)
 
-!!! note
-    If the folder doesn't exist, just go to `%APPDATA%` instead and create a folder named `TurtleCoin`.
+    !!! note
+         If the folder doesn't exist, just go to `%APPDATA%` instead and create a folder named `TurtleCoin`.
 
 3. Delete the following if they exist:
     * blockindexes.bin
