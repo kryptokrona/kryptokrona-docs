@@ -31,6 +31,10 @@ Your stats will only update when your pool finds a block and it matures, so if y
 
 A: To save money on fees, the pools send payouts in chunks. [Check your pool website for your pending balance](#pending-balance-not-gone-up).
 
+#### Q: Why are my results being rejected from the pool?
+
+ A: You're using a incorrect algorithm. If you are using xmr-stak, you should use cryptonight_lite_v7 as the algorithm, if you are using xmrig use cryptonight-lite as the algorithm and the variant set to 1.
+ 
 #### Q: I got banned from my mining pool. Why?
 
 A: If you submit lots of invalid shares, a pool might ban you. Possible reasons for invalid shares can be 
