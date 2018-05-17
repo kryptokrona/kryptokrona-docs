@@ -68,9 +68,9 @@ use TurtleCoin\Walletd;
 
 $walletd = new Walletd\Client($config);
 
-$secretViewKey = 'xxxxx...';
+$viewSecretKey = 'xxxxx...';
 
-$response = $walletd->reset($secretViewKey);
+$response = $walletd->reset($viewSecretKey);
 
 echo $response->getBody()->getContents();
 ```
@@ -183,6 +183,19 @@ viewSecretKey    | Private view key | string
 curl -d '{"jsonrpc":"2.0","id":1,"password":"passw0rd","method":"getSpendKeys","params":{"address":"TRTLxxxx..."}}' http://localhost:8070/json_rpc
 ```
 
+```php
+<?php
+use TurtleCoin\Walletd;
+
+$walletd = new Walletd\Client($config);
+
+$address = 'TRTLxxxx...';
+
+$response = $walletd->getSpendKeys($address);
+
+echo $response->getBody()->getContents();
+```
+
 > Expected output:
 
 ```json
@@ -217,6 +230,17 @@ spendPublicKey    | Public spend key     | string
 
 ```shell
 curl -d '{"jsonrpc":"2.0","id":1,"password":"passw0rd","method":"getStatus","params":{}}' http://localhost:8070/json_rpc
+```
+
+```php
+<?php
+use TurtleCoin\Walletd;
+
+$walletd = new Walletd\Client($config);
+
+$response = $walletd->getStatus();
+
+echo $response->getBody()->getContents();
 ```
 
 > Expected output:
@@ -255,6 +279,17 @@ peerCount        | Connected peers number	                                      
 curl -d '{"jsonrpc":"2.0","id":1,"password":"passw0rd","method":"getAddresses","params":{}}' http://localhost:8070/json_rpc
 ```
 
+```php
+<?php
+use TurtleCoin\Walletd;
+
+$walletd = new Walletd\Client($config);
+
+$response = $walletd->getAddresses();
+
+echo $response->getBody()->getContents();
+```
+
 > Expected output:
 
 ```json
@@ -288,6 +323,20 @@ addresses	      | Array of strings, where each string is an address	  | array
 curl -d '{"jsonrpc":"2.0","id":1,"password":"passw0rd","method":"createAddress","params":{}}' http://localhost:8070/json_rpc
 ```
 
+```php
+<?php
+use TurtleCoin\Walletd;
+
+$walletd = new Walletd\Client($config);
+
+$secretSpendKey = null;
+$publicSpendKey = null;
+
+$response = $walletd->createAddress($secretSpendKey, $publicSpendKey);
+
+echo $response->getBody()->getContents();
+```
+
 > Expected output:
 
 ```json
@@ -315,6 +364,19 @@ publicSpendKey           | No           | Public spend key. If `publicSpendKey` 
 
 ```shell
 curl -d '{"jsonrpc":"2.0","id":1,"password":"passw0rd","method":"deleteAddress","params":{"address":"TRTLxxxx..."}}' http://localhost:8070/json_rpc
+```
+
+```php
+<?php
+use TurtleCoin\Walletd;
+
+$walletd = new Walletd\Client($config);
+
+$address = 'TRTLxxxx...';
+
+$response = $walletd->deleteAddress($address);
+
+echo $response->getBody()->getContents();
 ```
 
 > Expected output:
@@ -345,6 +407,19 @@ In case of success returns an empty JSON object.
 
 ```shell
 curl -d '{"jsonrpc":"2.0","id":1,"password":"passw0rd","method":"getBalance","params":{"address":"TRTLxxxx..."}}' http://localhost:8070/json_rpc
+```
+
+```php
+<?php
+use TurtleCoin\Walletd;
+
+$walletd = new Walletd\Client($config);
+
+$address = 'TRTLxxxx...';
+
+$response = $walletd->getBalance($address);
+
+echo $response->getBody()->getContents();
 ```
 
 > Expected output:
@@ -387,6 +462,20 @@ lockedAmount          | Locked amount of the specified address in shells      | 
 curl -d '{"jsonrpc":"2.0","id":1,"password":"passw0rd","method":"getBlockHashes","params":{"firstBlockIndex":0,"blockCount":3}}' http://localhost:8070/json_rpc
 ```
 
+```php
+<?php
+use TurtleCoin\Walletd;
+
+$walletd = new Walletd\Client($config);
+
+$firstBlockIndex = 0;
+$blockCount = 3;
+
+$response = $walletd->getBlockHashes($firstBlockIndex, $blockCount);
+
+echo $response->getBody()->getContents();
+```
+
 > Expected output:
 
 ```json
@@ -424,6 +513,25 @@ blockHashes		      | Array of strings, where each element is a block hash	| arra
 
 ```shell
 curl -d '{"jsonrpc":"2.0","id":1,"password":"passw0rd","method":"getTransactionHashes","params":{"firstBlockIndex":400000,"blockCount":100000}}' http://localhost:8070/json_rpc
+```
+
+```php
+<?php
+use TurtleCoin\Walletd;
+
+$walletd = new Walletd\Client($config);
+
+$blockCount = 100000;
+$firstBlockIndex = 400000;
+$blockHash = null;
+$addresses = null;
+$paymentId = null;
+
+$response = $walletd->getTransactionHashes(
+    $blockCount, $firstBlockIndex, $blockHash, $addresses, $paymentId
+);
+
+echo $response->getBody()->getContents();
 ```
 
 > Expected output:
@@ -479,6 +587,25 @@ items	   | **Array of**                                        |	               
 
 ```shell
 curl -d '{"jsonrpc":"2.0","id":1,"password":"passw0rd","method":"getTransactions","params":{"firstBlockIndex":400000,"blockCount":100000}}' http://localhost:8070/json_rpc
+```
+
+```php
+<?php
+use TurtleCoin\Walletd;
+
+$walletd = new Walletd\Client($config);
+
+$blockCount = 100000;
+$firstBlockIndex = 400000;
+$blockHash = null;
+$addresses = null;
+$paymentId = null;
+
+$response = $walletd->getTransactions(
+    $blockCount, $firstBlockIndex, $blockHash, $addresses, $paymentId
+);
+
+echo $response->getBody()->getContents();
 ```
 
 > Expected output:
@@ -586,6 +713,19 @@ transfers           | array of address (string), amount (uint64)                
 curl -d '{"jsonrpc":"2.0","id":1,"password":"passw0rd","method":"getUnconfirmedTransactionHashes","params":{}}' http://localhost:8070/json_rpc
 ```
 
+```php
+<?php
+use TurtleCoin\Walletd;
+
+$walletd = new Walletd\Client($config);
+
+$addresses = null;
+
+$response = $walletd->getUnconfirmedTransactionHashes($addresses);
+
+echo $response->getBody()->getContents();
+```
+
 > Expected output:
 
 ```json
@@ -626,6 +766,19 @@ transactionHashes      | Array of strings, where each string is a hash of an unc
 
 ```shell
 curl -d '{"jsonrpc":"2.0","id":1,"password":"passw0rd","method":"getTransaction","params":{"transactionHash":"55a23..."}}' http://localhost:8070/json_rpc
+```
+
+```php
+<?php
+use TurtleCoin\Walletd;
+
+$walletd = new Walletd\Client($config);
+
+$transactionHash = '55a23...';
+
+$response = $walletd->getTransaction($transactionHash);
+
+echo $response->getBody()->getContents();
 ```
 
 > Expected output:
@@ -695,6 +848,30 @@ transfers           | array of address (string), amount (uint64)                
 curl -d '{"jsonrpc":"2.0","id":1,"password":"passw0rd","method":"sendTransaction","params":{"transfers":[{"address":"TRTLxxxx...","amount":"5000"}],"fee":10,"anonymity":3,"changeAddress":"TRTLyyyy..."}}' http://localhost:8070/json_rpc
 ```
 
+```php
+<?php
+use TurtleCoin\Walletd;
+
+$walletd = new Walletd\Client($config);
+
+$anonymity = 3;
+$transfers = [
+    ["address" => "TRTLxxxx...", "amount"  => 5000],
+];
+$fee = 10;
+$addresses = null;
+$unlockTime = null;
+$extra = null;
+$paymentId = null;
+$changeAddress = 'TRTLyyyy...';
+
+$response = $walletd->sendTransaction(
+    $anonymity, $transfers, $fee, $addresses, $unlockTime, $extra, $paymentId, $changeAddress
+);
+
+echo $response->getBody()->getContents();
+```
+
 > Expected output:
 
 ```json
@@ -738,6 +915,30 @@ transactionHash	      | Hash of the sent transaction		| string
 
 ```shell
 curl -d '{"jsonrpc":"2.0","id":1,"password":"passw0rd","method":"createDelayedTransaction","params":{"transfers":[{"address":"TRTLxxxx...","amount":"5000"}],"fee":10,"anonymity":3,"changeAddress":"TRTLyyyy..."}}' http://localhost:8070/json_rpc
+```
+
+```php
+<?php
+use TurtleCoin\Walletd;
+
+$walletd = new Walletd\Client($config);
+
+$anonymity = 3;
+$transfers = [
+    ["address" => "TRTLxxxx...", "amount"  => 5000],
+];
+$fee = 10;
+$addresses = null;
+$unlockTime = null;
+$extra = null;
+$paymentId = null;
+$changeAddress = 'TRTLyyyy...';
+
+$response = $walletd->createDelayedTransaction(
+    $anonymity, $transfers, $fee, $addresses, $unlockTime, $extra, $paymentId, $changeAddress
+);
+
+echo $response->getBody()->getContents();
 ```
 
 > Expected output:
@@ -786,6 +987,17 @@ transactionHash	      | Hash of the sent transaction		| string
 curl -d '{"jsonrpc":"2.0","id":1,"password":"passw0rd","method":"getDelayedTransactionHashes","params":{}}' http://localhost:8070/json_rpc
 ```
 
+```php
+<?php
+use TurtleCoin\Walletd;
+
+$walletd = new Walletd\Client($config);
+
+$response = $walletd->getDelayedTransactionHashes();
+
+echo $response->getBody()->getContents();
+```
+
 > Expected output:
 
 ```json
@@ -814,6 +1026,19 @@ transactionHashes	  | Array of strings, where each string is a transaction hash	
 
 ```shell
 curl -d '{"jsonrpc":"2.0","id":1,"password":"passw0rd","method":"deleteDelayedTransaction","params":{"transactionHash":"b3e37..."}}' http://localhost:8070/json_rpc
+```
+
+```php
+<?php
+use TurtleCoin\Walletd;
+
+$walletd = new Walletd\Client($config);
+
+$transactionHash = 'b3e37...';
+
+$response = $walletd->deleteDelayedTransaction($transactionHash);
+
+echo $response->getBody()->getContents();
 ```
 
 > Expected output:
@@ -846,6 +1071,19 @@ In case of success returns an empty JSON object.
 curl -d '{"jsonrpc":"2.0","id":1,"password":"passw0rd","method":"sendDelayedTransaction","params":{"transactionHash":"c37cd..."}}' http://localhost:8070/json_rpc
 ```
 
+```php
+<?php
+use TurtleCoin\Walletd;
+
+$walletd = new Walletd\Client($config);
+
+$transactionHash = 'c37cd...';
+
+$response = $walletd->sendDelayedTransaction($transactionHash);
+
+echo $response->getBody()->getContents();
+```
+
 > Expected output:
 
 ```json
@@ -874,6 +1112,22 @@ In case of success returns an empty JSON object.
 
 ```shell
 curl -d '{"jsonrpc":"2.0","id":1,"password":"passw0rd","method":"sendFusionTransaction","params":{"threshold":1000000,"anonymity":3,"addresses":["TRTLxxxx...","TRTLyyyy..."],"destinationAddress":"TRTLzzzz..."}}' http://localhost:8070/json_rpc
+```
+
+```php
+<?php
+use TurtleCoin\Walletd;
+
+$walletd = new Walletd\Client($config);
+
+$threshold = 1000000;
+$anonymity = 3;
+$addresses = ['TRTLxxxx...', 'TRTLyyyy...'];
+$destinationAddress = 'TRTLzzzz...';
+
+$response = $walletd->sendFusionTransaction($threshold, $anonymity, $addresses, $destinationAddress);
+
+echo $response->getBody()->getContents();
 ```
 
 > Expected output:
@@ -918,6 +1172,20 @@ transactionHash	      | Hash of the sent transaction		| string
 
 ```shell
 curl -d '{"jsonrpc":"2.0","id":1,"password":"passw0rd","method":"estimateFusion","params":{"threshold":1000000,"addresses":["TRTLxxxx...","TRTLyyyy..."]}}' http://localhost:8070/json_rpc
+```
+
+```php
+<?php
+use TurtleCoin\Walletd;
+
+$walletd = new Walletd\Client($config);
+
+$threshold = 1000000;
+$addresses = ['TRTLxxxx...', 'TRTLyyyy...'];
+
+$response = $walletd->estimateFusion($threshold, $addresses);
+
+echo $response->getBody()->getContents();
 ```
 
 > Expected output:
