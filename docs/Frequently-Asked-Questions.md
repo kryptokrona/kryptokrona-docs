@@ -322,19 +322,20 @@ To view a guide on using them, you can go [here](guides/wallets/Making-a-Wallet/
 #### Q: I'm using the GUI Xamarin wallet, and it fails to connect to the daemon.
 
   A: There are multiple reasons this can occur. Try opening `walletd.log` and scrolling to the bottom to determine what is occurring.
-  * A wrong password - check `walletd.log` to check if this is occurring. If you are sure your password is correct, [this link](https://github.com/turtlecoin/desktop-xamarin/issues/20) could be helpful.
+  
+   * A wrong password - check `walletd.log` to check if this is occurring. If you are sure your password is correct, [this link](https://github.com/turtlecoin/desktop-xamarin/issues/20) could be helpful.
 
 
-  * You have another `walletd.exe` or SimpleWallet process running. Only one of these can be running at once, and the GUI launches its own. Check Task Manager and close down any of these processes and try again.
+   * You have another `walletd.exe` or SimpleWallet process running. Only one of these can be running at once, and the GUI launches its own. Check Task Manager and close down any of these processes and try again.
 
 
-  * `walletd` is importing blocks from the DB, which takes a while and so the GUI thinks it has crashed. Check the [solution here](https://github.com/turtlecoin/desktop-xamarin/issues/17#issuecomment-366790435)
+   * `walletd` is importing blocks from the DB, which takes a while and so the GUI thinks it has crashed. Check the [solution here](https://github.com/turtlecoin/desktop-xamarin/issues/17#issuecomment-366790435)
 
 
-  * If all else fails, if you have your private keys then you can instead import your wallet into SimpleWallet. 
+   * If all else fails, if you have your private keys then you can instead import your wallet into SimpleWallet. 
 
 
-  * If that is not a desirable option, come and ask for help over at [the Discord](https://discord.gg/J7g99EE)
+   * If that is not a desirable option, come and ask for help over at [the Discord](https://discord.gg/J7g99EE)
 
 ## Paper Wallet / Cold Storage?<a name="paper-wallet-cold-storage"></a>
 #### Q: Wait, What's Cold Storage?
