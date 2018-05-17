@@ -104,6 +104,10 @@ They look something like this:
 >
 > ![TRTL in rain](guides/images/rainborg/rainborg-rain.png)
 
+# Wow? Megatip wat?
+
+When an operator runs a megatip command, RainBorg splits the amount between all [tippable channels](#which-channels-does-this-work-with), and the amount in the command is split across all the active members in the eligible channels, who were in the list to get tipped originally.
+It is divided equally, so if person A and B are talking in \#general, and person B and C were talking in \#help, and there was a 400 megatip, 100 TRTL would go to A and C, and 200 TRTL would go to B(100 TRTL for each channel)
 
 # Anything not covered here?
 
@@ -111,8 +115,3 @@ Open a [new issue](https://github.com/turtlecoin/meta/issues/new?title=RainBorg+
 
 The gaps will be filled either by you or another person, [anyone can contribute](https://github.com/turtlecoin/turtlecoin-wiki) to these docs as well!
 
-#### Wow? Megatip wat?
-
-An idea has been floated regarding a Megatip function. Basically, someone could purposely send a large chunk of TRTL and most of it would be sent out in the next wave of rain tips. 
-
-If you want to see something like this, talk about it! ;)
