@@ -14,8 +14,11 @@ This guide will help you install a recent copy of the blockchain. This should si
 
 3. Delete the following if they exist:
     * blockindexes.bin
+
     * blocks.bin
-    * `DB` folder
+
+    * "DB" folder
+
 
 ---
 
@@ -41,13 +44,14 @@ This guide will help you install a recent copy of the blockchain. This should si
 
 ---
 
-4. [Download](https://f000.backblazeb2.com/file/turtle-blockchain/latest.zip) the latest snapshot of the blockchain.
 
-5. Move the two new downloaded files to the `%APPDATA%\TurtleCoin` folder.
+  4. [Download](https://f000.backblazeb2.com/file/turtle-blockchain/latest.zip) the latest snapshot of the blockchain.
 
-6. Start `TurtleCoind.exe` or the GUI wallet like you normally do.
+  5. Move the two new downloaded files to the `%APPDATA%\TurtleCoin` folder.
 
-7. See [Expected Results](#ExpectedResults) section below.
+  6. Start `TurtleCoind.exe` or the GUI wallet like you normally do.
+
+  7. See [Expected Results](#ExpectedResults) section below.
 
 
 
