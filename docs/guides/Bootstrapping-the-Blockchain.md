@@ -12,6 +12,7 @@ This guide will help you install a recent copy of the blockchain. This should si
     !!! note
         If the folder doesn't exist, just go to `%APPDATA%` instead and create a folder named `TurtleCoin`.
 
+
 3. Delete the following if they exist:
     * blockindexes.bin
     * blocks.bin
