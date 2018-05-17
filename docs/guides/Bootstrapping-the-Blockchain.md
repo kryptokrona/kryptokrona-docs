@@ -61,16 +61,15 @@ This guide will help you install a recent copy of the blockchain. This should si
 
 3. Use the shortcut `Command + Shift + G` to bring up `Go to Folder`:
 
-![findergoto.jpg](images/bootstrap/findergoto.jpg)
+    ![findergoto.jpg](images/bootstrap/findergoto.jpg)
 
 4. Delete the following if they exist: 
 
-* blockindexes.bin 
+    * blockindexes.bin 
 
-* blocks.bin 
+    * blocks.bin 
 
-* "DB" folder 
-
+    * "DB" folder 
 
 
 5. [Download](https://f000.backblazeb2.com/file/turtle-blockchain/latest.zip) the latest snapshot of the blockchain.
