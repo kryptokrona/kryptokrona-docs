@@ -1,7 +1,8 @@
 # proj info
 site_name: 'TurtleCoin Wiki'
 site_description: 'Wiki for TurtleCoin'
-site_author: 'Sajo8'
+site_author: 'TurtleCoin'
+site_url: https://turtlewiki.netlify.com/docs/
 
 # repo
 repo_name: 'Sajo811/turtledocs'
