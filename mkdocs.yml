@@ -8,6 +8,9 @@ site_url: https://turtlewiki.netlify.com/docs/
 repo_name: 'Sajo811/turtledocs'
 repo_url: 'https://github.com/Sajo811/turtledocs'
 
+# copyright
+copyright: 'Copyright &copy; 2017-2018 TurtleCoin'
+
 # config
 theme:
   name: 'material'
