@@ -20,29 +20,6 @@ This guide will help you install a recent copy of the blockchain. This should si
 
    * "DB" folder
 
----
-
-**Note**: In case it is unable to delete the files due to them being used by some other program, follow these steps:
-
-  - Open Task Manager with the shortcut `Ctrl + Shift+ Escape`.
-  
-  - Click on `Processes`.
-  
-  - Click on `Image Name`.
-  
-  - Scroll to the bottom.
-  
-  - Click on `walletd.exe`.
-  
-  - Click on `End Process`.
-  
-  - Click on `End Process` again.
-  
-  - Try to delete them againn
-
-  ![closewallet](images/bootstrap/close_walletd.png)
-
----
 
   4. [Download](https://f000.backblazeb2.com/file/turtle-blockchain/latest.zip) the latest snapshot of the blockchain.
 
