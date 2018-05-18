@@ -13,8 +13,10 @@
         <meta name="description" content="Wiki for TurtleCoin">
       
       
+        <link rel="canonical" href="https://turtlewiki.netlify.com/guides/mining/XMR-Stak-Linux-Guide/">
       
-        <meta name="author" content="Sajo8">
+      
+        <meta name="author" content="TurtleCoin">
       
       
         <meta name="lang:clipboard.copy" content="Copy to clipboard">
@@ -106,7 +108,7 @@
   <nav class="md-header-nav md-grid">
     <div class="md-flex">
       <div class="md-flex__cell md-flex__cell--shrink">
-        <a href="../../.." title="TurtleCoin Wiki" class="md-header-nav__button md-logo">
+        <a href="https://turtlewiki.netlify.com/" title="TurtleCoin Wiki" class="md-header-nav__button md-logo">
           
             <img src="../../../images/logo.png" width="24" height="24">
           
@@ -889,6 +891,18 @@
   </li>
 
         
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../wallets/Compiling-from-Source/" title="Compiling from Source" class="md-nav__link">
+      Compiling from Source
+    </a>
+  </li>
+
+        
       </ul>
     </nav>
   </li>
@@ -996,7 +1010,7 @@
 <ol>
 <li>
 <p>If you want to use your GPU for mining, do the following-</p>
-</li>
+<ul>
 <li>
 <p>for AMD GPU’s- </p>
 <ul>
@@ -1047,6 +1061,8 @@
 </li>
 </ul>
 </li>
+</ul>
+</li>
 <li>
 <p>Open the terminal and install dependencies by running this command- </p>
 <p><code>sudo apt install libmicrohttpd-dev libssl-dev cmake build-essential libhwloc-dev</code></p>
@@ -1058,13 +1074,13 @@
 <li>
 <p>To remove donations, type-</p>
 <p><code>gedit xmr-stak/xmrstak/donate-level.hpp</code></p>
-</li>
-<li>
-<p>Change-</p>
+<ul>
+<li>Change-</li>
+</ul>
 <p><code>constexpr double fDevDonationLevel = 2.0 / 100.0;</code></p>
-</li>
-<li>
-<p>to</p>
+<ul>
+<li>to</li>
+</ul>
 <p><code>constexpr double fDevDonationLevel = 0.0 / 100.0;</code></p>
 </li>
 <li>
@@ -1078,17 +1094,17 @@
 <li>
 <p>Run cmake-</p>
 <p><code>cmake ..</code></p>
-</li>
-<li>
-<p>If you don’t have nVidia GPUs, type-</p>
+<ul>
+<li>If you don’t have nVidia GPUs, type-</li>
+</ul>
 <p><code>cmake .. -DCUDA_ENABLE=OFF</code></p>
-</li>
-<li>
-<p>If you don’t have AMD GPUs, type-</p>
+<ul>
+<li>If you don’t have AMD GPUs, type-</li>
+</ul>
 <p><code>cmake .. -DOpenCL_ENABLE=OFF</code></p>
-</li>
-<li>
-<p>If you have neither (only CPU mining) type-</p>
+<ul>
+<li>If you have neither (only CPU mining) type-</li>
+</ul>
 <p><code>cmake .. -DCUDA_ENABLE=OFF -DOpenCL_ENABLE=OFF</code></p>
 </li>
 <li>
@@ -1099,7 +1115,7 @@
 <p>XMR-Stak will now be located in <code>/home/user/xmr-stak/build/bin</code></p>
 </li>
 <li>
-<p>In the terminal, type- (install if not installed)-</p>
+<p>In the terminal, type- (install it if it's not installed)-</p>
 <p><code>ccmake ..</code></p>
 </li>
 <li>
@@ -1123,82 +1139,81 @@
 <h2 id="xmr-stak-setup-and-configuration">XMR-Stak Setup and Configuration<a name="setup-and-config"></a><a class="headerlink" href="#xmr-stak-setup-and-configuration" title="Permanent link">&para;</a></h2>
 <p>Upon first launching XMR-Stak, the software will ask you several setup and configuration questions.</p>
 <ol>
-<li><code>Please enter: - Do you want to use the HTTP interface? Unlike the screen display, browser interface is not affected by the GPU lag. If you don't want to use it, please enter 0, otherwise enter port number that the miner should listen on</code></li>
-</ol>
+<li>
+<p><code>Please enter: - Do you want to use the HTTP interface? Unlike the screen display, browser interface is not affected by the GPU lag. If you don't want to use it, please enter 0, otherwise enter port number that the miner should listen on</code></p>
 <p>Enter <code>0</code>, if you are like most people, and do not need to remotely check your hashrate.</p>
 <p>If you do need to, then enter a port number. 
 Let's take the port number as <code>0101</code> and your IP address as <code>26.24.105.14</code> as an example.</p>
 <p>To check the hashrate, enter in the address bar of your web browser, <code>&lt;26.24.105.14&gt;:&lt;0101&gt;</code>. It should show a page with your rig's hashrate.
 If you are checking from the same IP address, you can alternatively enter, <code>localhost:&lt;0101&gt;</code></p>
 <p>Make sure to enter your own IP address if you enable this feature. You can choose any port you want!</p>
-<ol>
-<li>``` </li>
-</ol>
-<p>Please enter: 
-   - Please enter the currency that you want to mine:</p>
-<ul>
-<li>aeon7</li>
-<li>bbscoin</li>
-<li>croat</li>
-<li>cryptonight</li>
-<li>cryptonight_heavy</li>
-<li>cryptonight_lite</li>
-<li>cryptonight_lite_v7</li>
-<li>cryptonight_v7</li>
-<li>edollar</li>
-<li>electroneum</li>
-<li>graft</li>
-<li>haven</li>
-<li>intense</li>
-<li>karbo</li>
-<li>monero7</li>
-<li>stellite</li>
-<li>sumokoin</li>
-</ul>
-<p>```</p>
-<p>​       Enter <code>cryptonight_lite_v7</code></p>
-<ol>
-<li><code>- Pool address: e.g. pool.example.com:3333</code></li>
-</ol>
+</li>
+<li>
+<div class="codehilite"><pre><span></span>Please enter: 
+- Please enter the currency that you want to mine:
+
+- aeon7
+- bbscoin
+- croat
+- cryptonight
+- cryptonight_heavy
+- cryptonight_lite
+- cryptonight_lite_v7
+- cryptonight_v7
+- edollar
+- electroneum
+- graft
+- haven
+- intense
+- karbo
+- monero7
+- stellite
+- sumokoin
+</pre></div>
+
+<p>Enter <code>cryptonight_lite_v7</code></p>
+</li>
+<li>
+<p><code>- Pool address: e.g. pool.example.com:3333</code></p>
 <p>Choose a pool from any of the <a href="../Pools">available pools</a> that is <strong>closest to you</strong> and enter its URL (you will be able to add more later).</p>
-<ol>
-<li><code>- Username (Wallet address or pool login):</code>  </li>
-</ol>
+</li>
+<li>
+<p><code>- Username (Wallet address or pool login):</code>  </p>
 <p>If you have not yet downloaded and ran the TurtleCoin core software to sync the blockchain and create a wallet, you can make a <a href="../../wallets/Making-a-paper-wallet">paper wallet</a> to start mining towards now, and import the wallet later.</p>
-<ol>
-<li><code>- Password (mostly empty or x):</code>  </li>
-</ol>
+</li>
+<li>
+<p><code>- Password (mostly empty or x):</code>  </p>
 <p>Enter <code>x</code>.</p>
-<ol>
-<li><code>- Rig identifier for pool-side statistics (needs pool support). Can be empty:</code></li>
-</ol>
+</li>
+<li>
+<p><code>- Rig identifier for pool-side statistics (needs pool support). Can be empty:</code></p>
 <p>Leave it empty and press enter.</p>
-<ol>
-<li><code>- Does this pool port support TLS/SSL? Use no if unknown. (y/N)</code>  </li>
-</ol>
+</li>
+<li>
+<p><code>- Does this pool port support TLS/SSL? Use no if unknown. (y/N)</code>  </p>
 <p>In most cases, <code>N</code> is fine.</p>
-<ol>
-<li><code>- Do you want to use nicehash on this pool? (y/n)</code>  </li>
-</ol>
+</li>
+<li>
+<p><code>- Do you want to use nicehash on this pool? (y/n)</code>  </p>
 <p>Enter <code>n</code>(in case you do, enter <code>y</code>).</p>
-<ol>
+</li>
 <li>
 <p><code>- Do you want to use multiple pools? (y/n)</code>  </p>
-</li>
-<li>
-<p>Enter <code>y</code> if you would like to add more pools. </p>
-</li>
+<ul>
+<li>Enter <code>y</code> if you would like to add more pools. </li>
 <li>Give them all a weight of <code>10</code> if you're tired of reading, or if you want the best experience, give the pools nearest to you a higher number, and the ones further from you a lower number.  </li>
 <li>XMR-Stak will prioritize the highest weight pool, and fall back to the others if it cannot connect.</li>
 <li>If they are all given the same weight, it will connect to them in order of how they are listed, form top to bottom, in the configuration file.</li>
 <li>If you are on Windows &#8542;, it will ask for administrator permission again. Click <code>Yes</code> to grant it permission.</li>
 <li>If you are on Windows 10, it will not ask for it again.</li>
+</ul>
+</li>
 </ol>
 <p>Done! The miner will now start scanning your hardware and will begin mining. Awesome!</p>
 <p>XMR-Stak will save your configuration in <code>config.txt</code>  in the same directory from which it was first run. </p>
 <p>Your configuration for pools(algorithm to mine, address, port etc) will be saved in <code>pools.txt</code>
 The configuration of the device it mines(CPU/AMD/NVIDIA) will be saved in <code>cpu.txt</code>, <code>amd.txt</code> or <code>nvidia.txt</code>, respectively.</p>
-<p>Run XMR-Stak again from the same directory to reuse the configuration</p>
+<p>Run XMR-Stak again from the same directory to reuse the configuration.</p>
                 
                   
                 
@@ -1254,6 +1269,10 @@ The configuration of the device it mines(CPU/AMD/NVIDIA) will be saved in <code>
    <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
       <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+            Copyright &copy; 2017-2018 TurtleCoin
+          </div>
         	
         <a href="https://turtlecoin.lol">&copy; 2017-2018 TurtleCoin</a>
         <br>

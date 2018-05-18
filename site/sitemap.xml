@@ -4,54 +4,20 @@
     
         
     <url>
-     <loc>/</loc>
-     <lastmod>2018-05-15</lastmod>
+     <loc>https://turtlewiki.netlify.com//</loc>
+     <lastmod>2018-05-18</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
-     <loc>/Getting-Started/</loc>
-     <lastmod>2018-05-15</lastmod>
+     <loc>https://turtlewiki.netlify.com//Getting-Started/</loc>
+     <lastmod>2018-05-18</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
-     <loc>/Contributors/</loc>
-     <lastmod>2018-05-15</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-        
-    
-
-    
-        
-    <url>
-     <loc>/about/About-TurtleCoin/</loc>
-     <lastmod>2018-05-15</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-        
-    <url>
-     <loc>/about/Background-and-History/</loc>
-     <lastmod>2018-05-15</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-        
-    <url>
-     <loc>/about/Community/</loc>
-     <lastmod>2018-05-15</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-        
-    <url>
-     <loc>/about/Contributing/</loc>
-     <lastmod>2018-05-15</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-        
-    <url>
-     <loc>/about/Technical-Data/</loc>
-     <lastmod>2018-05-15</lastmod>
+     <loc>https://turtlewiki.netlify.com//Contributors/</loc>
+     <lastmod>2018-05-18</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
@@ -60,8 +26,32 @@
     
         
     <url>
-     <loc>/Frequently-Asked-Questions/</loc>
-     <lastmod>2018-05-15</lastmod>
+     <loc>https://turtlewiki.netlify.com//about/About-TurtleCoin/</loc>
+     <lastmod>2018-05-18</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>https://turtlewiki.netlify.com//about/Background-and-History/</loc>
+     <lastmod>2018-05-18</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>https://turtlewiki.netlify.com//about/Community/</loc>
+     <lastmod>2018-05-18</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>https://turtlewiki.netlify.com//about/Contributing/</loc>
+     <lastmod>2018-05-18</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>https://turtlewiki.netlify.com//about/Technical-Data/</loc>
+     <lastmod>2018-05-18</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
@@ -70,43 +60,53 @@
     
         
     <url>
-     <loc>/guides/Bootstrapping-the-Blockchain/</loc>
-     <lastmod>2018-05-15</lastmod>
+     <loc>https://turtlewiki.netlify.com//Frequently-Asked-Questions/</loc>
+     <lastmod>2018-05-18</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    
+
+    
+        
+    <url>
+     <loc>https://turtlewiki.netlify.com//guides/Bootstrapping-the-Blockchain/</loc>
+     <lastmod>2018-05-18</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
-     <loc>/guides/RainBorg-Wat-Dat/</loc>
-     <lastmod>2018-05-15</lastmod>
+     <loc>https://turtlewiki.netlify.com//guides/RainBorg-Wat-Dat/</loc>
+     <lastmod>2018-05-18</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
-     <loc>/guides/Using-trtlbot-plus-plus/</loc>
-     <lastmod>2018-05-15</lastmod>
+     <loc>https://turtlewiki.netlify.com//guides/Using-trtlbot-plus-plus/</loc>
+     <lastmod>2018-05-18</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
-     <loc>/guides/Participating-in-Raindance/</loc>
-     <lastmod>2018-05-15</lastmod>
+     <loc>https://turtlewiki.netlify.com//guides/Participating-in-Raindance/</loc>
+     <lastmod>2018-05-18</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
-     <loc></loc>
+     <loc>https://turtlewiki.netlify.com/</loc>
      <lastmod></lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
-     <loc></loc>
+     <loc>https://turtlewiki.netlify.com/</loc>
      <lastmod></lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
-     <loc></loc>
+     <loc>https://turtlewiki.netlify.com/</loc>
      <lastmod></lastmod>
      <changefreq>daily</changefreq>
     </url>
