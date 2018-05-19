@@ -12,6 +12,8 @@ https://turtlewiki.netlify.com/
 
 `git fetch turtle master`
 
+`git merge`
+
 `git add .`
 
 `git commit -m "new wiki frontend"`
