@@ -658,10 +658,13 @@ curl -d '{"jsonrpc":"2.0","id":1,"password":"passw0rd","method":"getTransactionH
 import TurtleCoinWalletd from 'turtlecoin-walletd-rpc-js';
 
 let walletd = new TurtleCoinWalletd(hostname, port, password, logging);
-let firstBlockIndex = 400000;
 let blockCount = 100000;
+let firstBlockIndex = 400000;
+let blockHash = null;
+let addresses = null;
+let paymentId = null;
 
-walletd.getBlockHashes(firstBlockIndex, blockCount)
+walletd.getTransactionHashes(blockCount, firstBlockIndex, blockHash, addresses, paymentId)
     .then(resp => {
         console.log(resp.body)
     })
