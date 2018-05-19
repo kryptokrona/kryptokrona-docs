@@ -32,6 +32,19 @@ http://localhost:8070/json_rpc
 
 > Configuration and instantiation
 
+```javascript
+import TurtleCoinWalletd from 'turtlecoin-walletd-rpc-js';
+
+let rpcHost = 'http://localhost',
+    rpcPort = 8070,
+    rpcPassword = 'passw0rd',
+    logging = false;
+
+let walletd = new TurtleCoinWalletd(
+    rpcHost, rpcPort, rpcPassword, logging
+);
+```
+
 ```php
 <?php
 use TurtleCoin\Walletd;
@@ -60,6 +73,21 @@ Parameter            | Description
 
 ```shell
 curl -d '{"jsonrpc":"2.0","id":1,"password":"passw0rd","method":"reset","params":{"viewSecretKey":"xxxxx..."}}' http://localhost:8070/json_rpc
+```
+
+```javascript
+import TurtleCoinWalletd from 'turtlecoin-walletd-rpc-js';
+
+let walletd = new TurtleCoinWalletd(hostname, port, password, logging);
+let viewSecretKey = 'xxxxx...';
+
+walletd.reset(viewSecretKey)
+    .then(resp => {
+        console.log(resp.body)
+    })
+    .catch(err => {
+        console.log(err)
+    })
 ```
 
 ```php
@@ -107,6 +135,20 @@ No output in case of success.
 curl -d '{"jsonrpc":"2.0","id":1,"password":"passw0rd","method":"save","params":{}}' http://localhost:8070/json_rpc
 ```
 
+```javascript
+import TurtleCoinWalletd from 'turtlecoin-walletd-rpc-js';
+
+let walletd = new TurtleCoinWalletd(hostname, port, password, logging);
+
+walletd.save()
+    .then(resp => {
+        console.log(resp.body)
+    })
+    .catch(err => {
+        console.log(err)
+    });
+```
+
 ```php
 <?php
 use TurtleCoin\Walletd;
@@ -137,6 +179,20 @@ No output in case of success.
 
 ```shell
 curl -d '{"jsonrpc":"2.0","id":1,"password":"passw0rd","method":"getViewKey","params":{}}' http://localhost:8070/json_rpc
+```
+
+```javascript
+import TurtleCoinWalletd from 'turtlecoin-walletd-rpc-js';
+
+let walletd = new TurtleCoinWalletd(hostname, port, password, logging);
+
+walletd.getViewKey()
+    .then(resp => {
+        console.log(resp.body)
+    })
+    .catch(err => {
+        console.log(err)
+    });
 ```
 
 ```php
@@ -176,6 +232,21 @@ viewSecretKey    | Private view key | string
 
 ```shell
 curl -d '{"jsonrpc":"2.0","id":1,"password":"passw0rd","method":"getSpendKeys","params":{"address":"TRTLxxxx..."}}' http://localhost:8070/json_rpc
+```
+
+```javascript
+import TurtleCoinWalletd from 'turtlecoin-walletd-rpc-js';
+
+let walletd = new TurtleCoinWalletd(hostname, port, password, logging);
+let address = 'TRTLxxxx...';
+
+walletd.getSpendKeys(address)
+    .then(resp => {
+        console.log(resp.body)
+    })
+    .catch(err => {
+        console.log(err)
+    });
 ```
 
 ```php
@@ -224,6 +295,20 @@ spendPublicKey    | Public spend key     | string
 curl -d '{"jsonrpc":"2.0","id":1,"password":"passw0rd","method":"getStatus","params":{}}' http://localhost:8070/json_rpc
 ```
 
+```javascript
+import TurtleCoinWalletd from 'turtlecoin-walletd-rpc-js';
+
+let walletd = new TurtleCoinWalletd(hostname, port, password, logging);
+
+walletd.getStatus()
+    .then(resp => {
+        console.log(resp.body)
+    })
+    .catch(err => {
+        console.log(err)
+    });
+```
+
 ```php
 <?php
 use TurtleCoin\Walletd;
@@ -269,6 +354,20 @@ peerCount        | Connected peers number	                                      
 curl -d '{"jsonrpc":"2.0","id":1,"password":"passw0rd","method":"getAddresses","params":{}}' http://localhost:8070/json_rpc
 ```
 
+```javascript
+import TurtleCoinWalletd from 'turtlecoin-walletd-rpc-js';
+
+let walletd = new TurtleCoinWalletd(hostname, port, password, logging);
+
+walletd.getAddresses()
+    .then(resp => {
+        console.log(resp.body)
+    })
+    .catch(err => {
+        console.log(err)
+    });
+```
+
 ```php
 <?php
 use TurtleCoin\Walletd;
@@ -309,6 +408,22 @@ addresses	      | Array of strings, where each string is an address	  | array
 
 ```shell
 curl -d '{"jsonrpc":"2.0","id":1,"password":"passw0rd","method":"createAddress","params":{}}' http://localhost:8070/json_rpc
+```
+
+```javascript
+import TurtleCoinWalletd from 'turtlecoin-walletd-rpc-js';
+
+let walletd = new TurtleCoinWalletd(hostname, port, password, logging);
+let secretSpendKey = null;
+let publicSpendKey = null;
+
+walletd.createAddress(secretSpendKey, publicSpendKey)
+    .then(resp => {
+        console.log(resp.body)
+    })
+    .catch(err => {
+        console.log(err)
+    });
 ```
 
 ```php
@@ -352,6 +467,21 @@ publicSpendKey           | No           | Public spend key. If `publicSpendKey` 
 curl -d '{"jsonrpc":"2.0","id":1,"password":"passw0rd","method":"deleteAddress","params":{"address":"TRTLxxxx..."}}' http://localhost:8070/json_rpc
 ```
 
+```javascript
+import TurtleCoinWalletd from 'turtlecoin-walletd-rpc-js';
+
+let walletd = new TurtleCoinWalletd(hostname, port, password, logging);
+let address = 'TRTLxxxx...';
+
+walletd.deleteAddress(address)
+    .then(resp => {
+        console.log(resp.body)
+    })
+    .catch(err => {
+        console.log(err)
+    });
+```
+
 ```php
 <?php
 use TurtleCoin\Walletd;
@@ -390,6 +520,21 @@ In case of success returns an empty JSON object.
 
 ```shell
 curl -d '{"jsonrpc":"2.0","id":1,"password":"passw0rd","method":"getBalance","params":{"address":"TRTLxxxx..."}}' http://localhost:8070/json_rpc
+```
+
+```javascript
+import TurtleCoinWalletd from 'turtlecoin-walletd-rpc-js';
+
+let walletd = new TurtleCoinWalletd(hostname, port, password, logging);
+let address = 'TRTLxxxx...';
+
+walletd.getBalance(address)
+    .then(resp => {
+        console.log(resp.body)
+    })
+    .catch(err => {
+        console.log(err)
+    });
 ```
 
 ```php
@@ -443,6 +588,22 @@ lockedAmount          | Locked amount of the specified address in shells      | 
 curl -d '{"jsonrpc":"2.0","id":1,"password":"passw0rd","method":"getBlockHashes","params":{"firstBlockIndex":0,"blockCount":3}}' http://localhost:8070/json_rpc
 ```
 
+```javascript
+import TurtleCoinWalletd from 'turtlecoin-walletd-rpc-js';
+
+let walletd = new TurtleCoinWalletd(hostname, port, password, logging);
+let firstBlockIndex = 0;
+let blockCount = 3;
+
+walletd.getBlockHashes(firstBlockIndex, blockCount)
+    .then(resp => {
+        console.log(resp.body)
+    })
+    .catch(err => {
+        console.log(err)
+    });
+```
+
 ```php
 <?php
 use TurtleCoin\Walletd;
@@ -491,6 +652,22 @@ blockHashes		      | Array of strings, where each element is a block hash	| arra
 
 ```shell
 curl -d '{"jsonrpc":"2.0","id":1,"password":"passw0rd","method":"getTransactionHashes","params":{"firstBlockIndex":400000,"blockCount":100000}}' http://localhost:8070/json_rpc
+```
+
+```javascript
+import TurtleCoinWalletd from 'turtlecoin-walletd-rpc-js';
+
+let walletd = new TurtleCoinWalletd(hostname, port, password, logging);
+let firstBlockIndex = 400000;
+let blockCount = 100000;
+
+walletd.getBlockHashes(firstBlockIndex, blockCount)
+    .then(resp => {
+        console.log(resp.body)
+    })
+    .catch(err => {
+        console.log(err)
+    });
 ```
 
 ```php
@@ -564,6 +741,25 @@ items	   | **Array of**                                        |	               
 
 ```shell
 curl -d '{"jsonrpc":"2.0","id":1,"password":"passw0rd","method":"getTransactions","params":{"firstBlockIndex":400000,"blockCount":100000}}' http://localhost:8070/json_rpc
+```
+
+```javascript
+import TurtleCoinWalletd from 'turtlecoin-walletd-rpc-js';
+
+let walletd = new TurtleCoinWalletd(hostname, port, password, logging);
+let blockCount = 100000;
+let firstBlockIndex = 400000;
+let blockHash = null;
+let addresses = null;
+let paymentId = null;
+
+walletd.getTransactions(blockCount, firstBlockIndex, blockHash, addresses, paymentId)
+    .then(resp => {
+        console.log(resp.body)
+    })
+    .catch(err => {
+        console.log(err)
+    });
 ```
 
 ```php
@@ -689,6 +885,21 @@ transfers           | Array of address (string), amount (int)                   
 curl -d '{"jsonrpc":"2.0","id":1,"password":"passw0rd","method":"getUnconfirmedTransactionHashes","params":{}}' http://localhost:8070/json_rpc
 ```
 
+```javascript
+import TurtleCoinWalletd from 'turtlecoin-walletd-rpc-js';
+
+let walletd = new TurtleCoinWalletd(hostname, port, password, logging);
+let addresses = null;
+
+walletd.getUnconfirmedTransactionHashes(addresses)
+    .then(resp => {
+        console.log(resp.body)
+    })
+    .catch(err => {
+        console.log(err)
+    });
+```
+
 ```php
 <?php
 use TurtleCoin\Walletd;
@@ -739,6 +950,21 @@ transactionHashes      | Array of strings, where each string is a hash of an unc
 
 ```shell
 curl -d '{"jsonrpc":"2.0","id":1,"password":"passw0rd","method":"getTransaction","params":{"transactionHash":"55a23..."}}' http://localhost:8070/json_rpc
+```
+
+```javascript
+import TurtleCoinWalletd from 'turtlecoin-walletd-rpc-js';
+
+let walletd = new TurtleCoinWalletd(hostname, port, password, logging);
+let transactionHash = '55a23...';
+
+walletd.getTransaction(transactionHash)
+    .then(resp => {
+        console.log(resp.body)
+    })
+    .catch(err => {
+        console.log(err)
+    });
 ```
 
 ```php
@@ -818,6 +1044,31 @@ transfers           | Array of addresses (string), amount (int)                 
 curl -d '{"jsonrpc":"2.0","id":1,"password":"passw0rd","method":"sendTransaction","params":{"transfers":[{"address":"TRTLxxxx...","amount":"5000"}],"fee":10,"anonymity":3,"changeAddress":"TRTLyyyy..."}}' http://localhost:8070/json_rpc
 ```
 
+```javascript
+import TurtleCoinWalletd from 'turtlecoin-walletd-rpc-js';
+
+let walletd = new TurtleCoinWalletd(hostname, port, password, logging);
+let anonymity = 3;
+let fee = 10;
+let addresses = null;
+let unlockTime = null;
+let extra = null;
+let paymentId = null;
+let changeAddress = 'TRTLyyyy...';
+
+let transfers = [
+    {address: "TRTLxxxx...", amount: 5000}
+];
+
+walletd.sendTransaction(anonymity, transfers, fee, addresses, unlockTime, extra, paymentId, changeAddress)
+    .then(resp => {
+        console.log(resp.body)
+    })
+    .catch(err => {
+        console.log(err)
+    });
+```
+
 ```php
 <?php
 use TurtleCoin\Walletd;
@@ -885,6 +1136,31 @@ transactionHash	      | Hash of the sent transaction		| string
 
 ```shell
 curl -d '{"jsonrpc":"2.0","id":1,"password":"passw0rd","method":"createDelayedTransaction","params":{"transfers":[{"address":"TRTLxxxx...","amount":"5000"}],"fee":10,"anonymity":3,"changeAddress":"TRTLyyyy..."}}' http://localhost:8070/json_rpc
+```
+
+```javascript
+import TurtleCoinWalletd from 'turtlecoin-walletd-rpc-js';
+
+let walletd = new TurtleCoinWalletd(hostname, port, password, logging);
+let anonymity = 3;
+let fee = 10;
+let addresses = null;
+let unlockTime = null;
+let extra = null;
+let paymentId = null;
+let changeAddress = 'TRTLyyyy...';
+
+let transfers = [
+    {address: "TRTLxxxx...", amount: 5000}
+];
+
+walletd.createDelayedTransaction(anonymity, transfers, fee, addresses, unlockTime, extra, paymentId, changeAddress)
+    .then(resp => {
+        console.log(resp.body)
+    })
+    .catch(err => {
+        console.log(err)
+    });
 ```
 
 ```php
@@ -957,6 +1233,20 @@ transactionHash	      | Hash of the sent transaction		| string
 curl -d '{"jsonrpc":"2.0","id":1,"password":"passw0rd","method":"getDelayedTransactionHashes","params":{}}' http://localhost:8070/json_rpc
 ```
 
+```javascript
+import TurtleCoinWalletd from 'turtlecoin-walletd-rpc-js';
+
+let walletd = new TurtleCoinWalletd(hostname, port, password, logging);
+
+walletd.getDelayedTransactionHashes()
+    .then(resp => {
+        console.log(resp.body)
+    })
+    .catch(err => {
+        console.log(err)
+    });
+```
+
 ```php
 <?php
 use TurtleCoin\Walletd;
@@ -994,6 +1284,21 @@ transactionHashes	  | Array of strings, where each string is a transaction hash	
 
 ```shell
 curl -d '{"jsonrpc":"2.0","id":1,"password":"passw0rd","method":"deleteDelayedTransaction","params":{"transactionHash":"b3e37..."}}' http://localhost:8070/json_rpc
+```
+
+```javascript
+import TurtleCoinWalletd from 'turtlecoin-walletd-rpc-js';
+
+let walletd = new TurtleCoinWalletd(hostname, port, password, logging);
+let transactionHash = 'b3e37...';
+
+walletd.deleteDelayedTransaction(transactionHash)
+    .then(resp => {
+        console.log(resp.body)
+    })
+    .catch(err => {
+        console.log(err)
+    });
 ```
 
 ```php
@@ -1036,6 +1341,21 @@ In case of success returns an empty JSON object.
 curl -d '{"jsonrpc":"2.0","id":1,"password":"passw0rd","method":"sendDelayedTransaction","params":{"transactionHash":"c37cd..."}}' http://localhost:8070/json_rpc
 ```
 
+```javascript
+import TurtleCoinWalletd from 'turtlecoin-walletd-rpc-js';
+
+let walletd = new TurtleCoinWalletd(hostname, port, password, logging);
+let transactionHash = 'c37cd...';
+
+walletd.sendDelayedTransaction(transactionHash)
+    .then(resp => {
+        console.log(resp.body)
+    })
+    .catch(err => {
+        console.log(err)
+    });
+```
+
 ```php
 <?php
 use TurtleCoin\Walletd;
@@ -1075,6 +1395,24 @@ In case of success returns an empty JSON object.
 
 ```shell
 curl -d '{"jsonrpc":"2.0","id":1,"password":"passw0rd","method":"sendFusionTransaction","params":{"threshold":1000000,"anonymity":3,"addresses":["TRTLxxxx...","TRTLyyyy..."],"destinationAddress":"TRTLzzzz..."}}' http://localhost:8070/json_rpc
+```
+
+```javascript
+import TurtleCoinWalletd from 'turtlecoin-walletd-rpc-js';
+
+let walletd = new TurtleCoinWalletd(hostname, port, password, logging);
+let threshold = 1000000;
+let anonymity = 3;
+let addresses = ['TRTLxxxx...', 'TRTLyyyy...'];
+let destinationAddress = 'TRTLzzzz...';
+
+walletd.sendFusionTransaction(threshold, anonymity, addresses, destinationAddress)
+    .then(resp => {
+        console.log(resp.body)
+    })
+    .catch(err => {
+        console.log(err)
+    });
 ```
 
 ```php
@@ -1135,6 +1473,22 @@ transactionHash	      | Hash of the sent transaction		| string
 curl -d '{"jsonrpc":"2.0","id":1,"password":"passw0rd","method":"estimateFusion","params":{"threshold":1000000,"addresses":["TRTLxxxx...","TRTLyyyy..."]}}' http://localhost:8070/json_rpc
 ```
 
+```javascript
+import TurtleCoinWalletd from 'turtlecoin-walletd-rpc-js';
+
+let walletd = new TurtleCoinWalletd(hostname, port, password, logging);
+let threshold = 1000000;
+let addresses = ['TRTLxxxx...', 'TRTLyyyy...'];
+
+walletd.estimateFusion(threshold, addresses)
+    .then(resp => {
+        console.log(resp.body)
+    })
+    .catch(err => {
+        console.log(err)
+    });
+```
+
 ```php
 <?php
 use TurtleCoin\Walletd;
@@ -1181,6 +1535,21 @@ fusionReadyCount    | Number of outputs that can be optimized.                  
 
 ```shell
 curl -d '{"jsonrpc":"2.0","id":1,"password":"passw0rd","method":"getMnemonicSeed","params":{"address":"TRTLxxxx..."}}' http://localhost:8070/json_rpc
+```
+
+```javascript
+import TurtleCoinWalletd from 'turtlecoin-walletd-rpc-js';
+
+let walletd = new TurtleCoinWalletd(hostname, port, password, logging);
+let address = 'TRTLxxxx...';
+
+walletd.getMnemonicSeed(address)
+    .then(resp => {
+        console.log(resp.body)
+    })
+    .catch(err => {
+        console.log(err)
+    });
 ```
 
 ```php
