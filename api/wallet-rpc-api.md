@@ -52,7 +52,7 @@ To make a JSON RPC request to your TurtleCoin RPC Wallet you should use a POST r
 Parameter            | Description
 -------------------- | ------------------------------------------------------------ 
 `<service address>`  | IP of TurtleCoin RPC Wallet, if RPC Wallet is located on local machine it is either 127.0.0.1 or localhost
-`<service port>`     | TurtleCoin RPC Wallet port, by default it is binded to 8070 port, but it can be manually binded to any port you want, read more about this here.
+`<service port>`     | TurtleCoin RPC Wallet port, by default it is binded to 8070 port, but it can be manually binded to any port you want
 
 
 
@@ -94,7 +94,9 @@ viewSecretKey    | No          | Private view key | string
 No output in case of success.
 
 <aside class="notice">
-  <div>If the <code>viewSecretKey</code> argument is not provided, the <code>reset()</code> method resets the wallet and re-syncs it. If the <code>viewSecretKey</code> argument is provided, the <code>reset()</code> method substitutes the existing wallet with a new one with the specified key and creates an address for it.</div>
+  <div>If the <code>viewSecretKey</code> argument is not provided, the <code>reset()</code> method resets the wallet and 
+  re-syncs it. If the <code>viewSecretKey</code> argument is provided, the <code>reset()</code> method substitutes the 
+  existing wallet with a new one with the specified key and creates an address for it.</div>
 </aside>
 
 
@@ -205,7 +207,7 @@ echo $response->getBody()->getContents();
 
 Argument         | Mandatory    | Description                                  | Format
 ---------------- | ------------ | -------------------------------------------- | -------
-address          | Yes          | Valid and existing in this container address | string
+address          | Yes          | Valid address that exists in this container  | string
 
 **Output**
 
@@ -246,7 +248,7 @@ echo $response->getBody()->getContents();
 }
 ```
 
-`getStatus()` method returns information about the current RPC Wallet state: block_count, known_block_count, last_block_hash and peer_count.
+`getStatus()` method returns information about the current RPC Wallet state: block count, known block count, last block hash and peer count.
 
 No input.
 
@@ -254,10 +256,10 @@ No input.
 
 Argument         | Description                                                                | Format
 ---------------- | -------------------------------------------------------------------------- | ------
-blockCount       | Node's known number of blocks                                              | uint32
-knownBlockCount  | Maximum known number of blocks of all seeds that are connected to the node | uint32
+blockCount       | Node's known number of blocks                                              | int
+knownBlockCount  | Maximum known number of blocks of all seeds that are connected to the node | int
 lastBlockHash    | Hash of the last known block                                               | string
-peerCount        | Connected peers number	                                                  | uint32	 
+peerCount        | Connected peers number	                                                  | int	 
 
 
 
@@ -419,7 +421,7 @@ echo $response->getBody()->getContents();
 
 Argument         | Mandatory    | Description                                          | Format
 ---------------- | ------------ | ---------------------------------------------------- | -------
-address          | No           | Valid and existing address in this particular wallet | string
+address          | No           | Valid address that exists in this container          | string
 
 **Output**
 
@@ -429,7 +431,8 @@ availableBalance      | Available balance of the specified address in shells  | 
 lockedAmount          | Locked amount of the specified address in shells      | int
 
 <aside class="notice">
-  <div>If address is not specified, returns a cumulative balance of all RPC Wallet's addresses. Also note, balances are expressed in shells, so a balance of 10000 is equal to 100.00 TRTL.</div>
+  <div>If address is not specified, <code>getBalance()</code> returns a cumulative balance of all RPC Wallet's addresses.
+  Also note, balances are expressed in shells, so a balance of 10000 is equal to 100.00 TRTL.</div>
 </aside>
 
 
@@ -473,8 +476,8 @@ echo $response->getBody()->getContents();
 
 Argument         | Mandatory    | Description                                     | Format
 ---------------- | ------------ | ----------------------------------------------- | -------
-firstBlockIndex  | Yes          | Starting height	                              | uint32
-blockCount       | Yes          | Number of blocks to process		              | uint32
+firstBlockIndex  | Yes          | Starting height	                              | int
+blockCount       | Yes          | Number of blocks to process		              | int
 
 **Output**
 
@@ -529,8 +532,8 @@ echo $response->getBody()->getContents();
 }
 ```
 
-`getTransactionHashes()` method returns an array of block and transaction hashes. Transaction consists of transfers.
-Transfer is an amount-address pair. There could be several transfers in a single transaction.
+`getTransactionHashes()` method returns an array of block and transaction hashes. A transaction consists of transfers.
+A transfer is an amount-address pair. There could be several transfers in a single transaction.
 
 **Input**
 
@@ -538,13 +541,13 @@ Argument         | Mandatory                                                    
 ---------------- | ------------------------------------------------------------------------ | ------------------------------------------------------------- | -------
 addresses        | No                                                                       | Array of strings, where each string is an address	            | array
 blockHash        | Only one of these parameters (blockHash or firstBlockIndex) is allowed   | Hash of the starting block                                    | string
-firstBlockIndex  | Only one of these parameters (blockHash or firstBlockIndex) is allowed   | Starting height	                                            | uint32
-blockCount       | Yes                                                                      | Number of blocks to return transaction hashes from	        | uint32
-paymentId        | No                                                                       | Valid payment_id	                                            | string
+firstBlockIndex  | Only one of these parameters (blockHash or firstBlockIndex) is allowed   | Starting height	                                            | int
+blockCount       | Yes                                                                      | Number of blocks to return transaction hashes from	        | int
+paymentId        | No                                                                       | Valid payment ID	                                            | string
 
-* If `paymentId` parameter is set, `getTransactionHashes()` method returns transaction hashes of transactions that contain specified payment_id. (in the set block range).
+* If `paymentId` parameter is set, `getTransactionHashes()` method returns transaction hashes of transactions that contain specified payment ID in the given block range.
 * If `addresses` parameter is set, `getTransactionHashes()` method returns transaction hashes of transactions that contain transfer from at least one of specified addresses.
-* If both above mentioned parameters are set, `getTransactionHashes()` method returns transaction hashes of transactions that contain both specified payment_id and transfer from at least one of specified addresses.
+* If both above mentioned parameters are set, `getTransactionHashes()` method returns transaction hashes of transactions that contain both specified payment ID and transfer from at least one of specified addresses.
 
 **Output**
 
@@ -552,8 +555,8 @@ Argument   | Description                                         |              
 ---------- | --------------------------------------------------- | ------------------------------------------------------------ | ---------- |
 items	   | **Array of**                                        |	                                                            |            |                                                                 
     	   | **Attribute**            	                         | **Description**                                              | **Format** |                                        
-           | blockHash                                           | hash of the block which contains transaction hashes          | string     |
-           | transactionHashes                                   | array of strings, where each string is a transaction hash    | array      |
+           | blockHash                                           | Hash of the block which contains transaction hashes          | string     |
+           | transactionHashes                                   | Array of strings, where each string is a transaction hash    | array      |
 
 
 
@@ -639,7 +642,7 @@ echo $response->getBody()->getContents();
 ```
 
 `getTransactions()` method returns an array of block and transaction hashes.
-Transaction consists of transfers. Transfer is an amount-address pair. There could be several transfers in a single transaction.
+A transaction consists of transfers. A transfer is an amount-address pair. There could be several transfers in a single transaction.
 
 **Input**
 
@@ -647,13 +650,13 @@ Argument        | Mandatory                                                     
 --------------- | ---------------------------------------------------------------------------- | ------------------------------------------------------ | -------
 addresses       | No                                                                           | Array of strings, where each string is an address		| array
 blockHash       | Only one of these parameters (`blockHash` or `firstBlockIndex`) is allowed.  | Hash of the starting block		                        | string
-firstBlockIndex | Only one of these parameters (`blockHash` or `firstBlockIndex`) is allowed.  | Starting height		                                | uint32
-blockCount      | Yes                                                                          | Number of blocks to return transaction hashes from		| uint32
-paymentId       | No                                                                           | Valid `payment_id`		                                | string
+firstBlockIndex | Only one of these parameters (`blockHash` or `firstBlockIndex`) is allowed.  | Starting height		                                | int
+blockCount      | Yes                                                                          | Number of blocks to return transaction hashes from		| int
+paymentId       | No                                                                           | Valid payment ID		                                | string
 
-* If `paymentId` parameter is set, `getTransactions()` method returns transactions that contain specified `payment_id`. (in the set block range)
+* If `paymentId` parameter is set, `getTransactions()` method returns transactions that contain specified payment ID in the given block range.
 * If `addresses` parameter is set, `getTransactions()` method returns transactions that contain transfer from at least one of specified addresses.
-* If both above mentioned parameters are set, `getTransactions()` method returns transactions that contain both specified `payment_id` and transfer from at least one of specified addresses.
+* If both above mentioned parameters are set, `getTransactions()` method returns transactions that contain both specified payment ID and transfer from at least one of specified addresses.
 
 **Output**
 
@@ -667,16 +670,16 @@ Transaction attributes:
 
 Argument            | Description                                       | Format
 ------------------- | --------------------------------------------------|-----------
-transactionHash     | hash of the  transaction                                                      | string 
-blockIndex          | number of the block that contains a transaction                               | uint32
-timestamp           | timestamp of the transaction                                                  | uint64 
-isBase              | shows if the transaction is a CoinBase transaction or not                     | boolean
-unlockTime          | height of the block when transaction is going to be available for spending    | uint64
-amount              | amount of the transaction                                                     | int64 
-fee                 | transaction fee                                                               | uint64
-extra               | hash of the  transaction                                                      | string 
-paymentId           | payment_id of the transaction (optional)                                      | string 
-transfers           | array of address (string), amount (uint64)                                    | array
+transactionHash     | Hash of the transaction                                                      | string 
+blockIndex          | Number of the block that contains a transaction                               | int
+timestamp           | Timestamp of the transaction                                                  | int 
+isBase              | Shows if the transaction is a CoinBase transaction or not                     | boolean
+unlockTime          | Height of the block when transaction is going to be available for spending    | int
+amount              | Amount of the transaction                                                     | int 
+fee                 | Transaction fee                                                               | int
+extra               | Hash of the  transaction                                                      | string 
+paymentId           | Payment ID of the transaction (optional)                                      | string 
+transfers           | Array of address (string), amount (int)                                       | array
 
 
 
@@ -796,16 +799,16 @@ Transaction attributes:
 
 Argument            | Description                                                                   | Format
 ------------------- | ------------------------------------------------------------------------------|-------
-transactionHash     | hash of the  transaction                                                      | string 
-blockIndex          | number of the block that contains a transaction                               | uint32
-timestamp           | timestamp of the transaction                                                  | uint64 
-isBase              | shows if the transaction is a CoinBase transaction or not                     | boolean
-unlockTime          | height of the block when transaction is going to be available for spending    | uint64
-amount              | amount of the transaction                                                     | int64 
-fee                 | transaction fee                                                               | uint64
-extra               | hash of the  transaction                                                      | string 
-paymentId           | payment_id of the transaction (optional)                                      | string 
-transfers           | array of address (string), amount (uint64)                                    | array
+transactionHash     | Hash of the transaction                                                      | string 
+blockIndex          | Number of the block that contains a transaction                               | int
+timestamp           | Timestamp of the transaction                                                  | int 
+isBase              | Shows if the transaction is a CoinBase transaction or not                     | boolean
+unlockTime          | Height of the block when transaction is going to be available for spending    | int
+amount              | Amount of the transaction                                                     | int 
+fee                 | Transaction fee                                                               | int
+extra               | Hash of the  transaction                                                      | string 
+paymentId           | Payment ID of the transaction (optional)                                      | string 
+transfers           | Array of addresses (string), amount (int)                                  | array
 
 
 
@@ -851,7 +854,7 @@ echo $response->getBody()->getContents();
 }
 ```
 
-`sendTransaction()` method allows you to send transaction(s) to one or several addresses. Also, it allows you to use a payment_id for a transaction to a single address.
+`sendTransaction()` method allows you to send transaction(s) to one or several addresses. Also, it allows you to use a payment ID for a transaction to a single address.
 
 **Input**
 
@@ -863,7 +866,7 @@ fee             | Yes           | Transaction fee. Minimal fee in TurtleCoin net
 unlockTime      | No            | The block height at which the transaction will be unlocked for spending.                 | int
 anonymity       | Yes           | Privacy (mixin) level (a discrete number from 0 to > than 0). 6 and higher is recommended| int
 extra           | No            | String of variable length. Can contain A-Z, 0-9 characters.                              | string
-paymentId       | No            | payment_id                                                                               | string 
+paymentId       | No            | Payment ID                                                                               | string 
 changeAddress   | No            | Valid and existing address in this container.                                            | string 
 
 * If container contains only 1 address, `changeAddress` field can be left empty and the change is going to be sent to this address.
@@ -927,18 +930,18 @@ echo $response->getBody()->getContents();
 Argument        | Mandatory     | Description                                                                              | Format
 --------------- | ------------- | ---------------------------------------------------------------------------------------- | -------
 addresses       | No            | Array of strings, where each string is an address                                        | array
-transfers       | Yes           | Array of address (string), amount (int64)                                                | array
-fee             | Yes           | Transaction fee. Minimal fee in TurtleCoin network is 0.10 TRTL. This parameter should be specified in minimal available TRTL units. For example, if your fee is 0.10 TRTL, you should pass it as 10. | uint64
-unlockTime      | No	        | Height of the block until which transaction is going to be locked for spending.	       | uint64
-anonymity       | Yes           | Privacy level (a discrete number from 1 to infinity). Level 6 and higher is recommended. | uint64
+transfers       | Yes           | Array of address (string), amount (int)                                                  | array
+fee             | Yes           | Transaction fee. Minimal fee in TurtleCoin network is 0.10 TRTL. This parameter should be specified in minimal available TRTL units. For example, if your fee is 0.10 TRTL, you should pass it as 10. | int
+unlockTime      | No	        | Height of the block until which transaction is going to be locked for spending.	       | int
+anonymity       | Yes           | Privacy level (a discrete number from 1 to infinity). Level 6 and higher is recommended. | int
 extra           | No            | String of variable length. Can contain A-Z, 0-9 characters.                              | string
-paymentId       | No            | payment_id                                                                               | string
+paymentId       | No            | Payment ID                                                                               | string
 changeAddress   | No            | Valid and existing in this container address.                                            | string
 
-* if container contains only 1 address, changeAddress field can be left empty and the change is going to be sent to this address
-* if addresses field contains only 1 address, changeAddress can be left empty and the change is going to be sent to this address
-* in the rest of the cases, changeAddress field is mandatory and must contain an address.
-* outputs that were used for this transactions will be locked until the transaction is sent or cancelled
+* If container contains only 1 address, `changeAddress` field can be left empty and the change is going to be sent to this address
+* If addresses field contains only 1 address, `changeAddress` can be left empty and the change is going to be sent to this address
+* In the rest of the cases, `changeAddress` field is mandatory and must contain an address.
+* Outputs that were used for this transactions will be locked until the transaction is sent or cancelled
 
 **Output**
 
@@ -1114,9 +1117,9 @@ anonymity           | Yes        | Privacy level (a discrete number from 1 to in
 addresses           | No         | Array of strings, where each string is an address to take the funds from.	                        | array
 destinationAddress  | No         | An address that the optimized funds will be sent to. Valid and existing in this container address.	| string
 
-* if container contains only 1 address, destinationAddress field can be left empty and the funds are going to be sent to this address.
-* if addresses field contains only 1 address, destinationAddress can be left empty and the funds are going to be sent to this address.
-* in the rest of the cases, destinationAddress field is mandatory and must contain an address.
+* If container contains only 1 address, `destinationAddress` field can be left empty and the funds are going to be sent to this address.
+* If addresses field contains only 1 address, `destinationAddress` can be left empty and the funds are going to be sent to this address.
+* In the rest of the cases, `destinationAddress` field is mandatory and must contain an address.
 
 **Output**
 
@@ -1171,8 +1174,8 @@ addresses           | No         | Array of strings, where each string is an add
 
 Argument            | Description                                                 | Format
 ------------------- | ----------------------------------------------------------- | ------
-totalOutputCount	| Total number of unspent outputs of the specified addresses. | uint64
-fusionReadyCount    | Number of outputs that can be optimized.                    | uint64
+totalOutputCount	| Total number of unspent outputs of the specified addresses. | int
+fusionReadyCount    | Number of outputs that can be optimized.                    | int
 
 ## getMnemonicSeed
 
@@ -1202,7 +1205,7 @@ echo $response->getBody()->getContents();
 }
 ```
 
-`getMnemonicSeed()` method returns the mnemonic seed for the given _deterministic_ address.
+`getMnemonicSeed()` method returns the mnemonic seed for the given _deterministic_ address. A mnemonic seed is a list of words which can be used to recover a wallet.
 
 **Input**
 
