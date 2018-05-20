@@ -35,7 +35,7 @@ Go to the  `#wallets` channel in the [Discord server](https://discord.gg/J7g99EE
 For example, you would type:
 
 ```
-.registerwallet TRTLv3pFrFm2yk4cYNtKf5fxV1b594tNrZfEV2CYWJsTSqr9BWoWMrUNpQaeD9StrzQrxpRQKPCdd1FfvT6D6dAg4pY6iB7sqsG
+.registerwallet TRTLv3pFrFm2yk4cYNtKf5fxV1b594tNrZfEV2CYWJsTSqr9BWoWMrUNpQaeD9StrzQrxpRQKPCdd1FfvT6D6dAg4pY6iB7sqs
 ```
 
 That's it, you're in, now start chatting with your fellow Turtles.
