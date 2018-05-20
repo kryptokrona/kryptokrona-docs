@@ -111,7 +111,7 @@ Upon first launching XMR-Stak, the software will ask you several setup and confi
     * Give them all a weight of `10` if you're tired of reading, or if you want the best experience, give the pools nearest to you a higher number, and the ones further from you a lower number.  
     * XMR-Stak will prioritize the highest weight pool, and fall back to the others if it cannot connect.
     * If they are all given the same weight, it will connect to them in order of how they are listed, form top to bottom, in the configuration file.
-    * If you are on Windows 7/8, it will ask for administrator permission again. Click `Yes` to grant it permission.
+    * If you are on Windows 7 or 8, it will ask for administrator permission again. Click `Yes` to grant it permission.
     * If you are on Windows 10, it will not ask for it again.
 
 
