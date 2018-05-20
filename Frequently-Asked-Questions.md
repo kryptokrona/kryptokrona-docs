@@ -138,7 +138,7 @@ A: Generally, this is due to an incorrectly configured config. In the directory 
 
     ```
     {"pool_address" : "eu.turtlepool.space:3333",
-     "wallet_address" : "TRTLv2Fyavy8CXG8BPEbNeCHFZ1fuDCYCZ3vW5H5LXN4K2M2MHUpTENip9bbavpHvvPwb4NDkBWrNgURAd5DB38FHXWZyoBh4wW",
+     "wallet_address" : "TRTLv2Fyavy8CXG8BPEbNeCHFZ1fuDCYCZ3vW5H5LXN4K2M2MHUpTENip9bbavpHvvPwb4NDkBWrNgURAd5DB38FHXWZyoBh4w",
      "pool_password" : "x",
      "use_nicehash" : false,
      "use_tls" : false,
