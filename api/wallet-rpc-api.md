@@ -289,6 +289,69 @@ spendPublicKey    | Public spend key     | string
 
 
 
+## getMnemonicSeed
+
+```shell
+curl -d '{"jsonrpc":"2.0","id":1,"password":"passw0rd","method":"getMnemonicSeed","params":{"address":"TRTLxxxx..."}}' http://localhost:8070/json_rpc
+```
+
+```javascript
+import TurtleCoinWalletd from 'turtlecoin-walletd-rpc-js';
+
+let walletd = new TurtleCoinWalletd(hostname, port, password, logging);
+let address = 'TRTLxxxx...';
+
+walletd.getMnemonicSeed(address)
+    .then(resp => {
+        console.log(resp.body)
+    })
+    .catch(err => {
+        console.log(err)
+    });
+```
+
+```php
+<?php
+use TurtleCoin\Walletd;
+
+$walletd = new Walletd\Client($config);
+$address = 'TRTLxxxx...';
+$response = $walletd->getMnemonicSeed($address);
+echo $response->getBody()->getContents();
+```
+
+> Expected output:
+
+```json
+{
+  "id":1,
+  "jsonrpc":"2.0",
+  "result":{
+    "mnemonicSeed":"turtles are cool..."
+  }
+}
+```
+
+`getMnemonicSeed()` method returns the mnemonic seed for the given _deterministic_ address. A mnemonic seed is a list of words which can be used to recover a wallet.
+
+**Input**
+
+Argument         | Mandatory    | Description                                  | Format
+---------------- | ------------ | -------------------------------------------- | -------
+address          | Yes          | Valid deterministic address that exists in this container | string
+
+**Output**
+
+Argument          | Description          | Format
+----------------  | -------------------- | ------
+mnemonicSeed      | Mnemonic seed        | string
+
+<aside class="notice">
+  <div>The first wallet address that is generated when the container is created is the deterministic address. Only one wallet from a multi-wallet container can be deterministic. If a non-deterministic address is given, the RPC response will be an error with the message: "Keys not deterministic."</div>
+</aside>
+
+
+
 ## getStatus
 
 ```shell
@@ -1534,63 +1597,3 @@ Argument            | Description                                               
 totalOutputCount	| Total number of unspent outputs of the specified addresses. | int
 fusionReadyCount    | Number of outputs that can be optimized.                    | int
 
-## getMnemonicSeed
-
-```shell
-curl -d '{"jsonrpc":"2.0","id":1,"password":"passw0rd","method":"getMnemonicSeed","params":{"address":"TRTLxxxx..."}}' http://localhost:8070/json_rpc
-```
-
-```javascript
-import TurtleCoinWalletd from 'turtlecoin-walletd-rpc-js';
-
-let walletd = new TurtleCoinWalletd(hostname, port, password, logging);
-let address = 'TRTLxxxx...';
-
-walletd.getMnemonicSeed(address)
-    .then(resp => {
-        console.log(resp.body)
-    })
-    .catch(err => {
-        console.log(err)
-    });
-```
-
-```php
-<?php
-use TurtleCoin\Walletd;
-
-$walletd = new Walletd\Client($config);
-$address = 'TRTLxxxx...';
-$response = $walletd->getMnemonicSeed($address);
-echo $response->getBody()->getContents();
-```
-
-> Expected output:
-
-```json
-{
-  "id":1,
-  "jsonrpc":"2.0",
-  "result":{
-    "mnemonicSeed":"turtles are cool..."
-  }
-}
-```
-
-`getMnemonicSeed()` method returns the mnemonic seed for the given _deterministic_ address. A mnemonic seed is a list of words which can be used to recover a wallet.
-
-**Input**
-
-Argument         | Mandatory    | Description                                  | Format
----------------- | ------------ | -------------------------------------------- | -------
-address          | Yes          | Valid deterministic address that exists in this container | string
-
-**Output**
-
-Argument          | Description          | Format
-----------------  | -------------------- | ------
-mnemonicSeed      | Mnemonic seed        | string
-
-<aside class="notice">
-  <div>The first wallet address that is generated when the container is created is the deterministic address. Only one wallet from a multi-wallet container can be deterministic. If a non-deterministic address is given, the RPC response will be an error with the message: "Keys not deterministic."</div>
-</aside>
