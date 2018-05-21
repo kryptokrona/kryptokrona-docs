@@ -16,7 +16,7 @@ You must follow [strict markdown](https://daringfireball.net/projects/markdown/)
 * Links are *case sensitive*
   Links to files in `mkdocs.yml` must *perfectly match* the casing of the actual files, and the links to these files from other places must *perfectly match* the casing in `mkdocs.yml`.
   
-* If (a)points are to be indented under oneanother, (b)or pictures/information are to be included under a "step 1", they must be indented by 4 spaces.
+* If (a)points are to be indented under oneanother, (b)pictures/information are to be included under a "step 1", (c) codeblocks are to be made under steps/points, they are to be indented by 4 points. (d)Codeblocks must also start/end on a seperate line.
   
   ex (a)-> 
   
@@ -67,6 +67,28 @@ You must follow [strict markdown](https://daringfireball.net/projects/markdown/)
    3.  Check that
        * it is saved [comfily](../Being-Comfy). //it assumed we are in the guides/wallets/ directory
    ```    
+   
+   ex (c) and (d)->
+   
+   *Wiki MD*
+   ```
+   1. Install Linux
+   2. Enter this:
+   ```sudo apt-get install
+   sudo apt-get upgrade```
+   ```
+   
+   *Strict MD*
+   
+ 
+   ```
+   1.  Install Linux
+   2.  Enter this:
+       ```
+       sudo apt-get install
+       sudo apt-get upgrade
+       ```
+   ```
   
 
 ### More Information on Contributing
