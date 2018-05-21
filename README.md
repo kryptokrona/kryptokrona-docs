@@ -72,17 +72,21 @@ For more rules on contributing and the format to do it, compare 2 files from the
 #### Guide 1
 
 **existing wiki**
+
 https://raw.githubusercontent.com/turtlecoin/turtlecoin-wiki/master/guides/Bootstrapping-the-Blockchain.md
 
 **this wiki**
+
 https://raw.githubusercontent.com/turtlecoin/sajodocs/master/docs/guides/Bootstrapping-the-Blockchain.md
 
 #### Guide 2
 
 **existing wiki**
+
 https://raw.githubusercontent.com/turtlecoin/turtlecoin-wiki/master/guides/mining/XMR-Stak-Linux-Guide.md 
 
 **this wiki**
+
 https://raw.githubusercontent.com/turtlecoin/sajodocs/master/docs/guides/mining/XMR-Stak-Linux-Guide.md
 
 
