@@ -18,9 +18,11 @@ You must follow [strict markdown](https://daringfireball.net/projects/markdown/)
   
 * If (a)points are to be indented under oneanother, (b)pictures/information are to be included under a "step 1", (c) codeblocks are to be made under steps/points, they are to be indented by 4 points. (d)Codeblocks must also start/end on a seperate line.
   
-  ex (a)-> 
+  **Note: Text given beyond this point wrapped in code blocks are just examples, observe the formatting and not what's written**
   
-  *Wiki MD*
+  #### Ex (a):
+  
+  ##### *Wiki MD*
            
    ```
    * Download wallet
@@ -29,7 +31,7 @@ You must follow [strict markdown](https://daringfireball.net/projects/markdown/)
        ![walletname](guides/wallets/images/name.png)
     ```       
          
-  *Strict MD*
+  ##### *Strict MD*
            
    ```
    * Download a wallet
@@ -38,9 +40,9 @@ You must follow [strict markdown](https://daringfireball.net/projects/markdown/)
            ![walletname](images/name.png)
    ```    
       
-  ex (b)-> 
+  #### Ex (b): 
   
-  *Wiki MD*
+  ##### *Wiki MD*
            
    ```
    1. Download a wallet
@@ -54,7 +56,7 @@ You must follow [strict markdown](https://daringfireball.net/projects/markdown/)
      * it is saved [comfily](Being-Comfy).
    ```
            
-  *Strict MD*
+  ##### *Strict MD*
            
    ```
    1.  Download a wallet
@@ -68,9 +70,9 @@ You must follow [strict markdown](https://daringfireball.net/projects/markdown/)
        * it is saved [comfily](../Being-Comfy). //it assumed we are in the guides/wallets/ directory
    ```    
    
-   ex (c) and (d)->
+   #### Ex (c) and (d):
    
-   *Wiki MD*
+   ##### *Wiki MD*
    ```
    1. Install Linux
    2. Enter this:
@@ -78,7 +80,7 @@ You must follow [strict markdown](https://daringfireball.net/projects/markdown/)
    sudo apt-get upgrade```
    ```
    
-   *Strict MD*
+   ##### *Strict MD*
    
  
    ```
