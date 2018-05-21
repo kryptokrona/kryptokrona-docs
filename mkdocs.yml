@@ -5,8 +5,8 @@ site_author: 'TurtleCoin'
 site_url: https://turtlewiki.netlify.com/
 
 # repo
-repo_name: 'Sajo811/turtledocs'
-repo_url: 'https://github.com/Sajo811/turtledocs'
+repo_name: 'turtlecoin/sajodocs'
+repo_url: 'https://github.com/turtlecoin/sajodocs'
 
 # copyright
 copyright: 'Copyright 2017-2018 TurtleCoin'
