@@ -65,7 +65,7 @@ You must follow [strict markdown](https://daringfireball.net/projects/markdown/)
    2.  Make a wallet
        Make sure you choose a storng password!
    3.  Check that
-       * it is saved [comfily](../Being-Comfy).
+       * it is saved [comfily](../Being-Comfy). //it assumed we are in the guides/wallets/ directory
    ```    
   
 
