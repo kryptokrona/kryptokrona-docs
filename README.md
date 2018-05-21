@@ -20,11 +20,13 @@ You must follow [strict markdown](https://daringfireball.net/projects/markdown/)
   
   ex (a)-> 
   
-  *GFM*
+  *Wiki MD*
            
    ```
    * Download wallet
      * Make a new wallet
+       * give it a name
+       ![walletname](guides/wallets/images/name.png)
     ```       
          
   *Strict MD*
@@ -32,22 +34,24 @@ You must follow [strict markdown](https://daringfireball.net/projects/markdown/)
    ```
    * Download a wallet
        * Make a new wallet
+           * give it a name
+           ![walletname](images/name.png)
    ```    
       
   ex (b)-> 
   
-  *GFM*
+  *Wiki MD*
            
    ```
    1. Download a wallet
-   ![make wallet](images/make-wallet.png)
+   ![make wallet](guides/wallets/images/make-wallet.png)
    ---
    Incase you can't make, then just try again.
    ---
    2. Make a wallet
    Make sure you choose a strong password!
    3. Check that
-     * it is saved comfily.
+     * it is saved [comfily](Being-Comfy).
    ```
            
   *Strict MD*
@@ -61,7 +65,7 @@ You must follow [strict markdown](https://daringfireball.net/projects/markdown/)
    2.  Make a wallet
        Make sure you choose a storng password!
    3.  Check that
-       * it is saved comfily
+       * it is saved [comfily](../Being-Comfy).
    ```    
   
 
