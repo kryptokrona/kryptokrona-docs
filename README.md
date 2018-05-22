@@ -2,9 +2,9 @@
 
 This is the repo where the new frontend of the [existing wiki](https://github.com/turtlecoin/turtlecoin-wiki) resides.
 
-Currently deployed with Netlify, check it out!
+Currently deployed on a TurtleCoin subdomain using Netlify, check it out!
 
-https://turtlewiki.netlify.com/
+https://docs.turtlecoin.lol
 
 ## Contributing Guidelines
 
