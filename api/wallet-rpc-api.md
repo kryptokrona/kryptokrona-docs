@@ -61,7 +61,7 @@ To make a JSON RPC request to your TurtleCoin RPC Wallet you should use a POST r
 Parameter            | Description
 -------------------- | ------------------------------------------------------------ 
 `<service address>`  | IP of TurtleCoin RPC Wallet, if RPC Wallet is located on local machine it is either 127.0.0.1 or localhost
-`<service port>`     | TurtleCoin RPC Wallet port, by default it is binded to 8070 port, but it can be manually binded to any port you want
+`<service port>`     | TurtleCoin RPC Wallet port, by default it is bound to 8070 port, but it can be manually bound to any port you want
 
 
 
