@@ -908,7 +908,7 @@ Argument        | Mandatory                                                     
 --------------- | ---------------------------------------------------------------------------- | ------------------------------------------------------ | -------
 addresses       | No                                                                           | Array of strings, where each string is an address		| array
 blockHash       | Only one of these parameters (`blockHash` or `firstBlockIndex`) is allowed.  | Hash of the starting block		                        | string
-firstBlockIndex | Only one of these parameters (`blockHash` or `firstBlockIndex`) is allowed.  | Starting height		                                | int
+firstBlockIndex | Only one of these parameters (`blockHash` or `firstBlockIndex`) is allowed.  | Starting height >0 (1,2,3...)		                                | int
 blockCount      | Yes                                                                          | Number of blocks to return transaction hashes from		| int
 paymentId       | No                                                                           | Valid payment ID		                                | string
 
