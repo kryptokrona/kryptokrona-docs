@@ -108,4 +108,6 @@ pages:
         - Compiling from Source: guides/wallets/Compiling-from-Source.md
       - CryptoCurrency Fundamentals:
         - Smart Contracts: guides/crypto-funda/smart-contract.md
+    - For Developers:
+      - Resorces: developers/Resources.md
 
