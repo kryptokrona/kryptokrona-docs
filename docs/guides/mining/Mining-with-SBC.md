@@ -29,7 +29,7 @@ wget https://github.com/auto-joe/rPi-xmrig-gcc7.3.0/archive/2.6.0-beta1.zip
 2. Download it to a directory of your choice and extract it to a folder called `rPi-xmrig`, or anything of your choice.
 
 ```
-unzip 2.6.0-beta1.zip -d / rPI-xmrig
+unzip 2.6.0-beta1.zip -d / rPi-xmrig
 ```
 
 ## Configure and Run the Miner
