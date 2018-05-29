@@ -22,8 +22,15 @@ Next, we need to obtain a CPU miner. We'll use `rPi-xmrig-gcc7.3.0`
 
 1. Download the `.zip` source code from the [Releases page](https://github.com/auto-joe/rPi-xmrig-gcc7.3.0/releases/latest)
 
+```
+wget https://github.com/auto-joe/rPi-xmrig-gcc7.3.0/archive/2.6.0-beta1.zip
+```
 
 2. Download it to a directory of your choice and extract it to a folder called `rPi-xmrig`, or anything of your choice.
+
+```
+unzip 2.6.0-beta1.zip -d / rPI-xmrig
+```
 
 ## Configure and Run the Miner
 
