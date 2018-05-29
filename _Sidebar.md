@@ -38,8 +38,17 @@
       * [WinForms Wallet](Using-WinForms-Wallet)
       * [Nest Wallet](Using-Nest-Wallet)
     * [SimpleWallet (CLI)](Using-SimpleWallet)
+      * [Using Checkpoints](Using-checkpoints)
     * [Paper Wallet](Making-a-Paper-Wallet)
     * [Recovering your Wallet](Recovering-your-Wallet)
+    * [Using Remote Nodes](Using-remote-nodes)
+  - Service Operators
+    * [Compiling TurtleCoin from Source](Compiling-From-Source)
+      - [CentOS 7](Compiling-From-Source#centos-7)
+    * [TurtleCoind behind HAProxy](TurtleCoind-behind-HAProxy)
+
+- Developers
+  * [Resources](Resources)
 
 - TRTL Development
   - Connecting with Developers
@@ -55,5 +64,6 @@
     - Wallets, Keys & Addresses
     - Transactions
     - Proof-of-Work
+  - [Smart Contracts](smart-contract)
 
 - [Contributors](Contributors)

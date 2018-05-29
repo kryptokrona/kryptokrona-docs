@@ -2,7 +2,7 @@
 
 Back in the day, we had the [#raindance bot](Participating-in-Raindance), then people took advantage of the bot and it was retired. Now we have RainBorg!
 
-<img src="guides/images/rainborg/rainborg-avatar.png" width="194" height="208" alt="RainBorg Avatar" />
+![rainborg avatar](guides/images/rainborg/rainborg-avatar.png)
 
 This bot monitors chat activity. Once a certain criterion is met, RainBorg sends out a tip using the tipbot, [trtlbot++](Using-trtlbot-plus-plus), to people who have recently been chatting away.
 
@@ -35,7 +35,7 @@ Go to the  `#wallets` channel in the [Discord server](https://discord.gg/J7g99EE
 For example, you would type:
 
 ```
-.registerwallet TRTLv3pFrFm2yk4cYNtKf5fxV1b594tNrZfEV2CYWJsTSqr9BWoWMrUNpQaeD9StrzQrxpRQKPCdd1FfvT6D6dAg4pY6iB7sqsG
+.registerwallet TRTLv3pFrFm2yk4cYNtKf5fxV1b594tNrZfEV2CYWJsTSqr9BWoWMrUNpQaeD9StrzQrxpRQKPCdd1FfvT6D6dAg4pY6iB7sqs
 ```
 
 That's it, you're in, now start chatting with your fellow Turtles.
@@ -98,11 +98,16 @@ Yes she'll respond to `$` commands:
 Every time RainBorg rains down tips on chatty Turtles she'll post a message in the #raindance channel.
 They look something like this:
 
-<blockquote>
-<strong>TUT TUT</strong>
-<p>Huzzah, 500 TRTL just rained on 4 chatty turtles in #mining, they each got 125 TRTL!</p>
-<img src="guides/images/rainborg/rainborg-rain.png" width="256" height="256" alt="turtle in the rain" />
-</blockquote>
+> **TUT TUT**
+>
+> Huzzah, 500 TRTL just rained on 4 chatty turtles in #mining, they each got 125 TRTL!
+>
+> ![TRTL in rain](guides/images/rainborg/rainborg-rain.png)
+
+# Wow? Megatip wat?
+
+When an operator runs a megatip command, RainBorg splits the amount between all [tippable channels](#which-channels-does-this-work-with), and the amount in the command is split across all the active members in the eligible channels, who were in the list to get tipped originally.
+It is divided equally, so if person A and B are talking in \#general, and person B and C were talking in \#help, and there was a 400 megatip, 100 TRTL would go to A and C, and 200 TRTL would go to B(100 TRTL for each channel)
 
 # Anything not covered here?
 
@@ -110,8 +115,3 @@ Open a [new issue](https://github.com/turtlecoin/meta/issues/new?title=RainBorg+
 
 The gaps will be filled either by you or another person, [anyone can contribute](https://github.com/turtlecoin/turtlecoin-wiki) to these docs as well!
 
-#### Wow? Megatip wat?
-
-An idea has been floated regarding a Megatip function. Basically, someone could purposely send a large chunk of TRTL and most of it would be sent out in the next wave of rain tips. 
-
-If you want to see something like this, talk about it! ;)

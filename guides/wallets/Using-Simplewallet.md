@@ -46,18 +46,8 @@ To save time, consider downloading a cached 'bootstrap' of the blockchain (see [
 
 #### Using Checkpoints
 
-In **versions 0.4.3+** you can sync a fresh chain from block 0 much quicker by using checkpoints. Follow these steps-
-  * On [this link](https://github.com/turtlecoin/checkpoints/raw/master/checkpoints.csv), right click -> `Save Link As..` 
-  * Save in the directory where your wallet and daemon are
-  * Open Command Prompt/the terminal in the directory where you saved it
-  * Type, for Windows,  
-  ```
-  TurtleCoind.exe --load-checkpoints checkpoints.csv
-  ```
-  Or, for **Mac and Linux**, type
-  ```
-  ./TurtleCoind --load-checkpoints checkpoints.csv
-  ```
+In **versions 0.4.3+** you can sync a fresh chain from block 0 much quicker by using checkpoints. Follow [this guide](Using-checkpoints) to learn more
+
 ### Windows
 
 Run the `TurtleCoind.exe` executable extracted from the Windows binary zip:
@@ -87,50 +77,7 @@ Run the `TurtleCoind` binary extracted from the Linux binary tarball:
 
 In case you don't want to download the blockchain and verify it everytime, you can instead use a Remote Node to quickly sync the blockchain.
 
-##### How to do it
-
-1. Open up a command prompt window and navigate to the folder that contains *simplewallet*.
-2. Use the following command to start SimpleWallet on Windows:
-
-```
-simplewallet.exe --remote-daemon host:port
-```
-
-Or, for **Mac and Linux**,
-
-```
-./simplewallet --remote-daemon host:port
-```
-
-Replace `host:port` with values from one of the public remote daemons available below.
-
-You can now follow your normal process to access your wallet.
-
-For example-
-
-```
-simplewallet.exe --remote-daemon public.turtlenode.io:11898
-```
-
-##### Making a Script to do it automatically
-
-1. Open NotePad and type the following lines inside:
-
-```text
-@echo off
-simplewallet.exe --remote-daemon host:port
-pause
-```
-
-1. Replace`host:port` with one of the values from the table below
-2. Save the filename as `start.bat` and save the file as `All files`.
-3. Double click on the file to start the daemon.
-
-##### Known remote daemons
-
-|         Host         | Port  |        Website        |
-| :------------------: | :---: | :-------------------: |
-| public.turtlenode.io | 11898 | https://turtlenode.io |
+Check [here](Using-remote-nodes) for more info.
 
 ## Using SimpleWallet
 
