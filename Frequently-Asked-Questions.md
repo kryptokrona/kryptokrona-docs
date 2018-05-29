@@ -31,6 +31,10 @@ Your stats will only update when your pool finds a block and it matures, so if y
 
 A: To save money on fees, the pools send payouts in chunks. [Check your pool website for your pending balance](#pending-balance-not-gone-up).
 
+#### Q: Why are my results being rejected from the pool?
+
+ A: You're using a incorrect algorithm. If you are using xmr-stak, you should use cryptonight_lite_v7 as the algorithm, if you are using xmrig use cryptonight-lite as the algorithm and the variant set to 1.
+ 
 #### Q: I got banned from my mining pool. Why?
 
 A: If you submit lots of invalid shares, a pool might ban you. Possible reasons for invalid shares can be 
@@ -134,7 +138,7 @@ A: Generally, this is due to an incorrectly configured config. In the directory 
 
     ```
     {"pool_address" : "eu.turtlepool.space:3333",
-     "wallet_address" : "TRTLv2Fyavy8CXG8BPEbNeCHFZ1fuDCYCZ3vW5H5LXN4K2M2MHUpTENip9bbavpHvvPwb4NDkBWrNgURAd5DB38FHXWZyoBh4wW",
+     "wallet_address" : "TRTLv2Fyavy8CXG8BPEbNeCHFZ1fuDCYCZ3vW5H5LXN4K2M2MHUpTENip9bbavpHvvPwb4NDkBWrNgURAd5DB38FHXWZyoBh4w",
      "pool_password" : "x",
      "use_nicehash" : false,
      "use_tls" : false,
