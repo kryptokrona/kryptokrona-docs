@@ -19,6 +19,7 @@ Technical resources to start building on TurtleCoin.
 ## Libraries
 
 * [Woo Turtle](https://github.com/turtlecoin/woo-turtle)
+* [turtlecoin/turtlecoin-walletd-csharp](https://github.com/turtlecoin/turtlecoin-walletd-csharp): An asynchronous wrapper API for loading and accessing the TurtleCoin daemon and wallet applications. Built to ease the creation of wallets and applications that want to pull data from the network.
 
 
 ## Reads
