@@ -32,7 +32,7 @@ SSH into the GCP instance and follow these steps-
 
 3.  To remove donations, type-
 
-    ``edit xmr-stak/xmrstak/donate-level.hpp```
+    ```edit xmr-stak/xmrstak/donate-level.hpp```
 
     * Change-
 
@@ -72,9 +72,6 @@ SSH into the GCP instance and follow these steps-
 
 11. Check [XMR-Stak Setup and Configuration](#xmr-stak-setup-and-configuration)
 
-12. If you see something like this, that means it’s working!
-
-![workubuntu](images/xmrstak-ubuntuwork.png)
 
 ## XMR-Stak Setup and Configuration
 
@@ -154,6 +151,8 @@ Upon first launching XMR-Stak, the software will ask you several setup and confi
 
 
 Done! The miner will now start scanning your hardware and will begin mining. Awesome!
+
+![workubuntu](images/xmrstak-ubuntuwork.png)
 
 
 XMR-Stak will save your configuration in `config.txt`  in the same directory from which it was first run.   
