@@ -12,7 +12,7 @@ SSH into the GCP instance and follow these steps-
 
 1.  Open the terminal and install dependencies by running this command- 
 
-    ```sudo apt install libmicrohttpd-dev libssl-dev cmake build-essential libhwloc-dev```
+    ```sudo apt install libmicrohttpd-dev libssl-dev cmake build-essential libhwloc-dev git```
 
 2.  Clone the package- 
 
@@ -20,7 +20,7 @@ SSH into the GCP instance and follow these steps-
 
 3.  To remove donations, type-
 
-    `gedit xmr-stak/xmrstak/donate-level.hpp`
+    `edit xmr-stak/xmrstak/donate-level.hpp`
 
     * Change-
 
@@ -48,21 +48,13 @@ SSH into the GCP instance and follow these steps-
 
 8.  XMR-Stak will now be located in `/home/user/xmr-stak/build/bin`
 
-9.  In the terminal, type- (install if not installed)-
-
-    `ccmake ..`
-
-10. Using the Up and Down arrows, scroll to the 2nd page. Then, on `XMR-STAK_CURRENCY`, press enter to change it to `monero` (if needed, you can make personal tweaks by reading the descriptions of each value)
-
-11. Once you're done, press `c` and then `g` on your keyboard. 
-
-12. Type- 
+9. Type- 
 
     `./xmr-stak`
 
-13. Check [XMR-Stak Setup and Configuration](#xmr-stak-setup-and-configuration)
+10. Check [XMR-Stak Setup and Configuration](#xmr-stak-setup-and-configuration)
 
-14. If you see something like this, that means it’s working!
+11. If you see something like this, that means it’s working!
 
 ![workubuntu](images/xmrstak-ubuntuwork.png)
 
