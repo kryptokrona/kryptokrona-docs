@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/turtlecoin/turtlecoin-docs.svg?branch=master)](https://travis-ci.org/turtlecoin/turtlecoin-docs)
+
 # turtlecoin-docs
 :turtle: :turtle: :turtle: Documentation for all things TurtleCoin:turtle: :turtle: :turtle:
 
