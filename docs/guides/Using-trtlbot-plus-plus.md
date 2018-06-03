@@ -62,7 +62,7 @@ If it shows `0.00`, then make sure you have [deposited](#depositing-turtle) some
 ## Tipping People
 To tip someone, type `.tip 12345 @person`. 
 
-Replace `12345` with how much you want to tip the person. 
+Replace `12345` with how much you want to tip the person.  
 Replace `@person` with whom you want to tip it to.
 
 For example, `.tip 1 @RockSteady#7588` will tip the user called "RockSteady"  1 TRTL.
@@ -74,7 +74,7 @@ So if you tipped 1 TRTL, 1.1 TRTL will be pulled from your account so that the f
 
 ***The syntax for tipping someone is- `.tip 12345 @person`***
      
-- Trying to add a message before it, will not work. 
+- Trying to add a message before it, will not work.  
    For example, 
 
    ```
@@ -87,7 +87,7 @@ So if you tipped 1 TRTL, 1.1 TRTL will be pulled from your account so that the f
 
    ---
 
-- Trying to add it on a seperate line in 1 message will not work.
+- Trying to add it on a seperate line in 1 message will not work.  
   For example,
   ```
   heyo there.
@@ -100,9 +100,8 @@ So if you tipped 1 TRTL, 1.1 TRTL will be pulled from your account so that the f
 
   ---
 
-- Trying to add a message *after* it will **will** work.
-
-- For example, 
+- Trying to add a message *after* it will **will** work.  
+  For example, 
 
    ```
    .tip 1 @RockSteady#7588 hey
@@ -114,7 +113,7 @@ So if you tipped 1 TRTL, 1.1 TRTL will be pulled from your account so that the f
 
    ---
 
-- Trying to add a message after the command on a seperate line in an existing message **will** work.
+- Trying to add a message after the command on a seperate line in an existing message **will** work.  
   For example,
   ``` 
   .tip 1 @RockSteady#7588
@@ -125,8 +124,7 @@ So if you tipped 1 TRTL, 1.1 TRTL will be pulled from your account so that the f
 
   ---
 
-  * Trying to add a message *between* the *amount* and the *recipient* **will** work.
-
+- Trying to add a message *between* the *amount* and the *recipient* **will** work.  
   For example, 
 
   ```
@@ -152,9 +150,10 @@ So if you tipped 1 TRTL, 1.1 TRTL will be pulled from your account so that the f
 
 Reacting with the emoji ![99](images/trtlbot-plus-plus/almost100.png) on someone's message will tip them 99 TRTL.
 
-If someone has tipped someone, then reacting with ![tip](images/trtlbot-plus-plus/rsz_tip.png) on the message on which they tipped the person (`.tip 1 @RockSteady#7588`) will send the recipient (in this case, RockSteady) the same amount he was originally tipped (in this case, 1). So the recipient (RockSteady) gets 2 TRTL.
+If someone has tipped someone, then reacting with ![tip](images/trtlbot-plus-plus/rsz_tip.png) on the message on which they tipped the person (`.tip 1 @RockSteady#7588`) will send the recipient (in this case, RockSteady) the same amount he was originally tipped (in this case, 1).    
+So the recipient (RockSteady) gets 2 TRTL.
 
-Reacting with ![tip](images/trtlbot-plus-plus/rsz_tip.png) on a message where in a person was tipped with the emoji ![99](images/trtlbot-plus-plus/almost100.png) will **not** tip the original poster of the message 99 TRTL.
+Reacting with ![tip](images/trtlbot-plus-plus/rsz_tip.png) on a message where in a person was tipped with the emoji ![99](images/trtlbot-plus-plus/almost100.png) will **not** tip the original poster of the message 99 TRTL.  
 You *can* react with the emoji ![99](images/trtlbot-plus-plus/almost100.png) (again) however, to tip the person 99 TRTL.
 
 ### Tipping Multiple People
@@ -168,11 +167,9 @@ This will tip RockSteady *and* bebop 1 TRTL **each** (it will not divide the 1 T
 The bot will still pull a fee of 0.1 TRTL extra from your balance.
 
 This can be used to tip - so far - an unlimited amount of people, given that you have enough balance.  
-The bot will PM you after it has sent the payments to everyone, letting you know the TX Hash, your updated balance, and how many people it sent it to, along with the number of 
+The bot will PM you after it has sent the payments to everyone, letting you know the TX Hash, your updated balance, and how many people it sent it to, along with the number of -
 
-
-
-- successful payments (the recipent had registered their wallet and the payment was successfully sent)
+- successful payments (the recipent had registered their wallet and the payment was successfully sent)  
 - unsuccessful payments (the recipent had not registered their wallet and/or the payment was not successfully sent)
 
 If you tip multiple people, some who have registered their wallets and some who haven't, the bot will react with ![99](images/trtlbot-plus-plus/almost100.png) and :sos: for both(only once).  
@@ -184,12 +181,11 @@ However, it will not let you know whose wallet has not been registered, simply t
 
 When you tip someone, the desired amount plus 0.1 TRTL is pulled from your tipjar wallet balance and sent to the recipient's registered wallet (if he has not registered a wallet, he cannot receive tips).
 
-When you get tipped, the sender sends the desired amount plus 0.1 TRTL, pulled from his tipjar wallet balance, directly to your registered wallet (if you haven't registered a wallet, you can't receive tips).
+When you get tipped, the sender sends the desired amount plus 0.1 TRTL, pulled from his tipjar wallet balance, directly to your registered wallet (if you haven't registered a wallet, you can't receive tips).  
 It also reacts to the message on which the person was tipped (`.tip 1 @RockSteady#7588`) with ![moneywings](images/trtlbot-plus-plus/rsz_money_with_wings.png).
 
 It *does not* send the TRTL to your tipjar balance. It sends it *directly* to your **wallet**.  
 This is to ensure that more and more TRTL is introduced into the ecosystem, rather than the same TRTL being circulated around.
-
 
 - If you try to tip someone who isn't registered, the bot will react with :sos: and PM him with instructions on how to register their wallet and tip. 
 
@@ -197,17 +193,17 @@ This is to ensure that more and more TRTL is introduced into the ecosystem, rath
 
 trtlbot++ was created and is owned by [@krruzic](https://github.com/krruzic)(@madk#1044  in the chat). When he was asked about the security of trtlbot++'s wallet, he said-
 
-"the wallet is pretty secure. All ports are closed except 80, whatever minecraft is and my SSH port. The SSH has no root login and only two valid keys. ~~One of the keys is for an account that has no permissions to go anywhere but one folder (I may revoke this key)~~ *[This key has since been revoked]*. There are other security features but I don't want to reveal any possible attack surfaces by accident."
+"*the wallet is pretty secure. All ports are closed except 80, whatever minecraft is and my SSH port. The SSH has no root login and only two valid keys. ~~One of the keys is for an account that has no permissions to go anywhere but one folder (I may revoke this key)~~ *[This key has since been revoked]*. There are other security features but I don't want to reveal any possible attack surfaces by accident.*"
 
 and follows up with-
 
-"And if the wallet gets hacked I will refund people's coins."
+"*And if the wallet gets hacked I will refund people's coins.*"
 
 and ends it with-
 
-"I'm not gonna up and run with the tipjar like the doge tipbot guy either :)"
+"*I'm not gonna up and run with the tipjar like the doge tipbot guy either :)*"
 
-So rest assured, trtlbot++'s wallet is extremely secure, and in the rare occasion that anything *does* happen, you can relax knowing that you'll get it back :)
+So rest assured, trtlbot++'s wallet is extremely secure, and in the rare occasion that anything *does* happen, you can relax knowing that you'll get it back ;)
 
 ## Other Commands
 
