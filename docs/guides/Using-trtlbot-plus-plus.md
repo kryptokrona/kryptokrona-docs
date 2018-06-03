@@ -60,10 +60,10 @@ To check your balance, type `.balance`. trtlbot++ will PM you with how much bala
 If it shows `0.00`, then make sure you have [deposited](#depositing-turtle) some TRTL and it has [been received](#expected-results)
 
 ## Tipping People
-To tip someone, type `.tip <amount> <@person>`. 
+To tip someone, type `.tip 12345 @person`. 
 
-`<amount>` is how much you will tip the person. 
-`<@person>` is whom you'll tip it to.
+Replace `12345` with how much you want to tip the person. 
+Replace `@person` with whom you want to tip it to.
 
 For example, `.tip 1 @RockSteady#7588` will tip the user called "RockSteady"  1 TRTL.
 
@@ -72,7 +72,7 @@ So if you tipped 1 TRTL, 1.1 TRTL will be pulled from your account so that the f
 
 ### Adding a Message when Tipping
 
-***The syntax for tipping someone is- `.tip <amount> <@person>`***
+***The syntax for tipping someone is- `.tip 12345 @person`***
      
 - Trying to add a message before it, will not work. 
    For example, 
