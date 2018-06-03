@@ -19,7 +19,8 @@ Technical resources to start building on TurtleCoin.
 ## Libraries
 
 * [Woo Turtle](https://github.com/turtlecoin/woo-turtle)
-
+* [TurtleCoind-ha](https://github.com/turtlecoin/turtlecoind-ha)
+* [Walletd-ha](https://github.com/turtlecoin/walletd-ha)
 
 ## Reads
 
