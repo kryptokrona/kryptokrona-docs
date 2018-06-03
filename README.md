@@ -1,4 +1,4 @@
-# turtlecoin-wiki
+# turtlecoin-docs
 :turtle: :turtle: :turtle: Documentation for all things TurtleCoin:turtle: :turtle: :turtle:
 
 ## About
