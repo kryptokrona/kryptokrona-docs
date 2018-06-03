@@ -19,11 +19,13 @@ Changes, edits, and other contributions to the TurtleCoin documentation can be s
 Please be granular and make a single commit per change/set of related changes (or file an Issue for each change if not directly submitting PR's). This will make reviewing changes easier and increase the speed and efficiency of getting your changes merged in.
 
 ## Thanks and Contributors
-- @ZedPea
-- @ar-x
-- @Sajo811
-- @holytastyguacamole
-- @SoreGums
+
+- [@ZedPea](https://github.com/ZedPea/)
+- [@ar-x](https://github.com/ar-x/)
+- [@Sajo811](https://github.com/Sajo811/)
+- [@holytastyguacamole](https://github.com/holytastyguacamole/)
+- [@SoreGums](https://github.com/SoreGums/)
+- [@timmcleod](https://github.com/timmcleod/)
 - the TurtleCoin community.
 
 ...more to be listed soon!
