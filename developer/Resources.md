@@ -22,7 +22,8 @@ Technical resources to start building on TurtleCoin.
 
 * [Woo Turtle](https://github.com/turtlecoin/woo-turtle): A TurtleCoin Payment Gateway Plugin for WooCommerce.
 * [turtlecoin/turtlecoin-walletd-csharp](https://github.com/turtlecoin/turtlecoin-walletd-csharp): An asynchronous wrapper API for loading and accessing the TurtleCoin daemon and wallet applications. Built to ease the creation of wallets and applications that want to pull data from the network.
-
+* [TurtleCoind-ha](https://github.com/turtlecoin/turtlecoind-ha): NodeJS TurtleCoin Walletd High-Availability Wrapper
+* [Walletd-ha](https://github.com/turtlecoin/walletd-ha): NodeJS TurtleCoin Walletd High-Availability Wrapper
 
 ## Reads
 
