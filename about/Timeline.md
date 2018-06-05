@@ -1,7 +1,7 @@
 This is a timeline dedicated to important dates in the history of TurteCoin.
 
 - 2017 December 
-  * December 9th, TurtleCoin was created.
+  * **09:** TurtleCoin was created.
 
 - 2018 January
   * **08:** The first official Twitter post was made
