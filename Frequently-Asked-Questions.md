@@ -346,7 +346,7 @@ A: Yes, you can view the guide [here](Making-a-Paper-Wallet)
   * Tips - People will sometimes tip each other, especially if you make spicy memes in the #memes channel
   * Rain - Good active Turtles get rained on, check out what the [RainBorg](RainBorg-Wat-Dat) is to see how to use it.
   * Faucet - Head over to the [faucet](https://faucet.trtl.me/) and enter your TRTL address. 
-    The amount you can receive is limited(1 TRTL, thrice a day), to share the TRTL for all. Thanks to @madk for creating this.
+    The amount you can receive is limited(10 TRTL, thrice a day), to share the TRTL for all. Thanks to @madk for creating this.
 
 #### Q: Are there any light wallets / mobile wallets?
 
