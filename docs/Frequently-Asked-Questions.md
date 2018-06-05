@@ -85,7 +85,7 @@ A: <http://monerobenchmarks.info/> is a good source for this. You can look up yo
 
 A: ~~You can try the web miner [here](http://turtleminer.com). You will get a lower hashrate than native mining, and it doesn't have GPU support, however it's very easy to setup. Thanks to @Mongboy for creating this.~~ 
 
-Web miner currently isn't working. You can hop onto the [Discord](https://discord.gg/J7g99EE) if you're having issues and we'll help you out.
+Web miner currently isn't working. You can hop onto the [Discord][Discord_Link] if you're having issues and we'll help you out.
 
 #### Q: What is the miner executable / why isn't it working?
 
@@ -335,7 +335,7 @@ To view a guide on using them, you can go [here](guides/wallets/Making-a-Wallet/
    * If all else fails, if you have your private keys then you can instead import your wallet into SimpleWallet. 
 
 
-   * If that is not a desirable option, come and ask for help over at [the Discord](https://discord.gg/J7g99EE)
+   * If that is not a desirable option, come and ask for help over at [the Discord][Discord_Link]
 
 ## Paper Wallet / Cold Storage?<a name="paper-wallet-cold-storage"></a>
 #### Q: Wait, What's Cold Storage?
@@ -376,7 +376,7 @@ A: Yes, you can view the guide [here](guides/wallets/Making-a-paper-wallet)
 
   * Mining - see [here](guides/mining/Mining)
   * Buying - TRTL is currently available on these exchanges: [TradeOgre](https://tradeogre.com/exchange/BTC-TRTL) and [TradeSatoshi](https://tradesatoshi.com/Exchange/?market=TRTL_BTC)
-  * Bounties - Bounties for developing TRTL software, spreading the word of TRTL, and many other things are often posted in the #bounties channel on discord. Check the pinned messages for current bounties.
+  * Bounties - Bounties for developing TRTL software, spreading the word of TRTL, and many other things are often posted in the #bounties channel on [discord][Discord_Link]. Check the pinned messages for current bounties.
   * Tips - People will sometimes tip each other, especially if you make spicy memes in the `#memes` channel
   * Rain - Good active Turtles get rained on, check out what the [RainBorg](guides/RainBorg-Wat-Dat) is to see how to use it.
   * Faucet - Head over to the [faucet](https://faucet.trtl.me/) and enter your TRTL address. 
@@ -384,7 +384,7 @@ A: Yes, you can view the guide [here](guides/wallets/Making-a-paper-wallet)
 
 #### Q: Are there any light wallets / mobile wallets?
 
-  A: None are ready for usage right now, but they are being worked on. Check the development channels in Discord to see how people are getting on, and feel free to join in if you're a programmer!
+  A: None are ready for usage right now, but they are being worked on. Check the development channels in [Discord][Discord_Links] to see how people are getting on, and feel free to join in if you're a programmer!
 
 #### Q: What is RainBorg / how does it work?
 
@@ -408,8 +408,10 @@ A: Yes, you can view the guide [here](guides/wallets/Making-a-paper-wallet)
 
 #### Q: How do I make sure a pool isn't forked?
 
-You can ask someone in the Discord with a coloured name to run `/forked` for you, which will return with a list of pools which are possibly forked.
+You can ask someone in the [Discord][Discord_Link] with a coloured name to run `/forked` for you, which will return with a list of pools which are possibly forked.
 
 #### Q: I have a question which wasn't answered here, what should I do?
 
-  A: [Join the Discord](https://discord.gg/J7g99EE), and come to the `#help` channel, we'll try and fix any issues.
+  A: [Join the Discord][Discord_Link], and come to the `#help` channel, we'll try and fix any issues.
+
+[Discord_Link]:http://chat.turtlecoin.lol/
