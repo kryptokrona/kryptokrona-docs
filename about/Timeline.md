@@ -24,5 +24,6 @@ This is a timeline dedicated to important dates in the history of TurteCoin.
 - 2018 May
   * **14:** TurtleCoin community hits 10k members
   * **17:** TurtleCoin wins award for best community
-  - 2018 June
+
+- 2018 June
   * **01:** TurtleCoin blockchain surpassed 500k blocks
