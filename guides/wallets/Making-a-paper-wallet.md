@@ -1,6 +1,6 @@
 # Setting Up a Paper Wallet
 
-The main purpose of a paperwallet is to quickly create a wallet to start receiving funds. 
+The main purpose of a paper wallet is to quickly create a wallet to start receiving funds. 
 
 **You will not be able to spend or send your funds to other people until you set up a CLI, GUI or Web Wallet.**
 
