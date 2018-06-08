@@ -8,7 +8,12 @@ This guide will get you started mining TurtleCoin on a mobile phone.
 
 ## Setup
 
-To mine TurtleCoin, we'll use the Tony Monero app.
+To mine TurtleCoin, you can use the following Mobile Miner apps.
+
+1. [Tony Monero](#tony-xmr)
+2. [AA Miner](#aa-miner)
+
+## Tony Monero<a name="tony-xmr"></a>
 
 1. Download the [Tony Monero](https://play.google.com/store/apps/details?id=com.ethics.path.tonymonero) app from the Google Play Store.
 2. Upon downloading and installing, open the app.
@@ -30,13 +35,30 @@ You should note that by using the Tony Monero app, you will be contributing 10% 
 7. Make sure `Criptonight-lite support (Like AEON)` is checked.
 8. Press the play button on the top right
 
+## AA Miner<a name="aa-miner"></a>
+
+1. Download the [AA Miner](https://play.google.com/store/apps/details?id=com.aaminer.miner) app from the Google Play Store.
+2. Upon downloading and installing, open the app.
+3. Select `CryptonightLight v1` from the `Select Algorithm` dropdown menu.
+4. Specify how many cores you want to use. We recommend using half of how many cores your phone has. So if your phone has 6 cores, enter `3`
+5. Enter the pool of your choice including the `stratum+tcp://` part. To view a list of pools, you can go [here](Pools)
+6. Enter your TurtleCoin wallet address
+7. Enter the password of the pool. For most, it will be `x`
+8. Click on `Start Mining` to start mining TRTL.
+
 ## Expected Results
 
 The miner should now start mining, and the stats displayed show start updating, displaying your hashrate and the like(it may take a few minutes to update)
 
+### Tony Monero
+
 You can tap the question marks on the right if you're unsure of what each value means
 
 ![phone-mining](images/rsz_phone-mine.png)
+
+### AA Miner
+
+![aa-miner](images/aa-miner.png)
 
 Congratulations! You're now mining with your phone!
 
