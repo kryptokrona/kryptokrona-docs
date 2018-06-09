@@ -92,8 +92,10 @@ pages:
         - Pools: guides/mining/Pools.md
         - Cloud Mining: guides/mining/Cloud-Mining.md
         - Mining with a SBC: guides/mining/Mining-with-SBC.md
-        - Mining with your Mobile Phone: guides/mining/Mining-with-Phone.md
-        - Mining with AA Miner: guides/mining/Mining-with-AA-Miner.md
+        - Mining with your Mobile Phone: 
+          - How to mine with mobile: guides/mining/mobile-mining/Mining-with-Phone.md
+          - Using Tony Monero: guides/mining/mobile-mining/Using-Tony-Monero.md
+          - Using AA Miner: guides/mining/mobile-mining/Using-AA-Miner.md
       - Wallets:
         - Making a Wallet: guides/wallets/Making-a-Wallet.md
         - GUI Wallets:
