@@ -16,7 +16,7 @@ You must follow [strict markdown](https://daringfireball.net/projects/markdown/)
 * Links are *case sensitive*
   Links to files in `mkdocs.yml` must *perfectly match* the casing of the actual files, and the links to these files from other places must *perfectly match* the casing in `mkdocs.yml`.
   
-* If (a)points are to be indented under oneanother, (b)pictures/information are to be included under a "step 1", (c) codeblocks are to be made under steps/points, they are to be indented by 4 points. (d)Codeblocks must also start/end on a seperate line.
+* If (a)points are to be indented under one another, (b)pictures/information are to be included under a "step 1", (c) codeblocks are to be made under steps/points, they are to be indented by 4 points. (d)Codeblocks must also start/end on a separate  line.
   
   **Note: Text given beyond this point wrapped in code blocks are just examples, observe the formatting and not what's written**
   
@@ -48,7 +48,7 @@ You must follow [strict markdown](https://daringfireball.net/projects/markdown/)
    1. Download a wallet
    ![make wallet](guides/wallets/images/make-wallet.png)
    ---
-   Incase you can't make, then just try again.
+   In case you can't make, then just try again.
    ---
    2. Make a wallet
    Make sure you choose a strong password!
@@ -65,7 +65,7 @@ You must follow [strict markdown](https://daringfireball.net/projects/markdown/)
        Incase you can't make, then just try again.
        ---
    2.  Make a wallet
-       Make sure you choose a storng password!
+       Make sure you choose a strong password!
    3.  Check that
        * it is saved [comfily](../Being-Comfy). //it assumed we are in the guides/wallets/ directory
    ```    
