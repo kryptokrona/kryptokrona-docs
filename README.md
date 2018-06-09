@@ -20,6 +20,11 @@ This repo's Github wiki (http://github.com/turtlecoin/turtlecoin-wiki/wiki) serv
 Changes, edits, and other contributions to the TurtleCoin documentation can be submitted as a Github [Pull Request](https://github.com/turtlecoin/turtlecoin-wiki/pulls) to this repository, or as a Github Issue on this repo's [Issues page](https://github.com/turtlecoin/turtlecoin-wiki/issues).  
 Please be granular and make a single commit per change/set of related changes (or file an Issue for each change if not directly submitting PR's). This will make reviewing changes easier and increase the speed and efficiency of getting your changes merged in.
 
+### PR > Merge > Published
+
+Travis has been setup so that once a Pull Request has been accepted and merged, the changes will be pushed and published automatically. Keep an eye out just in case something didn't quite get caught in review, make a ninja edit (PR) to fix it up :)
+
+
 ## Thanks and Contributors
 
 - [@ZedPea](https://github.com/ZedPea/)
