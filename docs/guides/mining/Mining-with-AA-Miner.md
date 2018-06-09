@@ -1,4 +1,4 @@
-## Mining with AA Miner
+# Mining with AA Miner
 
 ## Setup
 
