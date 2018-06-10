@@ -17,6 +17,9 @@ npm install turtlecoin-walletd-rpc-js
 composer require turtlecoin/turtlecoin-walletd-rpc-php
 ```
 
+```python
+pip3 install turtlecoin
+```
 
 ## Interacting with the API
 
@@ -52,6 +55,16 @@ $config = [
 ];
 
 $walletd = new Walletd\Client($config);
+```
+
+```python
+from turtlecoin import Walletd
+
+rpcHost = '127.0.0.1'
+rpcPort = 8070
+rpcPassword = 'passw0rd'
+
+walletd = Walletd(rpcPassword, rpcHost, rpcPort)
 ```
 
 To make a JSON RPC request to your TurtleCoin RPC Wallet you should use a POST request that looks like this:
@@ -94,6 +107,10 @@ $walletd = new Walletd\Client($config);
 $viewSecretKey = 'xxxxx...';
 $response = $walletd->reset($viewSecretKey);
 echo $response->getBody()->getContents();
+```
+
+```python
+not implemented yet
 ```
 
 > Expected output:
@@ -200,6 +217,14 @@ $response = $walletd->getViewKey();
 echo $response->getBody()->getContents();
 ```
 
+```python
+from turtlecoin import Walletd
+
+walletd = Walletd(rpcPassword, rpcHost, rpcPort)
+response = walletd.get_view_key()
+print(response)
+```
+
 > Expected output:
 
 ```json
@@ -253,6 +278,15 @@ $walletd = new Walletd\Client($config);
 $address = 'TRTLxxxx...';
 $response = $walletd->getSpendKeys($address);
 echo $response->getBody()->getContents();
+```
+
+```python
+from turtlecoin import Walletd
+
+walletd = Walletd(rpcPassword, rpcHost, rpcPort)
+address = 'TRTLxxxx...'
+response = walletd.get_spend_keys(address)
+print(response)
 ```
 
 > Expected output:
@@ -316,6 +350,15 @@ $response = $walletd->getMnemonicSeed($address);
 echo $response->getBody()->getContents();
 ```
 
+```python
+from turtlecoin import Walletd
+
+walletd = Walletd(rpcPassword, rpcHost, rpcPort)
+address = 'TRTLxxxx...'
+response = walletd.get_mnemonic_seed(address)
+print(response)
+```
+
 > Expected output:
 
 ```json
@@ -377,6 +420,14 @@ $response = $walletd->getStatus();
 echo $response->getBody()->getContents();
 ```
 
+```python
+from turtlecoin import Walletd
+
+walletd = Walletd(rpcPassword, rpcHost, rpcPort)
+response = walletd.get_status()
+print(response)
+```
+
 > Expected output:
 
 ```json
@@ -434,6 +485,14 @@ use TurtleCoin\Walletd;
 $walletd = new Walletd\Client($config);
 $response = $walletd->getAddresses();
 echo $response->getBody()->getContents();
+```
+
+```python
+from turtlecoin import Walletd
+
+walletd = Walletd(rpcPassword, rpcHost, rpcPort)
+response = walletd.get_addresses()
+print(response)
 ```
 
 > Expected output:
@@ -497,6 +556,14 @@ $response = $walletd->createAddress($secretSpendKey, $publicSpendKey);
 echo $response->getBody()->getContents();
 ```
 
+```python
+from turtlecoin import Walletd
+
+walletd = Walletd(rpcPassword, rpcHost, rpcPort)
+response = walletd.create_address()
+print(response)
+```
+
 > Expected output:
 
 ```json
@@ -551,6 +618,15 @@ $response = $walletd->deleteAddress($address);
 echo $response->getBody()->getContents();
 ```
 
+```python
+from turtlecoin import Walletd
+
+walletd = Walletd(rpcPassword, rpcHost, rpcPort)
+address = 'TRTLxxxx...'
+response = walletd.delete_address(address)
+print(response)
+```
+
 > Expected output:
 
 ```json
@@ -559,6 +635,12 @@ echo $response->getBody()->getContents();
   "jsonrpc":"2.0",
   "result":{}
 }
+```
+
+or
+
+```
+True
 ```
 
 `deleteAddress()` method deletes a specified address.
@@ -604,6 +686,15 @@ $walletd = new Walletd\Client($config);
 $address = 'TRTLxxxx...';
 $response = $walletd->getBalance($address);
 echo $response->getBody()->getContents();
+```
+
+```python
+from turtlecoin import Walletd
+
+walletd = Walletd(rpcPassword, rpcHost, rpcPort)
+address = 'TRTLxxxx...'
+response = walletd.get_balance(address)
+print(response)
 ```
 
 > Expected output:
@@ -672,6 +763,16 @@ $firstBlockIndex = 0;
 $blockCount = 3;
 $response = $walletd->getBlockHashes($firstBlockIndex, $blockCount);
 echo $response->getBody()->getContents();
+```
+
+```python
+from turtlecoin import Walletd
+
+walletd = Walletd(rpcPassword, rpcHost, rpcPort)
+firstBlockIndex = 0
+blockCount = 3
+response = walletd.get_block_hashes(firstBlockIndex, blockCount)
+print(response)
 ```
 
 > Expected output:
@@ -972,6 +1073,15 @@ $response = $walletd->getUnconfirmedTransactionHashes($addresses);
 echo $response->getBody()->getContents();
 ```
 
+```python
+from turtlecoin import Walletd
+
+walletd = Walletd(rpcPassword, rpcHost, rpcPort)
+addresses = []
+response = walletd.get_unconfirmed_transaction_hashes(addresses)
+print(response)
+```
+
 > Expected output:
 
 ```json
@@ -1037,6 +1147,15 @@ $walletd = new Walletd\Client($config);
 $transactionHash = '55a23...';
 $response = $walletd->getTransaction($transactionHash);
 echo $response->getBody()->getContents();
+```
+
+```python
+from turtlecoin import Walletd
+
+walletd = Walletd(rpcPassword, rpcHost, rpcPort)
+transactionHash = '55a23...'
+response = walletd.get_transaction(transactionHash)
+print(response)
 ```
 
 > Expected output:
