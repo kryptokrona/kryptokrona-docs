@@ -60,7 +60,7 @@ $walletd = new Walletd\Client($config);
 ```python
 from turtlecoin import Walletd
 
-rpcHost = '127.0.0.1'
+rpcHost = 'localhost'
 rpcPort = 8070
 rpcPassword = 'passw0rd'
 
@@ -169,6 +169,14 @@ use TurtleCoin\Walletd;
 $walletd = new Walletd\Client($config);
 $response = $walletd->save();
 echo $response->getBody()->getContents();
+```
+
+```python
+from turtlecoin import Walletd
+
+walletd = Walletd(rpcPassword, rpcHost, rpcPort)
+response = walletd.save()
+print(response)
 ```
 
 > Expected output:
@@ -851,6 +859,19 @@ $response = $walletd->getTransactionHashes(
 echo $response->getBody()->getContents();
 ```
 
+```python
+from turtlecoin import Walletd
+
+walletd = Walletd(rpcPassword, rpcHost, rpcPort)
+blockCount = 100000
+blockHash = '6c285...'
+addresses = []
+paymentId = ''
+
+response = walletd.get_transaction_hashes(addresses, blockHash, blockCount, paymentId)
+print(response)
+```
+
 > Expected output:
 
 ```json
@@ -941,6 +962,19 @@ $response = $walletd->getTransactions(
 );
 
 echo $response->getBody()->getContents();
+```
+
+```python
+from turtlecoin import Walletd
+
+walletd = Walletd(rpcPassword, rpcHost, rpcPort)
+blockCount = 100000
+blockHash = '6c285...'
+addresses = []
+paymentId = ''
+
+response = walletd.get_transactions(addresses, blockHash, blockCount, paymentId)
+print(response)
 ```
 
 > Expected output:
@@ -1274,6 +1308,28 @@ $response = $walletd->sendTransaction(
 echo $response->getBody()->getContents();
 ```
 
+```python
+from turtlecoin import Walletd
+
+walletd = Walletd(rpcPassword, rpcHost, rpcPort)
+anonymity = 3
+fee = 10
+addresses = []
+unlockTime = 0
+extra = ''
+paymentId = ''
+changeAddress = 'TRTLyyyy...'
+
+transfers = [
+    {"address" : "TRTLxxxx...", "amount" : 5000},
+]
+
+response = walletd.send_transaction(
+    transfers, anonymity, fee, addresses, changeAddress, extra, paymentId, unlockTime
+)
+print(response)
+```
+
 > Expected output:
 
 ```json
@@ -1368,6 +1424,28 @@ $response = $walletd->createDelayedTransaction(
 echo $response->getBody()->getContents();
 ```
 
+```python
+from turtlecoin import Walletd
+
+walletd = Walletd(rpcPassword, rpcHost, rpcPort)
+anonymity = 3
+fee = 10
+addresses = []
+unlockTime = 0
+extra = ''
+paymentId = ''
+changeAddress = 'TRTLyyyy...'
+
+transfers = [
+    {"address" : "TRTLxxxx...", "amount" : 5000},
+]
+
+response = walletd.create_delayed_transaction(
+    transfers, anonymity, fee, addresses, changeAddress, extra, paymentId, unlockTime
+)
+print(response)
+```
+
 > Expected output:
 
 ```json
@@ -1437,6 +1515,14 @@ $response = $walletd->getDelayedTransactionHashes();
 echo $response->getBody()->getContents();
 ```
 
+```python
+from turtlecoin import Walletd
+
+walletd = Walletd(rpcPassword, rpcHost, rpcPort)
+response = walletd.get_delayed_transaction_hashes()
+print(response)
+```
+
 > Expected output:
 
 ```json
@@ -1492,6 +1578,15 @@ $response = $walletd->deleteDelayedTransaction($transactionHash);
 echo $response->getBody()->getContents();
 ```
 
+```python
+from turtlecoin import Walletd
+
+walletd = Walletd(rpcPassword, rpcHost, rpcPort)
+transactionHash = '50d83...'
+response = walletd.delete_delayed_transaction(transactionHash)
+print(response)
+```
+
 > Expected output:
 
 ```json
@@ -1500,6 +1595,12 @@ echo $response->getBody()->getContents();
   "jsonrpc":"2.0",
   "result":{}
 }
+```
+
+or 
+
+```
+True
 ```
 
 `deleteDelayedTransaction()` method deletes a specified delayed transaction.
@@ -1548,6 +1649,15 @@ $response = $walletd->sendDelayedTransaction($transactionHash);
 echo $response->getBody()->getContents();
 ```
 
+```python
+from turtlecoin import Walletd
+
+walletd = Walletd(rpcPassword, rpcHost, rpcPort)
+transactionHash = '50d83...'
+response = walletd.send_delayed_transaction(transactionHash)
+print(response)
+```
+
 > Expected output:
 
 ```json
@@ -1556,6 +1666,12 @@ echo $response->getBody()->getContents();
   "jsonrpc":"2.0",
   "result":{}
 }
+```
+
+or
+
+```
+True
 ```
 
 `sendDelayedTransaction()` method sends a specified delayed transaction.
@@ -1608,6 +1724,19 @@ $destinationAddress = 'TRTLzzzz...';
 $response = $walletd->sendFusionTransaction($threshold, $anonymity, $addresses, $destinationAddress);
 
 echo $response->getBody()->getContents();
+```
+
+```python
+from turtlecoin import Walletd
+
+walletd = Walletd(rpcPassword, rpcHost, rpcPort)
+threshold = 1000000
+anonymity = 3
+addresses = ['TRTLxxxx...', 'TRTLyyyy...']
+destinationAddress = 'TRTLzzzz...'
+response = walletd.send_fusion_transaction(threshold, anonymity, addresses, destinationAddress)
+
+print(response)
 ```
 
 > Expected output:
@@ -1680,6 +1809,16 @@ $addresses = ['TRTLxxxx...', 'TRTLyyyy...'];
 $response = $walletd->estimateFusion($threshold, $addresses);
 
 echo $response->getBody()->getContents();
+```
+
+```python
+from turtlecoin import Walletd
+
+walletd = Walletd(rpcPassword, rpcHost, rpcPort)
+threshold = 1000000
+addresses = ['TRTLxxxx...', 'TRTLyyyy...']
+response = walletd.estimate_fusion(threshold, addresses)
+print(response)
 ```
 
 > Expected output:
