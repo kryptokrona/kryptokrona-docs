@@ -15,10 +15,11 @@ For example, you would type-
 
 ## Depositing Turtle
 
-After your wallet address has been registered, type `.deposit` in the #bots channel.
+After your wallet address has been registered, type `.deposit` in the #bots channel, then:
 
-* Copy the first line of code he gives and enter it as the address
-* Then copy the second line of code he gives and enter it as the address
+* Check for a new direct message from turtlebot++ 
+* Copy the first line of code he gives and enter it in your wallet's Recipient address field
+* Then copy the second line of code he gives and enter it as the Payment ID address field
 * After that, enter the amount of mixin and amount you want to use/send and send the transaction!
 
 #### CLI Wallet
@@ -29,11 +30,11 @@ Follow the steps given [here](wallets/Using-Simplewallet#sending-turtlecoin-tran
 
 #### GUI Wallet
 
-##### Nest Wallet
+#### Nest Wallet
 
 Follow the steps given [here](wallets/Using-nest-wallet#sending-turtlecoin-transactions) and replace the values of the address and Payment ID with the ones provided (**!! PAYMENT ID IS IMPORTANT !!**)
 
-##### WinForms Wallet
+#### WinForms Wallet
 
 Follow the steps given [here](wallets/Using-winforms-wallet#sending-turtlecoin-transactions) and replace the values of the address(recipient) and Payment ID with the ones provided (**!! PAYMENT ID IS IMPORTANT !!**)
 
@@ -43,7 +44,7 @@ Follow the steps given [here](wallets/Using-winforms-wallet#sending-turtlecoin-t
 
 ***PLEASE ENTER YOUR OWN VALUES WHICH THE BOT SENDS YOU!***
 
-#### Expected Results
+### Expected Results
 
 When the bot receives the payment, it will send you a PM letting you know. Now you can tip people! 
 
@@ -187,7 +188,7 @@ It also reacts to the message on which the person was tipped (`.tip 1 @RockStead
 It *does not* send the TRTL to your tipjar balance. It sends it *directly* to your **wallet**.  
 This is to ensure that more and more TRTL is introduced into the ecosystem, rather than the same TRTL being circulated around.
 
-- If you try to tip someone who isn't registered, the bot will react with :sos: and PM him with instructions on how to register their wallet and tip. 
+- If you try to tip someone who isn't registered, the bot will react with :sos: and PM them with instructions on how to register their wallet and tip. 
 
 ## Security of trtlbot++'s tipjar (wallet)
 
