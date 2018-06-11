@@ -13,7 +13,7 @@ You should note that by using the Tony Monero app, you will be contributing 10% 
 
 1. Leave `Profile selection` as default for now.
 2. Enter your TurtleCoin wallet address
-3. Enter a pool of your choice. To view a list of pools, you can go [here](../Pools)
+3. Enter a pool of your choice. To view a list of pools, you can go [here](Pools)
 4. Enter the password of the pool. For most, it will be `x`
 5. Specify how many cores you want to use. We recommend using half of how many cores your phone has. So if your phone has 8 cores, enter `4`
 6. Click on the image with the three triangles (`<1<1<1`) and tap the 2nd image from the right on the top row, for TurtleCoin
@@ -28,7 +28,7 @@ The miner should now start mining, and the stats displayed show start updating, 
 
 You can tap the question marks on the right if you're unsure of what each value means
 
-![phone-mining](images/rsz_phone-mine.png)
+![phone-mining](guides/mining/mobile-mining/images/rsz_phone-mine.png)
 
 Congratulations! You're now mining with your phone!
 
