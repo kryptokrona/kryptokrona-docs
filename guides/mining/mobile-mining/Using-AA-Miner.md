@@ -1,5 +1,7 @@
 # Using AA Miner
 
+### Please note: Using your mobile to mine TurtleCoin is not effective and should only be done for the lulz. It may also cause the phone to overheat and result in premature silicon degradation, shortening the lifespan of your phone.
+
 ## Setup
 
 1. Download the [AA Miner](https://play.google.com/store/apps/details?id=com.aaminer.miner) app from the Google Play Store.
