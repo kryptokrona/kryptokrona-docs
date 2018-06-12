@@ -1,4 +1,6 @@
 # Using Tony Monero
+
+### Please note: Using your mobile to mine TurtleCoin is not effective and should only be done for the lulz. It may also cause the phone to overheat and result in premature silicon degradation, shortening the lifespan of your phone.
    
 1. Download the [Tony Monero](https://play.google.com/store/apps/details?id=com.ethics.path.tonymonero) app from the Google Play Store.
 2. Upon downloading and installing, open the app.
