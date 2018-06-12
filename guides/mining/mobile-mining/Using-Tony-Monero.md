@@ -1,15 +1,7 @@
-# Mining with Your Mobile Phone
+# Using Tony Monero
 
 ### Please note: Using your mobile to mine TurtleCoin is not effective and should only be done for the lulz. It may also cause the phone to overheat and result in premature silicon degradation, shortening the lifespan of your phone.
-
-This guide will get you started mining TurtleCoin on a mobile phone.
-
-*Currently only available on Android version 4.1(Jelly Bean, year 2012) and newer*
-
-## Setup
-
-To mine TurtleCoin, we'll use the Tony Monero app.
-
+   
 1. Download the [Tony Monero](https://play.google.com/store/apps/details?id=com.ethics.path.tonymonero) app from the Google Play Store.
 2. Upon downloading and installing, open the app.
 3. Read through the agreement and accept/decline(the `EXIT` button). To use it, you will have to accept the agreement.
@@ -34,11 +26,11 @@ You should note that by using the Tony Monero app, you will be contributing 10% 
 
 The miner should now start mining, and the stats displayed show start updating, displaying your hashrate and the like(it may take a few minutes to update)
 
+### Tony Monero
+
 You can tap the question marks on the right if you're unsure of what each value means
 
-![phone-mining](guides/mining/images/rsz_phone-mine.png)
-
-
+![phone-mining](guides/mining/mobile-mining/images/rsz_phone-mine.png)
 
 Congratulations! You're now mining with your phone!
 
