@@ -19,7 +19,6 @@ After your wallet address has been registered, type `.deposit` in the #bots chan
 
 * Copy the first line of code he gives and enter it as the address
 * Then copy the second line of code he gives and enter it as the address
-* After that, enter the amount of mixin and amount you want to use/send and send the transaction!
 
 #### CLI Wallet
 

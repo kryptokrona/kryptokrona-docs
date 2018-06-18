@@ -225,8 +225,6 @@ In the running _zedwallet_ client, after opening a wallet..
 
 - press enter to use the default fee of 0.1 TRTL (or set it higher if you're sending a large amount of TRTL)
 
-- press enter to use the default mixin of 5 (or set it higher if you want a more private transaction)
-
 - enter the payment ID if you have one (usually not needed). Check the [payment ID section](#tx-trtl-p-id) if you're not sure when/how to use it.
 
 - confirm that the details are correct and enter `y`. If something is amiss, enter `n` and follow the steps again. 
@@ -239,9 +237,6 @@ Example:
 
 ![transfer](guides/wallets/images/transfer-simple.png)
 
-Mixin is how many times a transaction is "mixed" with others for obfuscation and privacy. 
-
-Most people suggest a mixin of `5` or more. Larger mixin's will take longer to be confirmed unless a higher fee is used. A mixin of `0` can be used to have a non-private transaction(it is strongly advised not to do so though).
 
 #### Optimizing your Wallet
 
