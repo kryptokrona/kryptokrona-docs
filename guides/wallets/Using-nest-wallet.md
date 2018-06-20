@@ -147,13 +147,13 @@ To include a Payment ID, simply enter it under `(optional) Payment ID`.
 
 ![send](guides/wallets/images/nest-tx.png)
 
-#### Changing Mixin and Fee
+#### Changing Fee
 
-Currently, it is not possible to change the mixin (set to 4) or fee (set to 1 TRTL). This may be possible in the future. 
+Currently, it is not possible to change the fee (set to 1 TRTL). This may be possible in the future. 
 
 For now remember, that 1 TRTL ontop of what you're sending will be deducted. So don't send your full balance!
 
- ### Saving the Wallet
+### Saving the Wallet
 
 To safely close the wallet, simply close it as you normally would; by clicking the `X` at the top right/left, depending on your OS.
 

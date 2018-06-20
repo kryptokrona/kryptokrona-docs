@@ -241,7 +241,9 @@ A: You need to also open up `TurtleCoind.exe` and let it sync. TurtleCoind is yo
 
 #### Q: What is mixin?
 
-  A: Mixin is how many times your transaction is "mixed" with others for obfuscation and privacy. Most people suggest a mixin of 3. Larger mixins will take longer to be confirmed unless a higher fee is used. A mixin of 0 can be used to have a public transaction(though it is strongly recommended not to do so).
+  A: Mixin is how many times your transaction is "mixed" with others for obfuscation and privacy. This used to be dynamic in that the user could choose a number equal to or greater than zero. However this property is now set and enforced at the network layer. The TRTL Network is a privacy focused blockchain, and keen to ease adoption for everyone, like how two decimals are used. Removing this user configurable option and setting it at the network layer allows for the network to balance this privacy aspect automatically so people can focus on the important parts.
+
+   As of block 600,000 the network mixin is set to seven (7) with increases planned for the future
 
 #### Q: How can I view my balance?
 

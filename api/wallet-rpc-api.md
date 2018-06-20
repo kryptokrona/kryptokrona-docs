@@ -1177,7 +1177,7 @@ addresses       | No            | Array of strings, where each string is an addr
 transfers       | Yes           | Array of objects, address: (string address), amount: (int amount)                        | array
 fee             | Yes           | Transaction fee. Minimal fee in TurtleCoin network is 0.10 TRTL. As with other amounts use whole units, 1 TRTL = 100 units, so 0.1 TRTL = 10 units | int
 unlockTime      | No            | The block height at which the transaction will be unlocked for spending.                 | int
-anonymity       | Yes           | Privacy (mixin) level (a discrete number from 0 to > than 0). 6 and higher is recommended| int
+anonymity       | Yes           | Privacy (mixin) level from block 600,000 needs to be seven (7), this will be removed / ignored in a future version | int
 extra           | No            | String of variable length. Can contain A-Z, 0-9 characters.                              | string
 paymentId       | No            | Payment ID                                                                               | string 
 changeAddress   | No            | Valid and existing address in this container.                                            | string 
