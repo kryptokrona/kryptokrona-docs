@@ -3,7 +3,7 @@
 ## Setup
 
 - Right click [this link](https://github.com/turtlecoin/checkpoints/raw/master/checkpoints.csv) and choose `Save link as...` to download the latest checkpoints.csv.
-- Place checkpoints.csv in the same folder as your daemon(TurtleCoind) and wallet(SimpleWallet).
+- Place checkpoints.csv in the same folder as your daemon(TurtleCoind) and wallet(ZedWallet).
 - You can get them both from here if you don't have it already: https://latest.turtlecoin.lol
 
 - Make sure you shut down any GUI wallets, or any other instances of TurtleCoind.
@@ -95,7 +95,7 @@ operable program or batch file.
 
 ```
 [turtlecoin-v0.5.0]λ ls
-miner  poolwallet  simplewallet  TurtleCoind  walletd
+miner  poolwallet  zedwallet  TurtleCoind  walletd
 ```
 
 ### IO error

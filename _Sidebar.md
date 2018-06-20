@@ -14,7 +14,7 @@
 
   * [Mining Questions](Frequently-Asked-Questions#mining-questions)
   * [XMR-Stak Issues](Frequently-Asked-Questions#xmr-stak-issues)
-  * [TurtleCoind/SimpleWallet Issues](Frequently-Asked-Questions#tcoind-simplewallet-issues)
+  * [TurtleCoind/ZedWallet Issues](Frequently-Asked-Questions#tcoind-zedwallet-issues)
   * [GUI Wallets](Frequently-Asked-Questions#gui-wallets)
 
   - [Paper Wallet / Cold Storage?](Frequently-Asked-Questions#paper-wallet-cold-storage)
@@ -40,7 +40,7 @@
     * [GUI Wallets](Making-a-GUI-Wallet)
       * [WinForms Wallet](Using-WinForms-Wallet)
       * [Nest Wallet](Using-Nest-Wallet)
-    * [SimpleWallet (CLI)](Using-SimpleWallet)
+    * [ZedWallet (CLI)](Using-ZedWallet)
       * [Using Checkpoints](Using-checkpoints)
     * [Paper Wallet](Making-a-Paper-Wallet)
     * [Recovering your Wallet](Recovering-your-Wallet)

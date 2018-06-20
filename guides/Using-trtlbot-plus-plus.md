@@ -23,7 +23,7 @@ After your wallet address has been registered, type `.deposit` in the #bots chan
 
 #### CLI Wallet
 
-Follow the steps given [here](using-simplewallet#sending-turtlecoin-transactions) and replace the values of the address and payment ID with the ones provided (**!! PAYMENT ID IS IMPORTANT !!**).
+Follow the steps given [here](using-zedwallet#sending-turtlecoin-transactions) and replace the values of the address and payment ID with the ones provided (**!! PAYMENT ID IS IMPORTANT !!**).
 
 - See [Expected Results](#expected-results) section below
 
