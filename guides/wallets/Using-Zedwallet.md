@@ -1,10 +1,10 @@
-# Using SimpleWallet
+# Using ZedWallet
 
 ## Screenshots
 
-Here's a quick image of SimpleWallet in action-
+Here's a quick image of ZedWallet in action-
 
-![simplewallet](guides/wallets/images/screenshot_simplewallet.png)
+![zedwallet](guides/wallets/images/screenshot_zedwallet.png)
 
 ## Downloading
 
@@ -79,29 +79,29 @@ In case you don't want to download the blockchain and verify it everytime, you c
 
 Check [here](Using-remote-nodes) for more info.
 
-## Using SimpleWallet
+## Using ZedWallet
 
-With `TurtleCoind` still running in the background or another terminal/shell/command prompt, open SimpleWallet in a new shell:
+With `TurtleCoind` still running in the background or another terminal/shell/command prompt, open ZedWallet in a new shell:
 
 #### Windows
 
-Run the `simplewallet.exe` executable from the extracted folder.
+Run the `zedwallet.exe` executable from the extracted folder.
 
 #### Mac
 
 ```bash
-./simplewallet
+./zedwallet
 ```
 
 #### Linux
 
 ```bash
-./simplewallet
+./zedwallet
 ```
 
 ### Creating a Wallet
 
-In the running *simplewallet* client:  
+In the running *zedwallet* client:  
 
 * Press `G` to generate a new wallet.  
 * Enter a filename for the wallet (for example,`trtl`).  
@@ -134,7 +134,7 @@ If you lose these your wallet cannot be recreated!
 
 ### Opening a Wallet
 
-In the running *simplewallet* client:  
+In the running *zedwallet* client:  
 
 * Press `O` to open an existing wallet file.  
 * Enter the filename given for the wallet when it was created.  
@@ -171,7 +171,7 @@ Use exit when closing to ensure your wallet file doesn't get corrupted.
 
 ### Viewing Wallet Address
 
-To view a wallet's public address, in the running _simplewallet_ client, after opening a wallet, type `address` and press enter.
+To view a wallet's public address, in the running _zedwallet_ client, after opening a wallet, type `address` and press enter.
 
 ```
 [TRTL trtl]: address
@@ -188,7 +188,7 @@ In the event of a lost or corrupted wallet file, computer crash, etc., the *View
 
 **DO NOT SHARE IT WITH ANYONE**. **Anyone who has these can *access your funds* and has *complete control* over your wallet.**
 
-In the running *simplewallet* client, after opening a wallet, type `export_keys` and press `enter`.  
+In the running *zedwallet* client, after opening a wallet, type `export_keys` and press `enter`.  
 The *View Key* and *Spend Key* will appear. Copy them and store them **safely and securely**.
 
 ```
@@ -202,7 +202,7 @@ Mnemonic seed: 25_random_words_do_not_share_this
 
 ### Viewing Wallet Balance
 
-In the running _simplewallet_ client, after opening a wallet, type `balance` and press enter to see the wallet's balance.
+In the running _zedwallet_ client, after opening a wallet, type `balance` and press enter to see the wallet's balance.
 
 ```
 [TRTL trtl]: balance
@@ -214,7 +214,7 @@ Total balance: 1100.00 TRTL
 
 ### Sending TurtleCoin Transactions<a name="tx-trtl"></a>
 
-In the running _simplewallet_ client, after opening a wallet..
+In the running _zedwallet_ client, after opening a wallet..
 
 - type:`transfer`
 
@@ -289,11 +289,11 @@ Note that, typically, the service/recipient will generate and provide the requir
 
 ### Exiting the Wallet
 
-"Live" wallets loaded into the *simplewallet* client must be synced with the blockchain in order to properly calculate balance, view transaction history, etc. 
+"Live" wallets loaded into the *zedwallet* client must be synced with the blockchain in order to properly calculate balance, view transaction history, etc. 
 
-It is important to properly save the wallet data before exiting *simplewallet* so that the synchronized data is not lost.
+It is important to properly save the wallet data before exiting *zedwallet* so that the synchronized data is not lost.
 
-To save a wallet's data and exit, in the running *simplewallet* client, with an open wallet, type `exit` and press `enter`
+To save a wallet's data and exit, in the running *zedwallet* client, with an open wallet, type `exit` and press `enter`
 
 ```
 [TRTL trtl]: exit
@@ -306,7 +306,7 @@ Done
 
 #### Private Spend and View Keys<a name="recover-spend-view-keys"></a>
 
-In the running _simplewallet_ client, 
+In the running _zedwallet_ client, 
 
 * type `I` 
 
@@ -343,7 +343,7 @@ In the running _simplewallet_ client,
 
 #### 25 Word Mnemonic Seed
 
-In the running *simplewallet* client,
+In the running *zedwallet* client,
 
 - type `S`
 

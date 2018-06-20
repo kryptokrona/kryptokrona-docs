@@ -172,7 +172,7 @@ A: Try installing this: <https://www.microsoft.com/en-us/download/details.aspx?i
 
 A: Try installing this: <https://go.microsoft.com/fwlink/?LinkId=746572>
 
-## TurtleCoind / SimpleWallet Issues<a name="tcoind-simplewallet-issues"></a>
+## TurtleCoind / ZedWallet Issues<a name="tcoind-zedwallet-issues"></a>
 
 #### Q: I'm seeing an error in TurtleCoind `Proof of work too weak for block...` and the syncing stopped.
 
@@ -186,7 +186,7 @@ A: This occurs because of the blockchain forking, generally when one mining pool
 2018-May-07 15:52:19.908530 ERROR   Corrupted blockchain. Block with index 428973 and hash aafa7fd33d476535188bdd9e86ba51bb5e058be8e52367b78e9c0c03e74299c5 has previous block hash 2c0cf6c07612b9e1ea19c6922a56746b83cb42c7b11edfc4b185572225bb0f20, but parent has hash 26189359b64d4bb357a04b102a42a01d2771a3f3d80db3ca1b7395a2aeaede4a. Resynchronize your daemon please.
 2018-May-07 15:52:19.924135 INFO    Closing DB.
 ```
-A: Re-sync your daemon from scratch(see below question), [bootstrap the blockchain](bootstrapping-the-blockchain.md) or sync [using checkpoints](using-simplewallet.md#using-checkpoints)
+A: Re-sync your daemon from scratch(see below question), [bootstrap the blockchain](bootstrapping-the-blockchain.md) or sync [using checkpoints](using-zedwallet.md#using-checkpoints)
 
 #### Q: How can I re-sync the blockchain?
 
@@ -221,23 +221,23 @@ A: You need to also open up `TurtleCoind.exe` and let it sync. TurtleCoind is yo
 
 #### Q: I've tried resetting, but it isn't working. What should I do?
 
-  A: In `simplewallet.exe`, type `export_keys`, and save the view and spend key somewhere safe in case something goes wrong, if you haven't already. 
-  Then, close and reopen `TurtleCoind.exe` and `simplewallet.exe`. 
-  Next, type `reset` in `simplewallet.exe` after reopening your wallet file.
+  A: In `zedwallet.exe`, type `export_keys`, and save the view and spend key somewhere safe in case something goes wrong, if you haven't already. 
+  Then, close and reopen `TurtleCoind.exe` and `zedwallet.exe`. 
+  Next, type `reset` in `zedwallet.exe` after reopening your wallet file.
   It should start resetting your wallet, but the progress might not be immediately obvious - wait a while, and it should start counting up the blocks and printing out your transactions as it gets to them.
 
 #### Q: How do I backup my wallet?
 
-  A: If `TurtleCoind.exe` is open and synced, open `simplewallet.exe,` and type `export_keys`. 
+  A: If `TurtleCoind.exe` is open and synced, open `zedwallet.exe,` and type `export_keys`. 
   Save the view and spend key somewhere safe, and you can use them to reimport your wallet if you lose it.
 
 #### Q: How do I send TRTL?
 
-  A: You can check [this out](Using-SimpleWallet#tx-trtl) for steps on how to send TRTL to someone.
+  A: You can check [this out](Using-ZedWallet#tx-trtl) for steps on how to send TRTL to someone.
 
 #### Q: How do I send money to exchanges / use payment ID?
 
-  A: You can check [this out](Using-SimpleWallet#tx-trtl-p-id) for steps on how to send TRTL with the payment ID.
+  A: You can check [this out](Using-ZedWallet#tx-trtl-p-id) for steps on how to send TRTL with the payment ID.
 
 #### Q: What is mixin?
 
@@ -245,7 +245,7 @@ A: You need to also open up `TurtleCoind.exe` and let it sync. TurtleCoind is yo
 
 #### Q: How can I view my balance?
 
-  A: If `TurtleCoind.exe` is fully synced, in `simplewallet.exe`, simply type `balance`.
+  A: If `TurtleCoind.exe` is fully synced, in `zedwallet.exe`, simply type `balance`.
 
 #### Q: I'm seeing an error like this in TurtleCoind.exe: `2018-Jan-25 23:18:34.620941 WARNING Transaction 862689940f8860b4410a4eef7be326b05aedc6b14a26e68e503769017ee80359 is not valid. Reason: Transaction uses spent key image`. Should I worry?
 
@@ -265,13 +265,13 @@ A: You need to also open up `TurtleCoind.exe` and let it sync. TurtleCoind is yo
 
 #### Q: Can I skip the syncing?
 
-  A: Yes, you can currently use a public node with simplewallet. The keys stay on your PC, so it's secure. Check [this guide](Using-SimpleWallet#using-remote-node) for more information.
+  A: Yes, you can currently use a public node with zedwallet. The keys stay on your PC, so it's secure. Check [this guide](Using-ZedWallet#using-remote-node) for more information.
 
 #### Q: What does it mean if my balance is locked?
 
   A: This is a transfer which hasn't been confirmed by the network yet. It will move into your main balance shortly, generally after 3 minutes.
 
-#### Q: In simplewallet.exe, I get an error `Error: failed to save new wallet: boost::filesystem::unique__path: Keyset as registered is invalid`. How can I fix it?
+#### Q: In zedwallet.exe, I get an error `Error: failed to save new wallet: boost::filesystem::unique__path: Keyset as registered is invalid`. How can I fix it?
 
   A: This is caused by some broken Windows crypto keys. In the address bar in Windows Explorer, type `%AppData%/Microsoft/Crypto/RSA/`. 
   There should be a folder in there, with a long name, like `S-1-5-21-1416222650-108526586-4052533318-1000`. 
@@ -300,7 +300,7 @@ To view a guide on using them, check [this](Making-a-GUI-Wallet).
   * A wrong password - check `walletd.log` to check if this is occurring. If you are sure your password is correct, this link could be helpful - <https://github.com/turtlecoin/desktop-xamarin/issues/20>
   * You have another `walletd.exe` or `TurtleCoind.exe` process running. Only one of these can be running at once, and the GUI launches its own. Check Task Manager and close down any of these processes and try again.
   * `walletd` is importing blocks from the DB, which takes a while and so the GUI thinks it has crashed. Solution here - <https://github.com/turtlecoin/desktop-xamarin/issues/17#issuecomment-366790435>
-  * If all else fails, if you have your private keys then you can instead import your wallet into SimpleWallet. 
+  * If all else fails, if you have your private keys then you can instead import your wallet into ZedWallet. 
     * If that is not a desirable option, come and ask for help over at [the Discord][Discord_Link]
 
 ## Paper Wallet / Cold Storage?<a name="paper-wallet-cold-storage"></a>

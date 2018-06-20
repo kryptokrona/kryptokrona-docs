@@ -12,11 +12,11 @@ The main purpose of a paper wallet is to quickly create a wallet to start receiv
 
 To view a guide on how to make a paper wallet, you can go [here](Making-a-Paper-Wallet).
 
-## SimpleWallet (CLI Wallet)
+## ZedWallet (CLI Wallet)
 
-The CLI Wallet, called SimpleWallet, is a multi-platform program (Win/Linux/Mac) that requires you to enter commands for it to work and you cannot use your mouse. However, it is currently the most stable and gets the newest updates first.
+The CLI Wallet, called ZedWallet, is a multi-platform program (Win/Linux/Mac) that requires you to enter commands for it to work and you cannot use your mouse. However, it is currently the most stable and gets the newest updates first.
 
-If you would like to use SimpleWallet, you can check out [this guide](Using-Simplewallet).
+If you would like to use ZedWallet, you can check out [this guide](Using-Zedwallet).
 
 ## Graphical Wallet (GUI Wallet)
 
