@@ -46,7 +46,7 @@ TurtleCoind --enable_blockexplorer
 You can combine the above given commands to achieve remote access along with block explorer methods as shown below.
 
 ```
-Turtlecoind --enable_blockexplorer --rpc-bind-ip=0.0.0.0 --rpc-bind-port=11898
+TurtleCoind --enable_blockexplorer --rpc-bind-ip=0.0.0.0 --rpc-bind-port=11898
 ```
 
 Having done that you're ready to operate with the daemon through the following API URLs (e.g., your IP address is 126.0.1.100):
