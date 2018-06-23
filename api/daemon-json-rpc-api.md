@@ -1,6 +1,6 @@
 # Daemon JSON RPC API
 
-Daemon JSON RPC is a HTTP server which provides JSON 2.0 RPC interface for Block Explorer management.
+Daemon JSON RPC is a HTTP server which provides JSON 2.0 RPC interface for intearcting with Daemon and Block Explorer.
 
 Currently we support the following official client bindings:
 
@@ -35,6 +35,18 @@ If you want Daemon to be accessed from other computer not only yours you should 
 
 ```
 TurtleCoind --rpc-bind-ip=0.0.0.0 --rpc-bind-port=11898
+```
+
+To be able to utilize to the Block Explorer methods daemon needs to be started with `--enable_blockexplorer` argument as shown below.
+
+```
+TurtleCoind --enable_blockexplorer
+```
+
+You can combine the above given commands to achieve remote access along with block explorer methods as shown below.
+
+```
+Turtlecoind --enable_blockexplorer --rpc-bind-ip=0.0.0.0 --rpc-bind-port=11898
 ```
 
 Having done that you're ready to operate with the daemon through the following API URLs (e.g., your IP address is 126.0.1.100):
