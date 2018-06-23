@@ -37,7 +37,7 @@ If you want Daemon to be accessed from other computer not only yours you should 
 TurtleCoind --rpc-bind-ip=0.0.0.0 --rpc-bind-port=11898
 ```
 
-To be able to utilize to the Block Explorer methods daemon needs to be started with `--enable_blockexplorer` argument as shown below.
+To be able to utilize to the Block Explorer methods such as getblocks, gettransactionpool etc., daemon needs to be started with `--enable_blockexplorer` argument as shown below.
 
 ```
 TurtleCoind --enable_blockexplorer
@@ -414,9 +414,7 @@ curl -d '{"jsonrpc":"2.0","method":"f_blocks_list_json","params":{"height":50000
                 "height": 500000,
                 "timestamp": 1527834137,
                 "tx_count": 4
-            },
-            .....,
-            .....,
+            }
         ],
         "status": "OK"
     }
@@ -527,7 +525,7 @@ transactions | Array of transactions in the block | array
 transactionsCumulativeSize | total sum of size of all transactions in the block | int
 status | status of the request | string
 
-Transation Attributes:
+Transaction Attributes:
 
 Argument | Description | Format
 ------- | ---------- | --------
@@ -578,9 +576,7 @@ curl -d '{"jsonrpc":"2.0","method":"f_transaction_json","params":{"hash":"702ad.
                         },
                         "type":"02"
                     }
-                },
-                .....,
-                .....,
+                }
             ]
         },
         "txDetails":{
@@ -663,9 +659,7 @@ curl -d '{"jsonrpc":"2.0","method":"f_on_transactions_pool_json","params":{}}' h
                 "fee":10,
                 "hash":"a5e88...",
                 "size":541
-            },
-            .....,
-            .....,
+            }
         ]
     }
 }
