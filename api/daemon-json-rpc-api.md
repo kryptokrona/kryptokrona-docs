@@ -314,7 +314,7 @@ from turtlecoin import TurtleCoind
 turtlecoind = TurtleCoind(rpc_host, rpc_port)
 hash = '30706...'
 response = turtlecoind.get_block_header_by_hash(hash)
-print(hash)
+print(response)
 ```
 
 > Expected Output:
