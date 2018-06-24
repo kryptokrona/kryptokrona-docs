@@ -4,7 +4,7 @@ TurtleCoin RPC Wallet is a HTTP server which provides JSON 2.0 RPC interface for
 
 Currently we support the following official client bindings:
 
-* [JavaScript](https://github.com/turtlecoin/turtlecoin-rpc-js)
+* [JavaScript](https://github.com/turtlecoin/turtlecoin-walletd-rpc-js)
 * [PHP](https://github.com/turtlecoin/turtlecoin-walletd-rpc-php)
 * [Python](https://github.com/turtlecoin/turtlecoin-rpc-python)
 * [Go](https://github.com/turtlecoin/turtlecoin-walletd-rpc-go)

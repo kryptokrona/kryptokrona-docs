@@ -1,6 +1,6 @@
 # Daemon JSON RPC API
 
-Daemon JSON RPC is a HTTP server which provides JSON 2.0 RPC interface for intearcting with Daemon and Block Explorer.
+Daemon JSON RPC is a HTTP server which provides JSON 2.0 RPC interface for interacting with Daemon and Block Explorer.
 
 Currently we support the following official client bindings:
 
@@ -33,36 +33,30 @@ rpc_port = 11898
 turtlecoind = TurtleCoind(rpc_host, rpc_port)
 ```
 
-To start Daemon JSON RPC API server you should specify a port on which server binds (additionally to standard daemon's arguments). You can choose any free port. To do that execute the following command from the command line:
+To start the Daemon JSON RPC API server at `http://localhost:11898/json_rpc`, run:
 
-```
-TurtleCoind --rpc-bind-port=11898
-```
+`TurtleCoind --rpc-bind-port=11898`
 
-If you want Daemon to be accessed from other computer not only yours you should also use a --rpc-bind-ip 0.0.0.0 command. To do that execute the following command from the command line:
+To make the server accessible from another computer, use the `--rpc-bind-ip 0.0.0.0` switch.
 
-```
-TurtleCoind --rpc-bind-ip=0.0.0.0 --rpc-bind-port=11898
-```
+`TurtleCoind --rpc-bind-ip=0.0.0.0 --rpc-bind-port=11898`
 
-To be able to utilize to the Block Explorer methods such as getblocks, gettransactionpool etc., daemon needs to be started with `--enable_blockexplorer` argument as shown below.
+To enable block explorer API access (like for `getblocks`, `gettransactionpool`, etc.), use the `--enable_blockexplorer` switch.
 
-```
-TurtleCoind --enable_blockexplorer
-```
+`TurtleCoind --enable_blockexplorer`
 
-You can combine the above given commands to achieve remote access along with block explorer methods as shown below.
+The above given switches can be combined to achieve remote access with block explorer methods as shown below.
 
-```
-TurtleCoind --enable_blockexplorer --rpc-bind-ip=0.0.0.0 --rpc-bind-port=11898
-```
+`TurtleCoind --enable_blockexplorer --rpc-bind-ip=0.0.0.0 --rpc-bind-port=11898`
 
-Having done that you're ready to operate with the daemon through the following API URLs (e.g., your IP address is 126.0.1.100):
+This would make the RPC server accessible at
 
-```
-http://126.0.1.100:11898/json_rpc
-http://localhost:11898/json_rpc
-```
+`http://<your ip address>:11898/json_rpc`
+
+and, locally at
+
+`http://localhost:11898/json_rpc`
+
 
 To make a JSON RPC request to your Daemon RPC you should use a POST request that looks like this:
 
