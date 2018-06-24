@@ -25,6 +25,14 @@ http://localhost:11898/json_rpc
 
 > Configuration and Instantiation
 
+```python
+from turtlecoin import TurtleCoind
+
+rpc_host = 'localhost'
+rpc_port = 11898
+turtlecoind = TurtleCoind(rpc_host, rpc_port)
+```
+
 To start Daemon JSON RPC API server you should specify a port on which server binds (additionally to standard daemon's arguments). You can choose any free port. To do that execute the following command from the command line:
 
 ```
@@ -72,6 +80,14 @@ Parameter            | Description
 curl -d '{"jsonrpc":"2.0", "method":"getblockcount", "params":{}}' http://localhost:11898/json_rpc
 ```
 
+```python
+from turtlecoin import TurtleCoind
+
+turtlecoind = TurtleCoind(rpc_host, rpc_port)
+response = turtlecoind.get_block_count()
+print(response)
+```
+
 > Expected Output
 
 ```json
@@ -102,6 +118,15 @@ status           | Status of request | string
 curl -d '{"jsonrpc":"2.0","method":"on_getblockhash","params":[123456]}' http://localhost:11898/json_rpc
 ```
 
+```python
+from turtlecoin import TurtleCoind
+
+turtlecoind = TurtleCoind(rpc_host, rpc_port)
+height = 123456
+response = turtlecoind.get_block_hash(height)
+print(response)
+```
+
 > Expected Output:
 
 ```json
@@ -129,6 +154,17 @@ result           | Hash of previous block | int
 
 ```shell
 curl -d '{"jsonrpc":"2.0","method":"getblocktemplate","params":{"reserve_size":200,"wallet_address":"TRTLxxxx..."}}' http://localhost:11898/json_rpc
+```
+
+```python
+from turtlecoin import TurtleCoind
+
+turtlecoind = TurtleCoind(rpc_host, rpc_port)
+reserve_size = 200
+wallet_address = 'TRTLxxxx...'
+
+response = turtlecoind.get_block_template(reserve_size, wallet_address)
+print(response)
 ```
 
 > Expected Output:
@@ -171,6 +207,15 @@ status | Status of the network | string
 curl -d '{"jsonrpc":"2.0","method":"submitblock","params":["0100b...."]}' https://localhost:11898/json_rpc
 ```
 
+```python
+from turtlecoin import TurtleCoind
+
+turtlecoind = TurtleCoind(rpc_host, rpc_port)
+block_blob = '0100b...'
+response = turtlecoind.submit_block(block_blob)
+print(response)
+```
+
 > Expected Output:
 
 ```json
@@ -200,6 +245,14 @@ status           | Status of request | string
 
 ```shell
 curl -d '{"jsonrpc":"2.0","method":"getlastblockheader","params":{}}' http://localhost:11898/json_rpc
+```
+
+```python
+from turtlecoin import TurtleCoind
+
+turtlecoind = TurtleCoind(rpc_host, rpc_port)
+response = turtlecoind.get_last_block_header()
+print(response)
 ```
 
 > Expected Output:
@@ -253,6 +306,15 @@ status | status of the request | string
 
 ```shell
 curl -d '{"jsonrpc":"2.0","method":"getblockheaderbyhash","params":{"hash":"30706..."}}' http://localhost:11898/json_rpc
+```
+
+```python
+from turtlecoin import TurtleCoind
+
+turtlecoind = TurtleCoind(rpc_host, rpc_port)
+hash = '30706...'
+response = turtlecoind.get_block_header_by_hash(hash)
+print(hash)
 ```
 
 > Expected Output:
@@ -314,6 +376,15 @@ status | status of the request | string
 curl -d '{"jsonrpc":"2.0","method":"getblockheaderbyheight","params":{"height":123456}}' http://localhost:11898/json_rpc
 ```
 
+```python
+from turtlecoin import TurtleCoind
+
+turtlecoind = TurtleCoind(rpc_host, rpc_port)
+height = 123456
+response = turtlecoind.get_block_header_by_height(height)
+print(response)
+```
+
 > Expected Output:
 
 ```json
@@ -373,6 +444,14 @@ status | status of the request | string
 curl -d '{"jsonrpc":"2.0","method":"getcurrencyid","params":{}}' http://localhost:11898/json_rpc
 ```
 
+```python
+from turtlecoin import TurtleCoind
+
+turtlecoind = TurtleCoind(rpc_host, rpc_port)
+response = turtlecoind.get_currency_id()
+print(response)
+```
+
 > Expected Output:
 
 ```json
@@ -398,6 +477,15 @@ currency_id_blob | unique currency identifier | string
 
 ```shell
 curl -d '{"jsonrpc":"2.0","method":"f_blocks_list_json","params":{"height":500000}}' http://localhost:11898/json_rpc
+```
+
+```python
+from turtlecoin import TurtleCoind
+
+turtlecoind = TurtleCoind(rpc_host, rpc_port)
+height = 500000
+response = turtlecoind.get_blocks(height)
+print(response)
 ```
 
 > Expected Output:
@@ -447,6 +535,15 @@ blocks   | **Array of** |                                       |
 
 ```shell
 curl -d '{"jsonrpc":"2.0","met":"f_block_json","params":{"hash":"980ff..."}}' http://localhost:11898/json_rpc
+```
+
+```python
+from turtlecoin import TurtleCoind
+
+turtlecoind = TurtleCoind(rpc_host, rpc_port)
+hash = '980ff...'
+response = turtlecoind.get_block(hash)
+print(response)
 ```
 
 > Expected Output:
@@ -538,6 +635,15 @@ size | size of the transaction | int
 
 ```shell
 curl -d '{"jsonrpc":"2.0","method":"f_transaction_json","params":{"hash":"702ad..."}}' http://localhost:11898/json_rpc
+```
+
+```python
+from turtlecoin import TurtleCoind
+
+turtlecoind = TurtleCoind(rpc_host, rpc_port)
+hash = '702ad...'
+response = turtlecoind.get_transaction(hash)
+print(response)
 ```
 
 > Expected Output:
@@ -644,6 +750,14 @@ vout | array of output transactions | array
 
 ```shell
 curl -d '{"jsonrpc":"2.0","method":"f_on_transactions_pool_json","params":{}}' http://localhost:11898/json_rpc
+```
+
+```python
+from turtlecoin import TurtleCoind
+
+turtlecoind = TurtleCoind(rpc_host, rpc_port)
+response = turtlecoind.get_transaction_pool()
+print(response)
 ```
 
 > Expected Output:
