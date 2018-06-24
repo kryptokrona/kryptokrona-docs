@@ -3,7 +3,7 @@
 
 ## Registering your Wallet
 
-Go to the `#wallets` channel in the [Discord server](http://chat.turtlecoin.lol/), type `.registerwallet TRTL...`, and replace `TRTL...` with your wallet address. 
+Go to the `#bots` channel in the [Discord server](http://chat.turtlecoin.lol/), type `.registerwallet TRTL...`, and replace `TRTL...` with your wallet address. 
 
 For example, you would type- 
 
