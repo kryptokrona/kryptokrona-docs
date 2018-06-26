@@ -146,10 +146,6 @@ When you tip someone, the desired amount plus 0.1 TRTL is pulled from your tipja
 When you get tipped, the sender sends the desired amount plus 0.1 TRTL, pulled from his tipjar wallet balance, directly to your registered wallet (if you haven't registered a wallet, you can't receive tips).
 It also reacts to the message on which the person was tipped (`.tip 1 @RockSteady#7588`) with ![moneywings](guides/images/trtlbot-plus-plus/rsz_money_with_wings.png)
 
-It *does not* send the TRTL to your tipjar balance. It sends it *directly* to your **wallet**.
-This is to ensure that more and more TRTL is introduced into the ecosystem, rather than the same TRTL being circulated around.
-
-
 - If you try to tip someone who isn't registered, the bot will react with :sos: and PM him with instructions on how to register their wallet and tip. 
 
 ## Security of trtlbot++'s tipjar (wallet)
