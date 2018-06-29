@@ -19,7 +19,7 @@ Go to [this link](https://turtlecoin.lol/wallet) and follow these steps-
   - After you're done mashing your keyboard, press `Generate Wallet`
   
   - The letters and numbers in the green box, starting with `TRTL`, is your public address. You can share it freely. We recommend [registering it with trtlbot++](../Using-trtlbot-plus-plus#registering-your-wallet) in the [Discord](http://chat.turtlecoin.lol/) so that you can access it easily.
-  
+
   - Save the `Seed Phrase`, the 25 words in the red box, safely. **DO NOT SHARE IT WITH ANYONE**. **Anyone who has access to this can *access your funds* and has *complete control* over your wallet.**
   
   - Save the `Spend Key` and the `View Key`, the two very long strings of (seemingly) random letters and numbers, safely.  **DO NOT SHARE IT WITH ANYONE**. **Anyone who has access to this can *access your funds* and has *complete control* over your wallet.**
@@ -48,7 +48,7 @@ To use it, follow these steps:
 
   - After you're done mashing your keyboard, press `Generate Wallet`
 
-  - The letters and numbers in the green box, starting with `TRTL`, is your public address. You can share it freely. We recommend [registering it with trtlbot++](../Using-trtlbot-plus-plus#registering-your-wallet) in the [Discord][(http://chat.turtlecoin.lol/) so that you can access it easily.
+  - The letters and numbers in the green box, starting with `TRTL`, is your public address. You can share it freely. We recommend [registering it with trtlbot++](../Using-trtlbot-plus-plus#registering-your-wallet) in the [Discord](http://chat.turtlecoin.lol/) so that you can access it easily.
 
   - Save the `Seed Phrase`, the 25 words in the red box, safely. 
 
