@@ -1376,7 +1376,7 @@ transactionHash	      | Hash of the sent transaction		| string
 ## createDelayedTransaction
 
 ```shell
-curl -d '{"jsonrpc":"2.0","id":1,"password":"passw0rd","method":"createDelayedTransaction","params":{"transfers":[{"address":"TRTLxxxx...","amount":"5000"}],"fee":10,"anonymity":3,"changeAddress":"TRTLyyyy..."}}' http://localhost:8070/json_rpc
+curl -d '{"jsonrpc":"2.0","id":1,"password":"passw0rd","method":"createDelayedTransaction","params":{"transfers":[{"address":"TRTLxxxx...","amount":5000}],"fee":10,"anonymity":3,"changeAddress":"TRTLyyyy..."}}' http://localhost:8070/json_rpc
 ```
 
 ```javascript
@@ -1756,8 +1756,8 @@ use `estimateFusion` to check the outputs, available for the optimization.
 
 Argument            | Mandatory  | Description                                                                                          | Format
 ------------------- | ---------- | ---------------------------------------------------------------------------------------------------- | -------
-threshold           | Yes        | Value that determines which outputs will be optimized. Only the outputs, lesser than the threshold value, will be included into a fusion transaction. | string
-anonymity           | Yes        | Privacy level (a discrete number from 1 to infinity). Level 6 and higher is recommended.             | string
+threshold           | Yes        | Value that determines which outputs will be optimized. Only the outputs, lesser than the threshold value, will be included into a fusion transaction. | int
+anonymity           | Yes        | Privacy level (a discrete number from 1 to infinity). Level 6 and higher is recommended.             | int
 addresses           | No         | Array of strings, where each string is an address to take the funds from.	                        | array
 destinationAddress  | No         | An address that the optimized funds will be sent to. Valid and existing in this container address.	| string
 
@@ -1837,7 +1837,7 @@ This method is used to understand if a fusion transaction can be created. If `fu
 
 Argument            | Mandatory  | Description                                                                                          | Format
 ------------------- | ---------- | ---------------------------------------------------------------------------------------------------- | -------
-threshold           | Yes        | Value that determines which outputs will be optimized. Only the outputs, lesser than the threshold value, will be included into a fusion transaction. | string
+threshold           | Yes        | Value that determines which outputs will be optimized. Only the outputs, lesser than the threshold value, will be included into a fusion transaction. | int
 addresses           | No         | Array of strings, where each string is an address to take the funds from.	                        | string
 
 **Output**
