@@ -2,3 +2,4 @@ sidebar:
   - introduction.md
   - wallet-rpc-api.md
   - daemon-json-rpc-api.md
+  - rpc-api-error-conditions.md
