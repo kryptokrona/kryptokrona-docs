@@ -3,7 +3,7 @@
 
 So you want to fork TurtleCoin, huh?
 
-This guide will help you change the necessary sections of the code to setup your coin how you like it.
+This guide will help you change the necessary sections of the code to set up your coin how you like it.
 
 Firstly, lets quickly talk about *licenses*.
 
@@ -28,12 +28,12 @@ The ByteCoin developers created the first implementation of this specification w
 and this is what has become ByteCoin today.
 This was forked early on to become Bitmonero, and then Monero.
 The Monero developers have contributed back significant chunks of code to the original ByteCoin codebase,
-and of course they maintain their own repositories and code.
+and of course, they maintain their own repositories and code.
 
-The ForkNote Project was created as a fork of ByteCoin, to create a way to easily fork ByteCoin,
+The ForkNote Project was created as a fork of ByteCoin, to create a way to fork ByteCoin, easily
 by separating the needed constants and strings out into a separate file.
 
-TurtleCoin then forked the Forknote Project, and made our own changes, some of which were then contributed back to ForkNote.
+TurtleCoin then forked the Forknote Project and made our own changes, some of which were then contributed back to ForkNote.
 
 So, make sure if you're doing a find and replace that all of these lines remain intact.
 You can of course start adding your own copyright line, for example,
@@ -47,16 +47,15 @@ You can of course start adding your own copyright line, for example,
 // Please see the included LICENSE file for more information.
 ```
 
-Ok, now we understand about licenses, lets get the code!
+Ok, now we understand about licenses, let's get the code!
 
 
 ## The actual forking process
 
 * The easiest way to fork TurtleCoin, is to start by making a GitHub account.
-You can do this [here](https://github.com/join?source=header-home) if you don't have an account already.
-Make sure you're signed in.
+You can do this [here](https://github.com/join) if you don't have an account already.
 
-* Next, head over to the TurtleCoin repo, and hit `Fork` in the top right corner.
+* Make sure you're signed in. Next, head over to the TurtleCoin repo, and hit `Fork` in the top right corner.
 
 * It should look something like this:
 
@@ -77,8 +76,8 @@ Make sure you're signed in.
   whilst if you are a Linux or Mac user, you should have this either already installed,
   or can install it from your repos or with brew.
 
-* Once you have opened up git bash or a terminal, you should be able to type `git clone url`,
-  where `url` is the link you copied earlier, from github.
+* Once you have opened up git bash or a terminal, you should be able to type `git clone URL`,
+  where `URL` is the link you copied earlier, from GitHub.
 
 * It should look something like this:
 
@@ -108,17 +107,17 @@ In Bitcoin, this is called a *satoshi*, and in TurtleCoin, it is called a *shell
 Computers are unable to accurately store floating point numbers (or, numbers with a decimal point),
 and so performing math on them is often problematic.
 
-For example, lets say we want to split 10.00 TRTL between 3 people.
+For example, let's say we want to split 10.00 TRTL between 3 people.
 If you perform `10.00 / 3` in a programming language, you will probably see a result similar to `3.3333333333333335`.
 Where did that 5 come from?! The computer is incapable of storing this number to its full amount of decimal places.
 
 **How do we fix this?**
 
-Now, lets demonstrate how we can solve this issue, with *atomic units*.
+Now, let's demonstrate how we can solve this issue, with *atomic units*.
 Again, we have 10.00 TRTL, and we want to split it between 3 people.
-Recall that to get the amount of atomic units, we need to multiply by 100.
+Recall that to get the number of atomic units, we need to multiply by 100.
 So, we have a value of 1000 in atomic units. Now we can perform *integer division* instead.
-Lets perform `1000 / 3` - make sure you are using *integral division* in your programming language -
+Let's perform `1000 / 3` - make sure you are using *integral division* in your programming language -
 and you should get a result of `333`.
 
 That's correct, each person can only get 333 units, or, if we want to convert back to TRTL, 3.33 TRTL.
@@ -138,38 +137,37 @@ int shellsPerPerson = shells / numPeople;
 int remainder = shells % numPeople;
 
 std::cout << "Splitting " << trtl << " TRTL" between << numPeople << " gives "
-		  << (shellsPerPerson / 100) << " TRTL each, with " << (remainder / 100)
+          << (shellsPerPerson / 100) << " TRTL each, with " << (remainder / 100)
           << " TRTL spare." << std::endl;
 ```
 
-Normally, we will *always* use atomic units in our code,
-and only convert back to a nice representation with a decimal point when we print things to the user.
+Usually, we will *always* use atomic units in our code,
+and only convert back to the expected representation with a decimal point when we print things to the user.
 
 
 ## CryptoNoteConfig.h
 
-**OK, we know what atomic units are now, so lets get on to changing some of the values!**
+**OK, we know what atomic units are now, so let's get on to changing some of the values!**
 
-In your code, open up the file `CryptoNoteConfig.h`, which is located in the `src` folder.
+In your code, open up the file `CryptoNoteConfig.h`, located in the `src` folder.
 
-Lets start from the top. We'll only focus on the constants which need changing,
-as some of them are fine to keep as they are.<br/><br/>
+Let's start at the top. We'll only focus on the constants which need changing, as some of them are fine to keep as they are.  
 
 
-#### `const uint64_t DIFFICULTY_TARGET = 30; // seconds`<br/><br/>
+#### `const uint64_t DIFFICULTY_TARGET = 30; // seconds`  
 
 This is how fast you want blocks to be. In TurtleCoin, we have blocks on average every 30 seconds.
 If you wanted blocks to be every 2 minutes, you would set this to be:
 
-- `const uint64_t DIFFICULTY_TARGET = 120; // seconds`<br/><br/>
+- `const uint64_t DIFFICULTY_TARGET = 120; // seconds`  
 
 
 
 
 
-#### `const uint64_t CRYPTONOTE_PUBLIC_ADDRESS_BASE58_PREFIX = 3914525;`<br/><br/>
+#### `const uint64_t CRYPTONOTE_PUBLIC_ADDRESS_BASE58_PREFIX = 3914525;`  
 
-This defines what our addresses start with. In TurtleCoin, this decodes to `TRTL`.
+This defines what the addresses will start with. In TurtleCoin, this decodes to `TRTL`.
 
 So how do we get this prefix? We can use this [handy tool](https://cryptonotestarter.org/tools.html).
 
@@ -179,9 +177,9 @@ Scroll down to the prefix generator, and enter your desired address prefix.
 Note that some characters are disabled, so you may not be able to get the perfect prefix.
 For example, `aPPLE` is allowed, but `APPLE` isn't.
 
-You may note that TRTL's prefix is a number, whilst the output of this generator is not.
+You may note that TRTL's prefix is a number, while the output of this generator is not.
 These values are in hex format, and will automatically be decoded into a number when compiled,
-though you can use any standard hexadecimal to decimal converter to change the prefix into a number, if you prefer.
+though you can use any standard hexadecimal to decimal converter to change the prefix into a number if you prefer.
 
 So, if we wanted our prefix to be 'aPPLE', we would set this to be:
 
@@ -215,9 +213,9 @@ So, we would then pop this value in to give us:
 Next up we have the height where we want the first zawy difficulty algorithm to go live.
 The difficulty algorithm determines how hard it is to mine a block based on the speed the previous blocks came in.
 
-This difficulty algorithm has had some flaws found with it, and a newer zawy algorithm is now being used.
+This difficulty algorithm has had some flaws found with it, and a newer zawy algorithm is now in use.
 I would suggest you set this to `0`, to instantly activate it,
-and then we will switch to the newer zawy algorithm directly after at a height of `1`.
+and then we will switch to the newer zawy algorithm directly at the height of `1`.
 
 - `const uint32_t ZAWY_DIFFICULTY_BLOCK_INDEX = 0;`<br/><br/>
 
@@ -242,7 +240,7 @@ This value defines how fast the maximum supply will be emitted.
 A smaller value means the supply will be emitted faster,
 and a higher values means it will take longer for the supply to be released.
 You can again use the website [linked earlier](https://cryptonotestarter.org/tools.html)
-to experiment with different values for the emission and how they will effect how long it takes for the supply to be distributed.
+to experiment with different values for the emission and how they will affect how long it takes for the supply to be distributed.
 
 If we wanted a fast emission, we could set this to a value like 21.
 
@@ -256,8 +254,8 @@ If we wanted a fast emission, we could set this to a value like 21.
 
 This value defines how many numbers there are after the decimal point in your currency.
 In TurtleCoin, this value is 2, so we have amounts like 10.23 TRTL.
-If we set this to 6, we would have amount like 10.234567 TRTL instead.
-Remember, as previously mentioned, this effects your money supply and other parameters which depend upon atomic units.
+If we set this to 6, we would have an amount like 10.234567 TRTL instead.
+Remember, as previously mentioned, this affects your money supply and other parameters which depend upon atomic units.
 
 - `const size_t CRYPTONOTE_DISPLAY_DECIMAL_POINT = 6;`<br/><br/>
 
@@ -275,7 +273,7 @@ A lower value allows cheaper transactions, but can mean your network can be spam
 A happy medium is generally desired, though you could optionally raise this at a later date.
 
 This value is defined again in *atomic units*,
-so multiply your desired minimum fee by 10 * the amount of numbers after the decimal point in your coin.
+so multiply your desired minimum fee by 10 * the number of numbers after the decimal point in your coin.
 
 
 - const uint64_t MINIMUM_FEE = UINT64_C(1000);<br/><br/>
@@ -298,7 +296,7 @@ const uint64_t DEFAULT_MIXIN = MINIMUM_MIXIN_V2;
 ```
 
 These set the mixin values that are allowed on the network, and at what height they are applied.
-If you want a private coin from the get go,
+If you want a private coin from the get-go,
 I would suggest setting MIXIN_LIMITS_V1_HEIGHT to 0, and MIXIN_LIMITS_V2_HEIGHT to 1.
 Then, set the MINIMUM_MIXIN_V1/V2 and MAXIMUM_MIXIN_V1/V2 values as appropriate.
 
@@ -337,7 +335,7 @@ const uint64_t DEFAULT_DUST_THRESHOLD_V2                     = UINT64_C(0);
 const uint32_t DUST_THRESHOLD_V2_HEIGHT = MIXIN_LIMITS_V2_HEIGHT;
 ```
 
-The dust threshold determines the smallest amount that can be send in a transaction,
+The dust threshold determines the smallest amount that can be sent in a transaction,
 and can lead to lots of tiny amounts accumulating in your wallet which cannot be sent.
 
 Setting the dust threshold to zero prevents this, but has a side effect of making transactions slightly bigger.
@@ -352,7 +350,7 @@ I suggest setting DUST_THRESHOLD_V2_HEIGHT to 0, to make small amounts always sp
 #### `const uint32_t UPGRADE_HEIGHT_V4 = 350000; // Upgrade height for CN-Lite Variant 1 switch.`<br/><br/>
 
 
-This value determines when the mining algorithm will transaction to Original CryptoNight,
+This value determines when the mining algorithm will transition to Original CryptoNight,
 also known as CN v0, to CryptoNight Lite v1, also known as CryptoNight Lite v7.
 
 Original CN currently allows ASICs on the network, so we suggest you set this upgrade height to 3,
@@ -372,7 +370,7 @@ you can set the upgrade height to `std::numeric_limits<uint32_t>::max()`
 #### `const uint64_t FORK_HEIGHTS[] =`<br/><br/>
 
 This variable is used by the `status` command in zedwallet and TurtleCoind to notify users when a fork is upcoming,
-or their software is outdated. We suggest you setup some regular forks ahead of time,
+or their software is outdated. We suggest you set up some regular forks ahead of time,
 if you then need to update the software this will let users know when to expect this.
 
 If you wish to not pre-prepare any forks, you can empty the list.
@@ -393,7 +391,7 @@ This will set the status command to notify of a fork at 100k and 300k blocks.
 ### `const uint8_t CURRENT_FORK_INDEX = FORK_HEIGHTS_SIZE == 0 ? 0 : 3;`<br/><br/>
 
 This value relates to the previous FORK_HEIGHTS array.
-It determines which fork heights the software supports. (This value is zero indexed).
+It determines which fork heights the software supports. (This value is zero-indexed).
 For example, if our `FORK_HEIGHTS = {100, 200, 300}` and `CURRENT_FORK_INDEX = 1`
 then the software will support the fork at FORK_HEIGHTS[1] - which is the fork at 200 blocks.
 
@@ -485,7 +483,7 @@ This will print out a long hash. Take this hash, and replace the value of
   const char GENESIS_COINBASE_TX_HEX[] = "012801ff000100023f6cd7a559d3b5d88fc6396a7a261c70a5212608bdeeb73ac53ff5dad157326221015bf857a5c95d6066c23800a6563e79acc85d450d7563cf68995d1c5c92b1567a";
   ```
 
-Now, recompile your code, and setup your seed nodes.
+Now, recompile your code, and set up your seed nodes.
 Once you start mining, the premine should appear in the wallet you previously created.
 Make sure you have your private keys to restore this wallet.
 
@@ -606,15 +604,15 @@ If you set this to true, you can change the value of
 const uint64_t mixinZeroDisabledHeight = CryptoNote::parameters::MIXIN_LIMITS_V2_HEIGHT;
 ```
 
-To determine at what block height a mixin of zero gets disabled.
+To determine what block height a mixin of zero gets disabled.
 In TurtleCoin's case, this was disabled at block 620k,
-but being a new network you have the advantage of being able to disable a mixin of zero much earlier,
+but being a new network, you have the advantage of being able to disable a mixin of zero much earlier,
 or even from the launch of your network.
 
-Again, this is only a client side limitation.
-Ensure you have set your mixin limits in `CryptoNoteConfig.h` to enforce mixin on a network level.
+Again, this is only a client-side limitation.
+Ensure you have set your mixin limits in `CryptoNoteConfig.h` so that the network will enforce the mixin limits. Any ideas you always want to happen, need to be done at the network level, else custom daemons/wallets etc. can be written to avoid those ideas/limits.
 
-If you want to allow zero mixin, then `mixinZeroDisabledHeight` has no effect.
+If you want to allow zero mixins, then `mixinZeroDisabledHeight` does nothing.
 
 - ```
   const bool mixinZeroDisabled = true;
@@ -642,7 +640,7 @@ set_property(TARGET PoolWallet PROPERTY OUTPUT_NAME "poolwallet")
 set_property(TARGET Miner PROPERTY OUTPUT_NAME "miner")
 ```
 
-To change the name of a binary, just change the final string in one of these lines. For example:
+To change the name of a binary, change the final string in one of these lines. For example:
 
 `set_property(TARGET Daemon PROPERTY OUTPUT_NAME "AppleCoind")`
 
@@ -653,22 +651,22 @@ Save the file, and recompile.
 
 Open up `src/version.h.in`.
 
-The values are pretty self explanatory. Set `PROJECT_NAME` to the name of your coin,
+The values are pretty self-explanatory. Set `PROJECT_NAME` to the name of your coin,
 `PROJECT_SITE` to your coins website, and `PROJECT_COPYRIGHT` to your copyright string.
 
 Next, the version numbers.
 
 `APP_VER_MAJOR` determines the first part of the version.
-You usually increment this value if you make a very large change to your code,
+You usually increment this value if you make a substantial change to your code,
 which potentially breaks APIs, wallet formats, blockchain formats, and so on.
 
 `APP_VER_MINOR` determines the second number of the version.
 This is usually incremented for significant upgrades, such as hard forks.
 
 `APP_VER_BUILD` determines the final number of the version.
-This is usually incremented for small changes, such as bug fixes, speed ups, small wallet changes, and so on.
+This is usually incremented for small changes, such as bug fixes, speedups, small wallet changes, and so on.
 
-These numbers are then combined to form the full version number, in the format
+These numbers are then combined to form the full version number, in the format:
 
 `APP_VER_MAJOR`.`APP_VER_MINOR`.`APP_VER_BUILD`.
 
@@ -688,15 +686,15 @@ Ok, so you've finished tweaking all the configs, and now you're ready to go!
 To start with, you will need to compile your code. See the compiling section below.
 
 Make sure you've got the IPs of your seed nodes filled in in the config,
-as your coin won't work without at least 3 daemons on the network.
+3 daemons need to be connected to the network for your coin to work.
 
 Once you've compiled the code on all your machines,
-you can simply start up your daemon.
+you can start up your daemon.
 If you are unable to connect to the seed nodes,
 you will see something like `Failed to connect to seed nodes` in your daemon output.
 
 Ensure your firewalls are not preventing the daemon connection,
-you may need to open the p2p and rpc ports for the daemon, which by default are 11898 and 11897.
+you may need to open the p2p and RPC ports for the daemon, which by default are 11898 and 11897.
 
 If your daemons are now talking to each other, you can start mining, and launch your blockchain!
 
@@ -704,7 +702,7 @@ You can use the solo mining `miner` executable for this.
 From a command prompt or terminal, launch the miner like so: `miner --threads 1 --log-level 3 --address <your address>`,
 replacing <your address> with an address you have generated and control.
 
-You can of course increase the threads value, however as you are the only one currently mining on the network,
+You can, of course, increase the threads value, however as you are the only one currently mining on the network,
 there is not much point in that yet!
 
 E.g.
@@ -728,7 +726,7 @@ You can always find the latest instructions on how to compile TurtleCoin on our
 ## Support, Questions?
 
 Something not clear? Head over to our [Discord](http://chat.turtlecoin.lol) and ask in the #help channel,
-and hopefully someone will be able to help you out. 
+and hopefully, someone will be able to help you out. 
 
 Let us know if something is wrong with this guide, or missing, so we can update it and make it better!
 
