@@ -4,8 +4,8 @@ In case you don't want to download the blockchain and verify it everytime, you c
 
 ## How to do it
 
-1. Open up a command prompt window and navigate to the folder that contains *simplewallet*.
-2. Use the following command to start SimpleWallet  
+1. Open up a command prompt window and navigate to the folder that contains *zedwallet*.
+2. Use the following command to start zedwallet  
 
 ###Windows:
 

@@ -8,9 +8,9 @@ Guides for recovering your wallet with your private spend and view keys-
 
 ### CLI Wallet<a name="keys-cli-wallet"></a>
 
-#### SimpleWallet<a name="keys-simple-wallet"></a>
+#### zedwallet<a name="keys-simple-wallet"></a>
 
-View [this guide](Using-Simplewallet#private-spend-and-view-keys) for steps on recovering your wallet with your private spend and view keys with SimpleWallet.
+View [this guide](Using-Simplewallet#private-spend-and-view-keys) for steps on recovering your wallet with your private spend and view keys with zedwallet.
 
 ### GUI Wallets<a name="keys-gui-wallet"></a>
 
@@ -28,9 +28,9 @@ Guides for recovering your wallet with your 25 word mnemonic seed-
 
 ### CLI Wallet<a name="25-cli-wallet"></a>
 
-#### SimpleWallet<a name="25-simple-wallet"></a>
+#### zedwallet<a name="25-simple-wallet"></a>
 
-View [this guide](Using-Simplewallet#25-word-mnemonic-seed) for steps on recovering your wallet with your 25 word mnemonic seed with SimpleWallet.
+View [this guide](Using-Simplewallet#25-word-mnemonic-seed) for steps on recovering your wallet with your 25 word mnemonic seed with zedwallet.
 
 ### GUI Wallets<a name="25-gui-wallet"></a>
 

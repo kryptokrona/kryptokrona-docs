@@ -3,7 +3,7 @@
 ## Setup
 
 - Right click [this link](https://github.com/turtlecoin/checkpoints/raw/master/checkpoints.csv) and choose `Save link as...` to download checkpoints.csv
-- Place checkpoints.csv in the same folder as your daemon(TurtleCoind) and wallet(SimpleWallet).
+- Place checkpoints.csv in the same folder as your daemon(TurtleCoind) and wallet(zedwallet).
 - You can get them both [from here](http://latest.turtlecoin.lol) if you don't have them already.
 
 - Make sure you shut down any GUI wallets, or any other instances of TurtleCoind.

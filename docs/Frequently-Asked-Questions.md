@@ -101,7 +101,7 @@ miner.exe --address TRTL...
 
  replacing `TRTL...` with your full TRTL address. 
 
-  You need to have SimpleWallet open and synced to use this miner, unlike conventional miners, where the pool hosts the daemon.
+  You need to have zedwallet open and synced to use this miner, unlike conventional miners, where the pool hosts the daemon.
 
 #### Q: Is there a calculator to see how much TRTL I'll mine per day?
 
@@ -181,7 +181,7 @@ A: Try installing this: <https://www.microsoft.com/en-us/download/details.aspx?i
 
 A: Try installing this: <https://go.microsoft.com/fwlink/?LinkId=746572>
 
-## TurtleCoind / SimpleWallet Issues<a name="tcoind-simplewallet-issues"></a>
+## TurtleCoind / zedwallet Issues<a name="tcoind-zedwallet-issues"></a>
 
 #### Q: I'm seeing an error in TurtleCoind `Proof of work too weak for block...` and the syncing stopped.
 
@@ -235,7 +235,7 @@ Alternatively, perhaps TurtleCoind can't communicate with any peers.
 The wallet can't function until it can communicate with the network.
 ```
 
-A: You need to also open up SimpleWallet and let it sync. TurtleCoind is your connection to the network, and needs to be open and synced whenever you want to use your wallet.
+A: You need to also open up zedwallet and let it sync. TurtleCoind is your connection to the network, and needs to be open and synced whenever you want to use your wallet.
 
 #### Q: I've opened the wallet, and I'm getting lots of messages like "Your TurtleCoind isn't fully synced yet!"..
 
@@ -243,7 +243,7 @@ A: You need to also open up SimpleWallet and let it sync. TurtleCoind is your co
 Until you are fully synced, you won't be able to send transactions, and your balance may be missing or incorrect!
 ```
 
-  A: Your daemon hasn't finished syncing yet. Keep SimpleWallet open, and wait until you are 0 days behind the current block, and for the daemon to print out a green message saying `Successfully synchronized with the TurtleCoin Network.`
+  A: Your daemon hasn't finished syncing yet. Keep zedwallet open, and wait until you are 0 days behind the current block, and for the daemon to print out a green message saying `Successfully synchronized with the TurtleCoin Network.`
 
 #### Q: I think I should have more money in my balance than it is showing, what should I do?
 
@@ -253,24 +253,24 @@ Until you are fully synced, you won't be able to send transactions, and your bal
 
 A: 
 
-* In SimpleWallet, type `export_keys`, and save the view and spend key somewhere safe in case something goes wrong, if you haven't already. 
+* In zedwallet, type `export_keys`, and save the view and spend key somewhere safe in case something goes wrong, if you haven't already. 
 
-*  Then, close and reopen SimpleWallet and SimpleWallet. 
-*  Type `reset` in SimpleWallet after reopening your wallet file.
+*  Then, close and reopen zedwallet and zedwallet. 
+*  Type `reset` in zedwallet after reopening your wallet file.
 *  It should start resetting your wallet, but the progress might not be immediately obvious - wait a while, and it should start counting up the blocks and printing out your transactions as it gets to them.
 
 #### Q: How do I backup my wallet?
 
-  A: If SimpleWallet is open and synced, open it, and type `export_keys`. 
+  A: If zedwallet is open and synced, open it, and type `export_keys`. 
   Save the view and spend key somewhere safe, and you can use them to reimport your wallet if you lose it.
 
 #### Q: How do I send TRTL?
 
-  A: You can check [this out](guides/wallets/Using-Simplewallet#tx-trtl) for steps on how to send TRTL to someone.
+  A: You can check [this out](guides/wallets/Using-zedwallet#tx-trtl) for steps on how to send TRTL to someone.
 
 #### Q: How do I send money to exchanges / use payment ID?
 
-  A: You can check [this out](guides/wallets/Using-Simplewallet#tx-trtl-p-id) for steps on how to send TRTL with the payment ID.
+  A: You can check [this out](guides/wallets/Using-zedwallet#tx-trtl-p-id) for steps on how to send TRTL with the payment ID.
 
 #### Q: What is mixin?
 
@@ -282,7 +282,7 @@ A mixin of `0` can be used to have a public transaction(though it is strongly re
 
 #### Q: How can I view my balance?
 
-  A: If SimpleWallet is fully synced, in SimpleWallet, simply type `balance`.
+  A: If zedwallet is fully synced, in zedwallet, simply type `balance`.
 
 #### Q: How long does it take to sync TurtleCoind.exe?
 
@@ -294,13 +294,13 @@ A mixin of `0` can be used to have a public transaction(though it is strongly re
 
 #### Q: Can I skip the syncing?
 
-  A: Yes, you can currently use a public node with SimpleWallet. The keys stay on your PC, so it's secure. Check [this guide](guides/wallets/Using-remote-nodes) for more information.
+  A: Yes, you can currently use a public node with zedwallet. The keys stay on your PC, so it's secure. Check [this guide](guides/wallets/Using-remote-nodes) for more information.
 
 #### Q: What does it mean if my balance is locked?
 
   A: This is a transfer which hasn't been confirmed by the network yet. It will move into your main balance shortly, generally after 3 minutes.
 
-#### Q: In simplewallet.exe, I get an error `Error: failed to save new wallet: boost::filesystem::unique__path: Keyset as registered is invalid`. How can I fix it?
+#### Q: In zedwallet.exe, I get an error `Error: failed to save new wallet: boost::filesystem::unique__path: Keyset as registered is invalid`. How can I fix it?
 
   A: This is caused by some broken Windows crypto keys. In the address bar in Windows Explorer, type `%AppData%/Microsoft/Crypto/RSA/`. 
 
@@ -322,17 +322,17 @@ To view a guide on using them, you can go [here](guides/wallets/Making-a-Wallet/
 #### Q: I'm using the GUI Xamarin wallet, and it fails to connect to the daemon.
 
   A: There are multiple reasons this can occur. Try opening `walletd.log` and scrolling to the bottom to determine what is occurring.
-  
+
    * A wrong password - check `walletd.log` to check if this is occurring. If you are sure your password is correct, [this link](https://github.com/turtlecoin/desktop-xamarin/issues/20) could be helpful.
 
 
-   * You have another `walletd.exe` or SimpleWallet process running. Only one of these can be running at once, and the GUI launches its own. Check Task Manager and close down any of these processes and try again.
+   * You have another `walletd.exe` or zedwallet process running. Only one of these can be running at once, and the GUI launches its own. Check Task Manager and close down any of these processes and try again.
 
 
    * `walletd` is importing blocks from the DB, which takes a while and so the GUI thinks it has crashed. Check the [solution here](https://github.com/turtlecoin/desktop-xamarin/issues/17#issuecomment-366790435)
 
 
-   * If all else fails, if you have your private keys then you can instead import your wallet into SimpleWallet. 
+   * If all else fails, if you have your private keys then you can instead import your wallet into zedwallet. 
 
 
    * If that is not a desirable option, come and ask for help over at [the Discord][Discord_Link]
