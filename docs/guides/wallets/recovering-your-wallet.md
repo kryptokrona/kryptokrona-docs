@@ -10,7 +10,7 @@ Guides for recovering your wallet with your private spend and view keys-
 
 #### zedwallet<a name="keys-simple-wallet"></a>
 
-View [this guide](Using-Simplewallet#private-spend-and-view-keys) for steps on recovering your wallet with your private spend and view keys with zedwallet.
+View [this guide](Using-zedwallet#private-spend-and-view-keys) for steps on recovering your wallet with your private spend and view keys with zedwallet.
 
 ### GUI Wallets<a name="keys-gui-wallet"></a>
 
@@ -30,7 +30,7 @@ Guides for recovering your wallet with your 25 word mnemonic seed-
 
 #### zedwallet<a name="25-simple-wallet"></a>
 
-View [this guide](Using-Simplewallet#25-word-mnemonic-seed) for steps on recovering your wallet with your 25 word mnemonic seed with zedwallet.
+View [this guide](Using-zedwallet#25-word-mnemonic-seed) for steps on recovering your wallet with your 25 word mnemonic seed with zedwallet.
 
 ### GUI Wallets<a name="25-gui-wallet"></a>
 
