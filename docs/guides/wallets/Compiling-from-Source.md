@@ -59,7 +59,7 @@ $ scl enable devtoolset-7 bash
 $ export CXXFLAGS="-std=gnu++11"
 $ cmake3 .. -DBOOST_ROOT=~/boost_1_62_0
 $ make
-``` 
+```
 
 Good Turtle / Good beer Tourtel
 

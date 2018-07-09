@@ -10,13 +10,13 @@ In case you don't want to download the blockchain and verify it everytime, you c
 ###Windows:
 
 ```
-simplewallet.exe --remote-daemon host:port
+zedwallet.exe --remote-daemon host:port
 ```
 
 ###Mac and Linux
 
 ```
-./simplewallet --remote-daemon host:port
+./zedwallet --remote-daemon host:port
 ```
 
 Replace `host:port` with values from one of the public remote daemons available below.
@@ -26,7 +26,7 @@ You can now follow your normal process to access your wallet.
 For example-
 
 ```
-simplewallet.exe --remote-daemon public.turtlenode.io:11898
+zedwallet.exe --remote-daemon public.turtlenode.io:11898
 ```
 
 ##Making a Script to Do it Automatically
@@ -35,7 +35,7 @@ simplewallet.exe --remote-daemon public.turtlenode.io:11898
 
 ```text
 @echo off
-simplewallet.exe --remote-daemon host:port
+zedwallet.exe --remote-daemon host:port
 pause
 ```
 

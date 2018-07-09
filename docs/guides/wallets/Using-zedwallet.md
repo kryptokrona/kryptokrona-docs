@@ -86,13 +86,13 @@ Run the `zedwallet.exe` executable from the extracted folder.
 #### Mac
 
 ```bash
-./simplewallet
+./zedwallet
 ```
 
 #### Linux
 
 ```bash
-./simplewallet
+./zedwallet
 ```
 
 ### Creating a Wallet
