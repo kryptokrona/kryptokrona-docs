@@ -1847,6 +1847,65 @@ Argument            | Description                                               
 totalOutputCount	| Total number of unspent outputs of the specified addresses. | int
 fusionReadyCount    | Number of outputs that can be optimized.                    | int
 
+## createIntegratedAddress
+
+```shell
+curl -d '{"jsonrpc":"2.0","id":1,"password":"passw0rd","method":"createIntegratedAddress","params":{"paymentId":"7FE73BD90EF05DEA0B5C15FC78696619C50DD5F2BA628F2FD16A2E3445B1922F", "address":"TRTLxxxx..."}}' http://localhost:8070/json_rpc
+```
+
+```javascript
+/* Needs to be added */
+```
+
+```php
+<?php
+use TurtleCoin\Walletd;
+
+$walletd = new Walletd\Client($config);
+$address = 'TRTLxxxx...';
+$paymentId = '7FE73BD90EF05DEA0B5C15FC78696619C50DD5F2BA628F2FD16A2E3445B1922F';
+$response = $walletd.createIntegratedAddress($address, $paymentId);
+
+echo $response->getBody()->getContents();
+```
+
+```python
+from turtlecoin import Walletd
+
+walletd = Walletd(rpc_password, rpc_host, rpc_port)
+address = 'TRTLxxxx...'
+paymentId = '7FE73BD90EF05DEA0B5C15FC78696619C50DD5F2BA628F2FD16A2E3445B1922F'
+response = walletd.create_integrated_address(address, paymentId)
+print(response)
+```
+
+> Expected output:
+
+```json
+{
+  "id": 1,
+  "jsonrpc": "2.0",
+  "result": {
+    "integratedAddress": "TRTLxxx..."
+  }
+}
+```
+
+`createIntegratedAddress()` method allows you to create a combined address, containing a standard address and a paymentId, to be used in sendTransaction() or for supplying to a user, instead of using an address and paymentId as separate parameters. This is helpful to ensure users cannot forget to supply a payment Id.
+
+**Input**
+
+Argument              | Mandatory      | Description          | Format
+--------------------- | -------------- | -------------------- | -------
+address               | Yes            | A valid address      | string
+paymentId             | Yes            | A valid paymentId    | string
+
+**Output**
+
+Argument              | Description                         | Format
+--------------------- | ----------------------------------- | ------
+integratedAddress	  | The created integrated address		| string
+
 
 ## License
 
