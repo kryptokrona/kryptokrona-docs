@@ -16,6 +16,7 @@ Technical resources to start building on TurtleCoin.
 * [Javascript](https://github.com/turtlecoin/turtlecoind-rpc-js)
 * [NodeJS](https://www.npmjs.com/package/turtlecoin-rpc)
 * [Python](https://github.com/turtlecoin/turtlecoin-walletd-rpc-python)
+* [Go](https://github.com/turtlecoin/turtlecoin-rpc-go)
 
 
 ## Libraries
