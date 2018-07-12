@@ -1874,8 +1874,8 @@ from turtlecoin import Walletd
 
 walletd = Walletd(rpc_password, rpc_host, rpc_port)
 address = 'TRTLxxxx...'
-paymentId = '7FE73BD90EF05DEA0B5C15FC78696619C50DD5F2BA628F2FD16A2E3445B1922F'
-response = walletd.create_integrated_address(address, paymentId)
+payment_id = '7FE73BD90EF05DEA0B5C15FC78696619C50DD5F2BA628F2FD16A2E3445B1922F'
+response = walletd.create_integrated_address(address, payment_id)
 print(response)
 ```
 
