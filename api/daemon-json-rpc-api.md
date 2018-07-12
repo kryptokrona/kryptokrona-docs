@@ -6,6 +6,7 @@ Currently we support the following official client bindings:
 
 * [JavaScript](https://github.com/turtlecoin/turtlecoin-rpc-js)
 * [Python](https://github.com/turtlecoin/turtlecoin-rpc-python)
+* [Go](https://github.com/turtlecoin/turtlecoin-rpc-go)
 
 ```javascript
 npm install turtlecoin-rpc
@@ -528,7 +529,7 @@ blocks   | **Array of** |                                       |
 ## getblock
 
 ```shell
-curl -d '{"jsonrpc":"2.0","met":"f_block_json","params":{"hash":"980ff..."}}' http://localhost:11898/json_rpc
+curl -d '{"jsonrpc":"2.0","method":"f_block_json","params":{"hash":"980ff..."}}' http://localhost:11898/json_rpc
 ```
 
 ```python

@@ -17,7 +17,8 @@ See [API Documentation](https://api-docs.turtlecoin.lol/) for usage.
 
 * [Javascript](https://github.com/turtlecoin/turtlecoind-rpc-js): A JavaScript wrapper for the Turtlecoind daemon RPC interface.
 * [NodeJS](https://www.npmjs.com/package/turtlecoin-rpc): This project is designed to make it very easy to interact with various RPC APIs available within the TurtleCoin Project. This entire project uses Javascript Promises to make things fast, easy, and safe.
-* [Go](https://www.github.com/turtlecoin/turtlecoin-rpc-go): A Golang wrapper for the TurtleCoin RPC API. This project makes it easy to send requests to particular RPC server and returns a clear response without any abrupt termination.
+* [Go](https://github.com/turtlecoin/turtlecoin-rpc-go): A Golang wrapper for the TurtleCoin RPC API. This project makes it easy to send requests to particular RPC server and returns a clear response without any abrupt termination.
+* [Python](https://github.com/turtlecoin/turtlecoin-rpc-python): A Python wrapper for the TurtleCoind daemon RPC interface
 
 See [API Documentation](https://api-docs.turtlecoin.lol/) for usage.
 
