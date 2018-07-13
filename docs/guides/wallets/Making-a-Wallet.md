@@ -20,17 +20,25 @@ If you would like to use zedwallet, you can check out [this guide](Using-zedwall
 
 ## Graphical Wallet (GUI Wallet)
 
-If you prefer to use a GUI wallet, there are currently two which are being developed regularly:
+If you prefer to use a GUI wallet, there is currently one which is being maintained:
 
-##### 1. [WinForms Wallet](https://github.com/turtlecoin/turtle-wallet-xamarin)
+##### 1. [Nest Wallet](https://github.com/turtlecoin/turtle-wallet-go)
 
-##### 2. [Nest Wallet](https://github.com/turtlecoin/turtle-wallet-go)
+**[WinForms wallet](https://github.com/turtlecoin/turtle-wallet-xamarin) is legacy and not supported anymore:**
+
 
 If you would like to setup a GUI wallet, you can take a look at [this guide](Making-a-GUI-Wallet).
 
 ## Web Wallet
 
-Our Web Wallet is currently under development and is in the beta testing stage. If you are interested in joining the beta test, jump into our Discord channel and see if you can score an invite!
+We have two web wallets under development:
 
-We'll have a guide out for it as soon as it comes out!
+[Fexra's Web Wallet](https://beta.turtlewallet.io)
+[Discord Link](https://discord.gg/ukkSbV)
 
+and,
+
+[Canti's Web Wallet](https://vico-web-wallet.turtlecoin.ws/)
+[Discord Link](https://discord.gg/T39Fdr)
+
+Both of them are under heavy development, but Fexra's is closer to completion

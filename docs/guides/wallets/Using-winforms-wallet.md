@@ -1,3 +1,7 @@
+## THIS GUIDE IS OUT OF DATE. WINFORMS WALLET IS DEFUNCT. USING NEST WALLET IS RECOMMENDED INSTEAD. [SEE HERE](Using-nest-wallet)
+
+*For posterity, the original guide is below.*
+
 # Using WinForms Wallet
 
 ## Screenshots
@@ -10,7 +14,7 @@ Here's a quick image of WinForms wallet in action-
 
 Binary distributions can be found [here](https://github.com/turtlecoin/turtle-wallet-winforms/releases/latest).
 
-Select the appropriate file for the target platform (Windows, Mac, Linux). 
+Select the appropriate file for the target platform (Windows, Mac, Linux).
 
 Binaries for Windows and Linux are both provided in the `.zip` format. Mac is currently not supported.
 
@@ -32,7 +36,7 @@ Right now, Mac is not supported.
 
 Running `TurtleWallet.exe` will automatically open `walletd.exe` and begin synchronizing with the blockchain.
 
-Because the blockchain is constantly growing, the file size is always increasing, and `TurtleCoind.exe` must verify each block (CPU intensive). 
+Because the blockchain is constantly growing, the file size is always increasing, and `TurtleCoind.exe` must verify each block (CPU intensive).
 
 To save time, consider downloading a cached 'bootstrap' of the blockchain (see [Bootstrapping the Blockchain](../Bootstrapping-the-Blockchain) for more info).
 
@@ -68,7 +72,7 @@ Upon opening `TurtleWallet.exe`, you will be met with an opening screen. To open
 
 Then, navigate to where your `.wallet` file is saved through File Explorer and double-click.
 
-After that, enter the password you set during creation and press `Submit`. 
+After that, enter the password you set during creation and press `Submit`.
 
 The wallet will then begin synchronizing with the blockchain. When done, it will open and you can access it's other features.
 
@@ -84,7 +88,7 @@ To copy it, you can click on the button which says `Copy Address`.
 
 Each TurtleCoin  wallet is, essentially, just a pair of keys (*View Key* and *Spend Key*) from which the public address is derived.
 
-It is **very** important to export these keys and back them up somewhere that is safe and secure (meaning somewhere reliable/permanent that no one else can access). 
+It is **very** important to export these keys and back them up somewhere that is safe and secure (meaning somewhere reliable/permanent that no one else can access).
 
 In the event of a lost or corrupted wallet file, computer crash, etc., the *View Key* and *Spend Key* are the only way to restore a wallet and recover the funds it holds.
 
@@ -114,7 +118,7 @@ Upon opening your wallet, your balance is located in the top right.
 
   Usually the service/recipient will generate and provide the required payment ID.
 
-  To include a Payment ID, simply enter it next to ` Payment ID`. 
+  To include a Payment ID, simply enter it next to ` Payment ID`.
   *Note: It is optional, if it doesn't give a payment ID it is most likely not required*
 
 * Next is the `Mixin`, which is how many times your transaction will be mixed with others for obfuscation and privacy. The suggested amount is `3`.

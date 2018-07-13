@@ -8,9 +8,9 @@ The Nest Wallet is a TurtleCoin Wallet written in GoLang for MacOS, Linux and Wi
 
 You can view a guide for setting it up [here](Using-nest-wallet).
 
-## [WinForms Wallet](https://github.com/turtlecoin/turtle-wallet-winforms)
 
-The WinForms wallet is a TurtleCoin Wallet written in C# for Windows and Linux through Mono. It is mainly developed and maintained by jerme404
+#### [WinForms Wallet](https://github.com/turtlecoin/turtle-wallet-winforms) [DEFUNCT]
 
-You can view a guide for setting it up [here](Using-winforms-wallet).
+~~The WinForms wallet is a TurtleCoin Wallet written in C# for Windows and Linux through Mono. It is mainly developed and maintained by jerme404~~
 
+~~You can view a guide for setting it up [here](Using-winforms-wallet).~~
