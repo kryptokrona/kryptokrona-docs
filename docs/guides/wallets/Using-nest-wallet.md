@@ -9,7 +9,6 @@ Here's a quick image of Nest Wallet in action-
 ## Downloading
 
 Binary distributions can be found [here](https://github.com/turtlecoin/turtle-wallet-go/releases/latest).
-
 Select the appropriate file for the target platform (Windows, Mac, Linux).
 
 Windows and Mac binaries are provided in `.zip` format, while Linux binaries are provided in `.tar.gz` format.
@@ -153,12 +152,23 @@ To safely close the wallet, simply close it as you normally would; by clicking t
 
 ### Recovering Your Wallet
 
+#### 25 Word Mnemonic Seed
+If you want to recover your wallet with your 25 word mnemonic seed, it's pretty easy.
+
+Upon opening Nest Wallet, *in the boxes under `Import wallet`*-
+
+* enter the name you want to give your wallet
+* enter the password you want to encrypt your wallet with
+* enter your 25 word seed in the bottom box
+
+
 #### Private View and Spend Keys
 
 If you want to recover your wallet with your Private View and Spend Key, it is relatively easy.
 
-Upon opening Nest Wallet, *in the boxes under `Import wallet from keys`*-
+Upon opening Nest Wallet, *in the boxes under `Import wallet`*-
 
+* click on the circular button to change to the View/Spend key mode
 * enter the name you want to give your wallet
 * enter the password you want to encrypt your wallet with
 * enter your View and Spend key in the bottom two boxes
@@ -166,7 +176,3 @@ Upon opening Nest Wallet, *in the boxes under `Import wallet from keys`*-
 ![restore](images/nest-recover.png)
 
 Once done, click `IMPORT`. The wallet will be restored and begin syncing with the blockchain.
-
-#### 25 Mnemonic Seed
-
-View [this guide](recovering-your-wallet#25-nest-wallet) for steps on recovering your wallet with your 25 word mnemonic seed.
