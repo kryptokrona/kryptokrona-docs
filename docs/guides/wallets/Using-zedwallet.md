@@ -247,27 +247,12 @@ If, however, you had a bigger 6000 payment from somewhere, you could just includ
 
 Fusion transactions take all your small payments and combine them into big ones, so you can send large ones at once
 
-To quickly optimize your wallet, for larger transactions which aren't nearing your full balance and you want to do it quickly, type *(this can take some time)*-
-
+To optimize your wallet, type:
 ```
-quick_optimize
+optimize
 ```
 
-and press `y`
-
-
-
-If you want to fully optimize your wallet, preparing your wallet to send upto your full balance, type *(this can take some time)*-
-
-````
-full_optimize
-````
-
-and press `y`
-
-
-
-That's it! It will display a message `(Full) optmization completed!` when it's done.
+When it is completed, it will print out a green message `Full optimization completed!`
 
 ![optimize](images/optimize-simple.png)
 
