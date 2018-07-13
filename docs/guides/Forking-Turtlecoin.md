@@ -215,7 +215,7 @@ Open up the file `CryptoNoteConfig.h`, located in the `src` folder.
 Let's start at the top. We'll only focus on the constants which need changing, as some of them are fine to keep as they are.
 
 
-#### `const uint64_t DIFFICULTY_TARGET = 30; // seconds`<br/><br/>
+#### `const uint64_t DIFFICULTY_TARGET = 30; // seconds`<br>
 
 This is how fast you want blocks to be. In TurtleCoin, we have blocks on average every 30 seconds.
 If you wanted blocks to be every 2 minutes, you would set this to be:
