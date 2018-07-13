@@ -3,24 +3,21 @@
 
 ## Registering your Wallet
 
-Go to the `#bots` channel in the [Discord server](http://chat.turtlecoin.lol), type `.registerwallet TRTL...`, and replace `TRTL...` with your wallet address. 
+Go to the `#bots` channel in the [Discord server](http://chat.turtlecoin.lol), and type `.registerwallet TRTL...`, and replace `TRTL...` with your wallet address.
 
-For example, you would type- 
+For example, you would type-
 
 ```
 .registerwallet TRTLv3pFrFm2yk4cYNtKf5fxV1b594tNrZfEV2CYWJsTSqr9BWoWMrUNpQaeD9StrzQrxpRQKPCdd1FfvT6D6dAg4pY6iB7sqsG
 ```
 
-
-
 ## Depositing Turtle
 
-After your wallet address has been registered, type `.deposit` in the #bots channel, then:
+After your wallet address has been registered, type `.deposit` in the `#bots` channel, then:
 
-* Check for a new direct message from turtlebot++ 
+* Check for a new direct message from trtlbot++
 * Copy the first line of code he gives and enter it in your wallet's Recipient address field
 * Then copy the second line of code he gives and enter it as the Payment ID address field
-* After that, enter the amount of mixin and amount you want to use/send and send the transaction!
 
 #### CLI Wallet
 
@@ -34,9 +31,9 @@ Follow the steps given [here](wallets/Using-Simplewallet#sending-turtlecoin-tran
 
 Follow the steps given [here](wallets/Using-nest-wallet#sending-turtlecoin-transactions) and replace the values of the address and Payment ID with the ones provided (**!! PAYMENT ID IS IMPORTANT !!**)
 
-#### WinForms Wallet
+#### ~~WinForms Wallet~~ [DEFUNCT]
 
-Follow the steps given [here](wallets/Using-winforms-wallet#sending-turtlecoin-transactions) and replace the values of the address(recipient) and Payment ID with the ones provided (**!! PAYMENT ID IS IMPORTANT !!**)
+~~Follow the steps given [here](wallets/Using-winforms-wallet#sending-turtlecoin-transactions) and replace the values of the address(recipient) and Payment ID with the ones provided (**!! PAYMENT ID IS IMPORTANT !!**)~~
 
 
 
@@ -46,7 +43,7 @@ Follow the steps given [here](wallets/Using-winforms-wallet#sending-turtlecoin-t
 
 ### Expected Results
 
-When the bot receives the payment, it will send you a PM letting you know. Now you can tip people! 
+When the bot receives the payment, it will send you a PM letting you know. Now you can tip people!
 
  ![received](images/trtlbot-plus-plus/dep.png)
 
@@ -61,28 +58,28 @@ To check your balance, type `.balance`. trtlbot++ will PM you with how much bala
 If it shows `0.00`, then make sure you have [deposited](#depositing-turtle) some TRTL and it has [been received](#expected-results)
 
 ## Tipping People
-To tip someone, type `.tip 12345 @person`. 
+To tip someone, type `.tip 12345 @person`.
 
 Replace `12345` with how much you want to tip the person.  
 Replace `@person` with whom you want to tip it to.
 
 For example, `.tip 1 @RockSteady#7588` will tip the user called "RockSteady"  1 TRTL.
 
-*The minimum you can send is 0.11 TRTL, and the bot will take an extra 0.1 TRTL on top of what you tipped to account for fees
+*The minimum you can send is 0.01 TRTL, and the bot will take an extra 0.1 TRTL on top of what you tipped to account for fees
 So if you tipped 1 TRTL, 1.1 TRTL will be pulled from your account so that the full 1 TRTL reaches the recipient*
 
 ### Adding a Message when Tipping
 
 ***The syntax for tipping someone is- `.tip 12345 @person`***
-     
+
 - Trying to add a message before it, will not work.  
-   For example, 
+   For example,
 
    ```
    hey .tip 1 @RockSteady#7588
    ```
 
-    
+
 
    will **not** send RockSteady 1 TRTL.
 
@@ -93,7 +90,7 @@ So if you tipped 1 TRTL, 1.1 TRTL will be pulled from your account so that the f
   ```
   heyo there.
   I'm tipping you
-    
+
   .tip 1 @RockSteady#7588
   ```
 
@@ -102,13 +99,13 @@ So if you tipped 1 TRTL, 1.1 TRTL will be pulled from your account so that the f
   ---
 
 - Trying to add a message *after* it will **will** work.  
-  For example, 
+  For example,
 
    ```
    .tip 1 @RockSteady#7588 hey
    ```
 
-    
+
 
    **will** send RockSteady 1 TRTL
 
@@ -116,7 +113,7 @@ So if you tipped 1 TRTL, 1.1 TRTL will be pulled from your account so that the f
 
 - Trying to add a message after the command on a seperate line in an existing message **will** work.  
   For example,
-  ``` 
+  ```
   .tip 1 @RockSteady#7588
 
   hey
@@ -126,7 +123,7 @@ So if you tipped 1 TRTL, 1.1 TRTL will be pulled from your account so that the f
   ---
 
 - Trying to add a message *between* the *amount* and the *recipient* **will** work.  
-  For example, 
+  For example,
 
   ```
   .tip  1 hey @RockSteady#7588
@@ -170,13 +167,13 @@ The bot will still pull a fee of 0.1 TRTL extra from your balance.
 This can be used to tip - so far - an unlimited amount of people, given that you have enough balance.  
 The bot will PM you after it has sent the payments to everyone, letting you know the TX Hash, your updated balance, and how many people it sent it to, along with the number of -
 
-- successful payments (the recipent had registered their wallet and the payment was successfully sent)  
-- unsuccessful payments (the recipent had not registered their wallet and/or the payment was not successfully sent)
+- successful payments (the recipient had registered their wallet and the payment was successfully sent)  
+- unsuccessful payments (the recipient had not registered their wallet and/or the payment was not successfully sent)
 
 If you tip multiple people, some who have registered their wallets and some who haven't, the bot will react with ![99](images/trtlbot-plus-plus/almost100.png) and :sos: for both(only once).  
 However, it will not let you know whose wallet has not been registered, simply the amount of people it did send it to (so you can deduce the number of people it was not able to send to by subtracting the number of successful payments from the number of people you tipped).
 
-*Sadly, trying to tip "Roles" (like `@dev-turtle`, `@everyone`, `@here` etc) and expecting the bot to automatically tip everyone with that said role won't work, as it has not been programmed to do so :(*
+*Sadly, trying to tip "Roles" (like `@dev-turtle`, `@everyone`, `@here` etc) and expecting the bot to automatically tip everyone with that said role won't work, as it has not been programmed to do so* :(
 
 ### Where Do These Tips Go?
 
@@ -188,11 +185,11 @@ It also reacts to the message on which the person was tipped (`.tip 1 @RockStead
 It *does not* send the TRTL to your tipjar balance. It sends it *directly* to your **wallet**.  
 This is to ensure that more and more TRTL is introduced into the ecosystem, rather than the same TRTL being circulated around.
 
-- If you try to tip someone who isn't registered, the bot will react with :sos: and PM them with instructions on how to register their wallet and tip. 
+- If you try to tip someone who isn't registered, the bot will react with :sos: and PM them with instructions on how to register their wallet and tip.
 
 ## Security of trtlbot++'s tipjar (wallet)
 
-trtlbot++ was created and is owned by [@krruzic](https://github.com/krruzic)(@madk#1044  in the chat). When he was asked about the security of trtlbot++'s wallet, he said-
+trtlbot++ was created by [@krruzic](https://github.com/krruzic)(@madk#1044  in the chat) and then rewritten by [@BrandonT42](https://github.com/BrandonT42)(@Canti#6146), but hosted by krruzic still. When he was asked about the security of trtlbot++'s wallet, he said-
 
 "*the wallet is pretty secure. All ports are closed except 80, whatever minecraft is and my SSH port. The SSH has no root login and only two valid keys. ~~One of the keys is for an account that has no permissions to go anywhere but one folder (I may revoke this key)~~ *[This key has since been revoked]*. There are other security features but I don't want to reveal any possible attack surfaces by accident.*"
 
@@ -202,7 +199,7 @@ and follows up with-
 
 and ends it with-
 
-"*I'm not gonna up and run with the tipjar like the doge tipbot guy either :)*"
+"*I'm not gonna up and run with the tipjar like the doge tipbot guy either* :)"
 
 So rest assured, trtlbot++'s wallet is extremely secure, and in the rare occasion that anything *does* happen, you can relax knowing that you'll get it back ;)
 
