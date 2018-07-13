@@ -1864,7 +1864,7 @@ use TurtleCoin\Walletd;
 $walletd = new Walletd\Client($config);
 $address = 'TRTLxxxx...';
 $paymentId = '7FE73BD90EF05DEA0B5C15FC78696619C50DD5F2BA628F2FD16A2E3445B1922F';
-$response = $walletd.createIntegratedAddress($address, $paymentId);
+$response = $walletd->createIntegratedAddress($address, $paymentId);
 
 echo $response->getBody()->getContents();
 ```
