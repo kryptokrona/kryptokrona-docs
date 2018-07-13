@@ -8,12 +8,12 @@
 2. Upon downloading and installing, open the app.
 3. Check [AA Miner Configuration](#aa-miner-config)
 
-Beware, AA Miner displays a lot of ads.
+*Beware, AA Miner displays a lot of ads.*
 
 ## AA Miner Configuration<a name="aa-miner-config"></a>
 
 1. Select `CryptonightLight v1` from the `Select Algorithm` dropdown menu.
-2. Specify how many cores you want to use. We recommend using half of how many cores your phone has. So if your phone has 6 cores, enter `3`
+2. Specify how many cores you want to use. We recommend using half of how many cores your phone has. So if your phone has 8 cores, enter `4`
 3. Enter a pool of your choice in the format `stratum+tcp://pool_url_address:pool_port`.
    For Example `stratum+tcp://pool.trtl.unipool.pro:3333`. To view a list of pools, you can go [here](../Pools)
 4. Enter your TurtleCoin wallet address
