@@ -143,11 +143,9 @@ To include a Payment ID, simply enter it under `(optional) Payment ID`.
 
 ![send](images/nest-tx.png)
 
-#### Changing Mixin and Fee
+#### Changing the Fee
 
-Currently, it is not possible to change the mixin (set to 4) or fee (set to 1 TRTL). This may be possible in the future.
-
-For now remember, that 1 TRTL ontop of what you're sending will be deducted. So don't send your full balance!
+You can set the fee to any value which you want; however, the default value is `0.1` TRTL and it is not recommended to change it.
 
 ### Saving the Wallet
 

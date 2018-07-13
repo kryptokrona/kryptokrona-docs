@@ -121,7 +121,6 @@ Upon opening your wallet, your balance is located in the top right.
   To include a Payment ID, simply enter it next to ` Payment ID`.
   *Note: It is optional, if it doesn't give a payment ID it is most likely not required*
 
-* Next is the `Mixin`, which is how many times your transaction will be mixed with others for obfuscation and privacy. The suggested amount is `3`.
 * For the `Fee`, it is alright to leave it at `.1%`. If you send more than 1,000,000 TRTL at a time, it is best to set a fee of `1%`.
 
 Once done, click `Send`.
