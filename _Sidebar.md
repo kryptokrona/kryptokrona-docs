@@ -24,6 +24,7 @@
   - [Bootstrapping the Blockchain](Bootstrapping-the-Blockchain)
   - [RainBorg? Wat Dat?](RainBorg-Wat-Dat)
   - [Using trtlbot++](Using-trtlbot-plus-plus)
+  - [Forking TurtleCoin](Forking-Turtlecoin)
   - [Mining](Mining)
     - [Mining Software](Mining#how-to-mine)
       - [XMR-Stak](XMR-Stak-Guide)
