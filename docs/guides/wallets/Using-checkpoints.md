@@ -1,5 +1,6 @@
 # Using Checkpoints to Sync Faster
 
+**Note**: You can presently only use checkpoints with zedwallet; the command-line wallet.
 ## Setup
 
 - Right click [this link](https://github.com/turtlecoin/checkpoints/raw/master/checkpoints.csv) and choose `Save link as...` to download checkpoints.csv

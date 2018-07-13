@@ -4,13 +4,13 @@
 
 Here's a quick image of Nest Wallet in action-
 
-![nest](images/screenshot_nest.png)	
+![nest](images/screenshot_nest.png)
 
 ## Downloading
 
 Binary distributions can be found [here](https://github.com/turtlecoin/turtle-wallet-go/releases/latest).
 
-Select the appropriate file for the target platform (Windows, Mac, Linux). 
+Select the appropriate file for the target platform (Windows, Mac, Linux).
 
 Windows and Mac binaries are provided in `.zip` format, while Linux binaries are provided in `.tar.gz` format.
 
@@ -36,7 +36,7 @@ tar -xzf TurtleCoin-Nest-x.xx-Linux.tar.gz
 
 ## Synchronizing the Blockchain
 
-Nest Wallet automatically synchronizes from a Public Node, ensuring that you quickly sync with the network and that excessive storage is not used up.
+Nest Wallet automatically synchronizes from a remote node, ensuring that you quickly sync with the network and that excessive storage is not used up.
 
 If you would rather sync from a local copy of the blockchain, select `Local blockchain` before opening your wallet.
 
@@ -76,7 +76,7 @@ Type what you want the name of your wallet to be. For example, `trtl`.
 
 Next to it will be another box. In it, type a password to protect your wallet, and then confirm it.
 
- You will need to enter it every time you open the wallet. Make sure to choose a strong one! 
+ You will need to enter it every time you open the wallet. Make sure to choose a strong one!
 
 Once done, press `CREATE`.
 
@@ -108,7 +108,7 @@ Each TurtleCoin  wallet is, essentially, just a pair of keys (*View Key* and *Sp
 
 It is **very** important to export these keys and back them up somewhere that is safe and secure (meaning somewhere reliable/permanent that no one else can access).
 
- In the event of a lost or corrupted wallet file, computer crash, etc., the **View Key** and **Spend Key** are the *only* way to restore a wallet and recover the funds it holds. 
+ In the event of a lost or corrupted wallet file, computer crash, etc., the **View Key** and **Spend Key** are the *only* way to restore a wallet and recover the funds it holds.
 
 **DO NOT SHARE IT WITH ANYONE**. **Anyone who has these can *access your funds* and has *complete control* over your wallet.**
 
@@ -132,9 +132,9 @@ Upon opening your wallet, in the bottom right will be written `TRANSFER`.
 
 To send a transaction, enter the recipient's address under `Recipient address`	and the amount you want to send under `Amount`.
 
-Because transactions on the TurtleCoin blockchain are privatized, in 
-some situations a payment ID is necessary for the recipient to be able 
-to determine where the payment came from, for instance when depositing 
+Because transactions on the TurtleCoin blockchain are privatized, in
+some situations a payment ID is necessary for the recipient to be able
+to determine where the payment came from, for instance when depositing
 to an exchange or other service.
 
 Usually the service/recipient will generate and provide the required payment ID.
@@ -145,7 +145,7 @@ To include a Payment ID, simply enter it under `(optional) Payment ID`.
 
 #### Changing Mixin and Fee
 
-Currently, it is not possible to change the mixin (set to 4) or fee (set to 1 TRTL). This may be possible in the future. 
+Currently, it is not possible to change the mixin (set to 4) or fee (set to 1 TRTL). This may be possible in the future.
 
 For now remember, that 1 TRTL ontop of what you're sending will be deducted. So don't send your full balance!
 

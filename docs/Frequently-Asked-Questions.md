@@ -17,13 +17,13 @@ A: Visit your pool's homepage. There should be a spot for you to put in your TRT
 
 #### Q: Why is the hashrate on the pool website different to what is shown in my miner?
 
-A: The values will always be slightly different as it is an estimate, but if there is a large difference, it is likely you have just started mining. 
+A: The values will always be slightly different as it is an estimate, but if there is a large difference, it is likely you have just started mining.
 
 Your hashrate is calculated over time, and so it will slowly go up to the correct level.
 
 #### Q: I've been mining for a while, but my pending balance hasn't gone up?<a name="pending-balance-not-gone-up"></a>
 
-A: On your pool website, check the time that the last block was found on your pool, and the average time to find a block. 
+A: On your pool website, check the time that the last block was found on your pool, and the average time to find a block.
 
 Your stats will only update when your pool finds a block and it matures, so if your pool doesn't find blocks very often, you will have slower updating stats.
 
@@ -33,15 +33,15 @@ A: To save money on fees, the pools send payouts in chunks. [Check your pool web
 
 #### Q: I got banned from my mining pool. Why?
 
-A: If you submit lots of invalid shares, a pool might ban you. Possible reasons for invalid shares can be 
+A: If you submit lots of invalid shares, a pool might ban you. Possible reasons for invalid shares can be
 
-* your hardware getting overworked, 
+* your hardware getting overworked,
 
-* high ping to the pool, 
+* high ping to the pool,
 
-* or your difficulty being set too low. 
+* or your difficulty being set too low.
 
-  Try lowering any overclocks, choosing a pool closer to you or setting a higher difficulty port. 
+  Try lowering any overclocks, choosing a pool closer to you or setting a higher difficulty port.
 
   You should get unbanned after approximately 20 minutes. This is a good time to setup some backup pools!
 
@@ -55,23 +55,23 @@ A: [Here](guides/mining/Pools) is a list. It also has other nifty stats like the
 
 #### Q: What does "pool weight" mean in XMR-Stak?
 
-A: Pool weight determines what order pools are used in case another is unavailable. 
+A: Pool weight determines what order pools are used in case another is unavailable.
 
-Higher weighted pools are used first. 
+Higher weighted pools are used first.
 
 If all pools are the same weight, they will be used in the top to bottom order that they are listed in the `config.txt` file.
 
 #### Q: What pool should I choose?
 
-A: There are a few factors to consider when choosing a pool. 
+A: There are a few factors to consider when choosing a pool.
 
-* One is your ping, you can find this out by pinging the server in a command prompt by typing `ping address.com`, where `address.com` is the pool address. 
+* One is your ping, you can find this out by pinging the server in a command prompt by typing `ping example.org`, where `example.org` is the pool address.
 
-* Another is the hashrate of the pool. If you go on the pool's website, you can see how often they find blocks. 
+* Another is the hashrate of the pool. If you go on the pool's website, you can see how often they find blocks.
 
-  If the pool takes a long time to find a block, your stats will take a long time to update. 
+  If the pool takes a long time to find a block, your stats will take a long time to update.
 
-* Finally, the minimum payouts can be significant if you're a small miner. 
+* Finally, the minimum payouts can be significant if you're a small miner.
 
   This is the amount you need to mine before you get paid. Most pools will list this under the "Payments" tab.
 
@@ -83,25 +83,25 @@ A: <http://monerobenchmarks.info/> is a good source for this. You can look up yo
 
 #### Q: I can't get the miner working, is there an easier way to mine?
 
-A: ~~You can try the web miner [here](http://turtleminer.com). You will get a lower hashrate than native mining, and it doesn't have GPU support, however it's very easy to setup. Thanks to @Mongboy for creating this.~~ 
+A: You can try the web miner [here](turtleminers.club/pages/webmine/). You will get a lower hashrate than native mining, and it doesn't have GPU support, however it's very easy to setup.
 
-Web miner currently isn't working. You can hop onto the [Discord][Discord_Link] if you're having issues and we'll help you out.
+Alternatively, you can hop onto the [Discord][Discord_Link] if you're having issues and we'll help you out.
 
 #### Q: What is the miner executable / why isn't it working?
 
 A: This is a solo miner, which is CPU only. This means to gain any TRTL, you have to find a block by yourself, which unless you have many powerful CPUs, is very unlikely.   
 
-We strongly recommend using a pool, and a miner such as XMR-Stak or xmrig.   
+We strongly recommend using a pool, and a miner such as XMR-Stak or XMRig.   
 
-Nevertheless, if you want to try it out, open a command prompt in the same directory, and run 
+Nevertheless, if you want to try it out, open a command prompt in the same directory, and run
 
 ```
 miner.exe --address TRTL...
 ```
 
- replacing `TRTL...` with your full TRTL address. 
+ replacing `TRTL...` with your full TRTL address.
 
-  You need to have zedwallet open and synced to use this miner, unlike conventional miners, where the pool hosts the daemon.
+You need to have zedwallet open and synced to use this miner, unlike conventional miners, where the pool hosts the daemon.
 
 #### Q: Is there a calculator to see how much TRTL I'll mine per day?
 
@@ -119,9 +119,9 @@ A: This could be caused by multiple issues:
 
 
 
-  * If you're using a Nvidia card, open up `nvidia.txt`, in the same directory as `XMR-Stak.exe`. Try setting `bfactor` to `8` and `bsleep` to `100`, and then reload your miner after saving the file. 
+  * If you're using a Nvidia card, open up `nvidia.txt`, in the same directory as `XMR-Stak.exe`. Try setting `bfactor` to `8` and `bsleep` to `100`, and then reload your miner after saving the file.
 
-    If it's still laggy, try increasing both values slightly. This will cause you to get less hashes per second, but can let you use your PC more effectively. You can try tweaking the value to increase your hashrate. 
+    If it's still laggy, try increasing both values slightly. This will cause you to get less hashes per second, but can let you use your PC more effectively. You can try tweaking the value to increase your hashrate.
 
     Some people also achieve success by lowering the thread count.
 
@@ -131,7 +131,7 @@ A: This could be caused by multiple issues:
   * If you're using just a CPU, you can delete the cores being used from `cpu.txt`.
 
 
-#### Q: How can I use just my GPU/CPU to mine in XMR-Stak?
+#### Q: How can I use just my GPU or CPU to mine in XMR-Stak?
 
 A: If you're using XMR-Stak, you can start the miner with a certain command. Check [this out](guides/mining/XMR-Stak-Guide#XMR-Stak-no-cpu-gpu) for more info.
 
@@ -141,9 +141,9 @@ A: If you are using a Nvidia card, try opening `nvidia.txt` in the same director
 
 #### Q: I get a socket error when connecting to a pool in XMR-Stak. What am I doing wrong?
 
-A: Generally, this is due to an incorrectly configured config. In the directory where `XMR-Stak.exe` is, there should be a file called `config.txt`. 
+A: Generally, this is due to an incorrectly configured config. In the directory where `XMR-Stak.exe` is, there should be a file called `config.txt`.
 
-Open this up, and check that it looks similar to this:
+Open this up, and check that it looks **similar** to this:
 
     {"pool_address" : "eu.turtlepool.space:3333",
      "wallet_address" : "TRTLv2Fyavy8CXG8BPEbNeCHFZ1fuDCYCZ3vW5H5LXN4K2M2MHUpTENip9bbavpHvvPwb4NDkBWrNgURAd5DB38FHXWZyoBh4wW",
@@ -153,15 +153,15 @@ Open this up, and check that it looks similar to this:
      "tls_fingerprint" : "",
      "pool_weight" : 10 },
 
-  Your wallet address is the address starting with `TRTL`, not your wallet filename. 
+  Your wallet address is the address starting with `TRTL`, not your wallet filename.
 
-  This error can also occur if the pool is having issues - try another pool and see if the error continues. 
+  This error can also occur if the pool is having issues - try another pool and see if the error continues.
 
 Some users have experienced issues with their firewall or antivirus as well however, so perhaps try disabling these if you are experiencing this issue.
 
 #### Q: Can I lower the 2% fee taken by XMR-Stak?
 
-A: This is possible, however please note that these devs are independent from the TurtleCoin project and are doing some great work, so we would suggest leaving it as is. 
+A: This is possible, however please note that these developers are independent from the TurtleCoin project and are doing some great work, so we would suggest leaving it as is.
 
   If you do wish to change/remove the dev fee, you will have to compile XMR-Stak yourself, they have instructions to do this on their [GitHub](https://github.com/fireice-uk/XMR-Stak/blob/master/doc/compile.md), or you can check out the [Linux guide](guides/mining/XMR-Stak-Linux-Guide#ubuntu-16-04)
 
@@ -169,9 +169,17 @@ A: This is possible, however please note that these devs are independent from th
 
 #### Q: I'm getting an error in XMR-Stak: `MEMORY ALLOC FAILED: VirtualAlloc failed. Reboot might help`
 
-A: This is nothing to worry about, and is because XMR-Stak failed to set up largepages. 
+A: This is nothing to worry about, and is because XMR-Stak failed to set up largepages.
 
-This can slightly raise your hash rate, and XMR-Stak attempts to set it up, but it needs a reboot to apply.
+This can slightly raise your hash rate, and XMR-Stak attempts to set it up, but it needs a reboot to apply, so reboot your PC.
+
+
+If a reboot doesn't help, then press `Win` + `R` to open up the run box, then type `gpedit.msc` and press enter(you may require admin permissions)
+
+Navigate to the directory shown in the image, and ensure `Lock pages in memory` is turned on for your user account(`horia`, in this case, is a user account).
+
+![largepages](images/valloc.png)
+
 
 #### Q: I'm missing the file `vcruntime140.dll`. Where can I get this?
 
@@ -185,7 +193,7 @@ A: Try installing this: <https://go.microsoft.com/fwlink/?LinkId=746572>
 
 #### Q: I'm seeing an error in TurtleCoind `Proof of work too weak for block...` and the syncing stopped.
 
-A: This occurs because of the blockchain forking, generally when one mining pool has a very large hashrate. 
+A: This occurs because of the blockchain forking, generally when one mining pool has a very large hashrate.
 
   This can be fixed by re-syncing the correct blockchain from scratch. See the question below.
 
@@ -200,14 +208,14 @@ A: Re-sync your daemon from scratch(see below question), [bootstrap the blockcha
 
 #### Q: How can I re-sync the blockchain?
 
-A: Close any TurtleCoin-related software, then go to `%APPDATA%`, and delete the `TurtleCoin` folder. 
-  Reopen TurtleCoind/GUI and let it re-sync. 
+A: Close any TurtleCoin-related software, then go to `%APPDATA%`, and delete the `TurtleCoin` folder.
+  Reopen TurtleCoind/the GUI wallet and let it re-sync.
 
 Alternatively, check [this guide](guides/Bootstrapping-the-Blockchain) for instructions on how to bootstrap for a quicker sync.
 
 #### Q: When I open TurtleCoind on a Mac, I get an error `Illegal instruction: 4`. How can I fix it?
 
-A: This is a known issue with older macs or un-updated macs. 
+A: This is a known issue with older macs or un-updated macs.
 
 Try entering this into a terminal -
 
@@ -215,12 +223,12 @@ Try entering this into a terminal -
 curl -sL "https://raw.githubusercontent.com/turtlecoin/turtlecoin/master/multi_installer.sh" | bash
 ```
 
-This automated script should compile the software itself, and place the binaries in ./src once done. 
+This automated script should compile the software itself, and place the binaries in ./src once done.
 
-See [here](https://github.com/turtlecoin/turtlecoin#ubuntu-1604-and-macos-1010) for more info. 
+See [here](https://github.com/turtlecoin/turtlecoin#ubuntu-1604-and-macos-1010) for more info.
 
 If this fails, try instead following the instructions to [compile manually](https://github.com/turtlecoin/turtlecoin#apple)
-    
+
 
 #### Q: I've opened the wallet, and I'm getting lots of red messages like "It looks like TurtleCoind isn't open!"...
 
@@ -229,13 +237,13 @@ It looks like TurtleCoind isn't open!
 
 Ensure TurtleCoind is open and has finished initializing.
 If it's still not working, try restarting TurtleCoind. The daemon sometimes gets
- stuck.
+stuck.
 Alternatively, perhaps TurtleCoind can't communicate with any peers.
 
 The wallet can't function until it can communicate with the network.
 ```
 
-A: You need to also open up zedwallet and let it sync. TurtleCoind is your connection to the network, and needs to be open and synced whenever you want to use your wallet.
+A: You need to also open up TurtleCoind and let it sync. TurtleCoind is your connection to the network, and needs to be open and synced whenever you want to use your wallet.
 
 #### Q: I've opened the wallet, and I'm getting lots of messages like "Your TurtleCoind isn't fully synced yet!"..
 
@@ -243,7 +251,8 @@ A: You need to also open up zedwallet and let it sync. TurtleCoind is your conne
 Until you are fully synced, you won't be able to send transactions, and your balance may be missing or incorrect!
 ```
 
-  A: Your daemon hasn't finished syncing yet. Keep zedwallet open, and wait until you are 0 days behind the current block, and for the daemon to print out a green message saying `Successfully synchronized with the TurtleCoin Network.`
+  A: Your daemon hasn't finished syncing yet. Keep zedwallet open, and wait until you are 0 days behind the current block, and for the daemon to print out a green message saying `Successfully synchronized with the TurtleCoin Network.`  
+  You can also type `status` in the daemon and press enter to see the current height it's at.
 
 #### Q: I think I should have more money in my balance than it is showing, what should I do?
 
@@ -251,17 +260,17 @@ Until you are fully synced, you won't be able to send transactions, and your bal
 
 #### Q: I've tried resetting, but it isn't working. What should I do?
 
-A: 
+A:
 
-* In zedwallet, type `export_keys`, and save the view and spend key somewhere safe in case something goes wrong, if you haven't already. 
+* In zedwallet, type `export_keys`, and save the view and spend key somewhere safe in case something goes wrong, if you haven't already.
 
-*  Then, close and reopen zedwallet and zedwallet. 
+*  Then, close and reopen zedwallet and TurtleCoind.
 *  Type `reset` in zedwallet after reopening your wallet file.
 *  It should start resetting your wallet, but the progress might not be immediately obvious - wait a while, and it should start counting up the blocks and printing out your transactions as it gets to them.
 
 #### Q: How do I backup my wallet?
 
-  A: If zedwallet is open and synced, open it, and type `export_keys`. 
+  A: If zedwallet is open and synced, open it, and type `export_keys`.
   Save the view and spend key somewhere safe, and you can use them to reimport your wallet if you lose it.
 
 #### Q: How do I send TRTL?
@@ -274,11 +283,8 @@ A:
 
 #### Q: What is mixin?
 
-  A: Mixin is how many times your transaction is "mixed" with others for obfuscation and privacy. Most people suggest a mixin of `5` or above. 
+  A: Mixin is how many times your transaction is "mixed" with others for obfuscation and privacy. Mixin is locked by the network to `7` as of block `620,000` and is not adjustable by the user; this is done to ensure that no one can send a non-private transaction(`0` mixin) or be a victim of the "Tall Poppy Syndrome" by using a (comparatively) high mixin.
 
-Larger mixins will take longer to be confirmed unless a higher fee is used. 
-
-A mixin of `0` can be used to have a public transaction(though it is strongly recommended not to do so).
 
 #### Q: How can I view my balance?
 
@@ -290,11 +296,11 @@ A mixin of `0` can be used to have a public transaction(though it is strongly re
 
 #### Q: Can I speed up the syncing of the blockchain?
 
-  A: You can grab a recent copy of the blockchain and incrementally sync from there. See [here](guides/Bootstrapping-the-Blockchain) for instructions.
+  A: You can grab a recent copy of the blockchain and incrementally sync from there. See [here](guides/Bootstrapping-the-Blockchain) for instructions. Or, you can sync [with checkpoints](guides/wallets/Using-checkpoints)(only with zedwallet).
 
 #### Q: Can I skip the syncing?
 
-  A: Yes, you can currently use a public node with zedwallet. The keys stay on your PC, so it's secure. Check [this guide](guides/wallets/Using-remote-nodes) for more information.
+  A: Yes, you can currently use a remote node with zedwallet and Nest wallet. The keys stay on your PC, so it's secure. Check [this guide](guides/wallets/Using-remote-nodes) for more information.
 
 #### Q: What does it mean if my balance is locked?
 
@@ -302,9 +308,9 @@ A mixin of `0` can be used to have a public transaction(though it is strongly re
 
 #### Q: In zedwallet.exe, I get an error `Error: failed to save new wallet: boost::filesystem::unique__path: Keyset as registered is invalid`. How can I fix it?
 
-  A: This is caused by some broken Windows crypto keys. In the address bar in Windows Explorer, type `%AppData%/Microsoft/Crypto/RSA/`. 
+  A: This is caused by some broken Windows crypto keys. In the address bar in Windows Explorer, type `%AppData%/Microsoft/Crypto/RSA/`.
 
-  There should be a folder in there, with a long name, like `S-1-5-21-1416222650-108526586-4052533318-1000`. 
+  There should be a folder in there, with a long name, like `S-1-5-21-1416222650-108526586-4052533318-1000`.
 
   Go into this folder and delete the files in there. Then reboot, and try again.
 
@@ -314,8 +320,8 @@ A mixin of `0` can be used to have a public transaction(though it is strongly re
 
   A: Yes, there are currently 2 GUI wallets actively in development, along with some mobile wallets too. However, they may not be ready for full use yet, and may not work on your operating system.
 
-* [Xamarin Wallet](https://github.com/turtlecoin/turtle-wallet-xamarin)
 * [Nest Wallet](https://github.com/turtlecoin/turtle-wallet-go)
+* [Xamarin Wallet](https://github.com/turtlecoin/turtle-wallet-xamarin)[DEFUNCT]
 
 To view a guide on using them, you can go [here](guides/wallets/Making-a-Wallet/#graphical-wallet-gui-wallet)
 
@@ -326,13 +332,13 @@ To view a guide on using them, you can go [here](guides/wallets/Making-a-Wallet/
    * A wrong password - check `walletd.log` to check if this is occurring. If you are sure your password is correct, [this link](https://github.com/turtlecoin/desktop-xamarin/issues/20) could be helpful.
 
 
-   * You have another `walletd.exe` or zedwallet process running. Only one of these can be running at once, and the GUI launches its own. Check Task Manager and close down any of these processes and try again.
+   * You have another `walletd.exe` or `TurtleCoind.exe` process running. Only one of these can be running at once, and the GUI wallet launches its own. Check Task Manager and close down any of these processes and try again.
 
 
    * `walletd` is importing blocks from the DB, which takes a while and so the GUI thinks it has crashed. Check the [solution here](https://github.com/turtlecoin/desktop-xamarin/issues/17#issuecomment-366790435)
 
 
-   * If all else fails, if you have your private keys then you can instead import your wallet into zedwallet. 
+   * If all else fails, if you have your private keys then you can instead import your wallet into zedwallet.
 
 
    * If that is not a desirable option, come and ask for help over at [the Discord][Discord_Link]
@@ -340,18 +346,18 @@ To view a guide on using them, you can go [here](guides/wallets/Making-a-Wallet/
 ## Paper Wallet / Cold Storage?<a name="paper-wallet-cold-storage"></a>
 #### Q: Wait, What's Cold Storage?
 
-  A: The term "cold storage" refers to a wallet that has been created via an offline means. 
+  A: The term "cold storage" refers to a wallet that has been created via an offline means.
 
-The preferred way to do this is via a computer than has never ever been connected to the internet, commonly referred to as an air gapped device. 
+The preferred way to do this is via a computer than has never ever been connected to the internet, commonly referred to as an air gapped device.
 
 
- Why is this a thing? If done properly it means it is near impossible for the keys to be secretly intercepted since the data is never viewable by other compute devices. 
+ Why is this a thing? If done properly it means it is near impossible for the keys to be secretly intercepted since the data is never viewable by other compute devices.
 
-  You see above/elsewhere wallet files are being created via the wallet software, these files might be stored unencrypted, if unencypted then the keys can be read by malicious software and balance's of those wallets transferred. 
+  You see above/elsewhere wallet files are being created via the wallet software, these files might be stored unencrypted, if unencrypted then the keys can be read by malicious software and balances of those wallets, transferred.
 
-  Thus to protect against that scenario you could transfer any TRTL balance to one of these cold storage addresses. Please remember to keep secure/secret backups of your keys. If you lose the keys you lose any balance that was transferred to that wallet. 
+  Thus to protect against that scenario you could transfer any TRTL balance to one of these cold storage addresses. Please remember to keep secure/secret backups of your keys. If you lose the keys you lose any balance that was transferred to that wallet.
 
-#### Q: Can I make a paper wallet? 
+#### Q: Can I make a paper wallet?
 
 A: Yes, you can view the guide [here](guides/wallets/Making-a-paper-wallet)
 
@@ -361,7 +367,7 @@ A: Yes, you can view the guide [here](guides/wallets/Making-a-paper-wallet)
 
 #### Q: Can I view the balance of my wallet online?
 
-  A: Due to TurtleCoin being a cryptonote coin(private), this is not possible. 
+  A: Due to TurtleCoin being a cryptonote coin(private), this is not possible.
 
   It should be possible in the future to allow users to give away just their Private View Key to view transactions, but this hasn't been implemented by anyone so far, and would allow that website to see every transaction that you make.
 
@@ -377,22 +383,25 @@ A: Yes, you can view the guide [here](guides/wallets/Making-a-paper-wallet)
   * Mining - see [here](guides/mining/Mining)
   * Buying - TRTL is currently available on these exchanges: [TradeOgre](https://tradeogre.com/exchange/BTC-TRTL) and [TradeSatoshi](https://tradesatoshi.com/Exchange/?market=TRTL_BTC)
   * Bounties - Bounties for developing TRTL software, spreading the word of TRTL, and many other things are often posted in the #bounties channel on [discord][Discord_Link]. Check the pinned messages for current bounties.
-  * Tips - People will sometimes tip each other, especially if you make spicy memes in the `#memes` channel
+  * Tips - Turtles with often tip each other, especially if you make spicy memes in the `#memes` channel
   * Rain - Good active Turtles get rained on, check out what the [RainBorg](guides/RainBorg-Wat-Dat) is to see how to use it.
-  * Faucet - Head over to the [faucet](https://faucet.trtl.me/) and enter your TRTL address. 
-    The amount you can receive is limited(1 TRTL, thrice a day), to share the TRTL for all. Thanks to @madk for creating this.
+  * Faucet - Head over to the faucets-
+    * [madk's faucet](https://faucet.trtl.me/) - 10 TRTL, thrice a day
+    * [polar-it's faucet](https://turtlecoin-faucet.xhub.cloud/) - 25 TRTL, every 30 minutes
+    and enter your TRTL address.
+    The amount you can receive is limited to share the TRTL for all. Thanks to @madk and @polar-it for creating this.
 
 #### Q: Are there any light wallets / mobile wallets?
 
-  A: None are ready for usage right now, but they are being worked on. Check the development channels in [Discord][Discord_Links] to see how people are getting on, and feel free to join in if you're a programmer!
+  A: None are ready for usage right now, but they are being worked on. Check the development channels in [Discord][Discord_Link] to see how people are getting on, and feel free to join in if you're a programmer!
 
 #### Q: What is RainBorg / how does it work?
 
-  A: There is an in depth, graphical explanation [here](guides/RainBorg-Wat-Dat) 
+  A: There is an in depth, graphical explanation [here](guides/RainBorg-Wat-Dat)
 
 #### Q: How do I register my wallet on Discord?
 
-  A: You can check out this guide [here](guides/Using-trtlbot-plus-plus#registering-your-wallet). 
+  A: You can check out this guide [here](guides/Using-trtlbot-plus-plus#registering-your-wallet).
 
 #### Q: Where is the blockchain stored?
 
@@ -402,13 +411,14 @@ A: Yes, you can view the guide [here](guides/wallets/Making-a-paper-wallet)
 
   A: Yes, there are currently a few-
 
+* https://turtle.land
 * https://blocks.turtle.link
 * https://turtle-coin.com
 * https://explorer.trtlpwr.cc
 
 #### Q: How do I make sure a pool isn't forked?
 
-You can ask someone in the [Discord][Discord_Link] with a coloured name to run `/forked` for you, which will return with a list of pools which are possibly forked.
+You can ask someone in the [Discord][Discord_Link] with a coloured name(aside from green) to run `/forked` for you, which will return with a list of pools which are possibly forked.
 
 #### Q: I have a question which wasn't answered here, what should I do?
 

@@ -2,7 +2,11 @@
 
 In case you don't want to download the blockchain and verify it everytime, you can instead use a Remote Node to quickly sync the blockchain.
 
-## How to do it
+## Nest Wallet
+
+Nest wallet automatically sync from a [remote node](Using-nest-wallet#synchronizing-the-blockchain)
+
+## zedwallet
 
 1. Open up a command prompt window and navigate to the folder that contains *zedwallet*.
 2. Use the following command to start zedwallet  
