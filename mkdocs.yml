@@ -84,6 +84,7 @@ pages:
       - Bootstrapping the Blockchain: guides/Bootstrapping-the-Blockchain.md
       - RainBorg? Wat Dat?: guides/RainBorg-Wat-Dat.md
       - Using trtlbot++: guides/Using-trtlbot-plus-plus.md
+      - Forking TurtleCoin: guides/Forking-Turtlecoin.md
       - Participating in Raindance(defunct): guides/Participating-in-Raindance.md
       - Mining:
         - How to Mine TRTL: guides/mining/Mining.md
@@ -113,6 +114,6 @@ pages:
         - Smart Contracts: guides/crypto-funda/smart-contract.md
     - Service Operators:
       - Compiling from Source: guides/service-operators/Compiling-from-Source.md
-      - TurtleCoind behind HAProxy: guides/service-operators/TurtleCoind-behind-HAProxy.md 
+      - TurtleCoind behind HAProxy: guides/service-operators/TurtleCoind-behind-HAProxy.md
     - For Developers:
       - Resources: developers/Resources.md
