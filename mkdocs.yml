@@ -2,7 +2,7 @@
 site_name: 'TurtleCoin Wiki'
 site_description: 'Wiki for TurtleCoin'
 site_author: 'TurtleCoin'
-site_url: https://turtlewiki.netlify.com/
+site_url: https://docs.turtlecoin.lol/
 
 # repo
 repo_name: 'turtlecoin/sajodocs'
@@ -15,7 +15,7 @@ copyright: 'Copyright 2017-2018 TurtleCoin'
 theme:
   name: 'material'
   custom_dir: 'theme'
-  font: 
+  font:
     text: 'Roboto'
     code: 'Roboto Mono'
   logo: 'images/logo.png'
@@ -37,7 +37,7 @@ extra:
     language: 'en'
   social:
     - type: 'github'
-      link: 'https://github.com/sajo811'
+      link: 'https://github.com/turtlecoin'
 
 # extensions
 markdown_extensions:
@@ -77,7 +77,7 @@ pages:
       - Our Community: about/Community.md
       - Contributing: about/Contributing.md
       - Technical Data: about/Technical-Data.md
-    - FAQ:   
+    - FAQ:
       - Frequently Asked Questions: Frequently-Asked-Questions.md
     - Guides:
       - Bootstrapping the Blockchain: guides/Bootstrapping-the-Blockchain.md
@@ -92,8 +92,8 @@ pages:
         - Pools: guides/mining/Pools.md
         - Cloud Mining: guides/mining/Cloud-Mining.md
         - Mining with a SBC: guides/mining/Mining-with-SBC.md
-        - Mining with your Mobile Phone: 
-          - How to mine with mobile: guides/mining/mobile-mining/Mining-with-Phone.md
+        - Mining on your Phone:
+          - How to Mine TRTL on your Phone: guides/mining/mobile-mining/Mining-with-Phone.md
           - Using Tony Monero: guides/mining/mobile-mining/Using-Tony-Monero.md
           - Using AA Miner: guides/mining/mobile-mining/Using-AA-Miner.md
       - Wallets:
@@ -103,7 +103,7 @@ pages:
           - Nest Wallet: guides/wallets/Using-nest-wallet.md
           - WinForms Wallet: guides/wallets/Using-winforms-wallet.md
         - CLI Wallet:
-          - SimpleWallet: guides/wallets/Using-zedwallet.md
+          - zedwallet: guides/wallets/Using-zedwallet.md
           - Using Checkpoints: guides/wallets/Using-checkpoints.md
         - Paper Wallet: guides/wallets/Making-a-paper-wallet.md
         - Recovering your Wallet: guides/wallets/recovering-your-wallet.md
@@ -113,4 +113,3 @@ pages:
         - Smart Contracts: guides/crypto-funda/smart-contract.md
     - For Developers:
       - Resources: developers/Resources.md
-
