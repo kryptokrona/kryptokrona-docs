@@ -1,6 +1,6 @@
 # How to Set Up XMR-Stak on Linux
 
-Native binaries may be available for your distribution's package manager. 
+Native binaries may be available for your distribution's package manager.
 
 If no binaries are available, or you prefer to compile, follow these instructions-
 
@@ -10,7 +10,7 @@ If no binaries are available, or you prefer to compile, follow these instruction
 
 1. If you want to use your GPU for mining, do the following-
 
-    * for AMD GPU’s- 
+    * for AMD GPU’s-
 
         * Install drivers for your card
 
@@ -38,11 +38,11 @@ If no binaries are available, or you prefer to compile, follow these instruction
 
             * After that, you should be good.
 
-2.  Open the terminal and install dependencies by running this command- 
+2.  Open the terminal and install dependencies by running this command-
 
     ```sudo apt install libmicrohttpd-dev libssl-dev cmake build-essential libhwloc-dev```
 
-3.  Clone the package- 
+3.  Clone the package-
 
     `git clone https://github.com/fireice-uk/xmr-stak.git`
 
@@ -58,7 +58,7 @@ If no binaries are available, or you prefer to compile, follow these instruction
 
     `constexpr double fDevDonationLevel = 0.0 / 100.0;`
 
-5.  Make a directory- 
+5.  Make a directory-
 
     `mkdir xmr-stak/build`
 
@@ -94,14 +94,14 @@ If no binaries are available, or you prefer to compile, follow these instruction
 
 11. Using the Up and Down arrows, scroll to the 2nd page. Then, on `XMR-STAK_CURRENCY`, press enter to change it to `cryptonight_lite_v7` (if needed, you can make personal tweaks by reading the descriptions of each value).
 
-12. Once you're done, press `c` and then `g` on your keyboard. 
+12. Once you're done, press `c` and then `g` on your keyboard.
 
-13. Type- 
+13. Type-
 
     `./xmr-stak`
 
 14. Check [XMR-Stak Setup and Configuration](#setup-and-config)
-  
+
 15. If you see something like this, that means it’s working!
 
 ![workubuntu](images/xmrstak-ubuntuwork.png)
@@ -115,7 +115,7 @@ Upon first launching XMR-Stak, the software will ask you several setup and confi
 
     Enter `0`, if you are like most people, and do not need to remotely check your hashrate.
 
-    If you do need to, then enter a port number. 
+    If you do need to, then enter a port number.
     Let's take the port number as `0101` and your IP address as `26.24.105.14` as an example.
 
     To check the hashrate, enter in the address bar of your web browser, `<26.24.105.14>:<0101>`. It should show a page with your rig's hashrate.
@@ -123,10 +123,10 @@ Upon first launching XMR-Stak, the software will ask you several setup and confi
 
     Make sure to enter your own IP address if you enable this feature. You can choose any port you want!
 
-2. 
+2.
 
-    ``` 
-    Please enter: 
+    ```
+    Please enter:
     - Please enter the currency that you want to mine:
 
     - aeon7
@@ -146,9 +146,10 @@ Upon first launching XMR-Stak, the software will ask you several setup and confi
     - monero7
     - stellite
     - sumokoin
+    - turtlecoin
     ```
 
-    Enter `cryptonight_lite_v7`
+    Enter `turtlecoin`
 
 3.  `- Pool address: e.g. pool.example.com:3333 `
 
@@ -176,7 +177,7 @@ Upon first launching XMR-Stak, the software will ask you several setup and confi
 
 9.  `- Do you want to use multiple pools? (y/n)`  
 
-    * Enter `y` if you would like to add more pools. 
+    * Enter `y` if you would like to add more pools.
     * Give them all a weight of `10` if you're tired of reading, or if you want the best experience, give the pools nearest to you a higher number, and the ones further from you a lower number.  
     * XMR-Stak will prioritize the highest weight pool, and fall back to the others if it cannot connect.
     * If they are all given the same weight, it will connect to them in order of how they are listed, form top to bottom, in the configuration file.
@@ -186,7 +187,7 @@ Upon first launching XMR-Stak, the software will ask you several setup and confi
 
 Done! The miner will now start scanning your hardware and will begin mining. Awesome!
 
-XMR-Stak will save your configuration in `config.txt`  in the same directory from which it was first run. 
+XMR-Stak will save your configuration in `config.txt`  in the same directory from which it was first run.
 
 Your configuration for pools(algorithm to mine, address, port etc) will be saved in `pools.txt`
 The configuration of the device it mines(CPU/AMD/NVIDIA) will be saved in `cpu.txt`, `amd.txt` or `nvidia.txt`, respectively.

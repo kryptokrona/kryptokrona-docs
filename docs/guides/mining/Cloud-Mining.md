@@ -1,8 +1,8 @@
-# How to Mine TurtleCoin with Google Cloud Platform (GCP) 
+# How to Mine TurtleCoin with Google Cloud Platform (GCP)
 
 ## Setting Up the VM(Virtual Machine)
 
-1.  Go [here](https://console.cloud.google.com/freetrial) and sign in with your Google Account. Enter the details requested to sign up for the free trial. 
+1.  Go [here](https://console.cloud.google.com/freetrial) and sign in with your Google Account. Enter the details requested to sign up for the free trial.
     *You will need a valid credit card to sign up for it*
 2.  After signing up, go [here](https://console.cloud.google.com/compute/instances)
 3.  If it asks you for a project name, enter one or let it be the defualt one, it doesn't really matter.
@@ -22,11 +22,11 @@ SSH into the GCP instance and follow these steps-
 
 *Guide sponsored by [Monerise](https://monerise.com)*
 
-1.  Open the terminal and install dependencies by running this command- 
+1.  Open the terminal and install dependencies by running this command-
 
     ```sudo apt install libmicrohttpd-dev libssl-dev cmake build-essential libhwloc-dev git```
 
-2.  Clone the package- 
+2.  Clone the package-
 
     ```git clone https://github.com/fireice-uk/xmr-stak.git```
 
@@ -42,7 +42,7 @@ SSH into the GCP instance and follow these steps-
 
     ```constexpr double fDevDonationLevel = 0.0 / 100.0;```
 
-4.  Make a directory- 
+4.  Make a directory-
 
     ```mkdir xmr-stak/build```
 
@@ -58,15 +58,15 @@ SSH into the GCP instance and follow these steps-
 
     ```make install```
 
-8.  XMR-Stak will now be located in 
+8.  XMR-Stak will now be located in
 
     ```/home/user/xmr-stak/build/bin```
 
 10. Move to where it's at-
-    
+
     ```cd bin```
 
-10. Launch XMR-Stak- 
+10. Launch XMR-Stak-
 
     ```./xmr-stak```
 
@@ -81,7 +81,7 @@ Upon first launching XMR-Stak, the software will ask you several setup and confi
 
     Enter `0`, if you, like most people, do not need to remotely check your hashrate.
 
-    If you do need to, then enter a port number. 
+    If you do need to, then enter a port number.
     Let's take the port number as `0101` and your IP address as `26.24.105.14` as an example.
 
     To check the hashrate, enter in the address bar of your web browser, `<26.24.105.14>:<0101>`. It should show a page with your rig's hashrate.
@@ -90,10 +90,10 @@ Upon first launching XMR-Stak, the software will ask you several setup and confi
     Make sure to enter your own IP address if you enable this feature. You can choose any port you want(uptil 9999)!
 
 
-2. 
+2.
 
     ```
-    Please enter: 
+    Please enter:
     - Please enter the currency that you want to mine:
     - aeon7
     - bbscoin
@@ -111,10 +111,11 @@ Upon first launching XMR-Stak, the software will ask you several setup and confi
     - karbo
     - monero7
     - stellite
-    - sumokoin    
+    - sumokoin
+    - turtlecoin    
     ```
-    
-    Enter `cryptonight_lite_v7`
+
+    Enter `turtlecoin`
 
 3.  `- Pool address: e.g. pool.example.com:3333`
 
@@ -142,7 +143,7 @@ Upon first launching XMR-Stak, the software will ask you several setup and confi
 
 9.  `- Do you want to use multiple pools? (y/n)`  
 
-    * Enter `y` if you would like to add more pools. 
+    * Enter `y` if you would like to add more pools.
     * Give them all a weight of `10` if you're tired of reading, or if you want the best experience, give the pools nearest to you a higher number, and the ones further from you a lower number.  
     * XMR-Stak will prioritize the highest weight pool, and fall back to the others if it cannot connect.
     * If they are all given the same weight, it will connect to them in order of how they are listed, form top to bottom, in the configuration file.
