@@ -30,7 +30,7 @@ The only way it stops being anonymous is if you post in chat and disclose your d
 
 Right, to get started, simply register your wallet with [trtlbot++](Using-trtlbot-plus-plus#registering-your-wallet).
 
-Go to the  `#wallets` channel in the [Discord server](http://chat.turtlecoin.lol/), type `.registerwallet TRTL...`, and replace `TRTL...` with your wallet address. 
+Go to the  `#bots` channel in the [Discord server](http://chat.turtlecoin.lol/), type `.registerwallet TRTL...`, and replace `TRTL...` with your wallet address. 
 
 For example, you would type:
 
