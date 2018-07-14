@@ -18,10 +18,13 @@ You must follow [strict markdown](https://daringfireball.net/projects/markdown/)
 
 * If:  
  (a)points are to be indented under one another,  
+
  (b)pictures/information are to be included under a "step 1",  
+
  (c)codeblocks are to be made under steps/points,  
      they are to be indented by 4 spaces.
- (d)codeblocks must also start/end on a separate  line.  
+
+ (d)codeblocks must also start/end on a separate line.  
 
   **Note: Text given beyond this point wrapped in code blocks are just examples, observe the formatting and not what's written**
 
