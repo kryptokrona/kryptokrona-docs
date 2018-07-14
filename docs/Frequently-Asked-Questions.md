@@ -100,12 +100,12 @@ We strongly recommend using a pool, and a miner such as XMR-Stak or XMRig.
 Nevertheless, if you want to try it out, open a command prompt in the same directory, and run
 
 ```
-miner.exe --address TRTL...
+./miner --address TRTL...
 ```
 
  replacing `TRTL...` with your full TRTL address.
 
-You need to have `TurtleCoind.exe` open and synced to use this miner, unlike conventional miners, where the pool hosts the daemon.
+You need to have `TurtleCoind` open and synced to use this miner, unlike conventional miners, where the pool hosts the daemon.
 
 #### Q: Is there a calculator to see how much TRTL I'll mine per day?
 
