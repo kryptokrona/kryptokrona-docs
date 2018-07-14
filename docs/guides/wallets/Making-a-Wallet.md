@@ -41,4 +41,4 @@ and,
 [Canti's Web Wallet](https://vico-web-wallet.turtlecoin.ws/)
 [Discord Link](https://discord.gg/T39Fdr)
 
-Both of them are under heavy development, but Fexra's is closer to completion
+Both of them are under heavy development, and will hopefully be ready soon.

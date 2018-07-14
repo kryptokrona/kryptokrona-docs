@@ -31,6 +31,10 @@ Your stats will only update when your pool finds a block and it matures, so if y
 
 A: To save money on fees, the pools send payouts in chunks. [Check your pool website for your pending balance](#pending-balance-not-gone-up).
 
+#### Q: Why are my results being rejected from the pool?
+
+ A: You're using a incorrect algorithm. If you are using XMR-Stak, you should use `turtlecoin` as the algorithm, if you are using XMRig use `cryptonight-lite` as the algorithm and have the variant set to 1.
+
 #### Q: I got banned from my mining pool. Why?
 
 A: If you submit lots of invalid shares, a pool might ban you. Possible reasons for invalid shares can be
@@ -83,7 +87,7 @@ A: <http://monerobenchmarks.info/> is a good source for this. You can look up yo
 
 #### Q: I can't get the miner working, is there an easier way to mine?
 
-A: You can try the web miner [here](turtleminers.club/pages/webmine/). You will get a lower hashrate than native mining, and it doesn't have GPU support, however it's very easy to setup.
+A: You can try the web miner [here](http://turtleminers.club/pages/webmine/). You will get a lower hashrate than native mining, and it doesn't have GPU support, however it's very easy to setup.
 
 Alternatively, you can hop onto the [Discord][Discord_Link] if you're having issues and we'll help you out.
 
@@ -101,7 +105,7 @@ miner.exe --address TRTL...
 
  replacing `TRTL...` with your full TRTL address.
 
-You need to have zedwallet open and synced to use this miner, unlike conventional miners, where the pool hosts the daemon.
+You need to have `TurtleCoind.exe` open and synced to use this miner, unlike conventional miners, where the pool hosts the daemon.
 
 #### Q: Is there a calculator to see how much TRTL I'll mine per day?
 
@@ -135,9 +139,9 @@ A: This could be caused by multiple issues:
 
 A: If you're using XMR-Stak, you can start the miner with a certain command. Check [this out](guides/mining/XMR-Stak-Guide#XMR-Stak-no-cpu-gpu) for more info.
 
-#### Q: My XMR-Stak is crashing on startup, with an error about CUDA. What am I doing wrong?
+#### Q: XMR-Stak is crashing on startup, with an error about CUDA. What am I doing wrong?
 
-A: If you are using a Nvidia card, try opening `nvidia.txt` in the same directory as `XMR-Stak.exe`, and lowering the value of `threads` until it stops crashing.
+A: If you are using a nVidia card, try opening `nvidia.txt` in the same directory as `XMR-Stak.exe`, and lowering the value of `threads` until it stops crashing.
 
 #### Q: I get a socket error when connecting to a pool in XMR-Stak. What am I doing wrong?
 
@@ -243,7 +247,7 @@ Alternatively, perhaps TurtleCoind can't communicate with any peers.
 The wallet can't function until it can communicate with the network.
 ```
 
-A: You need to also open up TurtleCoind and let it sync. TurtleCoind is your connection to the network, and needs to be open and synced whenever you want to use your wallet.
+A: You need to also open up `TurtleCoind.exe` and let it sync. TurtleCoind is your connection to the network, and needs to be open and synced whenever you want to use your wallet.
 
 #### Q: I've opened the wallet, and I'm getting lots of messages like "Your TurtleCoind isn't fully synced yet!"..
 
@@ -256,7 +260,8 @@ Until you are fully synced, you won't be able to send transactions, and your bal
 
 #### Q: I think I should have more money in my balance than it is showing, what should I do?
 
-  A: Re-sync your daemon from scratch(see [here](#q-how-can-i-re-sync-the-blockchain)), [bootstrap the blockchain](guides/Bootstrapping-the-Blockchain/) or sync [using checkpoints](guides/wallets/Using-checkpoints) . If it still doesn't work, then [update](latest.turtlecoin.lol) your wallet!
+  A: Re-sync your daemon from scratch(see [here](#q-how-can-i-re-sync-the-blockchain)), [bootstrap the blockchain](guides/Bootstrapping-the-Blockchain/) or sync [using checkpoints](guides/wallets/Using-checkpoints).  
+  If it still doesn't work, then [update](latest.turtlecoin.lol) your wallet!
 
 #### Q: I've tried resetting, but it isn't working. What should I do?
 
@@ -270,7 +275,7 @@ A:
 
 #### Q: How do I backup my wallet?
 
-  A: If zedwallet is open and synced, open it, and type `export_keys`.
+  A: Open zedwallet and type `export_keys`.  
   Save the view and spend key somewhere safe, and you can use them to reimport your wallet if you lose it.
 
 #### Q: How do I send TRTL?
@@ -283,12 +288,13 @@ A:
 
 #### Q: What is mixin?
 
-  A: Mixin is how many times your transaction is "mixed" with others for obfuscation and privacy. Mixin is locked by the network to `7` as of block `620,000` and is not adjustable by the user; this is done to ensure that no one can send a non-private transaction(`0` mixin) or be a victim of the "Tall Poppy Syndrome" by using a (comparatively) high mixin.
+  A: Mixin is how many times your transaction is "mixed" with others for obfuscation and privacy.  
+  Mixin is locked by the network to `7` as of block `620,000` and is not adjustable by the user; this is done to ensure that no one can send a non-private transaction(`0` mixin) or be a victim of the "Tall Poppy Syndrome" by using a high mixin compared to everyone else on the network.
 
 
 #### Q: How can I view my balance?
 
-  A: If zedwallet is fully synced, in zedwallet, simply type `balance`.
+  A: If `TurtleCoind.exe` is fully synced, in zedwallet, simply type `balance`.
 
 #### Q: How long does it take to sync TurtleCoind.exe?
 
@@ -296,7 +302,8 @@ A:
 
 #### Q: Can I speed up the syncing of the blockchain?
 
-  A: You can grab a recent copy of the blockchain and incrementally sync from there. See [here](guides/Bootstrapping-the-Blockchain) for instructions. Or, you can sync [with checkpoints](guides/wallets/Using-checkpoints)(only with zedwallet).
+  A: You can grab a recent copy of the blockchain and incrementally sync from there. See [here](guides/Bootstrapping-the-Blockchain) for instructions.  
+  Or, you can sync [with checkpoints](guides/wallets/Using-checkpoints)(only with zedwallet).
 
 #### Q: Can I skip the syncing?
 
@@ -318,37 +325,19 @@ A:
 
 #### Q: Are there any GUI wallets?
 
-  A: Yes, there are currently 2 GUI wallets actively in development, along with some mobile wallets too. However, they may not be ready for full use yet, and may not work on your operating system.
+  A: Yes, there is currently 1 GUI wallet actively in development(and one legacy GUI wallet), along with some mobile wallets too. However, they may not be ready for full use yet, and may not work on your operating system.
 
 * [Nest Wallet](https://github.com/turtlecoin/turtle-wallet-go)
 * [Xamarin Wallet](https://github.com/turtlecoin/turtle-wallet-xamarin)[DEFUNCT]
 
 To view a guide on using them, you can go [here](guides/wallets/Making-a-Wallet/#graphical-wallet-gui-wallet)
 
-#### Q: I'm using the GUI Xamarin wallet, and it fails to connect to the daemon.
-
-  A: There are multiple reasons this can occur. Try opening `walletd.log` and scrolling to the bottom to determine what is occurring.
-
-   * A wrong password - check `walletd.log` to check if this is occurring. If you are sure your password is correct, [this link](https://github.com/turtlecoin/desktop-xamarin/issues/20) could be helpful.
-
-
-   * You have another `walletd.exe` or `TurtleCoind.exe` process running. Only one of these can be running at once, and the GUI wallet launches its own. Check Task Manager and close down any of these processes and try again.
-
-
-   * `walletd` is importing blocks from the DB, which takes a while and so the GUI thinks it has crashed. Check the [solution here](https://github.com/turtlecoin/desktop-xamarin/issues/17#issuecomment-366790435)
-
-
-   * If all else fails, if you have your private keys then you can instead import your wallet into zedwallet.
-
-
-   * If that is not a desirable option, come and ask for help over at [the Discord][Discord_Link]
-
 ## Paper Wallet / Cold Storage?<a name="paper-wallet-cold-storage"></a>
 #### Q: Wait, What's Cold Storage?
 
   A: The term "cold storage" refers to a wallet that has been created via an offline means.
 
-The preferred way to do this is via a computer than has never ever been connected to the internet, commonly referred to as an air gapped device.
+ The preferred way to do this is via a computer than has never ever been connected to the internet, commonly referred to as an air gapped device.
 
 
  Why is this a thing? If done properly it means it is near impossible for the keys to be secretly intercepted since the data is never viewable by other compute devices.
@@ -367,7 +356,7 @@ A: Yes, you can view the guide [here](guides/wallets/Making-a-paper-wallet)
 
 #### Q: Can I view the balance of my wallet online?
 
-  A: Due to TurtleCoin being a cryptonote coin(private), this is not possible.
+  A: Due to TurtleCoin being a cryptonote-based coin(private), this is not possible.
 
   It should be possible in the future to allow users to give away just their Private View Key to view transactions, but this hasn't been implemented by anyone so far, and would allow that website to see every transaction that you make.
 

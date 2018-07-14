@@ -63,7 +63,7 @@ Quite simply you will get 1% of the block = 300 TRTL.
 
 Now if the pool has a bad round (a round is the time taken to find a block) and it takes 200,000 shares to find a block (twice as long) and you have submitted 2,000 shares (as you’ve been mining twice as long), you still only get 1% of the block = 300 TRTL
 
-This can also work in the miners favour too, as if it takes half the time (50,000 shares) to find a block and you submitted only 500 shares - again 1% - 300 TRTL.
+This can also work in the miners favor too, as if it takes half the time (50,000 shares) to find a block and you submitted only 500 shares - again 1% - 300 TRTL.
 
 Basically, you always get a percentage of the block and you win/lose depending on the “luck” of the pool.
 

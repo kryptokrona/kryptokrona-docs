@@ -212,7 +212,7 @@ Total balance: 1100.00 TRTL
 
 In the running _zedwallet_ client, after opening a wallet..
 
-- type:`transfer`
+- type: `transfer`
 
 
 - type/paste the address you want to send the TRTL to and press enter
@@ -233,11 +233,6 @@ Example:
 
 
 ![transfer](images/transfer-simple.png)
-
-
-Mixin is how many times a transaction is "mixed" with others for obfuscation and privacy.
-
-Most people suggest a mixin of `5` or more. Larger mixin's will take longer to be confirmed unless a higher fee is used. A mixin of `0` can be used to have a non-private transaction(it is strongly advised not to do so though).
 
 #### Optimizing your Wallet
 

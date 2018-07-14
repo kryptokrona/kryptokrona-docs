@@ -14,7 +14,7 @@
 8.  Change `Cores` to `4` and `Memory` to `3.6 GB`. Change `CPU platform` to `Intel Skylake or later`
 9.  Leave the rest as is, and click double check both `Allow HTTP traffic` and `Allow HTTPS traffic`
 10. Click `Create`
-11. Follow [instructions for setting it up]( #instruct-set-up-linux)
+11. Follow [instructions for setting it up](#instruct-set-up-linux)
 
 ## Mining Instructions For Debian Linux on GCP <a name="instruct-set-up-linux"></a>
 

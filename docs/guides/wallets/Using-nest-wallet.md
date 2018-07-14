@@ -89,7 +89,7 @@ On the screen will be written `Open an existing wallet`.
 
 Under it will be a box.
 
-Click on the box, File Explorer should open up. Navigate to where your `xxx.wallet` file is saved and open it.
+Click on the box, File Explorer should open up. Navigate to where your `xyz.wallet` file is saved and open it.
 
 Next to it, enter the password you set while making the wallet.
 
@@ -117,7 +117,7 @@ To back up your View Key and Spend Key, follow these steps-
 
   ![backup](images/nest-backup.png)
 
-* Copy(click on `Copy to clipboard` to do it quickly) and safely store the `Private View Key` and `Private Spend Key`. You can register the wallet with [trtlbot++](../Using-trtlbot-plus-plus#registering-your-wallet).
+* Copy(click on `Copy to clipboard` to do it quickly) and safely store the `Private View Key` and `Private Spend Key`. You can register the wallet address with [trtlbot++](../Using-trtlbot-plus-plus#registering-your-wallet).
 
 ### Viewing Wallet Balance
 

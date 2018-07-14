@@ -4,15 +4,15 @@ Back in the day, we had the [#raindance bot](Participating-in-Raindance), then p
 
 ![rainavatar](images/rainborg/rainborg-avatar.png)
 
-This bot monitors chat activity. Once certain critera are met, RainBorg sends out a tip using the tipbot, [trtlbot++](Using-trtlbot-plus-plus), to people who have recently been chatting away.
+This bot monitors chat activity. Once certain criterion are met, RainBorg sends out a tip using the tipbot, [trtlbot++](Using-trtlbot-plus-plus), to people who have recently been chatting away.
 
 ## What are the criteria to get tips?
 
-Basically, there is a tipping window *(min time/max time)* and chatting is monitored during that window. Those that "chat" during that time qualify and get added to a tip-list. 
+Basically, there is a tipping window *(min time/max time)* and chatting is monitored during that window. Those that "chat" during that time qualify and get added to a tip-list.
 
 Once the list of people to be tipped reaches a threshold, and the timer has met its criteria, all the tips are issued to those on that list, woohoo!  
 
-To avoid the system being taken advantage of, some specifics will be kept unknown to the public; only the bot operator and Ninjas will know how the bot's gears turn. 
+To avoid the system being taken advantage of, some specifics will be kept unknown to the public; only the bot operator and Ninjas will know how the bot's gears turn.
 
 Simply participate in the chat and let RainBorg take care of the details, she knows what she's doing!
 
@@ -22,15 +22,15 @@ Because it is fun and promotes an active community; it is another way that this 
 
 ## So where do the TRTL's come from?
 
-They come from all the generous people in the community. There is a pool of TRTL, the pool is filled up by anyone that wants to contribute. You could be a contributor! It is anonymous and 100% philanthropic. 
+They come from all the generous people in the community. There is a pool of TRTL, the pool is filled up by anyone that wants to contribute. You could be a contributor! It is anonymous and 100% philanthropic.
 
-The only way it stops being anonymous is if you post in chat and disclose your donation.   `ha, just sent 350k TRTL to the RainBorg, megatip time yo!`
+The only way it stops being anonymous is if you post in chat and disclose your donation.   `ha, just sent 350k TRTL to RainBorg, megatip time yo!`
 
 ## Give me details!
 
 Right, to get started, simply register your wallet with [trtlbot++](Using-trtlbot-plus-plus#registering-your-wallet).
 
-Go to the  `#bots` channel in the [Discord server](http://chat.turtlecoin.lol/), type `.registerwallet TRTL...`, and replace `TRTL...` with your wallet address. 
+Go to the  `#bots` channel in the [Discord server](http://chat.turtlecoin.lol/), type `.registerwallet TRTL...`, and replace `TRTL...` with your wallet address.
 
 For example, you would type:
 
@@ -48,14 +48,17 @@ Send TRTL to this address
 TRTLv12WtKJAzTNtxSkbcXf7mjeVApSqRYACtoJE2X52UBSce7qGAQ1JQgG3MmArnZSbkJXKqBXiPX2Mno7xD4tqD3p8SySoBc5
 ```
 
-
-
 With this Payment ID **!! IMPORTANT !!**
 
 ```
 bca975edfe710a64337beb1685f32ab900989aa9767946efd8537f09db594bbd
 ```
 
+Alternatively, you can tip RainBorg directly, like:
+
+```
+.tip 123 @RainBorg#7008
+```
 
 
 _No Payment ID equals a tip for the tipbot operator, it will not be donated to RainBorg._
@@ -126,7 +129,4 @@ It is divided equally, so if person A and B are talking in \#general, and person
 
 Open a [new issue](https://github.com/turtlecoin/meta/issues/new?title=RainBorg+Question) or make some noise in `#help`.
 
-The gaps will be filled either by you or another person, [anyone can contribute](https://github.com/turtlecoin/turtlecoin-wiki) to these docs as well!
-
-
-
+The gaps will be filled either by you or another person, [anyone can contribute](https://github.com/turtlecoin/sajodocs) to these docs as well!

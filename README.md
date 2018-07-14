@@ -10,18 +10,18 @@ https://docs.turtlecoin.lol
 
 You must follow [strict markdown](https://daringfireball.net/projects/markdown/), not GFM. Important points include-
 
-* relative links without the `.md` extension 
+* relative links without the `.md` extension
   ex-> `(guides/Rainborg-Wat-Dat)` instead of `(Rainborg-Wat-Dat)`
-  
+
 * Links are *case sensitive*
   Links to files in `mkdocs.yml` must *perfectly match* the casing of the actual files, and the links to these files from other places must *perfectly match* the casing in `mkdocs.yml`.
-  
-* If:
- (a)points are to be indented under one another, 
- (b)pictures/information are to be included under a "step 1", 
- (c)codeblocks are to be made under steps/points, 
-     they are to be indented by 4 points. 
- (d)Codeblocks must also start/end on a separate  line.
+
+* If:  
+ (a)points are to be indented under one another,  
+ (b)pictures/information are to be included under a "step 1",  
+ (c)codeblocks are to be made under steps/points,  
+     they are to be indented by 4 spaces.
+ (d)codeblocks must also start/end on a separate  line.  
 
   **Note: Text given beyond this point wrapped in code blocks are just examples, observe the formatting and not what's written**
 
@@ -45,7 +45,7 @@ You must follow [strict markdown](https://daringfireball.net/projects/markdown/)
            ![walletname](images/name.png)
    ```
 
-  #### Ex (b): 
+  #### Ex (b):
 
   ##### *Wiki MD*
 
@@ -98,7 +98,7 @@ You must follow [strict markdown](https://daringfireball.net/projects/markdown/)
 
 ### More Information on Contributing
 
-For more rules on contributing and the format to do it, compare 2 files from the existing wiki to this repo, and see how they shape up. If you observe them closely enough, you'll be able to figure out how to go about formatting.
+For more rules on contributing and the format with whih to do it, compare 2 files from the existing wiki to this repo, and see how they shape up. If you observe them closely enough, you'll be able to figure out how to go about formatting.
 
 ---
 
@@ -106,7 +106,7 @@ For more rules on contributing and the format to do it, compare 2 files from the
 
 **existing wiki**
 
-https://raw.githubusercontent.com/turtlecoin/turtlecoin-wiki/master/guides/Bootstrapping-the-Blockchain.md
+https://raw.githubusercontent.com/turtlecoin/turtlecoin-docs/master/guides/Bootstrapping-the-Blockchain.md
 
 **this wiki**
 
@@ -118,7 +118,7 @@ https://raw.githubusercontent.com/turtlecoin/sajodocs/master/docs/guides/Bootstr
 
 **existing wiki**
 
-https://raw.githubusercontent.com/turtlecoin/turtlecoin-wiki/master/guides/mining/XMR-Stak-Linux-Guide.md 
+https://raw.githubusercontent.com/turtlecoin/turtlecoin-docs/master/guides/mining/XMR-Stak-Linux-Guide.md
 
 **this wiki**
 

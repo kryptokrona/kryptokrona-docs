@@ -4,7 +4,7 @@ In case you don't want to download the blockchain and verify it everytime, you c
 
 ## Nest Wallet
 
-Nest wallet automatically sync from a [remote node](Using-nest-wallet#synchronizing-the-blockchain)
+Nest wallet automatically syncs from a [remote node](Using-nest-wallet#synchronizing-the-blockchain)
 
 ## zedwallet
 

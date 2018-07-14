@@ -21,7 +21,7 @@ After your wallet address has been registered, type `.deposit` in the `#bots` ch
 
 #### CLI Wallet
 
-Follow the steps given [here](wallets/Using-Simplewallet#sending-turtlecoin-transactions) and replace the values of the address and payment ID with the ones provided (**!! PAYMENT ID IS IMPORTANT !!**).
+Follow the steps given [here](wallets/Using-zedwallet#sending-turtlecoin-transactions) and replace the values of the address and payment ID with the ones provided (**!! PAYMENT ID IS IMPORTANT !!**).
 
 - See [Expected Results](#expected-results) section below
 
@@ -111,7 +111,7 @@ So if you tipped 1 TRTL, 1.1 TRTL will be pulled from your account so that the f
 
    ---
 
-- Trying to add a message after the command on a seperate line in an existing message **will** work.  
+- Trying to add a message after the command on a separate line in an existing message **will** work.  
   For example,
   ```
   .tip 1 @RockSteady#7588
@@ -141,7 +141,6 @@ So if you tipped 1 TRTL, 1.1 TRTL will be pulled from your account so that the f
 * Any text must go **after** the command
   - It may also go in **between** the **amount** and **recipient**
 * Trying to **edit** the command will *not* work
-
 
 
 ### Tipping with Emojis

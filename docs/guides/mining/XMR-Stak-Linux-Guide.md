@@ -40,7 +40,9 @@ If no binaries are available, or you prefer to compile, follow these instruction
 
 2.  Open the terminal and install dependencies by running this command-
 
-    ```sudo apt install libmicrohttpd-dev libssl-dev cmake build-essential libhwloc-dev```
+    ```
+    sudo apt install libmicrohttpd-dev libssl-dev cmake build-essential libhwloc-dev
+    ```
 
 3.  Clone the package-
 
@@ -92,7 +94,7 @@ If no binaries are available, or you prefer to compile, follow these instruction
 
     `ccmake ..`
 
-11. Using the Up and Down arrows, scroll to the 2nd page. Then, on `XMR-STAK_CURRENCY`, press enter to change it to `cryptonight_lite_v7` (if needed, you can make personal tweaks by reading the descriptions of each value).
+11. Using the Up and Down arrows, scroll to the 2nd page. Then, on `XMR-STAK_CURRENCY`, press enter to change it to `turtlecoin` (if needed, you can make personal tweaks by reading the descriptions of each value).
 
 12. Once you're done, press `c` and then `g` on your keyboard.
 
@@ -113,12 +115,12 @@ Upon first launching XMR-Stak, the software will ask you several setup and confi
 1.  `Please enter: - Do you want to use the HTTP interface? Unlike the screen display, browser interface is not affected by the GPU lag. If you don't want to use it, please enter 0, otherwise enter port number that the miner should listen on`
 
 
-    Enter `0`, if you are like most people, and do not need to remotely check your hashrate.
+    Enter `0`, if you do not need to remotely check your hashrate.
 
     If you do need to, then enter a port number.
     Let's take the port number as `0101` and your IP address as `26.24.105.14` as an example.
 
-    To check the hashrate, enter in the address bar of your web browser, `<26.24.105.14>:<0101>`. It should show a page with your rig's hashrate.
+    To check the hashrate, enter in the address bar of your web browser, `<26.24.105.14>:<0101>`. It should show a page with your rig's hashrate.  
     If you are checking from the same IP address, you can alternatively enter, `localhost:<0101>`
 
     Make sure to enter your own IP address if you enable this feature. You can choose any port you want!
