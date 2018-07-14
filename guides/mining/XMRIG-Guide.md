@@ -23,6 +23,7 @@ Needs to be compiled. Instructions [here](https://github.com/xmrig/xmrig/wiki/OS
 1. Unzip the file and extract the files into a new folder (Make sure your anti-virus doesn't delete the files)
 2. Open the `config.json` file with Notepad
 3. Find and change the following lines:
+
 * `"algo: "cryptonight-lite"`
 * `"url: "[pool address]"`
 * `"user: "[wallet address]"`
@@ -32,7 +33,7 @@ Needs to be compiled. Instructions [here](https://github.com/xmrig/xmrig/wiki/OS
 
 
 
-- Instead of `[public address]`, simply paste your TurtleCoin wallet's address. Make sure to keep the `"`!
+- Instead of `[wallet address]`, simply paste your TurtleCoin wallet's address. Make sure to keep the `"`!
 
 - If you don't have one yet, you can generate a [paper wallet](Making-a-Paper-Wallet) to mine towards for now, and later import into a CLI or GUI wallet.
 
@@ -47,6 +48,7 @@ Needs to be compiled. Instructions [here](https://github.com/xmrig/xmrig/wiki/OS
 1. Unzip the file and extract the files into a new folder (Make sure your anti-virus doesn't delete the files)
 2. Open the `config.json` file with Notepad
 3. Find and change the following lines:
+
 - `"algo: "cryptonight-lite"`
 - `"url: "[pool address]"`
 - `"user: "[wallet address]"`
@@ -54,7 +56,7 @@ Needs to be compiled. Instructions [here](https://github.com/xmrig/xmrig/wiki/OS
 
 
 
-- Instead of `[public address]`, simply paste your TurtleCoin wallet's address. Make sure to keep the `"`!
+- Instead of `[wallet address]`, simply paste your TurtleCoin wallet's address. Make sure to keep the `"`!
 
 - If you don't have one yet, you can generate a [paper wallet](Making-a-Paper-Wallet) to mine towards for now, and later import into a CLI or GUI wallet.
 
@@ -62,7 +64,7 @@ Needs to be compiled. Instructions [here](https://github.com/xmrig/xmrig/wiki/OS
 
 - In place of `[pool address]`, you'll need to choose a pool to mine towards. You can check the full list [here](Pools). Make sure to keep the `"`!
 
-4. Save the file and start `xmrig-amd.exe`. if you're mining with an AMD GPU, or `xmrig-nvidia.exe` if you're mining with a nVidia GPU.
+4. Save the file and start `xmrig-amd.exe` if you're mining with an AMD GPU, or `xmrig-nvidia.exe` if you're mining with a nVidia GPU.
 
 
 
@@ -71,4 +73,3 @@ Needs to be compiled. Instructions [here](https://github.com/xmrig/xmrig/wiki/OS
 
 
 That's it! You should be mining away now! :)
-
