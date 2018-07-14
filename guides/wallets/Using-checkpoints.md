@@ -1,6 +1,6 @@
-# Using Checkpoints to Sync Faster
+# Using Checkpoints to Sync Blockchain Faster
 
-**Note**: You can presently only use checkpoints with zedwallet; the command-line wallet.  
+Instead of verifying every block's cyptographic signature, use a pre-computed list to sinply check the signature matches the height.
 
 ## Setup
 
