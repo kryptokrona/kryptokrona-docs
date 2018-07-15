@@ -109,7 +109,8 @@ You need to have `TurtleCoind` open and synced to use this miner, unlike convent
 
 #### Q: Is there a calculator to see how much TRTL I'll mine per day?
 
-A: Your pool's homepage should have one - enter your hashrate and it'll give an estimate of how much TRTL you'll mine per day.
+A: Your pool's homepage should have one - enter your hashrate and it'll give an estimate of how much TRTL you'll mine per day.  
+If there isn't, you can check one [here](https://turtle.land/#pools).
 
 ### XMR-Stak Issues
 
