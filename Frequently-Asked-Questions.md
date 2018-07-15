@@ -107,7 +107,8 @@ miner.exe --address TRTL...
 
 #### Q: Is there a calculator to see how much TRTL I'll mine per day?
 
-A: Your pool's homepage should have one - enter your hashrate and it'll give an estimate of how much TRTL you'll mine per day.
+A: Your pool's homepage should have one - enter your hashrate and it'll give an estimate of how much TRTL you'll mine per day.  
+If there isn't, you can check one [here](https://turtle.land/#pools).
 
 ### XMR-Stak Issues
 
@@ -128,7 +129,7 @@ A: This could be caused by multiple issues:
 
 A: If you're using XMR-Stak, you can start the miner with a certain command. Check [this out](XMR-Stak-Guide#xmr-stak-no-cpu-gpu) for more info.
 
-#### Q: My XMR-Stak is crashing on startup, with an error about CUDA. What am I doing wrong?
+#### Q: XMR-Stak is crashing on startup, with an error about CUDA. What am I doing wrong?
 
 A: If you are using a nVidia card, try opening `nvidia.txt` in the same directory as `xmr-stak.exe`, and lowering the value of `threads` until it stops crashing.
 
