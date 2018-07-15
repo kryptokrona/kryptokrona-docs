@@ -1,6 +1,6 @@
 # Using Checkpoints to Sync Blockchain Faster
 
-Instead of verifying every block's cyptographic signature, use a pre-computed list to sinply check the signature matches the height.
+Instead of verifying every block's cyptographic signature, use a pre-computed list to simply check the signature matches the height.
 
 ## Setup
 
