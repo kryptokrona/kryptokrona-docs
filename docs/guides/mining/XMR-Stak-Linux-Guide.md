@@ -125,7 +125,7 @@ Upon first launching XMR-Stak, the software will ask you several setup and confi
 
     Make sure to enter your own IP address if you enable this feature. You can choose any port you want!
 
-2.
+2.  
     ```
     Please enter:
     - Please enter the currency that you want to mine:
