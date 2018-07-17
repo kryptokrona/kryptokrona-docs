@@ -53,11 +53,11 @@ Upon first launching XMR-Stak, the software will ask you several setup and confi
     Make sure to enter your own IP address if you enable this feature. You can choose any port you want(uptil 9999)!
 
 
-2.
-
+2.  
     ```
     Please enter:
     - Please enter the currency that you want to mine:
+
     - aeon7
     - bbscoin
     - croat
@@ -74,7 +74,7 @@ Upon first launching XMR-Stak, the software will ask you several setup and confi
     - karbo
     - monero7
     - stellite
-    - sumokoin    
+    - sumokoin
     - turtlecoin
     ```
 
