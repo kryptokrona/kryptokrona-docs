@@ -26,7 +26,7 @@ XMR-Stak is a unified miner, which means the same program will be used to mine w
 
 ## Downloading and Installing for Mac
 
-See [here](https://github.com/fireice-uk/xmr-stak/blob/master/doc/compile.md) and [here](https://github.com/fireice-uk/xmr-stak/blob/master/doc/compile_macOS.md).
+See [here](https://github.com/fireice-uk/xmr-stak/blob/master/doc/compile) and [here](https://github.com/fireice-uk/xmr-stak/blob/master/doc/compile_macOS).
 
 
 
@@ -40,9 +40,7 @@ View [this guide](XMR-Stak-Linux-Guide) to get started with XMR-Stak on Linux.
 
 Upon first launching XMR-Stak, the software will ask you several setup and configuration questions.
 
-1.  ```
-   Please enter: - Do you want to use the HTTP interface? Unlike the     screen display, browser interface is not affected by the GPU lag. If you don't want to use it, please enter 0, otherwise enter port number that the miner should listen on
-   ```
+1.  `Please enter: - Do you want to use the HTTP interface? Unlike the     screen display, browser interface is not affected by the GPU lag. If you don't want to use it, please enter 0, otherwise enter port number that the miner should listen on`
 
     Enter `0`, if you are like most people, and do not need to remotely check your hashrate.
 

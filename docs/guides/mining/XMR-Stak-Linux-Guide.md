@@ -90,7 +90,7 @@ If no binaries are available, or you prefer to compile, follow these instruction
 
 9.  XMR-Stak will now be located in `/home/user/xmr-stak/build/bin`
 
-10. In the terminal, type- (install it if it's not installed)-
+10. In the terminal, type- (install it if it's not already)-
 
     `ccmake ..`
 
@@ -126,7 +126,6 @@ Upon first launching XMR-Stak, the software will ask you several setup and confi
     Make sure to enter your own IP address if you enable this feature. You can choose any port you want!
 
 2.
-
     ```
     Please enter:
     - Please enter the currency that you want to mine:

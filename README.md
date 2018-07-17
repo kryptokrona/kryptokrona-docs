@@ -11,7 +11,7 @@ https://docs.turtlecoin.lol
 You must follow [strict markdown](https://daringfireball.net/projects/markdown/), not GFM. Important points include-
 
 * relative links without the `.md` extension
-  ex-> `(guides/Rainborg-Wat-Dat)` instead of `(Rainborg-Wat-Dat)`
+  ex-> `(Rainborg-Wat-Dat)` instead of `(Rainborg-Wat-Dat.md)`
 
 * Links are *case sensitive*
   Links to files in `mkdocs.yml` must *perfectly match* the casing of the actual files, and the links to these files from other places must *perfectly match* the casing in `mkdocs.yml`.
@@ -36,7 +36,7 @@ You must follow [strict markdown](https://daringfireball.net/projects/markdown/)
    * Download wallet
      * Make a new wallet
        * give it a name
-       ![walletname](guides/wallets/images/name.png)
+       ![walletname](wallets/images/name.png)
    ```
 
   ##### *Strict MD*
@@ -54,7 +54,7 @@ You must follow [strict markdown](https://daringfireball.net/projects/markdown/)
 
    ```
    1. Download a wallet
-   ![make wallet](guides/wallets/images/make-wallet.png)
+   ![make wallet](wallets/images/make-wallet.png)
    ---
    In case you can't make, then just try again.
    ---
@@ -75,7 +75,7 @@ You must follow [strict markdown](https://daringfireball.net/projects/markdown/)
    2.  Make a wallet
        Make sure you choose a strong password!
    3.  Check that
-       * it is saved [comfily](../Being-Comfy). (it assumed we are in the guides/wallets/ directory)
+       * it is saved [comfily](../Being-Comfy). (it assumed we are in the wallets/ directory)
    ```
 
    #### Ex (c) and (d):
@@ -109,11 +109,11 @@ For more rules on contributing and the format with whih to do it, compare 2 file
 
 **existing wiki**
 
-https://raw.githubusercontent.com/turtlecoin/turtlecoin-docs/master/guides/Bootstrapping-the-Blockchain.md
+https://raw.githubusercontent.com/turtlecoin/turtlecoin-docs/master/Bootstrapping-the-Blockchain.md
 
 **this wiki**
 
-https://raw.githubusercontent.com/turtlecoin/sajodocs/master/docs/guides/Bootstrapping-the-Blockchain.md
+https://raw.githubusercontent.com/turtlecoin/sajodocs/master/docs/Bootstrapping-the-Blockchain.md
 
 ---
 
@@ -121,11 +121,11 @@ https://raw.githubusercontent.com/turtlecoin/sajodocs/master/docs/guides/Bootstr
 
 **existing wiki**
 
-https://raw.githubusercontent.com/turtlecoin/turtlecoin-docs/master/guides/mining/XMR-Stak-Linux-Guide.md
+https://raw.githubusercontent.com/turtlecoin/turtlecoin-docs/master/mining/XMR-Stak-Linux-Guide.md
 
 **this wiki**
 
-https://raw.githubusercontent.com/turtlecoin/sajodocs/master/docs/guides/mining/XMR-Stak-Linux-Guide.md
+https://raw.githubusercontent.com/turtlecoin/sajodocs/master/docs/mining/XMR-Stak-Linux-Guide.md
 
 ---
 
