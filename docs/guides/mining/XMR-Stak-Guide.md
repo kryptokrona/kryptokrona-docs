@@ -54,7 +54,7 @@ Upon first launching XMR-Stak, the software will ask you several setup and confi
 
 
 2.  
-    ```
+   ```
     Please enter:
     - Please enter the currency that you want to mine:
 
@@ -76,7 +76,7 @@ Upon first launching XMR-Stak, the software will ask you several setup and confi
     - stellite
     - sumokoin
     - turtlecoin
-    ```
+   ```
 
     Enter `turtlecoin`
 

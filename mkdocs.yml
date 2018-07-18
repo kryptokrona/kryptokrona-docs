@@ -81,38 +81,38 @@ pages:
     - FAQ:
       - Frequently Asked Questions: Frequently-Asked-Questions.md
     - Guides:
-      - Bootstrapping the Blockchain: Bootstrapping-the-Blockchain.md
-      - RainBorg? Wat Dat?: RainBorg-Wat-Dat.md
-      - Using trtlbot++: Using-trtlbot-plus-plus.md
-      - Forking TurtleCoin: Forking-Turtlecoin.md
+      - Bootstrapping the Blockchain: guides/Bootstrapping-the-Blockchain.md
+      - RainBorg? Wat Dat?: guides/RainBorg-Wat-Dat.md
+      - Using trtlbot++: guides/Using-trtlbot-plus-plus.md
+      - Forking TurtleCoin: guides/Forking-Turtlecoin.md
       - Mining:
-        - How to Mine TRTL: mining/Mining.md
-        - XMR-Stak: mining/XMR-Stak-Guide.md
-        - XMR-Stak on Linux: mining/XMR-Stak-Linux-Guide.md
-        - XMRig: mining/XMRIG-Guide.md
-        - Pools: mining/Pools.md
-        - Cloud Mining: mining/Cloud-Mining.md
-        - Mining with a SBC: mining/Mining-with-SBC.md
+        - How to Mine TRTL: guides/mining/Mining.md
+        - XMR-Stak: guides/mining/XMR-Stak-Guide.md
+        - XMR-Stak on Linux: guides/mining/XMR-Stak-Linux-Guide.md
+        - XMRig: guides/mining/XMRIG-Guide.md
+        - Pools: guides/mining/Pools.md
+        - Cloud Mining: guides/mining/Cloud-Mining.md
+        - Mining with a SBC: guides/mining/Mining-with-SBC.md
         - Mining on your Phone:
-          - How to Mine TRTL on your Phone: mining/mobile-mining/Mining-with-Phone.md
-          - Using Tony Monero: mining/mobile-mining/Using-Tony-Monero.md
-          - Using AA Miner: mining/mobile-mining/Using-AA-Miner.md
+          - How to Mine TRTL on your Phone: guides/mining/mobile-mining/Mining-with-Phone.md
+          - Using Tony Monero: guides/mining/mobile-mining/Using-Tony-Monero.md
+          - Using AA Miner: guides/mining/mobile-mining/Using-AA-Miner.md
       - Wallets:
-        - Making a Wallet: wallets/Making-a-Wallet.md
+        - Making a Wallet: guides/wallets/Making-a-Wallet.md
         - GUI Wallets:
-          - Overview of GUI Wallets: wallets/Making-a-GUI-Wallet.md
-          - Nest Wallet: wallets/Using-nest-wallet.md
-          - WinForms Wallet: wallets/Using-winforms-wallet.md
+          - Overview of GUI Wallets: guides/wallets/Making-a-GUI-Wallet.md
+          - Nest Wallet: guides/wallets/Using-nest-wallet.md
+          - WinForms Wallet: guides/wallets/Using-winforms-wallet.md
         - CLI Wallet:
-          - zedwallet: wallets/Using-zedwallet.md
-          - Using Checkpoints: wallets/Using-checkpoints.md
-        - Making a Paper Wallet: wallets/Making-a-paper-wallet.md
-        - Recovering your Wallet: wallets/recovering-your-wallet.md
-        - Using Remote Nodes: wallets/Using-remote-nodes.md
+          - zedwallet: guides/wallets/Using-zedwallet.md
+          - Using Checkpoints: guides/wallets/Using-checkpoints.md
+        - Making a Paper Wallet: guides/wallets/Making-a-paper-wallet.md
+        - Recovering your Wallet: guides/wallets/recovering-your-wallet.md
+        - Using Remote Nodes: guides/wallets/Using-remote-nodes.md
       - CryptoCurrency Fundamentals:
-        - Smart Contracts: crypto-funda/smart-contract.md
+        - Smart Contracts: guides/crypto-funda/smart-contract.md
     - Service Operators:
-      - Compiling from Source: service-operators/Compiling-from-Source.md
-      - TurtleCoind behind HAProxy: service-operators/TurtleCoind-behind-HAProxy.md
+      - Compiling from Source: guides/service-operators/Compiling-from-Source.md
+      - TurtleCoind behind HAProxy: guides/service-operators/TurtleCoind-behind-HAProxy.md
     - For Developers:
       - Resources: developers/Resources.md
