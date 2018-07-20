@@ -132,4 +132,3 @@ https://raw.githubusercontent.com/turtlecoin/sajodocs/master/docs/mining/XMR-Sta
 
 ---
 
-   ```
