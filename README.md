@@ -16,15 +16,18 @@ You must follow [strict markdown](https://daringfireball.net/projects/markdown/)
 * Links are *case sensitive*
   Links to files in `mkdocs.yml` must *perfectly match* the casing of the actual files, and the links to these files from other places must *perfectly match* the casing in `mkdocs.yml`.
 
-* If:  
- (a)points are to be indented under one another,  
 
- (b)pictures/information are to be included under a "step 1",  
+If:  
 
- (c)codeblocks are to be made under steps/points,  
-     they are to be indented by 4 spaces.
+* (a) points are to be indented under one another,  
 
- (d)codeblocks must also start/end on a separate line.  
+* (b) pictures/information are to be included under a "step 1",  
+
+* (c) codeblocks are to be made under steps/points,   
+     
+     *they are to be indented by 4 spaces.*
+
+* (d) *codeblocks must also start/end on a separate line.*
 
   **Note: Text given beyond this point wrapped in code blocks are just examples, observe the formatting and not what's written**
 
