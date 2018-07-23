@@ -34,11 +34,11 @@ If you would like to setup a GUI wallet, you can take a look at [this guide](Mak
 We have two web wallets under development:
 
 [Fexra's Web Wallet](https://beta.turtlewallet.io)
-[Discord Link](https://discord.gg/ukkSbV)
+[Discord Link](https://discord.gg/5KSZXnh)
 
 and,
 
 [Canti's Web Wallet](https://vico-web-wallet.turtlecoin.ws/)
-[Discord Link](https://discord.gg/T39Fdr)
+[Discord Link](https://discord.gg/fBV6Msa)
 
 Both of them are under heavy development, and will hopefully be ready soon.
