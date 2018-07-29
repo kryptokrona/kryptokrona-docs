@@ -14,11 +14,12 @@ XMRig has separate miners for CPU and GPU. You can download them from here:
 
 ## Downloading and Installing for Linux
 
-You can directly use the pre-built binaries for Xmrig CPU. Download the `xmrig-*-xenial-amd64.tar.gz` file [here](https://github.com/xmrig/xmrig/releases). Run the file using `./xmrig`. 
+You can directly use the pre-built binaries for XMRig CPU. Download the `xmrig-*-xenial-amd64.tar.gz` file [here](https://github.com/xmrig/xmrig/releases).  
+Run the file using `./xmrig`. 
 
-XMRig needs to be compiled for Nvidia and AMD. Instructions for compiling are linked below:
+XMRig needs to be compiled for nVidia and AMD. Instructions for compiling are linked below(Ubuntu):
 
-* [XMRig CPU Miner](https://github.com/xmrig/xmrig/wiki/Build) 
+* [XMRig CPU Miner](https://github.com/xmrig/xmrig/wiki/Ubuntu-Build) 
 * [XMRig GPU Nvidia Miner](https://github.com/xmrig/xmrig-nvidia/wiki/Ubuntu-Build) 
 * [XMRig GPU AMD Miner](https://github.com/xmrig/xmrig-amd/wiki/Ubuntu-Build) 
 
