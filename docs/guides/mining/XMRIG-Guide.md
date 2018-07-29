@@ -1,4 +1,4 @@
-# XMRig Guide for TurtleCoin
+# XMRig Guide for TurtleCoin 
 
 XMRig uses separate miners for CPU and GPU, you need to download a CPU and GPU miner separately and run two separate instances on your computer.
 
@@ -11,6 +11,16 @@ XMRig has separate miners for CPU and GPU. You can download them from here:
 * [XMRig GPU AMD Miner](https://github.com/xmrig/xmrig-amd/releases)
 
 **Note:** You will need to download and run two separate instances if you want to mine with your GPU and CPU at the same time.
+
+## Downloading and Installing for Linux
+
+You can directly use the pre-built binaries for Xmrig CPU. Download the `xmrig-*-xenial-amd64.tar.gz` file [here](https://github.com/xmrig/xmrig/releases). Run the file using `./xmrig`. 
+
+XMRig needs to be compiled for Nvidia and AMD. Instructions for compiling are linked below:
+
+* [XMRig CPU Miner](https://github.com/xmrig/xmrig/wiki/Build) 
+* [XMRig GPU Nvidia Miner](https://github.com/xmrig/xmrig-nvidia/wiki/Ubuntu-Build) 
+* [XMRig GPU AMD Miner](https://github.com/xmrig/xmrig-amd/wiki/Ubuntu-Build) 
 
 ## Downloading and Installing for Mac
 
