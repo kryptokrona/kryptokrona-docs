@@ -7,7 +7,7 @@ This guide will help you change the necessary sections of the code to set up you
 
 Firstly, lets quickly talk about *licenses*.
 
-## Licences
+## Licenses
 
 When you're poking around the codebase, you might see something like this:
 
