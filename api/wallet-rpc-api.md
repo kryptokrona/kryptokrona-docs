@@ -1260,14 +1260,14 @@ transfers           | Array of addresses (string), amount (int)                 
 ## sendTransaction
 
 ```shell
-curl -d '{"jsonrpc":"2.0","id":1,"password":"passw0rd","method":"sendTransaction","params":{"transfers":[{"address":"TRTLxxxx...","amount":5000}],"fee":10,"anonymity":3,"changeAddress":"TRTLyyyy..."}}' http://localhost:8070/json_rpc
+curl -d '{"jsonrpc":"2.0","id":1,"password":"passw0rd","method":"sendTransaction","params":{"transfers":[{"address":"TRTLxxxx...","amount":5000}],"fee":10,"anonymity":7,"changeAddress":"TRTLyyyy..."}}' http://localhost:8070/json_rpc
 ```
 
 ```javascript
 import TurtleCoinWalletd from 'turtlecoin-walletd-rpc-js';
 
 let walletd = new TurtleCoinWalletd(hostname, port, password, logging);
-let anonymity = 3;
+let anonymity = 7;
 let fee = 10;
 let addresses = null;
 let unlockTime = null;
@@ -1293,7 +1293,7 @@ walletd.sendTransaction(anonymity, transfers, fee, addresses, unlockTime, extra,
 use TurtleCoin\Walletd;
 
 $walletd = new Walletd\Client($config);
-$anonymity = 3;
+$anonymity = 7;
 $fee = 10;
 $addresses = null;
 $unlockTime = null;
@@ -1316,7 +1316,7 @@ echo $response->getBody()->getContents();
 from turtlecoin import Walletd
 
 walletd = Walletd(rpc_password, rpc_host, rpc_port)
-anonymity = 3
+anonymity = 7
 fee = 10
 addresses = []
 unlock_time = 0
@@ -1356,7 +1356,7 @@ addresses       | No            | Array of strings, where each string is an addr
 transfers       | Yes           | Array of objects, address: (string address), amount: (int amount)                        | array
 fee             | Yes           | Transaction fee. Minimal fee in TurtleCoin network is 0.10 TRTL. As with other amounts use whole units, 1 TRTL = 100 units, so 0.1 TRTL = 10 units | int
 unlockTime      | No            | The block height at which the transaction will be unlocked for spending.                 | int
-anonymity       | Yes           | Privacy (mixin) level from block 600,000 needs to be seven (7), this will be removed / ignored in a future version | int
+anonymity       | Yes           | Privacy (mixin) level from block 620,000 needs to be seven (7), this will be removed / ignored in a future version | int
 extra           | No            | String of variable length. Can contain A-Z, 0-9 characters.                              | string
 paymentId       | No            | Payment ID                                                                               | string 
 changeAddress   | No            | Valid and existing address in this container.                                            | string 
@@ -1376,14 +1376,14 @@ transactionHash	      | Hash of the sent transaction		| string
 ## createDelayedTransaction
 
 ```shell
-curl -d '{"jsonrpc":"2.0","id":1,"password":"passw0rd","method":"createDelayedTransaction","params":{"transfers":[{"address":"TRTLxxxx...","amount":5000}],"fee":10,"anonymity":3,"changeAddress":"TRTLyyyy..."}}' http://localhost:8070/json_rpc
+curl -d '{"jsonrpc":"2.0","id":1,"password":"passw0rd","method":"createDelayedTransaction","params":{"transfers":[{"address":"TRTLxxxx...","amount":5000}],"fee":10,"anonymity":7,"changeAddress":"TRTLyyyy..."}}' http://localhost:8070/json_rpc
 ```
 
 ```javascript
 import TurtleCoinWalletd from 'turtlecoin-walletd-rpc-js';
 
 let walletd = new TurtleCoinWalletd(hostname, port, password, logging);
-let anonymity = 3;
+let anonymity = 7;
 let fee = 10;
 let addresses = null;
 let unlockTime = null;
@@ -1409,7 +1409,7 @@ walletd.createDelayedTransaction(anonymity, transfers, fee, addresses, unlockTim
 use TurtleCoin\Walletd;
 
 $walletd = new Walletd\Client($config);
-$anonymity = 3;
+$anonymity = 7;
 $fee = 10;
 $addresses = null;
 $unlockTime = null;
@@ -1432,7 +1432,7 @@ echo $response->getBody()->getContents();
 from turtlecoin import Walletd
 
 walletd = Walletd(rpc_password, rpc_host, rpc_port)
-anonymity = 3
+anonymity = 7
 fee = 10
 addresses = []
 unlock_time = 0
@@ -1472,7 +1472,7 @@ addresses       | No            | Array of strings, where each string is an addr
 transfers       | Yes           | Array of address (string), amount (int)                                                  | array
 fee             | Yes           | Transaction fee. Minimal fee in TurtleCoin network is 0.10 TRTL. This parameter should be specified in minimal available TRTL units. For example, if your fee is 0.10 TRTL, you should pass it as 10. | int
 unlockTime      | No	        | Height of the block until which transaction is going to be locked for spending.	       | int
-anonymity       | Yes           | Privacy level (a discrete number from 1 to infinity). Level 6 and higher is recommended. | int
+anonymity       | Yes           | Privacy (mixin) level from block 620,000 needs to be seven (7), this will be removed / ignored in a future version | int
 extra           | No            | String of variable length. Can contain A-Z, 0-9 characters.                              | string
 paymentId       | No            | Payment ID                                                                               | string
 changeAddress   | No            | Valid and existing in this container address.                                            | string
@@ -1687,7 +1687,7 @@ In case of success returns an empty JSON object.
 ## sendFusionTransaction
 
 ```shell
-curl -d '{"jsonrpc":"2.0","id":1,"password":"passw0rd","method":"sendFusionTransaction","params":{"threshold":1000000,"anonymity":3,"addresses":["TRTLxxxx...","TRTLyyyy..."],"destinationAddress":"TRTLzzzz..."}}' http://localhost:8070/json_rpc
+curl -d '{"jsonrpc":"2.0","id":1,"password":"passw0rd","method":"sendFusionTransaction","params":{"threshold":1000000,"anonymity":7,"addresses":["TRTLxxxx...","TRTLyyyy..."],"destinationAddress":"TRTLzzzz..."}}' http://localhost:8070/json_rpc
 ```
 
 ```javascript
@@ -1695,7 +1695,7 @@ import TurtleCoinWalletd from 'turtlecoin-walletd-rpc-js';
 
 let walletd = new TurtleCoinWalletd(hostname, port, password, logging);
 let threshold = 1000000;
-let anonymity = 3;
+let anonymity = 7;
 let addresses = ['TRTLxxxx...', 'TRTLyyyy...'];
 let destinationAddress = 'TRTLzzzz...';
 
@@ -1714,7 +1714,7 @@ use TurtleCoin\Walletd;
 
 $walletd = new Walletd\Client($config);
 $threshold = 1000000;
-$anonymity = 3;
+$anonymity = 7;
 $addresses = ['TRTLxxxx...', 'TRTLyyyy...'];
 $destinationAddress = 'TRTLzzzz...';
 $response = $walletd->sendFusionTransaction($threshold, $anonymity, $addresses, $destinationAddress);
@@ -1727,7 +1727,7 @@ from turtlecoin import Walletd
 
 walletd = Walletd(rpc_password, rpc_host, rpc_port)
 threshold = 1000000
-anonymity = 3
+anonymity = 7
 addresses = ['TRTLxxxx...', 'TRTLyyyy...']
 destination_address = 'TRTLzzzz...'
 response = walletd.send_fusion_transaction(threshold, anonymity, addresses, destination_address)
@@ -1757,7 +1757,7 @@ use `estimateFusion` to check the outputs, available for the optimization.
 Argument            | Mandatory  | Description                                                                                          | Format
 ------------------- | ---------- | ---------------------------------------------------------------------------------------------------- | -------
 threshold           | Yes        | Value that determines which outputs will be optimized. Only the outputs, lesser than the threshold value, will be included into a fusion transaction. | int
-anonymity           | Yes        | Privacy level (a discrete number from 1 to infinity). Level 6 and higher is recommended.             | int
+anonymity           | Yes        | Privacy (mixin) level from block 620,000 needs to be seven (7), this will be removed / ignored in a future version             | int
 addresses           | No         | Array of strings, where each string is an address to take the funds from.	                        | array
 destinationAddress  | No         | An address that the optimized funds will be sent to. Valid and existing in this container address.	| string
 
