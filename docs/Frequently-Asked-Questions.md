@@ -200,7 +200,7 @@ A: Try installing this: <https://go.microsoft.com/fwlink/?LinkId=746572>
 
 A: This occurs because of the blockchain forking, generally when one mining pool has a very large hashrate.
 
-  This can be fixed by re-syncing the correct blockchain from scratch. See the question below.
+  This can be fixed by re-syncing the correct blockchain from scratch. See [here](#q-how-can-i-re-sync-the-blockchain).
 
 #### Q: I'm getting a "corrupted blockchain" error like this?
 ```
