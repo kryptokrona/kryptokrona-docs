@@ -104,7 +104,7 @@ If:
 
 ### More Information on Contributing
 
-For more rules on contributing and the format with whih to do it, compare 2 files from the existing wiki to this repo, and see how they shape up. If you observe them closely enough, you'll be able to figure out how to go about formatting.
+For more rules on contributing and the format with which to do it, compare 2 files from the existing wiki to this repo, and see how they shape up. If you observe them closely enough, you'll be able to figure out how to go about formatting.
 
 ---
 
