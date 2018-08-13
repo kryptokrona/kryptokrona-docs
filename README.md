@@ -29,7 +29,7 @@ Travis has been setup so that once a Pull Request has been accepted and merged, 
 
 - [@ZedPea](https://github.com/ZedPea/)
 - [@ar-x](https://github.com/ar-x/)
-- [@Sajo811](https://github.com/Sajo811/)
+- [@Sajo8](https://github.com/Sajo8/)
 - [@holytastyguacamole](https://github.com/holytastyguacamole/)
 - [@SoreGums](https://github.com/SoreGums/)
 - [@timmcleod](https://github.com/timmcleod/)
