@@ -33,8 +33,7 @@
     - [Mining Pools](Pools)
     - [Cloud Mining](Cloud-Mining)
     - [Mining with a SBC](Mining-with-SBC)
-    - Mining with Your Mobile Phone
-      - [How to mine with mobile](Mining-with-Phone)
+    - [Mining with Your Mobile Phone](Mining-with-Phone)
       - [Using Tony Monero](Using-Tony-Monero)
       - [Using AA Miner](Using-AA-Miner)
   - [Wallets](Making-a-Wallet)
