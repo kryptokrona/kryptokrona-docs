@@ -112,11 +112,11 @@ For more rules on contributing and the format with whih to do it, compare 2 file
 
 **existing wiki**
 
-https://raw.githubusercontent.com/turtlecoin/turtlecoin-docs/master/Bootstrapping-the-Blockchain.md
+https://raw.githubusercontent.com/turtlecoin/turtlecoin-docs/master/guides/Bootstrapping-the-Blockchain.md
 
 **this wiki**
 
-https://raw.githubusercontent.com/turtlecoin/sajodocs/master/docs/Bootstrapping-the-Blockchain.md
+https://raw.githubusercontent.com/turtlecoin/sajodocs/master/docs/guides/Bootstrapping-the-Blockchain.md
 
 ---
 
@@ -124,11 +124,11 @@ https://raw.githubusercontent.com/turtlecoin/sajodocs/master/docs/Bootstrapping-
 
 **existing wiki**
 
-https://raw.githubusercontent.com/turtlecoin/turtlecoin-docs/master/mining/XMR-Stak-Linux-Guide.md
+https://raw.githubusercontent.com/turtlecoin/turtlecoin-docs/master/guides/mining/XMR-Stak-Linux-Guide.md
 
 **this wiki**
 
-https://raw.githubusercontent.com/turtlecoin/sajodocs/master/docs/mining/XMR-Stak-Linux-Guide.md
+https://raw.githubusercontent.com/turtlecoin/sajodocs/master/docs/guides/mining/XMR-Stak-Linux-Guide.md
 
 ---
 
