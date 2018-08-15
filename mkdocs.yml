@@ -66,7 +66,7 @@ markdown_extensions:
   - pymdownx.tilde
 
 # directory org
-pages:
+nav:
     - Home:
       - Home: index.md
       - Getting Started: Getting-Started.md
