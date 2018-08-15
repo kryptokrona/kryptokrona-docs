@@ -6,7 +6,7 @@
 
 #### Q: How do I get started mining?
 
- A: You can check [this guide](mining/Mining)
+ A: You can check [this guide](guides/mining/Mining)
 
 #### Q: I'm using a Mac, can I still mine?
 
@@ -55,7 +55,7 @@ A: Yes, in case you get banned, or a pool goes down for some time, you can keep 
 
 #### Q: Where can I find a list of pools?
 
-A: [Here](mining/Pools) is a list. It also has other nifty stats like the pool's fee, minimum payout and server location.
+A: [Here](guides/mining/Pools) is a list. It also has other nifty stats like the pool's fee, minimum payout and server location.
 
 #### Q: What does "pool weight" mean in XMR-Stak?
 
@@ -79,7 +79,7 @@ A: There are a few factors to consider when choosing a pool.
 
   This is the amount you need to mine before you get paid. Most pools will list this under the "Payments" tab.
 
-  You can check [this list](mining/Pools) of pools. It specifies each pool's minimum payout as well as server location.
+  You can check [this list](guides/mining/Pools) of pools. It specifies each pool's minimum payout as well as server location.
 
 #### Q: How many hashes per second is good for my hardware?
 
@@ -138,7 +138,7 @@ A: This could be caused by multiple issues:
 
 #### Q: How can I use just my GPU or CPU to mine in XMR-Stak?
 
-A: If you're using XMR-Stak, you can start the miner with a certain command. Check [this out](mining/XMR-Stak-Guide#XMR-Stak-no-cpu-gpu) for more info.
+A: If you're using XMR-Stak, you can start the miner with a certain command. Check [this out](guides/mining/XMR-Stak-Guide#XMR-Stak-no-cpu-gpu) for more info.
 
 #### Q: XMR-Stak is crashing on startup, with an error about CUDA. What am I doing wrong?
 
@@ -168,7 +168,7 @@ Some users have experienced issues with their firewall or antivirus as well howe
 
 A: This is possible, however please note that these developers are independent from the TurtleCoin project and are doing some great work, so we would suggest leaving it as is.
 
-  If you do wish to change/remove the dev fee, you will have to compile XMR-Stak yourself, they have instructions to do this on their [GitHub](https://github.com/fireice-uk/XMR-Stak/blob/master/doc/compile), or you can check out the [Linux guide](mining/XMR-Stak-Linux-Guide#ubuntu-16-04)
+  If you do wish to change/remove the dev fee, you will have to compile XMR-Stak yourself, they have instructions to do this on their [GitHub](https://github.com/fireice-uk/XMR-Stak/blob/master/doc/compile), or you can check out the [Linux guide](guides/mining/XMR-Stak-Linux-Guide#ubuntu-16-04)
 
   Once you have downloaded the code, you need to change the file `donate-level.hpp` in the `XMR-Stak/XMR-Stak/` folder.
 
@@ -370,7 +370,7 @@ A: Yes, you can view the guide [here](wallets/Making-a-paper-wallet)
 
   A: There are multiple ways to acquire TRTL, for example:
 
-  * Mining - see [here](mining/Mining)
+  * Mining - see [here](guides/mining/Mining)
   * Buying - TRTL is currently available on these exchanges: [TradeOgre](https://tradeogre.com/exchange/BTC-TRTL) and [TradeSatoshi](https://tradesatoshi.com/Exchange/?market=TRTL_BTC)
   * Bounties - Bounties for developing TRTL software, spreading the word of TRTL, and many other things are often posted in the #bounties channel on [discord][Discord_Link]. Check the pinned messages for current bounties.
   * Tips - Turtles with often tip each other, especially if you make spicy memes in the `#memes` channel
