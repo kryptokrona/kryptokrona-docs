@@ -132,3 +132,6 @@ https://raw.githubusercontent.com/turtlecoin/sajodocs/master/docs/guides/mining/
 
 ---
 
+### PR -> Build -> Merge -> Publish
+
+Whenever a PR is made, Netlify automatically builds it and serves a preview. In case the build doesn't pass(red X), then add a ninja commit to fix it.
