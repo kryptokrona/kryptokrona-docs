@@ -1,5 +1,4 @@
-# How to Use trtlbot++
-
+# Using trtlbot++
 
 ## Registering your Wallet
 
