@@ -82,7 +82,7 @@ Upon first launching XMR-Stak, the software will ask you several setup and confi
 
 3.  `- Pool address: e.g. pool.example.com:3333`
 
-    Choose a pool from any of the [available pools](Pools) that is **closest to you** and enter its URL (you will be able to add more later).
+    Choose a pool from any of the [available pools](../Pools) that is **closest to you** and enter its URL (you will be able to add more later).
 
 4.  `- Username (Wallet address or pool login):`  
 
