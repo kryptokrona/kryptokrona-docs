@@ -45,9 +45,9 @@ Needs to be compiled. Instructions [here](https://github.com/xmrig/xmrig/wiki/OS
 
       - Instead of `[wallet address]`, simply paste your TurtleCoin wallet's address. Make sure to keep the `"`!  
 
-      - If you don't have one yet, you can generate a [paper wallet](../wallets/Making-a-paper-wallet) to mine towards for now, and later import into a CLI or GUI wallet.  
+      - If you don't have one yet, you can generate a [paper wallet](../../wallets/Making-a-paper-wallet) to mine towards for now, and later import into a CLI or GUI wallet.  
 
-      - In place of `[pool address]`, you'll need to choose a pool to mine towards. You can check the full list [here](Pools). Make sure to keep the `"`s!  
+      - In place of `[pool address]`, you'll need to choose a pool to mine towards. You can check the full list [here](../Pools). Make sure to keep the `"`s!  
 
 4.  Save the file and:
     * start `xmrig.exe` if you're mining with your CPU,
