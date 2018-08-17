@@ -2,7 +2,7 @@
 
 ## Setting Up the VM(Virtual Machine)
 
-1.  Go [here](https://console.cloud.google.com/freetrial) and sign in with your Google Account. Enter the details requested to sign up for the free trial.
+1.  Go [here](https://console.cloud.google.com/freetrial) and sign in with your Google Account. Enter the details requested to sign up for the free trial.  
     *You will need a valid credit card to sign up for it*
 2.  After signing up, go [here](https://console.cloud.google.com/compute/instances)
 3.  If it asks you for a project name, enter one or let it be the defualt one, it doesn't really matter.
