@@ -6,7 +6,7 @@
 
 #### Q: How do I get started mining?
 
- A: You can check [this guide](guides/mining/Mining)
+ A: You can check [this guide](../guides/mining/Mining)
 
 #### Q: I'm using a Mac, can I still mine?
 
@@ -55,7 +55,7 @@ A: Yes, in case you get banned, or a pool goes down for some time, you can keep 
 
 #### Q: Where can I find a list of pools?
 
-A: [Here](guides/mining/Pools) is a list. It also has other nifty stats like the pool's fee, minimum payout and server location.
+A: [Here](../guides/mining/Pools) is a list. It also has other nifty stats like the pool's fee, minimum payout and server location.
 
 #### Q: What does "pool weight" mean in XMR-Stak?
 
@@ -79,7 +79,7 @@ A: There are a few factors to consider when choosing a pool.
 
   This is the amount you need to mine before you get paid. Most pools will list this under the "Payments" tab.
 
-  You can check [this list](guides/mining/Pools) of pools. It specifies each pool's minimum payout as well as server location.
+  You can check [this list](../guides/mining/Pools) of pools. It specifies each pool's minimum payout as well as server location.
 
 #### Q: How many hashes per second is good for my hardware?
 
@@ -138,7 +138,7 @@ A: This could be caused by multiple issues:
 
 #### Q: How can I use just my GPU or CPU to mine in XMR-Stak?
 
-A: If you're using XMR-Stak, you can start the miner with a certain command. Check [this out](guides/mining/XMR-Stak-Guide#XMR-Stak-no-cpu-gpu) for more info.
+A: If you're using XMR-Stak, you can start the miner with a certain command. Check [this out](../guides/mining/XMR-Stak-Guide#XMR-Stak-no-cpu-gpu) for more info.
 
 #### Q: XMR-Stak is crashing on startup, with an error about CUDA. What am I doing wrong?
 
@@ -168,7 +168,7 @@ Some users have experienced issues with their firewall or antivirus as well howe
 
 A: This is possible, however please note that these developers are independent from the TurtleCoin project and are doing some great work, so we would suggest leaving it as is.
 
-  If you do wish to change/remove the dev fee, you will have to compile XMR-Stak yourself, they have instructions to do this on their [GitHub](https://github.com/fireice-uk/XMR-Stak/blob/master/doc/compile), or you can check out the [Linux guide](guides/mining/XMR-Stak-Linux-Guide#ubuntu-16-04)
+  If you do wish to change/remove the dev fee, you will have to compile XMR-Stak yourself, they have instructions to do this on their [GitHub](https://github.com/fireice-uk/XMR-Stak/blob/master/doc/compile), or you can check out the [Linux guide](../guides/mining/XMR-Stak-Linux-Guide#ubuntu-16-04)
 
   Once you have downloaded the code, you need to change the file `donate-level.hpp` in the `XMR-Stak/XMR-Stak/` folder.
 
@@ -303,8 +303,8 @@ A:
 
 #### Q: Can I speed up the syncing of the blockchain?
 
-  A: You can grab a recent copy of the blockchain and incrementally sync from there. See [here](Bootstrapping-the-Blockchain) for instructions.  
-  Or, you can sync [with checkpoints](wallets/Using-checkpoints)(only with zedwallet).
+  A: You can grab a recent copy of the blockchain and incrementally sync from there. See [here](../Bootstrapping-the-Blockchain) for instructions.  
+  Or, you can sync [with checkpoints](../wallets/Using-checkpoints)(only with zedwallet).
 
 #### Q: Can I skip the syncing?
 
@@ -349,11 +349,11 @@ To view a guide on using them, you can go [here](wallets/Making-a-Wallet/#graphi
 
 #### Q: Can I make a paper wallet?
 
-A: Yes, you can view the guide [here](wallets/Making-a-paper-wallet)
+A: Yes, you can view the guide [here](../wallets/Making-a-paper-wallet)
 
 #### Q: I made a paper wallet, how do I use it?
 
-  A: You can check out [this guide](wallets/recovering-your-wallet) for steps on how to import your paper wallet into a wallet of your choice(choose a wallet and import the keys).
+  A: You can check out [this guide](../wallets/recovering-your-wallet) for steps on how to import your paper wallet into a wallet of your choice(choose a wallet and import the keys).
 
 #### Q: Can I view the balance of my wallet online?
 
@@ -370,11 +370,11 @@ A: Yes, you can view the guide [here](wallets/Making-a-paper-wallet)
 
   A: There are multiple ways to acquire TRTL, for example:
 
-  * Mining - see [here](guides/mining/Mining)
+  * Mining - see [here](../guides/mining/Mining)
   * Buying - TRTL is currently available on these exchanges: [TradeOgre](https://tradeogre.com/exchange/BTC-TRTL) and [TradeSatoshi](https://tradesatoshi.com/Exchange/?market=TRTL_BTC)
   * Bounties - Bounties for developing TRTL software, spreading the word of TRTL, and many other things are often posted in the #bounties channel on [discord][Discord_Link]. Check the pinned messages for current bounties.
   * Tips - Turtles with often tip each other, especially if you make spicy memes in the `#memes` channel
-  * Rain - Good active Turtles get rained on, check out what the [RainBorg](RainBorg-Wat-Dat) is to see how to use it.
+  * Rain - Good active Turtles get rained on, check out what the [RainBorg](../RainBorg-Wat-Dat) is to see how to use it.
   * Faucet - Head over to the faucets-
     * [madk's faucet](https://faucet.trtl.me/) - 10 TRTL, thrice a day
     * [polar-it's faucet](https://turtlecoin-faucet.xhub.cloud/) - 25 TRTL, every 30 minutes  
@@ -387,11 +387,11 @@ A: Yes, you can view the guide [here](wallets/Making-a-paper-wallet)
 
 #### Q: What is RainBorg / how does it work?
 
-  A: There is an in depth, graphical explanation [here](RainBorg-Wat-Dat)
+  A: There is an in depth, graphical explanation [here](../RainBorg-Wat-Dat)
 
 #### Q: How do I register my wallet on Discord?
 
-  A: You can check out this guide [here](Using-trtlbot-plus-plus#registering-your-wallet).
+  A: You can check out this guide [here](../Using-trtlbot-plus-plus#registering-your-wallet).
 
 #### Q: Where is the blockchain stored?
 
