@@ -16,9 +16,8 @@ After your wallet address has been registered, type `.deposit` in the `#bots` ch
 
 * Check for a new direct message from trtlbot++
 * Copy the line of code he gives (excluding the `Integrated Address:`) and enter that as the address of the recipient  
-*No Payment ID!*
 
-**If you send a deposit with a seperate address and Payment ID, it will not be credited to your account!**
+**No Payment ID!**
 
 #### CLI Wallet
 
