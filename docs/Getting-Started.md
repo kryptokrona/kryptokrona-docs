@@ -22,7 +22,7 @@ Mining is essentially the process of using your computer to help verify and secu
 
 If you want to learn about cryptocurrencies, mining is a great place to start!
 
-To view an in-depth guide on how to mine TurtleCoin, you can view [this guide](guides/mining/Mining)
+To view an in-depth guide on how to mine TurtleCoin, you can view [this guide](../guides/mining/Mining)
 
 ## 3. Socialize!<a name="socialize"></a>
 

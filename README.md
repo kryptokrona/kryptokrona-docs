@@ -104,7 +104,7 @@ If:
 
 ### More Information on Contributing
 
-For more rules on contributing and the format with whih to do it, compare 2 files from the existing wiki to this repo, and see how they shape up. If you observe them closely enough, you'll be able to figure out how to go about formatting.
+For more rules on contributing and the format with which to do it, compare 2 files from the existing wiki to this repo, and see how they shape up. If you observe them closely enough, you'll be able to figure out how to go about formatting.
 
 ---
 
@@ -112,11 +112,11 @@ For more rules on contributing and the format with whih to do it, compare 2 file
 
 **existing wiki**
 
-https://raw.githubusercontent.com/turtlecoin/turtlecoin-docs/master/Bootstrapping-the-Blockchain.md
+https://raw.githubusercontent.com/turtlecoin/turtlecoin-docs/master/guides/Bootstrapping-the-Blockchain.md
 
 **this wiki**
 
-https://raw.githubusercontent.com/turtlecoin/sajodocs/master/docs/Bootstrapping-the-Blockchain.md
+https://raw.githubusercontent.com/turtlecoin/sajodocs/master/docs/guides/Bootstrapping-the-Blockchain.md
 
 ---
 
@@ -124,11 +124,14 @@ https://raw.githubusercontent.com/turtlecoin/sajodocs/master/docs/Bootstrapping-
 
 **existing wiki**
 
-https://raw.githubusercontent.com/turtlecoin/turtlecoin-docs/master/mining/XMR-Stak-Linux-Guide.md
+https://raw.githubusercontent.com/turtlecoin/turtlecoin-docs/master/guides/mining/XMR-Stak-Linux-Guide.md
 
 **this wiki**
 
-https://raw.githubusercontent.com/turtlecoin/sajodocs/master/docs/mining/XMR-Stak-Linux-Guide.md
+https://raw.githubusercontent.com/turtlecoin/sajodocs/master/docs/guides/mining/XMR-Stak-Linux-Guide.md
 
 ---
 
+### PR -> Build -> Merge -> Publish
+
+Whenever a PR is made, Netlify automatically builds it and serves a preview. In case the build doesn't pass(red X), then add a ninja commit to fix it.
