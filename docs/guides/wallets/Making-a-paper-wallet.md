@@ -4,7 +4,7 @@ The main purpose of a paper wallet is to quickly create a wallet to start receiv
 
 **You will not be able to spend or send your funds to other people until you set up a CLI, GUI or Web Wallet.**
 
-You can view a guide on how to make a wallet [here](Making-a-Wallet)
+You can view a guide on how to make a wallet [here](../Making-a-Wallet)
 
 There are two options for a paper wallet.
 
@@ -54,7 +54,7 @@ To use it, follow these steps:
 
 - After you're done mashing your keyboard, press `Generate Wallet`
 
-- The letters and numbers in the green box, starting with `TRTL`, is your public address. You can share it freely. We recommend [registering it with trtlbot++](../Using-trtlbot-plus-plus#registering-your-wallet) in the [Discord server](http://chat.turtlecoin.lol/) so that you can access it easily(you can also get tips!).
+- The letters and numbers in the green box, starting with `TRTL`, is your public address. You can share it freely. We recommend [registering it with trtlbot++](../../Using-trtlbot-plus-plus#registering-your-wallet) in the [Discord server](http://chat.turtlecoin.lol/) so that you can access it easily(you can also get tips!).
 
 - Save the `Seed Phrase`, the 25 words in the red box, safely.  
 **DO NOT SHARE IT WITH ANYONE**.  

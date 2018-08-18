@@ -32,7 +32,7 @@ See [here](https://github.com/fireice-uk/xmr-stak/blob/master/doc/compile) and [
 
 ## Downloading and Installing for Linux
 
-View [this guide](XMR-Stak-Linux-Guide) to get started with XMR-Stak on Linux.
+View [this guide](../XMR-Stak-Linux-Guide) to get started with XMR-Stak on Linux.
 
 
 
@@ -82,11 +82,11 @@ Upon first launching XMR-Stak, the software will ask you several setup and confi
 
 3.  `- Pool address: e.g. pool.example.com:3333`
 
-    Choose a pool from any of the [available pools](Pools) that is **closest to you** and enter its URL (you will be able to add more later).
+    Choose a pool from any of the [available pools](../Pools) that is **closest to you** and enter its URL (you will be able to add more later).
 
 4.  `- Username (Wallet address or pool login):`  
 
-    If you have not yet downloaded and ran the TurtleCoin core software to sync the blockchain and create a wallet, you can make a [paper wallet](../wallets/Making-a-paper-wallet) to start mining towards now, and import the wallet later.
+    If you have not yet downloaded and ran the TurtleCoin core software to sync the blockchain and create a wallet, you can make a [paper wallet](../../wallets/Making-a-paper-wallet) to start mining towards now, and import the wallet later.
 
 5.  `- Password (mostly empty or x):`  
 

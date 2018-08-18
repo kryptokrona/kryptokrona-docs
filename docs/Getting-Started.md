@@ -14,7 +14,7 @@ Below is essentially a checklist of tasks you have to do to get started with Tur
 
 There are multiple types of wallets you can use with TurtleCoin.
 
-To view a list of them, their interface and a brief description, as a well as guides on how to use them, you can check [this guide](guides/wallets/Making-a-Wallet).
+To view a list of them, their interface and a brief description, as a well as guides on how to use them, you can check [this guide](../guides/wallets/Making-a-Wallet).
 
 ## 2. Start Mining TurtleCoin<a name="mining"></a>
 
