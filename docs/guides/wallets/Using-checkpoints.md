@@ -1,4 +1,4 @@
-# Using Checkpoints to Sync Faster
+﻿# Using Checkpoints to Sync Faster
 
 **Note**: You can presently only use checkpoints with zedwallet; the command-line wallet.  
 
@@ -23,7 +23,7 @@
 ### Linux, Mac
 
 - First, open a command prompt in the same directory as TurtleCoind.
-- You can use the `cd` command to change to this directory. For example, `cd Downloads/turtlecoin-v0.5.0`
+- You can use the `cd` command to change to this directory. For example, `cd Downloads/turtlecoin-v0.7.0`
 - Alternatively, your file manager may provide the ability to open a terminal in your current directory. Navigate to the folder with TurtleCoind in, and try right clicking, to see if you can open a terminal there:
 
 ![Opening terminal](images/open-term.png)
@@ -96,7 +96,7 @@ operable program or batch file.
 - If you type `ls`(or `dir` on Windows), you should see the TurtleCoind program, if you are in the correct folder:
 
 ```
-[turtlecoin-v0.5.0]λ ls
+[turtlecoin-v0.7.0]λ ls
 miner  poolwallet  simplewallet  TurtleCoind  walletd
 ```
 

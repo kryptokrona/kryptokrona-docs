@@ -117,7 +117,7 @@ To back up your View Key and Spend Key, follow these steps-
 
   ![backup](images/nest-backup.png)
 
-* Copy(click on `Copy to clipboard` to do it quickly) and safely store the `Private View Key` and `Private Spend Key`. You can register the wallet address with [trtlbot++](../Using-trtlbot-plus-plus#registering-your-wallet).
+* Copy(click on `Copy to clipboard` to do it quickly) and safely store the `Private View Key` and `Private Spend Key`. You can register the wallet address with [trtlbot++](../../Using-trtlbot-plus-plus#registering-your-wallet).
 
 ### Viewing Wallet Balance
 

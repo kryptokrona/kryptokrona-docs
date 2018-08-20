@@ -43,11 +43,11 @@ Running `TurtleCoind` will start the *TurtleCoind* network daemon, which will co
 
 Because the blockchain is constantly growing, the file size is always increasing, and *TurtleCoind* must verify each block (CPU intensive).
 
-To save time, consider downloading a cached 'bootstrap' of the blockchain (see [Bootstrapping the Blockchain](../Bootstrapping-the-Blockchain) for more info).
+To save time, consider downloading a cached 'bootstrap' of the blockchain (see [Bootstrapping the Blockchain](../../Bootstrapping-the-Blockchain) for more info).
 
 #### Using Checkpoints
 
-In **versions 0.4.3+** you can sync a fresh chain from block 0 much quicker by using checkpoints. Follow [this guide](Using-checkpoints) to learn more
+In **versions 0.4.3+** you can sync a fresh chain from block 0 much quicker by using checkpoints. Follow [this guide](../Using-checkpoints) to learn more
 
 ### Windows
 
@@ -73,7 +73,7 @@ Run the `TurtleCoind` binary extracted from the Linux binary tarball:
 
 In case you don't want to download the blockchain and verify it everytime, you can instead use a Remote Node to quickly sync the blockchain.
 
-Check [here](Using-remote-nodes) for more info.
+Check [here](../Using-remote-nodes) for more info.
 
 ## Using zedwallet
 
