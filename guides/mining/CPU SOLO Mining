@@ -1,9 +1,0 @@
-# Windows 10
-Make sure you have the TurtleCoind and miner.exe, both can be found in [release 4.2](https://github.com/turtlecoin/turtlecoin/releases/tag/v0.4.2).
-Go to your wallet folder that has miner.exe in it and start a cmd prompt. When it opens add miner --address "your wallet address" --threads 6 --scan-time 1 --log-level 3
-Congradulations you are now solo mining TurtleCoin from your CPU.
-#Notes
-*TurtleCoind Must stay running for the miner to mine TurtleCoin
-*Be patient. Finding a block may happen within the first few hours of mining. It also may take a week.
-*If you accidently close out TurtleCoin you can restart the miner by hitting Cntrl+C + the miner command listed above.
-*You may have to adjust the amount of threads based on your PC's capabilities 
