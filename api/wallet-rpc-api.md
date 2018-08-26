@@ -1906,6 +1906,57 @@ Argument              | Description                         | Format
 --------------------- | ----------------------------------- | ------
 integratedAddress	  | The created integrated address		| string
 
+## getFeeInfo
+
+```shell
+curl -d '{"jsonrpc":"2.0","id":1,"password":"passw0rd","method":"feeinfo","params":{}}' http://localhost:8070/json_rpc
+```
+
+```javascript
+/* Needs to be added */
+```
+
+```php
+<?php
+use TurtleCoin\Walletd;
+
+$walletd = new Walletd\Client($config);
+$response = $walletd->feeinfo();
+
+echo $response->getBody()->getContents();
+```
+
+```python
+from turtlecoin import Walletd
+
+walletd = Walletd(rpc_password, rpc_host, rpc_port)
+response = walletd.feeinfo()
+print(response)
+```
+
+> Expected output:
+
+```json
+{
+  "id": 1,
+  "jsonrpc": "2.0",
+  "result": {
+    "address": "TRTLxxx...",
+    "amount": 5000
+  }
+}
+```
+
+`feeinfo()` method retrieves the fee and address (if any) that that TurtleCoind walletd is connecting to is using. This fee will automatically be added to any transactions sent by sendTransaction() or sendDelayedTransaction(). Note it does not apply to sendFusionTransaction().
+
+No input.
+
+**Output**
+
+Argument              | Description                         | Format
+--------------------- | ----------------------------------- | ------
+address               | The address of the node owner 		| string
+amount                | The fee that will be sent to the node owners address with each transaction | int
 
 ## License
 
