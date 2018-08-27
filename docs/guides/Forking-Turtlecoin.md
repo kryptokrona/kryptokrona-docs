@@ -580,6 +580,19 @@ Now, recompile your code, and set up your seed nodes.
 Once you start mining, the premine should appear in the wallet you previously created.
 Make sure you have your private keys to restore this wallet.
 
+## CryptoNoteCheckpoints.h
+
+A nice quick job, we need to remove all the checkpoints in `src/CryptoNoteCheckpoints.h`
+
+Checkpoints are used to verify that whilst syncing, you are on the right path, and not wasting your time
+syncing blocks from an incorrect daemon. It does this by matching a block hash to a block height.
+
+This is all grand, however if you are creating a new chain, you will of course have new hashes for your blocks!
+
+To fix it, just set `const std::initializer_list<CheckpointData> CHECKPOINTS = {};`
+
+It would be a good idea to add some checkpoints here for your new chain when you're up and running.
+
 ## WalletConfig.h
 
 Next up to modify is WalletConfig.h, located in `src/zedwallet/WalletConfig.h`
