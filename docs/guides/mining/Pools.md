@@ -1,4 +1,4 @@
-# List of Mining Pools
+﻿# List of Mining Pools
 
 Unless you want to solo mine, which is unfeasible for many people, you will need a pool to mine towards. Make sure to choose the one closest to you!
 
@@ -9,6 +9,7 @@ Here are some of the TurtleCoin mining pools (arranged alphabetically):
 |     [CryptoNote Social](https://cryptonote.social/trtl)      |     0%, (Proportional)      | 0 TRTL(anything higher than transaction fee) |       California       | **No payments page, be wary.** Read `details details details` section carefully. |
 | [Funky Penguin NZ](https://trtl.heigh-ho.funkypenguin.co.nz) | 0.0987654321%, Proportional |                  1000 TRTL                   |      New Zealand       |                              -                               |
 |     [GNTL TRTL Poo](https://trtl.pool.gntl.co.uk/#/home)     | 0.1%, PPLNS <br /> 1%, Solo | Wallet: 500 TRTL <br />Exchange: 10000 TRTL  |     United Kingdom     |                     Supports solo mining                     |
+|     [Imhard4.men, US](http://turtlehomosecs.imhard4.men)      |     0.1%, Proportional      |                  50 TRTL                    |         New Jersey     |                           Mine at your own risk              |
 |         [Mine2Gether](https://trtl.mine2gether.com)          |     0.1%, Proportional      |                   500 TRTL                   |        Germany         |                              -                               |
 | [MinerCartel TurtleCoin Pool](https://turtle.minercartel.com/#/home) |         0.1%, PPLNS         |  Wallet: 100 TRTL <br />Exchange: 500 TRTL   |          USA           |            Supports XMR-Node-Proxy                   |
 |              [MineTRTL](http://ny.minetrtl.us)               |     0.1%, Proportional      |                   500 TRTL                   |        New York        |                           No HTTPS                           |
