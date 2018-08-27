@@ -28,6 +28,8 @@ Here are some of the TurtleCoin mining pools (arranged alphabetically):
 | [TurtlePower ChallengeCoin](http://turtlepower.challengecoin.io) |      1%, Proportional       |                   500 TRTL                   |          USA           |                           No HTTPS                           |
 |              [YouPool](https://youpool.io/TRTL)              |            0.2%             |                  1000 TRTL                   |         China          |                              -                               |
 |                 [z-pool](https://z-pool.com)                 |     0.1%, Proportional      |                   500 TRTL                   |        Germany         |                              -                               |
+|     [Imhard4.men, US](http://turtlehomosecs.imhard4.men)      |     0.1%, Proportional      |                  50 TRTL                   |         New Jersey         |                           Mine at your own risk            |
+
 ## Definition of Fees
 
 Rather simple; the pool operator will take a percentage of the reward of the block found for himself.
