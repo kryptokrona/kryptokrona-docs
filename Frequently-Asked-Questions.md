@@ -196,7 +196,7 @@ A: This occurs because of the blockchain forking, generally when one mining pool
 2018-May-07 15:52:19.908530 ERROR   Corrupted blockchain. Block with index 428973 and hash aafa7fd33d476535188bdd9e86ba51bb5e058be8e52367b78e9c0c03e74299c5 has previous block hash 2c0cf6c07612b9e1ea19c6922a56746b83cb42c7b11edfc4b185572225bb0f20, but parent has hash 26189359b64d4bb357a04b102a42a01d2771a3f3d80db3ca1b7395a2aeaede4a. Resynchronize your daemon please.
 2018-May-07 15:52:19.924135 INFO    Closing DB.
 ```
-A: Re-sync your daemon from scratch(see below question), [bootstrap the blockchain](bootstrapping-the-blockchain.md) or sync [using checkpoints](Using-checkpoints)
+A: Re-sync your daemon from scratch(see below question), [bootstrap the blockchain](Bootstrapping-the-Blockchain) or sync [using checkpoints](Using-checkpoints)
 
 #### Q: How can I re-sync the blockchain?
 
@@ -290,7 +290,7 @@ Until you are fully synced, you won't be able to send transactions, and your bal
 #### Q: Can I speed up the syncing of the blockchain?
 
   A: You can grab a recent copy of the blockchain and incrementally sync from there. See [here](guides/Bootstrapping-the-Blockchain) for instructions.  
-  Or, you can sync [with checkpoints](guides/wallets/Using-checkpoints)(only with zedwallet).
+  Or, you can sync [with checkpoints](Using-checkpoints)(only with zedwallet).
 
 #### Q: Can I skip the syncing?
 
@@ -387,8 +387,8 @@ A: Yes, you can view the guide [here](Making-a-Paper-Wallet)
 
 * https://turtle.land
 * https://blocks.turtle.link
-* https://turtle-coin.com
-* https://explorer.trtlpwr.cc
+* ~~https://turtle-coin.com~~
+* ~~https://explorer.trtlpwr.cc~~
 
 #### Q: How do I make sure a pool isn't forked?
 
