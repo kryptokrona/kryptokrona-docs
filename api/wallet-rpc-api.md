@@ -1921,7 +1921,7 @@ curl -d '{"jsonrpc":"2.0","id":1,"password":"passw0rd","method":"feeinfo","param
 use TurtleCoin\Walletd;
 
 $walletd = new Walletd\Client($config);
-$response = $walletd->feeinfo();
+$response = $walletd->getFeeInfo();
 
 echo $response->getBody()->getContents();
 ```
