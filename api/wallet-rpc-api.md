@@ -135,6 +135,9 @@ print(response)
 Argument         | Mandatory   | Description      | Format
 ---------------- | ----------- | ---------------- | ------
 viewSecretKey    | No          | Private view key | string
+newAddress       | No          | Is this a new address being created? If so, blocks before the creation timestamp will not be scanned. Only one of newAddress and scanHeight can be specified, as if a new address is being created, there is no need to scan from a certain height. | bool
+scanHeight       | No          | The height to begin scanning for transactions at. This can greatly speed up wallet syncing time. | int
+
 
 
 No output in case of success.
@@ -142,7 +145,7 @@ No output in case of success.
 <aside class="notice">
   <div>If the <code>viewSecretKey</code> argument is not provided, the <code>reset()</code> method resets the wallet and 
   re-syncs it. If the <code>viewSecretKey</code> argument is provided, the <code>reset()</code> method substitutes the 
-  existing wallet with a new one with the specified key and creates an address for it.</div>
+  existing wallet with a new one with the specified key.</div>
 </aside>
 
 
@@ -600,6 +603,8 @@ Argument                 | Mandatory    | Description                           
 ------------------------ | ------------ | -------------------------------------------- | -------
 secretSpendKey           | No           | Private spend key. If `secretSpendKey` was specified, RPC Wallet creates spend address | string
 publicSpendKey           | No           | Public spend key. If `publicSpendKey` was specified, RPC Wallet creates view address   | string
+newAddress               | No           | Is this a new address being created? If so, blocks before the creation timestamp will not be scanned. Defaults to true if neither keys are given, as it is guaranteed to be a new address. | bool
+scanHeight               | No           | The height to begin scanning for transactions at. Only applies if a public/secret key is supplied. This can greatly speed up wallet syncing time. | int
 
 
 
