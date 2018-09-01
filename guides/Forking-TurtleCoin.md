@@ -5,6 +5,10 @@ So you want to fork TurtleCoin, huh?
 
 This guide will help you change the necessary sections of the code to set up your coin how you like it.
 
+One thing before we begin - This guide may not always be up to date. The code changes regularly, and sometimes we forget to update all the docs. Feel free to ask for help in our discord (in the #dev_learning channel) if you need clarification or assistance.
+
+Furthermore, this guide is usually updated when the development branch is updated. This branch is not neccessarily always stable, so caution should be taken. The master branch should be a good target to fork off, but that too might have bugs that have been fixed in development, as well as this guide not matching it exactly.
+
 Firstly, lets quickly talk about *licenses*.
 
 ## Licenses
@@ -313,7 +317,7 @@ Let's start at the top. We'll only focus on the constants which need changing, a
 This is how fast you want blocks to be. In TurtleCoin, we have blocks on average every 30 seconds.
 If you wanted blocks to be every 2 minutes, you would set this to be:
 
-- `const uint64_t DIFFICULTY_TARGET = 120; // seconds`  
+- `const uint64_t DIFFICULTY_TARGET = 120; // seconds`<br/><br/>
 
 
 
@@ -387,7 +391,7 @@ So, we would then pop this value in to give us:
 This section will cover all of these, since they are all related:
 
 ```
-const uint32_t ZAWY_DIFFICULTY_BLOCK_INDEX 	                 = 187000;
+const uint32_t ZAWY_DIFFICULTY_BLOCK_INDEX                   = 187000;
 const uint64_t LWMA_2_DIFFICULTY_BLOCK_INDEX                 = 620000;
 const uint64_t LWMA_2_DIFFICULTY_BLOCK_INDEX_V2              = 700000;
 const uint64_t LWMA_2_DIFFICULTY_BLOCK_INDEX_V3              = 800000;
@@ -457,35 +461,58 @@ This section will cover all of these, because they are all related:
 ```
 const uint64_t MINIMUM_MIXIN_V1                              = 0;
 const uint64_t MAXIMUM_MIXIN_V1                              = 100;
+
 const uint64_t MINIMUM_MIXIN_V2                              = 7;
 const uint64_t MAXIMUM_MIXIN_V2                              = 7;
 
+const uint64_t MINIMUM_MIXIN_V3                              = 3;
+const uint64_t MAXIMUM_MIXIN_V3                              = 3;
+
+/* The heights to activate the mixin limits at */
 const uint32_t MIXIN_LIMITS_V1_HEIGHT                        = 440000;
 const uint32_t MIXIN_LIMITS_V2_HEIGHT                        = 620000;
+const uint32_t MIXIN_LIMITS_V3_HEIGHT                        = 800000;
 
-const uint64_t DEFAULT_MIXIN = MINIMUM_MIXIN_V2;
+/* The mixin to use by default with zedwallet and turtle-service */
+/* DEFAULT_MIXIN_V0 is the mixin used before MIXIN_LIMITS_V1_HEIGHT is started */
+const uint64_t DEFAULT_MIXIN_V0                              = 3;
+const uint64_t DEFAULT_MIXIN_V1                              = MAXIMUM_MIXIN_V1;
+const uint64_t DEFAULT_MIXIN_V2                              = MAXIMUM_MIXIN_V2;
+const uint64_t DEFAULT_MIXIN_V3                              = MAXIMUM_MIXIN_V3;
 ```
 
 These values set the mixin limits allowed on the network, and what heights they are activated at. Mixin determines how private transactions are, however, due to the way a transaction must match inputs from previous transactions, a high mixin on a new network can cause transactions to fail. Thus, we would suggest starting off with some reasonably limits, still allowing 0 mixin, and increasing the minimum mixin later.
 
-`DEFAULT_MIXIN` is used to set the mixin value used in zedwallet, so set it to a sane value.
+Furthermore, note that sending transactions with high mixins currently causes stability issues with the daemon. It has to dig up old mixin key images from the database, and has some bugs causing daemons to often freeze, crash, or fork, when encountering very large transactions. For this reason, it is a good idea to ban mixin values that are quite large to ensure stability on your network.
+
+It is also a good idea to force a static mixin. If everyone uses the same mixin value, it is a lot harder to single a user out. However, if most people use a mixin of 3, and one person uses a mixin of 42, it is easy to determine which transactions belong to this user.
+
+The `DEFAULT_MIXIN` values determine what is the default mixin to be used by zedwallet, and by turtle-service (if no anonymity parameter is given). DEFAULT_MIXIN_V0 is the value used before the mixin limits are applied, which probably won't be applicable to your codebase, but we added it just incase. `DEFAULT_MIXIN_V1` is the value to use whilst the limits of `MINIMUM_MIXIN_V1` and `MAXIMIUM_MIXIN_V1` are in effect, and so on.
 
 Make sure your minimum is less than or equal to your maximum!
 
-The below code allows a mixin of 0 to 7, with a default of 3, from block 0 to block 100000.
-
-Upon reaching block 100000, the minimum mixin will be raised, to ban mixins below 3.
+The below code allows mixin values of 0 to 3 from block 0, to block 99999. Upon reaching block 100,000, the mixin must be a static 3. We have left MIXIN_LIMITS_V3 set at a height of 1,000,000, since you might want to change your mixin values later, and you can easily change the height of this upgrade, along with your desired mixin limits.
 
 ```
 const uint64_t MINIMUM_MIXIN_V1                              = 0;
-const uint64_t MAXIMUM_MIXIN_V1                              = 7;
-const uint64_t MINIMUM_MIXIN_V2                              = 3;
-const uint64_t MAXIMUM_MIXIN_V2                              = 7;
+const uint64_t MAXIMUM_MIXIN_V1                              = 3;
 
+const uint64_t MINIMUM_MIXIN_V2                              = 3;
+const uint64_t MAXIMUM_MIXIN_V2                              = 3;
+
+const uint64_t MINIMUM_MIXIN_V3                              = 7;
+const uint64_t MAXIMUM_MIXIN_V3                              = 7;
+
+/* The heights to activate the mixin limits at */
 const uint32_t MIXIN_LIMITS_V1_HEIGHT                        = 0;
 const uint32_t MIXIN_LIMITS_V2_HEIGHT                        = 100000;
+const uint32_t MIXIN_LIMITS_V3_HEIGHT                        = 1000000;
 
-const uint64_t DEFAULT_MIXIN = 3;
+/* The mixin to use by default with zedwallet and turtle-service */
+const uint64_t DEFAULT_MIXIN_V0                              = 3;
+const uint64_t DEFAULT_MIXIN_V1                              = MAXIMUM_MIXIN_V1;
+const uint64_t DEFAULT_MIXIN_V2                              = MAXIMUM_MIXIN_V2;
+const uint64_t DEFAULT_MIXIN_V3                              = MAXIMUM_MIXIN_V3;
 ```
 <br/><br/>
 
@@ -804,18 +831,6 @@ If you don't know how to generate a payment ID, here's a random one for you to u
 - `const long unsigned int integratedAddressLength = standardAddressLength + ((64 * 11) / 8);`<br/><br/>
 
 
-
-#### `const uint64_t defaultMixin = CryptoNote::parameters::DEFAULT_MIXIN;`<br/><br/>
-
-This sets the mixin value to be used with transactions.
-Make sure this is in the bounds you set earlier, with `MINIMUM_MIXIN_V1/V2` and `MAXIMUM_MIXIN_V1/V2`.
-
-
-- `const uint64_t defaultMixin = 7;`<br/><br/>
-
-
-
-
 #### `const uint64_t defaultFee = CryptoNote::parameters::MINIMUM_FEE`<br/><br/>
 
 If you want to set a higher default fee, perhaps to make transactions go through quicker, you can do that here.
@@ -845,8 +860,7 @@ If you set this to true, you can change the value of
 
 To determine what block height a mixin of zero gets disabled.
 In TurtleCoin's case, this was disabled at block 620k,
-but being a new network, you have the advantage of being able to disable a mixin of zero much earlier,
-or even from the launch of your network.
+but being a new network, you have the advantage of being able to disable a mixin of zero much earlier, or even from the launch of your network.
 
 Again, this is only a client-side limitation.
 Ensure you have set your mixin limits in `CryptoNoteConfig.h` so that the network will enforce the mixin limits. Any ideas you always want to happen, need to be done at the network level, else custom daemons/wallets etc. can be written to avoid those ideas/limits.
@@ -857,10 +871,7 @@ If you want to allow zero mixins, then `mixinZeroDisabledHeight` does nothing.
   const bool mixinZeroDisabled = true;
   const uint64_t mixinZeroDisabledHeight = 100000;
   ```
-  <br/><br/>
-  
-  
-  
+  <br/><br/>  
 
 
 
