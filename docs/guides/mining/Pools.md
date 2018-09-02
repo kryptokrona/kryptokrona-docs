@@ -26,6 +26,7 @@ Here are some of the TurtleCoin mining pools (arranged alphabetically):
 |     [TurtlePool Space, HK](https://hk.turtlepool.space)      |     0.1%, Proportional      |                  1000 TRTL                   |       Hong Kong        |                              -                               |
 |     [TurtlePool Space, US](https://us.turtlepool.space)      |     0.1%, Proportional      |                  1000 TRTL                   |         Dallas         |                              -                               |
 | [TurtlePower ChallengeCoin](http://turtlepower.challengecoin.io) |      1%, Proportional       |                   500 TRTL                   |          USA           |                           No HTTPS                           |
+| [Walle.me](http://trtl.waale.me) |      0.06180339887%, PPLNS       |                   100 TRTL                   |          HongKong           |                           Optimized for visiting from China, Chinese lanaguage support                           |
 |              [YouPool](https://youpool.io/TRTL)              |            0.2%             |                  1000 TRTL                   |         China          |                              -                               |
 
 
