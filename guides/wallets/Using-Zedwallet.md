@@ -74,7 +74,7 @@ Run the `zedwallet.exe` executable from the extracted folder.
 
 ### Using Zedwallet commands
 
-Zedwallet has a twin command system; a numerical shortcut for navigating the menu, and typed commands you can access directly.  The more you use Zedwallet the more typed commands you'll pick up.  This guide is written using the numerical system.  Just remember that both rules apply.
+Zedwallet has a twin command system; a numerical shortcut for navigating the menu, and typed commands you can access directly.  The more you use Zedwallet the more typed commands you'll pick up.  This guide is written using the written commnand system.  Feel free to use the numbers associated with the command.
 
 ### Creating a Wallet
 
