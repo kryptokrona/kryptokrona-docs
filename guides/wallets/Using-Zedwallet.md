@@ -2,7 +2,7 @@
 
 ## Screenshot
 
-Here's a quick image of Zedwallet in action:
+Here's a quick image of zedwallet in action:
 
 ![zedwallet](guides/wallets/images/screenshot_zedwallet.png)
 
@@ -78,7 +78,7 @@ Zedwallet has a twin command system; a numerical shortcut for navigating the men
 
 ### Creating a Wallet
 
-To create a wallet, type `2` and press `enter`:
+To create a wallet, type `create` and press `enter`:
 
 ```
 Welcome, please choose an option below:
@@ -90,7 +90,7 @@ Welcome, please choose an option below:
  5	view_wallet              Import a view only wallet
  6	exit                     Exit the program
 
-What would you like to do?: 2
+What would you like to do?: create
 What would you like to call your new wallet?: trtl
 Give your new wallet a password: **************
 Confirm your new password: **************
@@ -127,7 +127,7 @@ Use the status command to check the progress.
 
 ### Opening a Wallet
 
-To open an existing wallet; type `1` and press `enter`:
+To open an existing wallet; type `open` and press `enter`:
 
 ```
 
@@ -173,10 +173,10 @@ Finished scanning blockchain!
 
 ### Viewing Wallet Address
 
-To view a wallet's public address; at the menu, type `2` and press `enter`.
+To view a wallet's public address; at the menu, type `address` and press `enter`.
 
 ```
-[TRTL trtl]: 2
+[TRTL trtl]: address
 TRTLuxqfDys1pfQ1omkHMVViY4sFh6My5Ff3HBY8XPp3cJBkEfD7romVyzKug3mb9NNR4A8kEjZxZ9CHUgWckBSpPfbxnWAQUGL
 [TRTL trtl]:
 ```
@@ -190,11 +190,11 @@ In the event of a lost or corrupted wallet file, computer crash, etc., the *View
 
 **DO NOT SHARE IT WITH ANYONE**. **Anyone who has these can *access your funds* and has *complete control* over your wallet.**
 
-To print your keys; at the menu type `4` and press `enter`.
+To print your keys; at the menu type `backup` and press `enter`.
 The *View Key* and *Spend Key* will appear. Copy them and store them **safely and securely**.
 
 ```
-[TRTL trtl]: 4
+[TRTL trtl]: backup
 Enter password: **********
 Private spend key: 41c834f7c26e12373e5c39a9c9b1f8beb665324ad0d098cabda1234567b5d30f
 Private view key: df51e85dfa4fe48d0123475ec966124b1234c98abda6789060fe6d69b503490b
@@ -204,10 +204,10 @@ Mnemonic seed: truth neon vials ignore butterfly cactus soggy vibrate meant wiza
 
 ### Viewing Wallet Balance
 
-To view your wallet's balance; at the menu, type `3` and press `enter`:
+To view your wallet's balance; at the menu, type `balance` and press `enter`:
 
 ```
-[TRTL trtl]: 3
+[TRTL trtl]: balance
 Available balance: 1000.00 TRTL
 Locked (unconfirmed) balance: 100.00 TRTL
 Total balance: 1100.00 TRTL
@@ -218,7 +218,7 @@ Total balance: 1100.00 TRTL
 
 To send Turtlecoin; at the Zedwallet menu:
 
-- Type: `7` and press `enter`
+- Type: `transfer` and press `enter`
 
 - Type/paste the address you want to send the TRTL to and press `enter`
 
@@ -245,9 +245,9 @@ Example:
 
 Fusion transactions take all your (small) incoming payments and combine them into bigger ones, allowing you to send huge sums at once!
 
-To optimize your wallet, type `16` and press `enter`:
+To optimize your wallet, type `optimize` and press `enter`:
 ```
-[TRTL trtl]: 16
+[TRTL trtl]: optimize
 Attempting to optimize your wallet to allow you to send large amounts at once. 
 This may take a very long time!
 Do you want to proceed? (Y/n): y
@@ -278,10 +278,10 @@ Wallets loaded into the *zedwallet* client must be synced with the blockchain in
 
 It is important to properly save the wallet data before exiting *zedwallet* so that the synchronized data is not lost.
 
-To save a wallet's data and exit; at the menu, type `5` and press `enter`:
+To save a wallet's data and exit; at the menu, type `exit` and press `enter`:
 
 ```
-[TRTL trtl]: 5
+[TRTL trtl]: exit
 Shutting down...
 Saving wallet file...
 Shutting down wallet interface...
@@ -293,7 +293,7 @@ Bye.
 
 #### Private Spend and View Keys<a name="recover-spend-view-keys"></a>
 
-To restore a wallet using spend and view keys; at the menu type `4` and press `enter`:
+To restore a wallet using spend and view keys; at the menu type `seed_restore` and press `enter`:
 
 ```
  1	open                     Open a wallet already on your system
@@ -303,7 +303,7 @@ To restore a wallet using spend and view keys; at the menu type `4` and press `e
  5	view_wallet              Import a view only wallet
  6	exit                     Exit the program
 
-What would you like to do?: 4
+What would you like to do?: seed_restore
 Enter your private spend key: 41c834f7c26e12373e5c39a9c9b1f8beb665324ad0d098cabda1234567b5d30f
 Enter your private view key: df51e85dfa4fe48d0123475ec966124b1234c98abda6789060fe6d69b503490b
 What would you like to call your new wallet?: trtl2
@@ -347,7 +347,7 @@ Finished scanning blockchain!
 
 ### Other Commands
 
-To see a list of additional commands not already covered; at the menu press `1` and press `enter`:
+To see a list of additional commands not already covered; at the menu type `advanced` and press `enter`:
 
 ```
  1	advanced                 List available advanced commands
@@ -358,7 +358,7 @@ To see a list of additional commands not already covered; at the menu press `1` 
  6	help                     List this help message
  7	transfer                 Send TRTL to someone
 
-[TRTL trtl]: 1
+[TRTL trtl]: advanced
 
  8	ab_add                   Add a person to your address book
  9	ab_delete                Delete a person in your address book
