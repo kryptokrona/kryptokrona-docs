@@ -12,7 +12,7 @@ The main purpose of a paper wallet is to quickly create a wallet to start receiv
 
 To view a guide on how to make a paper wallet, you can go [here](Making-a-paper-wallet).
 
-## zedwallet (CLI Wallet)
+## Zedwallet (CLI Wallet)
 
 The CLI Wallet, called zedwallet, is a multi-platform program (Win/Linux/Mac) that requires you to enter commands for it to work and you cannot use your mouse. However, it is currently the most stable and gets the newest updates first.
 
@@ -31,14 +31,4 @@ If you would like to setup a GUI wallet, you can take a look at [this guide](Mak
 
 ## Web Wallet
 
-We have two web wallets under development:
-
-[Fexra's Web Wallet](https://beta.turtlewallet.io)
-[Discord Link](https://discord.gg/ukkSbV)
-
-and,
-
-[Canti's Web Wallet](https://vico-web-wallet.turtlecoin.ws/)
-[Discord Link](https://discord.gg/T39Fdr)
-
-Both of them are under heavy development, and will hopefully be ready soon.
+We have one web wallet [Shellnet](https://shellnet.pw) in operation, with [Fexra's Web Wallet](https://beta.turtlewallet.io/) and [Turtlestash](https://turtlestash.com) in development.
