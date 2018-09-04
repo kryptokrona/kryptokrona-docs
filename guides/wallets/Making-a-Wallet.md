@@ -31,14 +31,4 @@ If you would like to setup a GUI wallet, you can take a look at [this guide](Mak
 
 ## Web Wallet
 
-We have two web wallets under development:
-
-[Fexra's Web Wallet](https://beta.turtlewallet.io)
-[Discord Link](https://discord.gg/ukkSbV)
-
-and,
-
-[Canti's Web Wallet](https://vico-web-wallet.turtlecoin.ws/)
-[Discord Link](https://discord.gg/T39Fdr)
-
-Both of them are under heavy development, and will hopefully be ready soon.
+We have one web wallet; [Shellnet](https://shellnet.pw) in active use, and another; [Turtlestash](https://turtlestash.com) is currently in development.
