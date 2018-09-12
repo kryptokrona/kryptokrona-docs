@@ -88,9 +88,11 @@ If no binaries are available, or you prefer to compile, follow these instruction
 
 9. XMR-Stak will now be located in `/home/user/xmr-stak/build/bin`
 
-10. In the terminal, type- (install if not installed)-
+10. In the terminal, type-
 
     `ccmake ..`
+    
+    (install if not installed, `sudo apt install cmake-curses-gui`)
 
 11. Using the Up and Down arrows, scroll to the 2nd page. Then, on `XMR-STAK_CURRENCY`, press enter to change it to `turtlecoin` (if needed, you can make personal tweaks by reading the descriptions of each value).
 
