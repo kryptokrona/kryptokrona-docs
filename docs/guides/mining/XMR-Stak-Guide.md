@@ -26,7 +26,7 @@ XMR-Stak is a unified miner, which means the same program will be used to mine w
 
 ## Downloading and Installing for Mac
 
-See [here](https://github.com/fireice-uk/xmr-stak/blob/master/doc/compile) and [here](https://github.com/fireice-uk/xmr-stak/blob/master/doc/compile_macOS).
+See [here](https://github.com/fireice-uk/xmr-stak/blob/master/doc/compile.md) and [here](https://github.com/fireice-uk/xmr-stak/blob/master/doc/compile_macOS.md).
 
 
 
