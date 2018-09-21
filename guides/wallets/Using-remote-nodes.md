@@ -63,3 +63,4 @@ pause
 | eu.turtle-node.com | 11898 | https://turtle-node.com/ |
 | public.turtlenode.uk | 11898 | - |
 | turtle-node.me | 11898 | - |
+| 79.122.99.180 | 11898 | - |
