@@ -247,19 +247,9 @@ Until you are fully synced, you won't be able to send transactions, and your bal
     A: Re-sync your daemon from scratch(see [here](#q-how-can-i-re-sync-the-blockchain)), [bootstrap the blockchain](Bootstrapping-the-Blockchain/) or sync [using checkpoints](Using-checkpoints).  
     If it still doesn't work, then [update](latest.turtlecoin.lol) your wallet!
 
-#### Q: I've tried resetting, but it isn't working. What should I do?
-
-  A:
-
-* In zedwallet, type `export_keys`, and save the view and spend key somewhere safe in case something goes wrong, if you haven't already.
-
-*  Then, close and reopen zedwallet and TurtleCoind.
-*  Type `reset` in zedwallet after reopening your wallet file.
-*  It should start resetting your wallet, but the progress might not be immediately obvious - wait a while, and it should start counting up the blocks and printing out your transactions as it gets to them.
-
 #### Q: How do I backup my wallet?
 
-  A: Open zedwallet and type `export_keys`.  
+  A: Open zedwallet and type `backup`.  
   Save the view and spend key somewhere safe, and you can use them to reimport your wallet if you lose it.
 
 #### Q: How do I send TRTL?
