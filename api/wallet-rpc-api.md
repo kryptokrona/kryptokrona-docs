@@ -4,7 +4,7 @@ TurtleCoin RPC Wallet is a HTTP server which provides JSON 2.0 RPC interface for
 
 Currently we support the following official client bindings:
 
-* [JavaScript](https://github.com/turtlecoin/turtlecoin-walletd-rpc-js)
+* [JavaScript](https://www.npmjs.com/package/turtlecoin-rpc)
 * [PHP](https://github.com/turtlecoin/turtlecoin-walletd-rpc-php)
 * [Python](https://github.com/turtlecoin/turtlecoin-rpc-python)
 * [Go](https://github.com/turtlecoin/turtlecoin-rpc-go)
@@ -31,7 +31,7 @@ http://localhost:8070/json_rpc
 
 > Configuration and instantiation
 
-```JavaScript
+```javascript
 const TurtleService = require('turtlecoin-rpc').TurtleService
 
 const service = new TurtleService({
@@ -93,16 +93,6 @@ curl -d '{"jsonrpc":"2.0","id":1,"password":"passw0rd","method":"reset","params"
 ```
 
 ```javascript
-const TurtleService = require('turtlecoin-rpc').TurtleService
-
-const service = new TurtleService({
-  host: '127.0.0.1', // ip address or hostname of the turtle-service host
-  port: 8070, // what port is turtle-service running on
-  timeout: 2000, // request timeout
-  ssl: false, // whether we need to connect using SSL/TLS
-  rpcPassword: 'changeme', // must be set to the password used to run turtle-service
-})
-
 service.reset({
   viewSecretKey: '12345678901234567890'
 }).then(() => {
@@ -113,19 +103,12 @@ service.reset({
 ```
 
 ```php
-<?php
-use TurtleCoin\Walletd;
-
-$walletd = new Walletd\Client($config);
 $viewSecretKey = 'xxxxx...';
 $response = $walletd->reset($viewSecretKey);
 echo $response->getBody()->getContents();
 ```
 
 ```python
-from turtlecoin import Walletd
-
-walletd = Walletd(rpc_password, rpc_host, rpc_port)
 view_secret_key = 'xxxxx...'
 response = walletd.reset(view_secret_key)
 print(response)
@@ -170,16 +153,6 @@ curl -d '{"jsonrpc":"2.0","id":1,"password":"passw0rd","method":"save","params":
 ```
 
 ```javascript
-const TurtleService = require('turtlecoin-rpc').TurtleService
-
-const service = new TurtleService({
-  host: '127.0.0.1', // ip address or hostname of the turtle-service host
-  port: 8070, // what port is turtle-service running on
-  timeout: 2000, // request timeout
-  ssl: false, // whether we need to connect using SSL/TLS
-  rpcPassword: 'changeme', // must be set to the password used to run turtle-service
-})
-
 service.save().then(() => {
   // do something
 }).catch((error) => {
@@ -188,18 +161,11 @@ service.save().then(() => {
 ```
 
 ```php
-<?php
-use TurtleCoin\Walletd;
-
-$walletd = new Walletd\Client($config);
 $response = $walletd->save();
 echo $response->getBody()->getContents();
 ```
 
 ```python
-from turtlecoin import Walletd
-
-walletd = Walletd(rpc_password, rpc_host, rpc_port)
 response = walletd.save()
 print(response)
 ```
@@ -228,16 +194,6 @@ curl -d '{"jsonrpc":"2.0","id":1,"password":"passw0rd","method":"getViewKey","pa
 ```
 
 ```javascript
-const TurtleService = require('turtlecoin-rpc').TurtleService
-
-const service = new TurtleService({
-  host: '127.0.0.1', // ip address or hostname of the turtle-service host
-  port: 8070, // what port is turtle-service running on
-  timeout: 2000, // request timeout
-  ssl: false, // whether we need to connect using SSL/TLS
-  rpcPassword: 'changeme', // must be set to the password used to run turtle-service
-})
-
 service.getViewKey().then((result) => {
   // do something
 }).catch((error) => {
@@ -246,18 +202,11 @@ service.getViewKey().then((result) => {
 ```
 
 ```php
-<?php
-use TurtleCoin\Walletd;
-
-$walletd = new Walletd\Client($config);
 $response = $walletd->getViewKey();
 echo $response->getBody()->getContents();
 ```
 
 ```python
-from turtlecoin import Walletd
-
-walletd = Walletd(rpc_password, rpc_host, rpc_port)
 response = walletd.get_view_key()
 print(response)
 ```
@@ -293,16 +242,6 @@ curl -d '{"jsonrpc":"2.0","id":1,"password":"passw0rd","method":"getSpendKeys","
 ```
 
 ```javascript
-const TurtleService = require('turtlecoin-rpc').TurtleService
-
-const service = new TurtleService({
-  host: '127.0.0.1', // ip address or hostname of the turtle-service host
-  port: 8070, // what port is turtle-service running on
-  timeout: 2000, // request timeout
-  ssl: false, // whether we need to connect using SSL/TLS
-  rpcPassword: 'changeme', // must be set to the password used to run turtle-service
-})
-
 service.getSpendKeys({
   address: 'TRTLv1pacKFJk9QgSmzk2LJWn14JGmTKzReFLz1RgY3K9Ryn7783RDT2TretzfYdck5GMCGzXTuwKfePWQYViNs4avKpnUbrwfQ'
 }).then((result) => {
@@ -313,19 +252,12 @@ service.getSpendKeys({
 ```
 
 ```php
-<?php
-use TurtleCoin\Walletd;
-
-$walletd = new Walletd\Client($config);
 $address = 'TRTLxxxx...';
 $response = $walletd->getSpendKeys($address);
 echo $response->getBody()->getContents();
 ```
 
 ```python
-from turtlecoin import Walletd
-
-walletd = Walletd(rpc_password, rpc_host, rpc_port)
 address = 'TRTLxxxx...'
 response = walletd.get_spend_keys(address)
 print(response)
@@ -368,16 +300,6 @@ curl -d '{"jsonrpc":"2.0","id":1,"password":"passw0rd","method":"getMnemonicSeed
 ```
 
 ```javascript
-const TurtleService = require('turtlecoin-rpc').TurtleService
-
-const service = new TurtleService({
-  host: '127.0.0.1', // ip address or hostname of the turtle-service host
-  port: 8070, // what port is turtle-service running on
-  timeout: 2000, // request timeout
-  ssl: false, // whether we need to connect using SSL/TLS
-  rpcPassword: 'changeme', // must be set to the password used to run turtle-service
-})
-
 service.getMnemonicSeed({
   address: 'TRTLv1pacKFJk9QgSmzk2LJWn14JGmTKzReFLz1RgY3K9Ryn7783RDT2TretzfYdck5GMCGzXTuwKfePWQYViNs4avKpnUbrwfQ'
 }).then((result) => {
@@ -388,19 +310,12 @@ service.getMnemonicSeed({
 ```
 
 ```php
-<?php
-use TurtleCoin\Walletd;
-
-$walletd = new Walletd\Client($config);
 $address = 'TRTLxxxx...';
 $response = $walletd->getMnemonicSeed($address);
 echo $response->getBody()->getContents();
 ```
 
 ```python
-from turtlecoin import Walletd
-
-walletd = Walletd(rpc_password, rpc_host, rpc_port)
 address = 'TRTLxxxx...'
 response = walletd.get_mnemonic_seed(address)
 print(response)
@@ -445,16 +360,6 @@ curl -d '{"jsonrpc":"2.0","id":1,"password":"passw0rd","method":"getStatus","par
 ```
 
 ```javascript
-const TurtleService = require('turtlecoin-rpc').TurtleService
-
-const service = new TurtleService({
-  host: '127.0.0.1', // ip address or hostname of the turtle-service host
-  port: 8070, // what port is turtle-service running on
-  timeout: 2000, // request timeout
-  ssl: false, // whether we need to connect using SSL/TLS
-  rpcPassword: 'changeme', // must be set to the password used to run turtle-service
-})
-
 service.getStatus().then((result) => {
   // do something
 }).catch((error) => {
@@ -463,18 +368,11 @@ service.getStatus().then((result) => {
 ```
 
 ```php
-<?php
-use TurtleCoin\Walletd;
-
-$walletd = new Walletd\Client($config);
 $response = $walletd->getStatus();
 echo $response->getBody()->getContents();
 ```
 
 ```python
-from turtlecoin import Walletd
-
-walletd = Walletd(rpc_password, rpc_host, rpc_port)
 response = walletd.get_status()
 print(response)
 ```
@@ -516,16 +414,6 @@ curl -d '{"jsonrpc":"2.0","id":1,"password":"passw0rd","method":"getAddresses","
 ```
 
 ```javascript
-const TurtleService = require('turtlecoin-rpc').TurtleService
-
-const service = new TurtleService({
-  host: '127.0.0.1', // ip address or hostname of the turtle-service host
-  port: 8070, // what port is turtle-service running on
-  timeout: 2000, // request timeout
-  ssl: false, // whether we need to connect using SSL/TLS
-  rpcPassword: 'changeme', // must be set to the password used to run turtle-service
-})
-
 service.getAddresses().then((result) => {
   // do something
 }).catch((error) => {
@@ -534,18 +422,11 @@ service.getAddresses().then((result) => {
 ```
 
 ```php
-<?php
-use TurtleCoin\Walletd;
-
-$walletd = new Walletd\Client($config);
 $response = $walletd->getAddresses();
 echo $response->getBody()->getContents();
 ```
 
 ```python
-from turtlecoin import Walletd
-
-walletd = Walletd(rpc_password, rpc_host, rpc_port)
 response = walletd.get_addresses()
 print(response)
 ```
@@ -584,17 +465,6 @@ curl -d '{"jsonrpc":"2.0","id":1,"password":"passw0rd","method":"createAddress",
 ```
 
 ```javascript
-const TurtleService = require('turtlecoin-rpc').TurtleService
-
-const service = new TurtleService({
-  host: '127.0.0.1', // ip address or hostname of the turtle-service host
-  port: 8070, // what port is turtle-service running on
-  timeout: 2000, // request timeout
-  ssl: false, // whether we need to connect using SSL/TLS
-  rpcPassword: 'changeme', // must be set to the password used to run turtle-service
-})
-
-// Public and Secret key optional
 service.createAddress({
   secretSpendKey: '',
   publicSpendKey: ''
@@ -606,11 +476,6 @@ service.createAddress({
 ```
 
 ```php
-<?php
-use TurtleCoin\Walletd;
-
-$walletd = new Walletd\Client($config);
-
 $secretSpendKey = null;
 $publicSpendKey = null;
 $response = $walletd->createAddress($secretSpendKey, $publicSpendKey);
@@ -618,10 +483,6 @@ echo $response->getBody()->getContents();
 ```
 
 ```python
-from turtlecoin import Walletd
-
-walletd = Walletd(rpc_password, rpc_host, rpc_port)
-
 spend_secret_key = ''
 spend_public_key = ''
 response = walletd.create_address(spend_secret_key, spend_public_key)
@@ -660,17 +521,6 @@ curl -d '{"jsonrpc":"2.0","id":1,"password":"passw0rd","method":"deleteAddress",
 ```
 
 ```javascript
-const TurtleService = require('turtlecoin-rpc').TurtleService
-
-const service = new TurtleService({
-  host: '127.0.0.1', // ip address or hostname of the turtle-service host
-  port: 8070, // what port is turtle-service running on
-  timeout: 2000, // request timeout
-  ssl: false, // whether we need to connect using SSL/TLS
-  rpcPassword: 'changeme', // must be set to the password used to run turtle-service
-})
-
-// Address optional
 service.deleteAddress({
   address: 'TRTLv1pacKFJk9QgSmzk2LJWn14JGmTKzReFLz1RgY3K9Ryn7783RDT2TretzfYdck5GMCGzXTuwKfePWQYViNs4avKpnUbrwfQ'
 }).then((result) => {
@@ -679,19 +529,12 @@ service.deleteAddress({
 ```
 
 ```php
-<?php
-use TurtleCoin\Walletd;
-
-$walletd = new Walletd\Client($config);
 $address = 'TRTLxxxx...';
 $response = $walletd->deleteAddress($address);
 echo $response->getBody()->getContents();
 ```
 
 ```python
-from turtlecoin import Walletd
-
-walletd = Walletd(rpc_password, rpc_host, rpc_port)
 address = 'TRTLxxxx...'
 response = walletd.delete_address(address)
 
@@ -730,16 +573,6 @@ curl -d '{"jsonrpc":"2.0","id":1,"password":"passw0rd","method":"getBalance","pa
 ```
 
 ```javascript
-const TurtleService = require('turtlecoin-rpc').TurtleService
-
-const service = new TurtleService({
-  host: '127.0.0.1', // ip address or hostname of the turtle-service host
-  port: 8070, // what port is turtle-service running on
-  timeout: 2000, // request timeout
-  ssl: false, // whether we need to connect using SSL/TLS
-  rpcPassword: 'changeme', // must be set to the password used to run turtle-service
-})
-
 // Address optional
 service.getBalance({
   address: 'TRTLv1pacKFJk9QgSmzk2LJWn14JGmTKzReFLz1RgY3K9Ryn7783RDT2TretzfYdck5GMCGzXTuwKfePWQYViNs4avKpnUbrwfQ'
@@ -749,19 +582,12 @@ service.getBalance({
 ```
 
 ```php
-<?php
-use TurtleCoin\Walletd;
-
-$walletd = new Walletd\Client($config);
 $address = 'TRTLxxxx...';
 $response = $walletd->getBalance($address);
 echo $response->getBody()->getContents();
 ```
 
 ```python
-from turtlecoin import Walletd
-
-walletd = Walletd(rpc_password, rpc_host, rpc_port)
 address = 'TRTLxxxx...'
 response = walletd.get_balance(address)
 print(response)
@@ -809,17 +635,6 @@ curl -d '{"jsonrpc":"2.0","id":1,"password":"passw0rd","method":"getBlockHashes"
 ```
 
 ```javascript
-const TurtleService = require('turtlecoin-rpc').TurtleService
-
-const service = new TurtleService({
-  host: '127.0.0.1', // ip address or hostname of the turtle-service host
-  port: 8070, // what port is turtle-service running on
-  timeout: 2000, // request timeout
-  ssl: false, // whether we need to connect using SSL/TLS
-  rpcPassword: 'changeme', // must be set to the password used to run turtle-service
-})
-
-//firstBlockIndex and blockCount mandatory
 service.getBlockHashes({
   firstBlockIndex: 500000,
   blockCount: 10
@@ -829,10 +644,6 @@ service.getBlockHashes({
 ```
 
 ```php
-<?php
-use TurtleCoin\Walletd;
-
-$walletd = new Walletd\Client($config);
 $firstBlockIndex = 0;
 $blockCount = 3;
 $response = $walletd->getBlockHashes($firstBlockIndex, $blockCount);
@@ -840,9 +651,6 @@ echo $response->getBody()->getContents();
 ```
 
 ```python
-from turtlecoin import Walletd
-
-walletd = Walletd(rpc_password, rpc_host, rpc_port)
 first_block_index = 0
 block_count = 3
 response = walletd.get_block_hashes(first_block_index, block_count)
@@ -889,17 +697,6 @@ curl -d '{"jsonrpc":"2.0","id":1,"password":"passw0rd","method":"getTransactionH
 ```
 
 ```javascript
-const TurtleService = require('turtlecoin-rpc').TurtleService
-
-const service = new TurtleService({
-  host: '127.0.0.1', // ip address or hostname of the turtle-service host
-  port: 8070, // what port is turtle-service running on
-  timeout: 2000, // request timeout
-  ssl: false, // whether we need to connect using SSL/TLS
-  rpcPassword: 'changeme', // must be set to the password used to run turtle-service
-})
-
-// Only blockCount is mandatory
 service.getTransactionHashes({
   addresses: [
     "TRTLux9QBmzCYEGgdWXHEQCAm6vY9vZHkbGmx8ev5LxhYk8N71Pp7PWFYL9CHxpWph2wCPZcJ6tkPfUxVZcUN8xmYsSDJZ25i9n",
@@ -913,10 +710,6 @@ service.getTransactionHashes({
 ```
 
 ```php
-<?php
-use TurtleCoin\Walletd;
-
-$walletd = new Walletd\Client($config);
 $blockCount = 100000;
 $firstBlockIndex = 400000;
 $blockHash = null;
@@ -931,9 +724,6 @@ echo $response->getBody()->getContents();
 ```
 
 ```python
-from turtlecoin import Walletd
-
-walletd = Walletd(rpc_password, rpc_host, rpc_port)
 block_count = 100000
 block_hash = '6c285...'
 addresses = []
@@ -999,17 +789,6 @@ curl -d '{"jsonrpc":"2.0","id":1,"password":"passw0rd","method":"getTransactions
 ```
 
 ```javascript
-const TurtleService = require('turtlecoin-rpc').TurtleService
-
-const service = new TurtleService({
-  host: '127.0.0.1', // ip address or hostname of the turtle-service host
-  port: 8070, // what port is turtle-service running on
-  timeout: 2000, // request timeout
-  ssl: false, // whether we need to connect using SSL/TLS
-  rpcPassword: 'changeme', // must be set to the password used to run turtle-service
-})
-
-// Only one of either blockHash or firstBlockIndex may be supplied, but not both.
 service.getTransactions({
   addresses: [
     "TRTLux9QBmzCYEGgdWXHEQCAm6vY9vZHkbGmx8ev5LxhYk8N71Pp7PWFYL9CHxpWph2wCPZcJ6tkPfUxVZcUN8xmYsSDJZ25i9n",
@@ -1023,10 +802,6 @@ service.getTransactions({
 ```
 
 ```php
-<?php
-use TurtleCoin\Walletd;
-
-$walletd = new Walletd\Client($config);
 $blockCount = 100000;
 $firstBlockIndex = 400000;
 $blockHash = null;
@@ -1041,9 +816,6 @@ echo $response->getBody()->getContents();
 ```
 
 ```python
-from turtlecoin import Walletd
-
-walletd = Walletd(rpc_password, rpc_host, rpc_port)
 block_count = 100000
 block_hash = '6c285...'
 addresses = []
@@ -1159,17 +931,6 @@ curl -d '{"jsonrpc":"2.0","id":1,"password":"passw0rd","method":"getUnconfirmedT
 ```
 
 ```javascript
-const TurtleService = require('turtlecoin-rpc').TurtleService
-
-const service = new TurtleService({
-  host: '127.0.0.1', // ip address or hostname of the turtle-service host
-  port: 8070, // what port is turtle-service running on
-  timeout: 2000, // request timeout
-  ssl: false, // whether we need to connect using SSL/TLS
-  rpcPassword: 'changeme', // must be set to the password used to run turtle-service
-})
-
-// addresses not mandatory
 service.getUnconfirmedTransactionHashes({
   address: 'TRTLv1pacKFJk9QgSmzk2LJWn14JGmTKzReFLz1RgY3K9Ryn7783RDT2TretzfYdck5GMCGzXTuwKfePWQYViNs4avKpnUbrwfQ'
 }).then((result) => {
@@ -1178,19 +939,12 @@ service.getUnconfirmedTransactionHashes({
 ```
 
 ```php
-<?php
-use TurtleCoin\Walletd;
-
-$walletd = new Walletd\Client($config);
 $addresses = null;
 $response = $walletd->getUnconfirmedTransactionHashes($addresses);
 echo $response->getBody()->getContents();
 ```
 
 ```python
-from turtlecoin import Walletd
-
-walletd = Walletd(rpc_password, rpc_host, rpc_port)
 addresses = []
 response = walletd.get_unconfirmed_transaction_hashes(addresses)
 print(response)
@@ -1239,17 +993,6 @@ curl -d '{"jsonrpc":"2.0","id":1,"password":"passw0rd","method":"getTransaction"
 ```
 
 ```javascript
-const TurtleService = require('turtlecoin-rpc').TurtleService
-
-const service = new TurtleService({
-  host: '127.0.0.1', // ip address or hostname of the turtle-service host
-  port: 8070, // what port is turtle-service running on
-  timeout: 2000, // request timeout
-  ssl: false, // whether we need to connect using SSL/TLS
-  rpcPassword: 'changeme', // must be set to the password used to run turtle-service
-})
-
-// transactionHash mandatory
 service.getTransaction({
   transactionHash: 'd01e448f7b631cebd989e3a150258b0da59c66f96adecec392bbf61814310751'
 }).then((result) => {
@@ -1258,19 +1001,12 @@ service.getTransaction({
 ```
 
 ```php
-<?php
-use TurtleCoin\Walletd;
-
-$walletd = new Walletd\Client($config);
 $transactionHash = '55a23...';
 $response = $walletd->getTransaction($transactionHash);
 echo $response->getBody()->getContents();
 ```
 
 ```python
-from turtlecoin import Walletd
-
-walletd = Walletd(rpc_password, rpc_host, rpc_port)
 transaction_hash = '55a23...'
 response = walletd.get_transaction(transaction_hash)
 print(response)
@@ -1340,20 +1076,10 @@ transfers           | Array of addresses (string), amount (int)                 
 ## sendTransaction
 
 ```shell
-curl -d '{"jsonrpc":"2.0","id":1,"password":"passw0rd","method":"sendTransaction","params":{"transfers":[{"address":"TRTLxxxx...","amount":5000}],"fee":10,"anonymity":7,"changeAddress":"TRTLyyyy..."}}' http://localhost:8070/json_rpc
+curl -d '{"jsonrpc":"2.0","id":1,"password":"passw0rd","method":"sendTransaction","params":{"transfers":[{"address":"TRTLxxxx...","amount":5000}],"fee":10,"anonymity":3,"changeAddress":"TRTLyyyy..."}}' http://localhost:8070/json_rpc
 ```
 
 ```javascript
-const TurtleService = require('turtlecoin-rpc').TurtleService
-
-const service = new TurtleService({
-  host: '127.0.0.1', // ip address or hostname of the turtle-service host
-  port: 8070, // what port is turtle-service running on
-  timeout: 2000, // request timeout
-  ssl: false, // whether we need to connect using SSL/TLS
-  rpcPassword: 'changeme', // must be set to the password used to run turtle-service
-})
-
 service.sendTransaction({
   transfers: [
     service.newTransfer('TRTLv1pacKFJk9QgSmzk2LJWn14JGmTKzReFLz1RgY3K9Ryn7783RDT2TretzfYdck5GMCGzXTuwKfePWQYViNs4avKpnUbrwfQ', 1000000)
@@ -1365,11 +1091,7 @@ service.sendTransaction({
 ```
 
 ```php
-<?php
-use TurtleCoin\Walletd;
-
-$walletd = new Walletd\Client($config);
-$anonymity = 7;
+$anonymity = 3;
 $fee = 10;
 $addresses = null;
 $unlockTime = null;
@@ -1389,10 +1111,7 @@ echo $response->getBody()->getContents();
 ```
 
 ```python
-from turtlecoin import Walletd
-
-walletd = Walletd(rpc_password, rpc_host, rpc_port)
-anonymity = 7
+anonymity = 3
 fee = 10
 addresses = []
 unlock_time = 0
@@ -1432,7 +1151,7 @@ addresses       | No            | Array of strings, where each string is an addr
 transfers       | Yes           | Array of objects, address: (string address), amount: (int amount)                        | array
 fee             | Yes           | Transaction fee. Minimal fee in TurtleCoin network is 0.10 TRTL. As with other amounts use whole units, 1 TRTL = 100 units, so 0.1 TRTL = 10 units | int
 unlockTime      | No            | The block height at which the transaction will be unlocked for spending.                 | int
-anonymity       | Yes           | Privacy (mixin) level from block 620,000 needs to be seven (7), this will be removed / ignored in a future version | int
+anonymity       | Yes           | Privacy (mixin) level from block 800,000 three (3) | int
 extra           | No            | String of variable length. Can contain A-Z, 0-9 characters.                              | string
 paymentId       | No            | Payment ID                                                                               | string
 changeAddress   | No            | Valid and existing address in this container.                                            | string
@@ -1452,20 +1171,10 @@ transactionHash	      | Hash of the sent transaction		| string
 ## createDelayedTransaction
 
 ```shell
-curl -d '{"jsonrpc":"2.0","id":1,"password":"passw0rd","method":"createDelayedTransaction","params":{"transfers":[{"address":"TRTLxxxx...","amount":5000}],"fee":10,"anonymity":7,"changeAddress":"TRTLyyyy..."}}' http://localhost:8070/json_rpc
+curl -d '{"jsonrpc":"2.0","id":1,"password":"passw0rd","method":"createDelayedTransaction","params":{"transfers":[{"address":"TRTLxxxx...","amount":5000}],"fee":10,"anonymity":3,"changeAddress":"TRTLyyyy..."}}' http://localhost:8070/json_rpc
 ```
 
 ```javascript
-const TurtleService = require('turtlecoin-rpc').TurtleService
-
-const service = new TurtleService({
-  host: '127.0.0.1', // ip address or hostname of the turtle-service host
-  port: 8070, // what port is turtle-service running on
-  timeout: 2000, // request timeout
-  ssl: false, // whether we need to connect using SSL/TLS
-  rpcPassword: 'changeme', // must be set to the password used to run turtle-service
-})
-
 service.createDelayedTransaction({
   transfers: [
     service.newTransfer('TRTLv1pacKFJk9QgSmzk2LJWn14JGmTKzReFLz1RgY3K9Ryn7783RDT2TretzfYdck5GMCGzXTuwKfePWQYViNs4avKpnUbrwfQ', 1000000)
@@ -1477,11 +1186,7 @@ service.createDelayedTransaction({
 ```
 
 ```php
-<?php
-use TurtleCoin\Walletd;
-
-$walletd = new Walletd\Client($config);
-$anonymity = 7;
+$anonymity = 3;
 $fee = 10;
 $addresses = null;
 $unlockTime = null;
@@ -1501,10 +1206,7 @@ echo $response->getBody()->getContents();
 ```
 
 ```python
-from turtlecoin import Walletd
-
-walletd = Walletd(rpc_password, rpc_host, rpc_port)
-anonymity = 7
+anonymity = 3
 fee = 10
 addresses = []
 unlock_time = 0
@@ -1544,7 +1246,7 @@ addresses       | No            | Array of strings, where each string is an addr
 transfers       | Yes           | Array of address (string), amount (int)                                                  | array
 fee             | Yes           | Transaction fee. Minimal fee in TurtleCoin network is 0.10 TRTL. This parameter should be specified in minimal available TRTL units. For example, if your fee is 0.10 TRTL, you should pass it as 10. | int
 unlockTime      | No	        | Height of the block until which transaction is going to be locked for spending.	       | int
-anonymity       | Yes           | Privacy (mixin) level from block 620,000 needs to be seven (7), this will be removed / ignored in a future version | int
+anonymity       | Yes           | Privacy (mixin) level from block 800,000 three (3) | int
 extra           | No            | String of variable length. Can contain A-Z, 0-9 characters.                              | string
 paymentId       | No            | Payment ID                                                                               | string
 changeAddress   | No            | Valid and existing in this container address.                                            | string
@@ -1569,34 +1271,17 @@ curl -d '{"jsonrpc":"2.0","id":1,"password":"passw0rd","method":"getDelayedTrans
 ```
 
 ```javascript
-const TurtleService = require('turtlecoin-rpc').TurtleService
-
-const service = new TurtleService({
-  host: '127.0.0.1', // ip address or hostname of the turtle-service host
-  port: 8070, // what port is turtle-service running on
-  timeout: 2000, // request timeout
-  ssl: false, // whether we need to connect using SSL/TLS
-  rpcPassword: 'changeme', // must be set to the password used to run turtle-service
-})
-
 service.getDelayedTransactionHashes().then((result) => {
   // do something
 })
 ```
 
 ```php
-<?php
-use TurtleCoin\Walletd;
-
-$walletd = new Walletd\Client($config);
 $response = $walletd->getDelayedTransactionHashes();
 echo $response->getBody()->getContents();
 ```
 
 ```python
-from turtlecoin import Walletd
-
-walletd = Walletd(rpc_password, rpc_host, rpc_port)
 response = walletd.get_delayed_transaction_hashes()
 print(response)
 ```
@@ -1632,16 +1317,6 @@ curl -d '{"jsonrpc":"2.0","id":1,"password":"passw0rd","method":"deleteDelayedTr
 ```
 
 ```javascript
-const TurtleService = require('turtlecoin-rpc').TurtleService
-
-const service = new TurtleService({
-  host: '127.0.0.1', // ip address or hostname of the turtle-service host
-  port: 8070, // what port is turtle-service running on
-  timeout: 2000, // request timeout
-  ssl: false, // whether we need to connect using SSL/TLS
-  rpcPassword: 'changeme', // must be set to the password used to run turtle-service
-})
-
 service.deleteDelayedTransaction({
   transactionHash: 'd01e448f7b631cebd989e3a150258b0da59c66f96adecec392bbf61814310751'
 }).then((result) => {
@@ -1650,19 +1325,12 @@ service.deleteDelayedTransaction({
 ```
 
 ```php
-<?php
-use TurtleCoin\Walletd;
-
-$walletd = new Walletd\Client($config);
 $transactionHash = 'b3e37...';
 $response = $walletd->deleteDelayedTransaction($transactionHash);
 echo $response->getBody()->getContents();
 ```
 
 ```python
-from turtlecoin import Walletd
-
-walletd = Walletd(rpc_password, rpc_host, rpc_port)
 transaction_hash = '50d83...'
 response = walletd.delete_delayed_transaction(transaction_hash)
 
@@ -1701,16 +1369,6 @@ curl -d '{"jsonrpc":"2.0","id":1,"password":"passw0rd","method":"sendDelayedTran
 ```
 
 ```javascript
-const TurtleService = require('turtlecoin-rpc').TurtleService
-
-const service = new TurtleService({
-  host: '127.0.0.1', // ip address or hostname of the turtle-service host
-  port: 8070, // what port is turtle-service running on
-  timeout: 2000, // request timeout
-  ssl: false, // whether we need to connect using SSL/TLS
-  rpcPassword: 'changeme', // must be set to the password used to run turtle-service
-})
-
 service.sendDelayedTransaction({
   transactionHash: 'd01e448f7b631cebd989e3a150258b0da59c66f96adecec392bbf61814310751'
 }).then((result) => {
@@ -1719,10 +1377,6 @@ service.sendDelayedTransaction({
 ```
 
 ```php
-<?php
-use TurtleCoin\Walletd;
-
-$walletd = new Walletd\Client($config);
 $transactionHash = 'c37cd...';
 $response = $walletd->sendDelayedTransaction($transactionHash);
 
@@ -1730,9 +1384,6 @@ echo $response->getBody()->getContents();
 ```
 
 ```python
-from turtlecoin import Walletd
-
-walletd = Walletd(rpc_password, rpc_host, rpc_port)
 transaction_hash = '50d83...'
 response = walletd.send_delayed_transaction(transaction_hash)
 
@@ -1767,20 +1418,10 @@ In case of success returns an empty JSON object.
 ## sendFusionTransaction
 
 ```shell
-curl -d '{"jsonrpc":"2.0","id":1,"password":"passw0rd","method":"sendFusionTransaction","params":{"threshold":1000000,"anonymity":7,"addresses":["TRTLxxxx...","TRTLyyyy..."],"destinationAddress":"TRTLzzzz..."}}' http://localhost:8070/json_rpc
+curl -d '{"jsonrpc":"2.0","id":1,"password":"passw0rd","method":"sendFusionTransaction","params":{"threshold":1000000,"anonymity":3,"addresses":["TRTLxxxx...","TRTLyyyy..."],"destinationAddress":"TRTLzzzz..."}}' http://localhost:8070/json_rpc
 ```
 
 ```javascript
-const TurtleService = require('turtlecoin-rpc').TurtleService
-
-const service = new TurtleService({
-  host: '127.0.0.1', // ip address or hostname of the turtle-service host
-  port: 8070, // what port is turtle-service running on
-  timeout: 2000, // request timeout
-  ssl: false, // whether we need to connect using SSL/TLS
-  rpcPassword: 'changeme', // must be set to the password used to run turtle-service
-})
-
 service.sendFusionTransaction({
   destinationAddress: 'TRTLv1pacKFJk9QgSmzk2LJWn14JGmTKzReFLz1RgY3K9Ryn7783RDT2TretzfYdck5GMCGzXTuwKfePWQYViNs4avKpnUbrwfQ'
 }).then((result) => {
@@ -1789,12 +1430,8 @@ service.sendFusionTransaction({
 ```
 
 ```php
-<?php
-use TurtleCoin\Walletd;
-
-$walletd = new Walletd\Client($config);
 $threshold = 1000000;
-$anonymity = 7;
+$anonymity = 3;
 $addresses = ['TRTLxxxx...', 'TRTLyyyy...'];
 $destinationAddress = 'TRTLzzzz...';
 $response = $walletd->sendFusionTransaction($threshold, $anonymity, $addresses, $destinationAddress);
@@ -1803,11 +1440,8 @@ echo $response->getBody()->getContents();
 ```
 
 ```python
-from turtlecoin import Walletd
-
-walletd = Walletd(rpc_password, rpc_host, rpc_port)
 threshold = 1000000
-anonymity = 7
+anonymity = 3
 addresses = ['TRTLxxxx...', 'TRTLyyyy...']
 destination_address = 'TRTLzzzz...'
 response = walletd.send_fusion_transaction(threshold, anonymity, addresses, destination_address)
@@ -1837,7 +1471,7 @@ use `estimateFusion` to check the outputs, available for the optimization.
 Argument            | Mandatory  | Description                                                                                          | Format
 ------------------- | ---------- | ---------------------------------------------------------------------------------------------------- | -------
 threshold           | Yes        | Value that determines which outputs will be optimized. Only the outputs, lesser than the threshold value, will be included into a fusion transaction. | int
-anonymity           | Yes        | Privacy (mixin) level from block 620,000 needs to be seven (7), this will be removed / ignored in a future version             | int
+anonymity           | Yes        | Privacy (mixin) level from block 800,000 three (3)                                                 | int
 addresses           | No         | Array of strings, where each string is an address to take the funds from.	                        | array
 destinationAddress  | No         | An address that the optimized funds will be sent to. Valid and existing in this container address.	| string
 
@@ -1860,16 +1494,6 @@ curl -d '{"jsonrpc":"2.0","id":1,"password":"passw0rd","method":"estimateFusion"
 ```
 
 ```javascript
-const TurtleService = require('turtlecoin-rpc').TurtleService
-
-const service = new TurtleService({
-  host: '127.0.0.1', // ip address or hostname of the turtle-service host
-  port: 8070, // what port is turtle-service running on
-  timeout: 2000, // request timeout
-  ssl: false, // whether we need to connect using SSL/TLS
-  rpcPassword: 'changeme', // must be set to the password used to run turtle-service
-})
-
 service.estimateFusion({
   threshold: 100000000,
   addresses:[
@@ -1881,10 +1505,6 @@ service.estimateFusion({
 ```
 
 ```php
-<?php
-use TurtleCoin\Walletd;
-
-$walletd = new Walletd\Client($config);
 $threshold = 1000000;
 $addresses = ['TRTLxxxx...', 'TRTLyyyy...'];
 $response = $walletd->estimateFusion($threshold, $addresses);
@@ -1893,9 +1513,6 @@ echo $response->getBody()->getContents();
 ```
 
 ```python
-from turtlecoin import Walletd
-
-walletd = Walletd(rpc_password, rpc_host, rpc_port)
 threshold = 1000000
 addresses = ['TRTLxxxx...', 'TRTLyyyy...']
 response = walletd.estimate_fusion(threshold, addresses)
@@ -1939,16 +1556,6 @@ curl -d '{"jsonrpc":"2.0","id":1,"password":"passw0rd","method":"createIntegrate
 ```
 
 ```javascript
-const TurtleService = require('turtlecoin-rpc').TurtleService
-
-const service = new TurtleService({
-  host: '127.0.0.1', // ip address or hostname of the turtle-service host
-  port: 8070, // what port is turtle-service running on
-  timeout: 2000, // request timeout
-  ssl: false, // whether we need to connect using SSL/TLS
-  rpcPassword: 'changeme', // must be set to the password used to run turtle-service
-})
-
 service.createIntegratedAddress({
   address: 'TRTLv1pacKFJk9QgSmzk2LJWn14JGmTKzReFLz1RgY3K9Ryn7783RDT2TretzfYdck5GMCGzXTuwKfePWQYViNs4avKpnUbrwfQ',
   paymentId: '80ec855eef7df4bce718442cabe086f19dfdd0d03907c7768eddb8eca8c5a667'
@@ -1958,10 +1565,6 @@ service.createIntegratedAddress({
 ```
 
 ```php
-<?php
-use TurtleCoin\Walletd;
-
-$walletd = new Walletd\Client($config);
 $address = 'TRTLxxxx...';
 $paymentId = '7FE73BD90EF05DEA0B5C15FC78696619C50DD5F2BA628F2FD16A2E3445B1922F';
 $response = $walletd->createIntegratedAddress($address, $paymentId);
@@ -1970,9 +1573,6 @@ echo $response->getBody()->getContents();
 ```
 
 ```python
-from turtlecoin import Walletd
-
-walletd = Walletd(rpc_password, rpc_host, rpc_port)
 address = 'TRTLxxxx...'
 payment_id = '7FE73BD90EF05DEA0B5C15FC78696619C50DD5F2BA628F2FD16A2E3445B1922F'
 response = walletd.create_integrated_address(address, payment_id)
@@ -2013,35 +1613,18 @@ curl -d '{"jsonrpc":"2.0","id":1,"password":"passw0rd","method":"getFeeInfo","pa
 ```
 
 ```javascript
-const TurtleService = require('turtlecoin-rpc').TurtleService
-
-const service = new TurtleService({
-  host: '127.0.0.1', // ip address or hostname of the turtle-service host
-  port: 8070, // what port is turtle-service running on
-  timeout: 2000, // request timeout
-  ssl: false, // whether we need to connect using SSL/TLS
-  rpcPassword: 'changeme', // must be set to the password used to run turtle-service
-})
-
 service.getFeeInfo().then((result) => {
   // do something
 })
 ```
 
 ```php
-<?php
-use TurtleCoin\Walletd;
-
-$walletd = new Walletd\Client($config);
 $response = $walletd->getFeeInfo();
 
 echo $response->getBody()->getContents();
 ```
 
 ```python
-from turtlecoin import Walletd
-
-walletd = Walletd(rpc_password, rpc_host, rpc_port)
 response = walletd.get_fee_info()
 print(response)
 ```

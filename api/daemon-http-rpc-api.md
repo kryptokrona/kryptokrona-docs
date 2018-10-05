@@ -22,6 +22,17 @@ http://localhost:11898
 
 > Configuration and Instantiation
 
+```javascript
+const TurtleCoind = require('turtlecoin-rpc').TurtleCoind
+
+const daemon = new TurtleCoind({
+  host: '0.0.0.0', // ip address or hostname of the TurtleCoind host
+  port: 11898, // what port is the RPC server running on
+  timeout: 2000, // request timeout
+  ssl: false // whether we need to connect using SSL/TLS
+})
+```
+
 ```python
 from turtlecoin import TurtleCoind
 
@@ -60,7 +71,7 @@ To make a JSON RPC request to your Daemon RPC you should use a POST request that
 `http://<service address>:<service port>`
 
 Parameter            | Description
--------------------- | ------------------------------------------------------------ 
+-------------------- | ------------------------------------------------------------
 `<service address>`  | IP of Daemon RPC, if it is located on local machine it is either 127.0.0.1 or localhost
 `<service port>`     | Daemon RPC port, by default it is bound to 11898 port, but it can be manually bound to any port you want
 
@@ -71,10 +82,15 @@ Parameter            | Description
 curl http://localhost:11898/getheight
 ```
 
-```python
-from turtlecoin import TurtleCoind
+```javascript
+daemon.getHeight().then((result) => {
+  // do something
+}).catch((error) => {
+  // do something
+})
+```
 
-turtlecoind = TurtleCoind(rpc_host, rpc_port)
+```python
 response = turtlecoind.get_height()
 print(response)
 ```
@@ -107,10 +123,15 @@ status           | Status of request | string
 curl http://localhost:11898/getinfo
 ```
 
-```python
-from turtlecoin import TurtleCoind
+```javascript
+daemon.getInfo().then((result) => {
+  // do something
+}).catch((error) => {
+  // do something
+})
+```
 
-turtlecoind = TurtleCoind(rpc_host, rpc_port)
+```python
 response = turtlecoind.get_info()
 print(response)
 ```
@@ -185,10 +206,20 @@ white_peerlist_size | - | int
 curl http://localhost:11898/gettransactions
 ```
 
-```python
-from turtlecoin import TurtleCoind
+```javascript
+daemon.getTransactions({
+  hashes: [
+    '549828e75151982b0e51b27e8f53b26ebc174f0ef78063984c8952b13e2a3564',
+    '549828e75151982b0e51b27e8f53b26ebc174f0ef78063984c8952b13e2a3563'
+  ]
+}).then((result) => {
+  // do something
+}).catch((error) => {
+  // do something
+})
+```
 
-turtlecoind = TurtleCoind(rpc_host, rpc_port)
+```python
 response = turtlecoind.get_transactions()
 print(response)
 ```
@@ -221,10 +252,15 @@ txs_as_hex   | array of hex values of missed transactions | array
 curl http://localhost:11898/getpeers
 ```
 
-```python
-from turtlecoin import TurtleCoind
+```javascript
+daemon.getPeers().then((result) => {
+  // do something
+}).catch((error) => {
+  // do something
+})
+```
 
-turtlecoind = TurtleCoind(rpc_host, rpc_port)
+```python
 response = turtlecoind.get_peers()
 print(response)
 ```
@@ -260,10 +296,15 @@ status           | Status of request | string
 curl http://localhost:11898/feeinfo
 ```
 
-```python
-from turtlecoin import TurtleCoind
+```javascript
+daemon.feeInfo().then((result) => {
+  // do something
+}).catch((error) => {
+  // do something
+})
+```
 
-turtlecoind = TurtleCoind(rpc_host, rpc_port)
+```python
 response = turtlecoind.get_fee_info()
 print(response)
 ```
@@ -300,4 +341,3 @@ The content in this document were originally written by the [Bytecoin (BCN) Deve
 Also of note, TurtleCoin developers have altered and adapted the content to suit our implementation of the API. This was done independently of the Bytecoin development team. They neither endorse or acknowledge our changes. Feel free to adopt or change our content as per the [CC BY SA 3.0 license](https://creativecommons.org/licenses/by-sa/3.0/) requirements.
 
 _TurtleCoin developers 2018_
-
