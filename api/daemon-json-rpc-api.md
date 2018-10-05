@@ -198,6 +198,7 @@ result           | Hash of previous block | int
 curl -d '{"jsonrpc":"2.0","method":"getblocktemplate","params":{"reserve_size":200,"wallet_address":"TRTLxxxx..."}}' http://localhost:11898/json_rpc
 ```
 
+
 ```javascript
 const TurtleCoind = require('turtlecoin-rpc').TurtleCoind
 
@@ -328,6 +329,7 @@ status           | Status of request | string
 curl -d '{"jsonrpc":"2.0","method":"getlastblockheader","params":{}}' http://localhost:11898/json_rpc
 ```
 
+
 ```javascript
 const TurtleCoind = require('turtlecoin-rpc').TurtleCoind
 
@@ -405,6 +407,7 @@ status | status of the request | string
 ```shell
 curl -d '{"jsonrpc":"2.0","method":"getblockheaderbyhash","params":{"hash":"30706..."}}' http://localhost:11898/json_rpc
 ```
+
 
 ```javascript
 const TurtleCoind = require('turtlecoin-rpc').TurtleCoind
@@ -493,6 +496,7 @@ status | status of the request | string
 curl -d '{"jsonrpc":"2.0","method":"getblockheaderbyheight","params":{"height":123456}}' http://localhost:11898/json_rpc
 ```
 
+
 ```javascript
 const TurtleCoind = require('turtlecoin-rpc').TurtleCoind
 
@@ -579,6 +583,7 @@ status | status of the request | string
 ```shell
 curl -d '{"jsonrpc":"2.0","method":"getcurrencyid","params":{}}' http://localhost:11898/json_rpc
 ```
+
 
 ```javascript
 const TurtleCoind = require('turtlecoin-rpc').TurtleCoind
