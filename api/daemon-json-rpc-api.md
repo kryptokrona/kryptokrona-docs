@@ -4,7 +4,7 @@ Daemon JSON RPC is a HTTP server which provides JSON 2.0 RPC interface for inter
 
 Currently we support the following official client bindings:
 
-* [JavaScript](https://github.com/turtlecoin/turtlecoin-rpc-js)
+* [JavaScript](https://www.npmjs.com/package/turtlecoin-rpc)
 * [Python](https://github.com/turtlecoin/turtlecoin-rpc-python)
 * [Go](https://github.com/turtlecoin/turtlecoin-rpc-go)
 
@@ -34,7 +34,7 @@ rpc_port = 11898
 turtlecoind = TurtleCoind(rpc_host, rpc_port)
 ```
 
-```JavaScript
+```javascript
 const TurtleCoind = require('turtlecoin-rpc').TurtleCoind
 
 const daemon = new TurtleCoind({
@@ -86,7 +86,7 @@ Parameter            | Description
 curl -d '{"jsonrpc":"2.0", "method":"getblockcount", "params":{}}' http://localhost:11898/json_rpc
 ```
 
-```JavaScript
+```javascript
 const TurtleCoind = require('turtlecoin-rpc').TurtleCoind
 
 const daemon = new TurtleCoind({
@@ -141,7 +141,7 @@ status           | Status of request | string
 curl -d '{"jsonrpc":"2.0","method":"on_getblockhash","params":[123456]}' http://localhost:11898/json_rpc
 ```
 
-```JavaScript
+```javascript
 const TurtleCoind = require('turtlecoin-rpc').TurtleCoind
 
 const daemon = new TurtleCoind({
@@ -198,7 +198,7 @@ result           | Hash of previous block | int
 curl -d '{"jsonrpc":"2.0","method":"getblocktemplate","params":{"reserve_size":200,"wallet_address":"TRTLxxxx..."}}' http://localhost:11898/json_rpc
 ```
 
-```JavaScript
+```javascript
 const TurtleCoind = require('turtlecoin-rpc').TurtleCoind
 
 const daemon = new TurtleCoind({
@@ -269,7 +269,7 @@ status | Status of the network | string
 curl -d '{"jsonrpc":"2.0","method":"submitblock","params":["0100b...."]}' https://localhost:11898/json_rpc
 ```
 
-```JavaScript
+```javascript
 const TurtleCoind = require('turtlecoin-rpc').TurtleCoind
 
 const daemon = new TurtleCoind({
@@ -328,7 +328,7 @@ status           | Status of request | string
 curl -d '{"jsonrpc":"2.0","method":"getlastblockheader","params":{}}' http://localhost:11898/json_rpc
 ```
 
-```JavaScript
+```javascript
 const TurtleCoind = require('turtlecoin-rpc').TurtleCoind
 
 const daemon = new TurtleCoind({
@@ -406,7 +406,7 @@ status | status of the request | string
 curl -d '{"jsonrpc":"2.0","method":"getblockheaderbyhash","params":{"hash":"30706..."}}' http://localhost:11898/json_rpc
 ```
 
-```JavaScript
+```javascript
 const TurtleCoind = require('turtlecoin-rpc').TurtleCoind
 
 const daemon = new TurtleCoind({
@@ -493,7 +493,7 @@ status | status of the request | string
 curl -d '{"jsonrpc":"2.0","method":"getblockheaderbyheight","params":{"height":123456}}' http://localhost:11898/json_rpc
 ```
 
-```JavaScript
+```javascript
 const TurtleCoind = require('turtlecoin-rpc').TurtleCoind
 
 const daemon = new TurtleCoind({
@@ -580,7 +580,7 @@ status | status of the request | string
 curl -d '{"jsonrpc":"2.0","method":"getcurrencyid","params":{}}' http://localhost:11898/json_rpc
 ```
 
-```JavaScript
+```javascript
 const TurtleCoind = require('turtlecoin-rpc').TurtleCoind
 
 const daemon = new TurtleCoind({
@@ -632,7 +632,7 @@ currency_id_blob | unique currency identifier | string
 curl -d '{"jsonrpc":"2.0","method":"f_blocks_list_json","params":{"height":500000}}' http://localhost:11898/json_rpc
 ```
 
-```JavaScript
+```javascript
 const TurtleCoind = require('turtlecoin-rpc').TurtleCoind
 
 const daemon = new TurtleCoind({
@@ -709,7 +709,7 @@ blocks   | **Array of** |                                       |
 curl -d '{"jsonrpc":"2.0","method":"f_block_json","params":{"hash":"980ff..."}}' http://localhost:11898/json_rpc
 ```
 
-```JavaScript
+```javascript
 const TurtleCoind = require('turtlecoin-rpc').TurtleCoind
 
 const daemon = new TurtleCoind({
@@ -828,7 +828,7 @@ size | size of the transaction | int
 curl -d '{"jsonrpc":"2.0","method":"f_transaction_json","params":{"hash":"702ad..."}}' http://localhost:11898/json_rpc
 ```
 
-```JavaScript
+```javascript
 const TurtleCoind = require('turtlecoin-rpc').TurtleCoind
 
 const daemon = new TurtleCoind({
@@ -962,7 +962,7 @@ vout | array of output transactions | array
 curl -d '{"jsonrpc":"2.0","method":"f_on_transactions_pool_json","params":{}}' http://localhost:11898/json_rpc
 ```
 
-```JavaScript
+```javascript
 const TurtleCoind = require('turtlecoin-rpc').TurtleCoind
 
 const daemon = new TurtleCoind({

@@ -60,7 +60,7 @@ To make a JSON RPC request to your Daemon RPC you should use a POST request that
 `http://<service address>:<service port>`
 
 Parameter            | Description
--------------------- | ------------------------------------------------------------ 
+-------------------- | ------------------------------------------------------------
 `<service address>`  | IP of Daemon RPC, if it is located on local machine it is either 127.0.0.1 or localhost
 `<service port>`     | Daemon RPC port, by default it is bound to 11898 port, but it can be manually bound to any port you want
 
@@ -69,6 +69,23 @@ Parameter            | Description
 
 ```shell
 curl http://localhost:11898/getheight
+```
+
+```JavaScript
+const TurtleCoind = require('turtlecoin-rpc').TurtleCoind
+
+const daemon = new TurtleCoind({
+  host: '127.0.0.1', // ip address or hostname of the TurtleCoind host
+  port: 11898, // what port is the RPC server running on
+  timeout: 2000, // request timeout
+  ssl: false // whether we need to connect using SSL/TLS
+})
+
+daemon.getHeight().then((result) => {
+  // do something
+}).catch((error) => {
+  // do something
+})
 ```
 
 ```python
@@ -105,6 +122,23 @@ status           | Status of request | string
 
 ```shell
 curl http://localhost:11898/getinfo
+```
+
+```JavaScript
+const TurtleCoind = require('turtlecoin-rpc').TurtleCoind
+
+const daemon = new TurtleCoind({
+  host: '127.0.0.1', // ip address or hostname of the TurtleCoind host
+  port: 11898, // what port is the RPC server running on
+  timeout: 2000, // request timeout
+  ssl: false // whether we need to connect using SSL/TLS
+})
+
+daemon.getInfo().then((result) => {
+  // do something
+}).catch((error) => {
+  // do something
+})
 ```
 
 ```python
@@ -185,6 +219,28 @@ white_peerlist_size | - | int
 curl http://localhost:11898/gettransactions
 ```
 
+```JavaScript
+const TurtleCoind = require('turtlecoin-rpc').TurtleCoind
+
+const daemon = new TurtleCoind({
+  host: '127.0.0.1', // ip address or hostname of the TurtleCoind host
+  port: 11898, // what port is the RPC server running on
+  timeout: 2000, // request timeout
+  ssl: false // whether we need to connect using SSL/TLS
+})
+
+daemon.getTransactions({
+  hashes: [
+    '549828e75151982b0e51b27e8f53b26ebc174f0ef78063984c8952b13e2a3564',
+    '549828e75151982b0e51b27e8f53b26ebc174f0ef78063984c8952b13e2a3563'
+  ]
+}).then((result) => {
+  // do something
+}).catch((error) => {
+  // do something
+})
+```
+
 ```python
 from turtlecoin import TurtleCoind
 
@@ -219,6 +275,23 @@ txs_as_hex   | array of hex values of missed transactions | array
 
 ```shell
 curl http://localhost:11898/getpeers
+```
+
+```JavaScript
+const TurtleCoind = require('turtlecoin-rpc').TurtleCoind
+
+const daemon = new TurtleCoind({
+  host: '127.0.0.1', // ip address or hostname of the TurtleCoind host
+  port: 11898, // what port is the RPC server running on
+  timeout: 2000, // request timeout
+  ssl: false // whether we need to connect using SSL/TLS
+})
+
+daemon.getPeers().then((result) => {
+  // do something
+}).catch((error) => {
+  // do something
+})
 ```
 
 ```python
@@ -258,6 +331,23 @@ status           | Status of request | string
 
 ```shell
 curl http://localhost:11898/feeinfo
+```
+
+```JavaScript
+const TurtleCoind = require('turtlecoin-rpc').TurtleCoind
+
+const daemon = new TurtleCoind({
+  host: '127.0.0.1', // ip address or hostname of the TurtleCoind host
+  port: 11898, // what port is the RPC server running on
+  timeout: 2000, // request timeout
+  ssl: false // whether we need to connect using SSL/TLS
+})
+
+daemon.feeInfo().then((result) => {
+  // do something
+}).catch((error) => {
+  // do something
+})
 ```
 
 ```python
@@ -300,4 +390,3 @@ The content in this document were originally written by the [Bytecoin (BCN) Deve
 Also of note, TurtleCoin developers have altered and adapted the content to suit our implementation of the API. This was done independently of the Bytecoin development team. They neither endorse or acknowledge our changes. Feel free to adopt or change our content as per the [CC BY SA 3.0 license](https://creativecommons.org/licenses/by-sa/3.0/) requirements.
 
 _TurtleCoin developers 2018_
-
