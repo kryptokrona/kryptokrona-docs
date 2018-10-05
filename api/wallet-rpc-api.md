@@ -1358,8 +1358,7 @@ service.sendTransaction({
   transfers: [
     service.newTransfer('TRTLv1pacKFJk9QgSmzk2LJWn14JGmTKzReFLz1RgY3K9Ryn7783RDT2TretzfYdck5GMCGzXTuwKfePWQYViNs4avKpnUbrwfQ', 1000000)
   ],
-  fee: 0.1,
-  mixin: 7,
+  fee: 0.1
 }).then((result) => {
   // do something
 })
@@ -1471,8 +1470,7 @@ service.createDelayedTransaction({
   transfers: [
     service.newTransfer('TRTLv1pacKFJk9QgSmzk2LJWn14JGmTKzReFLz1RgY3K9Ryn7783RDT2TretzfYdck5GMCGzXTuwKfePWQYViNs4avKpnUbrwfQ', 1000000)
   ],
-  fee: 0.1,
-  mixin: 7,
+  fee: 0.1
 }).then((result) => {
   // do something
 })
@@ -1784,7 +1782,6 @@ const service = new TurtleService({
 })
 
 service.sendFusionTransaction({
-  mixin: 7,
   destinationAddress: 'TRTLv1pacKFJk9QgSmzk2LJWn14JGmTKzReFLz1RgY3K9Ryn7783RDT2TretzfYdck5GMCGzXTuwKfePWQYViNs4avKpnUbrwfQ'
 }).then((result) => {
   // do something
