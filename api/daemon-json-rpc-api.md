@@ -174,6 +174,7 @@ result           | Hash of previous block | int
 curl -d '{"jsonrpc":"2.0","method":"getblocktemplate","params":{"reserve_size":200,"wallet_address":"TRTLxxxx..."}}' http://localhost:11898/json_rpc
 ```
 
+
 ```javascript
 daemon.getBlockTemplate({
   reserveSize: 200,
@@ -280,6 +281,7 @@ status           | Status of request | string
 curl -d '{"jsonrpc":"2.0","method":"getlastblockheader","params":{}}' http://localhost:11898/json_rpc
 ```
 
+
 ```javascript
 daemon.getLastBlockHeader().then((result) => {
   // do something
@@ -345,6 +347,7 @@ status | status of the request | string
 ```shell
 curl -d '{"jsonrpc":"2.0","method":"getblockheaderbyhash","params":{"hash":"30706..."}}' http://localhost:11898/json_rpc
 ```
+
 
 ```javascript
 daemon.getBlockHeaderByHash({
@@ -421,6 +424,7 @@ status | status of the request | string
 curl -d '{"jsonrpc":"2.0","method":"getblockheaderbyheight","params":{"height":123456}}' http://localhost:11898/json_rpc
 ```
 
+
 ```javascript
 daemon.getBlockHeaderByHeight({
   height: 502345
@@ -495,6 +499,7 @@ status | status of the request | string
 ```shell
 curl -d '{"jsonrpc":"2.0","method":"getcurrencyid","params":{}}' http://localhost:11898/json_rpc
 ```
+
 
 ```javascript
 daemon.getCurrencyId().then((result) => {
