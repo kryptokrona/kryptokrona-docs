@@ -38,7 +38,7 @@ turtlecoind = TurtleCoind(rpc_host, rpc_port)
 const TurtleCoind = require('turtlecoin-rpc').TurtleCoind
 
 const daemon = new TurtleCoind({
-  host: '127.0.0.1', // ip address or hostname of the TurtleCoind host
+  host: '0.0.0.0', // ip address or hostname of the TurtleCoind host
   port: 11898, // what port is the RPC server running on
   timeout: 2000, // request timeout
   ssl: false // whether we need to connect using SSL/TLS
@@ -87,15 +87,6 @@ curl -d '{"jsonrpc":"2.0", "method":"getblockcount", "params":{}}' http://localh
 ```
 
 ```javascript
-const TurtleCoind = require('turtlecoin-rpc').TurtleCoind
-
-const daemon = new TurtleCoind({
-  host: '127.0.0.1', // ip address or hostname of the TurtleCoind host
-  port: 11898, // what port is the RPC server running on
-  timeout: 2000, // request timeout
-  ssl: false // whether we need to connect using SSL/TLS
-})
-
 daemon.getBlockCount().then((blockCount) => {
   // do something
 }).catch((error) => {
@@ -104,9 +95,6 @@ daemon.getBlockCount().then((blockCount) => {
 ```
 
 ```python
-from turtlecoin import TurtleCoind
-
-turtlecoind = TurtleCoind(rpc_host, rpc_port)
 response = turtlecoind.get_block_count()
 print(response)
 ```
@@ -142,15 +130,6 @@ curl -d '{"jsonrpc":"2.0","method":"on_getblockhash","params":[123456]}' http://
 ```
 
 ```javascript
-const TurtleCoind = require('turtlecoin-rpc').TurtleCoind
-
-const daemon = new TurtleCoind({
-  host: '127.0.0.1', // ip address or hostname of the TurtleCoind host
-  port: 11898, // what port is the RPC server running on
-  timeout: 2000, // request timeout
-  ssl: false // whether we need to connect using SSL/TLS
-})
-
 daemon.getBlockHash({
   height: 500000
 }).then((blockHash) => {
@@ -161,9 +140,6 @@ daemon.getBlockHash({
 ```
 
 ```python
-from turtlecoin import TurtleCoind
-
-turtlecoind = TurtleCoind(rpc_host, rpc_port)
 height = 123456
 response = turtlecoind.get_block_hash(height)
 print(response)
@@ -199,15 +175,6 @@ curl -d '{"jsonrpc":"2.0","method":"getblocktemplate","params":{"reserve_size":2
 ```
 
 ```javascript
-const TurtleCoind = require('turtlecoin-rpc').TurtleCoind
-
-const daemon = new TurtleCoind({
-  host: '127.0.0.1', // ip address or hostname of the TurtleCoind host
-  port: 11898, // what port is the RPC server running on
-  timeout: 2000, // request timeout
-  ssl: false // whether we need to connect using SSL/TLS
-})
-
 daemon.getBlockTemplate({
   reserveSize: 200,
   walletAddress: 'TRTLv1pacKFJk9QgSmzk2LJWn14JGmTKzReFLz1RgY3K9Ryn7783RDT2TretzfYdck5GMCGzXTuwKfePWQYViNs4avKpnUbrwfQ'
@@ -219,9 +186,6 @@ daemon.getBlockTemplate({
 ```
 
 ```python
-from turtlecoin import TurtleCoind
-
-turtlecoind = TurtleCoind(rpc_host, rpc_port)
 reserve_size = 200
 wallet_address = 'TRTLxxxx...'
 
@@ -270,15 +234,6 @@ curl -d '{"jsonrpc":"2.0","method":"submitblock","params":["0100b...."]}' https:
 ```
 
 ```javascript
-const TurtleCoind = require('turtlecoin-rpc').TurtleCoind
-
-const daemon = new TurtleCoind({
-  host: '127.0.0.1', // ip address or hostname of the TurtleCoind host
-  port: 11898, // what port is the RPC server running on
-  timeout: 2000, // request timeout
-  ssl: false // whether we need to connect using SSL/TLS
-})
-
 daemon.submitBlock({
   blockBlob: '...'
 }).then((result) => {
@@ -289,9 +244,6 @@ daemon.submitBlock({
 ```
 
 ```python
-from turtlecoin import TurtleCoind
-
-turtlecoind = TurtleCoind(rpc_host, rpc_port)
 block_blob = '0100b...'
 response = turtlecoind.submit_block(block_blob)
 print(response)
@@ -329,15 +281,6 @@ curl -d '{"jsonrpc":"2.0","method":"getlastblockheader","params":{}}' http://loc
 ```
 
 ```javascript
-const TurtleCoind = require('turtlecoin-rpc').TurtleCoind
-
-const daemon = new TurtleCoind({
-  host: '127.0.0.1', // ip address or hostname of the TurtleCoind host
-  port: 11898, // what port is the RPC server running on
-  timeout: 2000, // request timeout
-  ssl: false // whether we need to connect using SSL/TLS
-})
-
 daemon.getLastBlockHeader().then((result) => {
   // do something
 }).catch((error) => {
@@ -346,9 +289,6 @@ daemon.getLastBlockHeader().then((result) => {
 ```
 
 ```python
-from turtlecoin import TurtleCoind
-
-turtlecoind = TurtleCoind(rpc_host, rpc_port)
 response = turtlecoind.get_last_block_header()
 print(response)
 ```
@@ -407,15 +347,6 @@ curl -d '{"jsonrpc":"2.0","method":"getblockheaderbyhash","params":{"hash":"3070
 ```
 
 ```javascript
-const TurtleCoind = require('turtlecoin-rpc').TurtleCoind
-
-const daemon = new TurtleCoind({
-  host: '127.0.0.1', // ip address or hostname of the TurtleCoind host
-  port: 11898, // what port is the RPC server running on
-  timeout: 2000, // request timeout
-  ssl: false // whether we need to connect using SSL/TLS
-})
-
 daemon.getBlockHeaderByHash({
   hash: '7d6db7b77232d41c19d898e81c85ecf08c4e8dfa3434f975a319f6261a695739'
 }).then((result) => {
@@ -426,9 +357,6 @@ daemon.getBlockHeaderByHash({
 ```
 
 ```python
-from turtlecoin import TurtleCoind
-
-turtlecoind = TurtleCoind(rpc_host, rpc_port)
 hash = '30706...'
 response = turtlecoind.get_block_header_by_hash(hash)
 print(response)
@@ -494,15 +422,6 @@ curl -d '{"jsonrpc":"2.0","method":"getblockheaderbyheight","params":{"height":1
 ```
 
 ```javascript
-const TurtleCoind = require('turtlecoin-rpc').TurtleCoind
-
-const daemon = new TurtleCoind({
-  host: '127.0.0.1', // ip address or hostname of the TurtleCoind host
-  port: 11898, // what port is the RPC server running on
-  timeout: 2000, // request timeout
-  ssl: false // whether we need to connect using SSL/TLS
-})
-
 daemon.getBlockHeaderByHeight({
   height: 502345
 }).then((result) => {
@@ -513,9 +432,6 @@ daemon.getBlockHeaderByHeight({
 ```
 
 ```python
-from turtlecoin import TurtleCoind
-
-turtlecoind = TurtleCoind(rpc_host, rpc_port)
 height = 123456
 response = turtlecoind.get_block_header_by_height(height)
 print(response)
@@ -581,15 +497,6 @@ curl -d '{"jsonrpc":"2.0","method":"getcurrencyid","params":{}}' http://localhos
 ```
 
 ```javascript
-const TurtleCoind = require('turtlecoin-rpc').TurtleCoind
-
-const daemon = new TurtleCoind({
-  host: '127.0.0.1', // ip address or hostname of the TurtleCoind host
-  port: 11898, // what port is the RPC server running on
-  timeout: 2000, // request timeout
-  ssl: false // whether we need to connect using SSL/TLS
-})
-
 daemon.getCurrencyId().then((result) => {
   // do something
 }).catch((error) => {
@@ -598,9 +505,6 @@ daemon.getCurrencyId().then((result) => {
 ```
 
 ```python
-from turtlecoin import TurtleCoind
-
-turtlecoind = TurtleCoind(rpc_host, rpc_port)
 response = turtlecoind.get_currency_id()
 print(response)
 ```
@@ -633,15 +537,6 @@ curl -d '{"jsonrpc":"2.0","method":"f_blocks_list_json","params":{"height":50000
 ```
 
 ```javascript
-const TurtleCoind = require('turtlecoin-rpc').TurtleCoind
-
-const daemon = new TurtleCoind({
-  host: '127.0.0.1', // ip address or hostname of the TurtleCoind host
-  port: 11898, // what port is the RPC server running on
-  timeout: 2000, // request timeout
-  ssl: false // whether we need to connect using SSL/TLS
-})
-
 daemon.getBlocks({
   height: 500000
 }).then((blocks) => {
@@ -652,9 +547,6 @@ daemon.getBlocks({
 ```
 
 ```python
-from turtlecoin import TurtleCoind
-
-turtlecoind = TurtleCoind(rpc_host, rpc_port)
 height = 500000
 response = turtlecoind.get_blocks(height)
 print(response)
@@ -710,15 +602,6 @@ curl -d '{"jsonrpc":"2.0","method":"f_block_json","params":{"hash":"980ff..."}}'
 ```
 
 ```javascript
-const TurtleCoind = require('turtlecoin-rpc').TurtleCoind
-
-const daemon = new TurtleCoind({
-  host: '127.0.0.1', // ip address or hostname of the TurtleCoind host
-  port: 11898, // what port is the RPC server running on
-  timeout: 2000, // request timeout
-  ssl: false // whether we need to connect using SSL/TLS
-})
-
 daemon.getBlock({
   hash: 'f11580d74134ac34673c74f8da458080aacbe1eccea05b197e9d10bde05139f5'
 }).then((block) => {
@@ -729,9 +612,6 @@ daemon.getBlock({
 ```
 
 ```python
-from turtlecoin import TurtleCoind
-
-turtlecoind = TurtleCoind(rpc_host, rpc_port)
 hash = '980ff...'
 response = turtlecoind.get_block(hash)
 print(response)
@@ -829,15 +709,6 @@ curl -d '{"jsonrpc":"2.0","method":"f_transaction_json","params":{"hash":"702ad.
 ```
 
 ```javascript
-const TurtleCoind = require('turtlecoin-rpc').TurtleCoind
-
-const daemon = new TurtleCoind({
-  host: '127.0.0.1', // ip address or hostname of the TurtleCoind host
-  port: 11898, // what port is the RPC server running on
-  timeout: 2000, // request timeout
-  ssl: false // whether we need to connect using SSL/TLS
-})
-
 daemon.getTransaction({
   hash: '702ad5bd04b9eff14b080d508f69a320da1909e989d6c163c18f80ae7a5ab832'
 }).then((transaction) => {
@@ -848,9 +719,6 @@ daemon.getTransaction({
 ```
 
 ```python
-from turtlecoin import TurtleCoind
-
-turtlecoind = TurtleCoind(rpc_host, rpc_port)
 hash = '702ad...'
 response = turtlecoind.get_transaction(hash)
 print(response)
@@ -963,15 +831,6 @@ curl -d '{"jsonrpc":"2.0","method":"f_on_transactions_pool_json","params":{}}' h
 ```
 
 ```javascript
-const TurtleCoind = require('turtlecoin-rpc').TurtleCoind
-
-const daemon = new TurtleCoind({
-  host: '127.0.0.1', // ip address or hostname of the TurtleCoind host
-  port: 11898, // what port is the RPC server running on
-  timeout: 2000, // request timeout
-  ssl: false // whether we need to connect using SSL/TLS
-})
-
 daemon.getTransactionPool().then((transactions) => {
   // do something
 }).catch((error) => {
@@ -980,9 +839,6 @@ daemon.getTransactionPool().then((transactions) => {
 ```
 
 ```python
-from turtlecoin import TurtleCoind
-
-turtlecoind = TurtleCoind(rpc_host, rpc_port)
 response = turtlecoind.get_transaction_pool()
 print(response)
 ```
