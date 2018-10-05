@@ -71,7 +71,7 @@ Parameter            | Description
 curl http://localhost:11898/getheight
 ```
 
-```JavaScript
+```javascript
 const TurtleCoind = require('turtlecoin-rpc').TurtleCoind
 
 const daemon = new TurtleCoind({
@@ -124,7 +124,7 @@ status           | Status of request | string
 curl http://localhost:11898/getinfo
 ```
 
-```JavaScript
+```javascript
 const TurtleCoind = require('turtlecoin-rpc').TurtleCoind
 
 const daemon = new TurtleCoind({
@@ -219,7 +219,7 @@ white_peerlist_size | - | int
 curl http://localhost:11898/gettransactions
 ```
 
-```JavaScript
+```javascript
 const TurtleCoind = require('turtlecoin-rpc').TurtleCoind
 
 const daemon = new TurtleCoind({
@@ -277,7 +277,7 @@ txs_as_hex   | array of hex values of missed transactions | array
 curl http://localhost:11898/getpeers
 ```
 
-```JavaScript
+```javascript
 const TurtleCoind = require('turtlecoin-rpc').TurtleCoind
 
 const daemon = new TurtleCoind({
@@ -333,7 +333,7 @@ status           | Status of request | string
 curl http://localhost:11898/feeinfo
 ```
 
-```JavaScript
+```javascript
 const TurtleCoind = require('turtlecoin-rpc').TurtleCoind
 
 const daemon = new TurtleCoind({
