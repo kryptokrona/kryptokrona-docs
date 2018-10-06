@@ -20,9 +20,11 @@ If you would like to use zedwallet, you can check out [this guide](Using-zedwall
 
 ## Graphical Wallet (GUI Wallet)
 
-If you prefer to use a GUI wallet, there is currently one which is being maintained:
+If you prefer to use a GUI wallet, there are currently three which are being maintained:
 
 ### 1. [Nest Wallet](https://github.com/turtlecoin/turtle-wallet-go)
+### 3. [T-Scripta Wallet](https://github.com/turtlecoin/turtle-wallet-tscripta)
+### 4. [Electron Wallet](https://github.com/turtlecoin/turtle-wallet-electron)
 
 If you would like to setup a GUI wallet, you can take a look at [this guide](Making-a-GUI-Wallet).
 
