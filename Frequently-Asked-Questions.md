@@ -299,7 +299,7 @@ Until you are fully synced, you won't be able to send transactions, and your bal
 
 #### Q: Are there any GUI wallets?
 
-A: Yes, there are currently 2 GUI wallet actively in development along with some mobile wallets too. However, they may not be ready for full use yet, and may not work on your operating system.
+A: Yes, there are currently 2 GUI wallets actively in development along with some mobile wallets too. However, they may not be ready for full use yet, and may not work on your operating system.
 
 * [Nest Wallet](https://github.com/turtlecoin/turtle-wallet-go)
 * [Shellnet Web Wallet](https://shellnet.pw)
