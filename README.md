@@ -10,10 +10,13 @@ https://docs.turtlecoin.lol
 
 You must follow [strict markdown](https://daringfireball.net/projects/markdown/), not GFM. Important points include-
 
-* relative links without the `.md` extension
+* links must start with `../`, even if they're in the same directory  
+  ex -> `(../Rainborg-Wat-Dat)` instead of `(Rainborg-Wat-Dat.md)`
+
+* relative links without the `.md` extension  
   ex-> `(Rainborg-Wat-Dat)` instead of `(Rainborg-Wat-Dat.md)`
 
-* Links are *case sensitive*
+* Links are *case sensitive*  
   Links to files in `mkdocs.yml` must *perfectly match* the casing of the actual files, and the links to these files from other places must *perfectly match* the casing in `mkdocs.yml`.
 
 
