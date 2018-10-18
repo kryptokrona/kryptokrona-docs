@@ -21,6 +21,10 @@ composer require turtlecoin/turtlecoin-walletd-rpc-php
 pip3 install turtlecoin
 ```
 
+```go
+go get github.com/turtlecoin/turtlecoin-rpc-go
+```
+
 ## Interacting with the API
 
 > API endpoint example
@@ -75,6 +79,21 @@ rpc_password = 'passw0rd'
 walletd = Walletd(rpc_password, rpc_host, rpc_port)
 ```
 
+```go
+import (
+  trpc "github.com/turtlecoin/turtlecoin-rpc-go"
+)
+
+rpcHost := "localhost"
+rpcPort := 8070
+rpcPassword := "passw0rd"
+
+service := trpc.Walletd{
+  URL: rpcHost,
+  Port: rpcPort,
+  RPCPassword: rpcPassword}
+```
+
 To make a JSON RPC request to your TurtleCoin RPC Wallet you should use a POST request that looks like this:
 
 `http://<service address>:<service port>/json_rpc`
@@ -112,6 +131,16 @@ echo $response->getBody()->getContents();
 view_secret_key = 'xxxxx...'
 response = walletd.reset(view_secret_key)
 print(response)
+```
+
+```go
+scanHeight := 0 // starting height to scan
+response, err := service.Reset(scanHeight)
+if err != nil {
+  fmt.Println(err)
+} else {
+  fmt.Println(response)
+}
 ```
 
 > Expected output:
@@ -170,6 +199,15 @@ response = walletd.save()
 print(response)
 ```
 
+```go
+response, err := service.Save()
+if err != nil {
+  fmt.Println(err)
+} else {
+  fmt.Println(response)
+}
+```
+
 > Expected output:
 
 ```json
@@ -209,6 +247,15 @@ echo $response->getBody()->getContents();
 ```python
 response = walletd.get_view_key()
 print(response)
+```
+
+```go
+response, err := service.GetViewKey()
+if err != nil {
+  fmt.Println(err)
+} else {
+  fmt.Println(response)
+}
 ```
 
 > Expected output:
@@ -261,6 +308,16 @@ echo $response->getBody()->getContents();
 address = 'TRTLxxxx...'
 response = walletd.get_spend_keys(address)
 print(response)
+```
+
+```go
+address := "TRTLxxxx..."
+response, err := service.GetSpendKeys(address)
+if err != nil {
+  fmt.Println(err)
+} else {
+  fmt.Println(response)
+}
 ```
 
 > Expected output:
@@ -321,6 +378,16 @@ response = walletd.get_mnemonic_seed(address)
 print(response)
 ```
 
+```go
+address := "TRTLxxxx..."
+response, err := service.GetMnemonicSeed(address)
+if err != nil {
+  fmt.Println(err)
+} else {
+  fmt.Println(response)
+}
+```
+
 > Expected output:
 
 ```json
@@ -377,6 +444,15 @@ response = walletd.get_status()
 print(response)
 ```
 
+```go
+response, err := service.GetStatus()
+if err != nil {
+  fmt.Println(err)
+} else {
+  fmt.Println(response)
+}
+```
+
 > Expected output:
 
 ```json
@@ -429,6 +505,15 @@ echo $response->getBody()->getContents();
 ```python
 response = walletd.get_addresses()
 print(response)
+```
+
+```go
+response, err := service.GetAddresses()
+if err != nil {
+  fmt.Println(err)
+} else {
+  fmt.Println(response)
+}
 ```
 
 > Expected output:
@@ -489,6 +574,19 @@ response = walletd.create_address(spend_secret_key, spend_public_key)
 print(response)
 ```
 
+```go
+spendSecretKey := ""
+spendPublicKey := ""
+scanHeight := 850000
+newAddress := true
+response, err := service.CreateAddress(spendSecretKey, spendPublicKey, scanHeight, newAddress)
+if err != nil {
+  fmt.Println(err)
+} else {
+  fmt.Println(response)
+}
+```
+
 > Expected output:
 
 ```json
@@ -542,6 +640,16 @@ response = walletd.delete_address(address)
 print(response)
 ```
 
+```go
+address := "TRTLxxxx..."
+response, err := service.DeleteAddress(address)
+if err != nil {
+  fmt.Println(err)
+} else {
+  fmt.Println(response)
+}
+```
+
 > Expected output:
 
 ```json
@@ -591,6 +699,16 @@ echo $response->getBody()->getContents();
 address = 'TRTLxxxx...'
 response = walletd.get_balance(address)
 print(response)
+```
+
+```go
+address := "TRTLxxxx..."
+response, err := service.GetBalance(address)
+if err != nil {
+  fmt.Println(err)
+} else {
+  fmt.Println(response)
+}
 ```
 
 > Expected output:
@@ -655,6 +773,17 @@ first_block_index = 0
 block_count = 3
 response = walletd.get_block_hashes(first_block_index, block_count)
 print(response)
+```
+
+```go
+firstBlockIndex := 0
+blockCount := 3
+response, err := service.GetBlockHashes(firstBlockIndex, blockCount)
+if err != nil {
+  fmt.Println(err)
+} else {
+  fmt.Println(response)
+}
 ```
 
 > Expected output:
@@ -731,6 +860,20 @@ payment_id = ''
 
 response = walletd.get_transaction_hashes(addresses, block_hash, block_count, payment_id)
 print(response)
+```
+
+```go
+addresses := []string{"TRTLxxxx..."}
+blockHash := ""
+firstBlockIndex := 0
+blockCount := 3
+paymentID := ""
+response, err := service.GetTransactionHashes(addresses, blockHash, firstBlockIndex, blockCount, paymentID)
+if err != nil {
+  fmt.Println(err)
+} else {
+  fmt.Println(response)
+}
 ```
 
 > Expected output:
@@ -823,6 +966,20 @@ payment_id = ''
 
 response = walletd.get_transactions(addresses, block_hash, block_count, payment_id)
 print(response)
+```
+
+```go
+addresses := []string{"TRTLxxxx..."}
+blockHash := ""
+firstBlockIndex := 0
+blockCount := 3
+paymentID := ""
+response, err := service.GetTransactions(addresses, blockHash, firstBlockIndex, blockCount, paymentID)
+if err != nil {
+  fmt.Println(err)
+} else {
+  fmt.Println(response)
+}
 ```
 
 > Expected output:
@@ -950,6 +1107,16 @@ response = walletd.get_unconfirmed_transaction_hashes(addresses)
 print(response)
 ```
 
+```go
+addresses := []string{"TRTLxxxx..."}
+response, err := service.GetUnconfirmedTransactionHashes(addresses)
+if err != nil {
+		fmt.Println(err)
+} else {
+  fmt.Println(response)
+}
+```
+
 > Expected output:
 
 ```json
@@ -1010,6 +1177,16 @@ echo $response->getBody()->getContents();
 transaction_hash = '55a23...'
 response = walletd.get_transaction(transaction_hash)
 print(response)
+```
+
+```go
+transactionHash := "55a23..."
+response, err := service.GetTransaction(transactionHash)
+if err != nil {
+	fmt.Println(err)
+} else {
+	fmt.Println(response)
+}
 ```
 
 > Expected output:
@@ -1129,6 +1306,29 @@ response = walletd.send_transaction(
 print(response)
 ```
 
+```go
+addresses := []string{"TRTLyyyy..."} // can be empty
+unlockTime := 0
+extra := ""
+paymentID := ""
+fee := 10
+changeAddress := "TRTLyyyy..."
+
+transfers := []map[string]interface{}{
+  {
+    "address" : "TRTLxxxx...",
+    "amount" : 5000,
+  },
+}
+
+response, err := service.SendTransaction(addresses, transfers, fee, unlockTime, extra, paymentID, changeAddress)
+if err != nil {
+	fmt.Println(err)
+} else {
+	fmt.Println(response)
+}
+```
+
 > Expected output:
 
 ```json
@@ -1224,6 +1424,29 @@ response = walletd.create_delayed_transaction(
 print(response)
 ```
 
+```go
+addresses := []string{"TRTLyyyy..."} // can be empty
+unlockTime := 0
+extra := ""
+paymentID := ""
+fee := 10
+changeAddress := "TRTLyyyy..."
+
+transfers := []map[string]interface{}{
+  {
+    "address" : "TRTLxxxx...",
+    "amount" : 5000,
+  },
+}
+
+response, err := service.CreateDelayedTransaction(addresses, transfers, fee, unlockTime, extra, paymentID, changeAddress)
+if err != nil {
+	fmt.Println(err)
+} else {
+	fmt.Println(response)
+}
+```
+
 > Expected output:
 
 ```json
@@ -1286,6 +1509,15 @@ response = walletd.get_delayed_transaction_hashes()
 print(response)
 ```
 
+```go
+response, err := service.GetDelayedTransactionHashes()
+if err != nil {
+	fmt.Println(err)
+} else {
+	fmt.Println(response)
+}
+```
+
 > Expected output:
 
 ```json
@@ -1336,6 +1568,16 @@ response = walletd.delete_delayed_transaction(transaction_hash)
 
 # If delete is successful, the response will be True
 print(response)
+```
+
+```go
+transactionHash := "50d83..."
+response, err := service.DeleteDelayedTransaction(transactionHash)
+if err != nil {
+	fmt.Println(err)
+} else {
+	fmt.Println(response)
+}
 ```
 
 > Expected output:
@@ -1389,6 +1631,16 @@ response = walletd.send_delayed_transaction(transaction_hash)
 
 # If transaction is sent successful, the response will be True
 print(response)
+```
+
+```go
+transactionHash := "50d83..."
+response, err := service.SendDelayedTransaction(transactionHash)
+if err != nil {
+	fmt.Println(err)
+} else {
+	fmt.Println(response)
+}
 ```
 
 > Expected output:
@@ -1447,6 +1699,18 @@ destination_address = 'TRTLzzzz...'
 response = walletd.send_fusion_transaction(threshold, anonymity, addresses, destination_address)
 
 print(response)
+```
+
+```go
+threshold := 1000000
+addresses := []string{"TRTLxxxx...", "TRTLyyyy..."}
+destinationAddress := "TRTLzzzz..."
+response, err := service.SendfusionTransaction(threshold, addresses, destinationAddress)
+if err != nil {
+	fmt.Println(err)
+} else {
+	fmt.Println(response)
+}
 ```
 
 > Expected output:
@@ -1519,6 +1783,17 @@ response = walletd.estimate_fusion(threshold, addresses)
 print(response)
 ```
 
+```go
+threshold := 1000000
+addresses := []string{"TRTLxxxx...","TRTLyyyy..."}
+response, err := service.EstimateFusion(threshold, addresses)
+if err != nil {
+	fmt.Println(err)
+} else {
+	fmt.Println(response)
+}
+```
+
 > Expected output:
 
 ```json
@@ -1579,6 +1854,17 @@ response = walletd.create_integrated_address(address, payment_id)
 print(response)
 ```
 
+```go
+address := "TRTLxxxx..."
+paymentID := "7FE73BD90EF05DEA0B5C15FC78696619C50DD5F2BA628F2FD16A2E3445B1922F"
+response, err := service.CreateIntegratedAddress(address, paymentID)
+if err != nil {
+	fmt.Println(err)
+} else {
+	fmt.Println(response)
+}
+```
+
 > Expected output:
 
 ```json
@@ -1627,6 +1913,15 @@ echo $response->getBody()->getContents();
 ```python
 response = walletd.get_fee_info()
 print(response)
+```
+
+```go
+response, err := service.GetFeeInfo()
+if err != nil {
+	fmt.Println(err)
+} else {
+	fmt.Println(response)
+}
 ```
 
 > Expected output:
