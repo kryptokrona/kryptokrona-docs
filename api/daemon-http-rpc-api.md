@@ -47,6 +47,7 @@ turtlecoind = TurtleCoind(rpc_host, rpc_port)
 
 ```go
 import (
+  "fmt"
   trpc "github.com/turtlecoin/turtlecoin-rpc-go"
 )
 

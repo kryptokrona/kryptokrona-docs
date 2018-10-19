@@ -51,6 +51,7 @@ const daemon = new TurtleCoind({
 
 ```go
 import (
+    "fmt"
     trpc "github.com/turtlecoin/turtlecoin-rpc-go"
 )
 
@@ -625,7 +626,7 @@ print(response)
 height := 500000
 response := daemon.GetBlocks(height)
 fmt.Println(response)
-``
+```
 
 > Expected Output:
 

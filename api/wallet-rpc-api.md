@@ -81,6 +81,7 @@ walletd = Walletd(rpc_password, rpc_host, rpc_port)
 
 ```go
 import (
+  "fmt"
   trpc "github.com/turtlecoin/turtlecoin-rpc-go"
 )
 
