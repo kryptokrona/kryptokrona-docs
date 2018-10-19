@@ -6,7 +6,7 @@ If no binaries are available, or you prefer to compile, follow these instruction
 
 ## Ubuntu 16.04<a name="ubuntu-16-04"></a>
 
-*Guide sponsored by [Monerise](https://monerise.com)*
+*Guide sponsored by Monerise*
 
 1. If you want to use your GPU for mining, do the following-
 
