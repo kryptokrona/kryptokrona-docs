@@ -21,7 +21,7 @@ composer require turtlecoin/turtlecoin-walletd-rpc-php
 pip3 install turtlecoin
 ```
 
-```golang
+```go
 go get github.com/turtlecoin/turtlecoin-rpc-go
 ```
 
@@ -79,9 +79,8 @@ rpc_password = 'passw0rd'
 walletd = Walletd(rpc_password, rpc_host, rpc_port)
 ```
 
-```golang
+```go
 import (
-  "fmt"
   trpc "github.com/turtlecoin/turtlecoin-rpc-go"
 )
 
@@ -134,7 +133,7 @@ response = walletd.reset(view_secret_key)
 print(response)
 ```
 
-```golang
+```go
 scanHeight := 0 // starting height to scan
 response, err := service.Reset(scanHeight)
 if err != nil {
@@ -200,7 +199,7 @@ response = walletd.save()
 print(response)
 ```
 
-```golang
+```go
 response, err := service.Save()
 if err != nil {
   fmt.Println(err)
@@ -250,7 +249,7 @@ response = walletd.get_view_key()
 print(response)
 ```
 
-```golang
+```go
 response, err := service.GetViewKey()
 if err != nil {
   fmt.Println(err)
@@ -311,7 +310,7 @@ response = walletd.get_spend_keys(address)
 print(response)
 ```
 
-```golang
+```go
 address := "TRTLxxxx..."
 response, err := service.GetSpendKeys(address)
 if err != nil {
@@ -379,7 +378,7 @@ response = walletd.get_mnemonic_seed(address)
 print(response)
 ```
 
-```golang
+```go
 address := "TRTLxxxx..."
 response, err := service.GetMnemonicSeed(address)
 if err != nil {
@@ -445,7 +444,7 @@ response = walletd.get_status()
 print(response)
 ```
 
-```golang
+```go
 response, err := service.GetStatus()
 if err != nil {
   fmt.Println(err)
@@ -508,7 +507,7 @@ response = walletd.get_addresses()
 print(response)
 ```
 
-```golang
+```go
 response, err := service.GetAddresses()
 if err != nil {
   fmt.Println(err)
@@ -575,7 +574,7 @@ response = walletd.create_address(spend_secret_key, spend_public_key)
 print(response)
 ```
 
-```golang
+```go
 spendSecretKey := ""
 spendPublicKey := ""
 scanHeight := 850000
@@ -641,7 +640,7 @@ response = walletd.delete_address(address)
 print(response)
 ```
 
-```golang
+```go
 address := "TRTLxxxx..."
 response, err := service.DeleteAddress(address)
 if err != nil {
@@ -702,7 +701,7 @@ response = walletd.get_balance(address)
 print(response)
 ```
 
-```golang
+```go
 address := "TRTLxxxx..."
 response, err := service.GetBalance(address)
 if err != nil {
@@ -776,7 +775,7 @@ response = walletd.get_block_hashes(first_block_index, block_count)
 print(response)
 ```
 
-```golang
+```go
 firstBlockIndex := 0
 blockCount := 3
 response, err := service.GetBlockHashes(firstBlockIndex, blockCount)
@@ -863,7 +862,7 @@ response = walletd.get_transaction_hashes(addresses, block_hash, block_count, pa
 print(response)
 ```
 
-```golang
+```go
 addresses := []string{"TRTLxxxx..."}
 blockHash := ""
 firstBlockIndex := 0
@@ -969,7 +968,7 @@ response = walletd.get_transactions(addresses, block_hash, block_count, payment_
 print(response)
 ```
 
-```golang
+```go
 addresses := []string{"TRTLxxxx..."}
 blockHash := ""
 firstBlockIndex := 0
@@ -1108,7 +1107,7 @@ response = walletd.get_unconfirmed_transaction_hashes(addresses)
 print(response)
 ```
 
-```golang
+```go
 addresses := []string{"TRTLxxxx..."}
 response, err := service.GetUnconfirmedTransactionHashes(addresses)
 if err != nil {
@@ -1180,7 +1179,7 @@ response = walletd.get_transaction(transaction_hash)
 print(response)
 ```
 
-```golang
+```go
 transactionHash := "55a23..."
 response, err := service.GetTransaction(transactionHash)
 if err != nil {
@@ -1307,7 +1306,7 @@ response = walletd.send_transaction(
 print(response)
 ```
 
-```golang
+```go
 addresses := []string{"TRTLyyyy..."} // can be empty
 unlockTime := 0
 extra := ""
@@ -1425,7 +1424,7 @@ response = walletd.create_delayed_transaction(
 print(response)
 ```
 
-```golang
+```go
 addresses := []string{"TRTLyyyy..."} // can be empty
 unlockTime := 0
 extra := ""
@@ -1510,7 +1509,7 @@ response = walletd.get_delayed_transaction_hashes()
 print(response)
 ```
 
-```golang
+```go
 response, err := service.GetDelayedTransactionHashes()
 if err != nil {
 	fmt.Println(err)
@@ -1571,7 +1570,7 @@ response = walletd.delete_delayed_transaction(transaction_hash)
 print(response)
 ```
 
-```golang
+```go
 transactionHash := "50d83..."
 response, err := service.DeleteDelayedTransaction(transactionHash)
 if err != nil {
@@ -1634,7 +1633,7 @@ response = walletd.send_delayed_transaction(transaction_hash)
 print(response)
 ```
 
-```golang
+```go
 transactionHash := "50d83..."
 response, err := service.SendDelayedTransaction(transactionHash)
 if err != nil {
@@ -1702,7 +1701,7 @@ response = walletd.send_fusion_transaction(threshold, anonymity, addresses, dest
 print(response)
 ```
 
-```golang
+```go
 threshold := 1000000
 addresses := []string{"TRTLxxxx...", "TRTLyyyy..."}
 destinationAddress := "TRTLzzzz..."
@@ -1784,7 +1783,7 @@ response = walletd.estimate_fusion(threshold, addresses)
 print(response)
 ```
 
-```golang
+```go
 threshold := 1000000
 addresses := []string{"TRTLxxxx...","TRTLyyyy..."}
 response, err := service.EstimateFusion(threshold, addresses)
@@ -1855,7 +1854,7 @@ response = walletd.create_integrated_address(address, payment_id)
 print(response)
 ```
 
-```golang
+```go
 address := "TRTLxxxx..."
 paymentID := "7FE73BD90EF05DEA0B5C15FC78696619C50DD5F2BA628F2FD16A2E3445B1922F"
 response, err := service.CreateIntegratedAddress(address, paymentID)
@@ -1916,7 +1915,7 @@ response = walletd.get_fee_info()
 print(response)
 ```
 
-```golang
+```go
 response, err := service.GetFeeInfo()
 if err != nil {
 	fmt.Println(err)

@@ -12,7 +12,7 @@ Currently we support the following official client bindings:
 pip3 install turtlecoin
 ```
 
-```golang
+```go
 go get github.com/turtlecoin/turtlecoin-rpc-go
 ```
 
@@ -45,9 +45,8 @@ rpc_port = 11898
 turtlecoind = TurtleCoind(rpc_host, rpc_port)
 ```
 
-```golang
+```go
 import (
-  "fmt"
   trpc "github.com/turtlecoin/turtlecoin-rpc-go"
 )
 
@@ -113,7 +112,7 @@ response = turtlecoind.get_height()
 print(response)
 ```
 
-```golang
+```go
 response := daemon.Height()
 fmt.Println(response)
 ```
@@ -159,7 +158,7 @@ response = turtlecoind.get_info()
 print(response)
 ```
 
-```golang
+```go
 response := daemon.Info()
 fmt.Println(response)
 ```
@@ -252,7 +251,7 @@ response = turtlecoind.get_transactions()
 print(response)
 ```
 
-```golang
+```go
 Not Implemented
 ```
 
@@ -297,7 +296,7 @@ response = turtlecoind.get_peers()
 print(response)
 ```
 
-```golang
+```go
 response := daemon.Peers()
 fmt.Println(response)
 ```
@@ -346,7 +345,7 @@ response = turtlecoind.get_fee_info()
 print(response)
 ```
 
-```golang
+```go
 response := daemon.Fee()
 fmt.Println(response)
 ```
