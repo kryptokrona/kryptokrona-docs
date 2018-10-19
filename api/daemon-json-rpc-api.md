@@ -16,7 +16,7 @@ npm install turtlecoin-rpc
 pip3 install turtlecoin
 ```
 
-```go
+```golang
 go get github.com/turtlecoin/turtlecoin-rpc-go
 ```
 
@@ -49,8 +49,9 @@ const daemon = new TurtleCoind({
 })
 ```
 
-```go
+```golang
 import (
+    "fmt"
     trpc "github.com/turtlecoin/turtlecoin-rpc-go"
 )
 
@@ -116,7 +117,7 @@ response = turtlecoind.get_block_count()
 print(response)
 ```
 
-```go
+```golang
 response := daemon.GetBlockCount()
 fmt.Println(response)
 ```
@@ -167,7 +168,7 @@ response = turtlecoind.get_block_hash(height)
 print(response)
 ```
 
-```go
+```golang
 height := 123456
 response := daemon.GetBlockHash(height)
 fmt.Println(response)
@@ -222,7 +223,7 @@ response = turtlecoind.get_block_template(reserve_size, wallet_address)
 print(response)
 ```
 
-```go
+```golang
 reserveSize := 200
 walletAddress := "TRTLxxxx..."
 
@@ -286,7 +287,7 @@ response = turtlecoind.submit_block(block_blob)
 print(response)
 ```
 
-```go
+```golang
 blockBlob := "0100b..."
 response := daemon.SubmitBlock(blockBlob)
 fmt.Println(response)
@@ -337,7 +338,7 @@ response = turtlecoind.get_last_block_header()
 print(response)
 ```
 
-```go
+```golang
 response := daemon.GetLastBlockHeader()
 fmt.Println(response)
 ```
@@ -412,7 +413,7 @@ response = turtlecoind.get_block_header_by_hash(hash)
 print(response)
 ```
 
-```go
+```golang
 hash := "30706..."
 response := daemon.GetBlockHeaderByHash(hash)
 fmt.Println(response)
@@ -494,7 +495,7 @@ response = turtlecoind.get_block_header_by_height(height)
 print(response)
 ```
 
-```go
+```golang
 height := 123456
 response := daemon.GetBlockHeaderByHeight(height)
 fmt.Println(response)
@@ -573,7 +574,7 @@ response = turtlecoind.get_currency_id()
 print(response)
 ```
 
-```go
+```golang
 response := daemon.GetCurrencyID()
 fmt.Println(response)
 ```
@@ -621,11 +622,11 @@ response = turtlecoind.get_blocks(height)
 print(response)
 ```
 
-```go
+```golang
 height := 500000
 response := daemon.GetBlocks(height)
 fmt.Println(response)
-``
+```
 
 > Expected Output:
 
@@ -692,7 +693,7 @@ response = turtlecoind.get_block(hash)
 print(response)
 ```
 
-```go
+```golang
 hash := "980ff..."
 response := daemon.GetBlock(hash)
 fmt.Println(response)
@@ -805,7 +806,7 @@ response = turtlecoind.get_transaction(hash)
 print(response)
 ```
 
-```go
+```golang
 hash := "702ad..."
 response := daemon.GetTransaction(hash)
 fmt.Println(response)
@@ -930,7 +931,7 @@ response = turtlecoind.get_transaction_pool()
 print(response)
 ```
 
-```go
+```golang
 response := daemon.GetTransactionPool()
 fmt.Println(response)
 ```
