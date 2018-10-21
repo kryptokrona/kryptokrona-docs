@@ -2,8 +2,8 @@
 
 This guide will help you install a recent copy of the blockchain. This should significantly speed up the task of getting the blockchain synced up so you can use your wallet.
 
-## Windows:
-1. Make sure `TurtleCoind.exe`, `walletd.exe`, and/or the GUI wallet are not running.
+## Windows
+1. Make sure `TurtleCoind.exe`, `turtle-service.exe`, and/or the GUI wallet are not running.
 
 2. Open File Explorer and type `%APPDATA%\TurtleCoin` and hit enter.
 
@@ -54,8 +54,8 @@ This guide will help you install a recent copy of the blockchain. This should si
 
 
 
-## Mac & Linux:
-1. Make sure `TurtleCoind`, `walletd`, and/or the GUI wallet are not running.
+## Mac & Linux
+1. Make sure `TurtleCoind`, `turtle-service`, and/or the GUI wallet are not running.
 
 2. Open `Finder`.
 
