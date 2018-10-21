@@ -6,5 +6,5 @@
 
 To mine TurtleCoin on your mobile phone, you can use either of these two apps(Tony Monero is recommended, however):
 
-1.  [Tony Monero](Using-Tony-Monero)
-2.  [AA Miner](Using-AA-Miner)
+1.  [Tony Monero](../Using-Tony-Monero)
+2.  [AA Miner](../Using-AA-Miner)
