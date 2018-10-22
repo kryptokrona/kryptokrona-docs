@@ -5,7 +5,7 @@ TurtleCoin RPC Wallet is a HTTP server which provides JSON 2.0 RPC interface for
 Currently we support the following official client bindings:
 
 * [JavaScript](https://www.npmjs.com/package/turtlecoin-rpc)
-* [PHP](https://github.com/turtlecoin/turtlecoin-walletd-rpc-php)
+* [PHP](https://github.com/turtlecoin/turtlecoin-rpc-php)
 * [Python](https://github.com/turtlecoin/turtlecoin-rpc-python)
 * [Go](https://github.com/turtlecoin/turtlecoin-rpc-go)
 
@@ -14,7 +14,7 @@ npm install turtlecoin-rpc
 ```
 
 ```php
-composer require turtlecoin/turtlecoin-walletd-rpc-php
+composer require turtlecoin/turtlecoin-rpc-php
 ```
 
 ```python
@@ -58,7 +58,7 @@ const service = new TurtleService({
 
 ```php
 <?php
-use TurtleCoin\Walletd;
+use TurtleCoin\TurtleService;
 
 $config = [
     'rpcHost'     => 'http://localhost',
@@ -66,7 +66,7 @@ $config = [
     'rpcPassword' => 'passw0rd',
 ];
 
-$walletd = new Walletd\Client($config);
+$turtleService = new TurtleService($config);
 ```
 
 ```python
@@ -123,9 +123,10 @@ service.reset({
 ```
 
 ```php
+<?php
 $viewSecretKey = 'xxxxx...';
-$response = $walletd->reset($viewSecretKey);
-echo $response->getBody()->getContents();
+$response = $turtleService->reset($viewSecretKey);
+echo $response;
 ```
 
 ```python
@@ -191,8 +192,9 @@ service.save().then(() => {
 ```
 
 ```php
-$response = $walletd->save();
-echo $response->getBody()->getContents();
+<?php
+$response = $turtleService->save();
+echo $response;
 ```
 
 ```python
@@ -241,8 +243,9 @@ service.getViewKey().then((result) => {
 ```
 
 ```php
-$response = $walletd->getViewKey();
-echo $response->getBody()->getContents();
+<?php
+$response = $turtleService->getViewKey();
+echo $response;
 ```
 
 ```python
@@ -300,9 +303,10 @@ service.getSpendKeys({
 ```
 
 ```php
+<?php
 $address = 'TRTLxxxx...';
-$response = $walletd->getSpendKeys($address);
-echo $response->getBody()->getContents();
+$response = $turtleService->getSpendKeys($address);
+echo $response;
 ```
 
 ```python
@@ -368,9 +372,10 @@ service.getMnemonicSeed({
 ```
 
 ```php
+<?php
 $address = 'TRTLxxxx...';
-$response = $walletd->getMnemonicSeed($address);
-echo $response->getBody()->getContents();
+$response = $turtleService->getMnemonicSeed($address);
+echo $response;
 ```
 
 ```python
@@ -436,8 +441,9 @@ service.getStatus().then((result) => {
 ```
 
 ```php
-$response = $walletd->getStatus();
-echo $response->getBody()->getContents();
+<?php
+$response = $turtleService->getStatus();
+echo $response;
 ```
 
 ```python
@@ -499,8 +505,9 @@ service.getAddresses().then((result) => {
 ```
 
 ```php
-$response = $walletd->getAddresses();
-echo $response->getBody()->getContents();
+<?php
+$response = $turtleService->getAddresses();
+echo $response;
 ```
 
 ```python
@@ -562,10 +569,11 @@ service.createAddress({
 ```
 
 ```php
+<?php
 $secretSpendKey = null;
 $publicSpendKey = null;
-$response = $walletd->createAddress($secretSpendKey, $publicSpendKey);
-echo $response->getBody()->getContents();
+$response = $turtleService->createAddress($secretSpendKey, $publicSpendKey);
+echo $response;
 ```
 
 ```python
@@ -628,9 +636,10 @@ service.deleteAddress({
 ```
 
 ```php
+<?php
 $address = 'TRTLxxxx...';
-$response = $walletd->deleteAddress($address);
-echo $response->getBody()->getContents();
+$response = $turtleService->deleteAddress($address);
+echo $response;
 ```
 
 ```python
@@ -691,9 +700,10 @@ service.getBalance({
 ```
 
 ```php
+<?php
 $address = 'TRTLxxxx...';
-$response = $walletd->getBalance($address);
-echo $response->getBody()->getContents();
+$response = $turtleService->getBalance($address);
+echo $response;
 ```
 
 ```python
@@ -763,10 +773,11 @@ service.getBlockHashes({
 ```
 
 ```php
+<?php
 $firstBlockIndex = 0;
 $blockCount = 3;
-$response = $walletd->getBlockHashes($firstBlockIndex, $blockCount);
-echo $response->getBody()->getContents();
+$response = $turtleService->getBlockHashes($firstBlockIndex, $blockCount);
+echo $response;
 ```
 
 ```python
@@ -840,17 +851,18 @@ service.getTransactionHashes({
 ```
 
 ```php
+<?php
 $blockCount = 100000;
 $firstBlockIndex = 400000;
 $blockHash = null;
 $addresses = null;
 $paymentId = null;
 
-$response = $walletd->getTransactionHashes(
+$response = $turtleService->getTransactionHashes(
     $blockCount, $firstBlockIndex, $blockHash, $addresses, $paymentId
 );
 
-echo $response->getBody()->getContents();
+echo $response;
 ```
 
 ```python
@@ -946,17 +958,18 @@ service.getTransactions({
 ```
 
 ```php
+<?php
 $blockCount = 100000;
 $firstBlockIndex = 400000;
 $blockHash = null;
 $addresses = null;
 $paymentId = null;
 
-$response = $walletd->getTransactions(
+$response = $turtleService->getTransactions(
     $blockCount, $firstBlockIndex, $blockHash, $addresses, $paymentId
 );
 
-echo $response->getBody()->getContents();
+echo $response;
 ```
 
 ```python
@@ -1097,9 +1110,10 @@ service.getUnconfirmedTransactionHashes({
 ```
 
 ```php
+<?php
 $addresses = null;
-$response = $walletd->getUnconfirmedTransactionHashes($addresses);
-echo $response->getBody()->getContents();
+$response = $turtleService->getUnconfirmedTransactionHashes($addresses);
+echo $response;
 ```
 
 ```python
@@ -1169,9 +1183,10 @@ service.getTransaction({
 ```
 
 ```php
+<?php
 $transactionHash = '55a23...';
-$response = $walletd->getTransaction($transactionHash);
-echo $response->getBody()->getContents();
+$response = $turtleService->getTransaction($transactionHash);
+echo $response;
 ```
 
 ```python
@@ -1269,6 +1284,7 @@ service.sendTransaction({
 ```
 
 ```php
+<?php
 $anonymity = 3;
 $fee = 10;
 $addresses = null;
@@ -1281,11 +1297,11 @@ $transfers = [
     ["address" => "TRTLxxxx...", "amount"  => 5000],
 ];
 
-$response = $walletd->sendTransaction(
+$response = $turtleService->sendTransaction(
     $anonymity, $transfers, $fee, $addresses, $unlockTime, $extra, $paymentId, $changeAddress
 );
 
-echo $response->getBody()->getContents();
+echo $response;
 ```
 
 ```python
@@ -1387,6 +1403,7 @@ service.createDelayedTransaction({
 ```
 
 ```php
+<?php
 $anonymity = 3;
 $fee = 10;
 $addresses = null;
@@ -1399,11 +1416,11 @@ $transfers = [
     ["address" => "TRTLxxxx...", "amount"  => 5000],
 ];
 
-$response = $walletd->createDelayedTransaction(
+$response = $turtleService->createDelayedTransaction(
     $anonymity, $transfers, $fee, $addresses, $unlockTime, $extra, $paymentId, $changeAddress
 );
 
-echo $response->getBody()->getContents();
+echo $response;
 ```
 
 ```python
@@ -1501,8 +1518,9 @@ service.getDelayedTransactionHashes().then((result) => {
 ```
 
 ```php
-$response = $walletd->getDelayedTransactionHashes();
-echo $response->getBody()->getContents();
+<?php
+$response = $turtleService->getDelayedTransactionHashes();
+echo $response;
 ```
 
 ```python
@@ -1558,9 +1576,10 @@ service.deleteDelayedTransaction({
 ```
 
 ```php
+<?php
 $transactionHash = 'b3e37...';
-$response = $walletd->deleteDelayedTransaction($transactionHash);
-echo $response->getBody()->getContents();
+$response = $turtleService->deleteDelayedTransaction($transactionHash);
+echo $response;
 ```
 
 ```python
@@ -1620,10 +1639,11 @@ service.sendDelayedTransaction({
 ```
 
 ```php
+<?php
 $transactionHash = 'c37cd...';
-$response = $walletd->sendDelayedTransaction($transactionHash);
+$response = $turtleService->sendDelayedTransaction($transactionHash);
 
-echo $response->getBody()->getContents();
+echo $response;
 ```
 
 ```python
@@ -1683,13 +1703,14 @@ service.sendFusionTransaction({
 ```
 
 ```php
+<?php
 $threshold = 1000000;
 $anonymity = 3;
 $addresses = ['TRTLxxxx...', 'TRTLyyyy...'];
 $destinationAddress = 'TRTLzzzz...';
-$response = $walletd->sendFusionTransaction($threshold, $anonymity, $addresses, $destinationAddress);
+$response = $turtleService->sendFusionTransaction($threshold, $anonymity, $addresses, $destinationAddress);
 
-echo $response->getBody()->getContents();
+echo $response;
 ```
 
 ```python
@@ -1770,11 +1791,12 @@ service.estimateFusion({
 ```
 
 ```php
+<?php
 $threshold = 1000000;
 $addresses = ['TRTLxxxx...', 'TRTLyyyy...'];
-$response = $walletd->estimateFusion($threshold, $addresses);
+$response = $turtleService->estimateFusion($threshold, $addresses);
 
-echo $response->getBody()->getContents();
+echo $response;
 ```
 
 ```python
@@ -1841,11 +1863,12 @@ service.createIntegratedAddress({
 ```
 
 ```php
+<?php
 $address = 'TRTLxxxx...';
 $paymentId = '7FE73BD90EF05DEA0B5C15FC78696619C50DD5F2BA628F2FD16A2E3445B1922F';
-$response = $walletd->createIntegratedAddress($address, $paymentId);
+$response = $turtleService->createIntegratedAddress($address, $paymentId);
 
-echo $response->getBody()->getContents();
+echo $response;
 ```
 
 ```python
@@ -1906,9 +1929,10 @@ service.getFeeInfo().then((result) => {
 ```
 
 ```php
-$response = $walletd->getFeeInfo();
+<?php
+$response = $turtleService->getFeeInfo();
 
-echo $response->getBody()->getContents();
+echo $response;
 ```
 
 ```python
