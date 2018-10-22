@@ -5,11 +5,16 @@ Daemon JSON RPC is a HTTP server which provides JSON 2.0 RPC interface for inter
 Currently we support the following official client bindings:
 
 * [JavaScript](https://www.npmjs.com/package/turtlecoin-rpc)
+* [PHP](https://github.com/turtlecoin/turtlecoin-rpc-php)
 * [Python](https://github.com/turtlecoin/turtlecoin-rpc-python)
 * [Go](https://github.com/turtlecoin/turtlecoin-rpc-go)
 
 ```javascript
 npm install turtlecoin-rpc
+```
+
+```php
+composer require turtlecoin/turtlecoin-rpc-php
 ```
 
 ```python
@@ -47,6 +52,18 @@ const daemon = new TurtleCoind({
   timeout: 2000, // request timeout
   ssl: false // whether we need to connect using SSL/TLS
 })
+```
+
+```php
+<?php
+use TurtleCoin\TurtleCoind;
+
+$config = [
+    'rpcHost' => 'http://localhost',
+    'rpcPort' => 11898,
+];
+
+$turtlecoind = new TurtleCoind($config);
 ```
 
 ```go
@@ -112,6 +129,12 @@ daemon.getBlockCount().then((blockCount) => {
 })
 ```
 
+```php
+<?php
+$response = $turtlecoind->getBlockCount();
+echo $response;
+```
+
 ```python
 response = turtlecoind.get_block_count()
 print(response)
@@ -160,6 +183,13 @@ daemon.getBlockHash({
 }).catch((error) => {
   // do something
 })
+```
+
+```php
+<?php
+$height = 123456;
+$response = $turtlecoind->getBlockHash($height);
+echo $response;
 ```
 
 ```python
@@ -213,6 +243,14 @@ daemon.getBlockTemplate({
 }).catch((error) => {
   // do something
 })
+```
+
+```php
+<?php
+$reserveSize = 200;
+$address = 'TRTLxxxx...';
+$response = $turtlecoind->getBlockTemplate($reserveSize, $address);
+echo $response;
 ```
 
 ```python
@@ -281,6 +319,13 @@ daemon.submitBlock({
 })
 ```
 
+```php
+<?php
+$blockBlob = '0100b...';
+$response = $turtlecoind->submitBlock($blockBlob);
+echo $response;
+```
+
 ```python
 block_blob = '0100b...'
 response = turtlecoind.submit_block(block_blob)
@@ -331,6 +376,12 @@ daemon.getLastBlockHeader().then((result) => {
 }).catch((error) => {
   // do something
 })
+```
+
+```php
+<?php
+$response = $turtlecoind->getLastBlockHeader();
+echo $response;
 ```
 
 ```python
@@ -405,6 +456,13 @@ daemon.getBlockHeaderByHash({
 }).catch((error) => {
   // do something
 })
+```
+
+```php
+<?php
+$hash = '30706...';
+$response = $turtlecoind->getBlockHeaderByHash($hash);
+echo $response;
 ```
 
 ```python
@@ -489,6 +547,13 @@ daemon.getBlockHeaderByHeight({
 })
 ```
 
+```php
+<?php
+$height = 123456;
+$response = $turtlecoind->getBlockHeaderByHeight($height);
+echo $response;
+```
+
 ```python
 height = 123456
 response = turtlecoind.get_block_header_by_height(height)
@@ -569,6 +634,12 @@ daemon.getCurrencyId().then((result) => {
 })
 ```
 
+```php
+<?php
+$response = $turtlecoind->getCurrencyId();
+echo $response;
+```
+
 ```python
 response = turtlecoind.get_currency_id()
 print(response)
@@ -614,6 +685,13 @@ daemon.getBlocks({
 }).catch((error) => {
   // do something
 })
+```
+
+```php
+<?php
+$height = 500000;
+$response = $turtlecoind->getBlocks($height);
+echo $response;
 ```
 
 ```python
@@ -685,6 +763,13 @@ daemon.getBlock({
 }).catch((error) => {
   // do something
 })
+```
+
+```php
+<?php
+$hash = '980ff...';
+$response = $turtlecoind->getBlock($hash);
+echo $response;
 ```
 
 ```python
@@ -798,6 +883,13 @@ daemon.getTransaction({
 }).catch((error) => {
   // do something
 })
+```
+
+```php
+<?php
+$hash = '702ad...';
+$response = $turtlecoind->getTransaction($hash);
+echo $response;
 ```
 
 ```python
@@ -924,6 +1016,12 @@ daemon.getTransactionPool().then((transactions) => {
 }).catch((error) => {
   // do something
 })
+```
+
+```php
+<?php
+$response = $turtlecoind->getTransactionPool();
+echo $response;
 ```
 
 ```python

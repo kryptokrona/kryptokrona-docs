@@ -5,8 +5,13 @@ Daemon HTTP RPC is a HTTP server which provides additional information regarding
 Currently we support the following official client bindings:
 
 * [NodeJS](https://www.npmjs.com/package/turtlecoin-rpc)
+* [PHP](https://github.com/turtlecoin/turtlecoin-rpc-php)
 * [Python](https://github.com/turtlecoin/turtlecoin-rpc-python)
 * [Go](https://github.com/turtlecoin/turtlecoin-rpc-go)
+
+```php
+composer require turtlecoin/turtlecoin-rpc-php
+```
 
 ```python
 pip3 install turtlecoin
@@ -35,6 +40,18 @@ const daemon = new TurtleCoind({
   timeout: 2000, // request timeout
   ssl: false // whether we need to connect using SSL/TLS
 })
+```
+
+```php
+<?php
+use TurtleCoin\TurtleCoind;
+
+$config = [
+    'rpcHost' => 'http://localhost',
+    'rpcPort' => 11898,
+];
+
+$turtlecoind = new TurtleCoind($config);
 ```
 
 ```python
@@ -108,6 +125,12 @@ daemon.getHeight().then((result) => {
 })
 ```
 
+```php
+<?php
+$response = $turtlecoind->getHeight();
+echo $response;
+```
+
 ```python
 response = turtlecoind.get_height()
 print(response)
@@ -152,6 +175,12 @@ daemon.getInfo().then((result) => {
 }).catch((error) => {
   // do something
 })
+```
+
+```php
+<?php
+$response = $turtlecoind->getInfo();
+echo $response;
 ```
 
 ```python
@@ -247,6 +276,12 @@ daemon.getTransactions({
 })
 ```
 
+```php
+<?php
+$response = $turtlecoind->getTransactions();
+echo $response;
+```
+
 ```python
 response = turtlecoind.get_transactions()
 print(response)
@@ -290,6 +325,12 @@ daemon.getPeers().then((result) => {
 }).catch((error) => {
   // do something
 })
+```
+
+```php
+<?php
+$response = $turtlecoind->getPeers();
+echo $response;
 ```
 
 ```python
@@ -339,6 +380,12 @@ daemon.feeInfo().then((result) => {
 }).catch((error) => {
   // do something
 })
+```
+
+```php
+<?php
+$response = $turtlecoind->getFeeInfo();
+echo $response;
 ```
 
 ```python
