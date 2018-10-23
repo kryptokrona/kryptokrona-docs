@@ -25,13 +25,13 @@ Next, we need to obtain a CPU miner. We'll use `rPi-xmrig-gcc7.3.0`
 1. Download the `.zip` source code from the [Releases page](https://github.com/auto-joe/rPi-xmrig-gcc7.3.0/releases/latest)
 
 ```
-wget https://github.com/auto-joe/rPi-xmrig-gcc7.3.0/archive/2.6.0-beta1.zip
+wget https://github.com/auto-joe/rPi-xmrig-gcc7.3.0/archive/2.6.4.zip
 ```
 
 2. Download it to a directory of your choice and extract it to a folder called `rPi-xmrig`, or anything of your choice.
 
 ```
-unzip 2.6.0-beta1.zip -d / rPi-xmrig
+unzip 2.6.4.zip
 ```
 
 ## Configure and Run the Miner
@@ -48,6 +48,12 @@ Open the file `start.sh` with a text editor and replace the existing parameters 
   If you don't have one yet, you can generate a [paper wallet](../../wallets/Making-a-paper-wallet) to mine towards for now, and later import into a CLI or GUI wallet.
 
 * In place of `[pool address]`, you'll need to choose a pool to mine towards. You can check the full list [here](Pools).
+
+Make the start file executable by running the following command:
+```
+chmod +x start.sh
+```
+
 
 Then start the miner-
 
