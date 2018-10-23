@@ -18,14 +18,14 @@ When you're poking around the codebase, you might see something like this:
 // Please see the included LICENSE file for more information.
 ```
 
-At the top of each file. We ask when you fork us to make sure you leave these license headers intact.
+At the top of each file. We ask when you fork us to make sure you leave these license headers intact.  
 When we're programming on codebases like this, we're standing upon the shoulders of giants,
 and it's both polite, and a legal requirement of the licenses used, to credit the other contributors to the code.
 
-As you may be aware, the CryptoNote white paper set out the initial specification for CryptoNote coins.
+As you may be aware, the CryptoNote white paper set out the initial specification for CryptoNote coins.  
 The ByteCoin developers created the first implementation of this specification working closely with the CryptoNote developers,
-and this is what has become ByteCoin today.
-This was forked early on to become Bitmonero, and then Monero.
+and this is what has become ByteCoin today.  
+This was forked early on to become Bitmonero, and then Monero.  
 The Monero developers have contributed back significant chunks of code to the original ByteCoin codebase,
 and of course, they maintain their own repositories and code.
 
@@ -34,7 +34,7 @@ by separating the needed constants and strings out into a separate file.
 
 TurtleCoin then forked the Forknote Project and made our own changes, some of which were then contributed back to ForkNote.
 
-So, make sure if you're doing a find and replace that all of these lines remain intact.
+So, make sure if you're doing a find and replace that all of these lines remain intact.  
 You can of course start adding your own copyright line, for example,
 
 ```
