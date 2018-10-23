@@ -90,21 +90,13 @@ If no binaries are available, or you prefer to compile, follow these instruction
 
 9.  XMR-Stak will now be located in `/home/user/xmr-stak/build/bin`
 
-10. In the terminal, type- (install it if it's not already)-
-
-    `ccmake ..`
-
-11. Using the Up and Down arrows, scroll to the 2nd page. Then, on `XMR-STAK_CURRENCY`, press enter to change it to `turtlecoin` (if needed, you can make personal tweaks by reading the descriptions of each value).
-
-12. Once you're done, press `c` and then `g` on your keyboard.
-
-13. Type-
+10. Type-
 
     `./xmr-stak`
 
-14. Check [XMR-Stak Setup and Configuration](#setup-and-config)
+11. Check [XMR-Stak Setup and Configuration](#setup-and-config)
 
-15. If you see something like this, that means it’s working!
+12. If you see something like this, that means it’s working!
 
 ![workubuntu](images/xmrstak-ubuntuwork.png)
 
