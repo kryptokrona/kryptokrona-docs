@@ -18,14 +18,14 @@ When you're poking around the codebase, you might see something like this:
 // Please see the included LICENSE file for more information.
 ```
 
-At the top of each file. We ask when you fork us to make sure you leave these license headers intact.
+At the top of each file. We ask when you fork us to make sure you leave these license headers intact.  
 When we're programming on codebases like this, we're standing upon the shoulders of giants,
 and it's both polite, and a legal requirement of the licenses used, to credit the other contributors to the code.
 
-As you may be aware, the CryptoNote white paper set out the initial specification for CryptoNote coins.
+As you may be aware, the CryptoNote white paper set out the initial specification for CryptoNote coins.  
 The ByteCoin developers created the first implementation of this specification working closely with the CryptoNote developers,
-and this is what has become ByteCoin today.
-This was forked early on to become Bitmonero, and then Monero.
+and this is what has become ByteCoin today.  
+This was forked early on to become Bitmonero, and then Monero.  
 The Monero developers have contributed back significant chunks of code to the original ByteCoin codebase,
 and of course, they maintain their own repositories and code.
 
@@ -34,7 +34,7 @@ by separating the needed constants and strings out into a separate file.
 
 TurtleCoin then forked the Forknote Project and made our own changes, some of which were then contributed back to ForkNote.
 
-So, make sure if you're doing a find and replace that all of these lines remain intact.
+So, make sure if you're doing a find and replace that all of these lines remain intact.  
 You can of course start adding your own copyright line, for example,
 
 ```
@@ -84,10 +84,104 @@ You can do this [here](https://github.com/join) if you don't have an account alr
 
 * Great, now the code is on our computer. We're almost ready to start changing it!
 
+## Compiling
 
-Next, I'd like to talk quickly about *atomic units*. You can skip this section if you're a pro already.
+First, it might be a good idea to try compiling our code, so we can mess around with it later.
+
+Just incase this guide gets outdated, you can always find the latest instructions on how to compile TurtleCoin on our
+[GitHub](https://github.com/turtlecoin/turtlecoin#how-to-compile).
+
+### Linux
+
+#### Prerequisites
+
+* You will need a few dependencies for the build, most notably, cmake, make, gcc, g++, and boost.
+
+* On ubuntu: `sudo apt-get install -y build-essential python-dev gcc g++ git cmake libboost-all-dev`
+
+#### Building
+
+* `cd turtlecoin`
+
+* `mkdir build`
+
+* `cd build`
+
+* `cmake ..`
+
+* `make`
+
+* The binaries will be placed in the `turtlecoin/build/src` folder.
+
+### Apple
+
+#### Prerequisites
+
+* Ensure you have brew installed. If you don't, you can install it like so: 
+`/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"`
+
+* Now we've got brew installed, we can install the dependencies.
+
+* `brew install cmake boost`
+
+#### Building
+
+* `cd turtlecoin`
+
+* `mkdir build`
+
+* `cd build`
+
+* `cmake ..`
+
+* `make`
+
+* The binaries will be placed in the `turtlecoin/build/src` folder.
+
+### Windows
+
+#### Prerequisites
+
+* Install [Visual Studio 2017 Community Edition](https://www.visualstudio.com/thank-you-downloading-visual-studio/?sku=Community&rel=15&page=inlineinstall)
+
+* When installing Visual Studio, ensure you install `Desktop development with C++` and the `VC++ v140 toolchain` when selecting features.
+
+* The option to install the v140 toolchain can be found by expanding the `Desktop development with C++` node on the right. You will need this for the project to build correctly.
+
+* Install [Boost 1.59.0](https://sourceforge.net/projects/boost/files/boost-binaries/1.59.0/), ensuring you download the installer for MSVC 14
+
+#### Building
+
+* From the start menu, open `x64 Native Tools Command Prompt for vs2017`
+
+* `cd <your_turtlecoin_directory>`
+
+* `mkdir build`
+
+* `cd build`
+
+* Set the PATH variable for cmake: e.g. `set PATH="C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin";%PATH%`
+
+* `cmake -G "Visual Studio 14 Win64" .. -DBOOST_ROOT=C:/local/boost_1_59_0` (Or your boost installed dir.)
+
+* `MSBuild TurtleCoin.sln /p:Configuration=Release /m`
+
+* The binaries will be placed in the `turtlecoin/build/src/Release` folder.
+
+## Recompiling
+
+Once you've compiled your code, you don't have to perform the full process above again.
+
+There are two rules. If you've added a new file, or removed a file, you will have to remove the build folder,
+recreate it, then re-run cmake, and then re-run make (Or MSBuild).
+
+If you've just changed code in a file, you just need to re-run make from the build folder. It will save
+bits which don't need to be recompiled, so this is a lot quicker most of the time.
 
 ## Atomic Units
+
+
+Next, I'd like to talk quickly about *atomic units*. You can skip this section if you're a pro already.
 
 All of the constants in CryptoNoteConfig.h and most of the code, that refers to the actual amount of coins, is in *Atomic Units*.
 
@@ -156,7 +250,7 @@ Note that there is also a CMakeLists.txt in the root directory, this is not the 
 The lines we want to be changing are at the very bottom of the file.
 
 ```
-set_property(TARGET Daemon PROPERTY OUTPUT_NAME "TurtleCoind")
+set_property(TARGET TurtleCoind PROPERTY OUTPUT_NAME "TurtleCoind")
 set_property(TARGET zedwallet PROPERTY OUTPUT_NAME "zedwallet")
 set_property(TARGET PaymentGateService PROPERTY OUTPUT_NAME "walletd")
 set_property(TARGET PoolWallet PROPERTY OUTPUT_NAME "poolwallet")
@@ -165,7 +259,7 @@ set_property(TARGET Miner PROPERTY OUTPUT_NAME "miner")
 
 To change the name of a binary, change the final string in one of these lines. For example:
 
-`set_property(TARGET Daemon PROPERTY OUTPUT_NAME "AppleCoind")`
+`set_property(TARGET TurtleCoind PROPERTY OUTPUT_NAME "AppleCoind")`
 
 Save the file, and recompile.
 
@@ -279,23 +373,23 @@ So, we would then pop this value in to give us:
 
 #### `const uint32_t ZAWY_DIFFICULTY_BLOCK_INDEX = 187000;`<br/>
 
-Next up we have the height where we want the first zawy difficulty algorithm to go live.
-The difficulty algorithm determines how hard it is to mine a block based on the speed the previous blocks came in.
+This section will cover all of these, since they are all related:
 
-This difficulty algorithm has had some flaws found with it, and a newer zawy algorithm is now in use.
-I would suggest you set this to `0`, to instantly activate it,
-and then we will switch to the newer zawy algorithm directly at the height of `1`.
+```
+const uint32_t ZAWY_DIFFICULTY_BLOCK_INDEX 	                 = 187000;
+const uint64_t LWMA_2_DIFFICULTY_BLOCK_INDEX                 = 620000;
+const uint64_t LWMA_2_DIFFICULTY_BLOCK_INDEX_V2              = 700000;
+const uint64_t LWMA_2_DIFFICULTY_BLOCK_INDEX_V3              = 800000;
+```
 
-- `const uint32_t ZAWY_DIFFICULTY_BLOCK_INDEX = 0;`<br/>
+These values set the heights where the different difficulty algorithms go live. A difficulty algorithm determines how hard it is to mine a block at a given height. If there are more people mining, it gets harder, and visa versa. This ensures blocks are found on average every 30 seconds (In TRTL's case).
 
+Difficulty algorithms are pretty hard to write, so we have quite a lot of revisions! We strongly suggest you use the latest version, to make you more resistant to pulse mining and timewarp attacks. The below section will activate each one at the first available block height, so you will be running the latest LWMA-2 by block 3.
 
-#### `const uint64_t LWMA_2_DIFFICULTY_BLOCK_INDEX = 620000;`<br/>
-
-This value sets the height for the newer zawy algorithm that was previously mentioned.
-I would suggest you set this value to `1`, to activate it instantly after the previous algorithm.
-This difficulty algorithm is much more resistant to pulse mining and time warping.
-
-- `const uint64_t LWMA_2_DIFFICULTY_BLOCK_INDEX = 1;`<br/>
+- `const uint32_t ZAWY_DIFFICULTY_BLOCK_INDEX   = 0;`<br/><br/>
+- `const uint32_t LWMA_2_DIFFICULTY_BLOCK_INDEX = 1;`<br/><br/>
+- `const uint32_t LWMA_2_DIFFICULTY_BLOCK_INDEX = 2;`<br/><br/>
+- `const uint32_t LWMA_2_DIFFICULTY_BLOCK_INDEX = 3;`<br/><br/>
 
 
 #### `const unsigned EMISSION_SPEED_FACTOR = 25;`<br/>
@@ -579,6 +673,19 @@ This will print out a long hash. Take this hash, and replace the value of
 Now, recompile your code, and set up your seed nodes.
 Once you start mining, the premine should appear in the wallet you previously created.
 Make sure you have your private keys to restore this wallet.
+
+## CryptoNoteCheckpoints.h
+
+A nice quick job, we need to remove all the checkpoints in `src/CryptoNoteCheckpoints.h`
+
+Checkpoints are used to verify that whilst syncing, you are on the right path, and not wasting your time
+syncing blocks from an incorrect daemon. It does this by matching a block hash to a block height.
+
+This is all grand, however if you are creating a new chain, you will of course have new hashes for your blocks!
+
+To fix it, just set `const std::initializer_list<CheckpointData> CHECKPOINTS = {};`
+
+It would be a good idea to add some checkpoints here for your new chain when you're up and running.
 
 ## WalletConfig.h
 
