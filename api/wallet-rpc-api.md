@@ -109,12 +109,12 @@ Parameter            | Description
 ## reset
 
 ```shell
-curl -d '{"jsonrpc":"2.0","id":1,"password":"passw0rd","method":"reset","params":{"viewSecretKey":"xxxxx..."}}' http://localhost:8070/json_rpc
+curl -d '{"jsonrpc":"2.0","id":1,"password":"passw0rd","method":"reset","params":{"scanHeight":100000}}' http://localhost:8070/json_rpc
 ```
 
 ```javascript
 service.reset({
-  viewSecretKey: '12345678901234567890'
+  scanHeight: 100000
 }).then(() => {
   // do something
 }).catch((error) => {
@@ -124,14 +124,14 @@ service.reset({
 
 ```php
 <?php
-$viewSecretKey = 'xxxxx...';
-$response = $turtleService->reset($viewSecretKey);
+$scanHeight = 100000;
+$response = $turtleService->reset($scanHeight);
 echo $response;
 ```
 
 ```python
-view_secret_key = 'xxxxx...'
-response = walletd.reset(view_secret_key)
+scan_height = 100000
+response = walletd.reset(scan_height)
 print(response)
 ```
 
@@ -161,8 +161,6 @@ if err != nil {
 
 Argument         | Mandatory   | Description      | Format
 ---------------- | ----------- | ---------------- | ------
-viewSecretKey    | No          | Private view key | string
-newAddress       | No          | Is this a new address being created? If so, blocks before the creation timestamp will not be scanned. Only one of newAddress and scanHeight can be specified, as if a new address is being created, there is no need to scan from a certain height. | bool
 scanHeight       | No          | The height to begin scanning for transactions at. This can greatly speed up wallet syncing time. | int
 
 
