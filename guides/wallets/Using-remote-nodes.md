@@ -64,3 +64,4 @@ pause
 | public.turtlenode.uk | 11898 | - |
 | turtle-node.me | 11898 | - |
 | 79.122.99.180 | 11898 | - |
+| turtlenode.co.uk | 11898 | - |
