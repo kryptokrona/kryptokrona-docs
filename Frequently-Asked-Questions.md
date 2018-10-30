@@ -211,7 +211,7 @@ A: This is a known issue with older macs or un-updated macs.
     Try entering this into a terminal -
 
   ```
-  curl -sL "https://raw.githubusercontent.com/turtlecoin/turtlecoin/master/multi_installer.sh" | bash
+  curl -sL "https://raw.githubusercontent.com/turtlecoin/turtlecoin/master/scripts/multi_installer.sh" | bash
   ```
 
   This automated script should compile the software itself, and place the binaries in ./src once done.  
