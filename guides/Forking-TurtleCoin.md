@@ -735,6 +735,8 @@ To fix it, just set `const std::initializer_list<CheckpointData> CHECKPOINTS = {
 
 It would be a good idea to add some checkpoints here for your new chain when you're up and running.
 
+**SUPER IMPORTANT** If you didn't do this and are now dealing with errors about failing hashes and checkpoints, you need to re-launch your coin. START AGAIN, this time ensuring you have an empty checkpoints list. What has happened by not clearing out the checkpoints is every block between 0 and 5k has not been verified. This means it was possible to double spend coins and your blockchain may very well have invalid transactions. All steps in this guide are important, however now you know why this one is especially important, good luck!
+
 ## WalletConfig.h
 
 Next up to modify is WalletConfig.h, located in `src/zedwallet/WalletConfig.h`
