@@ -378,8 +378,9 @@ A: Yes, you can view the guide [here](../wallets/Making-a-paper-wallet)
   * Faucet - Head over to the faucets-
     * [madk's faucet](https://faucet.trtl.me/) - 10 TRTL, thrice a day
     * [polar-it's faucet](https://turtlecoin-faucet.xhub.cloud/) - 25 TRTL, every 30 minutes  
+    
     and enter your TRTL address.  
-    The amount you can receive is limited to share the TRTL for all. Thanks to @madk and @polar-it for creating this.
+    The amount you can receive is limited to share the TRTL for all. Thanks to @madk and @polar-it for creating them.
 
 #### Q: Are there any light wallets / mobile wallets?
 
@@ -402,6 +403,7 @@ A: Yes, you can view the guide [here](../wallets/Making-a-paper-wallet)
   A: Yes, there are currently a few-
 
 * https://turtle.land
+* https://trtl.rocks
 * https://blocks.turtle.link
 * https://turtle-coin.com
 * https://explorer.trtlpwr.cc
