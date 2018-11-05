@@ -120,5 +120,5 @@ Due to Shellnet's `Message` field, you can send tips to streamers with Shellnet,
 
 To learn more, check out [TwitchTurtle](https://twitchturtle.com)
 
-To learn more and tipping streamers, and getting tipped if you are one, see [the docs](https://docs.twitchturtle.com).  
+To learn more about tipping streamers, and getting tipped if you are one, see [the docs](https://docs.twitchturtle.com).  
 It's a very painless process and only takes a few minutes!
