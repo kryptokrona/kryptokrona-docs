@@ -32,3 +32,5 @@ If you would like to setup a GUI wallet, you can take a look at [this guide](../
 ## Web Wallet
 
 We have one web wallet; [Shellnet](https://shellnet.pw) in operation, with [Fexra's Web Wallet](https://beta.turtlewallet.io/) and [Turtlestash](https://turtlestash.com) in development.
+
+If you would like to use Shellnet, you can check out [this guide](../Using-shellnet)

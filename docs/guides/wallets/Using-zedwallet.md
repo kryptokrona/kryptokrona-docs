@@ -4,7 +4,7 @@
 
 Here's a quick image of zedwallet in action:
 
-![zedwallet](guides/wallets/images/screenshot_zedwallet.png)
+![zedwallet](images/screenshot_zedwallet.png)
 
 ## Downloading
 
@@ -238,7 +238,7 @@ Depending on the amount you transfer, you may need to wait a while for confirmat
 
 Example:
 
-![transfer](guides/wallets/images/transfer-simple.png)
+![transfer](images/transfer-simple.png)
 
 
 #### Optimizing your Wallet
@@ -258,17 +258,17 @@ Full optimization completed!
 
 When it is completed, it will print out a green message `Full optimization completed!`
 
-![optimize](guides/wallets/images/optimize-simple.png)
+![optimize](images/optimize-simple.png)
 
 #### Payment ID<a name="tx-trtl-p-id"></a>
 
 Because transactions on the TurtleCoin blockchain are privatized, in some situations a payment ID is necessary for the recipient to be able to determine where the payment came from, for instance when depositing to an exchange or other service.
 
-**You need it if you're sending TRTL to an exchange, the tipbot or RainBorg**.
+**You need it if you're sending TRTL to an exchange**.
 
 To send a transaction with a payment ID, enter it when prompted to.
 
-![p-id](guides/wallets/images/p-id-simple.png)
+![p-id](images/p-id-simple.png)
 
 Note that typically, the service/recipient will generate and provide the required payment ID.
 

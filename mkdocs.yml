@@ -106,6 +106,8 @@ nav:
         - CLI Wallet:
           - zedwallet: guides/wallets/Using-zedwallet.md
           - Using Checkpoints: guides/wallets/Using-checkpoints.md
+        - Web Wallet:
+          - Shellnet: guides/wallets/Using-shellnet.md
         - Making a Paper Wallet: guides/wallets/Making-a-paper-wallet.md
         - Recovering your Wallet: guides/wallets/recovering-your-wallet.md
         - Using Remote Nodes: guides/wallets/Using-remote-nodes.md
