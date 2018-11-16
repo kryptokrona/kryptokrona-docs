@@ -21,7 +21,6 @@
   - [Others](Frequently-Asked-Questions#other)
 
 - Guides
-  - [Bootstrapping the Blockchain](Bootstrapping-the-Blockchain)
   - [RainBorg? Wat Dat?](RainBorg-Wat-Dat)
   - [Using trtlbot++](Using-trtlbot-plus-plus)
   - [Forking TurtleCoin](Forking-Turtlecoin)
