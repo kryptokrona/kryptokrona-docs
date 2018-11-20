@@ -27,15 +27,9 @@ Follow the steps given [here](../wallets/Using-zedwallet#sending-turtlecoin-tran
 
 #### GUI Wallet
 
-#### Nest Wallet
+##### Nest Wallet
 
 Follow the steps given [here](../wallets/Using-nest-wallet#sending-turtlecoin-transactions) and replace the value of the address with the one provided.
-
-#### ~~WinForms Wallet~~ [DEFUNCT]
-
-~~Follow the steps given [here](../wallets/Using-winforms-wallet#sending-turtlecoin-transactions) and replace the value of the address(recipient) with the one provided~~
-
-
 
 * See [Expected Results](#expected-results) section below
 
@@ -65,7 +59,7 @@ Replace `@person` with whom you want to tip it to.
 
 For example, `.tip 1 @RockSteady#7588` will tip the user called "RockSteady"  1 TRTL.
 
-*The minimum you can send is 0.01 TRTL, and the bot will take an extra 0.1 TRTL on top of what you tipped to account for fees
+*The minimum you can send is 0.01 TRTL, and the bot will take an extra 0.1 TRTL on top of what you tipped to account for fees  
 So if you tipped 1 TRTL, 1.1 TRTL will be pulled from your account so that the full 1 TRTL reaches the recipient*
 
 ### Adding a Message when Tipping
