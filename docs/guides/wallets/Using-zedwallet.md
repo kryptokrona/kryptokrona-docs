@@ -4,7 +4,7 @@
 
 Here's a quick image of zedwallet in action:
 
-![zedwallet](../images/screenshot_zedwallet.png)
+![zedwallet](images/screenshot_simplewallet.png)
 
 ## Downloading
 
