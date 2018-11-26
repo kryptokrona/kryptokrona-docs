@@ -86,5 +86,5 @@ How it works is,
 
 Basically, you get paid based on
 
-- the number of shares you submitted
+- the number of shares you submitted (how good what you're mining with is)
 - and how long you have been mining.
