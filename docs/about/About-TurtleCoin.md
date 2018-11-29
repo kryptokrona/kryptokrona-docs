@@ -22,6 +22,8 @@ Some of the main features of TurtleCoin include:
 
 - Amazing community
 
+- Send to anyone, around the world
+
 
 
 To learn more about us, check out our other various articles, describing:
