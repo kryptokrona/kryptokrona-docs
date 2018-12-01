@@ -30,4 +30,5 @@ If you would like to setup a GUI wallet, you can take a look at [this guide](Mak
 
 ## Web Wallet
 
-We have one web wallet [Shellnet](https://shellnet.pw) in operation, with [Fexra's Web Wallet](https://beta.turtlewallet.io/) and [Turtlestash](https://turtlestash.com) in development.
+- [Shellnet](https://shellnet.pw)
+- [TurtleWallet.lol](https://turtlewallet.lol)
