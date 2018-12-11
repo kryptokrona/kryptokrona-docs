@@ -266,7 +266,7 @@ Because transactions on the TurtleCoin blockchain are privatized, in some situat
 
 **You need it if you're sending TRTL to an exchange, the tipbot or RainBorg**.
 
-To send a transaction with a payment ID, enter it when prompted to.
+To send a transaction with a payment ID, enter it when prompted to. It is a 64char hex string.
 
 ![p-id](guides/wallets/images/p-id-simple.png)
 
