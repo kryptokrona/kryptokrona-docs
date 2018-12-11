@@ -919,7 +919,7 @@ addresses        | No                                                           
 blockHash        | Only one of these parameters (blockHash or firstBlockIndex) is allowed   | Hash of the starting block                                    | string
 firstBlockIndex  | Only one of these parameters (blockHash or firstBlockIndex) is allowed   | Starting height	                                            | int
 blockCount       | Yes                                                                      | Number of blocks to return transaction hashes from	        | int
-paymentId        | No                                                                       | Valid payment ID	                                            | string
+paymentId        | No                                                                       | Valid payment ID (64char hex string)	                        | string
 
 * If `paymentId` parameter is set, `getTransactionHashes()` method returns transaction hashes of transactions that contain specified payment ID in the given block range.
 * If `addresses` parameter is set, `getTransactionHashes()` method returns transaction hashes of transactions that contain transfer from at least one of specified addresses.
@@ -1060,9 +1060,9 @@ Argument        | Mandatory                                                     
 --------------- | ---------------------------------------------------------------------------- | ------------------------------------------------------ | -------
 addresses       | No                                                                           | Array of strings, where each string is an address		| array
 blockHash       | Only one of these parameters (`blockHash` or `firstBlockIndex`) is allowed.  | Hash of the starting block		                        | string
-firstBlockIndex | Only one of these parameters (`blockHash` or `firstBlockIndex`) is allowed.  | Starting height >0 (1,2,3...)		                                | int
+firstBlockIndex | Only one of these parameters (`blockHash` or `firstBlockIndex`) is allowed.  | Starting height >0 (1,2,3...)		                    | int
 blockCount      | Yes                                                                          | Number of blocks to return transaction hashes from		| int
-paymentId       | No                                                                           | Valid payment ID		                                | string
+paymentId       | No                                                                           | Valid payment ID (64char hex string)                   | string
 
 * If `paymentId` parameter is set, `getTransactions()` method returns transactions that contain specified payment ID in the given block range.
 * If `addresses` parameter is set, `getTransactions()` method returns transactions that contain transfer from at least one of specified addresses.
@@ -1080,7 +1080,7 @@ Transaction attributes:
 
 Argument            | Description                                       | Format
 ------------------- | --------------------------------------------------|-----------
-transactionHash     | Hash of the transaction                                                      | string
+transactionHash     | Hash of the transaction                                                       | string
 blockIndex          | Number of the block that contains a transaction                               | int
 timestamp           | Timestamp of the transaction                                                  | int
 isBase              | Shows if the transaction is a CoinBase transaction or not                     | boolean
@@ -1088,7 +1088,7 @@ unlockTime          | Height of the block when transaction is going to be availa
 amount              | Amount of the transaction                                                     | int
 fee                 | Transaction fee                                                               | int
 extra               | Hash of the  transaction                                                      | string
-paymentId           | Payment ID of the transaction (optional)                                      | string
+paymentId           | Payment ID of the transaction (optional) (64char hex string)                  | string
 transfers           | Array of address (string), amount (int)                                       | array
 
 
@@ -1251,7 +1251,7 @@ Transaction attributes:
 
 Argument            | Description                                                                   | Format
 ------------------- | ------------------------------------------------------------------------------|-------
-transactionHash     | Hash of the transaction                                                      | string
+transactionHash     | Hash of the transaction                                                       | string
 blockIndex          | Number of the block that contains a transaction                               | int
 timestamp           | Timestamp of the transaction                                                  | int
 isBase              | Shows if the transaction is a CoinBase transaction or not                     | boolean
@@ -1259,8 +1259,8 @@ unlockTime          | Height of the block when transaction is going to be availa
 amount              | Amount of the transaction                                                     | int
 fee                 | Transaction fee                                                               | int
 extra               | Hash of the  transaction                                                      | string
-paymentId           | Payment ID of the transaction (optional)                                      | string
-transfers           | Array of addresses (string), amount (int)                                  | array
+paymentId           | Payment ID of the transaction (optional)  (64char hex string)                 | string
+transfers           | Array of addresses (string), amount (int)                                     | array
 
 
 
@@ -1366,9 +1366,9 @@ addresses       | No            | Array of strings, where each string is an addr
 transfers       | Yes           | Array of objects, address: (string address), amount: (int amount)                        | array
 fee             | Yes           | Transaction fee. Minimal fee in TurtleCoin network is 0.10 TRTL. As with other amounts use whole units, 1 TRTL = 100 units, so 0.1 TRTL = 10 units | int
 unlockTime      | No            | The block height at which the transaction will be unlocked for spending.                 | int
-anonymity       | Yes           | Privacy (mixin) level from block 800,000 three (3) | int
+anonymity       | Yes           | Privacy (mixin) level from block 800,000 three (3)                                       | int
 extra           | No            | String of variable length. Can contain A-Z, 0-9 characters.                              | string
-paymentId       | No            | Payment ID                                                                               | string
+paymentId       | No            | Payment ID (64char hex string)                                                           | string
 changeAddress   | No            | Valid and existing address in this container.                                            | string
 
 * If container contains only 1 address, `changeAddress` field can be left empty and the change is going to be sent to this address.
@@ -1485,9 +1485,9 @@ addresses       | No            | Array of strings, where each string is an addr
 transfers       | Yes           | Array of address (string), amount (int)                                                  | array
 fee             | Yes           | Transaction fee. Minimal fee in TurtleCoin network is 0.10 TRTL. This parameter should be specified in minimal available TRTL units. For example, if your fee is 0.10 TRTL, you should pass it as 10. | int
 unlockTime      | No	        | Height of the block until which transaction is going to be locked for spending.	       | int
-anonymity       | Yes           | Privacy (mixin) level from block 800,000 three (3) | int
+anonymity       | Yes           | Privacy (mixin) level from block 800,000 three (3)                                       | int
 extra           | No            | String of variable length. Can contain A-Z, 0-9 characters.                              | string
-paymentId       | No            | Payment ID                                                                               | string
+paymentId       | No            | Payment ID  (64char hex string)                                                          | string
 changeAddress   | No            | Valid and existing in this container address.                                            | string
 
 * If container contains only 1 address, `changeAddress` field can be left empty and the change is going to be sent to this address
@@ -1903,10 +1903,10 @@ if err != nil {
 
 **Input**
 
-Argument              | Mandatory      | Description          | Format
---------------------- | -------------- | -------------------- | -------
-address               | Yes            | A valid address      | string
-paymentId             | Yes            | A valid paymentId    | string
+Argument              | Mandatory      | Description                           | Format
+--------------------- | -------------- | ------------------------------------- | -------
+address               | Yes            | A valid address                       | string
+paymentId             | Yes            | A valid paymentId (64char hex string) | string
 
 **Output**
 
