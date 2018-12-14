@@ -81,9 +81,9 @@ nav:
     - FAQ:
       - Frequently Asked Questions: Frequently-Asked-Questions.md
     - Guides:
-      - Bootstrapping the Blockchain: guides/Bootstrapping-the-Blockchain.md
-      - RainBorg? Wat Dat?: guides/RainBorg-Wat-Dat.md
       - Using trtlbot++: guides/Using-trtlbot-plus-plus.md
+      - RainBorg? Wat Dat?: guides/RainBorg-Wat-Dat.md
+      - Bootstrapping the Blockchain: guides/Bootstrapping-the-Blockchain.md
       - Forking TurtleCoin: guides/Forking-Turtlecoin.md
       - Mining:
         - How to Mine TRTL: guides/mining/Mining.md
