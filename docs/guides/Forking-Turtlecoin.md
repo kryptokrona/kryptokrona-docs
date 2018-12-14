@@ -73,7 +73,7 @@ You can do this [here](https://github.com/join) if you don't have an account alr
 * Now, take this URL shown, and copy it.
 
 * Next, you will need to download a git client.
-  If you are a windows user, I would suggest [Git  for Windows](https://gitforwindows.org/),
+  If you are a windows user, I would suggest [Git for Windows](https://gitforwindows.org/),
   whilst if you are a Linux or Mac user, you should have this either already installed,
   or can install it from your repos or with brew.
 
