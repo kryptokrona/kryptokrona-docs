@@ -29,3 +29,9 @@ This is a timeline dedicated to important dates in the history of TurtleCoin.
 
 - 2018 June
      * **01:** TurtleCoin blockchain surpassed 500k blocks
+
+- 2018 November
+     * **26**: TurtleCoin blockchain surpassed 1 MILLION blocks
+
+- 2018 December
+     * **9**: TurtleCoin celebrated it's 1 year anniversary
