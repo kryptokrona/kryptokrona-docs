@@ -27,8 +27,6 @@ Follow the steps given [here](../wallets/Using-zedwallet#sending-turtlecoin-tran
 
 #### GUI Wallet
 
-##### Nest Wallet
-
 Follow the steps given [here](../wallets/Using-nest-wallet#sending-turtlecoin-transactions) and replace the value of the address with the one provided.
 
 * See [Expected Results](#expected-results) section below
