@@ -1,6 +1,6 @@
 # Compiling from Source
 
-The instructions for in the README.md cover common platforms for compiling from source, it would be impractical to include them all. So this page exists to capture the other platforms/distros that TurtleCoin has been successfully compiled on.  
+The instructions for in the [README.md](https://github.com/turtlecoin/turtlecoin/blob/development/README.md) cover common platforms for compiling from source, it would be impractical to include them all. So this page exists to capture the other platforms/distros that TurtleCoin has been successfully compiled on.  
 Please add to it if your environment is not covered, thanks!
 
 ## CentOS 7
