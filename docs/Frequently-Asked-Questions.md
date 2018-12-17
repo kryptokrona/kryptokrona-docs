@@ -15,14 +15,14 @@ A: This occurs because of the blockchain forking, generally when one mining pool
 2018-May-07 15:52:19.908530 ERROR   Corrupted blockchain. Block with index 428973 and hash aafa7fd33d476535188bdd9e86ba51bb5e058be8e52367b78e9c0c03e74299c5 has previous block hash 2c0cf6c07612b9e1ea19c6922a56746b83cb42c7b11edfc4b185572225bb0f20, but parent has hash 26189359b64d4bb357a04b102a42a01d2771a3f3d80db3ca1b7395a2aeaede4a. Resynchronize your daemon please.
 2018-May-07 15:52:19.924135 INFO    Closing DB.
 ```
-A: Re-sync your daemon from scratch(see below question), [bootstrap the blockchain](Bootstrapping-the-Blockchain) or sync [using checkpoints](wallets/Using-checkpoints)
+A: Re-sync your daemon from scratch(see below question), [bootstrap the blockchain](../Bootstrapping-the-Blockchain) or sync [using checkpoints](../guides/wallets/Using-checkpoints)
 
 #### Q: How can I re-sync the blockchain?
 
 A: Close any TurtleCoin-related software, then go to `%APPDATA%`, and delete the `TurtleCoin` folder.
   Reopen TurtleCoind/the GUI wallet and let it re-sync.
 
-Alternatively, check [this guide](Bootstrapping-the-Blockchain) for instructions on how to bootstrap for a quicker sync.
+Alternatively, check [this guide](../Bootstrapping-the-Blockchain) for instructions on how to bootstrap for a quicker sync.
 
 #### Q: When I open TurtleCoind on a Mac, I get an error `Illegal instruction: 4`. How can I fix it?
 
@@ -67,7 +67,7 @@ Until you are fully synced, you won't be able to send transactions, and your bal
 
 #### Q: I think I should have more money in my balance than it is showing, what should I do?
 
-  A: Re-sync your daemon from scratch(see [here](#q-how-can-i-re-sync-the-blockchain)), [bootstrap the blockchain](Bootstrapping-the-Blockchain/) or sync [using checkpoints](wallets/Using-checkpoints).  
+  A: Re-sync your daemon from scratch(see [here](#q-how-can-i-re-sync-the-blockchain)), [bootstrap the blockchain](../Bootstrapping-the-Blockchain/) or sync [using checkpoints](../guides/wallets/Using-checkpoints).  
   If it still doesn't work, then [update](latest.turtlecoin.lol) your wallet!
 
 #### Q: I've tried resetting, but it isn't working. What should I do?
@@ -87,11 +87,11 @@ A:
 
 #### Q: How do I send TRTL?
 
-  A: You can check [this out](wallets/Using-zedwallet#tx-trtl) for steps on how to send TRTL to someone.
+  A: You can check [this out](../guides/wallets/Using-zedwallet#tx-trtl) for steps on how to send TRTL to someone.
 
 #### Q: How do I send money to exchanges / use payment ID?
 
-  A: You can check [this out](wallets/Using-zedwallet#tx-trtl-p-id) for steps on how to send TRTL with the payment ID.
+  A: You can check [this out](../guides/wallets/Using-zedwallet#tx-trtl-p-id) for steps on how to send TRTL with the payment ID.
 
 #### Q: What is mixin?
 
@@ -110,11 +110,11 @@ A:
 #### Q: Can I speed up the syncing of the blockchain?
 
   A: You can grab a recent copy of the blockchain and incrementally sync from there. See [here](../Bootstrapping-the-Blockchain) for instructions.  
-  Or, you can sync [with checkpoints](../wallets/Using-checkpoints)(only with zedwallet).
+  Or, you can sync [with checkpoints](../guides/wallets/Using-checkpoints)(only with zedwallet).
 
 #### Q: Can I skip the syncing?
 
-  A: Yes, you can currently use a remote node with zedwallet and Nest wallet. The keys stay on your PC, so it's secure. Check [this guide](wallets/Using-remote-nodes) for more information.
+  A: Yes, you can currently use a remote node with zedwallet and Nest wallet. The keys stay on your PC, so it's secure. Check [this guide](../guides/wallets/Using-remote-nodes) for more information.
 
 #### Q: What does it mean if my balance is locked?
 
@@ -339,11 +339,11 @@ A: Try installing this: <https://go.microsoft.com/fwlink/?LinkId=746572>
 
 #### Q: Can I make a paper wallet?
 
-A: Yes, you can view the guide [here](../wallets/Making-a-paper-wallet)
+A: Yes, you can view the guide [here](../guides/wallets/Making-a-paper-wallet)
 
 #### Q: I made a paper wallet, how do I use it?
 
-  A: You can check out [this guide](../wallets/recovering-your-wallet) for steps on how to import your paper wallet into a wallet of your choice(choose a wallet and import the keys).
+  A: You can check out [this guide](../guides/wallets/recovering-your-wallet) for steps on how to import your paper wallet into a wallet of your choice(choose a wallet and import the keys).
 
 #### Q: Can I view the balance of my wallet online?
 
@@ -378,11 +378,11 @@ A: Yes, you can view the guide [here](../wallets/Making-a-paper-wallet)
 
 #### Q: What is RainBorg / how does it work?
 
-  A: There is an in depth, graphical explanation [here](../RainBorg-Wat-Dat)
+  A: There is an in depth, graphical explanation [here](../guides/RainBorg-Wat-Dat)
 
 #### Q: How do I register my wallet on Discord?
 
-  A: You can check out this guide [here](../Using-trtlbot-plus-plus#registering-your-wallet).
+  A: You can check out this guide [here](../guides/Using-trtlbot-plus-plus#registering-your-wallet).
 
 #### Q: Where is the blockchain stored?
 
