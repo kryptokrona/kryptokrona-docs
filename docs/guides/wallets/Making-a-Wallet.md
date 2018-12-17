@@ -18,19 +18,19 @@ The CLI Wallet, called zedwallet, is a multi-platform program (Win/Linux/Mac) th
 
 If you would like to use zedwallet, you can check out [this guide](../Using-zedwallet).
 
-## Graphical Wallet (GUI Wallet)
+## Nest Wallet (GUI Wallet)
 
-If you prefer to use a GUI wallet, there is currently one which is being maintained:
+The GUI Wallet, called Nest Wallet, is a multi-platform program (Win/Linux/Mac) that is very user-friendly and supports all basic options which most users will need, such as making new wallet, restoring them, and sending and receiving transactions. 
 
-##### 1. [Nest Wallet](https://github.com/turtlecoin/turtle-wallet-go)
-
-**[WinForms wallet](https://github.com/turtlecoin/turtle-wallet-xamarin) is legacy and not supported anymore:**
-
-
-If you would like to setup a GUI wallet, you can take a look at [this guide](../Making-a-GUI-Wallet).
+If you would like to use Nest Wallet, you can check out [this guide](../Using-nest-wallet.md)
 
 ## Web Wallet
 
-We have one web wallet; [Shellnet](https://shellnet.pw) in operation, with [Fexra's Web Wallet](https://beta.turtlewallet.io/) and [Turtlestash](https://turtlestash.com) in development.
+We currently have two web wallets in operation:
+
+* [Shellnet](https://shellnet.pw), and 
+* [TurtleWallet.lol](https://turtlewallet.lol)
 
 If you would like to use Shellnet, you can check out [this guide](../Using-shellnet)
+
+A guide for TurtleWallet.lol is coming very soon!
