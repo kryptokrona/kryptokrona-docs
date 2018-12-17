@@ -1,6 +1,134 @@
 # Frequently Asked Questions
 
-## Mining and XMR-Stak
+## TurtleCoind / zedwallet Issues<a name="tcoind-zedwallet-issues"></a>
+
+#### Q: I'm seeing an error in TurtleCoind `Proof of work too weak for block...` and the syncing stopped.
+
+A: This occurs because of the blockchain forking, generally when one mining pool has a very large hashrate.
+
+  This can be fixed by re-syncing the correct blockchain from scratch. See [here](#q-how-can-i-re-sync-the-blockchain).
+
+#### Q: I'm getting a "corrupted blockchain" error like this?
+```
+2018-May-07 15:52:19.877323 INFO    initializing core
+2018-May-07 15:52:19.908530 INFO    Importing blocks from blockchain storage
+2018-May-07 15:52:19.908530 ERROR   Corrupted blockchain. Block with index 428973 and hash aafa7fd33d476535188bdd9e86ba51bb5e058be8e52367b78e9c0c03e74299c5 has previous block hash 2c0cf6c07612b9e1ea19c6922a56746b83cb42c7b11edfc4b185572225bb0f20, but parent has hash 26189359b64d4bb357a04b102a42a01d2771a3f3d80db3ca1b7395a2aeaede4a. Resynchronize your daemon please.
+2018-May-07 15:52:19.924135 INFO    Closing DB.
+```
+A: Re-sync your daemon from scratch(see below question), [bootstrap the blockchain](Bootstrapping-the-Blockchain) or sync [using checkpoints](wallets/Using-checkpoints)
+
+#### Q: How can I re-sync the blockchain?
+
+A: Close any TurtleCoin-related software, then go to `%APPDATA%`, and delete the `TurtleCoin` folder.
+  Reopen TurtleCoind/the GUI wallet and let it re-sync.
+
+Alternatively, check [this guide](Bootstrapping-the-Blockchain) for instructions on how to bootstrap for a quicker sync.
+
+#### Q: When I open TurtleCoind on a Mac, I get an error `Illegal instruction: 4`. How can I fix it?
+
+A: This is a known issue with older macs or un-updated macs.
+
+Try entering this into a terminal -
+
+```
+curl -sL "https://raw.githubusercontent.com/turtlecoin/turtlecoin/master/multi_installer.sh" | bash
+```
+
+This automated script should compile the software itself, and place the binaries in ./src once done.
+
+See [here](https://github.com/turtlecoin/turtlecoin#ubuntu-1604-and-macos-1010) for more info.
+
+If this fails, try instead following the instructions to [compile manually](https://github.com/turtlecoin/turtlecoin#apple)
+
+
+#### Q: I've opened the wallet, and I'm getting lots of red messages like "It looks like TurtleCoind isn't open!"...
+
+```
+It looks like TurtleCoind isn't open!
+
+Ensure TurtleCoind is open and has finished initializing.
+If it's still not working, try restarting TurtleCoind. The daemon sometimes gets
+stuck.
+Alternatively, perhaps TurtleCoind can't communicate with any peers.
+
+The wallet can't function until it can communicate with the network.
+```
+
+A: You need to also open up `TurtleCoind.exe` and let it sync. TurtleCoind is your connection to the network, and needs to be open and synced whenever you want to use your wallet.
+
+#### Q: I've opened the wallet, and I'm getting lots of messages like "Your TurtleCoind isn't fully synced yet!"..
+
+```
+Until you are fully synced, you won't be able to send transactions, and your balance may be missing or incorrect!
+```
+
+  A: Your daemon hasn't finished syncing yet. Keep zedwallet open, and wait until you are 0 days behind the current block, and for the daemon to print out a green message saying `Successfully synchronized with the TurtleCoin Network.`  
+  You can also type `status` in the daemon and press enter to see the current height it's at.
+
+#### Q: I think I should have more money in my balance than it is showing, what should I do?
+
+  A: Re-sync your daemon from scratch(see [here](#q-how-can-i-re-sync-the-blockchain)), [bootstrap the blockchain](Bootstrapping-the-Blockchain/) or sync [using checkpoints](wallets/Using-checkpoints).  
+  If it still doesn't work, then [update](latest.turtlecoin.lol) your wallet!
+
+#### Q: I've tried resetting, but it isn't working. What should I do?
+
+A:
+
+* In zedwallet, type `export_keys`, and save the view and spend key somewhere safe in case something goes wrong, if you haven't already.
+
+*  Then, close and reopen zedwallet and TurtleCoind.
+*  Type `reset` in zedwallet after reopening your wallet file.
+*  It should start resetting your wallet, but the progress might not be immediately obvious - wait a while, and it should start counting up the blocks and printing out your transactions as it gets to them.
+
+#### Q: How do I backup my wallet?
+
+  A: Open zedwallet and type `export_keys`.  
+  Save the view and spend key somewhere safe, and you can use them to reimport your wallet if you lose it.
+
+#### Q: How do I send TRTL?
+
+  A: You can check [this out](wallets/Using-zedwallet#tx-trtl) for steps on how to send TRTL to someone.
+
+#### Q: How do I send money to exchanges / use payment ID?
+
+  A: You can check [this out](wallets/Using-zedwallet#tx-trtl-p-id) for steps on how to send TRTL with the payment ID.
+
+#### Q: What is mixin?
+
+  A: Mixin is how many times your transaction is "mixed" with others for obfuscation and privacy.  
+  Mixin is locked by the network to `7` as of block `620,000` and is not adjustable by the user; this is done to ensure that no one can send a non-private transaction(`0` mixin) or be a victim of the "Tall Poppy Syndrome" by using a high mixin compared to everyone else on the network.
+
+
+#### Q: How can I view my balance?
+
+  A: If `TurtleCoind.exe` is fully synced, in zedwallet, simply type `balance`.
+
+#### Q: How long does it take to sync TurtleCoind.exe?
+
+  A: Currently it takes a couple of hours. This number will increase as more people use TRTL and the blockchain gets larger. If you'd like to speed up the process, check out the question below.
+
+#### Q: Can I speed up the syncing of the blockchain?
+
+  A: You can grab a recent copy of the blockchain and incrementally sync from there. See [here](../Bootstrapping-the-Blockchain) for instructions.  
+  Or, you can sync [with checkpoints](../wallets/Using-checkpoints)(only with zedwallet).
+
+#### Q: Can I skip the syncing?
+
+  A: Yes, you can currently use a remote node with zedwallet and Nest wallet. The keys stay on your PC, so it's secure. Check [this guide](wallets/Using-remote-nodes) for more information.
+
+#### Q: What does it mean if my balance is locked?
+
+  A: This is a transfer which hasn't been confirmed by the network yet. It will move into your main balance shortly, generally after 3 minutes.
+
+#### Q: In zedwallet.exe, I get an error `Error: failed to save new wallet: boost::filesystem::unique__path: Keyset as registered is invalid`. How can I fix it?
+
+  A: This is caused by some broken Windows crypto keys. In the address bar in Windows Explorer, type `%AppData%/Microsoft/Crypto/RSA/`.
+
+  There should be a folder in there, with a long name, like `S-1-5-21-1416222650-108526586-4052533318-1000`.
+
+  Go into this folder and delete the files in there. Then reboot, and try again.
+
+## Mining
 
 ### General mining questions<a name="mining-questions"></a>
 
@@ -194,146 +322,8 @@ A: Try installing this: <https://www.microsoft.com/en-us/download/details.aspx?i
 
 A: Try installing this: <https://go.microsoft.com/fwlink/?LinkId=746572>
 
-## TurtleCoind / zedwallet Issues<a name="tcoind-zedwallet-issues"></a>
-
-#### Q: I'm seeing an error in TurtleCoind `Proof of work too weak for block...` and the syncing stopped.
-
-A: This occurs because of the blockchain forking, generally when one mining pool has a very large hashrate.
-
-  This can be fixed by re-syncing the correct blockchain from scratch. See [here](#q-how-can-i-re-sync-the-blockchain).
-
-#### Q: I'm getting a "corrupted blockchain" error like this?
-```
-2018-May-07 15:52:19.877323 INFO    initializing core
-2018-May-07 15:52:19.908530 INFO    Importing blocks from blockchain storage
-2018-May-07 15:52:19.908530 ERROR   Corrupted blockchain. Block with index 428973 and hash aafa7fd33d476535188bdd9e86ba51bb5e058be8e52367b78e9c0c03e74299c5 has previous block hash 2c0cf6c07612b9e1ea19c6922a56746b83cb42c7b11edfc4b185572225bb0f20, but parent has hash 26189359b64d4bb357a04b102a42a01d2771a3f3d80db3ca1b7395a2aeaede4a. Resynchronize your daemon please.
-2018-May-07 15:52:19.924135 INFO    Closing DB.
-```
-A: Re-sync your daemon from scratch(see below question), [bootstrap the blockchain](Bootstrapping-the-Blockchain) or sync [using checkpoints](wallets/Using-checkpoints)
-
-#### Q: How can I re-sync the blockchain?
-
-A: Close any TurtleCoin-related software, then go to `%APPDATA%`, and delete the `TurtleCoin` folder.
-  Reopen TurtleCoind/the GUI wallet and let it re-sync.
-
-Alternatively, check [this guide](Bootstrapping-the-Blockchain) for instructions on how to bootstrap for a quicker sync.
-
-#### Q: When I open TurtleCoind on a Mac, I get an error `Illegal instruction: 4`. How can I fix it?
-
-A: This is a known issue with older macs or un-updated macs.
-
-Try entering this into a terminal -
-
-```
-curl -sL "https://raw.githubusercontent.com/turtlecoin/turtlecoin/master/multi_installer.sh" | bash
-```
-
-This automated script should compile the software itself, and place the binaries in ./src once done.
-
-See [here](https://github.com/turtlecoin/turtlecoin#ubuntu-1604-and-macos-1010) for more info.
-
-If this fails, try instead following the instructions to [compile manually](https://github.com/turtlecoin/turtlecoin#apple)
-
-
-#### Q: I've opened the wallet, and I'm getting lots of red messages like "It looks like TurtleCoind isn't open!"...
-
-```
-It looks like TurtleCoind isn't open!
-
-Ensure TurtleCoind is open and has finished initializing.
-If it's still not working, try restarting TurtleCoind. The daemon sometimes gets
-stuck.
-Alternatively, perhaps TurtleCoind can't communicate with any peers.
-
-The wallet can't function until it can communicate with the network.
-```
-
-A: You need to also open up `TurtleCoind.exe` and let it sync. TurtleCoind is your connection to the network, and needs to be open and synced whenever you want to use your wallet.
-
-#### Q: I've opened the wallet, and I'm getting lots of messages like "Your TurtleCoind isn't fully synced yet!"..
-
-```
-Until you are fully synced, you won't be able to send transactions, and your balance may be missing or incorrect!
-```
-
-  A: Your daemon hasn't finished syncing yet. Keep zedwallet open, and wait until you are 0 days behind the current block, and for the daemon to print out a green message saying `Successfully synchronized with the TurtleCoin Network.`  
-  You can also type `status` in the daemon and press enter to see the current height it's at.
-
-#### Q: I think I should have more money in my balance than it is showing, what should I do?
-
-  A: Re-sync your daemon from scratch(see [here](#q-how-can-i-re-sync-the-blockchain)), [bootstrap the blockchain](Bootstrapping-the-Blockchain/) or sync [using checkpoints](wallets/Using-checkpoints).  
-  If it still doesn't work, then [update](latest.turtlecoin.lol) your wallet!
-
-#### Q: I've tried resetting, but it isn't working. What should I do?
-
-A:
-
-* In zedwallet, type `export_keys`, and save the view and spend key somewhere safe in case something goes wrong, if you haven't already.
-
-*  Then, close and reopen zedwallet and TurtleCoind.
-*  Type `reset` in zedwallet after reopening your wallet file.
-*  It should start resetting your wallet, but the progress might not be immediately obvious - wait a while, and it should start counting up the blocks and printing out your transactions as it gets to them.
-
-#### Q: How do I backup my wallet?
-
-  A: Open zedwallet and type `export_keys`.  
-  Save the view and spend key somewhere safe, and you can use them to reimport your wallet if you lose it.
-
-#### Q: How do I send TRTL?
-
-  A: You can check [this out](wallets/Using-zedwallet#tx-trtl) for steps on how to send TRTL to someone.
-
-#### Q: How do I send money to exchanges / use payment ID?
-
-  A: You can check [this out](wallets/Using-zedwallet#tx-trtl-p-id) for steps on how to send TRTL with the payment ID.
-
-#### Q: What is mixin?
-
-  A: Mixin is how many times your transaction is "mixed" with others for obfuscation and privacy.  
-  Mixin is locked by the network to `7` as of block `620,000` and is not adjustable by the user; this is done to ensure that no one can send a non-private transaction(`0` mixin) or be a victim of the "Tall Poppy Syndrome" by using a high mixin compared to everyone else on the network.
-
-
-#### Q: How can I view my balance?
-
-  A: If `TurtleCoind.exe` is fully synced, in zedwallet, simply type `balance`.
-
-#### Q: How long does it take to sync TurtleCoind.exe?
-
-  A: Currently it takes a couple of hours. This number will increase as more people use TRTL and the blockchain gets larger. If you'd like to speed up the process, check out the question below.
-
-#### Q: Can I speed up the syncing of the blockchain?
-
-  A: You can grab a recent copy of the blockchain and incrementally sync from there. See [here](../Bootstrapping-the-Blockchain) for instructions.  
-  Or, you can sync [with checkpoints](../wallets/Using-checkpoints)(only with zedwallet).
-
-#### Q: Can I skip the syncing?
-
-  A: Yes, you can currently use a remote node with zedwallet and Nest wallet. The keys stay on your PC, so it's secure. Check [this guide](wallets/Using-remote-nodes) for more information.
-
-#### Q: What does it mean if my balance is locked?
-
-  A: This is a transfer which hasn't been confirmed by the network yet. It will move into your main balance shortly, generally after 3 minutes.
-
-#### Q: In zedwallet.exe, I get an error `Error: failed to save new wallet: boost::filesystem::unique__path: Keyset as registered is invalid`. How can I fix it?
-
-  A: This is caused by some broken Windows crypto keys. In the address bar in Windows Explorer, type `%AppData%/Microsoft/Crypto/RSA/`.
-
-  There should be a folder in there, with a long name, like `S-1-5-21-1416222650-108526586-4052533318-1000`.
-
-  Go into this folder and delete the files in there. Then reboot, and try again.
-
-## GUI Wallet(s)<a name="gui-wallets"></a>
-
-#### Q: Are there any GUI wallets?
-
-  A: Yes, there is currently 1 GUI wallet actively in development(and one legacy GUI wallet), along with some mobile wallets too. However, they may not be ready for full use yet, and may not work on your operating system.
-
-* [Nest Wallet](https://github.com/turtlecoin/turtle-wallet-go)
-* [Xamarin Wallet](https://github.com/turtlecoin/turtle-wallet-xamarin)[DEFUNCT]
-
-To view a guide on using them, you can go [here](wallets/Making-a-Wallet/#graphical-wallet-gui-wallet)
-
 ## Paper Wallet / Cold Storage?<a name="paper-wallet-cold-storage"></a>
+
 #### Q: Wait, What's Cold Storage?
 
   A: The term "cold storage" refers to a wallet that has been created via an offline means.
