@@ -18,13 +18,13 @@ See [API Documentation](https://api-docs.turtlecoin.lol/) for usage.
 ## Libraries
 
 * [Woo Turtle](https://github.com/turtlecoin/woo-turtle): A TurtleCoin Payment Gateway Plugin for WooCommerce.
-* [TurtleCoin.Net API](https://github.com/turtlecoin/turtlecoin-walletd-csharp): An asynchronous wrapper API for loading and accessing the TurtleCoin daemon and wallet applications. Built to ease the creation of wallets and applications that want to pull data from the network.
+* [TurtleCoin.Net API](https://github.com/turtlecoin/turtlecoin-walletd-csharp): An asynchronous wrapper API for loading and accessing the TurtleCoin daemon and wallet application through C#.
 * [turtlecoind-ha](https://www.npmjs.com/package/turtlecoind-ha): NodeJS TurtleCoind High-Availability Daemon Wrapper
 * [turtleservice-ha](https://www.npmjs.com/package/turtleservice-ha): NodeJS Turtle-Service High-Availability Wrapper
 
 ## Reads
 
-* [turtlecoin/cs-turtlecoin](https://github.com/turtlecoin/cs-turtlecoin): TurtleCoin daemon spec and PoC.
+* [CantiLib](https://github.com/turtlecoin/cs-turtlecoin): TurtleCoin daemon spec and PoC.
 * [Developer blog](https://blog.turtlecoin.lol)
 * [Bytecoin docs](https://wiki.bytecoin.org/wiki/Main_Page)
 
