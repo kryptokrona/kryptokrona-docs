@@ -113,5 +113,5 @@ nav:
         - Smart Contracts: guides/crypto-funda/smart-contract.md
     - For Developers:
       - Resources: developers/Resources.md
-      - Compiling from Source: guides/service-operators/Compiling-from-Source.md
-      - TurtleCoind behind HAProxy: guides/service-operators/TurtleCoind-behind-HAProxy.md
+      - Compiling from Source: developers/Compiling-from-Source.md
+      - TurtleCoind behind HAProxy: developers/TurtleCoind-behind-HAProxy.md
