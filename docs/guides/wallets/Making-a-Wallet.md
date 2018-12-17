@@ -22,7 +22,7 @@ If you would like to use zedwallet, you can check out [this guide](../Using-zedw
 
 The GUI Wallet, called Nest Wallet, is a multi-platform program (Win/Linux/Mac) that is very user-friendly and supports all basic options which most users will need, such as making new wallet, restoring them, and sending and receiving transactions. 
 
-If you would like to use Nest Wallet, you can check out [this guide](../Using-nest-wallet.md)
+If you would like to use Nest Wallet, you can check out [this guide](../Using-nest-wallet)
 
 ## Web Wallet
 
