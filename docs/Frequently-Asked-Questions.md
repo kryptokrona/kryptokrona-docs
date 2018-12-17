@@ -398,10 +398,10 @@ A: Yes, you can view the guide [here](../wallets/Making-a-paper-wallet)
 
 #### Q: How do I make sure a pool isn't forked?
 
-You can ask someone in the [Discord][Discord_Link] with a coloured name(aside from green) to run `/forked` for you, which will return with a list of pools which are possibly forked.
+You can ask someone in the [Discord][Discord_Link] with a coloured name(aside from yellow or brown) to run `/forked` for you, which will return with a list of pools which are possibly forked.
 
 #### Q: I have a question which wasn't answered here, what should I do?
 
-  A: [Join the Discord][Discord_Link], and come to the `#help` channel, we'll try and fix any issues.
+  A: [Join the Discord server][Discord_Link], and come to the `#help` channel, we'll try and fix any issues.
 
 [Discord_Link]:http://chat.turtlecoin.lol/
