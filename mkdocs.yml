@@ -99,8 +99,7 @@ nav:
           - Using AA Miner: guides/mining/mobile-mining/Using-AA-Miner.md
       - Wallets:
         - Making a Wallet: guides/wallets/Making-a-Wallet.md
-        - GUI Wallets:
-          - Overview of GUI Wallets: guides/wallets/Making-a-GUI-Wallet.md
+        - GUI Wallet:
           - Nest Wallet: guides/wallets/Using-nest-wallet.md
         - CLI Wallet:
           - zedwallet: guides/wallets/Using-zedwallet.md
