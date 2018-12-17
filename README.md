@@ -107,7 +107,38 @@ If:
 
 ### More Information on Contributing
 
-For more rules on contributing and the format with which to do it, compare 2 files from the existing wiki to this repo, and see how they shape up. If you observe them closely enough, you'll be able to figure out how to go about formatting.
+
+  #### PR -> Build -> Merge -> Publish
+
+  Whenever a PR is made, Netlify automatically builds it and serves a preview. In case the build doesn't pass(red X), then add a ninja commit to fix it.
+  
+  #### Testing the site locally
+  
+  Testing the site locally is very easy!
+  
+  1. Install mkdocs
+  ```
+  pip install mkdocs && mkdocs --version
+  # mkdocs, version 0.17.1
+  ```
+  Material requires MkDocs >= 0.17.1.
+  (You will need to install [Python](https://www.python.org/) if you don't already have it)
+  
+  2. Install mkdocs-material (the theme)
+  ```
+  pip install mkdocs-material
+  ```
+  
+  3. CD to where your edited version of sajodocs is located, and run the build command.
+  ```
+  cd sajodocs
+  mkdocs serve
+  ```
+  
+  4. Open [http://localhost:8000](http://localhost:8000) to check; if all went well, then the website will be visible. Check the pages you edited to make sure it all checks out!
+
+
+For more rules on the markdown format to contributie, compare these 2 files from the existing wiki to this repo, and see how they shape up. These point out all differences present.
 
 ---
 
@@ -133,8 +164,3 @@ https://raw.githubusercontent.com/turtlecoin/turtlecoin-docs/master/guides/minin
 
 https://raw.githubusercontent.com/turtlecoin/sajodocs/master/docs/guides/mining/XMR-Stak-Linux-Guide.md
 
----
-
-### PR -> Build -> Merge -> Publish
-
-Whenever a PR is made, Netlify automatically builds it and serves a preview. In case the build doesn't pass(red X), then add a ninja commit to fix it.
