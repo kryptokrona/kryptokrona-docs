@@ -324,7 +324,7 @@ A: Try installing this: <https://go.microsoft.com/fwlink/?LinkId=746572>
 
 ## Paper Wallet / Cold Storage?<a name="paper-wallet-cold-storage"></a>
 
-#### Q: Wait, What's Cold Storage?
+#### Q: Wait, what's Cold Storage?
 
   A: The term "cold storage" refers to a wallet that has been created via an offline means.
 
@@ -386,17 +386,15 @@ A: Yes, you can view the guide [here](../wallets/Making-a-paper-wallet)
 
 #### Q: Where is the blockchain stored?
 
-  A: On Windows, it is in `%AppData%/turtlecoin`. On Mac and Linux, it is in `~/.turtlecoin`.
+  A: On Windows, it is in `%APPDATA%/turtlecoin`. On Mac and Linux, it is in `~/.turtlecoin`.
 
 #### Q: Is there a blockchain explorer?
 
   A: Yes, there are currently a few-
 
+* https://explorer.turtlecoin.lol
 * https://turtle.land
-* https://trtl.rocks
-* https://blocks.turtle.link
-* https://turtle-coin.com
-* https://explorer.trtlpwr.cc
+* http://trtl.rocks
 
 #### Q: How do I make sure a pool isn't forked?
 
