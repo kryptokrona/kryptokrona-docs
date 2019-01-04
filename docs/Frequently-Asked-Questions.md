@@ -22,7 +22,7 @@ A: Re-sync your daemon from scratch(see below question), [bootstrap the blockcha
 A: Close any TurtleCoin-related software, then go to `%APPDATA%`, and delete the `TurtleCoin` folder.
   Reopen TurtleCoind/the GUI wallet and let it re-sync.
 
-Alternatively, check [this guide](../Bootstrapping-the-Blockchain) for instructions on how to bootstrap for a quicker sync.
+Alternatively, check [this guide](../guides/wallets/Using-checkpoints) for instructions on how to use checkpoints for a quicker sync.
 
 #### Q: When I open TurtleCoind on a Mac, I get an error `Illegal instruction: 4`. How can I fix it?
 
