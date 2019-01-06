@@ -46,18 +46,6 @@ If no binaries are available, or you prefer to compile, follow these instruction
 
       `git clone https://github.com/fireice-uk/xmr-stak.git`
 
-4. To remove donations, type-
-
-     `gedit xmr-stak/xmrstak/donate-level.hpp`
-
-* Change-
-
-      `constexpr double fDevDonationLevel = 2.0 / 100.0;`
-
-* to
-
-       `constexpr double fDevDonationLevel = 0.0 / 100.0;`
-
  5. Make a directory-
 
        `mkdir xmr-stak/build`
