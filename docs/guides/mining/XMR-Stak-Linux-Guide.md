@@ -48,27 +48,15 @@ If no binaries are available, or you prefer to compile, follow these instruction
 
     `git clone https://github.com/fireice-uk/xmr-stak.git`
 
-4.  To remove donations, type-
-
-    `gedit xmr-stak/xmrstak/donate-level.hpp`
-
-    * Change-
-
-    `constexpr double fDevDonationLevel = 2.0 / 100.0;`
-
-    * to
-
-    `constexpr double fDevDonationLevel = 0.0 / 100.0;`
-
-5.  Make a directory-
+4.  Make a directory-
 
     `mkdir xmr-stak/build`
 
-6.  Move over there-  
+5.  Move over there-  
 
     `cd xmr-stak/build`
 
-7.  Run cmake-
+6.  Run cmake-
 
     `cmake ..`
 
@@ -84,19 +72,19 @@ If no binaries are available, or you prefer to compile, follow these instruction
 
     `cmake .. -DCUDA_ENABLE=OFF -DOpenCL_ENABLE=OFF`
 
-8.  Finish building it-
+7.  Finish building it-
 
     `make install`
 
-9.  XMR-Stak will now be located in `/home/user/xmr-stak/build/bin`
+8.  XMR-Stak will now be located in `/home/user/xmr-stak/build/bin`
 
-10. Type-
+9. Type-
 
     `./xmr-stak`
 
-11. Check [XMR-Stak Setup and Configuration](#setup-and-config)
+10. Check [XMR-Stak Setup and Configuration](#setup-and-config)
 
-12. If you see something like this, that means it’s working!
+11. If you see something like this, that means it’s working!
 
 ![workubuntu](images/xmrstak-ubuntuwork.png)
 
