@@ -367,10 +367,11 @@ A: Yes, you can view the guide [here](../guides/wallets/Making-a-paper-wallet)
   * Rain - Good active Turtles get rained on, check out what the [RainBorg](../RainBorg-Wat-Dat) is to see how to use it.
   * Faucet - Head over to the faucets-
     * [madk's faucet](https://faucet.trtl.me/) - 10 TRTL, thrice a day
-    * [polar-it's faucet](https://turtlecoin-faucet.xhub.cloud/) - 25 TRTL, every 30 minutes  
+    * [polar-it's faucet](https://turtlecoin-faucet.xhub.cloud/) - 25 TRTL, every 30 minutes
+    * [fipsi's faucet](https://trtlfaucet.de.cool/) - 100 TRTL, after every 500 turtles use it
     
     and enter your TRTL address.  
-    The amount you can receive is limited to share the TRTL for all. Thanks to @madk and @polar-it for creating them.
+    The amount you can receive is limited to share the TRTL for all. Thanks to @madk, @polar-it and @fipsi for creating them.
 
 #### Q: Are there any light wallets / mobile wallets?
 
@@ -390,9 +391,11 @@ A: Yes, you can view the guide [here](../guides/wallets/Making-a-paper-wallet)
 
 #### Q: Is there a blockchain explorer?
 
-  A: Yes, there are currently a few-
-
+  A: Yes, the offical one is
+  
 * https://explorer.turtlecoin.lol
+
+although there are currently a few other unique ones-
 * https://turtle.land
 * http://trtl.rocks
 
