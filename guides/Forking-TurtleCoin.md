@@ -2,6 +2,9 @@
 
 ### A newer guide exists at https://turtlecoin.github.io/fork
 
+Note: A newer guide exists on https://turtlecoin.github.io/fork
+
+
 So you want to fork TurtleCoin, huh?
 
 This guide will help you change the necessary sections of the code to set up your coin how you like it.
