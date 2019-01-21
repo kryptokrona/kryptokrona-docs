@@ -24,6 +24,7 @@
   - [RainBorg? Wat Dat?](RainBorg-Wat-Dat)
   - [Using trtlbot++](Using-trtlbot-plus-plus)
   - [Forking TurtleCoin](Forking-Turtlecoin)
+  - [Running TurtleCoind on a Pi](Running-TurtleCoind-on-Pi)
   - [Mining](Mining)
     - [Mining Software](Mining#how-to-mine)
       - [XMR-Stak](XMR-Stak-Guide)
