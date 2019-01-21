@@ -373,7 +373,7 @@ A: Yes, you can view the guide [here](../guides/wallets/Making-a-paper-wallet)
     and enter your TRTL address.  
     The amount you can receive is limited to share the TRTL for all. Thanks to @madk, @polar-it and @fipsi for creating them.
 
-#### Q:Is there a web wallet?
+#### Q: Is there a web wallet?
 
   A: Yep there is one. You can find it at [turtlewallet.lol](https://turtlewallet.lol/)
     
@@ -400,6 +400,7 @@ A: Yes, you can view the guide [here](../guides/wallets/Making-a-paper-wallet)
 * https://explorer.turtlecoin.lol
 
 although there are currently a few other unique ones-  
+
 * https://turtle.land  
 * http://trtl.rocks
 
