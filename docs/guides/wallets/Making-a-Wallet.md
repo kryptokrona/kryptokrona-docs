@@ -29,8 +29,8 @@ If you would like to use Nest Wallet, you can check out [this guide](../Using-ne
 We currently have two web wallets in operation:
 
 * [Shellnet](https://shellnet.pw), and 
-* [TurtleWallet.lol](https://turtlewallet.lol)
+* [TurtleWallet](https://turtlewallet.lol)
 
 If you would like to use Shellnet, you can check out [this guide](../Using-shellnet)
 
-A guide for TurtleWallet.lol is coming very soon!
+A guide for TurtleWallet is coming very soon!
