@@ -1,6 +1,6 @@
 # Making a TurtleCoin Wallet
 
-There are multiple different types of wallets you can choose to use for TurtleCoin, paper wallets, CLI wallets, GUI wallets and Web Wallets (under development).
+There are multiple different types of wallets you can choose to use for TurtleCoin, paper wallets, CLI wallets, GUI wallets and Web Wallets.
 
 We recommend making a paper wallet so that you can start receiving funds, and later import them into a GUI or CLI wallet.
 
