@@ -83,7 +83,6 @@ nav:
     - Guides:
       - Using trtlbot++: guides/Using-trtlbot-plus-plus.md
       - RainBorg? Wat Dat?: guides/RainBorg-Wat-Dat.md
-      - Bootstrapping the Blockchain: guides/Bootstrapping-the-Blockchain.md
       - Forking TurtleCoin: guides/Forking-Turtlecoin.md
       - Mining:
         - How to Mine TRTL: guides/mining/Mining.md
