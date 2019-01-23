@@ -84,6 +84,7 @@ nav:
       - Using trtlbot++: guides/Using-trtlbot-plus-plus.md
       - RainBorg? Wat Dat?: guides/RainBorg-Wat-Dat.md
       - Forking TurtleCoin: guides/Forking-Turtlecoin.md
+      - Running TurtleCoind on a Pi: guides/TurtleCoind-on-Pi.md
       - Mining:
         - How to Mine TRTL: guides/mining/Mining.md
         - XMR-Stak: guides/mining/XMR-Stak-Guide.md
