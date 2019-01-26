@@ -18,7 +18,7 @@ If you would like to use it, check out the guide [here](../Using-shellnet)
 
 ## [TurtleWallet](https://turtlewallet.lol)
 
-TurtleWallet is a multi-featured TurtleCoin Web Wallet, which has all of the features Shellnet has, and also boasts of:
+TurtleWallet is a multi-featured TurtleCoin Web Wallet made by Fexra, which has all of the features Shellnet has, and also boasts of:
 
 * price charts in USD, BTC, LTC and ETH
 * light/night mode
