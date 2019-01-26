@@ -374,7 +374,8 @@ A: Yes, you can view the guide [here](../guides/wallets/Making-a-paper-wallet)
 
 #### Q: Is there a web wallet?
 
-  A: Yep there is one. You can find it at [turtlewallet.lol](https://turtlewallet.lol/)
+  A: Yes, we have a few. You can learn more about them in [this guide](../guides/wallets/Using-a-Web-Wallet).
+
     
 #### Q: Are there any light wallets / mobile wallets?
 

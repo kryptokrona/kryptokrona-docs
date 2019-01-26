@@ -118,7 +118,7 @@ It is currently not possible to import your wallet in Shellnet, and is not plann
 
 Due to Shellnet's `Message` field, you can send tips to streamers with Shellnet, utilizing TwitchTurtle!
 
-To learn more, check out [TwitchTurtle](https://twitchturtle.com)
+To learn more, check out [TwitchTurtle](https://trtl.tv)
 
-To learn more about tipping streamers, and getting tipped if you are one, see [the docs](https://docs.twitchturtle.com).  
+To learn more about tipping streamers, and getting tipped if you are one, see [the docs](https://docs.trtl.tv).  
 It's a very painless process and only takes a few minutes!

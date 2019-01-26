@@ -31,6 +31,4 @@ We currently have two web wallets in operation:
 * [Shellnet](https://shellnet.pw), and 
 * [TurtleWallet](https://turtlewallet.lol)
 
-If you would like to use Shellnet, you can check out [this guide](../Using-shellnet)
-
-A guide for TurtleWallet is coming very soon!
+You can learn more about them at [this guide](../Using-a-Web-Wallet)

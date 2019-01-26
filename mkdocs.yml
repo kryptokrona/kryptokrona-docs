@@ -105,6 +105,7 @@ nav:
           - zedwallet: guides/wallets/Using-zedwallet.md
           - Using Checkpoints: guides/wallets/Using-checkpoints.md
         - Web Wallet:
+          - Using a Web Wallet: guides/wallets/Using-a-Web-Wallet.md
           - Shellnet: guides/wallets/Using-shellnet.md
         - Making a Paper Wallet: guides/wallets/Making-a-paper-wallet.md
         - Recovering your Wallet: guides/wallets/recovering-your-wallet.md
