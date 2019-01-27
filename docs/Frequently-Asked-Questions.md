@@ -325,92 +325,105 @@ A: Try installing this: <https://go.microsoft.com/fwlink/?LinkId=746572>
 
 #### Q: Wait, what's Cold Storage?
 
-  A: The term "cold storage" refers to a wallet that has been created via an offline means.
+??? faq "Answer"
+    The term "cold storage" refers to a wallet that has been created via an offline means.
 
- The preferred way to do this is via a computer than has never ever been connected to the internet, commonly referred to as an air gapped device.
+    The preferred way to do this is via a computer than has never ever been connected to the internet, commonly referred to as an air gapped device.
 
 
- Why is this a thing? If done properly it means it is near impossible for the keys to be secretly intercepted since the data is never viewable by other compute devices.
+    Why is this a thing? If done properly it means it is near impossible for the keys to be secretly intercepted since the data is never viewable by other compute devices.
 
-  You see above/elsewhere wallet files are being created via the wallet software, these files might be stored unencrypted, if unencrypted then the keys can be read by malicious software and balances of those wallets, transferred.
+    You see above/elsewhere wallet files are being created via the wallet software, these files might be stored unencrypted, if unencrypted then the keys can be read by malicious software and balances of those wallets, transferred.
 
-  Thus to protect against that scenario you could transfer any TRTL balance to one of these cold storage addresses. Please remember to keep secure/secret backups of your keys. If you lose the keys you lose any balance that was transferred to that wallet.
+    Thus to protect against that scenario you could transfer any TRTL balance to one of these cold storage addresses. Please remember to keep secure/secret backups of your keys. If you lose the keys you lose any balance that was transferred to that wallet.
 
 #### Q: Can I make a paper wallet?
 
-A: Yes, you can view the guide [here](../guides/wallets/Making-a-paper-wallet)
+??? faq "Answer"
+    Yes, you can view the guide [here](../guides/wallets/Making-a-paper-wallet)
 
 #### Q: I made a paper wallet, how do I use it?
 
-  A: You can check out [this guide](../guides/wallets/recovering-your-wallet) for steps on how to import your paper wallet into a wallet of your choice(choose a wallet and import the keys).
+??? faq "Answer"
+    You can check out [this guide](../guides/wallets/recovering-your-wallet) for steps on how to import your paper wallet into a wallet of your choice(choose a wallet and import the keys).
 
 #### Q: Can I view the balance of my wallet online?
 
-  A: Due to TurtleCoin being a cryptonote-based coin(private), this is not possible.
+??? faq "Answer"
+    Due to TurtleCoin being a cryptonote-based coin(private), this is not possible.
 
-  It should be possible in the future to allow users to give away just their Private View Key to view transactions, but this hasn't been implemented by anyone so far, and would allow that website to see every transaction that you make.
+    It should be possible in the future to allow users to give away just their Private View Key to view transactions, but this hasn't been implemented by anyone so far, and would allow that website to see every transaction that you make.
 
 ## Other
 #### Q: Why does TRTL have such a high amount of tokens/small amount of decimal places?
 
-  A: Read a great post about the justification for it [here](https://medium.com/@turtlecoin/one-trillion-turtles-coin-supply-and-unit-economics-5bfbea0aa1f1).
+??? faq "Answer"
+    Read a great post about the justification for it [here](https://medium.com/@turtlecoin/one-trillion-turtles-coin-supply-and-unit-economics-5bfbea0aa1f1).
 
 #### Q: How can I get some TRTL?
 
-  A: There are multiple ways to acquire TRTL, for example:
+??? faq "Answer"
+    There are multiple ways to acquire TRTL, for example:
 
-  * Mining - see [here](../guides/mining/Mining)
-  * Buying - TRTL is currently available on these exchanges: [TradeOgre](https://tradeogre.com/exchange/BTC-TRTL) and [TradeSatoshi](https://tradesatoshi.com/Exchange/?market=TRTL_BTC)
-  * Bounties - Bounties for developing TRTL software, spreading the word of TRTL, and many other things are often posted in the #bounties channel on [discord][Discord_Link]. Check the pinned messages for current bounties.
-  * Tips - Turtles with often tip each other, especially if you make spicy memes in the `#memes` channel
-  * Rain - Good active Turtles get rained on, check out what the [RainBorg](../RainBorg-Wat-Dat) is to see how to use it.
-  * Faucet - Head over to the faucets-
-    * [madk's faucet](https://faucet.trtl.me/) - 10 TRTL, thrice a day
-    * [polar-it's faucet](https://turtlecoin-faucet.xhub.cloud/) - 20 TRTL, every 120 minutes
-    * [fipsi's faucet](https://trtlfaucet.de.cool/) - 100 TRTL, after every 500 turtles use it
+    * Mining - see [here](../guides/mining/Mining)
+    * Buying - TRTL is currently available on these exchanges: [TradeOgre](https://tradeogre.com/exchange/BTC-TRTL) and [TradeSatoshi](https://tradesatoshi.com/Exchange/?market=TRTL_BTC)
+    * Bounties - Bounties for developing TRTL software, spreading the word of TRTL, and many other things are often posted in the #bounties channel on [Discord][Discord_Link]. Check the pinned messages for current bounties.
+    * Tips - Turtles with often tip each other, especially if you make spicy memes in the `#memes` channel
+    * Rain - Good active Turtles get rained on, check out what the [RainBorg](../RainBorg-Wat-Dat) is to see how to use it.
+    * Faucet - Head over to the faucets-
+      * [madk's faucet](https://faucet.trtl.me/) - 10 TRTL, thrice a day
+      * [polar-it's faucet](https://turtlecoin-faucet.xhub.cloud/) - 20 TRTL, every 120 minutes
+      * [fipsi's faucet](https://trtlfaucet.de.cool/) - 100 TRTL, after every 500 turtles use it
     
-    and enter your TRTL address.  
-    The amount you can receive is limited to share the TRTL for all. Thanks to @madk, @polar-it and @fipsi for creating them.
+      and enter your TRTL address.  
+      The amount you can receive is limited to share the TRTL for all. Thanks to @madk, @polar-it and @fipsi for creating them.
 
 #### Q: Is there a web wallet?
 
-  A: Yes, we have a few. You can learn more about them in [this guide](../guides/wallets/Using-a-Web-Wallet).
+??? faq "Answer"
+    Yes, we have a few. You can learn more about them in [this guide](../guides/wallets/Using-a-Web-Wallet).
 
     
 #### Q: Are there any light wallets / mobile wallets?
 
-  A: None are ready for usage right now, but they are being worked on. Check the development channels in [Discord][Discord_Link] to see how people are getting on, and feel free to join in if you're a programmer!
+??? faq "Answer"
+    None are ready for usage right now, but they are being worked on. Check the development channels in [Discord][Discord_Link] to see how people are getting on, and feel free to join in if you're a programmer!
 
 #### Q: What is RainBorg / how does it work?
 
-  A: There is an in depth, graphical explanation [here](../guides/RainBorg-Wat-Dat)
+??? faq "Answer"
+    There is an in depth, graphical explanation [here](../guides/RainBorg-Wat-Dat)
 
 #### Q: How do I register my wallet on Discord?
 
-  A: You can check out this guide [here](../guides/Using-trtlbot-plus-plus#registering-your-wallet).
+??? faq "Answer"
+    You can check out this guide [here](../guides/Using-trtlbot-plus-plus#registering-your-wallet).
 
 #### Q: Where is the blockchain stored?
 
-  A: On Windows, it is in `%APPDATA%/turtlecoin`. On Mac and Linux, it is in `~/.turtlecoin`.
+??? faq "Answer"
+    On Windows, it is in `%APPDATA%/turtlecoin`. On Mac and Linux, it is in `~/.turtlecoin`.
 
 #### Q: Is there a blockchain explorer?
 
-  A: Yes, the offical one is
-  
-* https://explorer.turtlecoin.lol
+??? faq "Answer"
+    Yes, the offical one is
+    
+    * https://explorer.turtlecoin.lol
 
-although there are currently a few other unique ones-  
+    although there are currently a few other unique ones-  
 
-* https://turtle.land  
-* http://trtl.rocks
+    * https://turtle.land  
+    * http://trtl.rocks
 
 #### Q: How do I make sure a pool isn't forked? 
 
-??? note "Answer"
-    You can ask someone in the [Discord][Discord_Link] with a coloured name(aside from yellow or brown) to run `/forked` for you, which will return with a list of pools which are possibly forked.
+??? faq "Answer"
+    You can type in `/forked` in the `#bots` channel in the [Discord][Discord_Link] server, which will return with a list of pools which are possibly forked.
 
 #### Q: I have a question which wasn't answered here, what should I do?
 
-  A: [Join the Discord server][Discord_Link], and come to the `#help` channel, we'll try and fix any issues.
+??? faq "Answer"
+    [Join the Discord server][Discord_Link], and come to the `#help` channel, we'll try and fix any issues.
 
 [Discord_Link]:http://chat.turtlecoin.lol/
