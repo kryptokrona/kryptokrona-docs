@@ -183,15 +183,18 @@ However, you can redirect tips that you receive from others with `.redirecttips`
 
 trtlbot++ was created by [@krruzic](https://github.com/krruzic)(@madk#1044  in the chat) and then rewritten by [@BrandonT42](https://github.com/BrandonT42)(@Canti#6146), but hosted by krruzic still. When he was asked about the security of trtlbot++'s wallet, he said-
 
-"*the wallet is pretty secure. All ports are closed except 80, whatever minecraft is and my SSH port. The SSH has no root login and only two valid keys. ~~One of the keys is for an account that has no permissions to go anywhere but one folder (I may revoke this key)~~ *[This key has since been revoked]*. There are other security features but I don't want to reveal any possible attack surfaces by accident.*"
+!!! quote
+    the wallet is pretty secure. All ports are closed except 80, whatever minecraft is and my SSH port. The SSH has no root login and only two valid keys. ~~One of the keys is for an account that has no permissions to go anywhere but one folder (I may revoke this key)~~ *[This key has since been revoked]*. There are other security features but I don't want to reveal any possible attack surfaces by accident.
 
 and follows up with-
 
-"*And if the wallet gets hacked I will refund people's coins.*"
+!!! quote
+    And if the wallet gets hacked I will refund people's coins.
 
 and ends it with-
 
-"*I'm not gonna up and run with the tipjar like the doge tipbot guy either* :)"
+!!! quote
+    I'm not gonna up and run with the tipjar like the doge tipbot guy either :)
 
 So rest assured, trtlbot++'s wallet is extremely secure, and in the rare occasion that anything *does* happen, you can relax knowing that you'll get it back ;)
 
