@@ -397,6 +397,7 @@ A: Yes, you can view the guide [here](../guides/wallets/Making-a-paper-wallet)
 
 ??? faq "Answer"
     Yes, the offical one is
+    
     * https://explorer.turtlecoin.lol
 
     although there are currently a few other unique ones-  
