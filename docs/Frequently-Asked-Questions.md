@@ -10,6 +10,7 @@
     This can be fixed by re-syncing the correct blockchain from scratch. See [here](#q-how-can-i-re-sync-the-blockchain).
 
 #### Q: I'm getting a "corrupted blockchain" error like this?
+
 ```
 2018-May-07 15:52:19.877323 INFO    initializing core
 2018-May-07 15:52:19.908530 INFO    Importing blocks from blockchain storage
@@ -107,7 +108,6 @@ Until you are fully synced, you won't be able to send transactions, and your bal
 ??? faq "Answer"
     Mixin is how many times your transaction is "mixed" with others for obfuscation and privacy.  
     Mixin is locked by the network to `7` as of block `620,000` and is not adjustable by the user; this is done to ensure that no one can send a non-private transaction(`0` mixin) or be a victim of the "Tall Poppy Syndrome" by using a high mixin compared to everyone else on the network.
-
 
 #### Q: How can I view my balance?
 
@@ -247,7 +247,7 @@ Your stats will only update when your pool finds a block and it matures, so if y
 ??? faq "Answer"
     You can try the web miner [here](http://turtleminers.club/pages/webmine/). You will get a lower hashrate than native mining, and it doesn't have GPU support, however it's very easy to setup.
 
-Alternatively, you can hop onto the [Discord][Discord_Link] if you're having issues and we'll help you out.
+    Alternatively, you can hop onto the [Discord][Discord_Link] if you're having issues and we'll help you out.
 
 #### Q: What is the miner executable / why isn't it working?
 
