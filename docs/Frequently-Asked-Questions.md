@@ -352,10 +352,12 @@ A: Try installing this: <https://go.microsoft.com/fwlink/?LinkId=746572>
 
 ## Other
 #### Q: Why does TRTL have such a high amount of tokens/small amount of decimal places?
+
 ??? faq "Answer"
     Read a great post about the justification for it [here](https://medium.com/@turtlecoin/one-trillion-turtles-coin-supply-and-unit-economics-5bfbea0aa1f1).
 
 #### Q: How can I get some TRTL?
+
 ??? faq "Answer"
     There are multiple ways to acquire TRTL, for example:
 
@@ -373,23 +375,28 @@ A: Try installing this: <https://go.microsoft.com/fwlink/?LinkId=746572>
       The amount you can receive is limited to share the TRTL for all. Thanks to @madk, @polar-it and @fipsi for creating them.
 
 #### Q: Is there a web wallet?
+
 ??? faq "Answer"
     Yes, we have a few. You can learn more about them in [this guide](../guides/wallets/Using-a-Web-Wallet).
 
     
 #### Q: Are there any light wallets / mobile wallets?
+
 ??? faq "Answer"
     None are ready for usage right now, but they are being worked on. Check the development channels in [Discord][Discord_Link] to see how people are getting on, and feel free to join in if you're a programmer!
 
 #### Q: What is RainBorg / how does it work?
+
 ??? faq "Answer"
     There is an in depth, graphical explanation [here](../guides/RainBorg-Wat-Dat)
 
 #### Q: How do I register my wallet on Discord?
+
 ??? faq "Answer"
     You can check out this guide [here](../guides/Using-trtlbot-plus-plus#registering-your-wallet).
 
 #### Q: Where is the blockchain stored?
+
 ??? faq "Answer"
     On Windows, it is in `%APPDATA%/turtlecoin`. On Mac and Linux, it is in `~/.turtlecoin`.
 
