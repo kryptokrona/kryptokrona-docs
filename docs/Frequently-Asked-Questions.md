@@ -123,7 +123,7 @@ Until you are fully synced, you won't be able to send transactions, and your bal
 #### Q: Can I speed up the syncing of the blockchain?
 
 ??? faq "Answer"
-    You can sync [with checkpoints](../guides/wallets/Using-checkpoints)(only with zedwallet) or use a [remote node](../guides/wallets/Using-remote-nodes)
+    You can sync [with checkpoints](../guides/wallets/Using-checkpoints) (only with zedwallet) or use a [remote node](../guides/wallets/Using-remote-nodes)
 
 #### Q: Can I skip the syncing?
 
@@ -168,14 +168,14 @@ Until you are fully synced, you won't be able to send transactions, and your bal
 ??? faq "Answer"
     The values will always be slightly different as it is an estimate, but if there is a large difference, it is likely you have just started mining.
 
-Your hashrate is calculated over time, and so it will slowly go up to the correct level.
+    Your hashrate is calculated over time, and so it will slowly go up to the correct level.
 
 #### Q: I've been mining for a while, but my pending balance hasn't gone up?<a name="pending-balance-not-gone-up"></a>
 
 ??? faq "Answer"
     On your pool website, check the time that the last block was found on your pool, and the average time to find a block.
 
-Your stats will only update when your pool finds a block and it matures, so if your pool doesn't find blocks very often, you will have slower updating stats.
+    Your stats will only update when your pool finds a block and it matures, so if your pool doesn't find blocks very often, you will have slower updating stats.
 
 #### Q: I've been mining, but the balance in my wallet hasn't gone up?
 
