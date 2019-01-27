@@ -17,7 +17,7 @@ After your wallet address has been registered, type `.deposit` in the `#bots` ch
 * Check for a new direct message from trtlbot++
 * Copy the line of code he gives (excluding the `Integrated Address:`) and enter that as the address of the recipient  
 
-**No Payment ID!**
+==**No Payment ID!**==
 
 #### CLI Wallet
 
@@ -31,7 +31,7 @@ Follow the steps given [here](../wallets/Using-nest-wallet#sending-turtlecoin-tr
 
 * See [Expected Results](#expected-results) section below
 
-***PLEASE ENTER YOUR OWN VALUES WHICH THE BOT SENDS YOU!***
+==***PLEASE ENTER YOUR OWN VALUES WHICH THE BOT SENDS YOU!***==
 
 ### Expected Results
 
