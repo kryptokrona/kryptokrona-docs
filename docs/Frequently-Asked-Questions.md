@@ -363,7 +363,7 @@ A: Try installing this: <https://go.microsoft.com/fwlink/?LinkId=746572>
 
     * Mining - see [here](../guides/mining/Mining)
     * Buying - TRTL is currently available on these exchanges: [TradeOgre](https://tradeogre.com/exchange/BTC-TRTL) and [TradeSatoshi](https://tradesatoshi.com/Exchange/?market=TRTL_BTC)
-    * Bounties - Bounties for developing TRTL software, spreading the word of TRTL, and many other things are often posted in the #bounties channel on [discord][Discord_Link]. Check the pinned messages for current bounties.
+    * Bounties - Bounties for developing TRTL software, spreading the word of TRTL, and many other things are often posted in the #bounties channel on [Discord][Discord_Link]. Check the pinned messages for current bounties.
     * Tips - Turtles with often tip each other, especially if you make spicy memes in the `#memes` channel
     * Rain - Good active Turtles get rained on, check out what the [RainBorg](../RainBorg-Wat-Dat) is to see how to use it.
     * Faucet - Head over to the faucets-
@@ -415,7 +415,7 @@ A: Try installing this: <https://go.microsoft.com/fwlink/?LinkId=746572>
 #### Q: How do I make sure a pool isn't forked? 
 
 ??? faq "Answer"
-    You can ask someone in the [Discord][Discord_Link] with a coloured name(aside from yellow or brown) to run `/forked` for you, which will return with a list of pools which are possibly forked.
+    You can type in `/forked` in the `#bots` channel in the [Discord][Discord_Link] server, which will return with a list of pools which are possibly forked.
 
 #### Q: I have a question which wasn't answered here, what should I do?
 
