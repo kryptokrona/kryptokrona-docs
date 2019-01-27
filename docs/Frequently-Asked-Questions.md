@@ -324,6 +324,7 @@ A: Try installing this: <https://go.microsoft.com/fwlink/?LinkId=746572>
 ## Paper Wallet / Cold Storage?<a name="paper-wallet-cold-storage"></a>
 
 #### Q: Wait, what's Cold Storage?
+
 ??? faq "Answer"
     The term "cold storage" refers to a wallet that has been created via an offline means.
 
@@ -337,14 +338,17 @@ A: Try installing this: <https://go.microsoft.com/fwlink/?LinkId=746572>
     Thus to protect against that scenario you could transfer any TRTL balance to one of these cold storage addresses. Please remember to keep secure/secret backups of your keys. If you lose the keys you lose any balance that was transferred to that wallet.
 
 #### Q: Can I make a paper wallet?
+
 ??? faq "Answer"
     Yes, you can view the guide [here](../guides/wallets/Making-a-paper-wallet)
 
 #### Q: I made a paper wallet, how do I use it?
+
 ??? faq "Answer"
     You can check out [this guide](../guides/wallets/recovering-your-wallet) for steps on how to import your paper wallet into a wallet of your choice(choose a wallet and import the keys).
 
 #### Q: Can I view the balance of my wallet online?
+
 ??? faq "Answer"
     Due to TurtleCoin being a cryptonote-based coin(private), this is not possible.
 
