@@ -395,14 +395,14 @@ A: Yes, you can view the guide [here](../guides/wallets/Making-a-paper-wallet)
 
 #### Q: Is there a blockchain explorer?
 
-  A: Yes, the offical one is
-  
-* https://explorer.turtlecoin.lol
+??? faq "Answer"
+    Yes, the offical one is
+    * https://explorer.turtlecoin.lol
 
-although there are currently a few other unique ones-  
+    although there are currently a few other unique ones-  
 
-* https://turtle.land  
-* http://trtl.rocks
+    * https://turtle.land  
+    * http://trtl.rocks
 
 #### Q: How do I make sure a pool isn't forked? 
 
@@ -411,6 +411,7 @@ although there are currently a few other unique ones-
 
 #### Q: I have a question which wasn't answered here, what should I do?
 
-  A: [Join the Discord server][Discord_Link], and come to the `#help` channel, we'll try and fix any issues.
+??? faq "Answer"
+    [Join the Discord server][Discord_Link], and come to the `#help` channel, we'll try and fix any issues.
 
 [Discord_Link]:http://chat.turtlecoin.lol/
