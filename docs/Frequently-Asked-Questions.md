@@ -404,12 +404,12 @@ although there are currently a few other unique ones-
 * https://turtle.land  
 * http://trtl.rocks
 
+#### Q: How do I make sure a pool isn't forked? 
+
 <details>
   <summary>
-#### Q: How do I make sure a pool isn't forked?
-  </summary>
-
 You can ask someone in the [Discord][Discord_Link] with a coloured name(aside from yellow or brown) to run `/forked` for you, which will return with a list of pools which are possibly forked.
+  </summary>
 </details>
 
 #### Q: I have a question which wasn't answered here, what should I do?
