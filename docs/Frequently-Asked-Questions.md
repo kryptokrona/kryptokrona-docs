@@ -319,7 +319,9 @@ A: Try installing this: <https://www.microsoft.com/en-us/download/details.aspx?i
 
 #### Q: When I run XMR-Stak I get an error: "The application was unable to start correctly (0x000007b)"
 
-A: Try installing this: <https://go.microsoft.com/fwlink/?LinkId=746572>
+
+??? faq "Answer"
+    Try installing this: <https://go.microsoft.com/fwlink/?LinkId=746572>
 
 ## Paper Wallet / Cold Storage?<a name="paper-wallet-cold-storage"></a>
 
