@@ -557,8 +557,8 @@ curl -d '{"jsonrpc":"2.0","id":1,"password":"passw0rd","method":"createAddress",
 
 ```javascript
 service.createAddress({
-  secretSpendKey: '',
-  publicSpendKey: ''
+  spendSecretKey: '',
+  spendPublicKey: ''
 }).then((result) => {
   // do something
 }).catch((error) => {
@@ -568,9 +568,9 @@ service.createAddress({
 
 ```php
 <?php
-$secretSpendKey = null;
-$publicSpendKey = null;
-$response = $turtleService->createAddress($secretSpendKey, $publicSpendKey);
+$spendSecretKey = null;
+$spendPublicKey = null;
+$response = $turtleService->createAddress($spendSecretKey, $spendPublicKey);
 echo $response;
 ```
 
@@ -612,8 +612,8 @@ if err != nil {
 
 Argument                 | Mandatory    | Description                                  | Format
 ------------------------ | ------------ | -------------------------------------------- | -------
-secretSpendKey           | No           | Private spend key. If `secretSpendKey` was specified, RPC Wallet creates spend address | string
-publicSpendKey           | No           | Public spend key. If `publicSpendKey` was specified, RPC Wallet creates view address   | string
+spendSecretKey           | No           | Private spend key. If `spendSecretKey` was specified, RPC Wallet creates spend address | string
+spendPublicKey           | No           | Public spend key. If `spendPublicKey` was specified, RPC Wallet creates view address   | string
 newAddress               | No           | Is this a new address being created? If so, blocks before the creation timestamp will not be scanned. Defaults to true if neither keys are given, as it is guaranteed to be a new address. | bool
 scanHeight               | No           | The height to begin scanning for transactions at. Only applies if a public/secret key is supplied. This can greatly speed up wallet syncing time. | int
 
