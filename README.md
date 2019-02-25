@@ -1,8 +1,6 @@
 # sajodocs
 
-This is the repo where the new frontend of the [existing wiki](https://github.com/turtlecoin/turtlecoin-wiki) resides.
-
-Currently deployed on a TurtleCoin subdomain using Netlify, check it out!
+The official TurtleCoin Docs! Check it out here:
 
 https://docs.turtlecoin.lol
 
