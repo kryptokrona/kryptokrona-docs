@@ -14,7 +14,7 @@ If no binaries are available, or you prefer to compile, follow these instruction
 
         * Install drivers for your card
 
-        * download the latest APP SDK from [here](http://debian.nullivex.com/amd/AMD-APP-SDKInstaller-v3.0.130.136-GA-linux64.tar.bz2). It should have the name `AMD-APP-SDKInstaller-v(version number)-GA-linux64.tar.bz2`
+        * download the latest APP SDK from [here](https://github.com/Microsoft/LightGBM/releases/download/v2.0.12/AMD-APP-SDKInstaller-v3.0.130.136-GA-linux64.tar.bz2). It should have the name `AMD-APP-SDKInstaller-v(version number)-GA-linux64.tar.bz2`
 
             * Extract it
 
