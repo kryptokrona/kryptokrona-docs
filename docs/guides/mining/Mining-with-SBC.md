@@ -40,7 +40,7 @@ Open the file `start.sh` with a text editor and replace the existing parameters 
 
 
 ```shell
-./xmrig -a cryptonight-lite --variant=1 -u TRTL... -p x -o [pool address]
+./xmrig -a cryptonight-turtle -u TRTL... -p x -o [pool address]
 ```
 
 * Instead of `TRTL...`, simply paste your TurtleCoin wallet address.
