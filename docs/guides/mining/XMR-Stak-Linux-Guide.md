@@ -107,30 +107,37 @@ Upon first launching XMR-Stak, the software will ask you several setup and confi
 
 2.  
    ```
-    Please enter:
-    - Please enter the currency that you want to mine:
-
-    - aeon7
-    - bbscoin
-    - croat
-    - cryptonight
-    - cryptonight_heavy
-    - cryptonight_lite
-    - cryptonight_lite_v7
-    - cryptonight_v7
-    - edollar
-    - electroneum
-    - graft
-    - haven
-    - intense
-    - karbo
-    - monero7
-    - stellite
-    - sumokoin
-    - turtlecoin
+   - Please enter the currency that you want to mine:
+        - aeon7
+        - bbscoin
+        - bittube
+        - cryptonight
+        - cryptonight_bittube2
+        - cryptonight_masari
+        - cryptonight_haven
+        - cryptonight_heavy
+        - cryptonight_lite
+        - cryptonight_lite_v7
+        - cryptonight_lite_v7_xor
+        - cryptonight_superfast
+        - cryptonight_turtle
+        - cryptonight_v7
+        - cryptonight_v8
+        - cryptonight_v7_stellite
+        - freehaven
+        - graft
+        - haven
+        - intense
+        - masari
+        - monero
+        - qrl
+        - ryo
+        - stellite
+        - turtlecoin
+        - plenteum
    ```
 
-    Enter `turtlecoin`
+    Enter `cryptonight_turtle`
 
 3.  `- Pool address: e.g. pool.example.com:3333 `
 
