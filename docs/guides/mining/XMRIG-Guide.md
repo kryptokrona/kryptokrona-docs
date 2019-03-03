@@ -35,7 +35,7 @@ Needs to be compiled. Instructions [here](https://github.com/xmrig/xmrig/wiki/OS
 2.  Open the `config.json` file with Notepad
 3.  Find and change the following lines:
 
-      * `"algo: "cryptonight-lite"`  
+      * `"algo: "cryptonight-turtle"`  
 
       * `"url: "[pool address]"`  
 
