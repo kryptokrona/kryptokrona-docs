@@ -22,8 +22,6 @@ If you would like to use zedwallet, you can check out [this guide](Using-zedwall
 
 If you prefer to use a GUI wallet, the currently suggested wallet is [Electron Wallet](https://github.com/turtlecoin/turtle-wallet-electron).
 
-If you would like to setup a GUI wallet, you can take a look at [this guide](Making-a-GUI-Wallet).
-
 ## Web Wallet
 
 - [Shellnet](https://shellnet.pw)
