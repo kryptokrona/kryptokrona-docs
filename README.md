@@ -6,7 +6,7 @@ https://docs.turtlecoin.lol
 
 ## Contributing Guidelines
 
-You must follow [strict markdown](https://daringfireball.net/projects/markdown/), not GFM. Important points include-
+You must follow [strict markdown](https://daringfireball.net/projects/markdown/), not GFM. Important points include:
 
 * links must start with `../`, even if they're in the same directory  
   ex -> `(../Rainborg-Wat-Dat)` instead of `(Rainborg-Wat-Dat.md)`
