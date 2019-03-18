@@ -31,7 +31,6 @@
       - [XMR-Stak on Linux](XMR-Stak-Linux-Guide)
       - [XMRIG](XMRig-Guide)
     - [Mining Pools](Pools)
-    - [Cloud Mining](Cloud-Mining)
     - [Mining with a SBC](Mining-with-SBC)
     - [Mining with Your Mobile Phone](Mining-with-Phone)
       - [Using Tony Monero](Using-Tony-Monero)
