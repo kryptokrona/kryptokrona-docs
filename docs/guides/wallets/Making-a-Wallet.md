@@ -24,7 +24,7 @@ The GUI Wallet, called Nest Wallet, is a multi-platform program (Win/Linux/Mac) 
 
 If you would like to use Nest Wallet, you can check out [this guide](../Using-nest-wallet)
 
-## Nest Wallet (GUI Wallet)
+## Electron Wallet (GUI Wallet)
 
 Another GUI Wallet, Electron, is a wallet written in Javascript which handles all of your needs and also includes additional features such as an address book, light and dark mode, and an active list of public nodes.
 
