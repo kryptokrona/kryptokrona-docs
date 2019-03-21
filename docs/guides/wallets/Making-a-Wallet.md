@@ -37,8 +37,8 @@ We currently have two web wallets in operation:
 * [Shellnet](https://shellnet.pw)
 * [TurtleWallet](https://turtlewallet.lol)
 
+You can learn more about them at [this guide](../Using-a-Web-Wallet)
+
 ## Mobile Wallet
 
 TurtleCoin has a mobile wallet called [TonChan](https://play.google.com/store/apps/details?id=com.tonchan&hl=en) for Android devices. You can download the wallet from the Google Play store.
-
-You can learn more about them at [this guide](../Using-a-Web-Wallet)
