@@ -24,11 +24,11 @@ The GUI Wallet, called Nest Wallet, is a multi-platform program (Win/Linux/Mac) 
 
 If you would like to use Nest Wallet, you can check out [this guide](../Using-nest-wallet)
 
-## Electron Wallet (GUI Wallet)
+## ShellWallet Wallet (GUI Wallet)
 
-Another GUI Wallet, Electron, is a wallet written in Javascript which handles all of your needs and also includes additional features such as an address book, light and dark mode, and an active list of public nodes.
+Another GUI Wallet, ShellWallet, is a wallet written in Javascript which handles all of your needs and also includes additional features such as an address book, light and dark mode, and an active list of public nodes.
 
-If you would like to use Electron, you can download it [here](https://github.com/turtlecoin/turtle-wallet-electron)
+If you would like to use ShellWallet, you can download it [here](https://github.com/turtlecoin/turtle-wallet-electron)
 
 ## Web Wallet
 
