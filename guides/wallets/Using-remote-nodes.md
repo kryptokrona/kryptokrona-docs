@@ -30,7 +30,7 @@ You can now follow your normal process to access your wallet.
 For example-
 
 ```
-zedwallet.exe --remote-daemon public.turtlenode.io:11898
+zedwallet.exe --remote-daemon public.turtlenode.online:11898
 ```
 
 ## Making a Script to Do it Automatically
@@ -49,19 +49,6 @@ pause
 
 #### Known remote daemons
 
-|         Host         | Port  |        Website        |
-| :------------------: | :---: | :-------------------: |
-| public.turtlenode.io | 11898 | https://turtlenode.io |
-| us-west.turtlenode.io | 11898 | https://turtlenode.io |
-| us-east.turtlenode.io | 11898 | https://turtlenode.io |
-| europe.turtlenode.io | 11898 | https://turtlenode.io |
-| asia.turtlenode.io | 11898 | https://turtlenode.io |
-| daemon.turtle.link | 11898 | https://turtle.link/ |
-| public.turtlenode.net | 11898 | https://turtlenode.net/ |
-| public.turtle-node.com | 11898 | https://turtle-node.com/ |
-| usa.turtle-node.com | 11898 | https://turtle-node.com/ |
-| eu.turtle-node.com | 11898 | https://turtle-node.com/ |
-| public.turtlenode.uk | 11898 | - |
-| turtle-node.me | 11898 | - |
-| 79.122.99.180 | 11898 | - |
-| turtlenode.co.uk | 11898 | - |
+http://trtl.nodes.pub/
+
+https://github.com/turtlecoin/turtlecoin-nodes-json
