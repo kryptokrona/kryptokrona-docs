@@ -35,6 +35,7 @@
     - [Mining with Your Mobile Phone](Mining-with-Phone)
       - [Using Tony Monero](Using-Tony-Monero)
       - [Using AA Miner](Using-AA-Miner)
+      - [XMRig via Termux](Using-Termux)
   - [Wallets](Making-a-Wallet)
     * [GUI Wallets](Making-a-GUI-Wallet)
       * [WinForms Wallet](Using-WinForms-Wallet)
