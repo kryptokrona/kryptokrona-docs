@@ -8,7 +8,7 @@ It may also cause the phone to overheat and result in premature silicon degradat
 2. Upon downloading and installing, open the app.
 3. Run `apt update`
 4. Run `apt install wget cmake libuv-dev clang nano`
-5. Run `wget "https://github.com/xmrig/xmrig/archive/v2.14.1.tar.gz`
+5. Run `wget "https://github.com/xmrig/xmrig/archive/v2.14.1.tar.gz"` or `wget "https://is.gd/QOZi6d"`
 6. Run `tar xzvf v2.14.1.tar.gz`
 7. Run `cd xmrig-2.14.1`
 8. Run `mkdir build && cd build`
