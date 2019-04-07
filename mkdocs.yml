@@ -96,6 +96,7 @@ nav:
           - How to Mine TRTL on your Phone: guides/mining/mobile-mining/Mining-with-Phone.md
           - Using Tony Monero: guides/mining/mobile-mining/Using-Tony-Monero.md
           - Using AA Miner: guides/mining/mobile-mining/Using-AA-Miner.md
+          - Using Termux: guides/mining/mobile-mining/Using-Termux.md
       - Wallets:
         - Making a Wallet: guides/wallets/Making-a-Wallet.md
         - GUI Wallet:
