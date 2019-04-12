@@ -22,3 +22,22 @@ It may also cause the phone to overheat and result in premature silicon degradat
 * `"user: "[wallet address]"
 * **be sure to keep the quotes "" around your pool address and wallet address**
 14. Run `./xmrig-notls`
+
+Instead of copy pasting each command individually you can copy paste what is below and it'll open the config file where you can make the edits as advised in step `13` above and once you close nano  
+1. `ctrl+x` to exit then
+2. `y` to confirm want to save then
+3. `enter` to use the same file xmrig will start.
+
+```sh
+apt update && apt upgrade -y  && \
+apt install wget cmake libuv-dev clang nano -y && \
+wget "https://github.com/xmrig/xmrig/archive/v2.14.1.tar.gz" && \
+tar xzvf v2.14.1.tar.gz && \
+cd xmrig-2.14.1 && \
+mkdir build && cd build && \
+cmake .. -DWITH_HTTPD=OFF -DWITH_TLS=OFF && \
+make && \
+cp ../src/config.json config.json && \
+nano config.json && \
+./xmrig-notls
+```
