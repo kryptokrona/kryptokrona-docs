@@ -40,3 +40,7 @@ See [API Documentation](https://api-docs.turtlecoin.lol/) for usage.
 ## Design
 
 * [Brand Guidelines](https://github.com/turtlecoin/brand)
+
+## Guides
+
+* [Running a Local Testnet](LocalTestnet)
