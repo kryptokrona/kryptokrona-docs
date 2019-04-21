@@ -85,7 +85,7 @@ You will probably have to open the port you are running the interface on in your
    - sumokoin
    - turtlecoin
    ```
-Enter `turtlecoin`
+Enter `cryptonight_turtle`
 
 3. `- Pool address: e.g. pool.example.com:3333`
 
