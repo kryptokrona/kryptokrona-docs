@@ -1,6 +1,6 @@
 # Getting Started with TurtleCoin
 
-## What is TurtleCoin?
+## What is TurtleCoin? 
 
 TurtleCoin is a fast, easy and private cryptocurrency which allows you to send money to friends and businesses.
 
