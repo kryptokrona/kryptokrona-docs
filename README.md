@@ -23,7 +23,7 @@ Please be granular and make a single commit per change/set of related changes (o
 ### PR > Merge > Published
 
 Travis has been setup so that once a Pull Request has been accepted and merged, the changes will be pushed and published automatically. Keep an eye out just in case something didn't quite get caught in review, make a ninja edit (PR) to fix it up :)
-
+ 
 
 ## Thanks and Contributors
 
