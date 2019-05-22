@@ -2,6 +2,8 @@
 
 The following guide will show you how to compile a CPU miner (xmrig) for SBCs like the Raspberry Pi.
 
+If you're using a rpi3 or rpi3b+, check out [this guide](Optimizing-RaspberryPi-TurtleCoin-Mining) for a more optimized setup.
+
 What are the benefits of compiling xmrig from scratch?
   - You'll have the most up-to-date version of xmrig
   - You can optimize xmrig for specific SBCs (improves hash rate)
