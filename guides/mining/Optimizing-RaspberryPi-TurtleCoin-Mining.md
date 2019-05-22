@@ -1,3 +1,7 @@
+## Notes
+
+Looking for a more general SBC setup guide? Check out [this guide](Mining-with-SBC).
+
 # Overview
 
 To maximize your hashrate, it is very important that you select a 64-bit OS image, a quality miner and the most current compiler that you can.
