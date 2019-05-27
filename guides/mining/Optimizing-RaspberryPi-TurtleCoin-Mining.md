@@ -13,6 +13,10 @@ http://cdimage.ubuntu.com/ubuntu/releases/bionic/release/ubuntu-18.04.2-preinsta
 
 You will need to write this image to an SD card with a utility such as Etcher (https://www.balena.io/etcher). Once your OS is written, insert your SD Card and boot your Pi.
 
+Once you've got it booted, you'll be asked for a username and password. These are both `ubuntu`.
+
+Once you've logged in, you'll be asked to change the password. For the current password, enter `ubuntu` again. Then, enter a new password, and confirm it.
+
 # Get the Latest Compiler
 
 You will need to edit your sources.list file and add the debian testing repository in order to install gcc-8 and g++-8 on your system:
