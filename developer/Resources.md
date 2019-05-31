@@ -23,7 +23,6 @@ See [API Documentation](https://api-docs.turtlecoin.lol/) for usage.
 
 * [CantiLib](https://github.com/turtlecoin/cs-turtlecoin): TurtleCoin daemon spec and PoC.
 * [TurtleCoin Blog](https://blog.turtlecoin.lol)
-* [Bytecoin docs](https://wiki.bytecoin.org/wiki/Main_Page)
 
 ## Design
 
