@@ -349,7 +349,6 @@ A: Yes, you can view the guide [here](Making-a-Paper-Wallet)
   * Buying - TRTL is currently available on these exchanges: [TradeOgre](https://tradeogre.com/exchange/BTC-TRTL) and [TradeSatoshi](https://tradesatoshi.com/Exchange/?market=TRTL_BTC)
   * Bounties - Bounties for developing TRTL software, spreading the word of TRTL, and many other things are often posted in the #bounties channel on [discord][Discord_Link]. Check the pinned messages for current bounties.
   * Tips - People will sometimes tip each other, especially if you make spicy memes in the #memes channel
-  * Rain - Good active Turtles get rained on, check out what the [RainBorg](RainBorg-Wat-Dat) is to see how to use it.
   * Faucet - Head over to the faucets-
     * [madk's faucet](https://faucet.trtl.me/) - 10 TRTL, thrice a day
     * [polar-it's faucet](https://turtlecoin-faucet.xhub.cloud/) - 25 TRTL, every 30 minutes  
@@ -360,9 +359,9 @@ A: Yes, you can view the guide [here](Making-a-Paper-Wallet)
 
   A: None are ready for usage right now, but they are being worked on. Check the development channels in [Discord][Discord_Link] to see how people are getting on, and feel free to join in if you're a programmer!
 
-#### Q: What is RainBorg / how does it work?
+#### Q: What happend to RainBorg/Raindance?
 
-  A: There is an in depth, graphical explanation [here](RainBorg-Wat-Dat)
+  A: They were both discontinued due to them being gamed and exploited. RIP.
 
 #### Q: How do I register my wallet on Discord?
 

@@ -21,7 +21,6 @@
   - [Others](Frequently-Asked-Questions#other)
 
 - Guides
-  - [RainBorg? Wat Dat?](RainBorg-Wat-Dat)
   - [Using trtlbot++](Using-trtlbot-plus-plus)
   - [Forking TurtleCoin](Forking-Turtlecoin)
   - [Running TurtleCoind on a Pi](Running-TurtleCoind-on-Pi)
