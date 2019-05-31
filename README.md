@@ -1,164 +1,39 @@
-# sajodocs
+[![Build Status](https://travis-ci.org/turtlecoin/turtlecoin-docs.svg?branch=master)](https://travis-ci.org/turtlecoin/turtlecoin-docs)
 
-The official TurtleCoin Docs! Check it out here:
+# turtlecoin-docs
+:turtle: :turtle: :turtle: Documentation for all things TurtleCoin:turtle: :turtle: :turtle:
 
-https://docs.turtlecoin.lol
+## About
+This repository is the **official** home of all TurtleCoin documentation and should be regarded as the *single source of truth* for all 'official' or officially supported TurtleCoin projects. Because of the distributed, open, community-driven nature of our development teams, we believe the easiest approach to managing our documentation is to organize all of it in this central repository. This helps to avoid duplication and inconsistency and relieves contributors from having to track down and edit multiple documents in multiple places.  
+The community makes a best-effort to keep documentation accurate and up-to-date, but please be aware that it may not always reflect reality - code changes may be released before documentation is updated.
 
-## Contributing Guidelines
+## Instances of the Wiki
 
-You must follow [strict markdown](https://daringfireball.net/projects/markdown/), not GFM. Important points include:
+The official production TurtleCoin Wiki is at http://github.com/turtlecoin/turtlecoin/wiki. This is the URL that should be used for externally linking to the wiki (or any articles/pages within it).
 
-* links must start with `../`, even if they're in the same directory  
-  ex -> `(../Rainborg-Wat-Dat)` instead of `(Rainborg-Wat-Dat.md)`
+This repo, http://github.com/turtlecoin/turtlecoin-docs, holds the raw markdown that the wiki is built from.
 
-* relative links without the `.md` extension  
-  ex-> `(Rainborg-Wat-Dat)` instead of `(Rainborg-Wat-Dat.md)`
+This repo's Github wiki (http://github.com/turtlecoin/turtlecoin-docs/wiki) serves as a live 'test site' for testing changes to the wiki before pushing to the official production TurtleCoin Wiki.
 
-* Links are *case sensitive*  
-  Links to files in `mkdocs.yml` must *perfectly match* the casing of the actual files, and the links to these files from other places must *perfectly match* the casing in `mkdocs.yml`.
+## Contributing
 
+Changes, edits, and other contributions to the TurtleCoin documentation can be submitted as a Github [Pull Request](https://github.com/turtlecoin/turtlecoin-docs/pulls) to this repository, or as a Github Issue on this repo's [Issues page](https://github.com/turtlecoin/turtlecoin-docs/issues).  
+Please be granular and make a single commit per change/set of related changes (or file an Issue for each change if not directly submitting PR's). This will make reviewing changes easier and increase the speed and efficiency of getting your changes merged in.
 
-If:  
+### PR > Merge > Published
 
-* (a) points are to be indented under one another,  
+Travis has been setup so that once a Pull Request has been accepted and merged, the changes will be pushed and published automatically. Keep an eye out just in case something didn't quite get caught in review, make a ninja edit (PR) to fix it up :)
+ 
 
-* (b) pictures/information are to be included under a "step 1",  
+## Thanks and Contributors
 
-* (c) codeblocks are to be made under steps/points,   
-     
-     *they are to be indented by 4 spaces.*
+- [@ZedPea](https://github.com/ZedPea/)
+- [@ar-x](https://github.com/ar-x/)
+- [@Sajo8](https://github.com/Sajo8/)
+- [@holytastyguacamole](https://github.com/holytastyguacamole/)
+- [@SoreGums](https://github.com/SoreGums/)
+- [@timmcleod](https://github.com/timmcleod/)
+- [@zack796](https://github.com/zack796/)
+- the TurtleCoin community.
 
-* (d) *codeblocks must also start/end on a separate line.*
-
-  **Note: Text given beyond this point wrapped in code blocks are just examples, observe the formatting and not what's written**
-
-  #### Ex (a):
-
-  ##### *Wiki MD*
-
-   ```
-   * Download wallet
-     * Make a new wallet
-       * give it a name
-       ![walletname](wallets/images/name.png)
-   ```
-
-  ##### *Strict MD*
-
-   ```
-   * Download a wallet
-       * Make a new wallet
-           * give it a name
-           ![walletname](images/name.png)
-   ```
-
-  #### Ex (b):
-
-  ##### *Wiki MD*
-
-   ```
-   1. Download a wallet
-   ![make wallet](wallets/images/make-wallet.png)
-   ---
-   In case you can't make, then just try again.
-   ---
-   2. Make a wallet
-   Make sure you choose a strong password!
-   3. Check that
-     * it is saved [comfily](Being-Comfy).
-   ```
-
-  ##### *Strict MD*
-
-   ```
-   1.  Download a wallet
-       ![make wallet](images/make-wallet.png)
-       ---
-       Incase you can't make, then just try again.
-       ---
-   2.  Make a wallet
-       Make sure you choose a strong password!
-   3.  Check that
-       * it is saved [comfily](../Being-Comfy). (it assumed we are in the wallets/ directory)
-   ```
-
-   #### Ex (c) and (d):
-
-   ##### *Wiki MD*
-   ```
-   1. Install Linux
-   2. Enter this:
-   ```sudo apt-get install
-   sudo apt-get upgrade```
-   ```
-
-   ##### *Strict MD*
-
-   ````
-   1.  Install Linux
-   2.  Enter this:
-       ```
-       sudo apt-get install
-       sudo apt-get upgrade
-       ```
-   ````
-
-### More Information on Contributing
-
-
-  #### PR -> Build -> Merge -> Publish
-
-  Whenever a PR is made, Netlify automatically builds it and serves a preview. In case the build doesn't pass(red X), then add a ninja commit to fix it.
-  
-  #### Testing the site locally
-  
-  Testing the site locally is very easy!
-  
-  1. Install mkdocs
-  ```
-  pip install mkdocs && mkdocs --version
-  # mkdocs, version 0.17.1
-  ```
-  Material requires MkDocs >= 0.17.1.
-  (You will need to install [Python](https://www.python.org/) if you don't already have it)
-  
-  2. Install mkdocs-material (the theme)
-  ```
-  pip install mkdocs-material
-  ```
-  
-  3. CD to where your edited version of sajodocs is located, and run the build command.
-  ```
-  cd sajodocs
-  mkdocs serve
-  ```
-  
-  4. Open [http://localhost:8000](http://localhost:8000) to check; if all went well, then the website will be visible. Check the pages you edited to make sure it all checks out!
-
-
-For more rules on the markdown format to contributie, compare these 2 files from the existing wiki to this repo, and see how they shape up. These point out all differences present.
-
----
-
-#### Guide 1
-
-**existing wiki**
-
-https://raw.githubusercontent.com/turtlecoin/turtlecoin-docs/master/guides/Bootstrapping-the-Blockchain.md
-
-**this wiki**
-
-https://raw.githubusercontent.com/turtlecoin/sajodocs/master/docs/guides/Bootstrapping-the-Blockchain.md
-
----
-
-#### Guide 2
-
-**existing wiki**
-
-https://raw.githubusercontent.com/turtlecoin/turtlecoin-docs/master/guides/mining/XMR-Stak-Linux-Guide.md
-
-**this wiki**
-
-https://raw.githubusercontent.com/turtlecoin/sajodocs/master/docs/guides/mining/XMR-Stak-Linux-Guide.md
-
+...more to be listed soon!
