@@ -293,7 +293,7 @@ Bye.
 
 #### Private Spend and View Keys<a name="recover-spend-view-keys"></a>
 
-To restore a wallet using spend and view keys; at the menu type `seed_restore` and press `enter`:
+To restore a wallet using spend and view keys; at the menu type `key_restore` and press `enter`:
 
 ```
  1	open                     Open a wallet already on your system
@@ -303,7 +303,7 @@ To restore a wallet using spend and view keys; at the menu type `seed_restore` a
  5	view_wallet              Import a view only wallet
  6	exit                     Exit the program
 
-What would you like to do?: seed_restore
+What would you like to do?: key_restore
 Enter your private spend key: 41c834f7c26e12373e5c39a9c9b1f8beb665324ad0d098cabda1234567b5d30f
 Enter your private view key: df51e85dfa4fe48d0123475ec966124b1234c98abda6789060fe6d69b503490b
 What would you like to call your new wallet?: trtl2
