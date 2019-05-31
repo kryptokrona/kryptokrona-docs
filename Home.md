@@ -1,4 +1,4 @@
-![TurtleCoin Logo](images/turtlecoin_logo.png)
+![TurtleCoin Logo](assets/turtlecoin_logo.png)
 
 # :turtle: :turtle: :turtle: Welcome to the TurtleCoin Wiki :turtle: :turtle: :turtle:
 
@@ -14,7 +14,7 @@ One of TurtleCoin's main goals is to make things as simple and as accessible as 
 
 | **About TurtleCoin** | **Wallets** | **Mining** | **Contributing** |
 |:----------------------:|:-------------:|:------------:|:------------------:|
-| ![Logo](images/table_logo.png) | ![Wallets](images/table_wallet.png) | ![Mining](images/table_mine.png) | ![Dev](images/table_dev.png) |
+| ![Logo](assets/table_logo.png) | ![Wallets](assets/table_wallet.png) | ![Mining](assets/table_mine.png) | ![Dev](assets/table_dev.png) |
 | [About TurtleCoin](About-TurtleCoin) | [Setting up a New Wallet](Getting-Started#new-wallet) | [Mining TurtleCoin](Getting-Started#mining) | [Contributing to TurtleCoin](Contributing) |
 | Learn more about TurtleCoin and the community | A guide on setting up a TurtleCoin wallet to start receiving some turtles! | A step-by-step guide to start mining TurtleCoin | Information on contributing to TurtleCoin |
 

@@ -30,10 +30,8 @@ The miner should now start mining, and the stats displayed show start updating, 
 
 You can tap the question marks on the right if you're unsure of what each value means
 
-![phone-mining](guides/mining/mobile-mining/images/rsz_phone-mine.png)
+![tm-miner](assets/tm-miner.png)
 
 Congratulations! You're now mining with your phone!
-
-
 
 Feeling the lagginess yet? ;)
