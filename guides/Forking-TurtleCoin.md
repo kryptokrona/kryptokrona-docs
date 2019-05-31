@@ -1,21 +1,14 @@
 # Forking TurtleCoin
 
-### A newer guide exists at https://turtlecoin.github.io/fork
-
-Note: A newer guide exists on https://turtlecoin.github.io/fork
-
+##### Note: While efforts are made to keep this guide up-to-date, the most recent one will always be available [here](https://turtlecoin.github.io/fork/)
 
 So you want to fork TurtleCoin, huh?
 
 This guide will help you change the necessary sections of the code to set up your coin how you like it.
 
-One thing before we begin - This guide may not always be up to date. The code changes regularly, and sometimes we forget to update all the docs. Feel free to ask for help in our discord (in the #dev_learning channel) if you need clarification or assistance.
-
-Furthermore, this guide is usually updated when the development branch is updated. This branch is not neccessarily always stable, so caution should be taken. The master branch should be a good target to fork off, but that too might have bugs that have been fixed in development, as well as this guide not matching it exactly.
-
 Firstly, lets quickly talk about *licenses*.
 
-## Licenses
+## Licences
 
 When you're poking around the codebase, you might see something like this:
 
@@ -23,18 +16,18 @@ When you're poking around the codebase, you might see something like this:
 // Copyright (c) 2012-2017, The CryptoNote developers, The Bytecoin developers
 // Copyright (c) 2014-2018, The Monero Project
 // Copyright (c) 2018, The TurtleCoin Developers
-// 
+//
 // Please see the included LICENSE file for more information.
 ```
 
-At the top of each file. We ask when you fork us to make sure you leave these license headers intact.
+At the top of each file. We ask when you fork us to make sure you leave these license headers intact.  
 When we're programming on codebases like this, we're standing upon the shoulders of giants,
 and it's both polite, and a legal requirement of the licenses used, to credit the other contributors to the code.
 
-As you may be aware, the CryptoNote white paper set out the initial specification for CryptoNote coins.
+As you may be aware, the CryptoNote white paper set out the initial specification for CryptoNote coins.  
 The ByteCoin developers created the first implementation of this specification working closely with the CryptoNote developers,
-and this is what has become ByteCoin today.
-This was forked early on to become Bitmonero, and then Monero.
+and this is what has become ByteCoin today.  
+This was forked early on to become Bitmonero, and then Monero.  
 The Monero developers have contributed back significant chunks of code to the original ByteCoin codebase,
 and of course, they maintain their own repositories and code.
 
@@ -43,7 +36,7 @@ by separating the needed constants and strings out into a separate file.
 
 TurtleCoin then forked the Forknote Project and made our own changes, some of which were then contributed back to ForkNote.
 
-So, make sure if you're doing a find and replace that all of these lines remain intact.
+So, make sure if you're doing a find and replace that all of these lines remain intact.  
 You can of course start adding your own copyright line, for example,
 
 ```
@@ -51,7 +44,7 @@ You can of course start adding your own copyright line, for example,
 // Copyright (c) 2014-2018, The Monero Project
 // Copyright (c) 2018, The TurtleCoin Developers
 // Copyright (c) 2018, My Super Cool Coin Developers
-// 
+//
 // Please see the included LICENSE file for more information.
 ```
 
@@ -80,7 +73,7 @@ You can do this [here](https://github.com/join) if you don't have an account alr
 * Now, take this URL shown, and copy it.
 
 * Next, you will need to download a git client.
-  If you are a windows user, I would suggest [Git  for Windows](https://gitforwindows.org/),
+  If you are a windows user, I would suggest [Git for Windows](https://gitforwindows.org/),
   whilst if you are a Linux or Mac user, you should have this either already installed,
   or can install it from your repos or with brew.
 
@@ -189,6 +182,7 @@ bits which don't need to be recompiled, so this is a lot quicker most of the tim
 
 ## Atomic Units
 
+
 Next, I'd like to talk quickly about *atomic units*. You can skip this section if you're a pro already.
 
 All of the constants in CryptoNoteConfig.h and most of the code, that refers to the actual amount of coins, is in *Atomic Units*.
@@ -245,13 +239,13 @@ std::cout << "Splitting " << trtl << " TRTL" between << numPeople << " gives "
 Usually, we will *always* use atomic units in our code,
 and only convert back to the expected representation with a decimal point when we print things to the user.
 
-OK, we know what atomic units are, lets go change some stuff!
+Ok, we know what atomic units are, lets go change some stuff!
 
 ## Changing the name of your binaries, i.e. CMakeLists.txt
 
 We're gonna start with some boring stuff - changing the name of your binaries.
 
-Open up CMakeLists.txt in the `src/` folder. 
+Open up CMakeLists.txt in the `src/` folder.
 
 Note that there is also a CMakeLists.txt in the root directory, this is not the file you want!
 
@@ -260,8 +254,9 @@ The lines we want to be changing are at the very bottom of the file.
 ```
 set_property(TARGET TurtleCoind PROPERTY OUTPUT_NAME "TurtleCoind")
 set_property(TARGET zedwallet PROPERTY OUTPUT_NAME "zedwallet")
-set_property(TARGET service PROPERTY OUTPUT_NAME "turtle-service")
-set_property(TARGET miner PROPERTY OUTPUT_NAME "miner")
+set_property(TARGET PaymentGateService PROPERTY OUTPUT_NAME "walletd")
+set_property(TARGET PoolWallet PROPERTY OUTPUT_NAME "poolwallet")
+set_property(TARGET Miner PROPERTY OUTPUT_NAME "miner")
 ```
 
 To change the name of a binary, change the final string in one of these lines. For example:
@@ -313,21 +308,18 @@ Ok, now onto the fun stuff!
 
 Open up the file `CryptoNoteConfig.h`, located in the `src` folder.
 
-Let's start at the top. We'll only focus on the constants which need changing, as some of them are fine to keep as they are.  
+Let's start at the top. We'll only focus on the constants which need changing, as some of them are fine to keep as they are.
 
 
-#### `const uint64_t DIFFICULTY_TARGET = 30; // seconds`<br/><br/>
+#### `const uint64_t DIFFICULTY_TARGET = 30; // seconds`<br>
 
 This is how fast you want blocks to be. In TurtleCoin, we have blocks on average every 30 seconds.
 If you wanted blocks to be every 2 minutes, you would set this to be:
 
-- `const uint64_t DIFFICULTY_TARGET = 120; // seconds`<br/><br/>
+- `const uint64_t DIFFICULTY_TARGET = 120; // seconds`  
+<br>
 
-
-
-
-
-#### `const uint64_t CRYPTONOTE_PUBLIC_ADDRESS_BASE58_PREFIX = 3914525;`<br/><br/>
+#### `const uint64_t CRYPTONOTE_PUBLIC_ADDRESS_BASE58_PREFIX = 3914525;`<br/>
 
 This defines what the addresses will start with. In TurtleCoin, this decodes to `TRTL`.
 
@@ -345,32 +337,26 @@ though you can use any standard hexadecimal to decimal converter to change the p
 
 So, if we wanted our prefix to be 'aPPLE', we would set this to be:
 
-- `const uint64_t CRYPTONOTE_PUBLIC_ADDRESS_BASE58_PREFIX = 0x1e1f8cc7;`<br/><br/>
+- `const uint64_t CRYPTONOTE_PUBLIC_ADDRESS_BASE58_PREFIX = 0x1e1f8cc7;`
+<br>
 
 
-
-
-
-
-#### `const uint32_t CRYPTONOTE_MINED_MONEY_UNLOCK_WINDOW = 40;`<br/><br/>
+#### `const uint32_t CRYPTONOTE_MINED_MONEY_UNLOCK_WINDOW = 40;`<br/>
 
 This value defines how many blocks need to be followed in the current chain
 before releasing the reward for mining a block for spending.
 
 We would suggest you set this value to be roughly equal to 20 minutes - in
-TurtleCoins case that's exactly what we have - 40 blocks * 30 seconds = 20
+TurtleCoin's case that's exactly what we have - 40 blocks * 30 seconds = 20
 minutes.
 
 If you have a block time of 2 minutes for example, we would set this value
 to 10.
 
-- `const uint32_t CRYPTONOTE_MINED_MONEY_UNLOCK_WINDOW = 10;`<br/><br/>
+- `const uint32_t CRYPTONOTE_MINED_MONEY_UNLOCK_WINDOW = 10;`<br/>
 
 
-
-
-
-#### `const uint64_t MONEY_SUPPLY = UINT64_C(100000000000000);`<br/><br/>
+#### `const uint64_t MONEY_SUPPLY = UINT64_C(100000000000000);`<br/>
 
 This line is a pretty significant one. It determines the max supply of coins your cryptocurrency will have.
 In TurtleCoin, this is 1 trillion TRTL, but as previously mentioned, all these values are in *atomic units*,
@@ -382,20 +368,17 @@ Therefore, we suggest you decide how many decimal places your coin has, before f
 If you want your coin to have 6 decimal places, and the total supply to be ten thousand (10,000),
 the MONEY_SUPPLY value would be: `10^6 (or 1,000,000) * ten thousand (10,000) = 10000000000`.
 
-So, we would then pop this value in to give us: 
+So, we would then pop this value in to give us:
 
-- `const uint64_t MONEY_SUPPLY = UINT64_C(10000000000);`<br/><br/>
-
-
+- `const uint64_t MONEY_SUPPLY = UINT64_C(10000000000);`<br/>
 
 
-
-#### `const uint32_t ZAWY_DIFFICULTY_BLOCK_INDEX = 187000;`<br/><br/>
+#### `const uint32_t ZAWY_DIFFICULTY_BLOCK_INDEX = 187000;`<br/>
 
 This section will cover all of these, since they are all related:
 
 ```
-const uint32_t ZAWY_DIFFICULTY_BLOCK_INDEX                   = 187000;
+const uint32_t ZAWY_DIFFICULTY_BLOCK_INDEX 	                 = 187000;
 const uint64_t LWMA_2_DIFFICULTY_BLOCK_INDEX                 = 620000;
 const uint64_t LWMA_2_DIFFICULTY_BLOCK_INDEX_V2              = 700000;
 const uint64_t LWMA_2_DIFFICULTY_BLOCK_INDEX_V3              = 800000;
@@ -411,7 +394,7 @@ Difficulty algorithms are pretty hard to write, so we have quite a lot of revisi
 - `const uint32_t LWMA_2_DIFFICULTY_BLOCK_INDEX = 3;`<br/><br/>
 
 
-#### `const unsigned EMISSION_SPEED_FACTOR = 25;`<br/><br/>
+#### `const unsigned EMISSION_SPEED_FACTOR = 25;`<br/>
 
 This value defines how fast the maximum supply will be emitted.
 A smaller value means the supply will be emitted faster,
@@ -422,25 +405,20 @@ to experiment with different values for the emission and how they will affect ho
 If we wanted a fast emission, we could set this to a value like 21.
 
 
-- `const unsigned EMISSION_SPEED_FACTOR = 21;`<br/><br/>
+- `const unsigned EMISSION_SPEED_FACTOR = 21;`<br/>
 
 
-
-
-#### `const size_t CRYPTONOTE_DISPLAY_DECIMAL_POINT = 2;`<br/><br/>
+#### `const size_t CRYPTONOTE_DISPLAY_DECIMAL_POINT = 2;`<br/>
 
 This value defines how many numbers there are after the decimal point in your currency.
 In TurtleCoin, this value is 2, so we have amounts like 10.23 TRTL.
 If we set this to 6, we would have an amount like 10.234567 TRTL instead.
 Remember, as previously mentioned, this affects your money supply and other parameters which depend upon atomic units.
 
-- `const size_t CRYPTONOTE_DISPLAY_DECIMAL_POINT = 6;`<br/><br/>
+- `const size_t CRYPTONOTE_DISPLAY_DECIMAL_POINT = 6;`<br/>
 
 
-
-
-
-#### `const uint64_t MINIMUM_FEE = UINT64_C(10);`<br/><br/>
+#### `const uint64_t MINIMUM_FEE = UINT64_C(10);`<br/>
 
 This value defines what the minimum fee a user must spend to send a transaction is.
 Note this doesn't apply to fusion transactions.
@@ -453,77 +431,52 @@ This value is defined again in *atomic units*,
 so multiply your desired minimum fee by 10 * the number of numbers after the decimal point in your coin.
 
 
-- `const uint64_t MINIMUM_FEE = UINT64_C(1000);`<br/><br/>
+- `const uint64_t MINIMUM_FEE = UINT64_C(1000);`<br/>
 
 
-
-
-#### `const uint64_t MINIMUM_MIXIN_V1 = 0;`<br/><br/>
+#### `const uint64_t MINIMUM_MIXIN_V1 = 0;`<br/>
 
 This section will cover all of these, because they are all related:
 
 ```
 const uint64_t MINIMUM_MIXIN_V1                              = 0;
 const uint64_t MAXIMUM_MIXIN_V1                              = 100;
-
 const uint64_t MINIMUM_MIXIN_V2                              = 7;
 const uint64_t MAXIMUM_MIXIN_V2                              = 7;
 
-const uint64_t MINIMUM_MIXIN_V3                              = 3;
-const uint64_t MAXIMUM_MIXIN_V3                              = 3;
-
-/* The heights to activate the mixin limits at */
 const uint32_t MIXIN_LIMITS_V1_HEIGHT                        = 440000;
 const uint32_t MIXIN_LIMITS_V2_HEIGHT                        = 620000;
-const uint32_t MIXIN_LIMITS_V3_HEIGHT                        = 800000;
 
-/* The mixin to use by default with zedwallet and turtle-service */
-/* DEFAULT_MIXIN_V0 is the mixin used before MIXIN_LIMITS_V1_HEIGHT is started */
-const uint64_t DEFAULT_MIXIN_V0                              = 3;
-const uint64_t DEFAULT_MIXIN_V1                              = MAXIMUM_MIXIN_V1;
-const uint64_t DEFAULT_MIXIN_V2                              = MAXIMUM_MIXIN_V2;
-const uint64_t DEFAULT_MIXIN_V3                              = MAXIMUM_MIXIN_V3;
+const uint64_t DEFAULT_MIXIN = MINIMUM_MIXIN_V2;
 ```
 
-These values set the mixin limits allowed on the network, and what heights they are activated at. Mixin determines how private transactions are, however, due to the way a transaction must match inputs from previous transactions, a high mixin on a new network can cause transactions to fail. Thus, we would suggest starting off with some reasonably limits, still allowing 0 mixin, and increasing the minimum mixin later.
+These set the mixin values that are allowed on the network, and at what height they are applied.
+If you want a private coin from the get-go,
+I would suggest setting MIXIN_LIMITS_V1_HEIGHT to 0, and MIXIN_LIMITS_V2_HEIGHT to 1.
+Then, set the MINIMUM_MIXIN_V1/V2 and MAXIMUM_MIXIN_V1/V2 values as appropriate.
 
-Furthermore, note that sending transactions with high mixins currently causes stability issues with the daemon. It has to dig up old mixin key images from the database, and has some bugs causing daemons to often freeze, crash, or fork, when encountering very large transactions. For this reason, it is a good idea to ban mixin values that are quite large to ensure stability on your network.
+Don't set a value that is *too* high, otherwise your network will have difficulty processing transactions.
+You shouldn't set the minimum anymore than 100, and sane values would be somewhere in the 0 - 30 range.
 
-It is also a good idea to force a static mixin. If everyone uses the same mixin value, it is a lot harder to single a user out. However, if most people use a mixin of 3, and one person uses a mixin of 42, it is easy to determine which transactions belong to this user.
-
-The `DEFAULT_MIXIN` values determine what is the default mixin to be used by zedwallet, and by turtle-service (if no anonymity parameter is given). DEFAULT_MIXIN_V0 is the value used before the mixin limits are applied, which probably won't be applicable to your codebase, but we added it just incase. `DEFAULT_MIXIN_V1` is the value to use whilst the limits of `MINIMUM_MIXIN_V1` and `MAXIMIUM_MIXIN_V1` are in effect, and so on.
+`DEFAULT_MIXIN` is used to set the mixin value used in zedwallet, so set it to a sane value.
 
 Make sure your minimum is less than or equal to your maximum!
 
-The below code allows mixin values of 0 to 3 from block 0, to block 99999. Upon reaching block 100,000, the mixin must be a static 3. We have left MIXIN_LIMITS_V3 set at a height of 1,000,000, since you might want to change your mixin values later, and you can easily change the height of this upgrade, along with your desired mixin limits.
-
 ```
 const uint64_t MINIMUM_MIXIN_V1                              = 0;
-const uint64_t MAXIMUM_MIXIN_V1                              = 3;
+const uint64_t MAXIMUM_MIXIN_V1                              = 100;
+const uint64_t MINIMUM_MIXIN_V2                              = 7;
+const uint64_t MAXIMUM_MIXIN_V2                              = 7;
 
-const uint64_t MINIMUM_MIXIN_V2                              = 3;
-const uint64_t MAXIMUM_MIXIN_V2                              = 3;
-
-const uint64_t MINIMUM_MIXIN_V3                              = 7;
-const uint64_t MAXIMUM_MIXIN_V3                              = 7;
-
-/* The heights to activate the mixin limits at */
 const uint32_t MIXIN_LIMITS_V1_HEIGHT                        = 0;
-const uint32_t MIXIN_LIMITS_V2_HEIGHT                        = 100000;
-const uint32_t MIXIN_LIMITS_V3_HEIGHT                        = 1000000;
+const uint32_t MIXIN_LIMITS_V2_HEIGHT                        = 1;
 
-/* The mixin to use by default with zedwallet and turtle-service */
-const uint64_t DEFAULT_MIXIN_V0                              = 3;
-const uint64_t DEFAULT_MIXIN_V1                              = MAXIMUM_MIXIN_V1;
-const uint64_t DEFAULT_MIXIN_V2                              = MAXIMUM_MIXIN_V2;
-const uint64_t DEFAULT_MIXIN_V3                              = MAXIMUM_MIXIN_V3;
+const uint64_t DEFAULT_MIXIN = MINIMUM_MIXIN_V2;
 ```
-<br/><br/>
+<br/>
 
 
-
-
-#### `const uint64_t DEFAULT_DUST_THRESHOLD  = UINT64_C(10);`<br/><br/>
+#### `const uint64_t DEFAULT_DUST_THRESHOLD  = UINT64_C(10);`<br/>
 
 
 This section will cover all of these, because they are all related:
@@ -542,12 +495,10 @@ Setting the dust threshold to zero prevents this, but has a side effect of makin
 
 I suggest setting DUST_THRESHOLD_V2_HEIGHT to 0, to make small amounts always spendable.
 
-- `const uint32_t DUST_THRESHOLD_V2_HEIGHT = 0;`<br/><br/>
+- `const uint32_t DUST_THRESHOLD_V2_HEIGHT = 0;`<br/>
 
 
-
-
-#### `const uint32_t UPGRADE_HEIGHT_V4 = 350000;`<br/><br/>
+#### `const uint32_t UPGRADE_HEIGHT_V4 = 350000;`<br/>
 
 
 This value determines when the mining algorithm will transition to Original CryptoNight,
@@ -562,12 +513,12 @@ you can set the upgrade height to `std::numeric_limits<uint32_t>::max()`
 
 (You will probably need to add `#include <limits>` to the top of the file if you choose this option)
 
-- `const uint32_t UPGRADE_HEIGHT_V4 = 3; // Upgrade height for CN-Lite Variant 1 switch.`<br/><br/>
+- `const uint32_t UPGRADE_HEIGHT_V4 = 3; // Upgrade height for CN-Lite Variant 1 switch.`<br/>
 
 
 
 
-#### `const uint64_t FORK_HEIGHTS[] =`<br/><br/>
+#### `const uint64_t FORK_HEIGHTS[] =`<br/>
 
 This variable is used by the `status` command in zedwallet and TurtleCoind to notify users when a fork is upcoming,
 or their software is outdated. We suggest you set up some regular forks ahead of time,
@@ -584,11 +535,11 @@ This will set the status command to notify of a fork at 100k and 300k blocks.
     300000
   };
   ```
-  <br/><br/>
-  
+  <br/>
 
 
-#### `const uint64_t SOFTWARE_SUPPORTED_FORK_INDEX = 5;`
+
+#### `const uint8_t CURRENT_FORK_INDEX = FORK_HEIGHTS_SIZE == 0 ? 0 : 3;`<br/>
 
 This value relates to the previous FORK_HEIGHTS array.
 It determines which fork heights the software supports. (This value is zero-indexed).
@@ -596,18 +547,18 @@ For example, if our `FORK_HEIGHTS = {100, 200, 300}` and `CURRENT_FORK_INDEX = 1
 then the software will support the fork at FORK_HEIGHTS[1] - which is the fork at 200 blocks.
 
 We have a ternary to check FORK_HEIGHTS_SIZE so if you wish to empty the FORK_HEIGHTS array,
-you don't need to set a SOFTWARE_SUPPORTED_FORK_INDEX.
+you don't need to set a CURRENT_FORK_INDEX.
+
+- `const uint8_t CURRENT_FORK_INDEX = FORK_HEIGHTS_SIZE == 0 ? 0 : 1;`<br/>
 
 
-const uint64_t SOFTWARE_SUPPORTED_FORK_INDEX = 0;
 
 
-
-#### `const char CRYPTONOTE_NAME[] = "TurtleCoin";`<br/><br/>
+#### `const char CRYPTONOTE_NAME[] = "TurtleCoin";`<br/>
 
 This is an obvious one. It's the name of your coin!
 
-- `const char CRYPTONOTE_NAME[] = "SuperCoolCoin";`<br/><br/>
+- `const char CRYPTONOTE_NAME[] = "SuperCoolCoin";`<br/>
 
 
 
@@ -627,7 +578,7 @@ permissions to use these ports.
 
 - `const int P2P_DEFAULT_PORT = 10101;`
 - `const int RPC_DEFAULT_PORT = 10102;`
-<br/><br/>
+<br/>
 
 
 
@@ -646,11 +597,11 @@ a valid hex value (0-9, a-f).
       {  0x11, 0x22, 0x33, 0x44, 0x55, 0x66, 0x77, 0x88, 0x99, 0xaa, 0xbb, 0xcc, 0xdd, 0xee, 0xff, 0x00  }
   };
   ```
-<br/><br/>
+<br/>
 
 
 
-#### `const char* const SEED_NODES[] = {`<br/><br/>
+#### `const char* const SEED_NODES[] = {`<br/>
 
 This variable defines the seed nodes daemons will connect to on the very first launch,
 before they are aware of any peers. You will need to run these on different servers,
@@ -663,17 +614,16 @@ to help decentralize your coin.
   {
       "111.111.111.111:11897",
       "222.222.222.222:11897",
-      "333.333.333.333:11897",
   };
   ```
-  <br/><br/>
-  
-  
-  
+  <br/>
+
+
+
 
 ## Premine
 
-You may have noticed we skipped 
+You may have noticed we skipped
 
 ```
 const uint64_t GENESIS_BLOCK_REWARD = UINT64_C(0);
@@ -702,7 +652,7 @@ Once it has compiled, use zedwallet to generate an address. Don't worry about ru
 
 Save this address somewhere, and make sure to save your wallet keys somewhere safe as well.
 
-Now, take this address, and run your daemon with the following arguments: 
+Now, take this address, and run your daemon with the following arguments:
 
 `--print-genesis-tx --genesis-block-reward-address <premine wallet address>`
 
@@ -739,69 +689,49 @@ To fix it, just set `const std::initializer_list<CheckpointData> CHECKPOINTS = {
 
 It would be a good idea to add some checkpoints here for your new chain when you're up and running.
 
-**SUPER IMPORTANT** If you didn't do this and are now dealing with errors about failing hashes and checkpoints, you need to re-launch your coin. START AGAIN, this time ensuring you have an empty checkpoints list. What has happened by not clearing out the checkpoints is every block between 0 and 5k has not been verified. This means it was possible to double spend coins and your blockchain may very well have invalid transactions. All steps in this guide are important, however now you know why this one is especially important, good luck!
-
 ## WalletConfig.h
 
 Next up to modify is WalletConfig.h, located in `src/zedwallet/WalletConfig.h`
 
-These fields are all pretty well documented already, but we'll go over them anyway.<br/><br/>
+These fields are all pretty well documented already, but we'll go over them anyway.<br/>
 
-#### `const std::string addressPrefix = "TRTL";`<br/><br/>
+#### `const std::string addressPrefix = "TRTL";`<br/>
 
 This value is used to check inputted addresses are correct.
 This value corresponds to the value you chose for your address prefix earlier,
 in `const uint64_t CRYPTONOTE_PUBLIC_ADDRESS_BASE58_PREFIX =`
 
-- `const std::string addressPrefix = "aPPLE";`<br/><br/>
+- `const std::string addressPrefix = "aPPLE";`<br/>
 
 
 
 
-#### `const std::string ticker = "TRTL";`<br/><br/>
+#### `const std::string ticker = "TRTL";`<br/>
 
 This refers to the 'short name' your coin has, which is often used as a ticker on exchanges.
 For example, in TurtleCoin this is TRTL, in Monero this is XMR, and in Bitcoin this is BTC.
 
-- `const std::string ticker = "APPLE";`<br/><br/>
+- `const std::string ticker = "APPLE";`<br/>
 
 
 
 
-#### `const std::string csvFilename = "transactions.csv";`<br/><br/>
-
-This value sets the output filename used by the saveCSV command, which creates a CSV file with
-all your previous transactions included in.
-
-- `const std::string csvFilename = "transactions.csv";`<br/><br/>
-
-
-
-#### `const std::string addressBookFilename = ".addressBook.json";`<br/><br/>
-
-This value sets the filename used to store the address book data. It's a good idea to prefix it with a `.`
-so it's hidden under Linux + Mac.
-
-- `const std::string addressBookFilename = ".addressBook.json";<br/><br/>
-
-
-
-#### `const std::string daemonName = "TurtleCoind";`<br/><br/>
+#### `const std::string daemonName = "TurtleCoind";`<br/>
 
 This variable determines what the name of your daemon is.
 We'll talk about changing the names of the executables generated in the `CmakeLists.txt` section.
 We'll skip mentioning `walletName`, and `walletdName` as these both follow the same format.
 
-- `const std::string daemonName = "AppleCoind";`<br/><br/>
+- `const std::string daemonName = "AppleCoind";`<br/>
 
 
 
-#### `const std::string contactLink = "http://chat.turtlecoin.lol";`<br/><br/>
+#### `const std::string contactLink = "http://chat.turtlecoin.lol";`<br/>
 
 This value is used to let the user know where they can get support if their wallet gets stuck whilst syncing.
 In our case, this is the TurtleCoin discord. Maybe you have a forum or an IRC chat instead?
 
-- `const std::string contactLink = "https://applecoin.com/livechat"`<br/><br/>
+- `const std::string contactLink = "https://applecoin.com/livechat"`<br/>
 
 
 
@@ -812,21 +742,19 @@ This value is used to verify inputted addresses are correct.
 You can easily get this value by compiling, generating an address with zedwallet, and checking how long it is.
 
 
-- `const long unsigned int addressLength = 100;`<br/><br/>
+- `const long unsigned int addressLength = 100;`<br/>
 
 
 
 
 
-#### `const long unsigned int integratedAddressLength = standardAddressLength + ((64 * 11) / 8);`<br/><br/>
+#### `const long unsigned int integratedAddressLength = 236;`<br/>
 
 This value is used to verify inputted addresses are correct.
 An integrated address is an address which also contains an embedded payment ID,
 to alleviate users from having to remember to supply one with the transaction.
 
-You shouldn't need to modify this value, since it should always be equal to the length of a standard address, plus the length of a payment ID that has been base58 encoded.
-
-If you want to make sure, you can easily get this value by compiling, generating an address with zedwallet,
+You can easily get this value by compiling, generating an address with zedwallet,
 then using the `make_integrated_address` command, and checking how long it is.
 
 You can use your own address with this command, and any payment ID.
@@ -834,10 +762,22 @@ If you don't know how to generate a payment ID, here's a random one for you to u
 
 `8eba031ca60bf9b9f680309819bddf071e619c53ff71766e48e365812e229452`
 
-- `const long unsigned int integratedAddressLength = standardAddressLength + ((64 * 11) / 8);`<br/><br/>
+- `const long unsigned int integratedAddressLength = 237;`<br/>
 
 
-#### `const uint64_t defaultFee = CryptoNote::parameters::MINIMUM_FEE`<br/><br/>
+
+#### `const uint64_t defaultMixin = CryptoNote::parameters::DEFAULT_MIXIN;`<br/>
+
+This sets the mixin value to be used with transactions.
+Make sure this is in the bounds you set earlier, with `MINIMUM_MIXIN_V1/V2` and `MAXIMUM_MIXIN_V1/V2`.
+
+
+- `const uint64_t defaultMixin = 7;`<br/>
+
+
+
+
+#### `const uint64_t defaultFee = CryptoNote::parameters::MINIMUM_FEE`<br/>
 
 If you want to set a higher default fee, perhaps to make transactions go through quicker, you can do that here.
 As usual, this is in *atomic units*.
@@ -850,23 +790,26 @@ If you want to enforce higher fees across the network,
 change the value of `CryptoNote::parameters::MINIMUM_FEE` in `CryptoNoteConfig.h`.
 
 
-- `const uint64_t defaultFee = 100;`<br/><br/>
+- `const uint64_t defaultFee = 100;`<br/>
 
 
 
 
-#### `const bool mixinZeroDisabled = true;`<br/><br/>
+#### `const bool mixinZeroDisabled = true;`<br/>
 
 Is a mixin of zero allowed on the network? If at some point a mixin of zero will be disabled,
 but that point is at a later fork, still set this to `true`.
 
 If you set this to true, you can change the value of
 
-`const uint64_t mixinZeroDisabledHeight = CryptoNote::parameters::MIXIN_LIMITS_V2_HEIGHT;`
+```
+const uint64_t mixinZeroDisabledHeight = CryptoNote::parameters::MIXIN_LIMITS_V2_HEIGHT;
+```
 
 To determine what block height a mixin of zero gets disabled.
 In TurtleCoin's case, this was disabled at block 620k,
-but being a new network, you have the advantage of being able to disable a mixin of zero much earlier, or even from the launch of your network.
+but being a new network, you have the advantage of being able to disable a mixin of zero much earlier,
+or even from the launch of your network.
 
 Again, this is only a client-side limitation.
 Ensure you have set your mixin limits in `CryptoNoteConfig.h` so that the network will enforce the mixin limits. Any ideas you always want to happen, need to be done at the network level, else custom daemons/wallets etc. can be written to avoid those ideas/limits.
@@ -875,37 +818,36 @@ If you want to allow zero mixins, then `mixinZeroDisabledHeight` does nothing.
 
 - ```
   const bool mixinZeroDisabled = true;
-  const uint64_t mixinZeroDisabledHeight = 100000;
+  const uint64_t mixinZeroDisabledHeight = 0;
   ```
-  <br/><br/>  
+  <br/>
+
+
+
 
 
 
 ## Setup
 
 Ok, so you've finished tweaking all the configs, and now you're ready to go!
+To start with, you will need to compile your code. See the compiling section below.
 
-* Ensure you've compiled the latest version of your code.
+Make sure you've got the IPs of your seed nodes filled in in the config,
+3 daemons need to be connected to the network for your coin to work.
 
-* Make sure you've got the IPs of your seed nodes filled in in the config,
-
-* 3+ daemons need to be connected to the network for your coin to work.
-
-Once you've compiled the code on all your machines, you can start up your daemon(s).
-
-If you are unable to connect to the seed nodes, you will see something like `Failed to connect to seed nodes` in your daemon output.
+Once you've compiled the code on all your machines,
+you can start up your daemon.
+If you are unable to connect to the seed nodes,
+you will see something like `Failed to connect to seed nodes` in your daemon output.
 
 Ensure your firewalls are not preventing the daemon connection,
-you may need to open the p2p and RPC ports for the daemon,
-which by default are 11898 and 11897 (Remember you should have changed these though!)
+you may need to open the p2p and RPC ports for the daemon, which by default are 11898 and 11897.
 
-* If your daemons are now talking to each other, you can start mining, and launch your blockchain!
+If your daemons are now talking to each other, you can start mining, and launch your blockchain!
 
-* You can use the solo mining `miner` executable for this.
-
-* From a command prompt or terminal, launch the miner like so: `miner --threads 1 --log-level 3 --address <your address>`, replacing <your address> with an address you have generated and control.
-
-You can generate a wallet from zedwallet for example (Please note zedwallet will not be able to connect to your node since no blocks have been mined, you can safely ignore this)
+You can use the solo mining `miner` executable for this.
+From a command prompt or terminal, launch the miner like so: `miner --threads 1 --log-level 3 --address <your address>`,
+replacing <your address> with an address you have generated and control.
 
 You can, of course, increase the threads value, however as you are the only one currently mining on the network,
 there is not much point in that yet!
@@ -917,21 +859,20 @@ E.g.
 ```
 
 If you've done this correctly, you should see output like this:
-`Block successfully submitted, hash xxxx`, and in your daemon window, you should see the `New block detected` value increasing in height.
+`Block successfully submitted, hash xxxx`, and in your daemon window,
+you should see the `New block detected` value increasing in height.
 
 Congratulations!
 
+## Compiling
 
-## After the fact
+You can always find the latest instructions on how to compile TurtleCoin on our [GitHub](https://github.com/turtlecoin/turtlecoin#how-to-compile).
 
-Something not clear? Head over to our [Discord](http://chat.turtlecoin.lol), and ask for help in the #dev_learning channel.
 
-If you've successfully got your coin working, you might be interested in getting the "spork" role in our discord,
-which we use to update any coins that have forked from us, if there are vulnerability issues or updates you may need to implement.
+## Support, Questions?
 
-Send rocksteady a message regarding this in #dev_general or somewhere similar.
-
-You may also be interested in sending a PR to https://github.com/ForkMaps/cryptonote , so you can be listed on this website: https://forkmaps.com/#/forkMap
+Something not clear? Head over to our [Discord](http://chat.turtlecoin.lol) and ask in the #help channel,
+and hopefully, someone will be able to help you out.
 
 Let us know if something is wrong with this guide, or missing, so we can update it and make it better!
 

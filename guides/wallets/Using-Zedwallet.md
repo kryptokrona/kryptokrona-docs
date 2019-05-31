@@ -40,7 +40,7 @@ unzip turtlecoin-...-linux.zip
 
 Running `TurtleCoind` will start the *TurtleCoind* network daemon, which will connect to the network and begin downloading and verifying the TurtleCoin blockchain.  
 
-Because the blockchain is constantly growing, the file size always increases (the blockchain is currently over 35 GB), and *TurtleCoind must verify every block*, which is both CPU and disk intensive. An SSD with at least this much free disk space is recommended, unless you plan to use [remote nodes](https://github.com/turtlecoin/turtlecoin/wiki/Using-remote-nodes). 
+Because the blockchain is constantly growing, the file size always increases (the blockchain is currently over 35 GB), and *TurtleCoind must verify every block*, which is both CPU and disk intensive. An SSD with at least this much free disk space is recommended, unless you plan to use [remote nodes](Using-remote-nodes). 
 
 ### Using Checkpoints
 
@@ -266,7 +266,7 @@ Because transactions on the TurtleCoin blockchain are privatized, in some situat
 
 **You need it if you're sending TRTL to an exchange**.
 
-To send a transaction with a payment ID, enter it when prompted to. It is a 64char hex string.
+To send a transaction with a payment ID, enter it when prompted to.
 
 ![p-id](guides/wallets/images/p-id-simple.png)
 

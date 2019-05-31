@@ -39,7 +39,7 @@ sudo apt-get install gcc-8 g++-8
 
 Now you need to install the required dependencies and the latest release of the xmrig miner and compile it with gcc-8.
 
-```
+```bash
 sudo apt-get install git build-essential cmake libuv1-dev libmicrohttpd-dev libssl-dev
 git clone https://github.com/xmrig/xmrig.git
 cd xmrig
@@ -51,14 +51,14 @@ sudo make -j4
 
 Compiling the miner could take several minutes to complete. When your miner is ready you need to create a configuration file with your TurtleCoin settings. Navigate to your home directory and create a file named config.json.trtl.
 
-```
+```bash
 cd ~
 sudo nano config.json.trtl
 ```
 
 Populate your configuration file with something similar to the code below. Make sure that "url", "pass", and "miner" are populated with the your own unique and proper values.
 
-```
+```json
 {
     "algo": "cryptonight-pico/trtl",
     "background": false,
@@ -95,7 +95,7 @@ sudo nano mineturtle
 
 Place the following code into the mineturtle file:
 
-```
+```bash
 #!/bin/bash
 sudo sysctl -w vm.nr_hugepages=8
 ~/xmrig/build/xmrig --config=config.json.trtl
