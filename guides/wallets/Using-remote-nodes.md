@@ -6,10 +6,10 @@ In case you don't want to download the blockchain and verify it everytime, you c
 
 Guide coming soon!
 
-## ZedWallet
+## zedwallet
 
 1. Open up a command prompt window and navigate to the folder that contains *zedwallet*.
-2. Use the following command to start ZedWallet  
+2. Use the following command to start zedwallet  
 
 ### Windows:
 
