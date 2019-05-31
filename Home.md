@@ -1,4 +1,4 @@
-![TurtleCoin Logo](images/turtlecoin_logo.png)
+![TurtleCoin Logo](assets/turtlecoin_logo.png)
 
 # :turtle: :turtle: :turtle: Welcome to the TurtleCoin Wiki :turtle: :turtle: :turtle:
 
