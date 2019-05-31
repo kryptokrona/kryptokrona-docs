@@ -25,7 +25,9 @@ Guides for recovering your wallet with your 25 word mnemonic seed-
 
 ### zedwallet
 
-View [this guide](Using-zedwallet#25-word-mnemonic-seed) for steps on recovering your wallet with your 25 word mnemonic seed with zedwallet.
+Guide coming soon!
+
+<!--View [this guide](Using-zedwallet#25-word-mnemonic-seed) for steps on recovering your wallet with your 25 word mnemonic seed with zedwallet.-->
 
 ### WalletShell
 
