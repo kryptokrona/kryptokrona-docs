@@ -264,7 +264,7 @@ When it is completed, it will print out a green message `Full optimization compl
 
 Because transactions on the TurtleCoin blockchain are privatized, in some situations a payment ID is necessary for the recipient to be able to determine where the payment came from, for instance when depositing to an exchange or other service.
 
-**You need it if you're sending TRTL to an exchange, the tipbot or RainBorg**.
+**You need it if you're sending TRTL to an exchange**.
 
 To send a transaction with a payment ID, enter it when prompted to. It is a 64char hex string.
 
