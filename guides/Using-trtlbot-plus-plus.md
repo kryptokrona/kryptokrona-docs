@@ -11,8 +11,6 @@ For example, you would type-
 .registerwallet TRTLv3pFrFm2yk4cYNtKf5fxV1b594tNrZfEV2CYWJsTSqr9BWoWMrUNpQaeD9StrzQrxpRQKPCdd1FfvT6D6dAg4pY6iB7sqs
 ```
 
-
-
 ## Depositing Turtle
 
 After your wallet address has been registered, type `.deposit` in the `#bots` channel, then:
@@ -21,23 +19,18 @@ After your wallet address has been registered, type `.deposit` in the `#bots` ch
 * Copy the first line of code he gives and enter it in your wallet's Recipient address field
 * Then copy the second line of code he gives and enter it as the Payment ID address field
 
-#### CLI Wallet
+#### ZedWallet
 
 Follow the steps given [here](using-zedwallet#sending-turtlecoin-transactions) and replace the values of the address and payment ID with the ones provided (**!! PAYMENT ID IS IMPORTANT !!**).
 
 - See [Expected Results](#expected-results) section below
 
-#### GUI Wallet
+#### WalletShell
 
-##### Nest Wallet
+Guide coming soon!
 
-Follow the steps given [here](using-nest-wallet#sending-turtlecoin-transactions) and replace the values of the address and Payment ID with the ones provided (**!! PAYMENT ID IS IMPORTANT !!**)
-
-##### ~~WinForms Wallet~~ [DEFUNCT]
-
-~~Follow the steps given [here](using-winforms-wallet#sending-turtlecoin-transactions) and replace the values of the address(recipient) and Payment ID with the ones provided (**!! PAYMENT ID IS IMPORTANT !!**)~~
-
-
+<!--for future reference -->
+<!--Follow the steps given [here](using-nest-wallet#sending-turtlecoin-transactions) and replace the values of the address and Payment ID with the ones provided (**!! PAYMENT ID IS IMPORTANT !!**)-->
 
 * See [Expected Results](#expected-results) section below
 

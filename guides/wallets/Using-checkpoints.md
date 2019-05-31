@@ -42,7 +42,7 @@ If you did the steps correctly, you should see something like this output.
 ```
 
 - TurtleCoind will then start syncing from checkpoints.
-- If you are using the CLI wallet, then you can just wait for it to finish syncing, and open your wallet(leave the daemon open!).
+- If you are using the ZedWallet, then you can just wait for it to finish syncing, and open your wallet(leave the daemon open!).
 - If you are using a GUI wallet, let it finish syncing, close it down by typing `exit` in the window, then open your GUI wallet.
 
 ## Common Errors
