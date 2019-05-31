@@ -313,7 +313,7 @@ This could be caused by multiple issues:
 #### Q: How can I use just my GPU or CPU to mine in XMR-Stak?
 
 
-If you're using XMR-Stak, you can start the miner with a certain command. Check [this out](XMR-Stak-Guide#XMR-Stak-no-cpu-gpu) for more info.
+If you're using XMR-Stak, you can start the miner with a certain command. Check [this out](XMR-Stak-Guide#to-start-xmr-stak-without-using-your-cpugpu-follow-these-steps--) for more info.
 
 #### Q: XMR-Stak is crashing on startup, with an error about CUDA. What am I doing wrong?
 
@@ -348,7 +348,7 @@ Some users have experienced issues with their firewall or antivirus as well howe
 
 This is possible, however please note that these developers are independent from the TurtleCoin project and are doing some great work, so we would suggest leaving it as is.
 
-If you do wish to change/remove the dev fee, you will have to compile XMR-Stak yourself, they have instructions to do this on their [GitHub](https://github.com/fireice-uk/XMR-Stak/blob/master/doc/compile), or you can check out the [Linux guide](XMR-Stak-Linux-Guide#ubuntu-16-04)
+If you do wish to change/remove the dev fee, you will have to compile XMR-Stak yourself, they have instructions to do this on their [GitHub](https://github.com/fireice-uk/xmr-stak/blob/master/doc/compile.md)
 
 Once you have downloaded the code, you need to change the file `donate-level.hpp` in the `XMR-Stak/XMR-Stak/` folder.
 
