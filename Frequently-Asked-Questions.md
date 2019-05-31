@@ -82,7 +82,7 @@ You can also type `status` in the daemon and press enter to see the current heig
 #### Q: I think I should have more money in my balance than it is showing, what should I do?
 
 Re-sync your daemon from scratch(see [here](#q-how-can-i-re-sync-the-blockchain)), sync [using checkpoints](Using-checkpoints) or use a [remote node](Using-remote-nodes)) if you're using the GUI wallet.
-If it still doesn't work, then [update](latest.turtlecoin.lol) your wallet!
+If it still doesn't work, then [update](http://latest.turtlecoin.lol) your wallet!
 
 #### Q: I've tried resetting, but it isn't working. What should I do?
 
