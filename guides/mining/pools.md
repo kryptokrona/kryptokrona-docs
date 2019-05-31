@@ -1,4 +1,4 @@
-# List of Mining Pools
+﻿# List of Mining Pools
 
 Unless you want to solo mine, which is unfeasible for many people, you will need a pool to mine towards. Make sure to choose the one closest to you!
 
@@ -6,30 +6,22 @@ Here are some of the TurtleCoin mining pools (arranged alphabetically):
 
 |                          Pool Name                           |    Total Fee and Method     |                 Min. Payout                  |        Location        |                            Notes                             |
 | :----------------------------------------------------------: | :-------------------------: | :------------------------------------------: | :--------------------: | :----------------------------------------------------------: |
-|     [CryptoNote Social](https://cryptonote.social/trtl)      |     0%, (Proportional)      | 0 TRTL(anything higher than transaction fee) |       California       | Read `details details details` section carefully. |
+|     [CryptoNote Social](https://cryptonote.social/trtl)      |     0%, (Proportional)      | 0 TRTL(anything higher than transaction fee) |       California       | **No payments page** Read `details details details` section carefully. |
 | [Funky Penguin NZ](https://trtl.heigh-ho.funkypenguin.co.nz) | 0.0987654321%, Proportional |                  1000 TRTL                   |      New Zealand       |                              -                               |
-|     [GNTL TRTL Poo](https://trtl.pool.gntl.co.uk/#/home)     | 0.1%, PPLNS <br /> 1%, Solo | Wallet: 500 TRTL <br />Exchange: 10000 TRTL  |     United Kingdom     |                     Supports solo mining                     |
+|     [Hackerknowledge.de](https://trtl.hackerknowledge.de)     | 0.1%, PROP <br /> 0.25%, Solo <br /> 5%, PPS |                    100 TRTL                    |     Germany     |                              -                               |
 |         [Mine2Gether](https://trtl.mine2gether.com)          |     0.1%, Proportional      |                   500 TRTL                   |        Germany         |                              -                               |
-| [MinerCartel TurtleCoin Pool](https://turtle.minercartel.com/#/home) |         0.1%, PPLNS         |  Wallet: 100 TRTL <br />Exchange: 500 TRTL   |          USA           |            Supports XMR-Node-Proxy                   |
 |              [MineTRTL](http://ny.minetrtl.us)               |     0.1%, Proportional      |                   500 TRTL                   |        New York        |                           No HTTPS                           |
-|              [Muxdux Mining](http://trtl.muxdux.com)               |     0.08%, Proportional      |                   100 TRTL                   |        Western USA        |                     All miners large and small are welcome                                 |
-|    [Tortuga Amor Mining Pool](http://mine.tortugamor.cf)     |             0%              |                  0.01 TRTL                   |          USA           |                           No HTTPS                           |
-|    [TRTL Cryptohispano](https://trtl.cryptohispano.net)      |      1%, Proportional       |                   500 TRTL                   |      Spain             |                    Customer support in Spanish                 |                                           
+|    [TRTL Cryptohispano](https://trtl.cryptohispano.net)      |      1%, Proportional       |                   500 TRTL                   |      Spain             |                    Customer support in Spanish               |                                           
 |               [TRTL Ninja](https://trtl.ninja)               |     0.1%, Proportional      |                   100 TRTL                   |         France         |                              -                               |
-|        [TRTL POOL PARTY](https://turtle.atpool.party)        |     0.05%, Proportional     |                   500 TRTL                   |     Multi-Regional     |                              -                               |
-|          [TRTL semiPOOL](https://trtl.semipool.com)          |         0.1%, PPLNS         |  Wallet: 500 TRTL<br />Exchange: 1000 TRTL   |     Multi-Regional     |                   Supports XMR-Node-Proxy                    |
+|        [TRTL POOL PARTY](https://turtle.atpool.party)        |     0.05%, Proportional     |                   500 TRTL                   |     Multi-Regional     |              Disable ad-block, interferes with stats tracker |
 |   [Turtle CryptoAsiaPool](http://trtl.cryptoasiapool.com)    |             0%              |                   100 TRTL                   |          Asia          |                           No HTTPS                           |
 |    [TurtleCoin CryptoPool](https://trtl.cryptopool.space)    |         0.1%, PPLNS         |  Wallet: 100 TRTL <br /> Exchange: 500 TRTL  | St. Ghislain / Belgium |                     Supports XMRIG-Proxy                     |
-|    [TurtleCoin HashParty](http://turtlecoin.hashparty.io)    |      1%, Proportional       |                   100 TRTL                   |          USA           |                           No HTTPS                           |
 |     [Turtle Miners Club](http://turtleminers.club)           |     1%, Proportional        |                   500 TRTL                   |          USA           |                           No HTTPS                           |
 |     [Turtle MiningGarden](https://turtle.mining.garden)      |     0.01%, Proportional     |                   100 TRTL                   |        Germany         |                              -                               |
 |     [TurtlePool Space, EU](https://eu.turtlepool.space)      |     0.1%, Proportional      |                  1000 TRTL                   |         London         |                              -                               |
 |     [TurtlePool Space, HK](https://hk.turtlepool.space)      |     0.1%, Proportional      |                  1000 TRTL                   |       Hong Kong        |                              -                               |
-|     [TurtlePool Space, US](https://us.turtlepool.space)      |     0.1%, Proportional      |                  1000 TRTL                   |         Dallas         |                              -                               |
-| [TurtlePower ChallengeCoin](http://turtlepower.challengecoin.io) |      1%, Proportional       |                   500 TRTL                   |          USA           |                           No HTTPS                           |
 |              [YouPool](https://youpool.io/TRTL)              |            0.2%             |                  1000 TRTL                   |         China          |                              -                               |
-|                 [z-pool](https://z-pool.com)                 |     0.1%, Proportional      |                   500 TRTL                   |        Germany         |                              -                               |
-|     [Imhard4.men, US](http://turtlehomosecs.imhard4.men)      |     0.1%, Proportional      |                  50 TRTL                   |         New Jersey         |                           Mine at your own risk            |
+
 
 ## Definition of Fees
 
@@ -85,5 +77,5 @@ How it works is,
 
 Basically, you get paid based on
 
-- the number of shares you submitted
+- the number of shares you submitted (how good what you're mining with is)
 - and how long you have been mining.

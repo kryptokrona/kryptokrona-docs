@@ -10,7 +10,7 @@ One of TurtleCoin's main goals is to make things as simple and as accessible as 
 
 Below is essentially a checklist of tasks you have to do to get started with TurtleCoin.
 
-## 1. Setting Up a New Wallet<a name="new-wallet"></a>
+## 1. Setting Up a New Wallet
 
 There are multiple types of wallets you can use with TurtleCoin.
 

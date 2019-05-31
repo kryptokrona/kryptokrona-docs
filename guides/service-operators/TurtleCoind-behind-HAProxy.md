@@ -29,4 +29,4 @@ backend trtl-daemon
     server  app4 < node host3 >:11898 check
 ```
 
-_**polar-it:** This actually work on  trtl-explorer.xhub.cloud_
+_**polar-it:** This actually work on [trtl-explorer.xhub.cloud](https://trtl-explorer.xhub.cloud/)_

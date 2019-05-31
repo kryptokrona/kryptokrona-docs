@@ -1,11 +1,11 @@
 # Using Checkpoints to Sync Blockchain Faster
 
-Instead of verifying every block's cyptographic signature, use a pre-computed list to simply check the signature matches the height.
+**Note**: You can presently only use checkpoints with zedwallet; the command-line wallet.  
 
 ## Setup
 
 - Right click [this link](https://github.com/turtlecoin/checkpoints/raw/master/checkpoints.csv) and choose `Save link as...` to download checkpoints.csv.
-- Place checkpoints.csv in the same folder as your daemon(TurtleCoind) and wallet(ZedWallet).
+- Place checkpoints.csv in the same folder as your daemon(TurtleCoind) and wallet(zedwallet).
 - You can get them both [from here](http://latest.turtlecoin.lol) if you don't have them already.
 
 - Make sure you shut down any GUI wallets, or any other instances of TurtleCoind.
@@ -42,7 +42,9 @@ If you did the steps correctly, you should see something like this output.
 ```
 
 - TurtleCoind will then start syncing from checkpoints.
-- If you are using the ZedWallet, then you can just wait for it to finish syncing, and open your wallet(leave the daemon open!).
+
+- If you are using zedwallet, then you can just wait for it to finish syncing, and open your wallet(leave the daemon open!).
+
 - If you are using a GUI wallet, let it finish syncing, close it down by typing `exit` in the window, then open your GUI wallet.
 
 ## Common Errors
@@ -66,7 +68,7 @@ If you did the steps correctly, you should see something like this output.
 2,2ef060801dd27327533580cfa538849f9e1968d13418f2dd2535774a8c494bf4
 ```
 
-- If you absolutely can't get it working, you can make a new text file, copy all the content from here into it: https://raw.githubusercontent.com/turtlecoin/checkpoints/master/checkpoints.csv
+- If you absolutely can't get it working, you can make a new text file, copy all the content from [here](https://raw.githubusercontent.com/turtlecoin/checkpoints/master/checkpoints.csv) into it
 - Then save as checkpoints.csv (Select the filetype as `All Files (*.*)` in Windows)
 
 ### Failed to load checkpoints
@@ -78,7 +80,7 @@ If you did the steps correctly, you should see something like this output.
 ```
 
 - If you see output like the above, it means the file isn't present in the directory you are in.
-- Make sure you have placed the `checkpoints.cs`v file in the same directory as TurtleCoind.
+- Make sure you have placed the `checkpoints.csv` file in the same directory as TurtleCoind.
 
 ### TurtleCoind.exe is not recognized / No such file or directory
 

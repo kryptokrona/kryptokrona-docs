@@ -6,10 +6,10 @@ In case you don't want to download the blockchain and verify it everytime, you c
 
 Guide coming soon!
 
-## ZedWallet
+## zedwallet
 
 1. Open up a command prompt window and navigate to the folder that contains *zedwallet*.
-2. Use the following command to start ZedWallet  
+2. Use the following command to start zedwallet  
 
 ### Windows:
 
@@ -35,6 +35,8 @@ zedwallet.exe --remote-daemon public.turtlenode.online:11898
 
 ## Making a Script to Do it Automatically
 
+*Note*: This only works on Windows
+
 1. Open NotePad/a text editor of your choice and type the following lines inside:
 
 ```text
@@ -43,7 +45,7 @@ zedwallet.exe --remote-daemon host:port
 pause
 ```
 
-1. Replace `host:port` with one of the values from the table below
+1. Replace `host:port` with the values from a node in the given links below.
 2. Save the filename as `start.bat` and save the file as `All files`.
 3. Double click on the file to start the daemon.
 

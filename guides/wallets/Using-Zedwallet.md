@@ -40,7 +40,7 @@ unzip turtlecoin-...-linux.zip
 
 Running `TurtleCoind` will start the *TurtleCoind* network daemon, which will connect to the network and begin downloading and verifying the TurtleCoin blockchain.  
 
-Because the blockchain is constantly growing, the file size always increases (the blockchain is currently over 35 GB), and *TurtleCoind must verify every block*, which is both CPU and disk intensive. An SSD with at least this much free disk space is recommended, unless you plan to use [remote nodes](https://github.com/turtlecoin/turtlecoin/wiki/Using-remote-nodes). 
+Because the blockchain is constantly growing, the file size always increases (the blockchain is currently over 35 GB), and *TurtleCoind must verify every block*, which is both CPU and disk intensive. An SSD with at least this much free disk space is recommended, unless you plan to use [remote nodes](Using-remote-nodes). 
 
 ### Using Checkpoints
 
@@ -266,7 +266,7 @@ Because transactions on the TurtleCoin blockchain are privatized, in some situat
 
 **You need it if you're sending TRTL to an exchange**.
 
-To send a transaction with a payment ID, enter it when prompted to. It is a 64char hex string.
+To send a transaction with a payment ID, enter it when prompted to.
 
 ![p-id](guides/wallets/images/p-id-simple.png)
 
@@ -293,7 +293,7 @@ Bye.
 
 #### Private Spend and View Keys<a name="recover-spend-view-keys"></a>
 
-To restore a wallet using spend and view keys; at the menu type `seed_restore` and press `enter`:
+To restore a wallet using spend and view keys; at the menu type `key_restore` and press `enter`:
 
 ```
  1	open                     Open a wallet already on your system
@@ -303,7 +303,7 @@ To restore a wallet using spend and view keys; at the menu type `seed_restore` a
  5	view_wallet              Import a view only wallet
  6	exit                     Exit the program
 
-What would you like to do?: seed_restore
+What would you like to do?: key_restore
 Enter your private spend key: 41c834f7c26e12373e5c39a9c9b1f8beb665324ad0d098cabda1234567b5d30f
 Enter your private view key: df51e85dfa4fe48d0123475ec966124b1234c98abda6789060fe6d69b503490b
 What would you like to call your new wallet?: trtl2

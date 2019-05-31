@@ -19,11 +19,12 @@ It may also cause the phone to overheat and result in premature silicon degradat
 13. Find and change the following lines:
 * `"algo: "cryptonight-lite"` to `"cryptonight-pico/trtl"`
 * `"url: "[pool address]"`
-* `"user: "[wallet address]"
+* `"user: "[wallet address]"`
 * **be sure to keep the quotes "" around your pool address and wallet address**
 14. Run `./xmrig-notls`
 
-Instead of copy pasting each command individually you can copy paste what is below into `termux` after you open it. It'll open the config file where you can make the edits as advised in step `13` above and once you close nano  
+Instead of copy pasting each command individually you can copy paste what is below into `termux` after you open it. It'll open the config file where you can make the edits as advised in step `13` above; and once you close nano:  
+
 1. `ctrl+x` to exit then
 2. `y` to confirm want to save then
 3. `enter` to use the same file  
