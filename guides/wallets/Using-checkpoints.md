@@ -5,7 +5,7 @@
 ## Setup
 
 - Right click [this link](https://github.com/turtlecoin/checkpoints/raw/master/checkpoints.csv) and choose `Save link as...` to download checkpoints.csv.
-- Place checkpoints.csv in the same folder as your daemon(TurtleCoind) and wallet(ZedWallet).
+- Place checkpoints.csv in the same folder as your daemon(TurtleCoind) and wallet(zedwallet).
 - You can get them both [from here](http://latest.turtlecoin.lol) if you don't have them already.
 
 - Make sure you shut down any GUI wallets, or any other instances of TurtleCoind.
@@ -43,7 +43,7 @@ If you did the steps correctly, you should see something like this output.
 
 - TurtleCoind will then start syncing from checkpoints.
 
-- If you are using ZedWallet, then you can just wait for it to finish syncing, and open your wallet(leave the daemon open!).
+- If you are using zedwallet, then you can just wait for it to finish syncing, and open your wallet(leave the daemon open!).
 
 - If you are using a GUI wallet, let it finish syncing, close it down by typing `exit` in the window, then open your GUI wallet.
 
