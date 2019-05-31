@@ -19,7 +19,7 @@ It may also cause the phone to overheat and result in premature silicon degradat
 13. Find and change the following lines:
 * `"algo: "cryptonight-lite"` to `"cryptonight-pico/trtl"`
 * `"url: "[pool address]"`
-* `"user: "[wallet address]"
+* `"user: "[wallet address]"`
 * **be sure to keep the quotes "" around your pool address and wallet address**
 14. Run `./xmrig-notls`
 
