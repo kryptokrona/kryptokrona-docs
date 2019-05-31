@@ -24,7 +24,7 @@
 
 The miner should now start mining and stats like hashrate and accepted shares will be displayed
 
-![aa-miner](guides/mining/mobile-mining/images/aa-miner.png)
+![aa-miner](assets/aa-miner.png)
 
 Congratulations! You're now mining with your phone!
 
