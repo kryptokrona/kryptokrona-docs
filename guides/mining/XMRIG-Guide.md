@@ -23,8 +23,6 @@ XMRig needs to be compiled for nVidia and AMD. Instructions for compiling are li
 * [XMRig GPU Nvidia Miner](https://github.com/xmrig/xmrig-nvidia/wiki/Ubuntu-Build) 
 * [XMRig GPU AMD Miner](https://github.com/xmrig/xmrig-amd/wiki/Ubuntu-Build) 
 
-===
-
 ## Downloading and Installing for Mac
 
 Needs to be compiled. Instructions [here](https://github.com/xmrig/xmrig/wiki/OS-X-Build).
