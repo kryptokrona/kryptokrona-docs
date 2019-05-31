@@ -283,7 +283,7 @@ Until you are fully synced, you won't be able to send transactions, and your bal
 
 #### Q: Can I skip the syncing?
 
-  A: Yes, you can currently use a remote node with zedwallet and Nest wallet. The keys stay on your PC, so it's secure. Check [this guide](Using-remote-nodes) for more information.
+  A: Yes, you can currently use a remote node with zedwallet and WalletShell. The keys stay on your PC, so it's secure. Check [this guide](Using-remote-nodes) for more information.
 
 #### Q: What does it mean if my balance is locked?
 
@@ -299,12 +299,11 @@ Until you are fully synced, you won't be able to send transactions, and your bal
 
 #### Q: Are there any GUI wallets?
 
-A: Yes, there are currently 2 GUI wallets actively in development along with some mobile wallets too. However, they may not be ready for full use yet, and may not work on your operating system.
+A: Yes, there is currently 1 GUI wallet actively in development along with some mobile wallets too. However, they may not be ready for full use yet, and may not work on your operating system.
 
-* [Nest Wallet](https://github.com/turtlecoin/turtle-wallet-go)
+* [Electron Wallet](https://github.com/turtlecoin/turtle-wallet-electron)
 * [Shellnet Web Wallet](https://shellnet.pw)
 * [T-Scripta Wallet](https://github.com/turtlecoin/turtle-wallet-tscripta)
-* [Electron Wallet](https://github.com/turtlecoin/turtle-wallet-electron)
 
 To view a guide on using them, you can go [here](Making-a-Wallet/#graphical-wallet-gui-wallet)
 

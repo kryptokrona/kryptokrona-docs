@@ -18,7 +18,7 @@ The CLI Wallet, called zedwallet, is a multi-platform program (Win/Linux/Mac) th
 
 If you would like to use zedwallet, you can check out [this guide](Using-zedwallet).
 
-## Graphical Wallet (GUI Wallet)
+## WalletShell (GUI Wallet)
 
 If you prefer to use a GUI wallet, the currently suggested wallet is [Electron Wallet](https://github.com/turtlecoin/turtle-wallet-electron).
 
@@ -26,3 +26,4 @@ If you prefer to use a GUI wallet, the currently suggested wallet is [Electron W
 
 - [Shellnet](https://shellnet.pw)
 - [TurtleWallet.lol](https://turtlewallet.lol)
+- [TRTLFun](https://trtlfun.com)
