@@ -1,7 +1,5 @@
 # Frequently Asked Questions
 
-
-
 ## TurtleCoind / zedwallet Issues<a name="tcoind-zedwallet-issues"></a>
 
 #### Q: I'm seeing an error in TurtleCoind `Proof of work too weak for block...` and the syncing stopped.
@@ -96,10 +94,12 @@ Until you are fully synced, you won't be able to send transactions, and your bal
     Open zedwallet and type `export_keys`.  
     Save the view and spend key somewhere safe, and you can use them to reimport your wallet if you lose it.
 
-#### Q: My Transaction are too slow.
-??? faq "Answer" Fusion Transactions
-Users should do Frequent Fusion transactions in their wallets to make large transactions easier in the long term.
-In CLI WALLET. Type 16. Hit Enter. It will ask Y/n. Click Y. You will then see transactions being fused via the wallet. This will make it so your coins will be easier to send in large chunks. 
+#### Q: My transactions are very slow
+??? faq "Answer" 
+    Try attemping a fusion transaction:
+    * Open up zedwallet, and type `optimize`, then press enter.
+    * It will confirm if you want to optimize your wallet; it will take a bit. If you're fine with that, type `Y` and press enter again.
+    Your wallet is now being optimized. When it finishes, your transaction should be able to send
 
 #### Q: How do I send TRTL?
 
