@@ -94,6 +94,16 @@ Until you are fully synced, you won't be able to send transactions, and your bal
     Open zedwallet and type `export_keys`.  
     Save the view and spend key somewhere safe, and you can use them to reimport your wallet if you lose it.
 
+#### Q: My transactions are very slow
+
+??? faq "Answer" 
+    Try attemping a fusion transaction:
+    
+    * Open up zedwallet, and type `optimize`, then press enter.
+    * It will confirm if you want to optimize your wallet; it will take a bit. If you're fine with that, type `Y` and press enter again.
+    
+    Your wallet is now being optimized. When it finishes, your transaction should be able to send
+
 #### Q: How do I send TRTL?
 
 ??? faq "Answer"
