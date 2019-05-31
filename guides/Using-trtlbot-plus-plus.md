@@ -19,7 +19,7 @@ After your wallet address has been registered, type `.deposit` in the `#bots` ch
 
 **No Payment ID!**
 
-#### ZedWallet
+#### zedwallet
 
 Follow the steps given [here](Using-zedwallet#sending-turtlecoin-transactions) and replace the values of the address with the one provided.
 
