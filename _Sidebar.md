@@ -31,7 +31,7 @@
       - [XMRIG](XMRig-Guide)
     - [Mining Pools](Pools)
     - [Mining with a SBC](Mining-with-SBC)
-    - [Mining with a Raspberry Pi](Optimizing-RaspberryPi-TurtleCoin-Mining)
+    - [Mining with a Raspberry Pi](Optimizing-RPi-TurtleCoin-Mining)
     - [Mining with Your Mobile Phone](Mining-with-Phone)
       - [Using Tony Monero](Using-Tony-Monero)
       - [Using AA Miner](Using-AA-Miner)
