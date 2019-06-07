@@ -11,8 +11,8 @@
 const siteConfig = {
   title: 'TurtleCoin Docs', // Title for your website.
   tagline: 'Documentation for all things TurtleCoin',
-  url: 'https://turtlecoin.github.io', // Your website URL
-  baseUrl: '/turtlecoin-docs/', // Base URL for your project
+  url: 'https://docs.turtlecoin.lol', // Your website URL
+  baseUrl: '/', // Base URL for your project
   // For github.io type URLs, you would set the url and baseUrl like:
   //   url: 'https://facebook.github.io',
   //   baseUrl: '/test-site/',
