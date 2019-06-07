@@ -9,11 +9,11 @@ The community makes a best-effort to keep documentation accurate and up-to-date,
 
 ## Instances of the Wiki
 
-The official production TurtleCoin Wiki is at http://github.com/turtlecoin/turtlecoin/wiki. This is the URL that should be used for externally linking to the wiki (or any articles/pages within it).
+The official production TurtleCoin Wiki is at https://docs.turtlecoin.lol. This is the URL that should be used for externally linking to the wiki (or any articles/pages within it).
 
 This repo, http://github.com/turtlecoin/turtlecoin-docs, holds the raw markdown that the wiki is built from.
 
-This repo's Github wiki (http://github.com/turtlecoin/turtlecoin-docs/wiki) serves as a live 'test site' for testing changes to the wiki before pushing to the official production TurtleCoin Wiki.
+There is currently no 'test site', but the normal GitHub preview could be used to look at how your changes appear.
 
 ## Contributing
 
@@ -27,7 +27,7 @@ Travis has been setup so that once a Pull Request has been accepted and merged, 
 
 ## Thanks and Contributors
 
-- [@ZedPea](https://github.com/ZedPea/)
+- [@zpalmtree](https://github.com/zpalmtree/)
 - [@ar-x](https://github.com/ar-x/)
 - [@Sajo8](https://github.com/Sajo8/)
 - [@holytastyguacamole](https://github.com/holytastyguacamole/)
