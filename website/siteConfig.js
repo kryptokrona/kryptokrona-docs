@@ -86,6 +86,11 @@ const siteConfig = {
   // Show documentation's last update time.
   enableUpdateTime: true,
 
+  // Sets default syntax highlighing to plaintext
+  highlight: {
+    defaultLang: 'plaintext'
+  },
+
 };
 
 module.exports = siteConfig;
