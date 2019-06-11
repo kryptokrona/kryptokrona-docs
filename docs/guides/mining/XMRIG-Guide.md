@@ -9,7 +9,7 @@ XMRig uses separate miners for CPU and GPU, you need to download a CPU and GPU m
 XMRig has separate miners for CPU and GPU. You can download them from here:
 
 * [XMRig CPU Miner](https://github.com/xmrig/xmrig/releases)
-* [XMRig GPU Nvidia Miner](https://github.com/xmrig/xmrig-nvidia/releases)
+* [XMRig GPU NVIDIA Miner](https://github.com/xmrig/xmrig-nvidia/releases)
 * [XMRig GPU AMD Miner](https://github.com/xmrig/xmrig-amd/releases)
 
 **Note:** You will need to download and run two separate instances if you want to mine with your GPU and CPU at the same time.
@@ -19,9 +19,9 @@ XMRig has separate miners for CPU and GPU. You can download them from here:
 You can directly use the pre-built binaries for XMRig CPU. Download the `xmrig-*-xenial-amd64.tar.gz` file [here](https://github.com/xmrig/xmrig/releases).  
 Run the file using `./xmrig`. 
 
-XMRig needs to be compiled for Nvidia and AMD. Instructions for compiling are linked below(Ubuntu):
+XMRig needs to be compiled for NVIDIA and AMD. Instructions for compiling are linked below(Ubuntu):
 
-* [XMRig GPU Nvidia Miner](https://github.com/xmrig/xmrig-nvidia/wiki/Ubuntu-Build) 
+* [XMRig GPU NVIDIA Miner](https://github.com/xmrig/xmrig-nvidia/wiki/Ubuntu-Build) 
 * [XMRig GPU AMD Miner](https://github.com/xmrig/xmrig-amd/wiki/Ubuntu-Build) 
 
 * [XMRig CPU Miner](https://github.com/xmrig/xmrig/wiki/Build) (instructions for multiple platforms)
@@ -50,7 +50,7 @@ Needs to be compiled. Instructions [here](https://github.com/xmrig/xmrig/wiki/OS
 1.  Save the file and:
   * start `xmrig.exe` if you're mining with your CPU,
   * `xmrig-amd.exe`. if you're mining with an AMD GPU,
-  * or `xmrig-nvidia.exe` if you're mining with a Nvidia GPU.
+  * or `xmrig-nvidia.exe` if you're mining with a NVIDIA GPU.
 
 **Remember:** if you want to mine with both your CPU and your GPU you must have both programs open at the same time!
 
