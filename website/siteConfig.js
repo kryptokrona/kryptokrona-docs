@@ -34,6 +34,12 @@ const siteConfig = {
     { search: true }
   ],
 
+  algolia: {
+    apiKey: '6db40a54673fe6ee19a5787b7c0ad50c',
+    indexName: 'turtlecoin',
+    //algoliaOptions: {} // Optional, if provided by Algolia
+  },
+
   /* path to images for header/footer */
   headerIcon: 'img/logo.png',
   footerIcon: 'img/fav.png',
