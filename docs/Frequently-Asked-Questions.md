@@ -298,7 +298,7 @@ Press `h` in the XMR-Stak window.
 
 This could be caused by multiple issues:
 
-* If you're using a Nvidia card, open up `nvidia.txt`, in the same directory as `XMR-Stak.exe`. Try setting `bfactor` to `8` and `bsleep` to `100`, and then reload your miner after saving the file.
+* If you're using a NVIDIA card, open up `nvidia.txt`, in the same directory as `XMR-Stak.exe`. Try setting `bfactor` to `8` and `bsleep` to `100`, and then reload your miner after saving the file.
 
   If it's still laggy, try increasing both values slightly. This will cause you to get less hashes per second, but can let you use your PC more effectively. You can try tweaking the value to increase your hashrate.
 
@@ -317,7 +317,7 @@ If you're using XMR-Stak, you can start the miner with a certain command. Check 
 ### Q: XMR-Stak is crashing on startup, with an error about CUDA. What am I doing wrong?
 
 
-If you are using a nVidia card, try opening `nvidia.txt` in the same directory as `XMR-Stak.exe`, and lowering the value of `threads` until it stops crashing.
+If you are using a NVIDIA card, try opening `nvidia.txt` in the same directory as `XMR-Stak.exe`, and lowering the value of `threads` until it stops crashing.
 
 ### Q: I get a socket error when connecting to a pool in XMR-Stak. What am I doing wrong?
 
