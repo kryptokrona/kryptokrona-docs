@@ -6,9 +6,9 @@ Technical resources to start building on TurtleCoin.
 
 ## TurtleCoin Core RPC APIs
 
-* (TurtleCoind)[https://api-docs.turtlecoin.lol/#daemon-json-rpc-api] - blockchain daemon 
-* (wallet-api)[https://turtlecoin.github.io/wallet-api-docs/] - wallet api, use this for greenfield or migrate to this from existing projects, swagger based REST interface
-* (turtle-service)[https://api-docs.turtlecoin.lol/#wallet-rpc-api] - unmaintained wallet api, use wallet-api above for greenfield projects
+* [TurtleCoind](https://api-docs.turtlecoin.lol/#daemon-json-rpc-api) - blockchain daemon 
+* [wallet-api](https://turtlecoin.github.io/wallet-api-docs/) - wallet api, use this for greenfield or migrate to this from existing projects, swagger based REST interface
+* [turtle-service](https://api-docs.turtlecoin.lol/#wallet-rpc-api) - unmaintained wallet api, use wallet-api above for greenfield projects
 
 ## RPC API Clients
 
