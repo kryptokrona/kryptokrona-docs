@@ -12,7 +12,6 @@ Technical resources to start building on TurtleCoin.
 
 ## RPC API Clients
 
-* [wallet-api](https://turtlecoin.github.io/wallet-api-docs/) Top-level wallet API in the TurtleCoin core codebase
 * [NodeJS](https://www.npmjs.com/package/turtlecoin-rpc)
 * [Go](https://github.com/turtlecoin/turtlecoin-rpc-go)
 * [PHP](https://github.com/turtlecoin/turtlecoin-rpc-php)
