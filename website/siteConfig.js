@@ -27,7 +27,7 @@ const siteConfig = {
   // For no header links in the top nav bar -> headerLinks: [],
   headerLinks: [
     {doc: 'Getting-Started', label: 'Intro'},
-    {doc: 'guides/Using-trtlbot-plus-plus', label: 'Guides'},
+    {doc: 'guides/mining/Mining', label: 'Guides'},
     {doc: 'developer/Resources', label: 'For Developers'},
     {href: 'http://chat.turtlecoin.lol', label: 'Help'},
     {href: 'https://github.com/turtlecoin/turtlecoin-docs', label: 'GitHub'},
