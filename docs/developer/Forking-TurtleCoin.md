@@ -2,7 +2,7 @@
 title: Forking TurtleCoin
 ---
 
-### **NB:** While efforts are made to keep this guide up-to-date, the most recent one will always be available [here](https://turtlecoin.github.io/fork/)
+### **NB:** This guide is deprecated and will not be updated anymore. See the latest version [here](https://turtlecoin.github.io/fork/)
 
 So you want to fork TurtleCoin, huh?
 
