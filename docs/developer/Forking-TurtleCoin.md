@@ -620,64 +620,6 @@ to help decentralize your coin.
   ```
   <br/>
 
-
-
-
-## Premine
-
-You may have noticed we skipped
-
-```
-const uint64_t GENESIS_BLOCK_REWARD = UINT64_C(0);
-```
-
-and
-
-```
-const char GENESIS_COINBASE_TX_HEX[] = "010a01ff000188f3b501029b2e4c0281c0b02e7c53291a94d1d0cbff8883f8024f5142ee494ffbbd088071210142694232c5b04151d9e4c27d31ec7a68ea568b19488cfcb422659a07a0e44dd5";
-```
-
-I wanted to put these in a different section,
-because generating a premine requires a tad more effort than the previous config tweaks.
-
-To start with, put your premine amount in `const uint64_t GENESIS_BLOCK_REWARD = UINT64_C(0);`,
-
-e.g.
-
-- `const uint64_t GENESIS_BLOCK_REWARD = UINT64_C(100);`
-
-As always, this value is in *atomic units*. The above code would premine 1 TRTL, assuming 2 decimal places are being used.
-
-Next, compile your code.
-
-Once it has compiled, use zedwallet to generate an address. Don't worry about running the daemon, we don't need that yet.
-
-Save this address somewhere, and make sure to save your wallet keys somewhere safe as well.
-
-Now, take this address, and run your daemon with the following arguments:
-
-`--print-genesis-tx --genesis-block-reward-address <premine wallet address>`
-
-Replacing <premine wallet address> with the address you just generated.
-
-For example:
-
-```
-TurtleCoind --print-genesis-tx --genesis-block-reward-address TRTLv2Fyavy8CXG8BPEbNeCHFZ1fuDCYCZ3vW5H5LXN4K2M2MHUpTENip9bbavpHvvPwb4NDkBWrNgURAd5DB38FHXWZyoBh4wW
-```
-
-This will print out a long hash. Take this hash, and replace the value of
-
-`const char GENESIS_COINBASE_TX_HEX[] =` with this value.
-
-- ```
-  const char GENESIS_COINBASE_TX_HEX[] = "012801ff000100023f6cd7a559d3b5d88fc6396a7a261c70a5212608bdeeb73ac53ff5dad157326221015bf857a5c95d6066c23800a6563e79acc85d450d7563cf68995d1c5c92b1567a";
-  ```
-
-Now, recompile your code, and set up your seed nodes.
-Once you start mining, the premine should appear in the wallet you previously created.
-Make sure you have your private keys to restore this wallet.
-
 ## CryptoNoteCheckpoints.h
 
 A nice quick job, we need to remove all the checkpoints in `src/CryptoNoteCheckpoints.h`
