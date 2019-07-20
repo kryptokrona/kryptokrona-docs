@@ -230,7 +230,7 @@ Go into this folder and delete the files in there. Then reboot, and try again.
 
 ## Mining
 
-#### General mining questions
+### General mining questions
 
 #### Q: How do I get started mining?
 
@@ -355,7 +355,7 @@ You need to have `TurtleCoind` open and synced to use this miner, unlike convent
 Your pool's homepage should have one - enter your hashrate and it'll give an estimate of how much TRTL you'll mine per day.  
 If there isn't, you can check one [here](http://turtlepool.space/).
 
-#### XMR-Stak Issues
+### XMR-Stak Issues
 
 #### Q: How do I view my hashrate in XMR-Stak?
 
