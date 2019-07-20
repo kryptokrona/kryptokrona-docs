@@ -63,9 +63,9 @@ This will appear only once, after this, the wallet will auto-open the last walle
 
 You have the following options, click on the links to jump to associated guides.
 
-- [Open an Existing Wallet]
-- [Create a New Wallet]
-- [Import from Keys or Seed]
+- [Open an Existing Wallet](#Opening-a-Wallet)
+- [Create a New Wallet](#Creating-a-Wallet)
+- [Import from Keys or Seed](#Recovering-your-Wallet)
 
 ### Creating a Wallet
 
