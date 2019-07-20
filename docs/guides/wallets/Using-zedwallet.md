@@ -10,7 +10,7 @@ Here's a quick image of zedwallet in action:
 
 ## Downloading
 
-Binary distributions can be found: [here](https://github.com/turtlecoin/turtlecoin/releases/latest).
+Binary distributions can be found [here](https://github.com/turtlecoin/turtlecoin/releases/latest).
 
 Select the appropriate file for the target platform (Windows, Mac, Linux).
 
@@ -218,7 +218,7 @@ Total balance: 1100.00 TRTL
 
 ### Sending TurtleCoin Transactions
 
-To send Turtlecoin; at the Zedwallet menu:
+To send TurtleCoin; at the Zedwallet menu:
 
 - Type: `transfer` and press `enter`
 
