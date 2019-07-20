@@ -32,7 +32,7 @@ Double click the .dmg file to run the app
 
 After downloading, either:
 
-- make it an executabe through chmod :`chmod a+x proton-wallet.....AppImage`
+- make it an executabe through chmod :`chmod +x proton-wallet.....AppImage`
 
 - Right click
   - Click on Properties
@@ -188,7 +188,7 @@ Then, depending on what option you take, follow the appropriate guide:
 
 - If the wallet was restored succesfully, you will be given a notice:
 
-![proton restore keys success](../../assets/proton-restore-keys-success.png)
+![proton restore success](../../assets/proton-restore-success.png)
 
 #### Mnemonic Seed
 
@@ -197,7 +197,7 @@ Then, depending on what option you take, follow the appropriate guide:
 - Enter the height from which to start scanning for transactions.  
   If you know when you made your wallet, it is highly recommended to input this wallet, as it greatly speeds up syncing. Otherwise, if you're not sure, leave it empty.
 
-![proton restore seed menu](../../assets/proton-restore-success.png)
+![proton restore seed menu](../../assets/proton-restore-seed-menu.png)
 
 - Click `Import`
 
@@ -205,7 +205,7 @@ Then, depending on what option you take, follow the appropriate guide:
 
 - If the wallet was restored succesfully, you will be given a notice:
 
-![proton restore keys success](../../assets/proton-restore-success.png)
+![proton restore success](../../assets/proton-restore-success.png)
 
 ### Help
 
