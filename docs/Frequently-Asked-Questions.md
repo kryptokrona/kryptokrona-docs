@@ -40,22 +40,6 @@ curl -sL "https://raw.githubusercontent.com/turtlecoin/turtlecoin/master/multi_i
 
 This automated script should compile the software itself, and place the binaries in ./src once done.
 
-### Q: Why are my results being rejected from the pool?
-
- A: You're using a incorrect algorithm. If you are using XMR-Stak, you should use `turtlecoin` as the algorithm, if you are using XMRig use `cryptonight-lite` as the algorithm and have the variant set to 1.
-
-### Q: I got banned from my mining pool. Why?
-
-A: If you submit lots of invalid shares, a pool might ban you. Possible reasons for invalid shares can be
-
-* your hardware getting overworked,
-
-* high ping to the pool,
-
-* or your difficulty being set too low.
-
-Try lowering any overclocks, choosing a pool closer to you or setting a higher difficulty port.
-
 
 ### Q: I've opened the wallet, and I'm getting lots of red messages like "It looks like TurtleCoind isn't open!"...
 
@@ -200,7 +184,7 @@ To save money on fees, the pools send payouts in chunks. [Check your pool websit
 ### Q: Why are my results being rejected from the pool?
 
 
-You're using a incorrect algorithm. If you are using XMR-Stak, you should use `turtlecoin` as the algorithm, if you are using XMRig use `cryptonight-lite` as the algorithm and have the variant set to 1.
+You're using a incorrect algorithm. You should be using `cryptonight-turtle` set as the variant.
 
 ### Q: I got banned from my mining pool. Why?
 
