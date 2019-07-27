@@ -1,4 +1,9 @@
 {
+  "licenses": [
+    {
+      "type": "MIT"
+    }
+  ],
   "scripts": {
     "examples": "docusaurus-examples",
     "start": "docusaurus-start",
