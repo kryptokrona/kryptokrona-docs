@@ -97,6 +97,8 @@ const siteConfig = {
     defaultLang: 'plaintext'
   },
 
+  editUrl: "https://github.com/turtlecoin/turtlecoin-docs/edit/master/docs/"
+
 };
 
 module.exports = siteConfig;
