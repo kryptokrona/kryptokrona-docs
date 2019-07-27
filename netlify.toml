@@ -11,4 +11,4 @@
   publish = "website/build/turtlecoin-docs"
 
 # Default build command.
-  command = "npm install; npm run build;"
+  command = "yarn install; yarn run build;"
