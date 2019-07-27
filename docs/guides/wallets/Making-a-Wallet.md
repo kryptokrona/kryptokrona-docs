@@ -22,6 +22,10 @@ The CLI Wallet, called zedwallet, is a multi-platform program (Win/Linux/Mac) th
 
 If you would like to use zedwallet, you can check out [this guide](Using-zedwallet).
 
+## Proton Wallet (GUI Wallet)
+
+Proton Wallet is a wallet inspired by Electrum's QT Client. It's fast, compatible with the TurtlePay™ Blockchain Cache, and utilizing the latest in wallet backend technologies from the core TurtleCoin™ team. It's also open sourced and available on every major OS. You can download it [here](http://getproton.org/), or view the source code [here](https://github.com/turtlecoin/turtle-wallet-proton)
+
 ## WalletShell (GUI Wallet)
 
 WalletShell, is a wallet written in Javascript which handles all of your needs and also includes additional features such as an address book, light and dark mode, and an active list of public nodes.
