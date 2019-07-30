@@ -6,9 +6,18 @@ title: Using a Remote Node
 
 In case you don't want to download the blockchain and verify it everytime, you can instead use a Remote Node to quickly sync the blockchain.
 
-## WalletShell
+## Proton Wallet
 
-Guide coming soon!
+**Note:** By default, Proton Wallet connects to a reliable remote node over SSL, so this step should be unnecessary unless you wish to connect to a particular remote node.
+
+1. Open your wallet
+2. Click on the settings icon in the top right
+3. In the text box below, enter the URL and Port of the node you wish to connect to
+4. Click "Connect"
+
+- You may also click "Find node..." which will select a random node
+
+![proton remote node](../../assets/proton-remote-nodes.png)
 
 ## zedwallet
 
@@ -37,15 +46,15 @@ For example-
 zedwallet.exe --remote-daemon public.turtlenode.online:11898
 ```
 
-## Making a Script to Do it Automatically
+### Making a Script to Do it Automatically
 
-*Note*: This only works on Windows
+*Note*: This only works on Windows, and for zedwallet
 
 1. Open NotePad/a text editor of your choice and type the following lines inside:
 
 ```text
 @echo off
-zedwallet.exe --remote-daemon host:port
+zedwallet-beta.exe --remote-daemon host:port
 pause
 ```
 
@@ -53,7 +62,7 @@ pause
 2. Save the filename as `start.bat` and save the file as `All files`.
 3. Double click on the file to start the daemon.
 
-#### Known remote daemons
+## Known remote daemons
 
 http://trtl.nodes.pub/
 
