@@ -6,7 +6,8 @@ Technical resources to start building on TurtleCoin.
 
 ## TurtleCoin Core RPC APIs
 
-* [TurtleCoind](api/Daemon-JSON-RPC-API) - Blockchain daemon 
+* [TurtleCoind](api/Daemon-JSON-RPC-API) - Blockchain daemon
+
 * [wallet-api](https://turtlecoin.github.io/wallet-api-docs/) - Recommended RPC API to use for new projects or to migrate to from existing projects. Swagger based REST inteface.
 
 * [turtle-service](api/Legacy-Wallet-RPC-API) - Deprecated wallet API, use wallet-api above insted
@@ -24,7 +25,6 @@ Technical resources to start building on TurtleCoin.
 * [turtlecoin-wallet-backend-cpp](https://github.com/zpalmtree/turtlecoin-wallet-backend-cpp): C++ TurtleCoin Wallet Backend  
 * [TurtleCoin.Net API](https://github.com/turtlecoin/turtlecoin-walletd-csharp): An asynchronous wrapper API for loading and accessing the TurtleCoin daemon and wallet application through C#.  
 * [Woo Turtle](https://github.com/turtlecoin/woo-turtle): A TurtleCoin Payment Gateway Plugin for WooCommerce.  
-* 
 * [turtlecoind-ha](https://www.npmjs.com/package/turtlecoind-ha): NodeJS TurtleCoind High-Availability Daemon Wrapper  
 * [turtleservice-ha](https://www.npmjs.com/package/turtleservice-ha): NodeJS Turtle-Service High-Availability Wrapper  
 (*note: turtle-service is deprecated and it is recommended to use wallet-api for new projects*)  
