@@ -66,12 +66,12 @@ With `TurtleCoind` still running in the background or another terminal/shell/com
 
 #### Windows
 
-Run the `zedwallet.exe` executable from the extracted folder.
+Run the `zedwallet-beta.exe` executable from the extracted folder.
 
 #### Mac / Linux
 
 ```bash
-./zedwallet
+./zedwallet-beta
 ```
 
 ### Using Zedwallet commands
@@ -291,11 +291,11 @@ Shutting down node connection...
 Bye.
 ```
 
-### Recovering your Wallet
+### Restoring your Wallet
 
 #### Private Spend and View Keys
 
-To restore a wallet using spend and view keys; at the menu type `key_restore` and press `enter`:
+To restore a wallet using spend and view keys; at the menu type `key_restore` and press `enter`, then follow the prompts:
 
 ```
  1	open                     Open a wallet already on your system
@@ -346,6 +346,64 @@ Finished scanning blockchain!
 [TRTL trtl2]: 
 
 ```
+
+#### 25 Word Mnemonic Seed
+
+To restore a wallet using spend and view keys; at the menu type `seed_restore` and press `enter`, then follow the prompts:
+
+```
+ 1	open                     Open a wallet already on your system
+ 2	create                   Create a new wallet
+ 3	seed_restore             Restore a wallet using a seed phrase of words
+ 4	key_restore              Restore a wallet using a view and spend key
+ 5	view_wallet              Import a view only wallet
+ 6	exit                     Exit the program
+
+What would you like to do?: seed_restore
+Enter your mnemonic phrase (25 words): karate pause dozen exquisite lipstick among situated bobsled family giant dabbing diplomat governing hefty devoid scoop factual natural diet saucepan gauze jazz yeti always gauze
+What would you like to call your new wallet?: test
+Give your new wallet a password: ****
+Confirm your new password: ****
+
+What height would you like to begin scanning your wallet from?
+
+This can greatly speed up the initial wallet scanning process.
+
+If you do not know the exact height, err on the side of caution so transactions do not get missed.
+
+Hit enter for the sub-optimal default of zero: 1713000
+
+Your wallet TRTLuxm1BmQBTyz6tgpdpTdoq3dx3xaCE1VbuftusEEs7u1cRL6H8NnEpM3k8aM5EzaHBLJaDPZsgGBkGFqBU1KycZAAZSruffH has been successfully imported!
+
+It looks like TurtleCoind isn't open!
+
+Ensure TurtleCoind is open and has finished syncing. (It will often not respond when syncing)
+If it's still not working, try restarting TurtleCoind (or try a different remote node).
+The daemon sometimes gets stuck.
+Alternatively, perhaps TurtleCoind can't communicate with any peers.
+
+The wallet can't function fully until it can communicate with the network.
+
+ 1	try_again                Try to connect to the node again
+ 2	continue                 Continue to the wallet interface regardless
+ 3	swap_node                Specify a new daemon address/port to connect to
+ 4	exit                     Exit the program
+
+What would you like to do?: 2
+
+ 1	advanced                 List available advanced commands
+ 2	address                  Display your payment address
+ 3	balance                  Display how much TRTL you have
+ 4	backup                   Backup your private keys and/or seed
+ 5	exit                     Exit and save your wallet
+ 6	help                     List this help message
+ 7	transfer                 Send TRTL to someone
+
+[TRTL test]: 
+
+```
+
+
 
 ### Other Commands
 
