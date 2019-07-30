@@ -26,6 +26,8 @@ If you would like to use zedwallet, you can check out [this guide](Using-zedwall
 
 Proton Wallet is a wallet inspired by Electrum's QT Client. It's fast, compatible with the TurtlePay™ Blockchain Cache, and utilizing the latest in wallet backend technologies from the core TurtleCoin™ team. It's also open sourced and available on every major OS. You can download it [here](http://getproton.org/), or view the source code [here](https://github.com/turtlecoin/turtle-wallet-proton)
 
+If you would like to use it, you can check out [this guide](Using-Proton-Wallet)
+
 ## Shellnet (Web Wallet)
 
 Shellnet is a web wallet made by dsanon, and supports all the basic features you'd want in a TurtleCoin wallet, including exporting your keys
@@ -38,6 +40,6 @@ TurtleWallet is a multi-featured web wallet made by Fexra, and includes features
 
 A guide is coming very soon for it!
 
-## TonChan
+## TonChan (Mobile Wallet)
 
 TurtleCoin has a mobile wallet called [TonChan](https://play.google.com/store/apps/details?id=com.tonchan&hl=en) for Android devices. You can download the wallet from the Google Play store.
