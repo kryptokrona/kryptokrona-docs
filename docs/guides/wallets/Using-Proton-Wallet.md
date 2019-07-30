@@ -145,7 +145,7 @@ If you don't know what height to start scanning from, that's OK, just leave this
 
 After this, your wallet will automatically open. Add a password if desired by navigating to Wallet > Password in the top menu. You've now finished importing your wallet into Proton Wallet and are ready to start using it!
 
-#### Mnemonic Seed
+#### Mnemonic Seed (25 Word Seed)
 
 1. Enter your mnemonic seed
 2. **(Optional)** Enter the block height your wallet was created on to start scanning for transactions. This can greatly speed up the process depending on how recent your wallet is.
