@@ -50,7 +50,7 @@ http://localhost:8070/json_rpc
 
 ### Configuration and instantiation
 
-To make a JSON RPC request to your TurtleCoin RPC Wallet you should use a POST request that looks like this:
+To make a JSON RPC request to your TurtleCoin RPC Wallet you should use a GET request that looks like this:
 
 `http://<service address>:<service port>/json_rpc`
 

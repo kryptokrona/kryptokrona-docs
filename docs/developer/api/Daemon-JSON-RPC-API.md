@@ -72,7 +72,7 @@ and, locally at
 `http://localhost:11898/json_rpc`
 
 
-To make a JSON RPC request to your Daemon RPC you should use a POST request that looks like this:
+To make a JSON RPC request to your Daemon RPC you should use a GET request that looks like this:
 
 `http://<service address>:<service port>/json_rpc`
 
