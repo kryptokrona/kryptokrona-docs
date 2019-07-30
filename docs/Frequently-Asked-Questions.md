@@ -524,7 +524,7 @@ None are ready for usage right now, but they are being worked on. Check the deve
 
 On Windows, it is in `%APPDATA%/turtlecoin`. On Mac and Linux, it is in `~/.turtlecoin`.
 
-#### Q: Is there a blockchain explorer?
+#### Q: Is there a block explorer?
 
 
 Yes, the offical one is
