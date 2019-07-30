@@ -97,7 +97,16 @@ const siteConfig = {
     defaultLang: 'plaintext'
   },
 
-  editUrl: "https://github.com/turtlecoin/turtlecoin-docs/edit/master/docs/"
+  // For 'Edit' button in top right of each doc
+  editUrl: "https://github.com/turtlecoin/turtlecoin-docs/edit/master/docs/",
+
+  // For the "copy code" button in each long code block
+  scripts: [
+    'https://buttons.github.io/buttons.js',
+    'https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.0/clipboard.min.js',
+    '/js/code-block-buttons.js',
+  ],
+  stylesheets: ['/css/code-block-buttons.css']
 
 };
 
