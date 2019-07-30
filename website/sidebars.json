@@ -59,9 +59,10 @@
             "type": "subcategory",
             "label": "API Documentation",
             "ids": [
-               "api/Wallet-RPC-API",
-               "api/Daemon-HTTP-RPC-API",
                "api/Daemon-JSON-RPC-API",
+               "api/Daemon-HTTP-RPC-API",
+               "api/Wallet-RPC-API",
+               "api/Legacy-Wallet-RPC-API",
                "api/RPC-API-Error-Conditions"
             ]
          }

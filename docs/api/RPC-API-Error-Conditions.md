@@ -2,10 +2,10 @@
 title: RPC Errors
 ---
 
-Here are some common error messages that TurtleCoind and Turtle-Service spit out, why they occured and how to fix them.  
+Here are some common error messages that TurtleCoind and turtle-service spit out, why they occured and how to fix them.  
 Listed are also some possible alternative errors which they could spit out.
 
-## Turtle-Service Errors
+## turtle-service Errors
 
 * https://github.com/turtlecoin/turtlecoin/blob/master/src/Wallet/WalletErrors.h
 
@@ -299,8 +299,9 @@ When using integrated addresses, if a payment ID is specified, it must match the
 **Solution:**
 Only send to one integrated address at once, and don't include a payment ID, to avoid confusion.
 
-## Turtlecoind Errors
-  * https://github.com/turtlecoin/turtlecoin/blob/master/src/NodeRpcProxy/NodeErrors.h
+## TurtleCoind Errors
+
+* https://github.com/turtlecoin/turtlecoin/blob/master/src/NodeRpcProxy/NodeErrors.h
 
 ### NOT_INITIALIZED / Object was not initialized
 
