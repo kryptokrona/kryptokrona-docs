@@ -26,10 +26,10 @@ const siteConfig = {
 
   // For no header links in the top nav bar -> headerLinks: [],
   headerLinks: [
-    {doc: 'Getting-Started', label: 'Intro'},
+    {doc: 'Getting-Started', label: 'Getting Started'},
+    {doc: 'Frequently-Asked-Questions', label: 'FAQ'},
     {doc: 'guides/mining/Mining', label: 'Guides'},
     {doc: 'developer/Resources', label: 'For Developers'},
-    {href: 'http://chat.turtlecoin.lol', label: 'Help'},
     {href: 'https://github.com/turtlecoin/turtlecoin-docs', label: 'GitHub'},
     { search: true }
   ],
@@ -43,7 +43,7 @@ const siteConfig = {
   /* path to images for header/footer */
   headerIcon: 'img/logo.png',
   footerIcon: 'img/fav.png',
-  favicon: 'img/fav.png',
+  favicon: 'img/fav.ico',
 
   /* Colors for website */
   // See Brand Manual for more info on these
@@ -94,7 +94,8 @@ const siteConfig = {
 
   // Sets default syntax highlighing to plaintext
   highlight: {
-    defaultLang: 'plaintext'
+    defaultLang: 'plaintext',
+    theme: 'atom-one-dark',
   },
 
   // For 'Edit' button in top right of each doc
