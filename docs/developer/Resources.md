@@ -13,9 +13,9 @@ Technical resources to start building on TurtleCoin.
 ## RPC API Clients
 
 * [NodeJS](https://www.npmjs.com/package/turtlecoin-rpc)
-* [Go](https://github.com/turtlecoin/turtlecoin-rpc-go)
 * [PHP](https://github.com/turtlecoin/turtlecoin-rpc-php)
 * [Python](https://github.com/turtlecoin/turtlecoin-rpc-python)
+* [Go](https://github.com/turtlecoin/turtlecoin-rpc-go)
 
 ## Libraries
 

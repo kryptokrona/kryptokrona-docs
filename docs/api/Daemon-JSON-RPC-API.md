@@ -1,84 +1,51 @@
-# Daemon JSON RPC API
+---
+title: Daemon JSON RPC API
+---
 
-Daemon JSON RPC is a HTTP server which provides JSON 2.0 RPC interface for interacting with Daemon and Block Explorer.
+The daemon JSON RPC is a HTTP server which provides JSON 2.0 RPC interface for interacting with a daemon and a block explorer.
 
 Currently we support the following official client bindings:
 
-* [JavaScript](https://www.npmjs.com/package/turtlecoin-rpc)
+* [NodeJS](https://www.npmjs.com/package/turtlecoin-rpc)
 * [PHP](https://github.com/turtlecoin/turtlecoin-rpc-php)
 * [Python](https://github.com/turtlecoin/turtlecoin-rpc-python)
 * [Go](https://github.com/turtlecoin/turtlecoin-rpc-go)
 
-```javascript
-npm install turtlecoin-rpc
+## Installation
+
+<!--DOCUSAURUS_CODE_TABS-->
+
+<!--NodeJS-->
+```
+npm i turtlecoin-rpc
 ```
 
-```php
+<!--PHP-->
+```
 composer require turtlecoin/turtlecoin-rpc-php
 ```
 
-```python
+<!--Python-->
+```
 pip3 install turtlecoin
 ```
 
-```go
+<!--Go-->
+```
 go get github.com/turtlecoin/turtlecoin-rpc-go
 ```
 
+<!--END_DOCUSAURUS_CODE_TABS-->
+
 ## Interacting with the API
 
-> API endpoint example
+### API endpoint example
 
 ```
 http://localhost:11898/json_rpc
 ```
 
-> Configuration and Instantiation
-
-```python
-from turtlecoin import TurtleCoind
-
-rpc_host = 'localhost'
-rpc_port = 11898
-turtlecoind = TurtleCoind(rpc_host, rpc_port)
-```
-
-```javascript
-const TurtleCoind = require('turtlecoin-rpc').TurtleCoind
-
-const daemon = new TurtleCoind({
-  host: '0.0.0.0', // ip address or hostname of the TurtleCoind host
-  port: 11898, // what port is the RPC server running on
-  timeout: 2000, // request timeout
-  ssl: false // whether we need to connect using SSL/TLS
-})
-```
-
-```php
-<?php
-use TurtleCoin\TurtleCoind;
-
-$config = [
-    'rpcHost' => 'http://localhost',
-    'rpcPort' => 11898,
-];
-
-$turtlecoind = new TurtleCoind($config);
-```
-
-```go
-import (
-    "fmt"
-    trpc "github.com/turtlecoin/turtlecoin-rpc-go"
-)
-
-rpcHost := "localhost"
-rpcPort := 11898
-
-daemon := trpc.TurtleCoind{
-    URL: rpcHost,
-    Port: rpcPort}
-```
+### Configuration and Instantiation
 
 To start the Daemon JSON RPC API server at `http://localhost:11898/json_rpc`, run:
 
@@ -114,48 +81,60 @@ Parameter            | Description
 `<service address>`  | IP of Daemon RPC, if it is located on local machine it is either 127.0.0.1 or localhost
 `<service port>`     | Daemon RPC port, by default it is bound to 11898 port, but it can be manually bound to any port you want
 
+<!--DOCUSAURUS_CODE_TABS-->
 
-## getblockcount
+<!--NodeJS-->
+```js
+const TurtleCoind = require('turtlecoin-rpc').TurtleCoind
 
-```shell
-curl -d '{"jsonrpc":"2.0", "method":"getblockcount", "params":{}}' http://localhost:11898/json_rpc
-```
-
-```javascript
-daemon.getBlockCount().then((blockCount) => {
-  // do something
-}).catch((error) => {
-  // do something
+const daemon = new TurtleCoind({
+  host: '0.0.0.0', // ip address or hostname of the TurtleCoind host
+  port: 11898, // what port is the RPC server running on
+  timeout: 2000, // request timeout
+  ssl: false // whether we need to connect using SSL/TLS
 })
 ```
 
+<!--PHP-->
 ```php
 <?php
-$response = $turtlecoind->getBlockCount();
-echo $response;
+use TurtleCoin\TurtleCoind;
+
+$config = [
+    'rpcHost' => 'http://localhost',
+    'rpcPort' => 11898,
+];
+
+$turtlecoind = new TurtleCoind($config);
 ```
 
-```python
-response = turtlecoind.get_block_count()
-print(response)
+<!--Python-->
+```py
+from turtlecoin import TurtleCoind
+
+rpc_host = 'localhost'
+rpc_port = 11898
+turtlecoind = TurtleCoind(rpc_host, rpc_port)
 ```
 
+<!--Go-->
 ```go
-response := daemon.GetBlockCount()
-fmt.Println(response)
+import (
+    "fmt"
+    trpc "github.com/turtlecoin/turtlecoin-rpc-go"
+)
+
+rpcHost := "localhost"
+rpcPort := 11898
+
+daemon := trpc.TurtleCoind{
+    URL: rpcHost,
+    Port: rpcPort}
 ```
 
-> Expected Output
+<!--END_DOCUSAURUS_CODE_TABS-->
 
-```json
-{
-    "jsonrpc":"2.0",
-    "result":{
-        "count":560915,
-        "status":"OK"
-    }
-}
-```
+## getblockcount
 
 `getblockcount()` method returns the current chain height.
 
@@ -168,50 +147,57 @@ Argument         | Description          | Format
 count            | Current chain height | int
 status           | Status of request | string
 
+<!--DOCUSAURUS_CODE_TABS-->
 
-## getblockhash
-
-```shell
-curl -d '{"jsonrpc":"2.0","method":"on_getblockhash","params":[123456]}' http://localhost:11898/json_rpc
+<!--Shell-->
+```sh
+curl -d '{"jsonrpc":"2.0", "method":"getblockcount", "params":{}}' http://localhost:11898/json_rpc
 ```
 
-```javascript
-daemon.getBlockHash({
-  height: 500000
-}).then((blockHash) => {
+<!--NodeJS-->
+```js
+daemon.getBlockCount().then((blockCount) => {
   // do something
 }).catch((error) => {
   // do something
 })
 ```
 
+<!--PHP-->
 ```php
 <?php
-$height = 123456;
-$response = $turtlecoind->getBlockHash($height);
+$response = $turtlecoind->getBlockCount();
 echo $response;
 ```
 
-```python
-height = 123456
-response = turtlecoind.get_block_hash(height)
+<!--Python-->
+```py
+response = turtlecoind.get_block_count()
 print(response)
 ```
 
+<!--Go-->
 ```go
-height := 123456
-response := daemon.GetBlockHash(height)
+response := daemon.GetBlockCount()
 fmt.Println(response)
 ```
 
-> Expected Output:
+<!--END_DOCUSAURUS_CODE_TABS-->
+
+
+#### Expected Output
 
 ```json
 {
     "jsonrpc":"2.0",
-    "result":"4bd7d..."
+    "result":{
+        "count":560915,
+        "status":"OK"
+    }
 }
 ```
+
+## getblockhash
 
 `getblockhash()` method returns block hash for a given height off by one.
 
@@ -227,62 +213,58 @@ Argument         | Description          | Format
 ---------------- | -------------------- | ------
 result           | Hash of previous block | int
 
-## getblocktemplate
+<!--DOCUSAURUS_CODE_TABS-->
 
-```shell
-curl -d '{"jsonrpc":"2.0","method":"getblocktemplate","params":{"reserve_size":200,"wallet_address":"TRTLxxxx..."}}' http://localhost:11898/json_rpc
+<!--Shell-->
+```sh
+curl -d '{"jsonrpc":"2.0","method":"on_getblockhash","params":[123456]}' http://localhost:11898/json_rpc
 ```
 
-
-```javascript
-daemon.getBlockTemplate({
-  reserveSize: 200,
-  walletAddress: 'TRTLv1pacKFJk9QgSmzk2LJWn14JGmTKzReFLz1RgY3K9Ryn7783RDT2TretzfYdck5GMCGzXTuwKfePWQYViNs4avKpnUbrwfQ'
-}).then((blockTemplate) => {
+<!--NodeJS-->
+```js
+daemon.getBlockHash({
+  height: 500000
+}).then((blockHash) => {
   // do something
 }).catch((error) => {
   // do something
 })
 ```
 
+<!--PHP-->
 ```php
 <?php
-$reserveSize = 200;
-$address = 'TRTLxxxx...';
-$response = $turtlecoind->getBlockTemplate($reserveSize, $address);
+$height = 123456;
+$response = $turtlecoind->getBlockHash($height);
 echo $response;
 ```
 
-```python
-reserve_size = 200
-wallet_address = 'TRTLxxxx...'
-
-response = turtlecoind.get_block_template(reserve_size, wallet_address)
+<!--Python-->
+```py
+height = 123456
+response = turtlecoind.get_block_hash(height)
 print(response)
 ```
 
+<!--Go-->
 ```go
-reserveSize := 200
-walletAddress := "TRTLxxxx..."
-
-response := daemon.GetBlockTemplate(reserveSize, walletAddress)
+height := 123456
+response := daemon.GetBlockHash(height)
 fmt.Println(response)
 ```
 
-> Expected Output:
+<!--END_DOCUSAURUS_CODE_TABS-->
+
+#### Expected Output:
 
 ```json
 {
-	"jsonrpc": "2.0",
-	"result": {
-		"blocktemplate_blob": "0100de...",
-		"difficulty": 65563,
-		"height": 123456,
-		"reserved_offset": 395,
-		"status": "OK"
-	}
+    "jsonrpc":"2.0",
+    "result":"4bd7d..."
 }
 ```
+
+## getblocktemplate
 
 `getblocktemplate(reserve_size, addr)` method returns blocktemplate with an empty "hole" for nonce.
 
@@ -303,51 +285,70 @@ height | Chain height of the network | int
 reserved_offset | Offset reserved | int
 status | Status of the network | string
 
-## submitblock
+<!--DOCUSAURUS_CODE_TABS-->
 
-```shell
-curl -d '{"jsonrpc":"2.0","method":"submitblock","params":["0100b...."]}' https://localhost:11898/json_rpc
+<!--Shell-->
+```sh
+curl -d '{"jsonrpc":"2.0","method":"getblocktemplate","params":{"reserve_size":200,"wallet_address":"TRTLxxxx..."}}' http://localhost:11898/json_rpc
 ```
 
-```javascript
-daemon.submitBlock({
-  blockBlob: '...'
-}).then((result) => {
+<!--NodeJS-->
+```js
+daemon.getBlockTemplate({
+  reserveSize: 200,
+  walletAddress: 'TRTLv1pacKFJk9QgSmzk2LJWn14JGmTKzReFLz1RgY3K9Ryn7783RDT2TretzfYdck5GMCGzXTuwKfePWQYViNs4avKpnUbrwfQ'
+}).then((blockTemplate) => {
   // do something
 }).catch((error) => {
   // do something
 })
 ```
 
+<!--PHP-->
 ```php
 <?php
-$blockBlob = '0100b...';
-$response = $turtlecoind->submitBlock($blockBlob);
+$reserveSize = 200;
+$address = 'TRTLxxxx...';
+$response = $turtlecoind->getBlockTemplate($reserveSize, $address);
 echo $response;
 ```
 
-```python
-block_blob = '0100b...'
-response = turtlecoind.submit_block(block_blob)
+<!--Python-->
+```py
+reserve_size = 200
+wallet_address = 'TRTLxxxx...'
+
+response = turtlecoind.get_block_template(reserve_size, wallet_address)
 print(response)
 ```
 
+<!--Go-->
 ```go
-blockBlob := "0100b..."
-response := daemon.SubmitBlock(blockBlob)
+reserveSize := 200
+walletAddress := "TRTLxxxx..."
+
+response := daemon.GetBlockTemplate(reserveSize, walletAddress)
 fmt.Println(response)
 ```
 
-> Expected Output:
+<!--END_DOCUSAURUS_CODE_TABS-->
+
+#### Expected Output:
 
 ```json
 {
 	"jsonrpc": "2.0",
 	"result": {
-		"status" : "OK"
+		"blocktemplate_blob": "0100de...",
+		"difficulty": 65563,
+		"height": 123456,
+		"reserved_offset": 395,
+		"status": "OK"
 	}
 }
 ```
+
+## submitblock
 
 `submitblock(block_blob)` method submits mined block.
 
@@ -363,14 +364,93 @@ Argument         | Description          | Format
 ---------------- | -------------------- | ------
 status           | Status of request | string
 
+<!--DOCUSAURUS_CODE_TABS-->
+
+<!--Shell-->
+```sh
+curl -d '{"jsonrpc":"2.0","method":"submitblock","params":["0100b...."]}' https://localhost:11898/json_rpc
+```
+
+<!--NodeJS-->
+```js
+daemon.submitBlock({
+  blockBlob: '...'
+}).then((result) => {
+  // do something
+}).catch((error) => {
+  // do something
+})
+```
+
+<!--PHP-->
+```php
+<?php
+$blockBlob = '0100b...';
+$response = $turtlecoind->submitBlock($blockBlob);
+echo $response;
+```
+
+<!--Python-->
+```py
+block_blob = '0100b...'
+response = turtlecoind.submit_block(block_blob)
+print(response)
+```
+
+<!--Go-->
+```go
+blockBlob := "0100b..."
+response := daemon.SubmitBlock(blockBlob)
+fmt.Println(response)
+```
+
+<!--END_DOCUSAURUS_CODE_TABS-->
+
+#### Expected Output:
+
+```json
+{
+	"jsonrpc": "2.0",
+	"result": {
+		"status" : "OK"
+	}
+}
+```
+
 ## getlastblockheader
 
-```shell
+`getlastblockheader` method returns the block header of the last block.
+
+No Input
+
+**Output**
+
+Argument | Description | Format
+------- | ---------- | --------
+block_size | size of the block | int
+depth | height away from the known top block | int
+difficulty | difficulty of the last block | int
+hash | hash of the last block | string
+height | height of the last block | int
+major_version | - | int
+minor_version | - | int
+nonce | - | int
+num_txs | Number of transactions in the block | int
+orphan_status | whether the last block was an orphan or not | bool
+prev_hash | hash of the previous block | string
+reward | reward of the block | str
+timestamp | the time at which the block is occured on chain since Unix epoch | int
+status | status of the request | string
+
+<!--DOCUSAURUS_CODE_TABS-->
+
+<!--Shell-->
+```sh
 curl -d '{"jsonrpc":"2.0","method":"getlastblockheader","params":{}}' http://localhost:11898/json_rpc
 ```
 
-
-```javascript
+<!--NodeJS-->
+```js
 daemon.getLastBlockHeader().then((result) => {
   // do something
 }).catch((error) => {
@@ -378,23 +458,28 @@ daemon.getLastBlockHeader().then((result) => {
 })
 ```
 
+<!--PHP-->
 ```php
 <?php
 $response = $turtlecoind->getLastBlockHeader();
 echo $response;
 ```
 
-```python
+<!--Python-->
+```py
 response = turtlecoind.get_last_block_header()
 print(response)
 ```
 
+<!--Go-->
 ```go
 response := daemon.GetLastBlockHeader()
 fmt.Println(response)
 ```
 
-> Expected Output:
+<!--END_DOCUSAURUS_CODE_TABS-->
+
+#### Expected Output:
 
 ```json
 {
@@ -420,88 +505,7 @@ fmt.Println(response)
 }
 ```
 
-No Input
-
-**Output**
-
-Argument | Description | Format
-------- | ---------- | --------
-block_size | size of the block | int
-depth | height away from the known top block | int
-difficulty | difficulty of the last block | int
-hash | hash of the last block | string
-height | height of the last block | int
-major_version | - | int
-minor_version | - | int
-nonce | - | int
-num_txs | Number of transactions in the block | int
-orphan_status | whether the last block was an orphan or not | bool
-prev_hash | hash of the previous block | string
-reward | reward of the block | str
-timestamp | the time at which the block is occured on chain since Unix epoch | int
-status | status of the request | string
-
 ## getblockheaderbyhash
-
-```shell
-curl -d '{"jsonrpc":"2.0","method":"getblockheaderbyhash","params":{"hash":"30706..."}}' http://localhost:11898/json_rpc
-```
-
-
-```javascript
-daemon.getBlockHeaderByHash({
-  hash: '7d6db7b77232d41c19d898e81c85ecf08c4e8dfa3434f975a319f6261a695739'
-}).then((result) => {
-  // do something
-}).catch((error) => {
-  // do something
-})
-```
-
-```php
-<?php
-$hash = '30706...';
-$response = $turtlecoind->getBlockHeaderByHash($hash);
-echo $response;
-```
-
-```python
-hash = '30706...'
-response = turtlecoind.get_block_header_by_hash(hash)
-print(response)
-```
-
-```go
-hash := "30706..."
-response := daemon.GetBlockHeaderByHash(hash)
-fmt.Println(response)
-```
-
-> Expected Output:
-
-```json
-{
-    "jsonrpc":"2.0",
-    "result":{
-        "block_header":{
-            "block_size":11640,
-            "depth":437898,
-            "difficulty":70050782,
-            "hash":"30706...",
-            "height":123456,
-            "major_version":3,
-            "minor_version":0,
-            "nonce":3177228614,
-            "num_txes":3,
-            "orphan_status":false,
-            "prev_hash":"4bd7d...",
-            "reward":2969487,
-            "timestamp":1516631879
-        },
-    "status":"OK"
-    }
-}
-```
 
 `getblockheaderbyhash()` returns block header by given block hash
 
@@ -530,16 +534,17 @@ reward | reward of the block | str
 timestamp | the time at which the block is occured on chain since Unix epoch | int
 status | status of the request | string
 
-## getblockheaderbyheight
+<!--DOCUSAURUS_CODE_TABS-->
 
-```shell
-curl -d '{"jsonrpc":"2.0","method":"getblockheaderbyheight","params":{"height":123456}}' http://localhost:11898/json_rpc
+<!--Shell-->
+```sh
+curl -d '{"jsonrpc":"2.0","method":"getblockheaderbyhash","params":{"hash":"30706..."}}' http://localhost:11898/json_rpc
 ```
 
-
-```javascript
-daemon.getBlockHeaderByHeight({
-  height: 502345
+<!--NodeJS-->
+```js
+daemon.getBlockHeaderByHash({
+  hash: '7d6db7b77232d41c19d898e81c85ecf08c4e8dfa3434f975a319f6261a695739'
 }).then((result) => {
   // do something
 }).catch((error) => {
@@ -547,26 +552,31 @@ daemon.getBlockHeaderByHeight({
 })
 ```
 
+<!--PHP-->
 ```php
 <?php
-$height = 123456;
-$response = $turtlecoind->getBlockHeaderByHeight($height);
+$hash = '30706...';
+$response = $turtlecoind->getBlockHeaderByHash($hash);
 echo $response;
 ```
 
-```python
-height = 123456
-response = turtlecoind.get_block_header_by_height(height)
+<!--Python-->
+```py
+hash = '30706...'
+response = turtlecoind.get_block_header_by_hash(hash)
 print(response)
 ```
 
+<!--Go-->
 ```go
-height := 123456
-response := daemon.GetBlockHeaderByHeight(height)
+hash := "30706..."
+response := daemon.GetBlockHeaderByHash(hash)
 fmt.Println(response)
 ```
 
-> Expected Output:
+<!--END_DOCUSAURUS_CODE_TABS-->
+
+#### Expected Output:
 
 ```json
 {
@@ -591,6 +601,8 @@ fmt.Println(response)
     }
 }
 ```
+
+## getblockheaderbyheight
 
 `getblockheaderbyheight()` method returns block header by given block height
 
@@ -619,47 +631,75 @@ reward | reward of the block | str
 timestamp | the time at which the block is occured on chain since Unix epoch | int
 status | status of the request | string
 
-## getcurrencyid
+<!--DOCUSAURUS_CODE_TABS-->
 
-```shell
-curl -d '{"jsonrpc":"2.0","method":"getcurrencyid","params":{}}' http://localhost:11898/json_rpc
+<!--Shell-->
+```sh
+curl -d '{"jsonrpc":"2.0","method":"getblockheaderbyheight","params":{"height":123456}}' http://localhost:11898/json_rpc
 ```
 
-
-```javascript
-daemon.getCurrencyId().then((result) => {
+<!--NodeJS-->
+```js
+daemon.getBlockHeaderByHeight({
+  height: 502345
+}).then((result) => {
   // do something
 }).catch((error) => {
   // do something
 })
 ```
 
+<!--PHP-->
 ```php
 <?php
-$response = $turtlecoind->getCurrencyId();
+$height = 123456;
+$response = $turtlecoind->getBlockHeaderByHeight($height);
 echo $response;
 ```
 
-```python
-response = turtlecoind.get_currency_id()
+<!--Python-->
+```py
+height = 123456
+response = turtlecoind.get_block_header_by_height(height)
 print(response)
 ```
 
+<!--Go-->
 ```go
-response := daemon.GetCurrencyID()
+height := 123456
+response := daemon.GetBlockHeaderByHeight(height)
 fmt.Println(response)
 ```
 
-> Expected Output:
+<!--END_DOCUSAURUS_CODE_TABS-->
+
+#### Expected Output:
 
 ```json
 {
     "jsonrpc":"2.0",
     "result":{
-        "currency_id_blob":"7fb97..."
+        "block_header":{
+            "block_size":11640,
+            "depth":437898,
+            "difficulty":70050782,
+            "hash":"30706...",
+            "height":123456,
+            "major_version":3,
+            "minor_version":0,
+            "nonce":3177228614,
+            "num_txes":3,
+            "orphan_status":false,
+            "prev_hash":"4bd7d...",
+            "reward":2969487,
+            "timestamp":1516631879
+        },
+    "status":"OK"
     }
 }
 ```
+
+## getcurrencyid
 
 `getcurrencyid()` method returns unique currency identifier.
 
@@ -671,61 +711,56 @@ Argument | Description | Format
 -------- | ----------- | ------
 currency_id_blob | unique currency identifier | string
 
-## getblocks
+<!--DOCUSAURUS_CODE_TABS-->
 
-```shell
-curl -d '{"jsonrpc":"2.0","method":"f_blocks_list_json","params":{"height":500000}}' http://localhost:11898/json_rpc
+<!--Shell-->
+```sh
+curl -d '{"jsonrpc":"2.0","method":"getcurrencyid","params":{}}' http://localhost:11898/json_rpc
 ```
 
-```javascript
-daemon.getBlocks({
-  height: 500000
-}).then((blocks) => {
+
+<!--NodeJS-->
+```js
+daemon.getCurrencyId().then((result) => {
   // do something
 }).catch((error) => {
   // do something
 })
 ```
 
+<!--PHP-->
 ```php
 <?php
-$height = 500000;
-$response = $turtlecoind->getBlocks($height);
+$response = $turtlecoind->getCurrencyId();
 echo $response;
 ```
 
-```python
-height = 500000
-response = turtlecoind.get_blocks(height)
+<!--Python-->
+```py
+response = turtlecoind.get_currency_id()
 print(response)
 ```
 
+<!--Go-->
 ```go
-height := 500000
-response := daemon.GetBlocks(height)
+response := daemon.GetCurrencyID()
 fmt.Println(response)
 ```
 
-> Expected Output:
+<!--END_DOCUSAURUS_CODE_TABS-->
+
+#### Expected Output:
 
 ```json
 {
-    "jsonrpc": "2.0",
-    "result": {
-        "blocks":[
-            {
-                "cumul_size": 22041,
-                "difficulty": 285124963,
-                "hash": "62f00...",
-                "height": 500000,
-                "timestamp": 1527834137,
-                "tx_count": 4
-            }
-        ],
-        "status": "OK"
+    "jsonrpc":"2.0",
+    "result":{
+        "currency_id_blob":"7fb97..."
     }
 }
 ```
+
+## getblocks
 
 `getblocks()` method returns information on the last 30 blocks from height (inclusive)
 
@@ -749,81 +784,71 @@ blocks   | **Array of** |                                       |
          | tx_count     | number of transactions in the block   | int
 
 
-## getblock
+<!--DOCUSAURUS_CODE_TABS-->
 
-```shell
-curl -d '{"jsonrpc":"2.0","method":"f_block_json","params":{"hash":"980ff..."}}' http://localhost:11898/json_rpc
+<!--Shell-->
+```sh
+curl -d '{"jsonrpc":"2.0","method":"f_blocks_list_json","params":{"height":500000}}' http://localhost:11898/json_rpc
 ```
 
-```javascript
-daemon.getBlock({
-  hash: 'f11580d74134ac34673c74f8da458080aacbe1eccea05b197e9d10bde05139f5'
-}).then((block) => {
+<!--NodeJS-->
+```js
+daemon.getBlocks({
+  height: 500000
+}).then((blocks) => {
   // do something
 }).catch((error) => {
   // do something
 })
 ```
 
+<!--PHP-->
 ```php
 <?php
-$hash = '980ff...';
-$response = $turtlecoind->getBlock($hash);
+$height = 500000;
+$response = $turtlecoind->getBlocks($height);
 echo $response;
 ```
 
-```python
-hash = '980ff...'
-response = turtlecoind.get_block(hash)
+<!--Python-->
+```py
+height = 500000
+response = turtlecoind.get_blocks(height)
 print(response)
 ```
 
+<!--Go-->
 ```go
-hash := "980ff..."
-response := daemon.GetBlock(hash)
+height := 500000
+response := daemon.GetBlocks(height)
 fmt.Println(response)
 ```
 
-> Expected Output:
+<!--END_DOCUSAURUS_CODE_TABS-->
+
+#### Expected Output:
 
 ```json
 {
-    "jsonrpc":"2.0",
-    "result":{
-        "block":{
-            "alreadyGeneratedCoins":"1659188157030",
-            "alreadyGeneratedTransactions":1097221,
-            "baseReward":2930784,
-            "blockSize":384,
-            "depth":1,
-            "difficulty":264289473,
-            "effectiveSizeMedian":100000,
-            "hash":"980ff...",
-            "height":561537,
-            "major_version":4,
-            "minor_version":0,
-            "nonce":60779,
-            "orphan_status":false,
-            "penalty":0.0,
-            "prev_hash":"c37f8...",
-            "reward":2930784,
-            "sizeMedian":265,
-            "timestamp":1529757254,
-            "totalFeeAmount":0,
-            "transactions":[
-                {
-                    "amount_out":2930784,
-                    "fee":0,
-                    "hash":"c0a2d...",
-                    "size":265
-                }
-            ],
-            "transactionsCumulativeSize":265
-        },
-        "status":"OK"
+    "jsonrpc": "2.0",
+    "result": {
+        "blocks":[
+            {
+                "cumul_size": 22041,
+                "difficulty": 285124963,
+                "hash": "62f00...",
+                "height": 500000,
+                "timestamp": 1527834137,
+                "tx_count": 4
+            }
+        ],
+        "status": "OK"
     }
 }
 ```
+
+
+## getblock
 
 `getblock()` method returns information on a single block
 
@@ -869,91 +894,90 @@ fee | fees for the transaction | int
 hash | hash of the transaction | string
 size | size of the transaction | int
 
-## gettransaction
+<!--DOCUSAURUS_CODE_TABS-->
 
-```shell
-curl -d '{"jsonrpc":"2.0","method":"f_transaction_json","params":{"hash":"702ad..."}}' http://localhost:11898/json_rpc
+<!--Shell-->
+```sh
+curl -d '{"jsonrpc":"2.0","method":"f_block_json","params":{"hash":"980ff..."}}' http://localhost:11898/json_rpc
 ```
 
-```javascript
-daemon.getTransaction({
-  hash: '702ad5bd04b9eff14b080d508f69a320da1909e989d6c163c18f80ae7a5ab832'
-}).then((transaction) => {
+<!--NodeJS-->
+```js
+daemon.getBlock({
+  hash: 'f11580d74134ac34673c74f8da458080aacbe1eccea05b197e9d10bde05139f5'
+}).then((block) => {
   // do something
 }).catch((error) => {
   // do something
 })
 ```
 
+<!--PHP-->
 ```php
 <?php
-$hash = '702ad...';
-$response = $turtlecoind->getTransaction($hash);
+$hash = '980ff...';
+$response = $turtlecoind->getBlock($hash);
 echo $response;
 ```
 
-```python
-hash = '702ad...'
-response = turtlecoind.get_transaction(hash)
+<!--Python-->
+```py
+hash = '980ff...'
+response = turtlecoind.get_block(hash)
 print(response)
 ```
 
+<!--Go-->
 ```go
-hash := "702ad..."
-response := daemon.GetTransaction(hash)
+hash := "980ff..."
+response := daemon.GetBlock(hash)
 fmt.Println(response)
 ```
 
-> Expected Output:
+<!--END_DOCUSAURUS_CODE_TABS-->
+
+#### Expected Output:
 
 ```json
 {
     "jsonrpc":"2.0",
     "result":{
         "block":{
-            "cumul_size":22041,
-            "difficulty":106780143,
-            "hash":"62f00...",
-            "height":500000,
-            "timestamp":1527834137,
-            "tx_count":4
-        },
-        "status":"OK",
-        "tx":{
-            "extra":"019e4...",
-            "unlock_time":500040,
-            "version":1,
-            "vin":[
+            "alreadyGeneratedCoins":"1659188157030",
+            "alreadyGeneratedTransactions":1097221,
+            "baseReward":2930784,
+            "blockSize":384,
+            "depth":1,
+            "difficulty":264289473,
+            "effectiveSizeMedian":100000,
+            "hash":"980ff...",
+            "height":561537,
+            "major_version":4,
+            "minor_version":0,
+            "nonce":60779,
+            "orphan_status":false,
+            "penalty":0.0,
+            "prev_hash":"c37f8...",
+            "reward":2930784,
+            "sizeMedian":265,
+            "timestamp":1529757254,
+            "totalFeeAmount":0,
+            "transactions":[
                 {
-                    "type":"ff",
-                    "value":{
-                        "height":500000
-                    }
+                    "amount_out":2930784,
+                    "fee":0,
+                    "hash":"c0a2d...",
+                    "size":265
                 }
             ],
-            "vout":[
-                {
-                    "amount":80,
-                    "target":{
-                        "data":{
-                            "key":"5ce69..."
-                        },
-                        "type":"02"
-                    }
-                }
-            ]
+            "transactionsCumulativeSize":265
         },
-        "txDetails":{
-            "amount_out":2936280,
-            "fee":0,
-            "hash":"702ad...",
-            "mixin":0,
-            "paymentId":"",
-            "size":266
-        }
+        "status":"OK"
     }
 }
 ```
+
+## gettransaction
 
 `gettransaction()` method returns information on single transaction.
 
@@ -1004,54 +1028,100 @@ version | - | int
 vin | array of input transactions | array
 vout | array of output transactions | array
 
-## gettransactionpool
+<!--DOCUSAURUS_CODE_TABS-->
 
-```shell
-curl -d '{"jsonrpc":"2.0","method":"f_on_transactions_pool_json","params":{}}' http://localhost:11898/json_rpc
+<!--Shell-->
+```sh
+curl -d '{"jsonrpc":"2.0","method":"f_transaction_json","params":{"hash":"702ad..."}}' http://localhost:11898/json_rpc
 ```
 
-```javascript
-daemon.getTransactionPool().then((transactions) => {
+<!--NodeJS-->
+```js
+daemon.getTransaction({
+  hash: '702ad5bd04b9eff14b080d508f69a320da1909e989d6c163c18f80ae7a5ab832'
+}).then((transaction) => {
   // do something
 }).catch((error) => {
   // do something
 })
 ```
 
+<!--PHP-->
 ```php
 <?php
-$response = $turtlecoind->getTransactionPool();
+$hash = '702ad...';
+$response = $turtlecoind->getTransaction($hash);
 echo $response;
 ```
 
-```python
-response = turtlecoind.get_transaction_pool()
+<!--Python-->
+```py
+hash = '702ad...'
+response = turtlecoind.get_transaction(hash)
 print(response)
 ```
 
+<!--Go-->
 ```go
-response := daemon.GetTransactionPool()
+hash := "702ad..."
+response := daemon.GetTransaction(hash)
 fmt.Println(response)
 ```
 
-> Expected Output:
+<!--END_DOCUSAURUS_CODE_TABS-->
+
+#### Expected Output:
 
 ```json
 {
     "jsonrpc":"2.0",
     "result":{
+        "block":{
+            "cumul_size":22041,
+            "difficulty":106780143,
+            "hash":"62f00...",
+            "height":500000,
+            "timestamp":1527834137,
+            "tx_count":4
+        },
         "status":"OK",
-        "transactions":[
-            {
-                "amount_out":8990,
-                "fee":10,
-                "hash":"a5e88...",
-                "size":541
-            }
-        ]
+        "tx":{
+            "extra":"019e4...",
+            "unlock_time":500040,
+            "version":1,
+            "vin":[
+                {
+                    "type":"ff",
+                    "value":{
+                        "height":500000
+                    }
+                }
+            ],
+            "vout":[
+                {
+                    "amount":80,
+                    "target":{
+                        "data":{
+                            "key":"5ce69..."
+                        },
+                        "type":"02"
+                    }
+                }
+            ]
+        },
+        "txDetails":{
+            "amount_out":2936280,
+            "fee":0,
+            "hash":"702ad...",
+            "mixin":0,
+            "paymentId":"",
+            "size":266
+        }
     }
 }
 ```
+
+## gettransactionpool
 
 `gettransactionpool()` returns the list of transaction hashes present in mempool
 
@@ -1073,13 +1143,67 @@ fee | fees for the transaction | int
 hash | hash of the transaction | string
 size | size of the transaction | int
 
+<!--DOCUSAURUS_CODE_TABS-->
+
+<!--Shell-->
+```sh
+curl -d '{"jsonrpc":"2.0","method":"f_on_transactions_pool_json","params":{}}' http://localhost:11898/json_rpc
+```
+
+<!--NodeJS-->
+```js
+daemon.getTransactionPool().then((transactions) => {
+  // do something
+}).catch((error) => {
+  // do something
+})
+```
+
+<!--PHP-->
+```php
+<?php
+$response = $turtlecoind->getTransactionPool();
+echo $response;
+```
+
+<!--Python-->
+```py
+response = turtlecoind.get_transaction_pool()
+print(response)
+```
+
+<!--Go-->
+```go
+response := daemon.GetTransactionPool()
+fmt.Println(response)
+```
+
+<!--END_DOCUSAURUS_CODE_TABS-->
+
+#### Expected Output:
+
+```json
+{
+    "jsonrpc":"2.0",
+    "result":{
+        "status":"OK",
+        "transactions":[
+            {
+                "amount_out":8990,
+                "fee":10,
+                "hash":"a5e88...",
+                "size":541
+            }
+        ]
+    }
+}
+```
+
 
 ## License
 
-[![Creative Commons License](/images/cc-by-sa.png)](https://creativecommons.org/licenses/by-sa/3.0/)
+[![Creative Commons License](../../assets/cc-by-sa.png)](https://creativecommons.org/licenses/by-sa/3.0/)
 
-The content in this document were originally written by the [Bytecoin (BCN) Developers](https://bytecoin.org/). It is licensed under the [CC BY SA 3.0 license](https://creativecommons.org/licenses/by-sa/3.0/). The source material can be found at the [Bytecoin Wiki](https://wiki.bytecoin.org/).
+The content in this document was originally written by the [Bytecoin (BCN) Developers](https://bytecoin.org/). It is licensed under the [CC BY SA 3.0 license](https://creativecommons.org/licenses/by-sa/3.0/). The source material can be found at the [Bytecoin Wiki](https://wiki.bytecoin.org/).
 
 Also of note, TurtleCoin developers have altered and adapted the content to suit our implementation of the API. This was done independently of the Bytecoin development team. They neither endorse or acknowledge our changes. Feel free to adopt or change our content as per the [CC BY SA 3.0 license](https://creativecommons.org/licenses/by-sa/3.0/) requirements.
-
-_TurtleCoin developers 2018_

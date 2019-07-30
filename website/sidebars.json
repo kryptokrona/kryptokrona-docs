@@ -1,9 +1,12 @@
 {
-   "intro": {
-      "Intro": [
-         "Getting-Started",
-         "Frequently-Asked-Questions",
-         "Contributors"
+   "getting-started": {
+      "Getting Started": [
+         "Getting-Started"
+      ]
+   },
+   "faq": {
+      "Frequently Asked Questions": [
+         "Frequently-Asked-Questions"
       ]
    },
    "guides": {
@@ -13,7 +16,8 @@
          "about/Community",
          "about/Contributing",
          "about/Technical-Data",
-         "about/Timeline"
+         "about/Timeline",
+         "Contributors"
       ],
       "Mining": [
          "guides/mining/Mining",
@@ -50,7 +54,17 @@
          "developer/TurtleCoind-behind-HAProxy",
          "developer/Local-Testnet",
          "developer/Compiling-From-Source",
-         "developer/Forking-TurtleCoin"
+         "developer/Forking-TurtleCoin",
+         {
+            "type": "subcategory",
+            "label": "API Documentation",
+            "ids": [
+               "api/Wallet-RPC-API",
+               "api/Daemon-HTTP-RPC-API",
+               "api/Daemon-JSON-RPC-API",
+               "api/RPC-API-Error-Conditions"
+            ]
+         }
       ]
    }
  }
