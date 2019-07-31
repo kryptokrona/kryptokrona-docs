@@ -9,7 +9,7 @@
          "Frequently-Asked-Questions"
       ]
    },
-   "guides": {
+   "about": {
       "About": [
          "about/About-TurtleCoin",
          "about/Background-and-History",
@@ -18,7 +18,9 @@
          "about/Technical-Data",
          "about/Timeline",
          "Contributors"
-      ],
+      ]
+   },
+   "guides": {
       "Mining": [
          "guides/mining/Mining",
          "guides/mining/Pools",
