@@ -188,7 +188,7 @@ The configuration of the device it mines(CPU/AMD/NVIDIA) will be saved in `cpu.t
 So lets talk about CPU.txt
 
 This is where you will set your Core, Threads, and a few other tweaks. When you open the file you will see something like this
-
+````
 /*
  * Thread configuration for each thread. Make sure it matches the number above.
  * low_power_mode - This can either be a boolean (true or false), or a number between 1 to 5. When set to true,
@@ -221,7 +221,7 @@ This is where you will set your Core, Threads, and a few other tweaks. When you 
 	{ "low_power_mode" : false, "no_prefetch" : true, "affine_to_cpu" : false },
 	{ "low_power_mode" : false, "no_prefetch" : true, "affine_to_cpu" : false },
 ],
-
+````
 First lets set our cores/ threads. This is the beginning of your CPU setup, everything else will improve on that as the base.
 Think about how much of your CPU you want to mine with,(i.e 50%, 75%, 100%). 
 
@@ -236,53 +236,53 @@ So you want 50% of your CPU to be used?
 Below is what your config will look like. Two cores are being used. - ( example hash rate - ~1.8khs )
 
 No tweaks on this so far, this is basically the config the miner creates as a "good to start" config. 
-
+````
 "cpu_threads_conf" :
 [
 	{ "low_power_mode" : false, "no_prefetch" : true, "affine_to_cpu" : 0 },
 	{ "low_power_mode" : false, "no_prefetch" : true, "affine_to_cpu" : 1 },
 ],
-
+````
 Below is a config for 75% CPU useage. (just one more core being used since its a 4 core) - ( example hash rate - ~2.2khs )
-
+````
 [
 	{ "low_power_mode" : false, "no_prefetch" : true, "affine_to_cpu" : 0 },
 	{ "low_power_mode" : false, "no_prefetch" : true, "affine_to_cpu" : 1 },
 	{ "low_power_mode" : false, "no_prefetch" : true, "affine_to_cpu" : 2 },
 ],
-
+````
 Below is a config for 100% CPU useage. ( All cores being used of a 4 core ) - ( example hash rate - ~3khs )
-
+````
 [
 	{ "low_power_mode" : false, "no_prefetch" : true, "affine_to_cpu" : 0 },
 	{ "low_power_mode" : false, "no_prefetch" : true, "affine_to_cpu" : 1 },
 	{ "low_power_mode" : false, "no_prefetch" : true, "affine_to_cpu" : 2 },
 	{ "low_power_mode" : false, "no_prefetch" : true, "affine_to_cpu" : 3 },
 ],
-
+````
 For CPU's with Threading, or using threads. You add another line like you would for a CPU core, the affine_to_cpu # is set a certain way for that style CPU, please see the config notes on that ( odd/even etc ) ****
 
 Below is a config for 100% CPU useage. Next we will change the "Low_power_mode". 
 My impression of this setting is that it passes the data through the cpu twice, three, four, five time ( depending on setting ). increasing speed.
 FOR TURTLE (CN/Pico). "true" or "2" seems to be the sweet spot( for most CPU's with enough cache ). No increase has been seen using "3", "4" or "5"
 ( NOTE: true, essentially = 2. They would be the same setting ) ( example hash rate - ~5.2khs, ~1.1kh per core )
-
+````
 [
 	{ "low_power_mode" : 2, "no_prefetch" : true, "affine_to_cpu" : 0 },
 	{ "low_power_mode" : 2, "no_prefetch" : true, "affine_to_cpu" : 1 },
 	{ "low_power_mode" : 2, "no_prefetch" : true, "affine_to_cpu" : 2 },
 	{ "low_power_mode" : 2, "no_prefetch" : true, "affine_to_cpu" : 3 },
 ],
-
+````
 TIP, Change only a few cores to low_power_mode : 2 ( or true ). Run the miner and see the performance ( Press H to see hashrate, while in miner window ) difference from the cores you did NOT change. Just to verify you are seeing an increase in performance ( OR NOT )
-
+````
 [
 	{ "low_power_mode" : false, "no_prefetch" : true, "affine_to_cpu" : 0 },
 	{ "low_power_mode" : false, "no_prefetch" : true, "affine_to_cpu" : 1 },
 	{ "low_power_mode" : 2, "no_prefetch" : true, "affine_to_cpu" : 2 },
 	{ "low_power_mode" : 2, "no_prefetch" : true, "affine_to_cpu" : 3 },
 ],
-
+````
 ## Large Page support ##
 
 Occasionally ( actually more than likely ) you will see an error when you start XmrStak that says something about " MEMORY ALLOC FAILURE : "
@@ -304,12 +304,12 @@ When you first run XmrStak without modifying anything, the miner will set base "
 
 Unless you specify it NOT too. Each config file ( CPU.txt, AMD.txt, Nvidia.txt ) can be set to NOT mine with that hardware. 
 examples are below, of HOW to EXCLUDE hardware. So If you want to mine with CPU ONLY, "NULL" the AMD.txt or Nvidia.txt "gpu_threads_conf" section. If you want to mine your GPU(s) only, "NULL" the CPU.txt "cpu_threads_conf" section.
-
+````
 "cpu_threads_conf" :
 [
 NULL
 ],
-
+````
 ( if you want to mine with CPU only, you would "NULL" the "gpu_thread_conf" section of of the AMD.txt or Nvidia.txt config )
 
 When looking at the config files for the GPU(s) you will see a few things that are important.
@@ -324,7 +324,7 @@ There are more settings for GPU's that you can get into, we wont get into all th
 
 
 Here is an exmaple of what an AMD.txt config file might look like for 1 gpu ( 1 thread performance )
-
+````
 "GPU_threads_conf" :
 [
     { "index" : 0, "intensity" : 1000, "worksize" : 8, "affine_to_cpu" : false,
@@ -332,10 +332,10 @@ Here is an exmaple of what an AMD.txt config file might look like for 1 gpu ( 1 
       "interleave" : 40
     },
 ],
-
+````
 Here is an example of what an AMD.txt config file might look like for 1 gpu ( 2 threads performance )
 AMD has seen improvement with 2 threads per gpu. Note the "index" :0 is the same per entry.
-
+````
 "GPU_threads_conf" :
 [
     { "index" : 0, "intensity" : 1000, "worksize" : 8, "affine_to_cpu" : false,
@@ -347,9 +347,9 @@ AMD has seen improvement with 2 threads per gpu. Note the "index" :0 is the same
       "interleave" : 40
     },
 ],
-
+````
 If you had multiple GPU (2), 2 threads, it would look like this ( again Note the "index" :0 and "index" :1 )
-
+````
 "GPU_threads_conf" :
 [
     { "index" : 0, "intensity" : 1000, "worksize" : 8, "affine_to_cpu" : false,
@@ -369,7 +369,7 @@ If you had multiple GPU (2), 2 threads, it would look like this ( again Note the
       "interleave" : 40
     },
 ],
-
+````
 ## GPU tweaking ## ( Over Clocking and Bios mods ) can get very involved, and complicated for someone not familiar with the process.
 
 Most of the time a GPU will hash straight out of the box, but it wont be "the optimal" or the "best" performance. it will be the Stable, and "always works" setup.
