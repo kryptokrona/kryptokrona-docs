@@ -168,7 +168,7 @@ You will probably have to open the port you are running the interface on in your
 
 * If they are all given the same weight, it will connect to them in order of how they are listed, form top to bottom, in the configuration file.
 
-### Tweaks and tricks for Xmrstak and Turtle ( CN/Pico currently ) - 2.10.4+ 
+## Tweaks and tricks for Xmrstak and Turtle ( CN/Pico currently ) - 2.10.4+ 
 (https://github.com/fireice-uk/xmr-stak/blob/master/doc/tuning.md)
 
 Here will be information on Tips and Tricks to mine Turtle algo CN/Pico
@@ -183,7 +183,7 @@ like stated above, once you run XmrStak for the first time you will get 3 files 
 Your configuration for pools(algorithm to mine, address, port etc) will be saved in `pools.txt`. ( no tweaks to be had in here ) 
 The configuration of the device it mines(CPU/AMD/NVIDIA) will be saved in `cpu.txt`, `amd.txt` or `nvidia.txt`, respectively.
 
-## CPU.txt
+### CPU.txt
 
 So lets talk about CPU.txt
 
@@ -283,7 +283,7 @@ TIP, Change only a few cores to low_power_mode : 2 ( or true ). Run the miner an
 	{ "low_power_mode" : 2, "no_prefetch" : true, "affine_to_cpu" : 3 },
 ],
 ````
-## Large Page support
+### Large Page support
 
 Occasionally ( actually more than likely ) you will see an error when you start XmrStak that says something about " MEMORY ALLOC FAILURE : "
 
@@ -293,11 +293,11 @@ Each operating system has a different way of setting it. so check your system an
 
 This setting is NOT necessary, but can prove to be better performing. So do try and enable it
 
-## OS tweaks and tips
+### OS tweaks and tips
 
 Linux has been known to perform slightly better than the other OS versions of xmrstak
 
-## GPU Tips and Tweaks for XmrStak
+### GPU Tips and Tweaks for XmrStak
 
 XmrStak is an "All in one" miner, meaning it will run ALL ( "mineable" ) hardware on your machine under ONE miner ( GPU, CPU )
 When you first run XmrStak without modifying anything, the miner will set base "settings" in all these "config" files. It will also mine with all hardware available. 
@@ -370,7 +370,7 @@ If you had multiple GPU (2), 2 threads, it would look like this ( again Note the
     },
 ],
 ````
-## GPU tweaking ( Over Clocking and Bios mods ) can get very involved, and complicated for someone not familiar with the process.
+### GPU tweaking ( Over Clocking and Bios mods ) can get very involved, and complicated for someone not familiar with the process.
 
 Most of the time a GPU will hash straight out of the box, but it wont be "the optimal" or the "best" performance. it will be the Stable, and "always works" setup.
 
@@ -396,7 +396,7 @@ core clk=1150 mem clk=2150 core Mv 950. or in MSI afterburner -160 power.
 
 These settings on this example GPU yield 62c and ~30% fan speeds on the GPU @8.2khs
 
-## NOTES
+### NOTES
 
 The miner will need to run for a few minutes to get stable and consistent. Your Hashrate could fluctuate during that time, you could see some cores/GPU(s) NOT hashing at all. Give it a few minutes for the miner to stabilize before changing or reverting config settings.
 
