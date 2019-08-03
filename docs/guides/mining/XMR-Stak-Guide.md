@@ -1,5 +1,5 @@
 ---
-title: Mining with XMR-Stak 2.10.4+
+title: Mining with XMR-Stak
 ---
 
 XMR-Stak is a unified miner, which means the same program will be used to mine with both your CPU and your GPU. It will automatically detect your hardware and adjust the settings accordingly.
@@ -168,7 +168,7 @@ You will probably have to open the port you are running the interface on in your
 
 * If they are all given the same weight, it will connect to them in order of how they are listed, form top to bottom, in the configuration file.
 
-******** Tweaks and tricks for Xmrstak and Turtle ( CN/Pico currently ) ********** 2.10.4+ 
+### Tweaks and tricks for Xmrstak and Turtle ( CN/Pico currently ) ### 2.10.4+ 
 (https://github.com/fireice-uk/xmr-stak/blob/master/doc/tuning.md)
 
 Here will be information on Tips and Tricks to mine Turtle algo CN/Pico
@@ -183,7 +183,7 @@ like stated above, once you run XmrStak for the first time you will get 3 files 
 Your configuration for pools(algorithm to mine, address, port etc) will be saved in `pools.txt`. ( no tweaks to be had in here ) 
 The configuration of the device it mines(CPU/AMD/NVIDIA) will be saved in `cpu.txt`, `amd.txt` or `nvidia.txt`, respectively.
 
-**** CPU.txt ****
+## CPU.txt ##
 
 So lets talk about CPU.txt
 
@@ -222,7 +222,7 @@ This is where you will set your Core, Threads, and a few other tweaks. When you 
 	{ "low_power_mode" : false, "no_prefetch" : true, "affine_to_cpu" : false },
 ],
 
-** First lets set our cores/ threads. This is the beginning of your CPU setup, everything else will improve on that as the base.
+First lets set our cores/ threads. This is the beginning of your CPU setup, everything else will improve on that as the base.
 Think about how much of your CPU you want to mine with,(i.e 50%, 75%, 100%). 
 
 Sometimes during this process its good to jump over to your CPU manufacture page, or a spec's page and find your core/ thread count. 
@@ -260,7 +260,7 @@ Below is a config for 100% CPU useage. ( All cores being used of a 4 core ) - ( 
 	{ "low_power_mode" : false, "no_prefetch" : true, "affine_to_cpu" : 3 },
 ],
 
-**** For CPU's with Threading, or using threads. You add another line like you would for a CPU core, the affine_to_cpu # is set a certain way for that style CPU, please see the config notes on that ( odd/even etc ) ****
+For CPU's with Threading, or using threads. You add another line like you would for a CPU core, the affine_to_cpu # is set a certain way for that style CPU, please see the config notes on that ( odd/even etc ) ****
 
 Below is a config for 100% CPU useage. Next we will change the "Low_power_mode". 
 My impression of this setting is that it passes the data through the cpu twice, three, four, five time ( depending on setting ). increasing speed.
@@ -274,7 +274,7 @@ FOR TURTLE (CN/Pico). "true" or "2" seems to be the sweet spot( for most CPU's w
 	{ "low_power_mode" : 2, "no_prefetch" : true, "affine_to_cpu" : 3 },
 ],
 
-** TIP, Change only a few cores to low_power_mode : 2 ( or true ). Run the miner and see the performance ( Press H to see hashrate, while in miner window ) difference from the cores you did NOT change. Just to verify you are seeing an increase in performance ( OR NOT ) *****
+TIP, Change only a few cores to low_power_mode : 2 ( or true ). Run the miner and see the performance ( Press H to see hashrate, while in miner window ) difference from the cores you did NOT change. Just to verify you are seeing an increase in performance ( OR NOT )
 
 [
 	{ "low_power_mode" : false, "no_prefetch" : true, "affine_to_cpu" : 0 },
@@ -283,7 +283,7 @@ FOR TURTLE (CN/Pico). "true" or "2" seems to be the sweet spot( for most CPU's w
 	{ "low_power_mode" : 2, "no_prefetch" : true, "affine_to_cpu" : 3 },
 ],
 
-**** Large Page support ****
+## Large Page support ##
 
 Occasionally ( actually more than likely ) you will see an error when you start XmrStak that says something about " MEMORY ALLOC FAILURE : "
 
@@ -293,11 +293,11 @@ Each operating system has a different way of setting it. so check your system an
 
 This setting is NOT necessary, but can prove to be better performing. So do try and enable it
 
-**** OS tweaks and tips ****
+## OS tweaks and tips ##
 
 Linux has been known to perform slightly better than the other OS versions of xmrstak
 
-**** GPU Tips and Tweaks for XmrStak ****
+## GPU Tips and Tweaks for XmrStak ##
 
 XmrStak is an "All in one" miner, meaning it will run ALL ( "mineable" ) hardware on your machine under ONE miner ( GPU, CPU )
 When you first run XmrStak without modifying anything, the miner will set base "settings" in all these "config" files. It will also mine with all hardware available. 
@@ -320,7 +320,7 @@ When looking at the config files for the GPU(s) you will see a few things that a
 
 "worksize" - is the number of threads working together to increase the miner performance. In the most cases a worksize of 16 or 8 is optimal.
 
-**** There are more settings for GPU's that you can get into, we wont get into all that here. Always read up on the miner Github page any features and options you can choose, to try and squeeze any extra hash. WARNING: this is time consuming and can become neverending. Most settings are set close to SAFE and STABLE when the miner first runs. SO if you decide to change anything, make a copy of your original as a backup. 
+There are more settings for GPU's that you can get into, we wont get into all that here. Always read up on the miner Github page any features and options you can choose, to try and squeeze any extra hash. WARNING: this is time consuming and can become neverending. Most settings are set close to SAFE and STABLE when the miner first runs. SO if you decide to change anything, make a copy of your original as a backup. 
 
 
 Here is an exmaple of what an AMD.txt config file might look like for 1 gpu ( 1 thread performance )
@@ -334,7 +334,7 @@ Here is an exmaple of what an AMD.txt config file might look like for 1 gpu ( 1 
 ],
 
 Here is an example of what an AMD.txt config file might look like for 1 gpu ( 2 threads performance )
-** AMD has seen improvement with 2 threads per gpu. Note the "index" :0 is the same per entry.
+AMD has seen improvement with 2 threads per gpu. Note the "index" :0 is the same per entry.
 
 "GPU_threads_conf" :
 [
@@ -370,7 +370,7 @@ If you had multiple GPU (2), 2 threads, it would look like this ( again Note the
     },
 ],
 
-** GPU tweaking ( Over Clocking and Bios mods ) can get very involved, and complicated for someone not familiar with the process.
+## GPU tweaking ## ( Over Clocking and Bios mods ) can get very involved, and complicated for someone not familiar with the process.
 
 Most of the time a GPU will hash straight out of the box, but it wont be "the optimal" or the "best" performance. it will be the Stable, and "always works" setup.
 
@@ -379,7 +379,7 @@ This works for some, and for others not so much. There are a few issues that com
 Over Clocking - can lead to stability issues, and lose in performance. it can also lead to BETTER performance
 Undervolting - can lead to stability issues, and lose in performance. it can also lead to COOLER temps and LOWER power use
 
-**** ONLY RECOMMENDED FOR ADVANCED USERS ****
+### ONLY RECOMMENDED FOR ADVANCED USERS ###
 
 BIOS mod - can lead to bad hashresults, black screens, and bricked cards. It can also lead to BETTER performance ( ontop of above )
 There are repositorys on the web of BIOS's both stock and modified for a lot of algo's. If one is not avaialable for Turtle/CNpico you can use others that are similar, but its trial and error at that point. which can lead to problems. A Ethereum bios, from ANORAK works. BUT like stated above, things can go wrong.
@@ -396,7 +396,7 @@ core clk=1150 mem clk=2150 core Mv 950. or in MSI afterburner -160 power.
 
 These settings on this example GPU yield 62c and ~30% fan speeds on the GPU @8.2khs
 
-**** NOTES *****
+## NOTES ##
 
 The miner will need to run for a few minutes to get stable and consistent. Your Hashrate could fluctuate during that time, you could see some cores/GPU(s) NOT hashing at all. Give it a few minutes for the miner to stabilize before changing or reverting config settings.
 
