@@ -223,11 +223,13 @@ First, let's set our cores/threads. This is the beginning of your CPU setup, eve
 - Decide how much of your CPU you want to mine with (25%, 50%, 100%, etc.)
 
 	Sometimes during this process it's a good idea to check how much cores and threads your CPU has.  
-	For example, the Ryzen 3 2200G has 4 cores and 4 threads.
+	For example, the [i5-4690k](https://ark.intel.com/content/www/us/en/ark/products/80811/intel-core-i5-4690k-processor-6m-cache-up-to-3-90-ghz.html) has 4 cores and 4 threads.
 
 If you want to mine with 50% of your CPU, for example, then your config would look like so:
 
-No tweaks on this so far, this is just the config the miner creates as a good starting point.
+No tweaks so far, this is just the config the miner creates as a good starting point.
+
+Example hashrate: ~1.8KH/s
 
 ```json
 "cpu_threads_conf" :
@@ -239,6 +241,8 @@ No tweaks on this so far, this is just the config the miner creates as a good st
 
 If you wanted 75% usage, you'd use the following. Note it's just 1 more core since the CPU in our example has 4 cores.
 
+Example hashrate: 2.2 KH/s
+
 ```json
 "cpu_threads_conf" :
 [
@@ -249,6 +253,8 @@ If you wanted 75% usage, you'd use the following. Note it's just 1 more core sin
 ```
 
 And a config for 100% usage; all 4 cores:
+
+Example hashrate: 3 KH/s
 
 ```json
 "cpu_threads_conf" :
@@ -266,6 +272,8 @@ Next, we'll tweak the `"low_power_mode"` option.
 My impression of this setting is that it passes the data through the CPU twice, three, four, or five times - depending on the setting - increasing speed.  
 For CN/Pico or cryptonight-turtle, `"true"` or `2` seems to be the sweet spot (for CPU's with enough cache). No increase has been seen for higher values.  
 (Note: `"true"` and `2` are, in this case, the same value )
+
+Example hashrate: ~5.2 KH/s; about 1.1 KH/s per core
 
 ```json
 [
@@ -293,11 +301,11 @@ For example, a modified config after the above step may look like this:
 
 ### Large Page support
 
-More than likely, when you open XMR-Stak, you will see an error that mentions `MEMORY ALLOC FIGURE`.
+More than likely, when you open XMR-Stak, you will see an error that mentions `MEMORY ALLOC FAILURE`.
 
 This is normal, and most of the time you can get rid of it.
 For example, in Windows, see [this guide](https://docs.microsoft.com/en-us/windows/win32/memory/large-page-support).  
-Each operating system has a different way of setting it, so look up `Large pages support <your os>` and follow any guides you find.
+Each operating system has a different way of setting it, so look up `Large page support <your os>` and follow any guides you find.
 
 This setting often results in better performance, so do try and enable it.
 
