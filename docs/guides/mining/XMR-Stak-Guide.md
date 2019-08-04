@@ -168,27 +168,22 @@ You will probably have to open the port you are running the interface on in your
 
 * If they are all given the same weight, it will connect to them in order of how they are listed, form top to bottom, in the configuration file.
 
-## Tweaks and tricks for Xmrstak and Turtle ( CN/Pico currently ) - 2.10.4+ 
-(https://github.com/fireice-uk/xmr-stak/blob/master/doc/tuning.md)
+---
 
-Here will be information on Tips and Tricks to mine Turtle algo CN/Pico
-- CPU tweaks and tips ( Core/ Thread count, Low_power_mode )
-- GPU tweaks and tips ( Dual Threading, Work Size, Threads etc ) - in process
-- OS tweaks and tips ( Large pages, which OS is better? )
+## Tuning XMR-Stak 
 
-So there is some explination of what each setting will do at the top of the cpu.txtw, (low_power_mode, no_prefetch, affine_to_cpu), but its pretty vague and confusing to most. I will discuss options that have been seen to be beneficial/ a performance increase. Each tweak/ tip can affect each system differently. As with everything, hardware differences and settings on your machine will influence the outcome. So play with the settings, but understand this is NOT an automatic or "Sure thing" on all systems.
+*Note*: The following applies for **Version 2.10.4+** and for the **CN/Pico** or **cryptonight-turtle** algorithm.
 
-like stated above, once you run XmrStak for the first time you will get 3 files created for you and placed in your XmrStak folder. 
+Information taken from [here](https://github.com/fireice-uk/xmr-stak/blob/master/doc/tuning.md)
 
-Your configuration for pools(algorithm to mine, address, port etc) will be saved in `pools.txt`. ( no tweaks to be had in here ) 
-The configuration of the device it mines(CPU/AMD/NVIDIA) will be saved in `cpu.txt`, `amd.txt` or `nvidia.txt`, respectively.
+### CPU tweaks
 
-### CPU.txt
+There is some explanation of what each setting does at the top of the `cpu.txt` file, (`low_power_mode`, `no_prefetch`, `affine_to_cpu`), but it's pretty vague and confusing to most.  
+Here some options will be discussed then have been seen to be benefitial/have a performance increase. However, results vary per system and this may not be work for every system perfectly.
 
-So lets talk about CPU.txt
+The `cpu.txt` file is where you will set your cores, threads, and a few other settings. When you open the file you will see something like this
 
-This is where you will set your Core, Threads, and a few other tweaks. When you open the file you will see something like this
-````
+```json
 /*
  * Thread configuration for each thread. Make sure it matches the number above.
  * low_power_mode - This can either be a boolean (true or false), or a number between 1 to 5. When set to true,
@@ -221,110 +216,111 @@ This is where you will set your Core, Threads, and a few other tweaks. When you 
 	{ "low_power_mode" : false, "no_prefetch" : true, "affine_to_cpu" : false },
 	{ "low_power_mode" : false, "no_prefetch" : true, "affine_to_cpu" : false },
 ],
-````
-First lets set our cores/ threads. This is the beginning of your CPU setup, everything else will improve on that as the base.
-Think about how much of your CPU you want to mine with,(i.e 50%, 75%, 100%). 
+```
 
-Sometimes during this process its good to jump over to your CPU manufacture page, or a spec's page and find your core/ thread count. 
+First, let's set our cores/threads. This is the beginning of your CPU setup, everything else will improve on that as the base.  
 
-( example CPU, i5-4690k 4 core NO threading/ threads )
+- Decide how much of your CPU you want to mine with (25%, 50%, 100%, etc.)
 
-So you want 50% of your CPU to be used? 
-1. you want to still use your computer for light work/ browsing
-2. you dont have good cooling to run 100%
+	Sometimes during this process it's a good idea to check how much cores and threads your CPU has.  
+	For example, the Ryzen 3 2200G has 4 cores and 4 threads.
 
-Below is what your config will look like. Two cores are being used. - ( example hash rate - ~1.8khs )
+If you want to mine with 50% of your CPU, for example, then your config would look like so:
 
-No tweaks on this so far, this is basically the config the miner creates as a "good to start" config. 
-````
+No tweaks on this so far, this is just the config the miner creates as a good starting point.
+
+```json
 "cpu_threads_conf" :
 [
 	{ "low_power_mode" : false, "no_prefetch" : true, "affine_to_cpu" : 0 },
 	{ "low_power_mode" : false, "no_prefetch" : true, "affine_to_cpu" : 1 },
 ],
-````
-Below is a config for 75% CPU useage. (just one more core being used since its a 4 core) - ( example hash rate - ~2.2khs )
-````
+```
+
+If you wanted 75% usage, you'd use the following. Note it's just 1 more core since the CPU in our example has 4 cores.
+
+```json
+"cpu_threads_conf" :
 [
 	{ "low_power_mode" : false, "no_prefetch" : true, "affine_to_cpu" : 0 },
 	{ "low_power_mode" : false, "no_prefetch" : true, "affine_to_cpu" : 1 },
 	{ "low_power_mode" : false, "no_prefetch" : true, "affine_to_cpu" : 2 },
 ],
-````
-Below is a config for 100% CPU useage. ( All cores being used of a 4 core ) - ( example hash rate - ~3khs )
-````
+```
+
+And a config for 100% usage; all 4 cores:
+
+```json
+"cpu_threads_conf" :
 [
 	{ "low_power_mode" : false, "no_prefetch" : true, "affine_to_cpu" : 0 },
 	{ "low_power_mode" : false, "no_prefetch" : true, "affine_to_cpu" : 1 },
 	{ "low_power_mode" : false, "no_prefetch" : true, "affine_to_cpu" : 2 },
 	{ "low_power_mode" : false, "no_prefetch" : true, "affine_to_cpu" : 3 },
 ],
-````
-For CPU's with Threading, or using threads. You add another line like you would for a CPU core, the affine_to_cpu # is set a certain way for that style CPU, please see the config notes on that ( odd/even etc )
+```
 
-Below is a config for 100% CPU useage. Next we will change the "Low_power_mode". 
-My impression of this setting is that it passes the data through the cpu twice, three, four, five time ( depending on setting ). increasing speed.
-FOR TURTLE (CN/Pico). "true" or "2" seems to be the sweet spot( for most CPU's with enough cache ). No increase has been seen using "3", "4" or "5"
-( NOTE: true, essentially = 2. They would be the same setting ) ( example hash rate - ~5.2khs, ~1.1kh per core )
-````
+For CPU's with hyperthreading(ex: 4 cores and 8 threads), you would add another line as you did before. However, take care with the `"affine_to_cpu"` part. Check out the notes at the top of the `cpu.txt` file for information on adjusting that.
+
+Next, we'll tweak the `"low_power_mode"` option.   
+My impression of this setting is that it passes the data through the CPU twice, three, four, or five times - depending on the setting - increasing speed.  
+For CN/Pico or cryptonight-turtle, `"true"` or `2` seems to be the sweet spot (for CPU's with enough cache). No increase has been seen for higher values.  
+(Note: `"true"` and `2` are, in this case, the same value )
+
+```json
 [
 	{ "low_power_mode" : 2, "no_prefetch" : true, "affine_to_cpu" : 0 },
 	{ "low_power_mode" : 2, "no_prefetch" : true, "affine_to_cpu" : 1 },
 	{ "low_power_mode" : 2, "no_prefetch" : true, "affine_to_cpu" : 2 },
 	{ "low_power_mode" : 2, "no_prefetch" : true, "affine_to_cpu" : 3 },
 ],
-````
-TIP, Change only a few cores to low_power_mode : 2 ( or true ). Run the miner and see the performance ( Press H to see hashrate, while in miner window ) difference from the cores you did NOT change. Just to verify you are seeing an increase in performance ( OR NOT )
-````
+```
+
+*Tip*: Change the `low_power_mode` option for only a few cores. Run the miner and see the performance ( Press `h` on your keyboard to see hashrate, while in miner window ) difference from the cores you did NOT change. Just to verify you're seeing an increase in performance - or not.
+
+For example, a modified config after the above step may look like this:
+
+```json
 [
 	{ "low_power_mode" : false, "no_prefetch" : true, "affine_to_cpu" : 0 },
 	{ "low_power_mode" : false, "no_prefetch" : true, "affine_to_cpu" : 1 },
 	{ "low_power_mode" : 2, "no_prefetch" : true, "affine_to_cpu" : 2 },
 	{ "low_power_mode" : 2, "no_prefetch" : true, "affine_to_cpu" : 3 },
 ],
-````
+```
+
+---
+
 ### Large Page support
 
-Occasionally ( actually more than likely ) you will see an error when you start XmrStak that says something about " MEMORY ALLOC FAILURE : "
+More than likely, when you open XMR-Stak, you will see an error that mentions `MEMORY ALLOC FIGURE`.
 
-This is normal, and most of the time you can do one thing and get it to go away. 
-(https://docs.microsoft.com/en-us/windows/win32/memory/large-page-support ) windows 10, example. 
-Each operating system has a different way of setting it. so check your system and search "Large page support XXXXX" and you should find how to do it.
+This is normal, and most of the time you can get rid of it.
+For example, in Windows, see [this guide](https://docs.microsoft.com/en-us/windows/win32/memory/large-page-support).  
+Each operating system has a different way of setting it, so look up `Large pages support <your os>` and follow any guides you find.
 
-This setting is NOT necessary, but can prove to be better performing. So do try and enable it
+This setting often results in better performance, so do try and enable it.
 
-### OS tweaks and tips
+---
 
-Linux has been known to perform slightly better than the other OS versions of xmrstak
+### OS tweaks
 
-### GPU Tips and Tweaks for XmrStak
+If possible, use Linux ([Ubuntu](https://ubuntu.com/) is a beginner-friendly option). Higher performance has been seen on that OS compared to other operating systems.
 
-XmrStak is an "All in one" miner, meaning it will run ALL ( "mineable" ) hardware on your machine under ONE miner ( GPU, CPU )
-When you first run XmrStak without modifying anything, the miner will set base "settings" in all these "config" files. It will also mine with all hardware available. 
+---
 
-Unless you specify it NOT too. Each config file ( CPU.txt, AMD.txt, Nvidia.txt ) can be set to NOT mine with that hardware. 
-examples are below, of HOW to EXCLUDE hardware. So If you want to mine with CPU ONLY, "NULL" the AMD.txt or Nvidia.txt "gpu_threads_conf" section. If you want to mine your GPU(s) only, "NULL" the CPU.txt "cpu_threads_conf" section.
-````
-"cpu_threads_conf" :
-[
-NULL
-],
-````
-( if you want to mine with CPU only, you would "NULL" the "gpu_thread_conf" section of of the AMD.txt or Nvidia.txt config )
+### GPU tweaks
 
-When looking at the config files for the GPU(s) you will see a few things that are important.
+When looking at the config file(s) for the GPU(s) you will see a few things that are important.
 
-"index" - this is the GPU's address that the miner saw ( starts at 0 and increments up )
+`"index"` - this is the GPU's address that the miner saw ( starts at 0 and increments up )
 
-"intensity" - means the number of threads used to mine. The maximum intensity is GPU_MEMORY_MB / 2 - 128, however for cards with 4GB and more, the optimum is likely to be lower than that. 
+`"intensity"` - the number of threads used to mine. The maximum intensity is `<your GPU's memory in MB> / 2 - 128`, however for cards with 4GB and more, the optimum is likely to be lower than that. 
 
-"worksize" - is the number of threads working together to increase the miner performance. In the most cases a worksize of 16 or 8 is optimal.
+`"worksize"` - is the number of threads working together to increase the miner performance. In the most cases a worksize of `16` or `8` is optimal.
 
-There are more settings for GPU's that you can get into, we wont get into all that here. Always read up on the miner Github page any features and options you can choose, to try and squeeze any extra hash. WARNING: this is time consuming and can become neverending. Most settings are set close to SAFE and STABLE when the miner first runs. SO if you decide to change anything, make a copy of your original as a backup. 
-
-
-Here is an exmaple of what an AMD.txt config file might look like for 1 gpu ( 1 thread performance )
-````
+Here is an example of what an `amd.txt` config file might look like for 1 GPU, on 1 thread.
+```json
 "GPU_threads_conf" :
 [
     { "index" : 0, "intensity" : 1000, "worksize" : 8, "affine_to_cpu" : false,
@@ -332,10 +328,12 @@ Here is an exmaple of what an AMD.txt config file might look like for 1 gpu ( 1 
       "interleave" : 40
     },
 ],
-````
-Here is an example of what an AMD.txt config file might look like for 1 gpu ( 2 threads performance )
-AMD has seen improvement with 2 threads per gpu. Note the "index" :0 is the same per entry.
-````
+```
+Here is what an `amd.txt` file might look like for 1 GPU on 2 threads.
+
+AMD has seen improvement with 2 threads per gpu. Note the `"index"` value is the same per entry - since it's the same GPU.
+
+```json
 "GPU_threads_conf" :
 [
     { "index" : 0, "intensity" : 1000, "worksize" : 8, "affine_to_cpu" : false,
@@ -347,9 +345,12 @@ AMD has seen improvement with 2 threads per gpu. Note the "index" :0 is the same
       "interleave" : 40
     },
 ],
-````
-If you had multiple GPU (2), 2 threads, it would look like this ( again Note the "index" :0 and "index" :1 )
-````
+```
+
+If you have multiple GPUs. In this example, we have 2 GPUs on 2 threads each.  
+Note the `"index"` value for each in this example: `0` and `1` due to there being 2 different GPUs. 
+
+```json
 "GPU_threads_conf" :
 [
     { "index" : 0, "intensity" : 1000, "worksize" : 8, "affine_to_cpu" : false,
@@ -369,36 +370,57 @@ If you had multiple GPU (2), 2 threads, it would look like this ( again Note the
       "interleave" : 40
     },
 ],
-````
-### GPU tweaking ( Over Clocking and Bios mods ) can get very involved, and complicated for someone not familiar with the process.
+```
 
-Most of the time a GPU will hash straight out of the box, but it wont be "the optimal" or the "best" performance. it will be the Stable, and "always works" setup.
 
-This works for some, and for others not so much. There are a few issues that come up with changing Overclocks and Bios changes.
 
-Over Clocking - can lead to stability issues, and lose in performance. it can also lead to BETTER performance
-Undervolting - can lead to stability issues, and lose in performance. it can also lead to COOLER temps and LOWER power use
+#### Overclocking and Undervolting
 
-### ONLY RECOMMENDED FOR ADVANCED USERS
+**Note**: This can very involved, and very complicated for someone not familar with the process.
 
-BIOS mod - can lead to bad hashresults, black screens, and bricked cards. It can also lead to BETTER performance ( ontop of above )
-There are repositorys on the web of BIOS's both stock and modified for a lot of algo's. If one is not avaialable for Turtle/CNpico you can use others that are similar, but its trial and error at that point. which can lead to problems. A Ethereum bios, from ANORAK works. BUT like stated above, things can go wrong.
+Most of the time a GPU will hash straight out of the box, but it wont be "the optimal" or the "best" performance. It will be the stable, "always works" setup.
 
-An example of this an AMD 580 8gb GPU
+- Overclocking:
+  - It can lead to better performance
+  - But, it may lead to stability issues
+  - It may even result in a loss in performance
 
-stock BIOS - it hashes about 3.5-5khs
-MODDED BIOS ( ETH bios ) - can acheive up to 9khs
+- Undervolting:
+  - It can lead to cooler temperatures and lower power use
+  - But, it may also lead to stability issues
+  - It can also result in a loss in performance
 
-Most of the time you need to set your Over Clock profile also to achieve these. for this example the "OC profile" would be set in MSI afterburner ( or AMD wattman whatever you choose ). 
+#### BIOS modding
 
-core clk=1150 mem clk=2150 core Mv 950. or in MSI afterburner -160 power. 
-( the "negative" power is the "undervolting" this will drop tempuratures of the GPU and fan speeds and OVERALL power consumption of the card )
+**NB:** This is only recommended for **ADVANCED USERS** and **NOT** for the *average user*
 
-These settings on this example GPU yield 62c and ~30% fan speeds on the GPU @8.2khs
+BIOS modding can lead to bad hashrates, black screens, and bricked cards.  
+But it can also lead to better performance. 
 
-### NOTES
+There are repositories available on the internet for BIOS's for lots of algorithms. If one is not available for a particular one, then you can use others that are similar, but it's trial and error at that point; a dangerous game.  
 
-The miner will need to run for a few minutes to get stable and consistent. Your Hashrate could fluctuate during that time, you could see some cores/GPU(s) NOT hashing at all. Give it a few minutes for the miner to stabilize before changing or reverting config settings.
+For example, an Ethereum BIOS from ANORAK works for CN-Pico or cryptonight-turtle. However, as warned above, things can go wrong.
 
-Edit config.txt and set verbose_level to 4 and h_print_time to 30 and start the miner. You will see hash report each 30 seconds. just like if you hit "h" on your keyboard, every 30 sec.
 
+Take an AMD RX 580 8G GPU for example.
+
+With a stock BIOS, it hashes about 3.5-5 KH/s.  
+With a modded BIOS (ETH bios), it can achieve up to  9 KH/s
+
+Most of the time, you need to set your Overclock profile appropriately to achieve these. These would be set in programs like MSI Afterburner (available for any GPU, not just MSI cards), or AMD Wattman
+
+An example configuration:
+
+- Core clock: 1150  
+- Memory clock: 2150  
+--
+- Core Mv: 950
+- Or, in MSI Afterburner: -160 power
+
+The negative power is the undervolting; this will drop temperatues, fan speeds, and overall power consumption of the card.
+
+These settings on the example GPU yield 62c and ~30% fan speeds at 8.2 KH/s
+
+### Notes
+
+The miner will need to run for a few minutes to get stable and consistent. Your hashrate could fluctuate during that time, and you could see some cores/GPUs not hasing at all. Give the miner a few minutes to stabilize before changing or reverting config settings.
