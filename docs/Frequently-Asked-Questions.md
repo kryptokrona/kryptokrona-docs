@@ -68,7 +68,9 @@ You can also type `status` in the daemon and press enter to see the current heig
 ##### Q: I think I should have more money in my balance than it is showing, what should I do?
 
 Re-sync your daemon from scratch(see [here](#q-how-can-i-re-sync-the-blockchain)), sync [using checkpoints](guides/wallets/Using-Checkpoints) or use a [remote node](guides/wallets/Using-Remote-Nodes)) if you're using the GUI wallet.
-If it still doesn't work, then [update](http://latest.t#### Q: Why are my results being rejected from the pool?
+If it still doesn't work, then [update](http://latest.turtlecoin.lol)
+
+#### Q: Why are my results being rejected from the pool?
 
  A: You're using a incorrect algorithm. If you are using XMR-Stak, you should use `turtlecoin` as the algorithm, if you are using XMRig use `cryptonight-turtle` as the algorithm and have the variant set to 1.
 
@@ -328,8 +330,7 @@ There are a few factors to consider when choosing a pool.
 
 #### Q: I can't get the miner working, is there an easier way to mine?
 
-
-You can try the web miner [here](http://turtleminers.club/pages/webmine/). You will get a lower hashrate than native mining, and it doesn't have GPU support, however it's very easy to setup.
+You can try the web miner [here](https://webturtle.de.cool/). You will get a lower hashrate than native mining, and it doesn't have GPU support, however it's very easy to setup.
 
 Alternatively, you can hop onto the [Discord][discord_link] if you're having issues and we'll help you out.
 
@@ -415,7 +416,7 @@ Some users have experienced issues with their firewall or antivirus as well howe
 
 This is possible, however please note that these developers are independent from the TurtleCoin project and are doing some great work, so we would suggest leaving it as is.
 
-If you do wish to change/remove the dev fee, you will have to compile XMR-Stak yourself, they have instructions to do this on their [GitHub](https://github.com/fireice-uk/xmr-stak/blob/master/doc/compile.md)
+If you do wish to change/remove the dev fee, you will have to compile XMR-Stak yourself, they have instructions to do this on their [GitHub](https://github.com/fireice-uk/xmr-stak/blob/master/doc/compile/compile.md)
 
 Once you have downloaded the code, you need to change the file `donate-level.hpp` in the `XMR-Stak/XMR-Stak/` folder.
 
@@ -493,7 +494,6 @@ There are multiple ways to acquire TRTL, for example:
 * Bounties - Bounties for developing TRTL software, spreading the word of TRTL, and many other things are often posted in the #bounties channel on [Discord][discord_link]. Check the pinned messages for current bounties.
 * Tips - Turtles with often tip each other, especially if you make spicy memes in the `#memes` channel
 * Faucet - Head over to the faucets-
-  * [madk's faucet](https://faucet.trtl.me/) - 10 TRTL, thrice a day
   * [polar-it's faucet](https://turtlecoin-faucet.xhub.cloud/) - 20 TRTL, every 120 minutes
   * [fipsi's faucet](https://trtlfaucet.de.cool/) - 100 TRTL, after every 500 turtles use it
 
@@ -502,8 +502,7 @@ There are multiple ways to acquire TRTL, for example:
 
 #### Q: Is there a web wallet?
 
-
-Yes, we have a few. You can learn more about them in [this guide](guides/wallets/Using-a-Web-Wallet).
+Yes, we have a few. You can learn more about them in [the wallet intro](guides/wallets/Making-a-Wallet#shellnet-web-wallet).
 
 
 #### Q: Are there any light wallets / mobile wallets?
@@ -517,7 +516,7 @@ None are ready for usage right now, but they are being worked on. Check the deve
 
 #### Q: How do I register my wallet on Discord?
 
-  A: You can check out this guide [here](Using-trtlbot-plus-plus#registering-your-wallet).
+  A: You can check out this guide [here](guides/Using-trtlbot-plus-plus#registering-your-wallet).
 
 #### Q: Where is the blockchain stored?
 
