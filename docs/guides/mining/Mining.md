@@ -26,8 +26,6 @@ XMR-Stak is a unified miner, which means the same program will be used to mine w
 
 Please follow [this guide](XMR-Stak-Guide) to start mining TurtleCoin with XMR-Stak.
 
-If you're on Linux, check [this guide](XMR-Stak-Linux-Guide).
-
 ### [XMRig](https://github.com/xmrig/xmrig)
 
 XMRig is a little bit different to XMR-Stak, you need to download a CPU and GPU miner separately and run two separate instances in your computer. One will use your CPU and the other one will use your GPU.
