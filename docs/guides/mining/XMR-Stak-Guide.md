@@ -31,7 +31,7 @@ Then, check how to [configure it](#xmr-stak-setup-and-configuration)
 
 ### Compiling
 
-If you'd like to compile XMR-Stak, see [the offical guide](https://github.com/fireice-uk/xmr-stak/blob/master/doc/compile_Linux.md) for instructions.
+If you'd like to compile XMR-Stak, see [the official guide](https://github.com/fireice-uk/xmr-stak/blob/master/doc/compile/compile_Linux.md) for instructions.
 
 Then, check how to [configure it](#xmr-stak-setup-and-configuration)
 
