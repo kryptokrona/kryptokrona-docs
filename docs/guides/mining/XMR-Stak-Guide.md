@@ -179,7 +179,7 @@ Information taken from [here](https://github.com/fireice-uk/xmr-stak/blob/master
 ### CPU tweaks
 
 There is some explanation of what each setting does at the top of the `cpu.txt` file, (`low_power_mode`, `no_prefetch`, `affine_to_cpu`), but it's pretty vague and confusing to most.  
-Here some options will be discussed then have been seen to be benefitial/have a performance increase. However, results vary per system and this may not be work for every system perfectly.
+We'll discuss some options that  have been shown to be beneficial / have a performance increase in most cases. However, results vary per system and these settings may not be beneficial in every case, so do your own experimentation.
 
 The `cpu.txt` file is where you will set your cores, threads, and a few other settings. When you open the file you will see something like this
 
@@ -268,9 +268,8 @@ Example hashrate: 3 KH/s
 
 For CPU's with hyperthreading(ex: 4 cores and 8 threads), you would add another line as you did before. However, take care with the `"affine_to_cpu"` part. Check out the notes at the top of the `cpu.txt` file for information on adjusting that.
 
-Next, we'll tweak the `"low_power_mode"` option.   
-My impression of this setting is that it passes the data through the CPU twice, three, four, or five times - depending on the setting - increasing speed.  
-For CN/Pico or cryptonight-turtle, `"true"` or `2` seems to be the sweet spot (for CPU's with enough cache). No increase has been seen for higher values.  
+Next, we'll tweak the `"low_power_mode"` option.     
+For CN/Pico or cryptonight-turtle, `"true"` or `2` seems to be the sweet spot (for CPU's with enough cache). No increase has been seen for higher values ( 5 is max ).  
 (Note: `"true"` and `2` are, in this case, the same value )
 
 Example hashrate: ~5.2 KH/s; about 1.1 KH/s per core
@@ -428,6 +427,79 @@ An example configuration:
 The negative power is the undervolting; this will drop temperatues, fan speeds, and overall power consumption of the card.
 
 These settings on the example GPU yield 62c and ~30% fan speeds at 8.2 KH/s
+
+#### Amd Memory Tweaker 
+
+*Note*: This guide explains the GUI Windows version, Non-XL version  
+[This program](https://github.com/Eliovp/amdmemorytweak/releases/tag/0.2.3)
+
+BIOS mods can be scary; they can permanently brick a card and can be confusing and compicated for the non-initiated. But the benefits can be enticing. Either way, let's talk about an alternative option.
+
+AmdMemoryTweaker is similar to "The Ethlargement Pill" Nvidia GPU's use for Ethereum mining. It adjusts memory timing straps on the fly, meaning we can adjust the parts of a BIOS that help us acheive higher speeds without having to flash the BIOS.  
+
+This leads to a few things:
+
+- Easier reverting to stock settings (most of the time, when you close the miner/GPU the settings revert to default)
+- Easier tuning as you can watch the speed change as you change settings
+- More control over the changes, rather than just "loading" a BIOS ROM from the internet
+- Import/Export feature for settings quick loading
+
+Memory strap timings are different depending on the style of memory onboard your GPU (Samsung, Micron, Hynix, Elpida). Each type of memory reacts to changes differently. Thus, settings from a Hynix memory module may not work on a Samsung memory module (most likely it will NOT)
+
+You can use [GPU-Z](https://www.techpowerup.com/gpuz/) to see the memory style on your GPU
+
+As an example, a stock BIOS RX 580 8GB GPU with Samsung memory (MSI OC Armor) can go from 6.2 KH/s to 8.1 KH/s, with just some minor tweaks and little to no change in power consumption and temps of the GPU. 
+
+When you open the Amd Memory Tweaker program it will load up the idle state of the GPU, now start the miner. After it's been running for a few seconds, and reached up full usage/speed, you can now "refresh" the readings. (Click the refresh icon in the bottom right)
+
+This will give you the ACTIVE timings for the frequency it is at, at that time. This is where you will mine, so this is where you will change your settings.
+
+There are a lot of fields to look at, all with labels that make little sense straight away. Don't worry; if you hover your cursor over a field or title it will give a small explination of what it is.
+
+For this guide we will be ignoring most options, and only adjust a few to show how to start tuning your GPU.  
+There are a lot of settings to change, and there is an "XL" version of this program that gives even MORE options. We cannot go over all of them here, and there are only a few that have been beneficial and easily adjusted.
+
+When tweaking values, then always make SMALL CHANGES. Then apply, check speeds, check stability, and then continue tweaking further if needed.
+
+(redTeamMiner v0.5.6 was used for tuning purposes/results, but results should be the same on XMR-Stak, or XMRig-AMD)
+
+Stock, unmodified values at full speed:  
+- 6.2 KH/s at 61c and ~80 watts
+- tRFC setting - 219
+- REF setting - 5 (this functions similar to rxboost in Claymore's miner, this is "Refresh rate")
+- tRC setting - 87
+- "timing level" - 0 (default)
+
+
+So, lets see what we can do with that.
+
+Change the "timing level" to 1, then apply. This will change the readings in the Amd Memory Tweaker, so check them again.
+
+"timing level" set to 1:
+- 7.4 KH/s at 62c and ~80 watts
+- tRFC setting - 187
+- REF setting - 5
+- tRC setting - 77
+
+
+Lets get a bit more, by tweaking a few settings.( drop in incrememnts of 10, apply and check for stability )
+
+- tRFC setting - 170
+- REF setting - 60
+- tRC setting - 67
+
+These setting pushed my GPU to 8.1 KH/s(!) at 61c and ~80 watts
+
+Once you get a setting that works and is stable, you can export it, save it, and reload it everytime you want to mine cryptonight-turtle/cn-pico.
+
+
+Crash warnings - 
+
+- a tRFC setting below 130 would make the example gpu fail, stop hashing, and sometimes lock up the rig. (would sometimes take 5 minutes of running till it crashed)
+- a tRC setting below 67 would cause the example GPU would fail, and stop hashing.
+- REF 0-100 didn't crash anything
+
+There is a command line version of Amd Memory Tweaker that can be used to change these settings during launch of the miner. If you are comfortable with that, you can utilize it to achieve some sort of automational and simplify your mining
 
 ### Notes
 
