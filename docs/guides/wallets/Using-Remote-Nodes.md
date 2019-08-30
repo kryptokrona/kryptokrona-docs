@@ -64,6 +64,6 @@ pause
 
 ## Known remote daemons
 
-http://trtl.nodes.pub/
+https://explorer.turtlecoin.lol/nodes.html
 
 https://github.com/turtlecoin/turtlecoin-nodes-json
