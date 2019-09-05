@@ -40,7 +40,7 @@ nano config.json
 Then, it'll open the config file where you can [configure it](#configuring-ninjarig).  
 After that, you can run `./ninjarig-notls` to run the miner.
   
-Had to alter the original, hence why pulling from SoreGums' repo instead of source. The part removed doesn't work on Android. All credit for NinjaRig is to be directed to [bogdanadnan](https://github.com/bogdanadnan/ninjarig).
+Had to alter the original, hence why pulling from SoreGums' repo instead of source. The part removed doesn't work on Android. All credit for NinjaRig is to be directed to [bogdanadnan](https://github.com/turtlecoin/ninjarig).
 
 ## Configuring NinjaRig
 
