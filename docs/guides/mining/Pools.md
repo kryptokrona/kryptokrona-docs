@@ -14,7 +14,7 @@ Open up your terminal; look for "Command Prompt" or "Terminal" in your Start/App
 
 When open, enter this command: `ping <pool url>`, replacing `<pool url>` with the address of your pool.
 
-For example, if I was mining at turtle.atpool.party, then the pool url(what you put into xmr-stak or your miner) is `geo.atpool.party`. Thus, I would enter:
+For example, if I was mining at turtle.atpool.party, then the pool url (what you put into your miner) is `geo.atpool.party`. Thus, I would enter:
 ```
 ping geo.atpool.party
 ```

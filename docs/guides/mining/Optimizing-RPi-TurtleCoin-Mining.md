@@ -66,7 +66,7 @@ Populate your configuration file with something similar to the code below. Make 
 
 ```json
 {
-    "algo": "cryptonight-pico/trtl",
+    "algo": "chukwa",
     "background": false,
     "colors": true,
     "retries": 5,
