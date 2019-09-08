@@ -4,7 +4,7 @@ title: Mining with Termux
 
 ### Please note: Using your mobile to mine TurtleCoin is not effective and should only be done for the lulz. It may also cause the phone to overheat and result in premature silicon degradation, shortening the lifespan of your phone.
 
-## Downloading and Compiling NinjaRig aka TRTLRig aka XMRig
+## Downloading and Compiling NinjaRig
 
 1. Download [Termux](https://termux.com) from the [Play Store](https://play.google.com/store/apps/details?id=com.termux) 
    or from [F-droid](https://f-droid.org/repository/browse/?fdid=com.termux).
@@ -12,7 +12,7 @@ title: Mining with Termux
 3. Run `pkg upgrade -y`
 4. Run `pkg install git cmake libuv clang nano -y`
 5. Run `git clone --single-branch https://github.com/SoreGums/ninjarig`
-  - Had to alter the original, hence why pulling from SoreGums' repo instead of primary repo. The part removed doesn't work on Android. All credit for NinjaRig is to be directed to [bogdanadnan](https://github.com/turtlecoin/ninjarig). The change is to do with contacting a server to get new details about donate info. Check the [commit history](https://github.com/SoreGums/ninjarig) if you want to [know exactly](https://github.com/SoreGums/ninjarig/commit/a191cab94687629e535e0fc5d1c9a720a76a1031) what is different, else just clone and go, sheesh - SoreGums
+  - Had to alter the original, hence why pulling from SoreGums' repo instead of primary repo. The part removed doesn't work on Android. All credit for NinjaRig is to be directed to [bogdanadnan](https://github.com/turtlecoin/ninjarig). The change is to do with contacting a server to get new details about donate info. Check the [commit history](https://github.com/SoreGums/ninjarig) if you want to [know exactly](https://github.com/SoreGums/ninjarig/commit/ccb154558a1c36dffb1a4c9ed6695bcaa61dec01) what is different, else just clone and go, sheesh - SoreGums
 6. Run `cd ninjarig`
 7. Run `mkdir build && cd build`
 8.  Run `cmake .. -DWITH_HTTPD=OFF -DWITH_TLS=OFF -DWITH_OPENCL=OFF -DWITH_CUDA=OFF -DCMAKE_BUILD_TYPE=Release`
