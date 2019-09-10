@@ -20,15 +20,15 @@ There are currently a few different ways in which you can start mining TurtleCoi
 
 ## Desktop Mining
 
-### [XMR-Stak](https://github.com/fireice-uk/xmr-stak)
+### [NinjaRig](https://github.com/turtlecoin/ninjarig)
 
-XMR-Stak is a unified miner, which means the same program will be used to mine with both your CPU and your GPU. It will automatically detect your hardware and adjust the settings accordingly.
+Check this one out, since the fork at v0.18.0 _(block 18,000,000)_ bogdanadnan has been going hard pushing out updates for this all in one CPU/GPU miner.  
 
-Please follow [this guide](XMR-Stak-Guide) to start mining TurtleCoin with XMR-Stak.
+Please follow [this guide](NinjaRig-Guide) to start mining TurtleCoin with NinjaRig.
 
 ### [XMRig](https://github.com/xmrig/xmrig)
 
-XMRig is a little bit different to XMR-Stak, you need to download a CPU and GPU miner separately and run two separate instances in your computer. One will use your CPU and the other one will use your GPU.
+XMRig comes as a CPU and GPU miner separately and run two separate instances in your computer. One will use your CPU and the other one will use your GPU.
 
 Please follow [this guide](XMRIG-Guide) to start mining TurtleCoin with XMRig.
 
@@ -52,14 +52,6 @@ Termux is a mobile CLI app; if you want to use it, you will have to download and
 It is NOT a GUI app, and you will need to manually type/paste in commands
 
 If you'd like to use it, check out [this guide](Using-Termux)
-
-### iOS
-
-#### [Crypto Miner](https://itunes.apple.com/us/app/crypto-miner-for-monero-xmr/id1320235885?mt=8)
-
-Crypto Miner is an app for mining various cryptocurrencies. It is only available on iOS.
-
-If you'd like to use it, check out [the guide](Using-Crypto-Miner)
 
 ## Pools
 

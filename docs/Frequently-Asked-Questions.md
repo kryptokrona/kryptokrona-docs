@@ -70,97 +70,6 @@ You can also type `status` in the daemon and press enter to see the current heig
 Re-sync your daemon from scratch(see [here](#q-how-can-i-re-sync-the-blockchain)), sync [using checkpoints](guides/wallets/Using-Checkpoints) or use a [remote node](guides/wallets/Using-Remote-Nodes)) if you're using the GUI wallet.
 If it still doesn't work, then [update](http://latest.turtlecoin.lol)
 
-#### Q: Why are my results being rejected from the pool?
-
- A: You're using a incorrect algorithm. If you are using XMR-Stak, you should use `turtlecoin` as the algorithm, if you are using XMRig use `cryptonight-turtle` as the algorithm and have the variant set to 1.
-
-#### Q: I got banned from my mining pool. Why?
-
-A: If you submit lots of invalid shares, a pool might ban you. Possible reasons for invalid shares can be
-
-* your hardware getting overworked,
-
-* high ping to the pool,
-
-* or your difficulty being set too low.
-
-Try lowering any overclocks, choosing a pool closer to you or setting a higher difficulty port.urtlecoin.lol) your wallet!
-#### Q: Why are my results being rejected from the pool?
-
- A: You're using a incorrect algorithm. If you are using XMR-Stak, you should use `turtlecoin` as the algorithm, if you are using XMRig use `cryptonight-turtle` as the algorithm and have the variant set to 1.
-
-#### Q: I got banned from my mining pool. Why?
-
-A: If you submit lots of invalid shares, a pool might ban you. Possible reasons for invalid shares can be
-
-* your hardware getting overworked,
-
-* high ping to the pool,
-
-* or your difficulty being set too low.
-
-Try lowering any overclocks, choosing a pool closer to you or setting a higher difficulty port.
-#### Q: I've tried resetting, but it isn't working. What#### Q: Why are my results being rejected from the pool?
-
- A: You're using a incorrect algorithm. If you are using XMR-Stak, you should use `turtlecoin` as the algorithm, if you are using XMRig use `cryptonight-turtle` as the algorithm and have the variant set to 1.
-
-#### Q: I got banned from my mining pool. Why?
-
-A: If you submit lots of invalid shares, a pool might ban you. Possible reasons for invalid shares can be
-
-* your hardware getting overworked,
-
-* high ping to the pool,
-
-* or your difficulty being set too low.
-
-Try lowering any overclocks, choosing a pool closer to you or setting a higher difficulty port. should I do?
-#### Q: Why are my results being rejected from the pool?
-
- A: You're using a incorrect algorithm. If you are using XMR-Stak, you should use `turtlecoin` as the algorithm, if you are using XMRig use `cryptonight-turtle` as the algorithm and have the variant set to 1.
-
-#### Q: I got banned from my mining pool. Why?
-
-A: If you submit lots of invalid shares, a pool might ban you. Possible reasons for invalid shares can be
-
-* your hardware getting overworked,
-
-* high ping to the pool,
-
-* or your difficulty being set too low.
-
-Try lowering any overclocks, choosing a pool closer to you or setting a higher difficulty port.
-#### Q: Why are my results being rejected from the pool?
-
- A: You're using a incorrect algorithm. If you are using XMR-Stak, you should use `turtlecoin` as the algorithm, if you are using XMRig use `cryptonight-turtle` as the algorithm and have the variant set to 1.
-
-#### Q: I got banned from my mining pool. Why?
-
-A: If you submit lots of invalid shares, a pool might ban you. Possible reasons for invalid shares can be
-
-* your hardware getting overworked,
-
-* high ping to the pool,
-
-* or your difficulty being set too low.
-
-Try lowering any overclocks, choosing a pool closer to you or setting a higher difficulty port.
-* In zedwallet, type `export_keys`, and save the view a#### Q: Why are my results being rejected from the pool?
-
- A: You're using a incorrect algorithm. If you are using XMR-Stak, you should use `turtlecoin` as the algorithm, if you are using XMRig use `cryptonight-turtle` as the algorithm and have the variant set to 1.
-
-#### Q: I got banned from my mining pool. Why?
-
-A: If you submit lots of invalid shares, a pool might ban you. Possible reasons for invalid shares can be
-
-* your hardware getting overworked,
-
-* high ping to the pool,
-
-* or your difficulty being set too low.
-
-Try lowering any overclocks, choosing a pool closer to you or setting a higher difficulty port.nd spend key somewhere safe in case something goes wrong, if you haven't already.
-
 *  Then, close and reopen zedwallet and TurtleCoind.
 *  Type `reset` in zedwallet after reopening your wallet file.
 *  It should start resetting your wallet, but the progress might not be immediately obvious - wait a while, and it should start counting up the blocks and printing out your transactions as it gets to them.
@@ -270,7 +179,7 @@ To save money on fees, the pools send payouts in chunks. [Check your pool websit
 #### Q: Why are my results being rejected from the pool?
 
 
-You're using a incorrect algorithm. You should be using `cryptonight-turtle` set as the variant.
+You're using a incorrect algorithm. You should be using `chukwa`.
 
 #### Q: I got banned from my mining pool. Why?
 
@@ -297,14 +206,6 @@ Yes, in case you get banned, or a pool goes down for some time, you can keep min
 
 [Here](guides/mining/Pools) is a list. It also has other nifty stats like the pool's fee, minimum payout and server location.
 
-#### Q: What does "pool weight" mean in XMR-Stak?
-
-
-Pool weight determines what order pools are used in case another is unavailable.
-
-Higher weighted pools are used first.
-
-If all pools are the same weight, they will be used in the top to bottom order that they are listed in the `config.txt` file.
 
 #### Q: What pool should I choose?
 
@@ -336,10 +237,9 @@ Alternatively, you can hop onto the [Discord][discord_link] if you're having iss
 
 #### Q: What is the miner executable / why isn't it working?
 
-
 This is a solo miner, which is CPU only. This means to gain any TRTL, you have to find a block by yourself, which unless you have many powerful CPUs, is very unlikely.   
 
-We strongly recommend using a pool, and a miner such as XMR-Stak or XMRig.   
+We strongly recommend using a pool, and a miner such as NinjaRig.   
 
 Nevertheless, if you want to try it out, open a command prompt in the same directory, and run
 
@@ -355,96 +255,6 @@ You need to have `TurtleCoind` open and synced to use this miner, unlike convent
 
 Your pool's homepage should have one - enter your hashrate and it'll give an estimate of how much TRTL you'll mine per day.  
 If there isn't, you can check one [here](http://turtlepool.space/).
-
-### XMR-Stak Issues
-
-#### Q: How do I view my hashrate in XMR-Stak?
-
-Press `h` in the XMR-Stak window.
-
-#### Q: My PC is laggy when I'm mining in XMR-Stak. Can I fix this?
-
-
-This could be caused by multiple issues:
-
-* If you're using a NVIDIA card, open up `nvidia.txt`, in the same directory as `XMR-Stak.exe`. Try setting `bfactor` to `8` and `bsleep` to `100`, and then reload your miner after saving the file.
-
-  If it's still laggy, try increasing both values slightly. This will cause you to get less hashes per second, but can let you use your PC more effectively. You can try tweaking the value to increase your hashrate.
-
-  Some people also achieve success by lowering the thread count.
-
-* If you're using an AMD card, lower the value of `intensity` in `amd.txt`.
-
-* If you're using just a CPU, you can delete the cores being used from `cpu.txt`.
-
-
-#### Q: How can I use just my GPU or CPU to mine in XMR-Stak?
-
-
-If you're using XMR-Stak, you can start the miner with a certain command. Check [this out](guides/mining/XMR-Stak-Guide#to-start-xmr-stak-without-using-your-cpu-gpu-follow-these-steps) for more info.
-
-#### Q: XMR-Stak is crashing on startup, with an error about CUDA. What am I doing wrong?
-
-
-If you are using a NVIDIA card, try opening `nvidia.txt` in the same directory as `XMR-Stak.exe`, and lowering the value of `threads` until it stops crashing.
-
-#### Q: I get a socket error when connecting to a pool in XMR-Stak. What am I doing wrong?
-
-
-Generally, this is due to an incorrectly configured config. In the directory where `XMR-Stak.exe` is, there should be a file called `config.txt`.
-
-Open this up, and check that it looks **similar** to this:
-
-```
-{"pool_address" : "eu.turtlepool.space:3333",
-"wallet_address" : "TRTLv2Fyavy8CXG8BPEbNeCHFZ1fuDCYCZ3vW5H5LXN4K2M2MHUpTENip9bbavpHvvPwb4NDkBWrNgURAd5DB38FHXWZyoBh4wW",
-"pool_password" : "x",
-"use_nicehash" : false,
-"use_tls" : false,
-"tls_fingerprint" : "",
-"pool_weight" : 10 },
-```
-
-  Your wallet address is the address starting with `TRTL`, not your wallet filename.
-
-  This error can also occur if the pool is having issues - try another pool and see if the error continues.
-
-Some users have experienced issues with their firewall or antivirus as well however, so perhaps try disabling these if you are experiencing this issue.
-
-#### Q: Can I lower the 2% fee taken by XMR-Stak?
-
-
-This is possible, however please note that these developers are independent from the TurtleCoin project and are doing some great work, so we would suggest leaving it as is.
-
-If you do wish to change/remove the dev fee, you will have to compile XMR-Stak yourself, they have instructions to do this on their [GitHub](https://github.com/fireice-uk/xmr-stak/blob/master/doc/compile/compile.md)
-
-Once you have downloaded the code, you need to change the file `donate-level.hpp` in the `XMR-Stak/XMR-Stak/` folder.
-
-#### Q: I'm getting an error in XMR-Stak: `MEMORY ALLOC FAILED: VirtualAlloc failed. Reboot might help`
-
-
-This is nothing to worry about, and is because XMR-Stak failed to set up largepages.
-
-This can slightly raise your hash rate, and XMR-Stak attempts to set it up, but it needs a reboot to apply, so reboot your PC.
-
-
-If a reboot doesn't help, then press `Win` + `R` to open up the run box, then type `gpedit.msc` and press enter(you may require admin permissions)
-
-Navigate to the directory shown in the image, and ensure `Lock pages in memory` is turned on for your user account(`horia`, in this case, is a user account).
-
-![largepages](assets/valloc.png)
-
-
-#### Q: I'm missing the file `vcruntime140.dll`. Where can I get this?
-
-
-Try installing this: <https://www.microsoft.com/en-us/download/details.aspx?id=52685>
-
-#### Q: When I run XMR-Stak I get an error: "The application was unable to start correctly (0x000007b)"
-
-
-
-Try installing this: <https://go.microsoft.com/fwlink/?LinkId=746572>
 
 ## Paper Wallet / Cold Storage?
 
