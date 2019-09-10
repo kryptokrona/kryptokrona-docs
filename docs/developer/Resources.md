@@ -8,7 +8,7 @@ Technical resources to start building on TurtleCoin.
 
 * [TurtleCoind](api/Daemon-JSON-RPC-API) - Blockchain daemon
 
-* [wallet-api](https://turtlecoin.github.io/wallet-api-docs/) - Recommended RPC API to use for new projects or to migrate to from existing projects. Swagger based REST inteface.
+* [wallet-api](https://turtlecoin.github.io/wallet-api-docs/) - Recommended RPC API to use for new projects or to migrate to from existing projects. Swagger based REST interface.
 
 * [turtle-service](api/Legacy-Wallet-RPC-API) - Deprecated wallet API, use wallet-api above insted
 
