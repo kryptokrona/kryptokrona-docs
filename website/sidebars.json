@@ -47,6 +47,9 @@
       ],
       "Misc": [
          "guides/Using-trtlbot-plus-plus"
+      ],
+      "Config": [
+         "guides/config/config"
       ]
    },
    "devs": {
