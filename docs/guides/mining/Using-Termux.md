@@ -11,8 +11,7 @@ title: Mining with Termux
 2. Upon downloading and installing, open the app.
 3. Run `pkg upgrade -y`
 4. Run `pkg install git cmake libuv clang nano -y`
-5. Run `git clone --single-branch https://github.com/SoreGums/ninjarig`
-  - Had to alter the original, hence why pulling from SoreGums' repo instead of primary repo. The part removed doesn't work on Android. All credit for NinjaRig is to be directed to [bogdanadnan](https://github.com/turtlecoin/ninjarig). The change is to do with contacting a server to get new details about donate info. Check the [commit history](https://github.com/SoreGums/ninjarig) if you want to [know exactly](https://github.com/SoreGums/ninjarig/commit/ccb154558a1c36dffb1a4c9ed6695bcaa61dec01) what is different, else just clone and go, sheesh - SoreGums
+5. Run `git clone --single-branch https://github.com/turtlecoin/ninjarig`
 6. Run `cd ninjarig`
 7. Run `mkdir build && cd build`
 8.  Run `cmake .. -DWITH_HTTPD=OFF -DWITH_TLS=OFF -DWITH_OPENCL=OFF -DWITH_CUDA=OFF -DCMAKE_BUILD_TYPE=Release`
@@ -29,7 +28,7 @@ Alternatively, instead of copy pasting each command individually you can copy pa
 ```bash
 pkg upgrade -y  && \
 pkg install git cmake libuv clang nano -y && \
-git clone --single-branch https://github.com/SoreGums/ninjarig && \
+git clone --single-branch https://github.com/turtlecoin/ninjarig && \
 cd ninjarig && \
 mkdir build && cd build && \
 cmake .. -DWITH_HTTPD=OFF -DWITH_TLS=OFF -DWITH_OPENCL=OFF -DWITH_CUDA=OFF -DCMAKE_BUILD_TYPE=Release && \
