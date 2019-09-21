@@ -37,3 +37,12 @@ That's it! You should be mining away now! :)
 ![ninjarig-working](../../assets/ninjarig-working.png)
 
 If you want to read more about the project then head over to the project's [README.md](https://github.com/turtlecoin/ninjarig/blob/master/README.md)
+
+
+## Troubleshooting
+
+### Start then stops, no errors
+
+![ninjarig-not-working](../../assets/ninjarig-not-working.png)
+
+If you're getting something like the above screenshot, check your AV software, it might have deleted a bunch of files...
