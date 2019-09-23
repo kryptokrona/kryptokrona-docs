@@ -20,6 +20,12 @@ There are currently a few different ways in which you can start mining TurtleCoi
 
 ## Desktop Mining
 
+### [violetminer](https://github.com/turtlecoin/violetminer)
+
+Violetminer currently supports CPUs and Nvidia GPUs in an all in one miner.
+
+Please follow [this guide](violetminer-Guide) to start mining TurtleCoin with violetminer.
+
 ### [NinjaRig](https://github.com/turtlecoin/ninjarig)
 
 Check this one out, since the fork at v0.18.0 _(block 18,000,000)_ bogdanadnan has been going hard pushing out updates for this all in one CPU/GPU miner.  
