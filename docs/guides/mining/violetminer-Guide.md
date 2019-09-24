@@ -113,17 +113,19 @@ Here's an example config for reference.
             "port": 2225,
             "priority": 0,
             "rigID": "",
+            "ssl": false,
             "username": "TRTLv2Fyavy8CXG8BPEbNeCHFZ1fuDCYCZ3vW5H5LXN4K2M2MHUpTENip9bbavpHvvPwb4NDkBWrNgURAd5DB38FHXWZyoBh4wW"
         },
         {
             "agent": "",
             "algorithm": "turtlecoin",
-            "host": "donate.futuregadget.xyz",
+            "host": "pool.turtle.hashvault.pro",
             "niceHash": true,
             "password": "x",
-            "port": 3333,
+            "port": 443,
             "priority": 2,
             "rigID": "",
+            "ssl": true,
             "username": "TRTLv2Fyavy8CXG8BPEbNeCHFZ1fuDCYCZ3vW5H5LXN4K2M2MHUpTENip9bbavpHvvPwb4NDkBWrNgURAd5DB38FHXWZyoBh4wW"
         },
         {
@@ -135,6 +137,7 @@ Here's an example config for reference.
             "port": 3005,
             "priority": 1,
             "rigID": "",
+            "ssl": false,
             "username": "WrkzjJMM8h9F8kDU59KUdTN8PvZmzu2HchyBG15R4SjLD4EcMg6qVWo3Qeqp4nNhgh1CPL7ixCL1P4MNwNPr5nTw11ma1MMXr7"
         }
     ]
@@ -182,6 +185,7 @@ If you specify multiple pools, the pools will be tried in order of their priorit
 | `port`        | `Number`  | The pool port to mine to. |
 | `priority`    | `Number`  | The priority of this pool. A lower value indicates a higher priority, so a pool with a priority of `0` will be tried before a pool with a priority of `1`. If we are not connected to the pool with the highest priority, we will keep trying to reconnect to it. |
 | `rigID`       | `String`  | Allows you to specify a custom rig ID for the pool. If the pool supports this field, it should allow you to distinguish between each mining rig you have on the same pool, to see the hashrate per rig, for example. |
+| `ssl`         | `Boolean` | Whether to use SSL with this pool. Only use this option if the pool says the port you are using is an SSL port. |
 | `username`    | `String`  | The username to use with this pool. Usually is your TurtleCoin address. |
 
 ## Notes
