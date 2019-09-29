@@ -2,17 +2,13 @@
 title: Mining with NinjaRig
 ---
 
-Argon2 CPU & GPU miner for TurtleCoin®
-
 ## Downloading and Installing for Windows or Linux
 
-NinjaRig can be downloaded from here:
-
-* [NinjaRig Miner](https://github.com/turtlecoin/ninjarig/releases)
+NinjaRig can be downloaded from the [GitHub page](https://github.com/turtlecoin/ninjarig/releases/latest)
 
 ## Downloading and Installing for OS X
 
-Would need to be compiled, instructions don't currently exist...
+Needs to be compiled; instructions are not present as of now, though
 
 ## NinjaRig Setup and Configuration
 
