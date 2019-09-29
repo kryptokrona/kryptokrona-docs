@@ -8,7 +8,7 @@ Subwallets are a way to use multiple distinct addresses in one wallet 'container
 
 ## Why would I want to use subwallets?
 
-The first reason is simple: It allows each of your users to have their own unique address, without having up to fire up a wallet-api or turtle-service instance for each.
+The first reason is simple: It allows each of your users to have their own unique address, without having to fire up a wallet-api or turtle-service instance for each.
 
 The second reason is performance. Syncing 1000 subwallets is nearly as fast as syncing 1 wallet, and far, far faster than syncing 1000 unrelated wallets.
 
