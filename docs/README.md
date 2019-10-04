@@ -1,5 +1,3 @@
-[![Build Status](https://travis-ci.org/turtlecoin/turtlecoin-docs.svg?branch=master)](https://travis-ci.org/turtlecoin/turtlecoin-docs)
-
 # turtlecoin-docs
 :turtle: :turtle: :turtle: Documentation for all things TurtleCoin:turtle: :turtle: :turtle:
 
@@ -13,8 +11,7 @@ The official production TurtleCoin Wiki is at https://docs.turtlecoin.lol. This 
 
 This repo, http://github.com/turtlecoin/turtlecoin-docs, holds the raw markdown that the wiki is built from.
 
-There is currently no 'test site', but the normal GitHub preview could be used to look at how your changes appear.
-
+You can see build previews of your PR a couple of seconds after it has been made by clicked "Details" next to "deploy/netlify — Deploy preview ready!" near the comment section. [Example](https://i.imgur.com/dR0bPlI.png) 
 ## Contributing
 
 Changes, edits, and other contributions to the TurtleCoin documentation can be submitted as a Github [Pull Request](https://github.com/turtlecoin/turtlecoin-docs/pulls) to this repository, or as a Github Issue on this repo's [Issues page](https://github.com/turtlecoin/turtlecoin-docs/issues).  
@@ -22,7 +19,7 @@ Please be granular and make a single commit per change/set of related changes (o
 
 ### PR > Merge > Published
 
-Travis has been setup so that once a Pull Request has been accepted and merged, the changes will be pushed and published automatically. Keep an eye out just in case something didn't quite get caught in review, make a ninja edit (PR) to fix it up :)
+Once a Pull Request has been accepted and merged, the changes will be pushed and published automatically. Keep an eye out just in case something didn't quite get caught in review, make a ninja edit (PR) to fix it up :)
  
 
 ## Thanks and Contributors
