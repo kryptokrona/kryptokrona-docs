@@ -21,7 +21,7 @@ violetminer can be downloaded from its [GitHub Page](https://github.com/turtleco
 
 2. You will be prompted for a mining pool to use. You can learn more about picking a pool [here](Pools). Make sure you include the pool port. You can find this information on most pools 'Getting Started' page.
 
-  * If you're having difficulty copy/pasting into the command window on Windows, you can click in the top left of the window, then select edit, then paste.
+   * If you're having difficulty copy/pasting into the command window on Windows, you can click in the top left of the window, then select edit, then paste.
 
 3. Next, you need to enter the pool username. For the majority of pools, this is your TurtleCoin address. It should start with `TRTL`. If you need to use something else, this will be listed on your pool page.
 
@@ -33,7 +33,7 @@ violetminer can be downloaded from its [GitHub Page](https://github.com/turtleco
 
 7. You're done! If you want to add another pool, enter `y` on this step. If not, enter `n` and you will start mining if you entered everything correctly!
 
-* If you want to modify your config, it has been written to the file `config.json`, in the directory you launched violetminer from. You can now just double click violetminer, and it will read from the config file.
+   * If you want to modify your config, it has been written to the file `config.json`, in the directory you launched violetminer from. You can now just double click violetminer, and it will read from the config file.
 
 Want more information on how to modify the config file? Check out [this section](#config-file-explanation).
 
