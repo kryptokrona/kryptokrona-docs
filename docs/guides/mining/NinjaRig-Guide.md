@@ -8,7 +8,7 @@ NinjaRig can be downloaded from the [GitHub page](https://github.com/turtlecoin/
 
 ## Downloading and Installing for OS X
 
-Needs to be compiled; instructions are not present as of now, though
+Needs to be compiled. There are currently no compilation instructions available
 
 ## NinjaRig Setup and Configuration
 
