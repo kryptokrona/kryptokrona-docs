@@ -10,28 +10,28 @@ violetminer can be downloaded from its [GitHub Page](https://github.com/turtleco
 
 ## violetminer Setup and Configuration
 
-1. Unzip the file and extract the files into a new folder (Make sure your anti-virus doesn't delete the files)
-
+1. If on Windows, unzip the file into a new folder. There should be an executable, violetminer.exe, in this folder.
+     * If on Linux, Mac, or ARM, untar the file into a new folder. (`tar -xf violetminer-linux.tar.gz` for example).
 
 ### Guided Setup
 
 ![guided-setup](../../assets/violetminer-guided-setup.png)
 
-* Double click / run the violetminer executable.
+1. Double click / run the violetminer executable.
 
-* You will be prompted for a mining pool to use. You can learn more about picking a pool [here](Pools). Make sure you include the pool port. You can find this information on most pools 'Getting Started' page.
+2. You will be prompted for a mining pool to use. You can learn more about picking a pool [here](Pools). Make sure you include the pool port. You can find this information on most pools 'Getting Started' page.
 
   * If you're having difficulty copy/pasting into the command window on Windows, you can click in the top left of the window, then select edit, then paste.
 
-* Next, you need to enter the pool username. For the majority of pools, this is your TurtleCoin address. It should start with `TRTL`. If you need to use something else, this will be listed on your pool page.
+3. Next, you need to enter the pool username. For the majority of pools, this is your TurtleCoin address. It should start with `TRTL`. If you need to use something else, this will be listed on your pool page.
 
-* Next up is the pool password. For most pools, you can just leave this blank, or use `x`. Some pools will use it to allow extra configuration options. Again, check the getting started page for your pool for more information.
+4. Next up is the pool password. For most pools, you can just leave this blank, or use `x`. Some pools will use it to allow extra configuration options. Again, check the getting started page for your pool for more information.
 
-* The next thing to choose is the algorithm. Since you're wanting to mine TurtleCoin, just enter `turtlecoin` here.
+5. The next thing to choose is the algorithm. Since you're wanting to mine TurtleCoin, just enter `turtlecoin` here.
 
-* Finally, we have the rig ID. This can be used if you have multiple computers mining and want to be able to distinguish between them on the pool side. If you don't, just hit the `Enter` key here to leave it blank.
+6. Finally, we have the rig ID. This can be used if you have multiple computers mining and want to be able to distinguish between them on the pool side. If you don't, just hit the `Enter` key here to leave it blank.
 
-* You're done! If you want to add another pool, enter `y` on this step. If not, enter `n` and you will start mining if you entered everything correctly!
+7. You're done! If you want to add another pool, enter `y` on this step. If not, enter `n` and you will start mining if you entered everything correctly!
 
 * If you want to modify your config, it has been written to the file `config.json`, in the directory you launched violetminer from. You can now just double click violetminer, and it will read from the config file.
 
@@ -43,13 +43,13 @@ Want more information on how to modify the config file? Check out [this section]
 
 It is not recommended to use the command line launching, as it is less configurable, but regardless, here's the explanation.
 
-* The following tables list all the available command line options.
+1. The following tables list all the available command line options.
 
-* Each `Flag` should be followed by the corresponding `Argument`.
+2. Each `Flag` should be followed by the corresponding `Argument`.
 
-* For example, since `--pool` takes a `String` argument, we should specify it like so: `violetminer --pool trtl.pool.mine2gether.com:3335`.
+3. For example, since `--pool` takes a `String` argument, we should specify it like so: `violetminer --pool trtl.pool.mine2gether.com:3335`.
 
-* If a flag takes an argument of `None`, that means you just use the flag, with nothing following it. For example, `violetminer --disableCPU`.
+4. If a flag takes an argument of `None`, that means you just use the flag, with nothing following it. For example, `violetminer --disableCPU`.
 
 #### Mandatory Options
 
@@ -75,8 +75,7 @@ If you use command line launching, you must specify all of the following flags.
 | `--rigid`         | String   | Specifies a custom rig ID to use with the pool specified                                |
 
 
-* If the `config` option is specified, any other command line options will be **ignored**.
-
+* If the `config` option is specified, any other command line options will be **ignored**.  
 * I repeat, **do *not* mix command line options and config files**, use just one or the other.
 
 Example launch command:
@@ -198,12 +197,9 @@ If you specify multiple pools, the pools will be tried in order of their priorit
 
 ## Notes
 
-* The development fee is 1%. This means it will mine for the developer 1 minute out of every 100 minutes.
-
-* Found a bug? Can't get something working? Start by visiting the [TurtleCoin discord](http://chat.turtlecoin.lol) and asking in the `#mining` channel, or open an issue on [the repo](https://github.com/turtlecoin/violetminer/issues).
-
-* Want to compile yourself? Visit [here](https://github.com/turtlecoin/violetminer#compiling) for instructions.
-
-* Want more info? Visit the [github page](https://github.com/turtlecoin/violetminer).
+* The development fee is 1%. This means it will mine for the developer 1 minute out of every 100 minutes.  
+* Found a bug? Can't get something working? Start by visiting the [TurtleCoin discord](http://chat.turtlecoin.lol) and asking in the `#mining` channel, or open an issue on [the repo](https://github.com/turtlecoin/violetminer/issues).  
+* Want to compile yourself? Visit [here](https://github.com/turtlecoin/violetminer#compiling) for instructions.  
+* Want more info? Visit the [github page](https://github.com/turtlecoin/violetminer).  
 
 Happy mining!
