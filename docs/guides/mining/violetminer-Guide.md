@@ -10,8 +10,8 @@ violetminer can be downloaded from its [GitHub Page](https://github.com/turtleco
 
 ## violetminer Setup and Configuration
 
-1. If on Windows, unzip the file into a new folder. There should be an executable, violetminer.exe, in this folder.
-     * If on Linux, Mac, or ARM, untar the file into a new folder. (`tar -xf violetminer-linux.tar.gz` for example).
+1. If on Windows, unzip the file into a new folder. There should be an executable, violetminer.exe, in this folder.  
+If on Linux, Mac, or ARM, untar the file into a new folder. (`tar -xf violetminer-linux.tar.gz` for example).
 
 ### Guided Setup
 
@@ -33,9 +33,10 @@ violetminer can be downloaded from its [GitHub Page](https://github.com/turtleco
 
 7. You're done! If you want to add another pool, enter `y` on this step. If not, enter `n` and you will start mining if you entered everything correctly!
 
-   * If you want to modify your config, it has been written to the file `config.json`, in the directory you launched violetminer from. You can now just double click violetminer, and it will read from the config file.
+You can now just double click violetminer, and it will read from the config file.  
 
-Want more information on how to modify the config file? Check out [this section](#config-file-explanation).
+If you want to modify your config, it has been written to the file `config.json`, in the directory you launched violetminer from.  
+  * Want more information on how to modify the config file? Check out [this section](#config-file-explanation).
 
 ### Command Line Setup
 
@@ -75,8 +76,8 @@ If you use command line launching, you must specify all of the following flags.
 | `--rigid`         | String   | Specifies a custom rig ID to use with the pool specified                                |
 
 
-* If the `config` option is specified, any other command line options will be **ignored**.  
-* I repeat, **do *not* mix command line options and config files**, use just one or the other.
+If the `config` option is specified, any other command line options will be **ignored**.    
+I repeat, **do *not* mix command line options and config files**, use just one or the other.
 
 Example launch command:
 
@@ -86,7 +87,7 @@ violetminer --algorithm turtlecoin --pool trtl.pool.mine2gether.com:3335 --usern
 
 ### Config File Explanation
 
-* The config file should be pretty self explanatory, but just in case I'll explain what all the fields do here.
+The config file should be pretty self explanatory, but just in case I'll explain what all the fields do here.
 
 Here's an example config for reference.
 
