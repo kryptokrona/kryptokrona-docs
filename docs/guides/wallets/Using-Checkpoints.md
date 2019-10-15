@@ -6,7 +6,8 @@ title: Using Checkpoints to Sync Faster
 
 ## Setup
 
-- Right click [this link](https://github.com/turtlecoin/checkpoints/raw/master/checkpoints.csv) and choose `Save link as...` to download checkpoints.csv.
+- Proceed to [http://checkpoints.turtlecoin.lol](http://checkpoints.turtlecoin.lol)
+- Right click one of the provided links and choose `Save link as...` to download checkpoints.csv.
 - Place checkpoints.csv in the same folder as your daemon(TurtleCoind) and wallet(zedwallet).
 - You can get them both [from here](http://latest.turtlecoin.lol) if you don't have them already.
 
