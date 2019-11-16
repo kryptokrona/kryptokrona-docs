@@ -206,27 +206,27 @@ No Input.
 
 | Argument                   | Description                                    | Format |
 | -------------------------- | ---------------------------------------------- | ------ |
-| alt_blocks_count           | -                                              | int    |
+| alt_blocks_count           | the number of blocks on alternative (split) chains since the start of the daemon | int    |
 | difficulty                 | difficulty of the top block                    | int    |
-| gray_peerlist_size         | -                                              | int    |
-| hashrate                   | hashrate of the network                        | int    |
-| height                     | height of the daemon                           | int    |
-| incoming_connections_count | number of incoming connections to the daemon   | int    |
-| last_known_block_index     | -                                              | int    |
-| major_version              | -                                              | int    |
-| minor_version              | -                                              | int    |
-| network_height             | height of the network                          | int    |
+| grey_peerlist_size         | list of peers that were alive but not any more (offline) | int    |
+| hashrate                   | estimated network hashrate for given block (top block if general chain info) = difficulty / 30s (block time target)                        | int    |
+| height                     | daemon height. index of the last locally stored block. different from network_height when syncing the network, or when just found a block. | int    |
+| incoming_connections_count | Number of peers connected to and pulling from this daemon node.   | int    |
+| last_known_block_index     | ?                                              | int    |
+| major_version              | blockchain major version. such as hash algorithm change   | int    |
+| minor_version              | blockchain minor version. for example, difficulty algo adjustment. rarely used. | int    |
+| network_height             | blockchain length reported by peers. the longest value given by any connected peer.  | int    |
 | outgoing_connections_count | number of outgoing connections from the daemon | int    |
-| start_time                 | -                                              | int    |
+| start_time                 | the time when this daemon was started. epoch time in seconds | int    |
 | status                     | Status of request                              | string |
-| supported_height           | supported fork height                          | int    |
-| synced                     | sync status                                    | bool   |
+| supported_height           | the height of the blockchain for supported fork. if forked after this block height, this version does not support it | int    |
+| synced                     | sync status. does the height of this node match the height of the network? | bool   |
 | testnet                    | whether the daemon is on testnet or not        | bool   |
-| tx_count                   | transaction count in the network               | int    |
-| tx_pool_size               | -                                              | int    |
-| upgrade_heights            | pre-determined fork heights                    | array  |
-| version                    | version of the daemon                          | string |
-| white_peerlist_size        | -                                              | int    |
+| tx_count                   | Total number of non-coinbase transaction in the chain.  | int    |
+| tx_pool_size               | Number of transactions that have been broadcast but not included in a block. | int    |
+| upgrade_heights            | pre-determined fork heights. blockchain heights where it forked. | array  |
+| version                    | version of the daemon software                  | string |
+| white_peerlist_size        | list of online peers                           | int    |
 
 
 <!--DOCUSAURUS_CODE_TABS-->
@@ -302,7 +302,10 @@ fmt.Println(response)
 
 ## gettransactions
 
-`gettransactions()` method returns list of missed transactions
+`gettransactions()` method returns list of missed transactions.
+"Missed transactions" are invalid transactions in the sense that they do not exist in the blockchain.
+Input should include the transaction hashes to check. Try figuring that out.
+This method is likely to go away in near future.
 
 No Input
 
@@ -498,3 +501,4 @@ fmt.Println(response)
 The content in this document was originally written by the [Bytecoin (BCN) Developers](https://bytecoin.org/). It is licensed under the [CC BY SA 3.0 license](https://creativecommons.org/licenses/by-sa/3.0/). The source material can be found at the [Bytecoin Wiki](https://github.com/bcndev/bytecoin).
 
 Also of note, TurtleCoin developers have altered and adapted the content to suit our implementation of the API. This was done independently of the Bytecoin development team. They neither endorse or acknowledge our changes. Feel free to adopt or change our content as per the [CC BY SA 3.0 license](https://creativecommons.org/licenses/by-sa/3.0/) requirements.
+
