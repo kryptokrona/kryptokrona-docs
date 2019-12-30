@@ -10,7 +10,7 @@ Technical resources to start building on TurtleCoin.
 
 * [wallet-api](https://turtlecoin.github.io/wallet-api-docs/) - Recommended RPC API to use for new projects or to migrate to from existing projects. Swagger based REST interface.
 
-* [turtle-service](api/Legacy-Wallet-RPC-API) - Deprecated wallet API, use wallet-api above insted
+* [turtle-service](api/Legacy-Wallet-RPC-API) - Turtle Service Wallet API. Will eventually be deprecated, suggested to use wallet-api for new projects.
 
 ## RPC API Clients
 
