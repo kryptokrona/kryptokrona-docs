@@ -1,5 +1,5 @@
 ---
-title: Legacy Wallet RPC API
+title: Turtle Service Wallet RPC API
 ---
 
 The TurtleCoin RPC Wallet is a HTTP server which provides JSON 2.0 RPC interface for TurtleCoin payment operations and address management.
@@ -11,7 +11,7 @@ Currently we support the following official client bindings:
 * [Python](https://github.com/turtlecoin/turtlecoin-rpc-python)
 * [Go](https://github.com/turtlecoin/turtlecoin-rpc-go)
 
-## NB: turtle-service is deprecated and not supported. Information in this article may be out of date or incorrect. Use [wallet-api](https://turtlecoin.github.io/wallet-api-docs) instead
+## Note: Eventually, turtle-service will be deprecated. It is suggested to use [wallet-api](https://turtlecoin.github.io/wallet-api-docs) for new applications.
 
 ## Installation
 
