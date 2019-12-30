@@ -6,7 +6,6 @@ The TurtleCoin RPC Wallet is a HTTP server which provides JSON 2.0 RPC interface
 
 Currently we support the following official client bindings:
 
-* [NodeJS](https://www.npmjs.com/package/turtlecoin-rpc)
 * [PHP](https://github.com/turtlecoin/turtlecoin-rpc-php)
 * [Python](https://github.com/turtlecoin/turtlecoin-rpc-python)
 * [Go](https://github.com/turtlecoin/turtlecoin-rpc-go)
@@ -16,11 +15,6 @@ Currently we support the following official client bindings:
 ## Installation
 
 <!--DOCUSAURUS_CODE_TABS-->
-
-<!--NodeJS-->
-```
-npm install turtlecoin-rpc
-```
 
 <!--PHP-->
 ```
@@ -59,28 +53,6 @@ To make a JSON RPC request to your TurtleCoin RPC Wallet you should use a GET re
 | `<service port>`    | TurtleCoin RPC Wallet port, by default it is bound to 8070 port, but it can be manually bound to any port you want |
 
 <!--DOCUSAURUS_CODE_TABS-->
-
-<!--NodeJS-->
-```js
-const TurtleService = require('turtlecoin-rpc').TurtleService
-
-const service = new TurtleService({
-  host: '127.0.0.1', // ip address or hostname of the turtle-service host
-  port: 8070, // what port is turtle-service running on
-  timeout: 2000, // request timeout
-  ssl: false, // whether we need to connect using SSL/TLS
-  rpcPassword: 'changeme', // must be set to the password used to run turtle-service
-
-  // RPC API default values
-  defaultMixin: false, // the default mixin to use for transactions, the default setting is false which means we don't have a default value
-  defaultFee: 0.1, // the default transaction fee for transactions
-  defaultBlockCount: 1, // the default number of blocks when blockCount is required
-  decimalDivisor: 100, // Currency has many decimal places?
-  defaultFirstBlockIndex: 1, // the default first block index we will use when it is required
-  defaultUnlockTime: 0, // the default unlockTime for transactions
-  defaultFusionThreshold: 10000000, // the default fusionThreshold for fusion transactions
-})
-```
 
 <!--PHP-->
 ```php
@@ -144,17 +116,6 @@ service := trpc.Walletd{
 curl -d '{"jsonrpc":"2.0","id":1,"password":"passw0rd","method":"reset","params":{"scanHeight":100000}}' http://localhost:8070/json_rpc
 ```
 
-<!--NodeJS-->
-```js
-service.reset({
-  scanHeight: 100000
-}).then(() => {
-  // do something
-}).catch((error) => {
-  // do something
-})
-```
-
 <!--PHP-->
 ```php
 <?php
@@ -211,15 +172,6 @@ No output in case of success.
 curl -d '{"jsonrpc":"2.0","id":1,"password":"passw0rd","method":"save","params":{}}' http://localhost:8070/json_rpc
 ```
 
-<!--NodeJS-->
-```js
-service.save().then(() => {
-  // do something
-}).catch((error) => {
-  // do something
-})
-```
-
 <!--PHP-->
 ```php
 <?php
@@ -273,15 +225,6 @@ No input.
 <!--Shell-->
 ```sh
 curl -d '{"jsonrpc":"2.0","id":1,"password":"passw0rd","method":"getViewKey","params":{}}' http://localhost:8070/json_rpc
-```
-
-<!--NodeJS-->
-```js
-service.getViewKey().then((result) => {
-  // do something
-}).catch((error) => {
-  // do something
-})
 ```
 
 <!--PHP-->
@@ -343,17 +286,6 @@ if err != nil {
 <!--Shell-->
 ```sh
 curl -d '{"jsonrpc":"2.0","id":1,"password":"passw0rd","method":"getSpendKeys","params":{"address":"TRTLxxxx..."}}' http://localhost:8070/json_rpc
-```
-
-<!--NodeJS-->
-```js
-service.getSpendKeys({
-  address: 'TRTLv1pacKFJk9QgSmzk2LJWn14JGmTKzReFLz1RgY3K9Ryn7783RDT2TretzfYdck5GMCGzXTuwKfePWQYViNs4avKpnUbrwfQ'
-}).then((result) => {
-  // do something
-}).catch((error) => {
-  // do something
-})
 ```
 
 <!--PHP-->
@@ -422,17 +354,6 @@ if err != nil {
 curl -d '{"jsonrpc":"2.0","id":1,"password":"passw0rd","method":"getMnemonicSeed","params":{"address":"TRTLxxxx..."}}' http://localhost:8070/json_rpc
 ```
 
-<!--NodeJS-->
-```js
-service.getMnemonicSeed({
-  address: 'TRTLv1pacKFJk9QgSmzk2LJWn14JGmTKzReFLz1RgY3K9Ryn7783RDT2TretzfYdck5GMCGzXTuwKfePWQYViNs4avKpnUbrwfQ'
-}).then((result) => {
-  // do something
-}).catch((error) => {
-  // do something
-})
-```
-
 <!--PHP-->
 ```php
 <?php
@@ -495,15 +416,6 @@ No input.
 curl -d '{"jsonrpc":"2.0","id":1,"password":"passw0rd","method":"getStatus","params":{}}' http://localhost:8070/json_rpc
 ```
 
-<!--NodeJS-->
-```js
-service.getStatus().then((result) => {
-  // do something
-}).catch((error) => {
-  // do something
-})
-```
-
 <!--PHP-->
 ```php
 <?php
@@ -561,15 +473,6 @@ No input.
 <!--Shell-->
 ```sh
 curl -d '{"jsonrpc":"2.0","id":1,"password":"passw0rd","method":"getAddresses","params":{}}' http://localhost:8070/json_rpc
-```
-
-<!--NodeJS-->
-```js
-service.getAddresses().then((result) => {
-  // do something
-}).catch((error) => {
-  //do something
-})
 ```
 
 <!--PHP-->
@@ -630,18 +533,6 @@ if err != nil {
 <!--Shell-->
 ```sh
 curl -d '{"jsonrpc":"2.0","id":1,"password":"passw0rd","method":"createAddress","params":{}}' http://localhost:8070/json_rpc
-```
-
-<!--NodeJS-->
-```js
-service.createAddress({
-  spendSecretKey: '',
-  spendPublicKey: ''
-}).then((result) => {
-  // do something
-}).catch((error) => {
-  //do something
-})
 ```
 
 <!--PHP-->
@@ -708,15 +599,6 @@ In case of success returns an empty JSON object.
 <!--Shell-->
 ```sh
 curl -d '{"jsonrpc":"2.0","id":1,"password":"passw0rd","method":"deleteAddress","params":{"address":"TRTLxxxx..."}}' http://localhost:8070/json_rpc
-```
-
-<!--NodeJS-->
-```js
-service.deleteAddress({
-  address: 'TRTLv1pacKFJk9QgSmzk2LJWn14JGmTKzReFLz1RgY3K9Ryn7783RDT2TretzfYdck5GMCGzXTuwKfePWQYViNs4avKpnUbrwfQ'
-}).then((result) => {
-  // do something
-})
 ```
 
 <!--PHP-->
@@ -787,16 +669,6 @@ if err != nil {
 curl -d '{"jsonrpc":"2.0","id":1,"password":"passw0rd","method":"getBalance","params":{"address":"TRTLxxxx..."}}' http://localhost:8070/json_rpc
 ```
 
-<!--NodeJS-->
-```js
-// Address optional
-service.getBalance({
-  address: 'TRTLv1pacKFJk9QgSmzk2LJWn14JGmTKzReFLz1RgY3K9Ryn7783RDT2TretzfYdck5GMCGzXTuwKfePWQYViNs4avKpnUbrwfQ'
-}).then((result) => {
-  // do something
-})
-```
-
 <!--PHP-->
 ```php
 <?php
@@ -860,16 +732,6 @@ blockHashes		      | Array of strings, where each element is a block hash	    | 
 <!--Shell-->
 ```sh
 curl -d '{"jsonrpc":"2.0","id":1,"password":"passw0rd","method":"getBlockHashes","params":{"firstBlockIndex":0,"blockCount":3}}' http://localhost:8070/json_rpc
-```
-
-<!--NodeJS-->
-```js
-service.getBlockHashes({
-  firstBlockIndex: 500000,
-  blockCount: 10
-}).then((result) => {
-  // do something
-})
 ```
 
 <!--PHP-->
@@ -953,20 +815,6 @@ items	   | **Array of**                                        |	               
 <!--Shell-->
 ```sh
 curl -d '{"jsonrpc":"2.0","id":1,"password":"passw0rd","method":"getTransactionHashes","params":{"firstBlockIndex":400000,"blockCount":100000}}' http://localhost:8070/json_rpc
-```
-
-<!--NodeJS-->
-```js
-service.getTransactionHashes({
-  addresses: [
-    "TRTLux9QBmzCYEGgdWXHEQCAm6vY9vZHkbGmx8ev5LxhYk8N71Pp7PWFYL9CHxpWph2wCPZcJ6tkPfUxVZcUN8xmYsSDJZ25i9n",
-    "TRTLv1mPerM2ckUuNvxrkzDE7QKd9PFVUXYbVfbvx8YxB5BYEdSqQvUFYL9CHxpWph2wCPZcJ6tkPfUxVZcUN8xmYsSDJbQMVgF"
-  ],
-  blockHash: 'f98d6bbe80a81b3aa0aebd004096e2223524f58f347a1f21be122450f244b948',
-  blockCount: 1
-}).then((result) => {
-  // do something
-})
 ```
 
 <!--PHP-->
@@ -1081,20 +929,6 @@ transfers           | Array of address (string), amount (int)                   
 <!--Shell-->
 ```sh
 curl -d '{"jsonrpc":"2.0","id":1,"password":"passw0rd","method":"getTransactions","params":{"firstBlockIndex":400000,"blockCount":100000}}' http://localhost:8070/json_rpc
-```
-
-<!--NodeJS-->
-```js
-service.getTransactions({
-  addresses: [
-    "TRTLux9QBmzCYEGgdWXHEQCAm6vY9vZHkbGmx8ev5LxhYk8N71Pp7PWFYL9CHxpWph2wCPZcJ6tkPfUxVZcUN8xmYsSDJZ25i9n",
-    "TRTLv1mPerM2ckUuNvxrkzDE7QKd9PFVUXYbVfbvx8YxB5BYEdSqQvUFYL9CHxpWph2wCPZcJ6tkPfUxVZcUN8xmYsSDJbQMVgF"
-  ],
-  firstBlockIndex: 469419,
-  blockCount: 1
-}).then((result) => {
-  // do something
-})
 ```
 
 <!--PHP-->
@@ -1225,15 +1059,6 @@ transactionHashes      | Array of strings, where each string is a hash of an unc
 curl -d '{"jsonrpc":"2.0","id":1,"password":"passw0rd","method":"getUnconfirmedTransactionHashes","params":{}}' http://localhost:8070/json_rpc
 ```
 
-<!--NodeJS-->
-```js
-service.getUnconfirmedTransactionHashes({
-  address: 'TRTLv1pacKFJk9QgSmzk2LJWn14JGmTKzReFLz1RgY3K9Ryn7783RDT2TretzfYdck5GMCGzXTuwKfePWQYViNs4avKpnUbrwfQ'
-}).then((result) => {
-  // do something
-})
-```
-
 <!--PHP-->
 ```php
 <?php
@@ -1314,15 +1139,6 @@ transfers           | Array of addresses (string), amount (int)                 
 <!--Shell-->
 ```sh
 curl -d '{"jsonrpc":"2.0","id":1,"password":"passw0rd","method":"getTransaction","params":{"transactionHash":"55a23..."}}' http://localhost:8070/json_rpc
-```
-
-<!--NodeJS-->
-```js
-service.getTransaction({
-  transactionHash: 'd01e448f7b631cebd989e3a150258b0da59c66f96adecec392bbf61814310751'
-}).then((result) => {
-  // do something
-})
 ```
 
 <!--PHP-->
@@ -1413,18 +1229,6 @@ transactionHash	      | Hash of the sent transaction		    | string
 <!--Shell-->
 ```sh
 curl -d '{"jsonrpc":"2.0","id":1,"password":"passw0rd","method":"sendTransaction","params":{"transfers":[{"address":"TRTLxxxx...","amount":5000}],"fee":10,"anonymity":3,"changeAddress":"TRTLyyyy..."}}' http://localhost:8070/json_rpc
-```
-
-<!--NodeJS-->
-```js
-service.sendTransaction({
-  transfers: [
-    service.newTransfer('TRTLv1pacKFJk9QgSmzk2LJWn14JGmTKzReFLz1RgY3K9Ryn7783RDT2TretzfYdck5GMCGzXTuwKfePWQYViNs4avKpnUbrwfQ', 1000000)
-  ],
-  fee: 0.1
-}).then((result) => {
-  // do something
-})
 ```
 
 <!--PHP-->
@@ -1542,18 +1346,6 @@ transactionHash	      | Hash of the sent transaction		    | string
 curl -d '{"jsonrpc":"2.0","id":1,"password":"passw0rd","method":"createDelayedTransaction","params":{"transfers":[{"address":"TRTLxxxx...","amount":5000}],"fee":10,"anonymity":3,"changeAddress":"TRTLyyyy..."}}' http://localhost:8070/json_rpc
 ```
 
-<!--NodeJS-->
-```js
-service.createDelayedTransaction({
-  transfers: [
-    service.newTransfer('TRTLv1pacKFJk9QgSmzk2LJWn14JGmTKzReFLz1RgY3K9Ryn7783RDT2TretzfYdck5GMCGzXTuwKfePWQYViNs4avKpnUbrwfQ', 1000000)
-  ],
-  fee: 0.1
-}).then((result) => {
-  // do something
-})
-```
-
 <!--PHP-->
 ```php
 <?php
@@ -1653,13 +1445,6 @@ transactionHashes	  | Array of strings, where each string is a transaction hash	
 curl -d '{"jsonrpc":"2.0","id":1,"password":"passw0rd","method":"getDelayedTransactionHashes","params":{}}' http://localhost:8070/json_rpc
 ```
 
-<!--NodeJS-->
-```js
-service.getDelayedTransactionHashes().then((result) => {
-  // do something
-})
-```
-
 <!--PHP-->
 ```php
 <?php
@@ -1716,15 +1501,6 @@ In case of success returns an empty JSON object.
 <!--Shell-->
 ```sh
 curl -d '{"jsonrpc":"2.0","id":1,"password":"passw0rd","method":"deleteDelayedTransaction","params":{"transactionHash":"b3e37..."}}' http://localhost:8070/json_rpc
-```
-
-<!--NodeJS-->
-```js
-service.deleteDelayedTransaction({
-  transactionHash: 'd01e448f7b631cebd989e3a150258b0da59c66f96adecec392bbf61814310751'
-}).then((result) => {
-  // do something
-})
 ```
 
 <!--PHP-->
@@ -1786,15 +1562,6 @@ In case of success returns an empty JSON object.
 <!--Shell-->
 ```sh
 curl -d '{"jsonrpc":"2.0","id":1,"password":"passw0rd","method":"sendDelayedTransaction","params":{"transactionHash":"c37cd..."}}' http://localhost:8070/json_rpc
-```
-
-<!--NodeJS-->
-```js
-service.sendDelayedTransaction({
-  transactionHash: 'd01e448f7b631cebd989e3a150258b0da59c66f96adecec392bbf61814310751'
-}).then((result) => {
-  // do something
-})
 ```
 
 <!--PHP-->
@@ -1870,15 +1637,6 @@ transactionHash	      | Hash of the sent transaction		    | string
 <!--Shell-->
 ```sh
 curl -d '{"jsonrpc":"2.0","id":1,"password":"passw0rd","method":"sendFusionTransaction","params":{"threshold":1000000,"anonymity":3,"addresses":["TRTLxxxx...","TRTLyyyy..."],"destinationAddress":"TRTLzzzz..."}}' http://localhost:8070/json_rpc
-```
-
-<!--NodeJS-->
-```js
-service.sendFusionTransaction({
-  destinationAddress: 'TRTLv1pacKFJk9QgSmzk2LJWn14JGmTKzReFLz1RgY3K9Ryn7783RDT2TretzfYdck5GMCGzXTuwKfePWQYViNs4avKpnUbrwfQ'
-}).then((result) => {
-  // do something
-})
 ```
 
 <!--PHP-->
@@ -1957,18 +1715,6 @@ fusionReadyCount    | Number of outputs that can be optimized.                  
 curl -d '{"jsonrpc":"2.0","id":1,"password":"passw0rd","method":"estimateFusion","params":{"threshold":1000000,"addresses":["TRTLxxxx...","TRTLyyyy..."]}}' http://localhost:8070/json_rpc
 ```
 
-<!--NodeJS-->
-```js
-service.estimateFusion({
-  threshold: 100000000,
-  addresses:[
-    'TRTLv1pacKFJk9QgSmzk2LJWn14JGmTKzReFLz1RgY3K9Ryn7783RDT2TretzfYdck5GMCGzXTuwKfePWQYViNs4avKpnUbrwfQ'
-  ]
-}).then((result) => {
-  // do something
-})
-```
-
 <!--PHP-->
 ```php
 <?php
@@ -2038,16 +1784,6 @@ integratedAddress	    | The created integrated address		  | string
 curl -d '{"jsonrpc":"2.0","id":1,"password":"passw0rd","method":"createIntegratedAddress","params":{"paymentId":"7FE73BD90EF05DEA0B5C15FC78696619C50DD5F2BA628F2FD16A2E3445B1922F", "address":"TRTLxxxx..."}}' http://localhost:8070/json_rpc
 ```
 
-<!--NodeJS-->
-```js
-service.createIntegratedAddress({
-  address: 'TRTLv1pacKFJk9QgSmzk2LJWn14JGmTKzReFLz1RgY3K9Ryn7783RDT2TretzfYdck5GMCGzXTuwKfePWQYViNs4avKpnUbrwfQ',
-  paymentId: '80ec855eef7df4bce718442cabe086f19dfdd0d03907c7768eddb8eca8c5a667'
-}).then((result) => {
-  // do something
-})
-```
-
 <!--PHP-->
 ```php
 <?php
@@ -2110,13 +1846,6 @@ amount                | The fee that will be sent to the node owners address wit
 <!--Shell-->
 ```sh
 curl -d '{"jsonrpc":"2.0","id":1,"password":"passw0rd","method":"getFeeInfo","params":{}}' http://localhost:8070/json_rpc
-```
-
-<!--NodeJS-->
-```js
-service.getFeeInfo().then((result) => {
-  // do something
-})
 ```
 
 <!--PHP-->
