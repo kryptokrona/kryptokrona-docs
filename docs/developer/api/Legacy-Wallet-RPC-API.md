@@ -1207,7 +1207,8 @@ Argument        | Mandatory     | Description                                   
 --------------- | ------------- | ---------------------------------------------------------------------------------------- | -------
 addresses       | No            | Array of strings, where each string is an address to take the funds from                 | array
 transfers       | Yes           | Array of objects, address: (string address), amount: (int amount)                        | array
-fee             | Yes           | Transaction fee. Minimal fee in TurtleCoin network is 0.10 TRTL. As with other amounts use whole units, 1 TRTL = 100 units, so 0.1 TRTL = 10 units | int
+fee             | No            | Transaction fee. Should be given in atomic units. Leave blank to use the minimum fee possible.    | int
+feePerByte      | No            | Fee to pay per byte of the transaction. Should be given in atomic units. If given, should be greater than 1.953125, the minimum network fee per byte.  | float
 unlockTime      | No            | The block height at which the transaction will be unlocked for spending.                 | int
 anonymity       | Yes           | Privacy (mixin) level from block 800,000 three (3)                                       | int
 extra           | No            | String of variable length. Can contain A-Z, 0-9 characters.                              | string
@@ -1222,20 +1223,21 @@ changeAddress   | No            | Valid and existing address in this container. 
 
 Argument              | Description                         | Format
 --------------------- | ----------------------------------- | ------
-transactionHash	      | Hash of the sent transaction		    | string
+transactionHash	      | Hash of the sent transaction		| string
+fee                   | The fee of the send transaction     | int
 
 <!--DOCUSAURUS_CODE_TABS-->
 
 <!--Shell-->
 ```sh
-curl -d '{"jsonrpc":"2.0","id":1,"password":"passw0rd","method":"sendTransaction","params":{"transfers":[{"address":"TRTLxxxx...","amount":5000}],"fee":10,"anonymity":3,"changeAddress":"TRTLyyyy..."}}' http://localhost:8070/json_rpc
+curl -d '{"jsonrpc":"2.0","id":1,"password":"passw0rd","method":"sendTransaction","params":{"transfers":[{"address":"TRTLxxxx...","amount":5000}],"anonymity":3,"changeAddress":"TRTLyyyy..."}}' http://localhost:8070/json_rpc
 ```
 
 <!--PHP-->
 ```php
 <?php
 $anonymity = 3;
-$fee = 10;
+$fee = 243000;
 $addresses = null;
 $unlockTime = null;
 $extra = null;
@@ -1256,7 +1258,7 @@ echo $response;
 <!--Python-->
 ```py
 anonymity = 3
-fee = 10
+fee = 243000
 addresses = []
 unlock_time = 0
 extra = ''
@@ -1279,7 +1281,7 @@ addresses := []string{"TRTLyyyy..."} // can be empty
 unlockTime := 0
 extra := ""
 paymentID := ""
-fee := 10
+fee := 243000
 changeAddress := "TRTLyyyy..."
 
 transfers := []map[string]interface{}{
@@ -1306,7 +1308,8 @@ if err != nil {
   "id":1,
   "jsonrpc":"2.0",
   "result":{
-    "transactionHash":"ae57e..."
+    "transactionHash":"ae57e...",
+    "fee": 4500
   }
 }
 ```
@@ -1321,7 +1324,8 @@ Argument        | Mandatory     | Description                                   
 --------------- | ------------- | ---------------------------------------------------------------------------------------- | -------
 addresses       | No            | Array of strings, where each string is an address                                        | array
 transfers       | Yes           | Array of address (string), amount (int)                                                  | array
-fee             | Yes           | Transaction fee. Minimal fee in TurtleCoin network is 0.10 TRTL. This parameter should be specified in minimal available TRTL units. For example, if your fee is 0.10 TRTL, you should pass it as 10. | int
+fee             | No            | Transaction fee. Should be given in atomic units. Leave blank to use the minimum fee possible.    | int
+feePerByte      | No            | Fee to pay per byte of the transaction. Should be given in atomic units. If given, should be greater than 1.953125, the minimum network fee per byte.  | float
 unlockTime      | No	        | Height of the block until which transaction is going to be locked for spending.	       | int
 anonymity       | Yes           | Privacy (mixin) level from block 800,000 three (3)                                       | int
 extra           | No            | String of variable length. Can contain A-Z, 0-9 characters.                              | string
@@ -1338,19 +1342,20 @@ changeAddress   | No            | Valid and existing in this container address. 
 Argument              | Description                         | Format
 --------------------- | ----------------------------------- | ------
 transactionHash	      | Hash of the sent transaction		    | string
+fee                   | The fee of the send transaction     | int
 
 <!--DOCUSAURUS_CODE_TABS-->
 
 <!--Shell-->
 ```sh
-curl -d '{"jsonrpc":"2.0","id":1,"password":"passw0rd","method":"createDelayedTransaction","params":{"transfers":[{"address":"TRTLxxxx...","amount":5000}],"fee":10,"anonymity":3,"changeAddress":"TRTLyyyy..."}}' http://localhost:8070/json_rpc
+curl -d '{"jsonrpc":"2.0","id":1,"password":"passw0rd","method":"createDelayedTransaction","params":{"transfers":[{"address":"TRTLxxxx...","amount":5000}],"anonymity":3,"changeAddress":"TRTLyyyy..."}}' http://localhost:8070/json_rpc
 ```
 
 <!--PHP-->
 ```php
 <?php
 $anonymity = 3;
-$fee = 10;
+$fee = 243000;
 $addresses = null;
 $unlockTime = null;
 $extra = null;
@@ -1371,7 +1376,7 @@ echo $response;
 <!--Python-->
 ```py
 anonymity = 3
-fee = 10
+fee = 243000
 addresses = []
 unlock_time = 0
 extra = ''
@@ -1394,7 +1399,7 @@ addresses := []string{"TRTLyyyy..."} // can be empty
 unlockTime := 0
 extra := ""
 paymentID := ""
-fee := 10
+fee := 243000
 changeAddress := "TRTLyyyy..."
 
 transfers := []map[string]interface{}{
@@ -1421,7 +1426,8 @@ if err != nil {
   "id":1,
   "jsonrpc":"2.0",
   "result":{
-    "transactionHash":"ae57e..."
+    "transactionHash":"ae57e...",
+    "fee": 4500
   }
 }
 ```
