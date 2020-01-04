@@ -22,7 +22,7 @@ There are currently a few different ways in which you can start mining TurtleCoi
 
 ### [NinjaRig](https://github.com/turtlecoin/ninjarig)
 
-NinjaRig is an all in CPU and GPU miner, modified from xmrig by a TurtleCoin community member.
+NinjaRig is an all in one CPU and GPU miner, modified from xmrig by a TurtleCoin community member.
 
 Please follow [this guide](NinjaRig-Guide) to start mining TurtleCoin with NinjaRig.
 

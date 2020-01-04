@@ -18,24 +18,17 @@ If on Linux, Mac, or ARM, untar the file into a new folder. (`tar -xf violetmine
 ![guided-setup](../../assets/violetminer-guided-setup.png)
 
 1. Double click / run the violetminer executable.
-
 2. You will be prompted for a mining pool to use. You can learn more about picking a pool [here](Pools). Make sure you include the pool port. You can find this information on most pools 'Getting Started' page.
-
    * If you're having difficulty copy/pasting into the command window on Windows, you can click in the top left of the window, then select edit, then paste.
-
 3. Next, you need to enter the pool username. For the majority of pools, this is your TurtleCoin address. It should start with `TRTL`. If you need to use something else, this will be listed on your pool page.
-
 4. Next up is the pool password. For most pools, you can just leave this blank, or use `x`. Some pools will use it to allow extra configuration options. Again, check the getting started page for your pool for more information.
-
 5. The next thing to choose is the algorithm. Since you're wanting to mine TurtleCoin, just enter `turtlecoin` here.
-
 6. Finally, we have the rig ID. This can be used if you have multiple computers mining and want to be able to distinguish between them on the pool side. If you don't, just hit the `Enter` key here to leave it blank.
-
 7. You're done! If you want to add another pool, enter `y` on this step. If not, enter `n` and you will start mining if you entered everything correctly!
 
-You can now just double click violetminer, and it will read from the config file.  
+If you need to relaunch the miner, you don't need to enter all your details again - they've been written to a config file, `config.json`. Just double click violetminer, and it will read all your settings from the config file.
 
-If you want to modify your config, it has been written to the file `config.json`, in the directory you launched violetminer from.  
+If you want to modify your config, just open up the file (`config.json`) - it should be in the same folder as the directory you launched violetminer from.
   * Want more information on how to modify the config file? Check out [this section](#config-file-explanation).
 
 ### Command Line Setup
@@ -44,13 +37,10 @@ If you want to modify your config, it has been written to the file `config.json`
 
 It is not recommended to use the command line launching, as it is less configurable, but regardless, here's the explanation.
 
-1. The following tables list all the available command line options.
-
-2. Each `Flag` should be followed by the corresponding `Argument`.
-
-3. For example, since `--pool` takes a `String` argument, we should specify it like so: `violetminer --pool trtl.pool.mine2gether.com:3335`.
-
-4. If a flag takes an argument of `None`, that means you just use the flag, with nothing following it. For example, `violetminer --disableCPU`.
+* The following tables list all the available command line options.
+* Each `Flag` should be followed by the corresponding `Argument`.
+* For example, since `--pool` takes a `String` argument, we should specify it like so: `violetminer --pool trtl.pool.mine2gether.com:3335`.
+* If a flag takes an argument of `None`, that means you just use the flag, with nothing following it. For example, `violetminer --disableCPU`.
 
 #### Mandatory Options
 
