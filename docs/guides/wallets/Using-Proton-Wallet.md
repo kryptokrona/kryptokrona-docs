@@ -231,3 +231,37 @@ You can safely exit the wallet in any of these methods:
 ### Getting Help
 
 If you need any assistance, navigate to Help > Support in the top menu of the wallet, and you will be invited to the official support discord. You can also navigate to the official support discord from [this link](https://discord.gg/ShhSa6), or you can also ask in the `#help` channel of the official [TurtleCoin™ Discord server](http://chat.turtlecoin.lol).
+
+## Troubleshooting and Reporting Bugs
+
+As much effort as possible is made to ensure Proton is free of bugs and works as intended. Alas, I am only one man and sometimes things can slip through unnoticed. If you'd like to report a bug, it is important to get log output of the bug occurring, that way I and the upstream developers can more easily figure out what is going on. You can either report the issue through GitHub or you may ping me @ExtraHash in the TurtleCoin discord server. Without further ado, here are instructions on how to get a log file:
+
+### How To Get A Log File and Send It To The Developers
+
+1. Start Proton Wallet as you normally do. You should be greeted by the login screen.
+
+![proton login screen](../../assets/proton-login.png)
+
+2. Log in to the wallet. Your wallet transaction history should display. Press the settings cog button on the top right.
+
+![proton wallet settings cog location](../../assets/proton-settings-cog-location.png)
+
+3. The settings page should be displayed. On the left menu, click the "Wallet" tab to go to the wallet settings.
+
+![proton wallet settings button location](../../assets/proton-wallet-settings-location.png)
+
+4. Click the drop down labelled "WalletBackend Log Level". Select DEBUG as the option. This is usually sufficient, the developers may ask you to repeat this process with TRACE selected.
+
+![proton wallet log level drop down](../../assets/proton-debug-logging-settings.png)
+
+5. Click the "Show Console" button, located directly under the log level dropdown. A new window will open up. Click "Console" on the top of that new window.
+
+![proton wallet dev console](../../assets/proton-wallet-dev-console.png)
+
+6. IMPORTANT: Go back to the wallet. Reproduce whatever bug you're trying to report. If it's a transaction bug, make a transaction, if it's a syncing bug, allow it to attempt to sync for a period of time, etc.
+
+7. Back in the console window, right click the text you should see scrolling by and select "Save as." Save the log file somewhere on your computer that you know how to access (i.e., your desktop). Drag and drop the log file into the GitHub text box or Discord with your bug report.
+
+![proton save log file](../../assets/proton-save-log-file.png)
+
+That's it! You've successfully saved a log file and helped your developer solve your problem. The developer will review the log file and attempt to make any necessary fixes.
