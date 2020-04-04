@@ -2,7 +2,7 @@
 title: Running a Node on a Pi
 ---
 
-This guide is going to walk you through the process of installing and setting up a 64 bit OS, downloading the TurtleCoin ARM binaries and syncing your node on a Raspberry Pi. ARM builds just recently got fixed, so this is great news for anyone that has been wanting to run a node on one.
+This guide is going to walk you through the process of installing and setting up a 64 bit OS, downloading the kryptokrona ARM binaries and syncing your node on a Raspberry Pi. ARM builds just recently got fixed, so this is great news for anyone that has been wanting to run a node on one.
 
 ## Requirements
 
@@ -26,26 +26,26 @@ Connect your ethernet cable and plug in the pi. Either install a keyboard, mouse
 
 Once logged in, you might want to run `sudo pi64-config` in order to get assisted with your setup! Otherwise, set up the linux environment to your liking.
 
-## Download TurtleCoind
+## Download kryptokronad
 
-Once you're either ssh'd into your OS or using it directly with a mouse and keyboard, we're going to need to download the TurtleCoin software. You can use these commands to do so:
+Once you're either ssh'd into your OS or using it directly with a mouse and keyboard, we're going to need to download the kryptokrona software. You can use these commands to do so:
 
 `cd ~`
-`mkdir turtlecoin`
-`cd turtlecoin`
+`mkdir kryptokrona`
+`cd kryptokrona`
 `sudo apt install p7zip-full`
-`wget https://cdn.discordapp.com/attachments/405183171999694849/536768869570969620/Release.7z`
-`7z xz Release.7z`
+`wget https://github.com/kryptokrona/kryptokrona/releases/download/0.0.1/kryptokrona-linux.zip`
+`7z xz kryptokrona-linux.zip`
 
 and check that it's working ok with 
 
-`./TurtleCoind --version`
+`./kryptokronad --version`
 
 >Note: you'll notice we're wgetting this link from discord's servers. With the ARM builds being fixed so recently, none of the official releases have been updated yet. Once a new official released is pushed this link will be updated.
 
 ## Mount your SSD
 
-TurtleCoind needs alot of space on a fast drive for the database. So plug in your SSD to one of the USB ports on the pi and we'll create a mount point for it.
+kryptokronad needs alot of space on a fast drive for the database. So plug in your SSD to one of the USB ports on the pi and we'll create a mount point for it.
 
 First, run this command to view your available disks.
 
@@ -75,20 +75,20 @@ Scroll to the bottom and add
 
 Save and close by pressing `Ctrl+X`, `y`
 
-## Run TurtleCoind and Keep it Running
+## Run kryptokronad and Keep it Running
 
 `sudo apt install screen`
 
 > install screen to keep the daemon running in the background
 
-`cd ~/turtlecoin/`
-`./TurtleCoind --data-dir '/home/pi/.blockchain' --save-config 'daemon.conf'`  
+`cd ~/kryptokrona/`
+`./kryptokronad --data-dir '/home/pi/.blockchain' --save-config 'daemon.conf'`  
 
->(point TurtleCoind to use the mount point we made earlier as the database location, and save a config file to do so automatically in the future)
+>(point kryptokronad to use the mount point we made earlier as the database location, and save a config file to do so automatically in the future)
 
-`screen -d -m ./TurtleCoind -c daemon.conf` 
+`screen -d -m ./kryptokronad -c daemon.conf` 
 
->tell turtlecoin to run with the config file we just generated inside of a detached screen session
+>tell kryptokrona to run with the config file we just generated inside of a detached screen session
 
 Now just wait to sync!
 
@@ -96,7 +96,7 @@ Now just wait to sync!
 
 There's a couple things you can do to speed up the blockchain sync. One is to use checkpoints: follow the directions [here](../guides/wallets/Using-Checkpoints).
 
-Alternatively, if you have another computer that already has a synced blockchain, you can copy the data in the .TurtleCoin or Appdata/Roaming/TurtleCoin folder onto your SSD and enjoy starting with a fully synced chain!
+Alternatively, if you have another computer that already has a synced blockchain, you can copy the data in the .kryptokrona or Appdata/Roaming/kryptokrona folder onto your SSD and enjoy starting with a fully synced chain!
 
 ## Special Thanks
 
