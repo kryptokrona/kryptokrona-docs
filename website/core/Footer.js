@@ -22,7 +22,7 @@ class Footer extends React.Component {
   }
 
   render() {
-    const repoUrl = `https://github.com/turtlecoin/turtlecoin-docs`
+    const repoUrl = `https://github.com/kryptokrona/kryptokrona-docs`
     return (
       <footer className="nav-footer" id="footer">
         <section className="sitemap">
@@ -50,10 +50,10 @@ class Footer extends React.Component {
           </div>
           <div>
             <h5>Community</h5>
-            <a href="http://chat.turtlecoin.lol/">Discord Chat</a>
-            <a href="https://reddit.com/r/trtl/">Reddit</a>
+            <a href="https://discord.gg/cDzW4w">Discord Chat</a>
+            
             <a
-              href="https://twitter.com/_turtlecoin"
+              href="https://twitter.com/kryptokrona"
               target="_blank"
               rel="noreferrer noopener">
               Twitter
@@ -61,11 +61,11 @@ class Footer extends React.Component {
           </div>
           <div>
             <h5>More</h5>
-            <a href="https://blog.turtlecoin.lol/">Blog</a>
-            <a href="https://github.com/turtlecoin">GitHub</a>
+            <a href="https://kryptokrona.se">Blog</a>
+            <a href="https://github.com/kryptokrona">GitHub</a>
             <a
               className="github-button"
-              href="https://github.com/turtlecoin/turtlecoin-docs"
+              href="https://github.com/kryptokrona/kryptokrona-docs"
               data-icon="octicon-star"
               data-count-href={`${repoUrl}/stargazers`}
               data-show-count="true"
