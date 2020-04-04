@@ -55,18 +55,18 @@ sudo cmake .. -DCMAKE_C_COMPILER=gcc-8 -DCMAKE_CXX_COMPILER=g++-8
 sudo make -j4
 ```
 
-Compiling the miner could take several minutes to complete. When your miner is ready you need to create a configuration file with your TurtleCoin settings. Navigate to your home directory and create a file named config.json.trtl.
+Compiling the miner could take several minutes to complete. When your miner is ready you need to create a configuration file with your Kryptokrona settings. Navigate to your home directory and create a file named config.json.xkr.
 
 ```bash
 cd ~
-sudo nano config.json.trtl
+sudo nano config.json.xkr
 ```
 
 Populate your configuration file with something similar to the code below. Make sure that `url`, `user`, and `pass` are populated with the your own unique and proper values.
 
 ```json
 {
-    "algo": "chukwa",
+    "algo": "cryptonight-pico/trtl",
     "background": false,
     "colors": true,
     "retries": 5,
@@ -93,13 +93,13 @@ Populate your configuration file with something similar to the code below. Make 
 }
 ```
 
-Create a separate miner start script so that you can easily start the miner and invoke the proper cofiguration file with a single command. I like to name it "mineturtle".
+Create a separate miner start script so that you can easily start the miner and invoke the proper cofiguration file with a single command. I like to name it "minexkr".
 
 ```
-sudo nano mineturtle
+sudo nano minexkr
 ```
 
-Place the following code into the mineturtle file:
+Place the following code into the minexkr file:
 
 ```bash
 #!/bin/bash
@@ -110,17 +110,17 @@ sudo sysctl -w vm.nr_hugepages=8
 Make the file executable as a script:
 
 ```
-sudo chmod +x mineturtle
+sudo chmod +x minexkr
 ```
 
 Now you can start the miner using the start script:
 
 ```
-./mineturtle
+./minexkr
 ```
 
 ## Conclusion
 
-Happy mining and make sure to support small pools and keep TurtleCoin mining decentralized.
+Happy mining and make sure to support small pools and keep Kryptokrona mining decentralized.
 
 

@@ -33,10 +33,10 @@ Rather simple; the pool operator will take a percentage of the reward of the blo
 Example-
 
 - the fee is 0.1%
-- the block reward is 30000 TRTL
+- the block reward is 30000 XKR
 - 30000 x 0.1% = 30
 
-Therefore, the pool operator will take 30 TRTL for himself.
+Therefore, the pool operator will take 30 XKR for himself.
 
 
 ## Definition of Different Types of Methods
@@ -53,13 +53,13 @@ Example-
 
 - A block is found after 100,000 shares
 - You submitted 1,000 of those shares (you have 1% of the pool's total hash power)
-- There’s 30000 TRTL per block
+- There’s 30000 XKR per block
 
-Quite simply you will get 1% of the block = 300 TRTL.
+Quite simply you will get 1% of the block = 300 XKR.
 
-Now if the pool has a bad round (a round is the time taken to find a block) and it takes 200,000 shares to find a block (twice as long) and you have submitted 2,000 shares (as you’ve been mining twice as long), you still only get 1% of the block = 300 TRTL
+Now if the pool has a bad round (a round is the time taken to find a block) and it takes 200,000 shares to find a block (twice as long) and you have submitted 2,000 shares (as you’ve been mining twice as long), you still only get 1% of the block = 300 XKR
 
-This can also work in the miners favor too, as if it takes half the time (50,000 shares) to find a block and you submitted only 500 shares - again 1% - 300 TRTL.
+This can also work in the miners favor too, as if it takes half the time (50,000 shares) to find a block and you submitted only 500 shares - again 1% - 300 XKR.
 
 Basically, you always get a percentage of the block and you win/lose depending on the “luck” of the pool.
 

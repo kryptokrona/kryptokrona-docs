@@ -1,8 +1,8 @@
 ---
-title: Solo-mining TurtleCoin
+title: Solo-mining Kryptokrona
 ---
 
-Solo-mining TurtleCoin means that you, alone, try to find the next block.  
+Solo-mining Kryptokrona means that you, alone, try to find the next block.  
 **It is extremely hard, and not recommended** - try our [other guides](Mining) if you want a more steady flow of TRTL.  
 Solo-mining is limited to *only your CPU*.
 
@@ -10,19 +10,19 @@ If you're sure you want to solo mine, let's continue.
 
 ## Setup and Running
 
-Make sure you have  `TurtleCoind` and `miner`, both can be found in [the latest release](http://latest.turtlecoin.lol).    
+Make sure you have  `Kryptokronad` and `miner`, both can be found in [the latest release](https://github.com/kryptokrona/kryptokrona/releases).    
 
 *Note*: If they aren't there, you'll have to compile it yourself:
 
-* [Windows](https://github.com/turtlecoin/turtlecoin#windows)
-* [Linux](https://github.com/turtlecoin/turtlecoin#linux)
-* [OSX](https://github.com/turtlecoin/turtlecoin#osxapple-using-clang)
+* [Windows](https://kryptokrona.se/Kryptokrona-win.zip)
+* [Linux](https://kryptokrona.se/Kryptokrona-linux.zip)
+* [OSX](https://kryptokrona.se/Kryptokrona-mac.zip)
 
-Ensure **`TurtleCoind` is running and fully synced**.
+Ensure **`Kryptokronad` is running and fully synced**.
 
 Go to your folder that has `miner.exe` in it and start a cmd prompt.  
 
-- This can easily be done by moving to the `TurtleCoind` directory in Windows Explorer, then typing `cmd` in the search bar and hitting enter:
+- This can easily be done by moving to the `Kryptokronad` directory in Windows Explorer, then typing `cmd` in the search bar and hitting enter:
 
 ![opening win cmd](../../assets/opening-win-cmd.png)
 
@@ -31,21 +31,21 @@ In Linux, you may be able to right click on your directory and "Open in" Termina
 ![opening linux cmd](../../assets/opening-linux-cmd.png)
 
 When it opens, type:  
-`miner --address TRTL.. --threads 4 --scan-time 1 --log-level 3`
+`miner --address SEKR.. --threads 4 --scan-time 1 --log-level 3`
 
-Repace `TRTL..` with your TurtleCoin public address.  
+Repace `SEKR..` with your Kryptokrona public address.  
 We recommend setting the `--threads` option to half of how many you have. So if you have 12 threads in your CPU, set it to `6`.  
 
 Example:  
 ```bash
-miner --address  TRTLv3pFrFm2yk4cYNtKf5fxV1b594tNrZfEV2CYWJsTSqr9BWoWMrUNpQaeD9StrzQrxpRQKPCdd1FfvT6D6dAg4pY6iB7sqsG --threads 4 --scan-time 1 --log-level 3
+miner --address  SEKReX2avthCKT4YUUKV3jgZ1Hderk9XbRciqp8vHVPoDSb9nA1dCV86Jia3TkD4jWgfxeh1AEYV3DKEAesSb7mSAvNqf6cB6kR --threads 4 --scan-time 1 --log-level 3
 ```
 
-Congratulations, you are now solo mining TurtleCoin from your CPU.
+Congratulations, you are now solo mining Kryptokrona from your CPU.
 
 #### Notes
 
-* `TurtleCoind` *must* stay running for the miner to mine TurtleCoin.  
+* `Kryptokronad` *must* stay running for the miner to mine Kryptokrona.  
 * Be patient. Finding a block may happen within the first few hours of mining. It also may take a week. Or it may never happen.  
-* If you accidently close out `TurtleCoind` you can restart the miner by hitting Ctrl+C on your keyboard, then re-entering the miner command given above.  
+* If you accidently close out `Kryptokronad` you can restart the miner by hitting Ctrl+C on your keyboard, then re-entering the miner command given above.  
 * You may have to adjust the amount of threads based on your PC's capabilities(half of how many your CPU has is recommended).

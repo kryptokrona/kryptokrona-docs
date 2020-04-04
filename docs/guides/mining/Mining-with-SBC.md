@@ -4,7 +4,7 @@ title: Mining with a SBC
 
 The following guide will show you how to compile a CPU miner (XMRig) for SBCs like the Raspberry Pi.
 
-If you're using a RPi3 or RPi3B+, check out [this guide](Optimizing-RPi-TurtleCoin-Mining) for a more optimized setup.
+If you're using a RPi3 or RPi3B+, check out [this guide](Optimizing-RPi-Kryptokrona-Mining) for a more optimized setup.
 
 What are the benefits of compiling XMRig from scratch?
   - You'll have the most up-to-date version of XMRig
@@ -86,11 +86,11 @@ nano config.json
 
 Your terminal should display the contents of `config.json`. 
 
-* In order to mine TurtleCoin, we tell XMRig what algorithm you want to mine. Look out for the `"algo":` setting and change it to `"algo": "chukwa",`
+* In order to mine Kryptokrona, we tell XMRig what algorithm you want to mine. Look out for the `"algo":` setting and change it to `"algo": "cryptonight-pico/trtl",`
 
 * In place of `"url": "donate.v2.xmrig.com:3333",` you'll need to choose a pool to mine towards. Make sure to choose the right port. You can learn more about choosing a pool [here](Pools).
 
-* Instead of `"user": "YOUR_WALLET_ADDRESS",` simply paste your TurtleCoin wallet address.
+* Instead of `"user": "YOUR_WALLET_ADDRESS",` simply paste your Kryptokrona wallet address.
 
   If you don't have one yet, you can find out how to create a wallet [here](../wallets/Making-a-Wallet).
 

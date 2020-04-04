@@ -24,14 +24,10 @@
       "Mining": [
          "guides/mining/Mining",
          "guides/mining/Pools",
-         "guides/mining/NinjaRig-Guide",
-         "guides/mining/violetminer-Guide",
          "guides/mining/XMRIG-Guide",
          "guides/mining/CPU-Solo-Mining",
          "guides/mining/Mining-with-SBC",
-         "guides/mining/Optimizing-RPi-Kryptokrona-Mining",
-         "guides/mining/Using-Termux",
-         "guides/mining/Using-Crypto-Miner"
+         "guides/mining/Optimizing-RPi-Kryptokrona-Mining"
       ],
       "Wallets": [
          "guides/wallets/Making-a-Wallet",

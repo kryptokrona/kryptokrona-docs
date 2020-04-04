@@ -1,12 +1,12 @@
 ---
-title: TurtleCoind config
+title: Kryptokronad config
 ---
 
-## How to config TurtleCoind?
+## How to config Kryptokronad?
 
-Run TurtleCoind with arg `--help` will print all options.
+Run Kryptokronad with arg `--help` will print all options.
 
-TurtleCoind can start with these options by command line args, or use `-c` followed a json file for configuration.
+Kryptokronad can start with these options by command line args, or use `-c` followed a json file for configuration.
 
 The option in config file will unwrap the front `--`, for example:
 ```json

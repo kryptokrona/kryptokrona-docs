@@ -2,7 +2,7 @@
 title: Mining Intro
 ---
 
-Mining is essentially the process of using your computer to help verify and secure a cryptocurrency network, in our case, it is the TurtleCoin network. By doing this, you will be rewarded with some TurtleCoin.
+Mining is essentially the process of using your computer to help verify and secure a cryptocurrency network, in our case, it is the Kryptokrona network. By doing this, you will be rewarded with some Kryptokrona.
 
 If you want to learn about cryptocurrencies, mining is a great place to start!
 
@@ -16,27 +16,16 @@ Unless you know what you are doing, please ***only*** download from the links be
 
 ---
 
-There are currently a few different ways in which you can start mining TurtleCoin:
+There are currently a few different ways in which you can start mining Kryptokrona:
 
 ## Desktop Mining
 
-### [NinjaRig](https://github.com/turtlecoin/ninjarig)
-
-NinjaRig is an all in one CPU and GPU miner, modified from xmrig by a TurtleCoin community member.
-
-Please follow [this guide](NinjaRig-Guide) to start mining TurtleCoin with NinjaRig.
-
-### [violetminer](https://github.com/turtlecoin/violetminer)
-
-violetminer is a CPU and NVIDIA GPU miner, made from scratch by a TurtleCoin community member.
-
-Please follow [this guide](violetminer-Guide) to start mining TurtleCoin with violetminer.
 
 ### [XMRig](https://github.com/xmrig/xmrig)
 
 XMRig comes as a CPU and GPU miner separately and run two separate instances in your computer. One will use your CPU and the other one will use your GPU.
 
-Please follow [this guide](XMRIG-Guide) to start mining TurtleCoin with XMRig.
+Please follow [this guide](XMRIG-Guide) to start mining Kryptokrona with XMRig.
 
 ### Solo Mining
 
@@ -46,18 +35,6 @@ Solo Mining is where you, alone, try to solve a block. It is extremely difficult
 
 Please follow [this guide](Mining-with-SBC) to mine with a SBC/Rasperry Pi.
 
-## Mobile Mining
-
-**Please note:** Using your mobile to mine TurtleCoin is not effective and should only be done for the lulz. It may also cause the phone to overheat and result in premature silicon degradation, shortening the lifespan of your phone.    
-
-### Android
-
-#### [Termux](https://play.google.com/store/apps/details?id=com.termux&hl=en_US)
-
-Termux is a mobile CLI app; if you want to use it, you will have to download and compile XMRig on your phone (covered in the guide).
-It is NOT a GUI app, and you will need to manually type/paste in commands
-
-If you'd like to use it, check out [this guide](Using-Termux)
 
 ## Pools
 
@@ -65,4 +42,4 @@ You may view more info on mining pools [here](Pools).
 
 ## Have Questions or Need Help?
 
-Check out our [Discord](http://chat.turtlecoin.lol) or [subreddit](https://www.reddit.com/r/TRTL/) to get in touch.
+Check out our [Discord](http://chat.Kryptokrona.lol) to get in touch.

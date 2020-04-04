@@ -38,11 +38,11 @@ Needs to be compiled. Instructions [here](https://github.com/xmrig/xmrig/wiki/OS
 2. Open the `config.json` file with Notepad
 3. Find and change the following lines:
 
-* `"algo: "chukwa"`
+* `"algo: "cryptonight-pico/trtl"`
 * `"url: "[pool address]"`
 * `"user: "[wallet address]"`
 
-- Instead of `[wallet address]`, simply paste your TurtleCoin wallet's address. Make sure to keep the `"`!
+- Instead of `[wallet address]`, simply paste your Kryptokrona wallet's address. Make sure to keep the `"`!
   - If you don't have one yet, you can find out how to create a wallet [here](../wallets/Making-a-Wallet)
 
 - In place of `[pool address]`, you'll need to choose a pool to mine towards. You can learn more about them [here](Pools). Make sure to keep the `"`s!  
