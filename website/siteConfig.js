@@ -9,8 +9,8 @@
 // site configuration options.
 
 const siteConfig = {
-  title: 'TurtleCoin Docs', // Title for your website.
-  tagline: 'Documentation for all things TurtleCoin',
+  title: 'Kryptokrona Docs', // Title for your website.
+  tagline: 'Documentation for Kryptokrona',
   url: 'https://docs.turtlecoin.lol', // Your website URL
   baseUrl: '/', // Base URL for your project
   // For github.io type URLs, you would set the url and baseUrl like:
@@ -27,7 +27,7 @@ const siteConfig = {
   // For no header links in the top nav bar -> headerLinks: [],
   headerLinks: [
     {doc: 'Getting-Started', label: 'Getting Started'},
-    {doc: 'about/About-TurtleCoin', label: 'About'},
+    {doc: 'about/About-Kryptokrona', label: 'About'},
     {doc: 'Frequently-Asked-Questions', label: 'FAQ'},
     {doc: 'guides/mining/Mining', label: 'Guides'},
     {doc: 'developer/Resources', label: 'For Developers'},
@@ -48,8 +48,8 @@ const siteConfig = {
   /* Colors for website */
   // See Brand Manual for more info on these
   colors: {
-    primaryColor: '#00853D', // green
-    secondaryColor: '#212721', // black
+    primaryColor: '#3d3d3d', // green
+    secondaryColor: '#ffffff', // black
   },
 
   /* Custom fonts for website */
@@ -62,9 +62,9 @@ const siteConfig = {
 
   // This copyright info is used in /core/Footer.js and blog RSS/Atom feeds.
   // Links are rendered directly in Footer.js
-  copyright1: `Copyright © ${new Date().getFullYear()} TurtleCoin`,
+  copyright1: `Copyright © ${new Date().getFullYear()} Kryptokrona`,
   copyright2: `Docs released under the`,
-  copyright3: `TurtleCoin released under the`,
+  copyright3: `Kryptokrona released under the`,
 
   highlight: {
     // Highlight.js theme to use for syntax highlighting in code blocks.

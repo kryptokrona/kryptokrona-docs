@@ -2,13 +2,13 @@
 title: Compiling from Source
 ---
 
-The instructions in the [README.md](https://github.com/turtlecoin/turtlecoin/blob/development/README.md) cover common platforms for compiling from source, it would be impractical to include them all.  
-Thus, this page exists to capture the other platforms/distros that TurtleCoin has been successfully compiled on.  
+The instructions in the [README.md](https://github.com/kryptokrona/kryptokrona/blob/development/README.md) cover common platforms for compiling from source, it would be impractical to include them all.  
+Thus, this page exists to capture the other platforms/distros that kryptokrona has been successfully compiled on.  
 Please add to it if your environment is not covered, thanks!
 
 ## CentOS 7
 
-TurtleCoin build on CENTOS 7 or RHEL 7 with DEVTOOLS 7
+kryptokrona build on CENTOS 7 or RHEL 7 with DEVTOOLS 7
 
 ```
 $ sudo yum groupinstall 'Development Tools'
@@ -51,12 +51,12 @@ $ ./bootstrap.sh
 $ ./b2
 ```
 
-### Get TurtleCoin source and Compile
+### Get kryptokrona source and Compile
 ```
 $ cd ..
 
-$ git clone https://github.com/turtlecoin/turtlecoin.git
-$ cd turtlecoin
+$ git clone https://github.com/kryptokrona/kryptokrona.git
+$ cd kryptokrona
 $ mkdir build && cd build
 $ scl enable devtoolset-7 bash
 $ export CXXFLAGS="-std=gnu++11"
@@ -64,6 +64,5 @@ $ cmake3 .. -DBOOST_ROOT=~/boost_1_62_0
 $ make
 ``` 
 
-Good Turtle / Good beer Tourtel
 
 polar-it: Is faster than the equivalent version on Ubuntu 16.04

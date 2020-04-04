@@ -2,9 +2,9 @@
 title: Frequently Asked Questions
 ---
 
-## TurtleCoind / zedwallet Issues
+## Kryptokronad / zedwallet Issues
 
-#### Q: I'm seeing an error in TurtleCoind `Proof of work too weak for block...` and the syncing stopped.
+#### Q: I'm seeing an error in Kryptokronad `Proof of work too weak for block...` and the syncing stopped.
 
 This occurs because of the blockchain forking, generally when one mining pool has a very large hashrate.
 
@@ -23,54 +23,54 @@ Re-sync your daemon from scratch(see below question)
 
 ##### Q: How can I re-sync the blockchain?
 
-Close any TurtleCoin-related software, then go to `%APPDATA%`, and delete the `TurtleCoin` folder.  
-Reopen TurtleCoind/the GUI wallet and let it re-sync.
+Close any Kryptokrona-related software, then go to `%APPDATA%`, and delete the `Kryptokrona` folder.  
+Reopen Kryptokronad/the GUI wallet and let it re-sync.
 
 Alternatively, check [this guide](guides/wallets/Using-Checkpoints) for instructions on how to use checkpoints for a quicker sync, or try a [remote node](guides/wallets/Using-Remote-Nodes)
 
-##### Q: When I open TurtleCoind on a Mac, I get an error `Illegal instruction: 4`. How can I fix it?
+##### Q: When I open Kryptokronad on a Mac, I get an error `Illegal instruction: 4`. How can I fix it?
 
 This is a known issue with older macs or un-updated macs.
 
 Try entering this into a terminal -
 
 ```
-curl -sL "https://raw.githubusercontent.com/turtlecoin/turtlecoin/master/multi_installer.sh" | bash
+curl -sL "https://raw.githubusercontent.com/Kryptokrona/Kryptokrona/master/multi_installer.sh" | bash
 ```
 
 This automated script should compile the software itself, and place the binaries in ./src once done.
 
 
-##### Q: I've opened the wallet, and I'm getting lots of red messages like "It looks like TurtleCoind isn't open!"...
+##### Q: I've opened the wallet, and I'm getting lots of red messages like "It looks like Kryptokronad isn't open!"...
 
 ```
-It looks like TurtleCoind isn't open!
+It looks like Kryptokronad isn't open!
 
-Ensure TurtleCoind is open and has finished initializing.
-If it's still not working, try restarting TurtleCoind. The daemon sometimes gets
+Ensure Kryptokronad is open and has finished initializing.
+If it's still not working, try restarting Kryptokronad. The daemon sometimes gets
 stuck.
-Alternatively, perhaps TurtleCoind can't communicate with any peers.
+Alternatively, perhaps Kryptokronad can't communicate with any peers.
 
 The wallet can't function until it can communicate with the network.
 ```
 
-You need to also open up `TurtleCoind.exe` and let it sync. TurtleCoind is your connection to the network, and needs to be open and synced whenever you want to use your wallet.
+You need to also open up `Kryptokronad.exe` and let it sync. Kryptokronad is your connection to the network, and needs to be open and synced whenever you want to use your wallet.
 
-##### Q: I've opened the wallet, and I'm getting lots of messages like "Your TurtleCoind isn't fully synced yet!"..
+##### Q: I've opened the wallet, and I'm getting lots of messages like "Your Kryptokronad isn't fully synced yet!"..
 
 ```
 Until you are fully synced, you won't be able to send transactions, and your balance may be missing or incorrect!
 ```
 
-Your daemon hasn't finished syncing yet. Keep zedwallet open, and wait until you are 0 days behind the current block, and for the daemon to print out a green message saying `Successfully synchronized with the TurtleCoin Network.`  
+Your daemon hasn't finished syncing yet. Keep zedwallet open, and wait until you are 0 days behind the current block, and for the daemon to print out a green message saying `Successfully synchronized with the Kryptokrona Network.`  
 You can also type `status` in the daemon and press enter to see the current height it's at.
 
 ##### Q: I think I should have more money in my balance than it is showing, what should I do?
 
 Re-sync your daemon from scratch(see [here](#q-how-can-i-re-sync-the-blockchain)), sync [using checkpoints](guides/wallets/Using-Checkpoints) or use a [remote node](guides/wallets/Using-Remote-Nodes)) if you're using the GUI wallet.
-If it still doesn't work, then [update](http://latest.turtlecoin.lol)
+If it still doesn't work, then [update](http://latest.Kryptokrona.lol)
 
-*  Then, close and reopen zedwallet and TurtleCoind.
+*  Then, close and reopen zedwallet and Kryptokronad.
 *  Type `reset` in zedwallet after reopening your wallet file.
 *  It should start resetting your wallet, but the progress might not be immediately obvious - wait a while, and it should start counting up the blocks and printing out your transactions as it gets to them.
 
@@ -89,15 +89,15 @@ Try attemping a fusion transaction:
 
 Your wallet is now being optimized. When it finishes, your transaction should be able to send
 
-#### Q: How do I send TRTL?
+#### Q: How do I send XKR?
 
 
-You can check [this out](guides/wallets/Using-zedwallet##sending-turtlecoin-transactions) for steps on how to send TRTL to someone.
+You can check [this out](guides/wallets/Using-zedwallet##sending-Kryptokrona-transactions) for steps on how to send XKR to someone.
 
 #### Q: How do I send money to exchanges / use payment ID?
 
 
-You can check [this out](guides/wallets/Using-zedwallet#payment-id) for steps on how to send TRTL with the payment ID.
+You can check [this out](guides/wallets/Using-zedwallet#payment-id) for steps on how to send XKR with the payment ID.
 
 #### Q: What is mixin?
 
@@ -108,12 +108,12 @@ Mixin is locked by the network to `7` as of block `620,000` and is not adjustabl
 #### Q: How can I view my balance?
 
 
-If `TurtleCoind.exe` is fully synced, in zedwallet, simply type `balance`.
+If `Kryptokronad.exe` is fully synced, in zedwallet, simply type `balance`.
 
-#### Q: How long does it take to sync TurtleCoind.exe?
+#### Q: How long does it take to sync Kryptokronad.exe?
 
 
-Currently it takes a couple of hours. This number will increase as more people use TRTL and the blockchain gets larger. If you'd like to speed up the process, check out the question below.
+Currently it takes a couple of hours. This number will increase as more people use XKR and the blockchain gets larger. If you'd like to speed up the process, check out the question below.
 
 #### Q: Can I speed up the syncing of the blockchain?
 
@@ -155,7 +155,7 @@ Yes, of course! We're working on a guide.
 #### Q: I've started mining, how can I view my stats?
 
 
-Visit your pool's homepage. There should be a spot for you to put in your TRTL address, and you can then view your hashrate, pending balance, payouts, and more.
+Visit your pool's homepage. There should be a spot for you to put in your XKR address, and you can then view your hashrate, pending balance, payouts, and more.
 
 #### Q: Why is the hashrate on the pool website different to what is shown in my miner?
 
@@ -237,23 +237,23 @@ Alternatively, you can hop onto the [Discord][discord_link] if you're having iss
 
 #### Q: What is the miner executable / why isn't it working?
 
-This is a solo miner, which is CPU only. This means to gain any TRTL, you have to find a block by yourself, which unless you have many powerful CPUs, is very unlikely.   
+This is a solo miner, which is CPU only. This means to gain any XKR, you have to find a block by yourself, which unless you have many powerful CPUs, is very unlikely.   
 
 We strongly recommend using a pool, and a miner such as NinjaRig.   
 
 Nevertheless, if you want to try it out, open a command prompt in the same directory, and run
 
 ```
-./miner --address TRTL...
+./miner --address XKR...
 ```
 
-replacing `TRTL...` with your full TRTL address.
+replacing `XKR...` with your full XKR address.
 
-You need to have `TurtleCoind` open and synced to use this miner, unlike conventional miners, where the pool hosts the daemon.
+You need to have `Kryptokronad` open and synced to use this miner, unlike conventional miners, where the pool hosts the daemon.
 
-#### Q: Is there a calculator to see how much TRTL I'll mine per day?
+#### Q: Is there a calculator to see how much XKR I'll mine per day?
 
-Your pool's homepage should have one - enter your hashrate and it'll give an estimate of how much TRTL you'll mine per day.  
+Your pool's homepage should have one - enter your hashrate and it'll give an estimate of how much XKR you'll mine per day.  
 If there isn't, you can check one [here](http://turtlepool.space/).
 
 ## Paper Wallet / Cold Storage?
@@ -270,7 +270,7 @@ Why is this a thing? If done properly it means it is near impossible for the key
 
 You see above/elsewhere wallet files are being created via the wallet software, these files might be stored unencrypted, if unencrypted then the keys can be read by malicious software and balances of those wallets, transferred.
 
-Thus to protect against that scenario you could transfer any TRTL balance to one of these cold storage addresses. Please remember to keep secure/secret backups of your keys. If you lose the keys you lose any balance that was transferred to that wallet.
+Thus to protect against that scenario you could transfer any XKR balance to one of these cold storage addresses. Please remember to keep secure/secret backups of your keys. If you lose the keys you lose any balance that was transferred to that wallet.
 
 #### Q: Can I make a paper wallet?
 
@@ -284,30 +284,30 @@ You can check out [this guide](guides/wallets/Recovering-your-Wallet) for steps 
 
 #### Q: Can I view the balance of my wallet online?
 
-  A: Due to TurtleCoin being a cryptonote-based coin(private), this is not possible.
+  A: Due to Kryptokrona being a cryptonote-based coin(private), this is not possible.
 
 It should be possible in the future to allow users to give away just their Private View Key to view transactions, but this hasn't been implemented by anyone so far, and would allow that website to see every transaction that you make.
 
 ## Other
-#### Q: Why does TRTL have such a high amount of tokens/small amount of decimal places?
+#### Q: Why does XKR have such a high amount of tokens/small amount of decimal places?
 
 
-Read a great post about the justification for it [here](https://medium.com/@turtlecoin/one-trillion-turtles-coin-supply-and-unit-economics-5bfbea0aa1f1).
+Read a great post about the justification for it [here](https://medium.com/@Kryptokrona/one-trillion-turtles-coin-supply-and-unit-economics-5bfbea0aa1f1).
 
-#### Q: How can I get some TRTL?
+#### Q: How can I get some XKR?
 
 
-There are multiple ways to acquire TRTL, for example:
+There are multiple ways to acquire XKR, for example:
 
 * Mining - see [here](guides/mining/Mining)
-* Bounties - Bounties for developing TRTL software, spreading the word of TRTL, and many other things are often posted in the #bounties channel on [Discord][discord_link]. Check the pinned messages for current bounties.
+* Bounties - Bounties for developing XKR software, spreading the word of XKR, and many other things are often posted in the #bounties channel on [Discord][discord_link]. Check the pinned messages for current bounties.
 * Tips - Turtles with often tip each other, especially if you make spicy memes in the `#memes` channel
 * Faucet - Head over to the faucets-
-  * [polar-it's faucet](https://turtlecoin-faucet.xhub.cloud/) - 20 TRTL, every 120 minutes
-  * [fipsi's faucet](https://trtlfaucet.de.cool/) - 100 TRTL, after every 500 turtles use it
+  * [polar-it's faucet](https://Kryptokrona-faucet.xhub.cloud/) - 20 XKR, every 120 minutes
+  * [fipsi's faucet](https://XKRfaucet.de.cool/) - 100 XKR, after every 500 turtles use it
 
-  and enter your TRTL address.  
-  The amount you can receive is limited to share the TRTL for all. Thanks to @madk, @polar-it and @fipsi for creating them.
+  and enter your XKR address.  
+  The amount you can receive is limited to share the XKR for all. Thanks to @madk, @polar-it and @fipsi for creating them.
 
 #### Q: Is there a web wallet?
 
@@ -325,23 +325,23 @@ None are ready for usage right now, but they are being worked on. Check the deve
 
 #### Q: How do I register my wallet on Discord?
 
-  A: You can check out this guide [here](guides/Using-trtlbot-plus-plus#registering-your-wallet).
+  A: You can check out this guide [here](guides/Using-XKRbot-plus-plus#registering-your-wallet).
 
 #### Q: Where is the blockchain stored?
 
 
-On Windows, it is in `%APPDATA%/turtlecoin`. On Mac and Linux, it is in `~/.turtlecoin`.
+On Windows, it is in `%APPDATA%/Kryptokrona`. On Mac and Linux, it is in `~/.Kryptokrona`.
 
 #### Q: Is there a block explorer?
 
 
 Yes, the offical one is
 
-* https://explorer.turtlecoin.lol
+* https://explorer.Kryptokrona.lol
 
 although there are currently a few other unique ones-  
 
-* http://trtl.rocks
+* http://XKR.rocks
 
 #### Q: How do I make sure a pool isn't forked? 
 
@@ -353,4 +353,4 @@ You can type in `/forked` in the `#bots` channel in the [Discord][discord_link] 
 
 [Join the Discord server][discord_link], and come to the `#help` channel, we'll try and fix any issues.
 
-[discord_link]:http://chat.turtlecoin.lol/
+[discord_link]:http://chat.Kryptokrona.lol/

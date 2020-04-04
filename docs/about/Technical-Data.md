@@ -2,7 +2,7 @@
 title: Technical Data
 ---
 
-Name: TurtleCoin  
+Name: Kryptokrona  
 
 Algorithm: [CryptoNote](https://cryptonote.org)
 
@@ -11,12 +11,12 @@ Algorithm: [CryptoNote](https://cryptonote.org)
 * Elastic Blocks
 * Fair Mining
 
-Block time: `30` second target block time - made by and for miners.  
+Block time: `90` second target block time - made by and for miners.  
 
 Decimal places: Two decimal places, like USD  
 
 Supply Cap: `1,000,000,000,000` (1 trillion)
 
-Address Prefix: `TRTL`   
+Address Prefix: `SEKR`   
 
-Currency Code: `TRTL`
+Currency Code: `XKR`

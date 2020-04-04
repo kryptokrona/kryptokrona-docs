@@ -4,12 +4,6 @@ title: Daemon HTTP RPC API
 
 The daemon HTTP RPC is a HTTP server which provides additional information regarding network and daemon connections.
 
-Currently we support the following official client bindings:
-
-* [NodeJS](https://www.npmjs.com/package/turtlecoin-rpc)
-* [PHP](https://github.com/turtlecoin/turtlecoin-rpc-php)
-* [Python](https://github.com/turtlecoin/turtlecoin-rpc-python)
-* [Go](https://github.com/turtlecoin/turtlecoin-rpc-go)
 
 ## Installation
 
@@ -18,23 +12,9 @@ Currently we support the following official client bindings:
 <!--NodeJS-->
 
 ```
-npm i turtlecoin-rpc
+npm i kryptokrona-rpc
 ```
 
-<!--PHP-->
-```
-composer require turtlecoin/turtlecoin-rpc-php
-```
-
-<!--Python-->
-```
-pip3 install turtlecoin
-```
-
-<!--Go-->
-```
-go get github.com/turtlecoin/turtlecoin-rpc-go
-```
 
 <!--END_DOCUSAURUS_CODE_TABS-->
 
@@ -50,19 +30,19 @@ http://localhost:11898
 
 To start the Daemon JSON RPC API server at `http://localhost:11898`, run:
 
-`TurtleCoind --rpc-bind-port=11898`
+`kryptokronad --rpc-bind-port=11898`
 
 To make the server accessible from another computer, use the `--rpc-bind-ip 0.0.0.0` switch.
 
-`TurtleCoind --rpc-bind-ip=0.0.0.0 --rpc-bind-port=11898`
+`kryptokronad --rpc-bind-ip=0.0.0.0 --rpc-bind-port=11898`
 
 To enable block explorer API access (like for `getblocks`, `gettransactionpool`, etc.), use the `--enable-blockexplorer` switch.
 
-`TurtleCoind --enable-blockexplorer`
+`kryptokronad --enable-blockexplorer`
 
 The above given switches can be combined to achieve remote access with block explorer methods as shown below.
 
-`TurtleCoind --enable-blockexplorer --rpc-bind-ip=0.0.0.0 --rpc-bind-port=11898`
+`kryptokronad --enable-blockexplorer --rpc-bind-ip=0.0.0.0 --rpc-bind-port=11898`
 
 This would make the RPC server accessible at
 
@@ -86,52 +66,16 @@ To make a HTTP RPC request to your Daemon RPC you should use a GET request that 
 
 <!--NodeJS-->
 ```js
-const TurtleCoind = require('turtlecoin-rpc').TurtleCoind
+const kryptokronad = require('kryptokrona-rpc').kryptokronad
 
-const daemon = new TurtleCoind({
-  host: '0.0.0.0', // ip address or hostname of the TurtleCoind host
+const daemon = new kryptokronad({
+  host: '0.0.0.0', // ip address or hostname of the kryptokronad host
   port: 11898, // what port is the RPC server running on
   timeout: 2000, // request timeout
   ssl: false // whether we need to connect using SSL/TLS
 })
 ```
 
-<!--PHP-->
-```php
-<?php
-use TurtleCoin\TurtleCoind;
-
-$config = [
-    'rpcHost' => 'http://localhost',
-    'rpcPort' => 11898,
-];
-
-$turtlecoind = new TurtleCoind($config);
-```
-
-<!--Python-->
-```py
-from turtlecoin import TurtleCoind
-
-rpc_host = 'localhost'
-rpc_port = 11898
-turtlecoind = TurtleCoind(rpc_host, rpc_port)
-```
-
-<!--Go-->
-```go
-import (
-  "fmt"
-  trpc "github.com/turtlecoin/turtlecoin-rpc-go"
-)
-
-rpcHost := "localhost"
-rpcPort := 11898
-
-daemon := trpc.TurtleCoind{
-  URL: rpcHost,
-  Port: rpcPort}
-```
 <!--END_DOCUSAURUS_CODE_TABS-->
 
 ## getheight
@@ -162,25 +106,6 @@ daemon.getHeight().then((result) => {
 }).catch((error) => {
   // do something
 })
-```
-
-<!--PHP-->
-```php
-<?php
-$response = $turtlecoind->getHeight();
-echo $response;
-```
-
-<!--Python-->
-```py
-response = turtlecoind.get_height()
-print(response)
-```
-
-<!--Go-->
-```go
-response := daemon.Height()
-fmt.Println(response)
 ```
 
 <!--END_DOCUSAURUS_CODE_TABS-->
@@ -243,25 +168,6 @@ daemon.getInfo().then((result) => {
 }).catch((error) => {
   // do something
 })
-```
-
-<!--PHP-->
-```php
-<?php
-$response = $turtlecoind->getInfo();
-echo $response;
-```
-
-<!--Python-->
-```py
-response = turtlecoind.get_info()
-print(response)
-```
-
-<!--Go-->
-```go
-response := daemon.Info()
-fmt.Println(response)
 ```
 
 <!--END_DOCUSAURUS_CODE_TABS-->
@@ -338,23 +244,6 @@ daemon.getTransactions({
 })
 ```
 
-<!--PHP-->
-```php
-<?php
-$response = $turtlecoind->getTransactions();
-echo $response;
-```
-
-<!--Python-->
-```py
-response = turtlecoind.get_transactions()
-print(response)
-```
-
-<!--Go-->
-```go
-Not Implemented
-```
 
 <!--END_DOCUSAURUS_CODE_TABS-->
 
@@ -395,25 +284,6 @@ daemon.getPeers().then((result) => {
 }).catch((error) => {
   // do something
 })
-```
-
-<!--PHP-->
-```php
-<?php
-$response = $turtlecoind->getPeers();
-echo $response;
-```
-
-<!--Python-->
-```py
-response = turtlecoind.get_peers()
-print(response)
-```
-
-<!--Go-->
-```go
-response := daemon.Peers()
-fmt.Println(response)
 ```
 
 <!--END_DOCUSAURUS_CODE_TABS-->
@@ -463,25 +333,6 @@ daemon.feeInfo().then((result) => {
 })
 ```
 
-<!--PHP-->
-```php
-<?php
-$response = $turtlecoind->getFeeInfo();
-echo $response;
-```
-
-<!--Python-->
-```py
-response = turtlecoind.get_fee_info()
-print(response)
-```
-
-<!--Go-->
-```go
-response := daemon.Fee()
-fmt.Println(response)
-```
-
 <!--END_DOCUSAURUS_CODE_TABS-->
 
 #### Expected Output
@@ -500,5 +351,5 @@ fmt.Println(response)
 
 The content in this document was originally written by the [Bytecoin (BCN) Developers](https://bytecoin.org/). It is licensed under the [CC BY SA 3.0 license](https://creativecommons.org/licenses/by-sa/3.0/). The source material can be found at the [Bytecoin Wiki](https://github.com/bcndev/bytecoin).
 
-Also of note, TurtleCoin developers have altered and adapted the content to suit our implementation of the API. This was done independently of the Bytecoin development team. They neither endorse or acknowledge our changes. Feel free to adopt or change our content as per the [CC BY SA 3.0 license](https://creativecommons.org/licenses/by-sa/3.0/) requirements.
+Also of note, kryptokrona developers have altered and adapted the content to suit our implementation of the API. This was done independently of the Bytecoin development team. They neither endorse or acknowledge our changes. Feel free to adopt or change our content as per the [CC BY SA 3.0 license](https://creativecommons.org/licenses/by-sa/3.0/) requirements.
 

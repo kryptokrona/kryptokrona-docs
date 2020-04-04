@@ -1,10 +1,10 @@
 ---
-title: Forking TurtleCoin
+title: Forking Kryptokrona
 ---
 
-### **NB:** This guide is deprecated and will not be updated anymore. See the latest version [here](https://turtlecoin.github.io/fork/)
+### **NB:** This guide is deprecated and will not be updated anymore. See the latest version [here](https://Kryptokrona.github.io/fork/)
 
-So you want to fork TurtleCoin, huh?
+So you want to fork Kryptokrona, huh?
 
 This guide will help you change the necessary sections of the code to set up your coin how you like it.
 
@@ -18,6 +18,7 @@ When you're poking around the codebase, you might see something like this:
 // Copyright (c) 2012-2017, The CryptoNote developers, The Bytecoin developers
 // Copyright (c) 2014-2018, The Monero Project
 // Copyright (c) 2018, The TurtleCoin Developers
+// Copyright (c) 2019-2020, Kryptokrona Developers
 //
 // Please see the included LICENSE file for more information.
 ```
@@ -36,7 +37,7 @@ and of course, they maintain their own repositories and code.
 The ForkNote Project was created as a fork of ByteCoin, to create a way to fork ByteCoin, easily
 by separating the needed constants and strings out into a separate file.
 
-TurtleCoin then forked the Forknote Project and made our own changes, some of which were then contributed back to ForkNote.
+Kryptokrona then forked the Forknote Project and made our own changes, some of which were then contributed back to ForkNote.
 
 So, make sure if you're doing a find and replace that all of these lines remain intact.  
 You can of course start adding your own copyright line, for example,
@@ -45,7 +46,8 @@ You can of course start adding your own copyright line, for example,
 // Copyright (c) 2012-2017, The CryptoNote developers, The Bytecoin developers
 // Copyright (c) 2014-2018, The Monero Project
 // Copyright (c) 2018, The TurtleCoin Developers
-// Copyright (c) 2018, My Super Cool Coin Developers
+// Copyright (c) 2019-2020, Kryptokrona Developers
+// Copyright (c) 2020, my super cool coin 
 //
 // Please see the included LICENSE file for more information.
 ```
@@ -55,10 +57,10 @@ Ok, now we understand about licenses, let's get the code!
 
 ## The actual forking process
 
-* The easiest way to fork TurtleCoin, is to start by making a GitHub account.
+* The easiest way to fork Kryptokrona, is to start by making a GitHub account.
 You can do this [here](https://github.com/join) if you don't have an account already.
 
-* Make sure you're signed in. Next, head over to the TurtleCoin repo, and hit `Fork` in the top right corner.
+* Make sure you're signed in. Next, head over to the Kryptokrona repo, and hit `Fork` in the top right corner.
 
 * It should look something like this:
 
@@ -92,8 +94,8 @@ You can do this [here](https://github.com/join) if you don't have an account alr
 
 First, it might be a good idea to try compiling our code, so we can mess around with it later.
 
-Just incase this guide gets outdated, you can always find the latest instructions on how to compile TurtleCoin on our
-[GitHub](https://github.com/turtlecoin/turtlecoin#how-to-compile).
+Just incase this guide gets outdated, you can always find the latest instructions on how to compile Kryptokrona on our
+[GitHub](https://github.com/Kryptokrona/Kryptokrona#how-to-compile).
 
 ### Linux
 
@@ -105,7 +107,7 @@ Just incase this guide gets outdated, you can always find the latest instruction
 
 #### Building
 
-* `cd turtlecoin`
+* `cd Kryptokrona`
 
 * `mkdir build`
 
@@ -115,7 +117,7 @@ Just incase this guide gets outdated, you can always find the latest instruction
 
 * `make`
 
-* The binaries will be placed in the `turtlecoin/build/src` folder.
+* The binaries will be placed in the `Kryptokrona/build/src` folder.
 
 ### Apple
 
@@ -130,7 +132,7 @@ Just incase this guide gets outdated, you can always find the latest instruction
 
 #### Building
 
-* `cd turtlecoin`
+* `cd Kryptokrona`
 
 * `mkdir build`
 
@@ -140,7 +142,7 @@ Just incase this guide gets outdated, you can always find the latest instruction
 
 * `make`
 
-* The binaries will be placed in the `turtlecoin/build/src` folder.
+* The binaries will be placed in the `Kryptokrona/build/src` folder.
 
 ### Windows
 
@@ -158,7 +160,7 @@ Just incase this guide gets outdated, you can always find the latest instruction
 
 * From the start menu, open `x64 Native Tools Command Prompt for vs2017`
 
-* `cd <your_turtlecoin_directory>`
+* `cd <your_Kryptokrona_directory>`
 
 * `mkdir build`
 
@@ -168,9 +170,9 @@ Just incase this guide gets outdated, you can always find the latest instruction
 
 * `cmake -G "Visual Studio 14 Win64" .. -DBOOST_ROOT=C:/local/boost_1_59_0` (Or your boost installed dir.)
 
-* `MSBuild TurtleCoin.sln /p:Configuration=Release /m`
+* `MSBuild Kryptokrona.sln /p:Configuration=Release /m`
 
-* The binaries will be placed in the `turtlecoin/build/src/Release` folder.
+* The binaries will be placed in the `Kryptokrona/build/src/Release` folder.
 
 ## Recompiling
 
@@ -191,13 +193,13 @@ All of the constants in CryptoNoteConfig.h and most of the code, that refers to 
 
 **What does this mean?**
 
-Well, if we're talking about TurtleCoin, we have 2 decimal places.
+Well, if we're talking about Kryptokrona, we have 2 decimal places.
 That means, to get the atomic units of an amount of TRTL, we need to multiply the amount by 100, or 10^2.
 
 If we have 10.23 TRTL, this is 1023 in atomic units. Atomic units have no decimal point,
 and so can be represented as an integer, in the code.
 Some different currencies have a special name for their atomic units, to make it easier to talk about.
-In Bitcoin, this is called a *satoshi*, and in TurtleCoin, it is called a *shell*.
+In Bitcoin, this is called a *satoshi*, and in Kryptokrona, it is called a *shell*.
 
 **Why is this helpful?**
 
@@ -254,7 +256,7 @@ Note that there is also a CMakeLists.txt in the root directory, this is not the 
 The lines we want to be changing are at the very bottom of the file.
 
 ```
-set_property(TARGET TurtleCoind PROPERTY OUTPUT_NAME "TurtleCoind")
+set_property(TARGET Kryptokronad PROPERTY OUTPUT_NAME "Kryptokronad")
 set_property(TARGET zedwallet PROPERTY OUTPUT_NAME "zedwallet")
 set_property(TARGET PaymentGateService PROPERTY OUTPUT_NAME "walletd")
 set_property(TARGET PoolWallet PROPERTY OUTPUT_NAME "poolwallet")
@@ -263,7 +265,7 @@ set_property(TARGET Miner PROPERTY OUTPUT_NAME "miner")
 
 To change the name of a binary, change the final string in one of these lines. For example:
 
-`set_property(TARGET TurtleCoind PROPERTY OUTPUT_NAME "AppleCoind")`
+`set_property(TARGET Kryptokronad PROPERTY OUTPUT_NAME "AppleCoind")`
 
 Save the file, and recompile.
 
@@ -271,7 +273,7 @@ Save the file, and recompile.
 ## Changing version numbers
 
 Another boring one - changing the version numbers. This is the thing that
-appears when you start up TurtleCoind, e.g. `Welcome to TurtleCoin v0.6.4.1264`
+appears when you start up Kryptokronad, e.g. `Welcome to Kryptokrona v0.6.4.1264`
 
 Open up `src/version.h.in`.
 
@@ -315,7 +317,7 @@ Let's start at the top. We'll only focus on the constants which need changing, a
 
 #### `const uint64_t DIFFICULTY_TARGET = 30; // seconds`<br>
 
-This is how fast you want blocks to be. In TurtleCoin, we have blocks on average every 30 seconds.
+This is how fast you want blocks to be. In Kryptokrona, we have blocks on average every 30 seconds.
 If you wanted blocks to be every 2 minutes, you would set this to be:
 
 - `const uint64_t DIFFICULTY_TARGET = 120; // seconds`  
@@ -323,7 +325,7 @@ If you wanted blocks to be every 2 minutes, you would set this to be:
 
 #### `const uint64_t CRYPTONOTE_PUBLIC_ADDRESS_BASE58_PREFIX = 3914525;`<br/>
 
-This defines what the addresses will start with. In TurtleCoin, this decodes to `TRTL`.
+This defines what the addresses will start with. In Kryptokrona, this decodes to `TRTL`.
 
 So how do we get this prefix? We can use this [handy tool](https://cryptonotestarter.org/tools.html).
 
@@ -349,7 +351,7 @@ This value defines how many blocks need to be followed in the current chain
 before releasing the reward for mining a block for spending.
 
 We would suggest you set this value to be roughly equal to 20 minutes - in
-TurtleCoin's case that's exactly what we have - 40 blocks * 30 seconds = 20
+Kryptokrona's case that's exactly what we have - 40 blocks * 30 seconds = 20
 minutes.
 
 If you have a block time of 2 minutes for example, we would set this value
@@ -361,9 +363,9 @@ to 10.
 #### `const uint64_t MONEY_SUPPLY = UINT64_C(100000000000000);`<br/>
 
 This line is a pretty significant one. It determines the max supply of coins your cryptocurrency will have.
-In TurtleCoin, this is 1 trillion TRTL, but as previously mentioned, all these values are in *atomic units*,
+In Kryptokrona, this is 1 trillion TRTL, but as previously mentioned, all these values are in *atomic units*,
 so this value also includes the amount after the decimal point.
-Thus, this value is 1 trillion * 100, as TurtleCoin has 2 places after the decimal point.
+Thus, this value is 1 trillion * 100, as Kryptokrona has 2 places after the decimal point.
 
 Therefore, we suggest you decide how many decimal places your coin has, before filling in this value.
 
@@ -413,7 +415,7 @@ If we wanted a fast emission, we could set this to a value like 21.
 #### `const size_t CRYPTONOTE_DISPLAY_DECIMAL_POINT = 2;`<br/>
 
 This value defines how many numbers there are after the decimal point in your currency.
-In TurtleCoin, this value is 2, so we have amounts like 10.23 TRTL.
+In Kryptokrona, this value is 2, so we have amounts like 10.23 TRTL.
 If we set this to 6, we would have an amount like 10.234567 TRTL instead.
 Remember, as previously mentioned, this affects your money supply and other parameters which depend upon atomic units.
 
@@ -522,7 +524,7 @@ you can set the upgrade height to `std::numeric_limits<uint32_t>::max()`
 
 #### `const uint64_t FORK_HEIGHTS[] =`<br/>
 
-This variable is used by the `status` command in zedwallet and TurtleCoind to notify users when a fork is upcoming,
+This variable is used by the `status` command in zedwallet and Kryptokronad to notify users when a fork is upcoming,
 or their software is outdated. We suggest you set up some regular forks ahead of time,
 if you then need to update the software this will let users know when to expect this.
 
@@ -556,7 +558,7 @@ you don't need to set a CURRENT_FORK_INDEX.
 
 
 
-#### `const char CRYPTONOTE_NAME[] = "TurtleCoin";`<br/>
+#### `const char CRYPTONOTE_NAME[] = "Kryptokrona";`<br/>
 
 This is an obvious one. It's the name of your coin!
 
@@ -569,8 +571,8 @@ This is an obvious one. It's the name of your coin!
 #### `const int P2P_DEFAULT_PORT` and `const int RPC_DEFAULT_PORT`
 
 These values define the ports that are used by the daemon to communicate.
-There is no real issue with using the same values as the TurtleCoin software,
-but if you are running both a TurtleCoin daemon and your own daemon, you would
+There is no real issue with using the same values as the Kryptokrona software,
+but if you are running both a Kryptokrona daemon and your own daemon, you would
 have to change the port one uses, as they will both need control over the
 port.
 
@@ -588,7 +590,7 @@ permissions to use these ports.
 #### `const static boost::uuids::uuid CRYPTONOTE_NETWORK =`
 
 This value sets the 'Network ID' of your coin. This ensures your network
-will not respond to network connections from other coins, such as TurtleCoin.
+will not respond to network connections from other coins, such as Kryptokrona.
 
 This value is using hex values, which should be in the form 0x?? where `?` is
 a valid hex value (0-9, a-f).
@@ -653,14 +655,14 @@ in `const uint64_t CRYPTONOTE_PUBLIC_ADDRESS_BASE58_PREFIX =`
 #### `const std::string ticker = "TRTL";`<br/>
 
 This refers to the 'short name' your coin has, which is often used as a ticker on exchanges.
-For example, in TurtleCoin this is TRTL, in Monero this is XMR, and in Bitcoin this is BTC.
+For example, in Kryptokrona this is TRTL, in Monero this is XMR, and in Bitcoin this is BTC.
 
 - `const std::string ticker = "APPLE";`<br/>
 
 
 
 
-#### `const std::string daemonName = "TurtleCoind";`<br/>
+#### `const std::string daemonName = "Kryptokronad";`<br/>
 
 This variable determines what the name of your daemon is.
 We'll talk about changing the names of the executables generated in the `CmakeLists.txt` section.
@@ -670,10 +672,10 @@ We'll skip mentioning `walletName`, and `walletdName` as these both follow the s
 
 
 
-#### `const std::string contactLink = "http://chat.turtlecoin.lol";`<br/>
+#### `const std::string contactLink = "http://chat.Kryptokrona.lol";`<br/>
 
 This value is used to let the user know where they can get support if their wallet gets stuck whilst syncing.
-In our case, this is the TurtleCoin discord. Maybe you have a forum or an IRC chat instead?
+In our case, this is the Kryptokrona discord. Maybe you have a forum or an IRC chat instead?
 
 - `const std::string contactLink = "https://applecoin.com/livechat"`<br/>
 
@@ -751,7 +753,7 @@ const uint64_t mixinZeroDisabledHeight = CryptoNote::parameters::MIXIN_LIMITS_V2
 ```
 
 To determine what block height a mixin of zero gets disabled.
-In TurtleCoin's case, this was disabled at block 620k,
+In Kryptokrona's case, this was disabled at block 620k,
 but being a new network, you have the advantage of being able to disable a mixin of zero much earlier,
 or even from the launch of your network.
 
@@ -810,12 +812,12 @@ Congratulations!
 
 ## Compiling
 
-You can always find the latest instructions on how to compile TurtleCoin on our [GitHub](https://github.com/turtlecoin/turtlecoin#how-to-compile).
+You can always find the latest instructions on how to compile Kryptokrona on our [GitHub](https://github.com/Kryptokrona/Kryptokrona#how-to-compile).
 
 
 ## Support, Questions?
 
-Something not clear? Head over to our [Discord](http://chat.turtlecoin.lol) and ask in the #help channel,
+Something not clear? Head over to our [Discord](http://chat.Kryptokrona.lol) and ask in the #help channel,
 and hopefully, someone will be able to help you out.
 
 Let us know if something is wrong with this guide, or missing, so we can update it and make it better!

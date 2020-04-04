@@ -64,9 +64,9 @@ class HomeSplash extends React.Component {
         <div className="inner">
           <ProjectTitle siteConfig={siteConfig} />
           <PromoSection>
-            <Button href="https://turtlecoin.lol">Official Website</Button>
-            <Button href="https://github.com/turtlecoin">GitHub Org</Button>
-            <Button href="http://chat.turtlecoin.lol">Discord Chat</Button>
+            <Button href="https://kryptokrona.se">Official Website</Button>
+            <Button href="https://github.com/kryptokrona">GitHub Org</Button>
+            <Button href="https://discord.gg/v8duNZ6">Discord Chat</Button>
           </PromoSection>
         </div>
       </SplashContainer>
@@ -100,25 +100,25 @@ class Index extends React.Component {
       <Block layout="fourColumn">
         {[
           {
-            content: 'Learn more about TurtleCoin and the community	',
+            content: 'Learn more about Kryptokrona and the community	',
             image: `${baseUrl}img/undraw_community.svg`,
             imageAlign: 'top',
-            title: `<a href=${docUrl("about/About-TurtleCoin")}>About TurtleCoin</a>`,
+            title: `<a href=${docUrl("about/About-Kryptokrona")}>About Kryptokrona</a>`,
           },
           {
-            content: 'A guide on setting up a TurtleCoin wallet to start receiving some turtles!',
+            content: 'A guide on setting up a Kryptokrona wallet to start receiving some XKR!',
             image: `${baseUrl}img/undraw_wallet.svg`,
             imageAlign: 'top',
             title: `<a href=${docUrl("guides/wallets/Making-a-Wallet")}>Make a Wallet</a>`,
           },
           {
-            content: 'A step-by-step guide to start mining TurtleCoin',
+            content: 'A step-by-step guide to start mining Kryptokrona',
             image: `${baseUrl}img/undraw_monitor.svg`,
             imageAlign: 'top',
-            title: `<a href=${docUrl("guides/mining/Mining")}>Mine TurtleCoin</a>`,
+            title: `<a href=${docUrl("guides/mining/Mining")}>Mine Kryptokrona</a>`,
           },
           {
-            content: 'Information on contributing to TurtleCoin',
+            content: 'Information on contributing to Kryptokrona',
             image: `${baseUrl}img/undraw_contribute.svg`,
             imageAlign: 'top',
             title: `<a href=${docUrl("about/Contributing")}>Contributing</a>`,
@@ -128,13 +128,13 @@ class Index extends React.Component {
     );
     
     const About1 = () => (
-      <Block background="light">
+      <Block background="">
         {[
           {
             content: '',
             image: `${baseUrl}img/undraw_money.svg`,
             imageAlign: 'right',
-            title: 'TurtleCoin is a fast, easy and private cryptocurrency which allows you to send money to friends and businesses.',
+            title: 'Kryptokrona is a fast, easy and private cryptocurrency which allows you to send money to friends and businesses.',
           },
         ]}
       </Block>
@@ -147,18 +147,18 @@ class Index extends React.Component {
             content: '',
             image: `${baseUrl}img/undraw_fun.svg`,
             imageAlign: 'left',
-            title: "One of TurtleCoin's main goals is to make things as simple and as accessible as possible for everyday people, creating a cryptocurrency which is inviting, fun, and friendly.",
+            title: "One of Kryptokrona's main goals is to make things as simple and as accessible as possible for everyday people, creating a cryptocurrency which is inviting, fun, and friendly.",
           },
         ]}
       </Block>
     );
 
     const About3 = () => (
-      <Block background="light">
+      <Block>
         {[
           {
             content:
-              `<MarkdownBlock> Come join us on [Discord](http://chat.turtlecoin.lol) or [Reddit](https://reddit.com/r/trtl)</MarkdownBlock>`,
+              `<MarkdownBlock> Come join us on [Discord](https://discord.gg/v8duNZ6)</MarkdownBlock>`,
             image: `${baseUrl}img/undraw_questions.svg`,
             imageAlign: 'right',
             title: `Have Questions or Need Help?`,

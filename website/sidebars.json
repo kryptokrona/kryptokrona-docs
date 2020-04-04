@@ -11,7 +11,7 @@
    },
    "about": {
       "About": [
-         "about/About-TurtleCoin",
+         "about/About-Kryptokrona",
          "about/Background-and-History",
          "about/Community",
          "about/Contributing",
@@ -29,7 +29,7 @@
          "guides/mining/XMRIG-Guide",
          "guides/mining/CPU-Solo-Mining",
          "guides/mining/Mining-with-SBC",
-         "guides/mining/Optimizing-RPi-TurtleCoin-Mining",
+         "guides/mining/Optimizing-RPi-Kryptokrona-Mining",
          "guides/mining/Using-Termux",
          "guides/mining/Using-Crypto-Miner"
       ],
@@ -56,11 +56,11 @@
    "devs": {
       "For Developers": [
          "developer/Resources",
-         "developer/Running-TurtleCoind-on-Pi",
-         "developer/TurtleCoind-behind-HAProxy",
+         "developer/Running-Kryptokronad-on-Pi",
+         "developer/Kryptokronad-behind-HAProxy",
          "developer/Local-Testnet",
          "developer/Compiling-From-Source",
-         "developer/Forking-TurtleCoin",
+         "developer/Forking-Kryptokrona",
          {
             "type": "subcategory",
             "label": "API Documentation",

@@ -4,36 +4,15 @@ title: Daemon JSON RPC API
 
 The daemon JSON RPC is a HTTP server which provides JSON 2.0 RPC interface for interacting with a daemon and a block explorer.
 
-Currently we support the following official client bindings:
-
-* [NodeJS](https://www.npmjs.com/package/turtlecoin-rpc)
-* [PHP](https://github.com/turtlecoin/turtlecoin-rpc-php)
-* [Python](https://github.com/turtlecoin/turtlecoin-rpc-python)
-* [Go](https://github.com/turtlecoin/turtlecoin-rpc-go)
-
 ## Installation
 
 <!--DOCUSAURUS_CODE_TABS-->
 
 <!--NodeJS-->
 ```
-npm i turtlecoin-rpc
+npm i kryptokrona-rpc
 ```
 
-<!--PHP-->
-```
-composer require turtlecoin/turtlecoin-rpc-php
-```
-
-<!--Python-->
-```
-pip3 install turtlecoin
-```
-
-<!--Go-->
-```
-go get github.com/turtlecoin/turtlecoin-rpc-go
-```
 
 <!--END_DOCUSAURUS_CODE_TABS-->
 
@@ -49,19 +28,19 @@ http://localhost:11898/json_rpc
 
 To start the Daemon JSON RPC API server at `http://localhost:11898/json_rpc`, run:
 
-`TurtleCoind --rpc-bind-port=11898`
+`kryptokronad --rpc-bind-port=11898`
 
 To make the server accessible from another computer, use the `--rpc-bind-ip 0.0.0.0` switch.
 
-`TurtleCoind --rpc-bind-ip=0.0.0.0 --rpc-bind-port=11898`
+`kryptokronad --rpc-bind-ip=0.0.0.0 --rpc-bind-port=11898`
 
 To enable block explorer API access (like for `getblocks`, `gettransactionpool`, etc.), use the `--enable-blockexplorer` switch.
 
-`TurtleCoind --enable-blockexplorer`
+`kryptokronad --enable-blockexplorer`
 
 The above given switches can be combined to achieve remote access with block explorer methods as shown below.
 
-`TurtleCoind --enable-blockexplorer --rpc-bind-ip=0.0.0.0 --rpc-bind-port=11898`
+`kryptokronad --enable-blockexplorer --rpc-bind-ip=0.0.0.0 --rpc-bind-port=11898`
 
 This would make the RPC server accessible at
 
@@ -85,52 +64,16 @@ Parameter            | Description
 
 <!--NodeJS-->
 ```js
-const TurtleCoind = require('turtlecoin-rpc').TurtleCoind
+const kryptokronad = require('kryptokrona-rpc').kryptokronad
 
-const daemon = new TurtleCoind({
-  host: '0.0.0.0', // ip address or hostname of the TurtleCoind host
+const daemon = new kryptokronad({
+  host: '0.0.0.0', // ip address or hostname of the kryptokronad host
   port: 11898, // what port is the RPC server running on
   timeout: 2000, // request timeout
   ssl: false // whether we need to connect using SSL/TLS
 })
 ```
 
-<!--PHP-->
-```php
-<?php
-use TurtleCoin\TurtleCoind;
-
-$config = [
-    'rpcHost' => 'http://localhost',
-    'rpcPort' => 11898,
-];
-
-$turtlecoind = new TurtleCoind($config);
-```
-
-<!--Python-->
-```py
-from turtlecoin import TurtleCoind
-
-rpc_host = 'localhost'
-rpc_port = 11898
-turtlecoind = TurtleCoind(rpc_host, rpc_port)
-```
-
-<!--Go-->
-```go
-import (
-    "fmt"
-    trpc "github.com/turtlecoin/turtlecoin-rpc-go"
-)
-
-rpcHost := "localhost"
-rpcPort := 11898
-
-daemon := trpc.TurtleCoind{
-    URL: rpcHost,
-    Port: rpcPort}
-```
 
 <!--END_DOCUSAURUS_CODE_TABS-->
 
@@ -161,25 +104,6 @@ daemon.getBlockCount().then((blockCount) => {
 }).catch((error) => {
   // do something
 })
-```
-
-<!--PHP-->
-```php
-<?php
-$response = $turtlecoind->getBlockCount();
-echo $response;
-```
-
-<!--Python-->
-```py
-response = turtlecoind.get_block_count()
-print(response)
-```
-
-<!--Go-->
-```go
-response := daemon.GetBlockCount()
-fmt.Println(response)
 ```
 
 <!--END_DOCUSAURUS_CODE_TABS-->
@@ -231,28 +155,6 @@ daemon.getBlockHash({
 })
 ```
 
-<!--PHP-->
-```php
-<?php
-$height = 123456;
-$response = $turtlecoind->getBlockHash($height);
-echo $response;
-```
-
-<!--Python-->
-```py
-height = 123456
-response = turtlecoind.get_block_hash(height)
-print(response)
-```
-
-<!--Go-->
-```go
-height := 123456
-response := daemon.GetBlockHash(height)
-fmt.Println(response)
-```
-
 <!--END_DOCUSAURUS_CODE_TABS-->
 
 #### Expected Output:
@@ -273,7 +175,7 @@ fmt.Println(response)
 Argument | Mandatory | Description | Format
 -------- | -------- | ------------- | -----
 reserve_size | Yes | Size of the reserve to be specified | int
-wallet_address | Yes | Valid TurtleCoin wallet address | String
+wallet_address | Yes | Valid kryptokrona wallet address | String
 
 **Output**
 
@@ -304,32 +206,6 @@ daemon.getBlockTemplate({
 })
 ```
 
-<!--PHP-->
-```php
-<?php
-$reserveSize = 200;
-$address = 'TRTLxxxx...';
-$response = $turtlecoind->getBlockTemplate($reserveSize, $address);
-echo $response;
-```
-
-<!--Python-->
-```py
-reserve_size = 200
-wallet_address = 'TRTLxxxx...'
-
-response = turtlecoind.get_block_template(reserve_size, wallet_address)
-print(response)
-```
-
-<!--Go-->
-```go
-reserveSize := 200
-walletAddress := "TRTLxxxx..."
-
-response := daemon.GetBlockTemplate(reserveSize, walletAddress)
-fmt.Println(response)
-```
 
 <!--END_DOCUSAURUS_CODE_TABS-->
 
@@ -380,28 +256,6 @@ daemon.submitBlock({
 }).catch((error) => {
   // do something
 })
-```
-
-<!--PHP-->
-```php
-<?php
-$blockBlob = '0100b...';
-$response = $turtlecoind->submitBlock($blockBlob);
-echo $response;
-```
-
-<!--Python-->
-```py
-block_blob = '0100b...'
-response = turtlecoind.submit_block(block_blob)
-print(response)
-```
-
-<!--Go-->
-```go
-blockBlob := "0100b..."
-response := daemon.SubmitBlock(blockBlob)
-fmt.Println(response)
 ```
 
 <!--END_DOCUSAURUS_CODE_TABS-->
@@ -458,24 +312,6 @@ daemon.getLastBlockHeader().then((result) => {
 })
 ```
 
-<!--PHP-->
-```php
-<?php
-$response = $turtlecoind->getLastBlockHeader();
-echo $response;
-```
-
-<!--Python-->
-```py
-response = turtlecoind.get_last_block_header()
-print(response)
-```
-
-<!--Go-->
-```go
-response := daemon.GetLastBlockHeader()
-fmt.Println(response)
-```
 
 <!--END_DOCUSAURUS_CODE_TABS-->
 
@@ -550,28 +386,6 @@ daemon.getBlockHeaderByHash({
 }).catch((error) => {
   // do something
 })
-```
-
-<!--PHP-->
-```php
-<?php
-$hash = '30706...';
-$response = $turtlecoind->getBlockHeaderByHash($hash);
-echo $response;
-```
-
-<!--Python-->
-```py
-hash = '30706...'
-response = turtlecoind.get_block_header_by_hash(hash)
-print(response)
-```
-
-<!--Go-->
-```go
-hash := "30706..."
-response := daemon.GetBlockHeaderByHash(hash)
-fmt.Println(response)
 ```
 
 <!--END_DOCUSAURUS_CODE_TABS-->
@@ -649,28 +463,6 @@ daemon.getBlockHeaderByHeight({
 })
 ```
 
-<!--PHP-->
-```php
-<?php
-$height = 123456;
-$response = $turtlecoind->getBlockHeaderByHeight($height);
-echo $response;
-```
-
-<!--Python-->
-```py
-height = 123456
-response = turtlecoind.get_block_header_by_height(height)
-print(response)
-```
-
-<!--Go-->
-```go
-height := 123456
-response := daemon.GetBlockHeaderByHeight(height)
-fmt.Println(response)
-```
-
 <!--END_DOCUSAURUS_CODE_TABS-->
 
 #### Expected Output:
@@ -728,25 +520,6 @@ daemon.getCurrencyId().then((result) => {
 })
 ```
 
-<!--PHP-->
-```php
-<?php
-$response = $turtlecoind->getCurrencyId();
-echo $response;
-```
-
-<!--Python-->
-```py
-response = turtlecoind.get_currency_id()
-print(response)
-```
-
-<!--Go-->
-```go
-response := daemon.GetCurrencyID()
-fmt.Println(response)
-```
-
 <!--END_DOCUSAURUS_CODE_TABS-->
 
 #### Expected Output:
@@ -800,28 +573,6 @@ daemon.getBlocks({
 }).catch((error) => {
   // do something
 })
-```
-
-<!--PHP-->
-```php
-<?php
-$height = 500000;
-$response = $turtlecoind->getBlocks($height);
-echo $response;
-```
-
-<!--Python-->
-```py
-height = 500000
-response = turtlecoind.get_blocks(height)
-print(response)
-```
-
-<!--Go-->
-```go
-height := 500000
-response := daemon.GetBlocks(height)
-fmt.Println(response)
 ```
 
 <!--END_DOCUSAURUS_CODE_TABS-->
@@ -910,28 +661,6 @@ daemon.getBlock({
 }).catch((error) => {
   // do something
 })
-```
-
-<!--PHP-->
-```php
-<?php
-$hash = '980ff...';
-$response = $turtlecoind->getBlock($hash);
-echo $response;
-```
-
-<!--Python-->
-```py
-hash = '980ff...'
-response = turtlecoind.get_block(hash)
-print(response)
-```
-
-<!--Go-->
-```go
-hash := "980ff..."
-response := daemon.GetBlock(hash)
-fmt.Println(response)
 ```
 
 <!--END_DOCUSAURUS_CODE_TABS-->
@@ -1046,28 +775,6 @@ daemon.getTransaction({
 })
 ```
 
-<!--PHP-->
-```php
-<?php
-$hash = '702ad...';
-$response = $turtlecoind->getTransaction($hash);
-echo $response;
-```
-
-<!--Python-->
-```py
-hash = '702ad...'
-response = turtlecoind.get_transaction(hash)
-print(response)
-```
-
-<!--Go-->
-```go
-hash := "702ad..."
-response := daemon.GetTransaction(hash)
-fmt.Println(response)
-```
-
 <!--END_DOCUSAURUS_CODE_TABS-->
 
 #### Expected Output:
@@ -1159,25 +866,6 @@ daemon.getTransactionPool().then((transactions) => {
 })
 ```
 
-<!--PHP-->
-```php
-<?php
-$response = $turtlecoind->getTransactionPool();
-echo $response;
-```
-
-<!--Python-->
-```py
-response = turtlecoind.get_transaction_pool()
-print(response)
-```
-
-<!--Go-->
-```go
-response := daemon.GetTransactionPool()
-fmt.Println(response)
-```
-
 <!--END_DOCUSAURUS_CODE_TABS-->
 
 #### Expected Output:
@@ -1206,4 +894,4 @@ fmt.Println(response)
 
 The content in this document was originally written by the [Bytecoin (BCN) Developers](https://bytecoin.org/). It is licensed under the [CC BY SA 3.0 license](https://creativecommons.org/licenses/by-sa/3.0/). The source material can be found at the [Bytecoin Wiki](https://github.com/bcndev/bytecoin).
 
-Also of note, TurtleCoin developers have altered and adapted the content to suit our implementation of the API. This was done independently of the Bytecoin development team. They neither endorse or acknowledge our changes. Feel free to adopt or change our content as per the [CC BY SA 3.0 license](https://creativecommons.org/licenses/by-sa/3.0/) requirements.
+Also of note, kryptokrona developers have altered and adapted the content to suit our implementation of the API. This was done independently of the Bytecoin development team. They neither endorse or acknowledge our changes. Feel free to adopt or change our content as per the [CC BY SA 3.0 license](https://creativecommons.org/licenses/by-sa/3.0/) requirements.

@@ -2,12 +2,9 @@
 title: RPC Errors
 ---
 
-Here are some common error messages that TurtleCoind and turtle-service spit out, why they occured and how to fix them.  
+Here are some common error messages that Kryptokronad and Kryptokrona-service spit out, why they occured and how to fix them.  
 Listed are also some possible alternative errors which they could spit out.
 
-## turtle-service Errors
-
-* https://github.com/turtlecoin/turtlecoin/blob/master/src/Wallet/WalletErrors.h
 
 ### BAD_ADDRESS / Bad address
 
@@ -299,9 +296,9 @@ When using integrated addresses, if a payment ID is specified, it must match the
 **Solution:**
 Only send to one integrated address at once, and don't include a payment ID, to avoid confusion.
 
-## TurtleCoind Errors
+## KryptokronaCoind Errors
 
-* https://github.com/turtlecoin/turtlecoin/blob/master/src/NodeRpcProxy/NodeErrors.h
+* https://github.com/Kryptokronacoin/Kryptokronacoin/blob/master/src/NodeRpcProxy/NodeErrors.h
 
 ### NOT_INITIALIZED / Object was not initialized
 
@@ -318,7 +315,7 @@ Only send to one integrated address at once, and don't include a payment ID, to 
 ### NETWORK_ERROR / Network error
 
 **Description:**
-TurtleCoind is not open / not responding.
+KryptokronaCoind is not open / not responding.
 
 **Solution:**
  I'm not sure if you can experience this with walletd, I have seen it with walletgreen.
