@@ -99,7 +99,7 @@ const siteConfig = {
   },
 
   // For 'Edit' button in top right of each doc
-  editUrl: "https://github.com/turtlecoin/turtlecoin-docs/edit/master/docs/",
+  editUrl: "https://github.com/kryptokrona/kryptokrona-docs/edit/master/docs/",
 
   // For the "copy code" button in each long code block
   scripts: [

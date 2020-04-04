@@ -15,7 +15,22 @@
 @media only screen and (min-width: 1500px) {
 }
 
-*{}
+*{
+  background: black;
+  color: rgb(236, 235, 235);
+}
+
+.inner {
+ background: black;
+}
+
+.fixedHeaderContainer{
+  background: black;
+}
+
+.nav-footer{
+  background:black;
+}
 
 article p img,
 article iframe {

@@ -60,7 +60,6 @@ class HomeSplash extends React.Component {
 
     return (
       <SplashContainer>
-        <Logo img_src={`${baseUrl}img/undraw_docs.svg`} />
         <div className="inner">
           <ProjectTitle siteConfig={siteConfig} />
           <PromoSection>
@@ -101,26 +100,21 @@ class Index extends React.Component {
         {[
           {
             content: 'Learn more about Kryptokrona and the community	',
-            image: `${baseUrl}img/undraw_community.svg`,
-            imageAlign: 'top',
             title: `<a href=${docUrl("about/About-Kryptokrona")}>About Kryptokrona</a>`,
           },
           {
             content: 'A guide on setting up a Kryptokrona wallet to start receiving some XKR!',
-            image: `${baseUrl}img/undraw_wallet.svg`,
-            imageAlign: 'top',
+            
             title: `<a href=${docUrl("guides/wallets/Making-a-Wallet")}>Make a Wallet</a>`,
           },
           {
             content: 'A step-by-step guide to start mining Kryptokrona',
-            image: `${baseUrl}img/undraw_monitor.svg`,
-            imageAlign: 'top',
+            
             title: `<a href=${docUrl("guides/mining/Mining")}>Mine Kryptokrona</a>`,
           },
           {
             content: 'Information on contributing to Kryptokrona',
-            image: `${baseUrl}img/undraw_contribute.svg`,
-            imageAlign: 'top',
+            
             title: `<a href=${docUrl("about/Contributing")}>Contributing</a>`,
           }
         ]}
@@ -132,8 +126,7 @@ class Index extends React.Component {
         {[
           {
             content: '',
-            image: `${baseUrl}img/undraw_money.svg`,
-            imageAlign: 'right',
+            
             title: 'Kryptokrona is a fast, easy and private cryptocurrency which allows you to send money to friends and businesses.',
           },
         ]}
@@ -145,8 +138,7 @@ class Index extends React.Component {
         {[
           {
             content: '',
-            image: `${baseUrl}img/undraw_fun.svg`,
-            imageAlign: 'left',
+            
             title: "One of Kryptokrona's main goals is to make things as simple and as accessible as possible for everyday people, creating a cryptocurrency which is inviting, fun, and friendly.",
           },
         ]}
@@ -159,8 +151,6 @@ class Index extends React.Component {
           {
             content:
               `<MarkdownBlock> Come join us on [Discord](https://discord.gg/v8duNZ6)</MarkdownBlock>`,
-            image: `${baseUrl}img/undraw_questions.svg`,
-            imageAlign: 'right',
             title: `Have Questions or Need Help?`,
           },
         ]}
