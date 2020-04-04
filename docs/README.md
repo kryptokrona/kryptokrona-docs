@@ -1,5 +1,7 @@
+![image](https://camo.githubusercontent.com/d344c9e18b69f96502f3bf61b0dedc1ca9603af3/68747470733a2f2f6b727970746f6b726f6e612e73652f77702d636f6e74656e742f75706c6f6164732f323031392f30372f786b722d6c6f676f2d626c61636b2d746578742e706e67)
+
 # Kryptokrona-docs
-:turtle: :turtle: :turtle: Documentation for all things Kryptokrona:turtle: :turtle: :turtle:
+Documentation for all things Kryptokrona
 
 ## About
 This repository is the **official** home of all Kryptokrona documentation and should be regarded as the *single source of truth* for all 'official' or officially supported Kryptokrona projects. Because of the distributed, open, community-driven nature of our development teams, we believe the easiest approach to managing our documentation is to organize all of it in this central repository. This helps to avoid duplication and inconsistency and relieves contributors from having to track down and edit multiple documents in multiple places.  
