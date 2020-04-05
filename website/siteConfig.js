@@ -11,15 +11,15 @@
 const siteConfig = {
   title: 'Kryptokrona Docs', // Title for your website.
   tagline: 'Documentation for Kryptokrona',
-  url: 'https://docs.turtlecoin.lol', // Your website URL
+  url: 'https://docs.kryptokrona.se', // Your website URL
   baseUrl: '/', // Base URL for your project
   // For github.io type URLs, you would set the url and baseUrl like:
   //   url: 'https://facebook.github.io',
   //   baseUrl: '/test-site/',
 
   // Used for publishing and more
-  projectName: 'turtlecoin-docs',
-  organizationName: 'turtlecoin',
+  projectName: 'kryptokrona-docs',
+  organizationName: 'kryptokrona',
   // For top-level user or org sites, the organization is still the same.
   // e.g., for the https://JoelMarcey.github.io site, it would be set like...
   //   organizationName: 'JoelMarcey'
@@ -48,8 +48,8 @@ const siteConfig = {
   /* Colors for website */
   // See Brand Manual for more info on these
   colors: {
-    primaryColor: '#3d3d3d', // green
-    secondaryColor: '#ffffff', // black
+    primaryColor: '#bebdbd', // green
+    secondaryColor: '#cfcfcf', // black
   },
 
   /* Custom fonts for website */
@@ -83,7 +83,7 @@ const siteConfig = {
   // Collapse categories
   docsSideNavCollapsible: true,
   // custom url
-  cname: 'https://docs.turtlecoin.lol',
+  cname: 'https://docs.kryptokrona.se',
   // `.lol/docs/guides` -> `.lol/guides/`
   docsUrl: '',
   // Shows "jump to top" button

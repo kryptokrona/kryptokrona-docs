@@ -125,8 +125,6 @@ class Index extends React.Component {
       <Block background="">
         {[
           {
-            content: '',
-            
             title: 'Kryptokrona is a fast, easy and private cryptocurrency which allows you to send money to friends and businesses.',
           },
         ]}
@@ -137,8 +135,6 @@ class Index extends React.Component {
       <Block>
         {[
           {
-            content: '',
-            
             title: "One of Kryptokrona's main goals is to make things as simple and as accessible as possible for everyday people, creating a cryptocurrency which is inviting, fun, and friendly.",
           },
         ]}

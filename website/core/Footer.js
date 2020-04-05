@@ -25,56 +25,7 @@ class Footer extends React.Component {
     const repoUrl = `https://github.com/kryptokrona/kryptokrona-docs`
     return (
       <footer className="nav-footer" id="footer">
-        <section className="sitemap">
-          <a href={this.props.config.baseUrl} className="nav-home">
-            {this.props.config.footerIcon && (
-              <img
-                src={this.props.config.baseUrl + this.props.config.footerIcon}
-                alt={this.props.config.title}
-                width="66"
-                height="58"
-              />
-            )}
-          </a>
-          <div>
-            <h5>Docs</h5>
-            <a href={this.docUrl('Getting-Started')}>
-              Getting Started
-            </a>
-            <a href={this.docUrl('guides/Using-trtlbot-plus-plus.html')}>
-              Guides
-            </a>
-            <a href={this.docUrl('developer/Resources.html')}>
-              Developer Resources
-            </a>
-          </div>
-          <div>
-            <h5>Community</h5>
-            <a href="https://discord.gg/cDzW4w">Discord Chat</a>
-            
-            <a
-              href="https://twitter.com/kryptokrona"
-              target="_blank"
-              rel="noreferrer noopener">
-              Twitter
-            </a>
-          </div>
-          <div>
-            <h5>More</h5>
-            <a href="https://kryptokrona.se">Blog</a>
-            <a href="https://github.com/kryptokrona">GitHub</a>
-            <a
-              className="github-button"
-              href="https://github.com/kryptokrona/kryptokrona-docs"
-              data-icon="octicon-star"
-              data-count-href={`${repoUrl}/stargazers`}
-              data-show-count="true"
-              data-count-aria-label="# stargazers on GitHub"
-              aria-label="Star this project on GitHub">
-              Star
-            </a>
-          </div>
-        </section>
+        
 
         <div>
           <section className="copyright">{this.props.config.copyright1}</section>

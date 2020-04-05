@@ -2,14 +2,17 @@
 title: Background and History
 ---
 
-## How and Why was Kryptokrona Created?
+## Why was Kryptokrona Created?
+
+**Kryptokrona** was created as an answer to the Swedish Riksbank commission of the centralized digital currency **E-krona** to further impose their control over Swedens native currency. 
+
+The digital asset, **Kryptokrona**, was created without a pre-mine and without and initial coin offering.
 
 
-
-Kryptokrona was created with **No** Pre-Mine, **No** ICO, and **No** Shenanigans.
 
 ## Our Background
 
-
+We are a team of devoted developers that aim to bring decentralized economic freedom to the Nordic regions,
+with our core values of privacy and freedom close at heart we will work to further the individuals rights to digital financial privacy.
 
 

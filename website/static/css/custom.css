@@ -16,20 +16,20 @@
 }
 
 *{
-  background: black;
-  color: rgb(236, 235, 235);
+  background: rgb(19, 19, 19);
+  color: #bebdbd;
 }
 
 .inner {
- background: black;
+ background: rgb(19, 19, 19);
 }
 
 .fixedHeaderContainer{
-  background: black;
+  background: rgb(19, 19, 19);
 }
 
 .nav-footer{
-  background:black;
+  background:rgb(19, 19, 19);
 }
 
 article p img,

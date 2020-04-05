@@ -2,8 +2,6 @@
 title: Getting Started
 ---
 
-![TurtleCoin Logo](assets/turtlecoin_logo.png) 
-
 ## What is Kryptokrona? 
 
 Kryptokrona is a fast, easy and private cryptocurrency which allows you to send money to friends and businesses.
