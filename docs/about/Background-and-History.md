@@ -6,7 +6,7 @@ title: Background and History
 
 **Kryptokrona** was created as an answer to the Swedish Riksbank commission of the centralized digital currency **E-krona** to further impose their control over Swedens native currency. 
 
-The digital asset, **Kryptokrona**, was created without a pre-mine and without and initial coin offering.
+The digital asset, **Kryptokrona**, was created without a pre-mine and without an initial coin offering to provide private trustless transactions.
 
 
 

@@ -2,12 +2,6 @@
 title: Using zedwallet
 ---
 
-## Screenshot
-
-Here's a quick image of zedwallet in action:
-
-![zedwallet](../../assets/screenshot_zedwallet.png)
-
 ## Downloading
 
 Binary distributions can be found [here](https://github.com/kryptokrona/kryptokrona/releases).
