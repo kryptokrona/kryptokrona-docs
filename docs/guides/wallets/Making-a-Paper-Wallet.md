@@ -12,11 +12,11 @@ There are two options for a paper wallet.
 
 ## Making A Paper Wallet on an Internet-Connected Machine
 
-Go to [this link](https://turtlecoin.lol/wallet) and follow [these steps](#generating-the-wallet).
+Go to [this link](https://kryptokrona.se/paperwallet/) and follow [these steps](#generating-the-wallet).
 
 ## Making a Paper Wallet on an Air-Gapped Machine
 
-Go to [this GitHub repository](https://github.com/turtlecoin/paper-turtle)(on a machine connected to the internet).
+Go to [this GitHub repository](https://github.com/kryptokrona/kryptokrona-paperwallet-generator)(on a machine connected to the internet).
 
 To use it, follow these steps:
 
@@ -38,9 +38,9 @@ To use it, follow these steps:
 
   -  Install git if it's not already installed (`apt-install git`)
 
-  - Type, `git clone https://github.com/turtlecoin/paper-turtle.git`and press enter
+  - Type, `git clone https://github.com/kryptokrona/kryptokrona-paperwallet-generator.git`and press enter
 
-  - Then enter `cd paper-turtle`
+  - Then enter `cd kryptokrona-paperwallet-generator`
 
   - After doing so, enter `index.html`
 
@@ -56,7 +56,7 @@ To use it, follow these steps:
 
 - After you're done mashing your keyboard, press `Generate Wallet`
 
-- The letters and numbers in the green box, starting with `TRTL`, is your public address. You can share it freely. We recommend [registering it with trtlbot++](../Using-trtlbot-plus-plus#registering-your-wallet) in the [Discord server](http://chat.turtlecoin.lol/) so that you can access it easily(you can also get tips!).
+- The letters and numbers in the green box, starting with `SEKR`, is your public address. You can share it freely. 
 
 - Save the `Seed Phrase`, the 25 words in the red box, safely.  
 **DO NOT SHARE IT WITH ANYONE**.  
