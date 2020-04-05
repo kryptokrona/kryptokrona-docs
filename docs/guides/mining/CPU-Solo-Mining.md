@@ -22,13 +22,11 @@ Ensure **`Kryptokronad` is running and fully synced**.
 
 Go to your folder that has `miner.exe` in it and start a cmd prompt.  
 
-- This can easily be done by moving to the `Kryptokronad` directory in Windows Explorer, then typing `cmd` in the search bar and hitting enter:
+- This can easily be done by moving to the `Kryptokronad` directory in Windows Explorer, then typing `cmd` in the search bar and hitting enter.
 
-![opening win cmd](../../assets/opening-win-cmd.png)
 
-In Linux, you may be able to right click on your directory and "Open in" Terminal
+In Linux, you may be able to right click on your directory and "Open in" Terminal.
 
-![opening linux cmd](../../assets/opening-linux-cmd.png)
 
 When it opens, type:  
 `miner --address SEKR.. --threads 4 --scan-time 1 --log-level 3`
