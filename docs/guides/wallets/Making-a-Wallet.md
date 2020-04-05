@@ -4,7 +4,7 @@ title: Wallet Intro
 
 # Making a Kryptokrona Wallet
 
-There are multiple different types of wallets you can choose to use for Kryptokrona, paper wallets, CLI wallets, GUI wallets and Web Wallets.
+There are multiple different types of wallets you can choose to use for Kryptokrona, paper wallet, CLI wallet and GUI wallet.
 
 We recommend making a paper wallet so that you can start receiving funds, and later import them into a GUI or CLI wallet.
 
@@ -22,24 +22,9 @@ The CLI Wallet, called zedwallet, is a multi-platform program (Win/Linux/Mac) th
 
 If you would like to use zedwallet, you can check out [this guide](Using-zedwallet).
 
-## Proton Wallet (GUI Wallet)
+## Kryptokrona Wallet (GUI Wallet)
 
-Proton Wallet is a wallet inspired by Electrum's QT Client. It's fast and utilizing the latest in wallet backend technologies from the core Kryptokrona™ team. It's also open sourced and available on every major OS. You can download it [here](http://getproton.org/), or view the source code [here](https://github.com/Kryptokrona/turtle-wallet-proton)
+Kryptokronan also has a GUI wallet, It's open sourced and available on every major OS. You can download it [here](https://kryptokrona.se/en/kryptokrona-wallet-2/), or view the source code [here](https://github.com/kryptokrona/kryptokrona-wallet)
 
 If you would like to use it, you can check out [this guide](Using-Proton-Wallet)
 
-## Shellnet (Web Wallet)
-
-Shellnet is a web wallet made by dsanon, and supports all the basic features you'd want in a Kryptokrona wallet, including exporting your keys
-
-If you would like to use it, check out the guide [here](Using-Shellnet)
-
-## TurtleWallet (Web Wallet)
-
-TurtleWallet is a multi-featured web wallet made by Fexra, and includes features such as price charts, a dark mode, notifications, multiple accounts, as well as more.
-
-A guide is coming very soon for it!
-
-## TonChan (Mobile Wallet)
-
-Kryptokrona has a mobile wallet called [TonChan](https://play.google.com/store/apps/details?id=com.tonchan&hl=en) for Android devices. You can download the wallet from the Google Play store.
