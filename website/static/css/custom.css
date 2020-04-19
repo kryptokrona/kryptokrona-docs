@@ -15,21 +15,160 @@
 @media only screen and (min-width: 1500px) {
 }
 
-*{
-  background: rgb(19, 19, 19);
-  color: #bebdbd;
+body{
+  background:rgb(1, 38, 63);
+  color: #90f2ff8c;
+}
+
+@media only screen and (min-width: 1024px) {
+.navigationSlider .slidingNav ul li a {
+    border: 0;
+    color: ;
+    background-color: rgb(1, 38, 63);
+    display: flex;
+    font-size: 16px;
+    font-size: 1em;
+    font-weight: 300;
+    height: 32px;
+    line-height: 1.2em;
+    margin: 0;
+    padding: 0;
+    padding: 6px 10px;
+}
+}
+
+.toc .toggleNav {
+  background-color: rgb(1, 38, 63);
+  color: #90f2ff8c;
+  position: relative;
+}
+
+.navigationSlider .slidingNav ul {
+  background: rgb(1, 38, 63);
+  color: #90f2ff8c;
+}
+
+img {
+  padding-left: 1rem;
+  border-style: none;
+  box-sizing: content-box;
+  max-width: 100%;
+}
+
+.navigationSlider .slidingNav ul li {
+  flex: 1 1 auto;
+  color: #90f2ff8c;
+  margin: 0;
+  text-align: center;
+  white-space: nowrap;
+}
+
+@media only screen and (max-width: 1023px){
+.docsNavContainer {
+    background: rgb(1, 38, 63);
+    left: 0;
+    position: fixed;
+    width: 100%;
+    z-index: 100;
+}}
+
+input#search_input_react {
+  background-color: rgba(0, 0, 0, 0.2);
+  border: none;
+  border-radius: 20px;
+  color: #90f2ff8c;
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 20px;
+  outline: none;
+  padding-left: 25px;
+  position: relative;
+  -webkit-transition: 0.5s width ease;
+  -moz-transition: 0.5s width ease;
+  -o-transition: 0.5s width ease;
+  transition: 0.5s width ease;
+  width: 170px;
+}
+
+.algolia-docsearch-suggestion--category-header {
+  display: none;
+  background: rgb(1, 38, 63);
+  color: #90f2ff8c;
+  font-weight: 600;
+  padding: 5px 10px;
+  text-align: left;
+}
+
+.docsNavContainer .toc .navBreadcrumb {
+  background-color: rgb(1, 38, 63);
+  color: #90f2ff8c;
+  box-sizing: border-box;
+  display: flex;
+  flex-flow: row nowrap;
+  font-size: 12px;
+  height: 48px;
+  overflow: hidden;
+  padding: 8px 20px;
+}
+
+.navBreadcrumb a, .navBreadcrumb span {
+  border: 0;
+  color: #90f2ff8c;
+}
+
+.line1, .line2, .line3 {
+  width: 100%;
+  height: 3px;
+  background-color: #90f2ff8c;
+  margin: 3px 0;
+  transition: 0.4s;
+  border-radius: 10px;
 }
 
 .inner {
- background: rgb(19, 19, 19);
+ background: rgb(1, 38, 63);
+ color: #90f2ff8c;
 }
 
 .fixedHeaderContainer{
-  background: rgb(19, 19, 19);
+  background: rgb(1, 38, 63);
+  color: #90f2ff8c;
+}
+
+.projectTitle {
+  color: #90f2ff8c;
+}
+
+.toc .toggleNav .navGroup .navGroupCategoryTitle {
+  color: #90f2ff8c;
+}
+
+.toc .toggleNav ul li.navListItemActive a {
+    color: #90f2ff8c;
+}
+
+.button {
+  border: 1px solid #90f2ff8c;
+  border-radius: 3px;
+  color: #90f2ff8c;
+  display: inline-block;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.2em;
+  padding: 10px;
+  text-decoration: none !important;
+  text-transform: uppercase;
+  transition: background 0.3s, color 0.3s;
+}
+
+a {
+  color: #90f2ff8c;
+  text-decoration: none;
 }
 
 .nav-footer{
-  background:rgb(19, 19, 19);
+  background:rgb(1, 38, 63);
+  color: #90f2ff8c;
 }
 
 article p img,

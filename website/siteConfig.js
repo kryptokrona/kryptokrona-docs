@@ -9,7 +9,7 @@
 // site configuration options.
 
 const siteConfig = {
-  title: 'Kryptokrona Docs', // Title for your website.
+  title: '', // Title for your website.
   tagline: 'Documentation for Kryptokrona',
   url: 'https://docs.kryptokrona.se', // Your website URL
   baseUrl: '/', // Base URL for your project
@@ -48,8 +48,8 @@ const siteConfig = {
   /* Colors for website */
   // See Brand Manual for more info on these
   colors: {
-    primaryColor: '#bebdbd', // green
-    secondaryColor: '#cfcfcf', // black
+    primaryColor: 'rgb(1, 38, 63)', // green
+    secondaryColor: '#90f2ff8c', // black
   },
 
   /* Custom fonts for website */
