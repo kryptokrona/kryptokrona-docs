@@ -143,6 +143,10 @@ input#search_input_react {
   padding: 40px 0;
 }
 
+.homeContainer .homeWrapper {
+  padding: 1em 10px;
+}
+
 .container.paddingTop {
   padding-top: 20px;
 }
@@ -225,6 +229,7 @@ a {
 .slidingNav {
   background: rgb(1, 33, 55);
   color: #90f2ff8c;
+  height: 70%;
 }
 
 .slidingNav, a::after{
