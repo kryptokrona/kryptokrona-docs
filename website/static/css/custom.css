@@ -1,30 +1,25 @@
 /* your custom css */
 
-@media only screen and (min-device-width: 360px) and (max-device-width: 736px) {
-}
+@media only screen and (min-device-width: 360px) and (max-device-width: 736px) {}
 
-@media only screen and (min-width: 1024px) {
-}
+@media only screen and (min-width: 1024px) {}
 
-@media only screen and (max-width: 1023px) {
-}
+@media only screen and (max-width: 1023px) {}
 
-@media only screen and (min-width: 1400px) {
-}
+@media only screen and (min-width: 1400px) {}
 
-@media only screen and (min-width: 1500px) {
-}
+@media only screen and (min-width: 1500px) {}
 
-body{
-  background:rgb(1, 38, 63);
+body {
+  background: rgb(1, 38, 63);
   color: #90f2ff8c;
 }
 
 @media only screen and (min-width: 1024px) {
-.navigationSlider .slidingNav ul li a {
+  .navigationSlider .slidingNav ul li a {
     border: 0;
-    color: ;
-    background-color: rgb(1, 38, 63);
+    background: rgb(1, 33, 55);
+    color: #90f2ff8c;
     display: flex;
     font-size: 16px;
     font-size: 1em;
@@ -34,7 +29,7 @@ body{
     margin: 0;
     padding: 0;
     padding: 6px 10px;
-}
+  }
 }
 
 .toc .toggleNav {
@@ -63,14 +58,15 @@ img {
   white-space: nowrap;
 }
 
-@media only screen and (max-width: 1023px){
-.docsNavContainer {
+@media only screen and (max-width: 1023px) {
+  .docsNavContainer {
     background: rgb(1, 38, 63);
     left: 0;
     position: fixed;
     width: 100%;
     z-index: 100;
-}}
+  }
+}
 
 input#search_input_react {
   background-color: rgba(0, 0, 0, 0.2);
@@ -111,12 +107,15 @@ input#search_input_react {
   padding: 8px 20px;
 }
 
-.navBreadcrumb a, .navBreadcrumb span {
+.navBreadcrumb a,
+.navBreadcrumb span {
   border: 0;
   color: #90f2ff8c;
 }
 
-.line1, .line2, .line3 {
+.line1,
+.line2,
+.line3 {
   width: 100%;
   height: 3px;
   background-color: #90f2ff8c;
@@ -126,11 +125,33 @@ input#search_input_react {
 }
 
 .inner {
- background: rgb(1, 38, 63);
- color: #90f2ff8c;
+  background: rgb(1, 33, 55);
+  padding: 1rem;
+  border-radius: 1rem;
+  color: #90f2ff8c;
 }
 
-.fixedHeaderContainer{
+.gridBlock{
+  background: rgb(1, 33, 55);
+  border-radius: 1rem;
+  padding: 1rem;
+}
+
+.mainContainer {
+  flex: 1 1 0%;
+  max-width: 100%;
+  padding: 40px 0;
+}
+
+.container.paddingTop {
+  padding-top: 20px;
+}
+
+.container.paddingBottom {
+  padding-bottom: 20px;
+}
+
+.fixedHeaderContainer {
   background: rgb(1, 38, 63);
   color: #90f2ff8c;
 }
@@ -144,7 +165,7 @@ input#search_input_react {
 }
 
 .toc .toggleNav ul li.navListItemActive a {
-    color: #90f2ff8c;
+  color: #90f2ff8c;
 }
 
 .button {
@@ -161,13 +182,68 @@ input#search_input_react {
   transition: background 0.3s, color 0.3s;
 }
 
+.button:hover{
+  color: #90f2ff;
+}
+
 a {
   color: #90f2ff8c;
   text-decoration: none;
 }
 
-.nav-footer{
-  background:rgb(1, 38, 63);
+ a:hover {
+  color: #90f2ff;
+}
+
+.toc .toggleNav ul li a {
+  border: none;
+  color: #90f2ff8c;
+  display: block;
+  font-size: 14px;
+  padding: 4px 0;
+  transition: color 0.3s;
+}
+
+.onPageNav a {
+  color: #90f2ff8c;
+}
+
+@media only screen and (min-width: 1024px){
+.onPageNav > .toc-headings {
+    border-left: 1px solid #90f2ff8c;
+    padding: 10px 0 2px 15px;
+}}
+
+.navigationSlider .slidingNav ul li a:hover, .navigationSlider .slidingNav ul li.siteNavItemActive a, .navigationSlider .slidingNav ul li.siteNavGroupActive a {
+  color: #90f2ff;
+}
+
+.navigationSlider .slidingNav ul li > a:focus, .navigationSlider .slidingNav ul li > a:hover, .navigationSlider .slidingNav ul li.siteNavItemActive > a, .navigationSlider .slidingNav ul li.siteNavGroupActive > a {
+  background-color: rgb(1, 33, 55);
+}
+
+.slidingNav {
+  background: rgb(1, 33, 55);
+  color: #90f2ff8c;
+}
+
+.slidingNav, a::after{
+  background: rgb(1, 33, 55);
+  color: #90f2ff8c;
+}
+
+.navigationSlider .slidingNav ul {
+  background: rgb(1, 33, 55);
+  color: #90f2ff8c;
+}
+
+.fixedHeaderContainer {
+  background: rgb(1, 33, 55);
+  color: #90f2ff8c;
+}
+
+.nav-footer {
+  background: rgb(1, 38, 63);
   color: #90f2ff8c;
 }
 
@@ -183,5 +259,5 @@ article iframe {
   max-width: 70%;
   height: 150px;
 
-  object-fit:scale-down
+  object-fit: scale-down
 }

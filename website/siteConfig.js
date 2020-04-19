@@ -68,7 +68,7 @@ const siteConfig = {
 
   highlight: {
     // Highlight.js theme to use for syntax highlighting in code blocks.
-    theme: 'default',
+    theme: 'bash',
   },
 
   // Add custom scripts here that would be placed in <script> tags.
@@ -94,8 +94,8 @@ const siteConfig = {
 
   // Sets default syntax highlighing to plaintext
   highlight: {
-    defaultLang: 'plaintext',
-    theme: 'atom-one-dark',
+    defaultLang: 'bash',
+    theme: 'solarized-dark',
   },
 
   // For 'Edit' button in top right of each doc
