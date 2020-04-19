@@ -35,10 +35,8 @@ const siteConfig = {
   ],
 
   algolia: {
-    appId: '2BDZNJ7BD8',
-    apiKey: 'b669a6f16ee26d660b1f8f7b4c769613',
-    indexName: 'kryptokrona',
-    objectID: '273614140'
+    apiKey: '',
+    indexName: ''
     //algoliaOptions: {} // Optional, if provided by Algolia
   },
 
