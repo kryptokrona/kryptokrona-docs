@@ -35,8 +35,10 @@ const siteConfig = {
   ],
 
   algolia: {
-    apiKey: '6db40a54673fe6ee19a5787b7c0ad50c',
-    indexName: 'turtlecoin',
+    appId: '2BDZNJ7BD8',
+    apiKey: 'b669a6f16ee26d660b1f8f7b4c769613',
+    indexName: 'kryptokrona',
+    objectID: '273614140'
     //algoliaOptions: {} // Optional, if provided by Algolia
   },
 

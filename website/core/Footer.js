@@ -25,7 +25,7 @@ class Footer extends React.Component {
     const repoUrl = `https://github.com/kryptokrona/kryptokrona-docs`
     return (
       <footer className="nav-footer" id="footer">
-        <div>
+        <div className="footer-wrapper">
           <section className="copyright">{this.props.config.copyright1}</section>
           <section className="copyright">{this.props.config.copyright2} <a href="https://opensource.org/licenses/MIT">MIT License</a></section>
           <section className="copyright">{this.props.config.copyright3} <a href="https://www.gnu.org/licenses/gpl-3.0.html">GNU General Public V3 License</a></section>

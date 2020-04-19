@@ -63,9 +63,9 @@ class HomeSplash extends React.Component {
         <div className="inner">
           <ProjectTitle siteConfig={siteConfig} />
           <PromoSection>
-            <Button href="https://kryptokrona.se">Official Website</Button>
-            <Button href="https://github.com/kryptokrona">GitHub Org</Button>
-            <Button href="https://discord.gg/v8duNZ6">Discord Chat</Button>
+            <Button href="https://kryptokrona.se">Website</Button>
+            <Button href="https://github.com/kryptokrona">GitHub</Button>
+            <Button href="https://discord.gg/v8duNZ6">Discord</Button>
           </PromoSection>
         </div>
       </SplashContainer>
