@@ -672,7 +672,7 @@ We'll skip mentioning `walletName`, and `walletdName` as these both follow the s
 
 
 
-#### `const std::string contactLink = "http://chat.Kryptokrona.lol";`<br/>
+#### `const std::string contactLink = "http://chat.Kryptokrona.se";`<br/>
 
 This value is used to let the user know where they can get support if their wallet gets stuck whilst syncing.
 In our case, this is the Kryptokrona discord. Maybe you have a forum or an IRC chat instead?
@@ -817,7 +817,7 @@ You can always find the latest instructions on how to compile Kryptokrona on our
 
 ## Support, Questions?
 
-Something not clear? Head over to our [Discord](http://chat.Kryptokrona.lol) and ask in the #help channel,
+Something not clear? Head over to our [Discord](http://chat.Kryptokrona.se) and ask in the #help channel,
 and hopefully, someone will be able to help you out.
 
 Let us know if something is wrong with this guide, or missing, so we can update it and make it better!
