@@ -9,8 +9,8 @@
 // site configuration options.
 
 const siteConfig = {
-  title: '', // Title for your website.
-  tagline: 'Documentation for Kryptokrona',
+  title: 'Kryptokrona Docs', // Title for your website.
+  tagline: 'Official Kryptokrona Documentation',
   url: 'https://docs.kryptokrona.se', // Your website URL
   baseUrl: '/', // Base URL for your project
   // For github.io type URLs, you would set the url and baseUrl like:
@@ -55,8 +55,7 @@ const siteConfig = {
   /* Custom fonts for website */
   fonts: {
     myFont: [
-      "Roboto",
-      "Monsterrat"
+      "Raleway"
     ]
   },
 
