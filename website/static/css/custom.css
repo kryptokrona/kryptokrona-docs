@@ -540,3 +540,13 @@ code {
 .post{
   padding-top: 50px;
 }
+
+.onPageNav .toc-headings > li > a.active,
+.onPageNav .toc-headings > li > a.hover {
+  font-weight: 600;
+  color: #90f2ff;
+}
+
+#back-to-top {
+  background-color: #90f2ff41;
+}

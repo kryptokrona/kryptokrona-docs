@@ -28,19 +28,19 @@ http://localhost:11898/json_rpc
 
 To start the Daemon JSON RPC API server at `http://localhost:11898/json_rpc`, run:
 
-`kryptokronad --rpc-bind-port=11898`
+`kryptokrona --rpc-bind-port=11898`
 
 To make the server accessible from another computer, use the `--rpc-bind-ip 0.0.0.0` switch.
 
-`kryptokronad --rpc-bind-ip=0.0.0.0 --rpc-bind-port=11898`
+`kryptokrona --rpc-bind-ip=0.0.0.0 --rpc-bind-port=11898`
 
 To enable block explorer API access (like for `getblocks`, `gettransactionpool`, etc.), use the `--enable-blockexplorer` switch.
 
-`kryptokronad --enable-blockexplorer`
+`kryptokrona --enable-blockexplorer`
 
 The above given switches can be combined to achieve remote access with block explorer methods as shown below.
 
-`kryptokronad --enable-blockexplorer --rpc-bind-ip=0.0.0.0 --rpc-bind-port=11898`
+`kryptokrona --enable-blockexplorer --rpc-bind-ip=0.0.0.0 --rpc-bind-port=11898`
 
 This would make the RPC server accessible at
 
@@ -64,10 +64,10 @@ Parameter            | Description
 
 <!--NodeJS-->
 ```js
-const kryptokronad = require('kryptokrona-rpc').kryptokronad
+const kryptokrona = require('kryptokrona-rpc').kryptokrona
 
-const daemon = new kryptokronad({
-  host: '0.0.0.0', // ip address or hostname of the kryptokronad host
+const daemon = new kryptokrona({
+  host: '0.0.0.0', // ip address or hostname of the kryptokrona host
   port: 11898, // what port is the RPC server running on
   timeout: 2000, // request timeout
   ssl: false // whether we need to connect using SSL/TLS
