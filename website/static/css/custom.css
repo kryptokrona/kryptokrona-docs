@@ -517,3 +517,26 @@ article iframe {
   cursor: pointer;
   overflow: hidden;
 }
+
+/* Blockquotes */
+blockquote {
+  background-color: rgba(0, 3, 31, 0.315);
+  border-left: 8px solid #90f2ff41; 
+  padding: 15px 30px 15px 15px;
+  border-radius: 10px;
+}
+
+code {
+  background-color: rgba(0, 3, 31, 0.315);
+  border-radius: 10px;
+  color: inherit;
+  font-family: SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono',
+    'Courier New', monospace;
+  font-size: 85%;
+  margin: 0;
+  padding: 5px 8px;
+}
+
+.post{
+  padding-top: 50px;
+}

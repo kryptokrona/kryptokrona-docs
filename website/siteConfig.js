@@ -95,7 +95,8 @@ const siteConfig = {
   // Sets default syntax highlighing to plaintext
   highlight: {
     defaultLang: 'bash',
-    theme: 'solarized-dark',
+    version: '9.12.0',
+    theme: 'atom-one-dark',
   },
 
   // For 'Edit' button in top right of each doc
