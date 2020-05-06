@@ -528,7 +528,7 @@ blockquote {
 
 code {
   background-color: rgba(0, 3, 31, 0.315);
-  border-radius: 10px;
+  
   color: inherit;
   font-family: SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono',
     'Courier New', monospace;

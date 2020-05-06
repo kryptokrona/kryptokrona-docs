@@ -1,5 +1,5 @@
 ---
-title: Using zedwallet
+title: Using kkrwallet
 ---
 
 ## Downloading
@@ -54,23 +54,23 @@ Run the `kryptokronad` binary extracted from the `.zip` download:
 ./kryptokronad
 ```
 
-## Using Zedwallet
+## Using kkrwallet
 
-With `kryptokronad` still running in the background or another terminal/shell/command prompt, open zedwallet:
+With `kryptokronad` still running in the background or another terminal/shell/command prompt, open kkrwallet:
 
 #### Windows
 
-Run the `zedwallet-beta.exe` executable from the extracted folder.
+Run the `kkrwallet-beta.exe` executable from the extracted folder.
 
 #### Mac / Linux
 
 ```bash
-./zedwallet-beta
+./kkrwallet-beta
 ```
 
-### Using Zedwallet commands
+### Using kkrwallet commands
 
-Zedwallet has a twin command system; a numerical shortcut for navigating the menu, and typed commands you can access directly.  The more you use Zedwallet the more typed commands you'll pick up.  This guide is written using the written commnand system.  Feel free to use the numbers associated with the command.
+kkrwallet has a twin command system; a numerical shortcut for navigating the menu, and typed commands you can access directly.  The more you use kkrwallet the more typed commands you'll pick up.  This guide is written using the written commnand system.  Feel free to use the numbers associated with the command.
 
 ### Creating a Wallet
 
@@ -212,7 +212,7 @@ Total balance: 1100.00 XKR
 
 ### Sending kryptokrona Transactions
 
-To send kryptokrona; at the Zedwallet menu:
+To send kryptokrona; at the kkrwallet menu:
 
 - Type: `transfer` and press `enter`
 
@@ -258,7 +258,7 @@ When it is completed, it will print out a green message `Full optimization compl
 
 #### Payment ID
 
-Because transactions on the kryptokrona blockchain are privatized, in some situations a payment ID is necessary for the recipient to be able to determine where the payment came from, for instance when depositing to an exchange or other service.
+Because transactions on the kryptokrona blockchain are privatikkr, in some situations a payment ID is necessary for the recipient to be able to determine where the payment came from, for instance when depositing to an exchange or other service.
 
 **You need it if you're sending XKR to an exchange**.
 
@@ -270,9 +270,9 @@ Note that typically, the service/recipient will generate and provide the require
 
 ### Exiting the Wallet
 
-Wallets loaded into the *zedwallet* client must be synced with the blockchain in order to properly calculate balance, view transaction history, etc.
+Wallets loaded into the *kkrwallet* client must be synced with the blockchain in order to properly calculate balance, view transaction history, etc.
 
-It is important to properly save the wallet data before exiting *zedwallet* so that the synchronized data is not lost.
+It is important to properly save the wallet data before exiting *kkrwallet* so that the synchronikkr data is not lost.
 
 To save a wallet's data and exit; at the menu, type `exit` and press `enter`:
 
