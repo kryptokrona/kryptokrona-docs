@@ -29,11 +29,11 @@ class HomeSplash extends React.Component {
       </div>
     );
 
-    const Logo = props => (
-      <div className="projectLogo">
-        <img src={props.img_src} alt="Project Logo" />
-      </div>
-    );
+    // const Logo = props => (
+    //   <div className="projectLogo">
+    //     <img src={props.img_src} alt="Project Logo" />
+    //   </div>
+    // );
 
     const ProjectTitle = () => (
       <h2 className="projectTitle">
