@@ -26,7 +26,7 @@ Connect your ethernet cable and plug in the pi. Either install a keyboard, mouse
 
 Once logged in, you might want to run `sudo pi64-config` in order to get assisted with your setup! Otherwise, set up the linux environment to your liking.
 
-## Download kryptokronad
+## Download kryptokrona
 
 Once you're either ssh'd into your OS or using it directly with a mouse and keyboard, we're going to need to download the kryptokrona software. You can use these commands to do so:
 
@@ -39,13 +39,13 @@ Once you're either ssh'd into your OS or using it directly with a mouse and keyb
 
 and check that it's working ok with 
 
-`./kryptokronad --version`
+`./kryptokrona --version`
 
 >Note: you'll notice we're wgetting this link from discord's servers. With the ARM builds being fixed so recently, none of the official releases have been updated yet. Once a new official released is pushed this link will be updated.
 
 ## Mount your SSD
 
-kryptokronad needs alot of space on a fast drive for the database. So plug in your SSD to one of the USB ports on the pi and we'll create a mount point for it.
+kryptokrona needs alot of space on a fast drive for the database. So plug in your SSD to one of the USB ports on the pi and we'll create a mount point for it.
 
 First, run this command to view your available disks.
 
@@ -75,18 +75,18 @@ Scroll to the bottom and add
 
 Save and close by pressing `Ctrl+X`, `y`
 
-## Run kryptokronad and Keep it Running
+## Run kryptokrona and Keep it Running
 
 `sudo apt install screen`
 
 > install screen to keep the daemon running in the background
 
 `cd ~/kryptokrona/`
-`./kryptokronad --data-dir '/home/pi/.blockchain' --save-config 'daemon.conf'`  
+`./kryptokrona --data-dir '/home/pi/.blockchain' --save-config 'daemon.conf'`  
 
->(point kryptokronad to use the mount point we made earlier as the database location, and save a config file to do so automatically in the future)
+>(point kryptokrona to use the mount point we made earlier as the database location, and save a config file to do so automatically in the future)
 
-`screen -d -m ./kryptokronad -c daemon.conf` 
+`screen -d -m ./kryptokrona -c daemon.conf` 
 
 >tell kryptokrona to run with the config file we just generated inside of a detached screen session
 

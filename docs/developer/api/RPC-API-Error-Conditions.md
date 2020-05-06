@@ -2,7 +2,7 @@
 title: RPC Errors
 ---
 
-Here are some common error messages that Kryptokronad and Kryptokrona-service spit out, why they occured and how to fix them.  
+Here are some common error messages that Kryptokrona and Kryptokrona-service spit out, why they occured and how to fix them.  
 Listed are also some possible alternative errors which they could spit out.
 
 

@@ -48,24 +48,24 @@ On linux: `mkdir a b c`, to make the folders.
 
 Next we need to launch three daemons. Each need to have a different p2p port, different rpc port, and different data directory, to not conflict.
 
-In the below commands, replace `kryptokronad` with the name of your daemon executable, if you are a kryptokrona fork.
+In the below commands, replace `kryptokrona` with the name of your daemon executable, if you are a kryptokrona fork.
 
 ### Daemon 1
 
 ```
-./kryptokronad --data-dir a --add-exclusive-node 127.0.0.1:10001 --add-exclusive-node 127.0.0.1:10002 --p2p-bind-port 10000 --rpc-bind-port 20000
+./kryptokrona --data-dir a --add-exclusive-node 127.0.0.1:10001 --add-exclusive-node 127.0.0.1:10002 --p2p-bind-port 10000 --rpc-bind-port 20000
 ```
 
 ### Daemon 2
 
 ```
-./kryptokronad --data-dir b --add-exclusive-node 127.0.0.1:10000 --add-exclusive-node 127.0.0.1:10002 --p2p-bind-port 10001 --rpc-bind-port 20001
+./kryptokrona --data-dir b --add-exclusive-node 127.0.0.1:10000 --add-exclusive-node 127.0.0.1:10002 --p2p-bind-port 10001 --rpc-bind-port 20001
 ```
 
 ### Daemon 3
 
 ```
-./kryptokronad --data-dir c --add-exclusive-node 127.0.0.1:10000 --add-exclusive-node 127.0.0.1:10001 --p2p-bind-port 10002 --rpc-bind-port 20002
+./kryptokrona --data-dir c --add-exclusive-node 127.0.0.1:10000 --add-exclusive-node 127.0.0.1:10001 --p2p-bind-port 10002 --rpc-bind-port 20002
 ```
 
 And you're done! The three daemons should connect to each other.
