@@ -2,7 +2,7 @@
 title: Frequently Asked Questions
 ---
 
-## Kryptokronad / zedwallet Issues
+## Kryptokronad / kkrwallet Issues
 
 #### Q: I'm seeing an error in Kryptokronad `Proof of work too weak for block...` and the syncing stopped.
 
@@ -28,7 +28,7 @@ Reopen Kryptokronad/the GUI wallet and let it re-sync.
 
 Alternatively, check [this guide](guides/wallets/Using-Checkpoints) for instructions on how to use checkpoints for a quicker sync, or try a [remote node](guides/wallets/Using-Remote-Nodes)
 
-##### Q: When I open Kryptokronad on a Mac, I get an error `Illegal instruction: 4`. How can I fix it?
+##### Q: When I open Kryptokrona on a Mac, I get an error `Illegal instruction: 4`. How can I fix it?
 
 This is a known issue with older macs or un-updated macs.
 
@@ -56,7 +56,7 @@ The wallet can't function until it can communicate with the network.
 
 You need to also open up `Kryptokronad.exe` and let it sync. Kryptokronad is your connection to the network, and needs to be open and synced whenever you want to use your wallet.
 
-##### Q: I've opened the wallet, and I'm getting lots of messages like "Your Kryptokronad isn't fully synced yet!"..
+##### Q: I've opened the wallet, and I'm getting lots of messages like "Your Kryptokrona isn't fully synced yet!"..
 
 ```
 Until you are fully synced, you won't be able to send transactions, and your balance may be missing or incorrect!
@@ -110,7 +110,7 @@ Mixin is locked by the network to `7` as of block `620,000` and is not adjustabl
 
 If `Kryptokronad.exe` is fully synced, in zedwallet, simply type `balance`.
 
-#### Q: How long does it take to sync Kryptokronad.exe?
+#### Q: How long does it take to sync Kryptokrona.exe?
 
 
 Currently it takes a couple of hours. This number will increase as more people use XKR and the blockchain gets larger. If you'd like to speed up the process, check out the question below.
@@ -244,17 +244,17 @@ We strongly recommend using a pool, and a miner such as NinjaRig.
 Nevertheless, if you want to try it out, open a command prompt in the same directory, and run
 
 ```
-./miner --address XKR...
+./miner --address SEKR...
 ```
 
-replacing `XKR...` with your full XKR address.
+replacing `SEKR...` with your full XKR address.
 
-You need to have `Kryptokronad` open and synced to use this miner, unlike conventional miners, where the pool hosts the daemon.
+You need to have `Kryptokrona` open and synced to use this miner, unlike conventional miners, where the pool hosts the daemon.
 
 #### Q: Is there a calculator to see how much XKR I'll mine per day?
 
 Your pool's homepage should have one - enter your hashrate and it'll give an estimate of how much XKR you'll mine per day.  
-If there isn't, you can check one [here](http://turtlepool.space/).
+If there isn't, you can check one [here](https://explorer.kryptokrona.se).
 
 ## Paper Wallet / Cold Storage?
 
