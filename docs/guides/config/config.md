@@ -1,12 +1,12 @@
 ---
-title: Kryptokronad config
+title: Kryptokrona config
 ---
 
-## How to config Kryptokronad?
+## How to config Kryptokrona?
 
-Run Kryptokronad with arg `--help` will print all options.
+Run Kryptokrona with arg `--help` will print all options.
 
-Kryptokronad can start with these options by command line args, or use `-c` followed a json file for configuration.
+Kryptokrona can start with these options by command line args, or use `-c` followed a json file for configuration.
 
 The option in config file will unwrap the front `--`, for example:
 ```json

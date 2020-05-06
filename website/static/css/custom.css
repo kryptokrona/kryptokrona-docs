@@ -518,18 +518,18 @@ article iframe {
   overflow: hidden;
 }
 
-/* Blockquotes */
+/* Css fixes */
 blockquote {
-  background-color: rgba(0, 3, 31, 0.315);
+  background-color: rgb(1, 33, 55);
+  color: #90f2ffe4;
   border-left: 8px solid #90f2ff41; 
   padding: 15px 30px 15px 15px;
   border-radius: 10px;
 }
 
 code {
-  background-color: rgba(0, 3, 31, 0.315);
-  
-  color: inherit;
+  background-color: rgb(1, 33, 55);
+  color: #90f2ffe4;
   font-family: SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono',
     'Courier New', monospace;
   font-size: 85%;
@@ -549,4 +549,28 @@ code {
 
 #back-to-top {
   background-color: #90f2ff41;
+}
+
+table th, table td {
+  border: 1px solid #90f2ff41;
+  padding: 6px 13px;
+}
+
+td{
+  background: rgb(1, 38, 63);
+}
+
+.nav-tabs {
+  
+  border-bottom: 4px solid #90f2ff41;
+ 
+}
+
+.tabs {
+   border-top: 1px solid transparent; 
+}
+
+a {
+  color: hsla(187, 100%, 78%, 0.831);
+  text-decoration: none;
 }

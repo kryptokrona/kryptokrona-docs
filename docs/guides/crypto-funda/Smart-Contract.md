@@ -7,7 +7,7 @@ A **smart contract** is a piece of code that is stored in the blockchain network
 
 ## What are our thoughts on Smart Contracts?
 
-This is a quote from RockSteady expounding on the idea and potential process of Smart Contracts:
+This is a quote from RockSteady of the Turtlecoin project expounding on the idea and potential process of Smart Contracts:
 >I was brainstorming with nnamon about smart contracts in context of a private block chain, and I’m having two assumptions/hunches floating in my head.
 
 >One aspect will be the need for a storage network and market to act as buckets for encrypted offchain data, like a transient bit-torrentish network, and that we should treat execution not just as individual scripts but as discrete functions. It needs work, but do you guys see where I’m going with this? Storage network blobs should be updated by delta, and pay for their stay on the network.
