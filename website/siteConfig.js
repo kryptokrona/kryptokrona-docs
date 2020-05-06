@@ -35,8 +35,8 @@ const siteConfig = {
   ],
 
   algolia: {
-    apiKey: '',
-    indexName: ''
+    apiKey: '00577f0f048288f39647085691d6f3f6',
+    indexName: 'kryptokrona'
     //algoliaOptions: {} // Optional, if provided by Algolia
   },
 

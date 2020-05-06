@@ -68,7 +68,7 @@ You can also type `status` in the daemon and press enter to see the current heig
 ##### Q: I think I should have more money in my balance than it is showing, what should I do?
 
 Re-sync your daemon from scratch(see [here](#q-how-can-i-re-sync-the-blockchain)), sync [using checkpoints](guides/wallets/Using-Checkpoints) or use a [remote node](guides/wallets/Using-Remote-Nodes)) if you're using the GUI wallet.
-If it still doesn't work, then [update](http://latest.Kryptokrona.lol)
+If it still doesn't work, then [update](https://gota.Kryptokrona.se)
 
 *  Then, close and reopen zedwallet and Kryptokronad.
 *  Type `reset` in zedwallet after reopening your wallet file.
@@ -301,17 +301,14 @@ There are multiple ways to acquire XKR, for example:
 
 * Mining - see [here](guides/mining/Mining)
 * Bounties - Bounties for developing XKR software, spreading the word of XKR, and many other things are often posted in the #bounties channel on [Discord][discord_link]. Check the pinned messages for current bounties.
-* Tips - Turtles with often tip each other, especially if you make spicy memes in the `#memes` channel
-* Faucet - Head over to the faucets-
-  * [polar-it's faucet](https://Kryptokrona-faucet.xhub.cloud/) - 20 XKR, every 120 minutes
-  * [fipsi's faucet](https://XKRfaucet.de.cool/) - 100 XKR, after every 500 turtles use it
+* Tips - In the Kryptokrona discord we often tip each other, especially if you make spicy memes in the `#memes` channel
 
-  and enter your XKR address.  
+  and enter your SEKR address.  
   The amount you can receive is limited to share the XKR for all. Thanks to @madk, @polar-it and @fipsi for creating them.
 
 #### Q: Is there a web wallet?
 
-Yes, we have a few. You can learn more about them in [the wallet intro](guides/wallets/Making-a-Wallet#shellnet-web-wallet).
+No, it is under construction.
 
 
 #### Q: Are there any light wallets / mobile wallets?
@@ -319,9 +316,6 @@ Yes, we have a few. You can learn more about them in [the wallet intro](guides/w
 
 None are ready for usage right now, but they are being worked on. Check the development channels in [Discord][discord_link] to see how people are getting on, and feel free to join in if you're a programmer!
 
-#### Q: What happend to RainBorg/Raindance?
-
-  A: They were both discontinued due to them being gamed and exploited. RIP.
 
 #### Q: How do I register my wallet on Discord?
 
@@ -337,11 +331,7 @@ On Windows, it is in `%APPDATA%/Kryptokrona`. On Mac and Linux, it is in `~/.Kry
 
 Yes, the offical one is
 
-* https://explorer.Kryptokrona.lol
-
-although there are currently a few other unique ones-  
-
-* http://XKR.rocks
+* https://explorer.Kryptokrona.se
 
 #### Q: How do I make sure a pool isn't forked? 
 
@@ -353,4 +343,4 @@ You can type in `/forked` in the `#bots` channel in the [Discord][discord_link] 
 
 [Join the Discord server][discord_link], and come to the `#help` channel, we'll try and fix any issues.
 
-[discord_link]:http://chat.Kryptokrona.lol/
+[discord_link]:http://chat.Kryptokrona.se/
