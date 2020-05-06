@@ -17,23 +17,23 @@ In case you don't want to download the blockchain and verify it everytime, you c
 
 - You may also click "Find node..." which will select a random node
 
-![proton remote node](../../assets/proton-remote-nodes.png)
+![proton remote node](../../assets/kryptokrona-remote-nodes.png)
 
-## zedwallet
+## kkrwallet
 
-1. Open up a command prompt window and navigate to the folder that contains *zedwallet*.
-2. Use the following command to start zedwallet  
+1. Open up a command prompt window and navigate to the folder that contains *kkrwallet*.
+2. Use the following command to start kkrwallet  
 
 ### Windows:
 
 ```
-zedwallet.exe --remote-daemon host:port
+kkrwallet.exe --remote-daemon host:port
 ```
 
 ### Mac and Linux
 
 ```
-./zedwallet --remote-daemon host:port
+./kkrwallet --remote-daemon host:port
 ```
 
 Replace `host:port` with values from one of the public remote daemons available below.
@@ -43,18 +43,18 @@ You can now follow your normal process to access your wallet.
 For example-
 
 ```
-zedwallet.exe --remote-daemon public.turtlenode.online:11898
+kkrwallet.exe --remote-daemon public.kryptokrona.online:11898
 ```
 
 ### Making a Script to Do it Automatically
 
-*Note*: This only works on Windows, and for zedwallet
+*Note*: This only works on Windows, and for kkrwallet
 
 1. Open NotePad/a text editor of your choice and type the following lines inside:
 
 ```text
 @echo off
-zedwallet-beta.exe --remote-daemon host:port
+kkrwallet-beta.exe --remote-daemon host:port
 pause
 ```
 
@@ -64,6 +64,4 @@ pause
 
 ## Known remote daemons
 
-https://explorer.turtlecoin.lol/nodes.html
-
-https://github.com/turtlecoin/turtlecoin-nodes-json
+https://explorer.kryptokrona.se/nodes (not live atm)

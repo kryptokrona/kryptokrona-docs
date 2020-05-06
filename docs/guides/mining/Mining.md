@@ -42,4 +42,4 @@ You may view more info on mining pools [here](Pools).
 
 ## Have Questions or Need Help?
 
-Check out our [Discord](http://chat.Kryptokrona.lol) to get in touch.
+Check out our [Discord](http://chat.kryptokrona.se) to get in touch.

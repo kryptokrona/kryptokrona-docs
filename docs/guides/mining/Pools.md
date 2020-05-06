@@ -4,7 +4,7 @@ title: Mining Pools
 
 Unless you want to [solo mine](CPU-Solo-Mining), which is unfeasible for many people, you will need a pool to mine towards. Make sure to choose the one closest to you!
 
-To view a list of pools, check out [the explorer](https://explorer.turtlecoin.lol/pools.html)
+To view a list of pools, check out [the explorer](https://explorer.kryptokrona.se/pools.html)
 
 ## Pinging a Pool
 
@@ -14,15 +14,15 @@ Open up your terminal; look for "Command Prompt" or "Terminal" in your Start/App
 
 When open, enter this command: `ping <pool url>`, replacing `<pool url>` with the address of your pool.
 
-For example, if I was mining at turtle.atpool.party, then the pool url (what you put into your miner) is `geo.atpool.party`. Thus, I would enter:
+For example, if I was mining at gota.kryptokrona.se, then the pool url (what you put into your miner) is `geo.kryptokrona.se`. Thus, I would enter:
 ```
-ping geo.atpool.party
+ping geo.kryptokrona.se
 ```
 The port number is not necessary
 
 Analyze the number before the `ms`; this is how long it takes for you to send a receive a packet from the pool. The *lower it is, the better*. 
 
-![ping pool](../../assets/pool-ping.png)
+<!-- ![ping pool](../../assets/pool-ping.png) -->
 
 You may need to press Ctrl + C on your keyboard to exit the command.
 

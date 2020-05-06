@@ -62,16 +62,16 @@ You need to also open up `Kryptokrona.exe` and let it sync. Kryptokrona is your 
 Until you are fully synced, you won't be able to send transactions, and your balance may be missing or incorrect!
 ```
 
-Your daemon hasn't finished syncing yet. Keep zedwallet open, and wait until you are 0 days behind the current block, and for the daemon to print out a green message saying `Successfully synchronized with the Kryptokrona Network.`  
+Your daemon hasn't finished syncing yet. Keep kkrwallet open, and wait until you are 0 days behind the current block, and for the daemon to print out a green message saying `Successfully synchronized with the Kryptokrona Network.`  
 You can also type `status` in the daemon and press enter to see the current height it's at.
 
 ##### Q: I think I should have more money in my balance than it is showing, what should I do?
 
 Re-sync your daemon from scratch(see [here](#q-how-can-i-re-sync-the-blockchain)), sync [using checkpoints](guides/wallets/Using-Checkpoints) or use a [remote node](guides/wallets/Using-Remote-Nodes)) if you're using the GUI wallet.
-If it still doesn't work, then [update](https://gota.Kryptokrona.se)
+If it still doesn't work, then [update](https://gota.kryptokrona.se)
 
 *  Then, close and reopen kkrwallet and Kryptokronad.
-*  Type `reset` in zedwallet after reopening your wallet file.
+*  Type `reset` in kkrwallet after reopening your wallet file.
 *  It should start resetting your wallet, but the progress might not be immediately obvious - wait a while, and it should start counting up the blocks and printing out your transactions as it gets to them.
 
 #### Q: How do I backup my wallet?
@@ -92,12 +92,12 @@ Your wallet is now being optimized. When it finishes, your transaction should be
 #### Q: How do I send XKR?
 
 
-You can check [this out](guides/wallets/Using-zedwallet##sending-Kryptokrona-transactions) for steps on how to send XKR to someone.
+You can check [this out](guides/wallets/Using-kkrwallet##sending-Kryptokrona-transactions) for steps on how to send XKR to someone.
 
 #### Q: How do I send money to exchanges / use payment ID?
 
 
-You can check [this out](guides/wallets/Using-zedwallet#payment-id) for steps on how to send XKR with the payment ID.
+You can check [this out](guides/wallets/Using-kkrwallet#payment-id) for steps on how to send XKR with the payment ID.
 
 #### Q: What is mixin?
 
