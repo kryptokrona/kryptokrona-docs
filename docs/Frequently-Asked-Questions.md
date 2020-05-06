@@ -2,9 +2,9 @@
 title: Frequently Asked Questions
 ---
 
-## Kryptokronad / zedwallet Issues
+## Kryptokronad / kkrwallet Issues
 
-#### Q: I'm seeing an error in Kryptokronad `Proof of work too weak for block...` and the syncing stopped.
+#### Q: I'm seeing an error in Kryptokrona `Proof of work too weak for block...` and the syncing stopped.
 
 This occurs because of the blockchain forking, generally when one mining pool has a very large hashrate.
 
@@ -28,7 +28,7 @@ Reopen Kryptokronad/the GUI wallet and let it re-sync.
 
 Alternatively, check [this guide](guides/wallets/Using-Checkpoints) for instructions on how to use checkpoints for a quicker sync, or try a [remote node](guides/wallets/Using-Remote-Nodes)
 
-##### Q: When I open Kryptokronad on a Mac, I get an error `Illegal instruction: 4`. How can I fix it?
+##### Q: When I open Kryptokrona on a Mac, I get an error `Illegal instruction: 4`. How can I fix it?
 
 This is a known issue with older macs or un-updated macs.
 
@@ -41,22 +41,22 @@ curl -sL "https://raw.githubusercontent.com/Kryptokrona/Kryptokrona/master/multi
 This automated script should compile the software itself, and place the binaries in ./src once done.
 
 
-##### Q: I've opened the wallet, and I'm getting lots of red messages like "It looks like Kryptokronad isn't open!"...
+##### Q: I've opened the wallet, and I'm getting lots of red messages like "It looks like Kryptokrona isn't open!"...
 
 ```
-It looks like Kryptokronad isn't open!
+It looks like Kryptokrona isn't open!
 
 Ensure Kryptokronad is open and has finished initializing.
-If it's still not working, try restarting Kryptokronad. The daemon sometimes gets
+If it's still not working, try restarting Kryptokrona. The daemon sometimes gets
 stuck.
-Alternatively, perhaps Kryptokronad can't communicate with any peers.
+Alternatively, perhaps Kryptokrona can't communicate with any peers.
 
 The wallet can't function until it can communicate with the network.
 ```
 
-You need to also open up `Kryptokronad.exe` and let it sync. Kryptokronad is your connection to the network, and needs to be open and synced whenever you want to use your wallet.
+You need to also open up `Kryptokrona.exe` and let it sync. Kryptokrona is your connection to the network, and needs to be open and synced whenever you want to use your wallet.
 
-##### Q: I've opened the wallet, and I'm getting lots of messages like "Your Kryptokronad isn't fully synced yet!"..
+##### Q: I've opened the wallet, and I'm getting lots of messages like "Your Kryptokrona isn't fully synced yet!"..
 
 ```
 Until you are fully synced, you won't be able to send transactions, and your balance may be missing or incorrect!
@@ -70,21 +70,21 @@ You can also type `status` in the daemon and press enter to see the current heig
 Re-sync your daemon from scratch(see [here](#q-how-can-i-re-sync-the-blockchain)), sync [using checkpoints](guides/wallets/Using-Checkpoints) or use a [remote node](guides/wallets/Using-Remote-Nodes)) if you're using the GUI wallet.
 If it still doesn't work, then [update](https://gota.Kryptokrona.se)
 
-*  Then, close and reopen zedwallet and Kryptokronad.
+*  Then, close and reopen kkrwallet and Kryptokronad.
 *  Type `reset` in zedwallet after reopening your wallet file.
 *  It should start resetting your wallet, but the progress might not be immediately obvious - wait a while, and it should start counting up the blocks and printing out your transactions as it gets to them.
 
 #### Q: How do I backup my wallet?
 
 
-Open zedwallet and type `export_keys`.  
+Open kkrwallet and type `export_keys`.  
 Save the view and spend key somewhere safe, and you can use them to reimport your wallet if you lose it.
 
 #### Q: My transactions are very slow
 
 Try attemping a fusion transaction:
 
-* Open up zedwallet, and type `optimize`, then press enter.
+* Open up kkrwallet, and type `optimize`, then press enter.
 * It will confirm if you want to optimize your wallet; it will take a bit. If you're fine with that, type `Y` and press enter again.
 
 Your wallet is now being optimized. When it finishes, your transaction should be able to send
@@ -108,9 +108,9 @@ Mixin is locked by the network to `7` as of block `620,000` and is not adjustabl
 #### Q: How can I view my balance?
 
 
-If `Kryptokronad.exe` is fully synced, in zedwallet, simply type `balance`.
+If `Kryptokrona.exe` is fully synced, in kkrwallet, simply type `balance`.
 
-#### Q: How long does it take to sync Kryptokronad.exe?
+#### Q: How long does it take to sync Kryptokrona.exe?
 
 
 Currently it takes a couple of hours. This number will increase as more people use XKR and the blockchain gets larger. If you'd like to speed up the process, check out the question below.
@@ -118,19 +118,19 @@ Currently it takes a couple of hours. This number will increase as more people u
 #### Q: Can I speed up the syncing of the blockchain?
 
 
-You can sync [with checkpoints](guides/wallets/Using-Checkpoints) (only with zedwallet) or use a [remote node](guides/wallets/Using-Remote-Nodes)
+You can sync [with checkpoints](guides/wallets/Using-Checkpoints) (only with kkrwallet) or use a [remote node](guides/wallets/Using-Remote-Nodes)
 
 #### Q: Can I skip the syncing?
 
 
-Yes, you can currently use a remote node with zedwallet, Nest wallet and WalletShell. The keys stay on your PC, so it's secure. Check [this guide](guides/wallets/Using-Remote-Nodes) for more information. [Checkpoints](guides/wallets/Using-Checkpoints) are also an option if you're using zedwallet.
+Yes, you can currently use a remote node with kkrwallet and the desktopwallet. The keys stay on your PC, so it's secure. Check [this guide](guides/wallets/Using-Remote-Nodes) for more information. [Checkpoints](guides/wallets/Using-Checkpoints) are also an option if you're using kkrwallet.
 
 #### Q: What does it mean if my balance is locked?
 
 
 This is a transfer which hasn't been confirmed by the network yet. It will move into your main balance shortly, generally after 3 minutes.
 
-#### Q: In zedwallet.exe, I get an error `Error: failed to save new wallet: boost::filesystem::unique__path: Keyset as registered is invalid`. How can I fix it?
+#### Q: In kkrwallet.exe, I get an error `Error: failed to save new wallet: boost::filesystem::unique__path: Keyset as registered is invalid`. How can I fix it?
 
 
 This is caused by some broken Windows crypto keys. In the address bar in Windows Explorer, type `%AppData%/Microsoft/Crypto/RSA/`.
@@ -244,17 +244,17 @@ We strongly recommend using a pool, and a miner such as NinjaRig.
 Nevertheless, if you want to try it out, open a command prompt in the same directory, and run
 
 ```
-./miner --address XKR...
+./miner --address SEKR...
 ```
 
-replacing `XKR...` with your full XKR address.
+replacing `SEKR...` with your full XKR address.
 
-You need to have `Kryptokronad` open and synced to use this miner, unlike conventional miners, where the pool hosts the daemon.
+You need to have `Kryptokrona` open and synced to use this miner, unlike conventional miners, where the pool hosts the daemon.
 
 #### Q: Is there a calculator to see how much XKR I'll mine per day?
 
 Your pool's homepage should have one - enter your hashrate and it'll give an estimate of how much XKR you'll mine per day.  
-If there isn't, you can check one [here](http://turtlepool.space/).
+If there isn't, you can check one [here](https://explorer.kryptokrona.se).
 
 ## Paper Wallet / Cold Storage?
 
