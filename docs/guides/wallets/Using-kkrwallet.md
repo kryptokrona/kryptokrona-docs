@@ -34,9 +34,9 @@ unzip kryptokrona-...-linux.zip
 
 ## Synchronizing the Blockchain
 
-Running `kryptokronad` will start the *kryptokronad* network daemon, which will connect to the network and begin downloading and verifying the kryptokrona blockchain.  
+Running `kryptokrona` will start the *kryptokrona* network daemon, which will connect to the network and begin downloading and verifying the kryptokrona blockchain.  
 
-Because the blockchain is constantly growing, the file size always increases (the blockchain is currently over 35 GB), and *kryptokronad must verify every block*, which is both CPU and disk intensive. An SSD with at least this much free disk space is recommended, unless you plan to use [remote nodes](Using-Remote-Nodes). 
+Because the blockchain is constantly growing, the file size always increases (the blockchain is currently over 35 GB), and *kryptokrona must verify every block*, which is both CPU and disk intensive. An SSD with at least this much free disk space is recommended, unless you plan to use [remote nodes](Using-Remote-Nodes). 
 
 ### Using Checkpoints
 
@@ -44,19 +44,19 @@ In **versions 0.4.3+** you can sync a fresh chain from block 0 much quicker by u
 
 ### Windows
 
-Run the `kryptokronad.exe` executable extracted from the Windows binary zip:
+Run the `kryptokrona.exe` executable extracted from the Windows binary zip:
 
 ### Mac / Linux
 
-Run the `kryptokronad` binary extracted from the `.zip` download:
+Run the `kryptokrona` binary extracted from the `.zip` download:
 
 ```bash
-./kryptokronad
+./kryptokrona
 ```
 
 ## Using kkrwallet
 
-With `kryptokronad` still running in the background or another terminal/shell/command prompt, open kkrwallet:
+With `kryptokrona` still running in the background or another terminal/shell/command prompt, open kkrwallet:
 
 #### Windows
 
@@ -87,11 +87,11 @@ Welcome, please choose an option below:
  6	exit                     Exit the program
 
 What would you like to do?: create
-What would you like to call your new wallet?: XKR
+What would you like to call your new wallet?: newWallet
 Give your new wallet a password: **************
 Confirm your new password: **************
 Welcome to your new wallet, here is your payment address:
-XKRuxqfDys1pfQ1omkHMVViY4sFh6My5Ff3HBY8XPp3cJBkEfD7romVyzKug3mb9NNR4A8kEjZxZ9CHUgWckBSpPfbxnWAQUGL
+SEKRuxqfDys1pfQ1omkHMVViY4sFh6My5Ff3HBY8XPp3cJBkEfD7romVyzKug3mb9NNR4A8kEjZxZ9CHUgWckBSpPfbxnWAQUGL
 
 Please copy your secret keys and mnemonic seed and store them in a secure location: 
 Private spend key:
@@ -112,13 +112,13 @@ Use the status command to check the progress.
 
  1	advanced                 List available advanced commands
  2	address                  Display your payment address
- 3	balance                  Display how much XKR you have
+ 3	balance                  Display how much KKR you have
  4	backup                   Backup your private keys and/or seed
  5	exit                     Exit and save your wallet
  6	help                     List this help message
- 7	transfer                 Send XKR to someone
+ 7	transfer                 Send KKR to someone
 
-[XKR xkr]: 
+[KKR newWallet]: 
 ```
 
 ### Opening a Wallet
@@ -135,16 +135,16 @@ To open an existing wallet; type `open` and press `enter`:
  6	exit                     Exit the program
 
 What would you like to do?: 1
-What is the name of the wallet you want to open?: XKR
+What is the name of the wallet you want to open?: newWallet
 Enter password: ***********
 
-Making initial contact with kryptokronad.
+Making initial contact with kryptokrona.
 Please wait, this sometimes can take a long time...
 
 
 Your wallet SEKRuxqfDys1pfQ1omkHMVViY4sFh6My5Ff3HBY8XPp3cJBkEfD7romVyzKug3mb9NNR4A8kEjZxZ9CHUgWckBSpPfbxnWAQUGL has been successfully opened!
 
-Your kryptokronad isn't fully synced yet!
+Your kryptokrona isn't fully synced yet!
 Until you are fully synced, you won't be able to send transactions,
 and your balance may be missing or incorrect!
 
@@ -163,7 +163,7 @@ Finished scanning blockchain!
  6	help                     List this help message
  7	transfer                 Send XKR to someone
 
-[XKR xkr]: 
+[KKR newWallet]: 
 
 ```
 
@@ -172,9 +172,9 @@ Finished scanning blockchain!
 To view a wallet's public address; at the menu, type `address` and press `enter`.
 
 ```
-[XKR xkr]: address
-XKRuxqfDys1pfQ1omkHMVViY4sFh6My5Ff3HBY8XPp3cJBkEfD7romVyzKug3mb9NNR4A8kEjZxZ9CHUgWckBSpPfbxnWAQUGL
-[XKR xkr]:
+[KKR newWallet]: address
+SEKRuxqfDys1pfQ1omkHMVViY4sFh6My5Ff3HBY8XPp3cJBkEfD7romVyzKug3mb9NNR4A8kEjZxZ9CHUgWckBSpPfbxnWAQUGL
+[KKR newWallet]:
 ```
 
 ### Exporting Keys
@@ -190,12 +190,12 @@ To print your keys; at the menu type `backup` and press `enter`.
 The *View Key* and *Spend Key* will appear. Copy them and store them **safely and securely**.
 
 ```
-[XKR xkr]: backup
+[KKR newWallet]: backup
 Enter password: **********
 Private spend key: 41c834f7c26e12373e5c39a9c9b1f8beb665324ad0d098cabda1234567b5d30f
 Private view key: df51e85dfa4fe48d0123475ec966124b1234c98abda6789060fe6d69b503490b
 Mnemonic seed: truth neon vials ignore butterfly cactus soggy vibrate meant wizard awesome fountain axis skater itself egotistic pumpkins ultimate foaming fatal request sifting merger egotistic fierce
-[XKR xkr]:
+[KKR newWallet]:
 ```
 
 ### Viewing Wallet Balance
@@ -203,11 +203,11 @@ Mnemonic seed: truth neon vials ignore butterfly cactus soggy vibrate meant wiza
 To view your wallet's balance; at the menu, type `balance` and press `enter`:
 
 ```
-[XKR XKR]: balance
+[KKR newWallet]: balance
 Available balance: 1000.00 XKR
 Locked (unconfirmed) balance: 100.00 XKR
 Total balance: 1100.00 XKR
-[XKR XKR]:
+[KKR newWallet]:
 ```
 
 ### Sending kryptokrona Transactions
@@ -232,9 +232,6 @@ To send kryptokrona; at the kkrwallet menu:
 
 Depending on the amount you transfer, you may need to wait a while for confirmation.  If you have had too many small incoming transactions, or the amount you wish to send is too large; either break up your transfer into several smaller amounts, or optimise your wallet.
 
-Example:
-
-![transfer](../../assets/transfer-simple.png)
 
 
 #### Optimizing your Wallet
@@ -243,28 +240,25 @@ Fusion transactions take all your (small) incoming payments and combine them int
 
 To optimize your wallet, type `optimize` and press `enter`:
 ```
-[XKR XKR]: optimize
+[KKR newWallet]: optimize
 Attempting to optimize your wallet to allow you to send large amounts at once. 
 This may take a very long time!
 Do you want to proceed? (Y/n): y
 Running optimization round 1...
 Full optimization completed!
-[XKR XKR]: 
+[KKR newWallet]: 
 ```
 
-When it is completed, it will print out a green message `Full optimization completed!`
-
-![optimize](../../assets/optimize-simple.png)
 
 #### Payment ID
 
 Because transactions on the kryptokrona blockchain are privatikkr, in some situations a payment ID is necessary for the recipient to be able to determine where the payment came from, for instance when depositing to an exchange or other service.
 
-**You need it if you're sending XKR to an exchange**.
+<!-- **You need it if you're sending XKR to an exchange**.
 
 To send a transaction with a payment ID, enter it when prompted to.
 
-![p-id](../../assets/p-id-simple.png)
+![p-id](../../assets/p-id-simple.png) -->
 
 Note that typically, the service/recipient will generate and provide the required payment ID.
 
@@ -277,7 +271,7 @@ It is important to properly save the wallet data before exiting *kkrwallet* so t
 To save a wallet's data and exit; at the menu, type `exit` and press `enter`:
 
 ```
-[XKR XKR]: exit
+[KKR newWallet]: exit
 Shutting down...
 Saving wallet file...
 Shutting down wallet interface...
@@ -302,7 +296,7 @@ To restore a wallet using spend and view keys; at the menu type `key_restore` an
 What would you like to do?: key_restore
 Enter your private spend key: 41c834f7c26e12373e5c39a9c9b1f8beb665324ad0d098cabda1234567b5d30f
 Enter your private view key: df51e85dfa4fe48d0123475ec966124b1234c98abda6789060fe6d69b503490b
-What would you like to call your new wallet?: XKR2
+What would you like to call your new wallet?: newWallet2
 Give your new wallet a password: ***********
 Confirm your new password: ***********
 What height would you like to begin scanning your wallet from?
@@ -313,13 +307,13 @@ If you do not know the exact height, err on the side of caution so transactions 
 
 Hit enter for the sub-optimal default of zero: 748000
 
-Making initial contact with kryptokronad.
+Making initial contact with kryptokrona.
 Please wait, this sometimes can take a long time...
 
 
-Your wallet XKRuxqfDys1pfQ1omkHMVViY4sFh6My5Ff3HBY8XPp3cJBkEfD7romVyzKug3mb9NNR4A8kEjZxZ9CHUgWckBSpPfbxnWAQUGL has been successfully imported!
+Your wallet SEKRuxqfDys1pfQ1omkHMVViY4sFh6My5Ff3HBY8XPp3cJBkEfD7romVyzKug3mb9NNR4A8kEjZxZ9CHUgWckBSpPfbxnWAQUGL has been successfully imported!
 
-Your kryptokronad isn't fully synced yet!
+Your kryptokrona isn't fully synced yet!
 Until you are fully synced, you won't be able to send transactions,
 and your balance may be missing or incorrect!
 
@@ -337,7 +331,7 @@ Finished scanning blockchain!
  6	help                     List this help message
  7	transfer                 Send XKR to someone
 
-[XKR XKR2]: 
+[KKR newWallet2]: 
 
 ```
 
@@ -367,14 +361,14 @@ If you do not know the exact height, err on the side of caution so transactions 
 
 Hit enter for the sub-optimal default of zero: 1713000
 
-Your wallet XKRuxm1BmQBTyz6tgpdpTdoq3dx3xaCE1VbuftusEEs7u1cRL6H8NnEpM3k8aM5EzaHBLJaDPZsgGBkGFqBU1KycZAAZSruffH has been successfully imported!
+Your wallet SEKRuxm1BmQBTyz6tgpdpTdoq3dx3xaCE1VbuftusEEs7u1cRL6H8NnEpM3k8aM5EzaHBLJaDPZsgGBkGFqBU1KycZAAZSruffH has been successfully imported!
 
-It looks like kryptokronad isn't open!
+It looks like kryptokrona isn't open!
 
-Ensure kryptokronad is open and has finished syncing. (It will often not respond when syncing)
-If it's still not working, try restarting kryptokronad (or try a different remote node).
+Ensure kryptokrona is open and has finished syncing. (It will often not respond when syncing)
+If it's still not working, try restarting kryptokrona (or try a different remote node).
 The daemon sometimes gets stuck.
-Alternatively, perhaps kryptokronad can't communicate with any peers.
+Alternatively, perhaps kryptokrona can't communicate with any peers.
 
 The wallet can't function fully until it can communicate with the network.
 
@@ -393,7 +387,7 @@ What would you like to do?: 2
  6	help                     List this help message
  7	transfer                 Send XKR to someone
 
-[XKR test]: 
+[KKR test]: 
 
 ```
 
@@ -412,7 +406,7 @@ To see a list of additional commands not already covered; at the menu type `adva
  6	help                     List this help message
  7	transfer                 Send XKR to someone
 
-[XKR XKR]: advanced
+[KKR newWallet]: advanced
 
  8	ab_add                   Add a person to your address book
  9	ab_delete                Delete a person in your address book
@@ -436,7 +430,7 @@ To see a list of additional commands not already covered; at the menu type `adva
 To see the main menu of commands; type `help` and press `enter`:
 
 ```
-[XKR XKR]: help
+[KKR newWallet]: help
 
  1	advanced                 List available advanced commands
  2	address                  Display your payment address
