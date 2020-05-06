@@ -33,12 +33,15 @@
   }
 
   #navToogle,
-  #navBreadcrumb, i {
-    display: none ;
-  }
-  .navBreadcrumb a, .navBreadcrumb span {
+  #navBreadcrumb,
+  i {
     display: none;
-}
+  }
+
+  .navBreadcrumb a,
+  .navBreadcrumb span {
+    display: none;
+  }
 }
 
 @media only screen and (max-width: 1023px) {}
@@ -73,7 +76,7 @@ body {
   color: #90f2ff8c;
 }
 
-.footer{
+.footer {
   background-color: #90f2ff;
 }
 
@@ -82,7 +85,7 @@ body {
   text-align: center;
 }
 
-.footer-wrapper{
+.footer-wrapper {
   background-color: rgb(1, 33, 55);
   border-radius: 10px;
   margin: 1rem;
@@ -473,7 +476,7 @@ a::after {
 .nav-footer {
   background: rgb(1, 38, 63);
   color: #90f2ff8c;
-  padding-top: 1rem; 
+  padding-top: 1rem;
 }
 
 article p img,
@@ -543,7 +546,7 @@ article iframe {
 blockquote {
   background-color: rgb(0, 28, 46);
   color: #90f2ffe4;
-  border-left: 8px solid #90f2ff41; 
+  border-left: 8px solid #90f2ff41;
   padding: 15px 30px 15px 15px;
   border-radius: 10px;
 }
@@ -558,7 +561,7 @@ code {
   padding: 5px 8px;
 }
 
-.post{
+.post {
   background-color: rgb(1, 33, 55);
   padding: 2rem;
   border-radius: 10px;
@@ -591,10 +594,11 @@ code {
   padding: 8px 20px;
 }
 
-@media only screen and (min-width: 1024px){
-.docsNavContainer .toc .navBreadcrumb {
+@media only screen and (min-width: 1024px) {
+  .docsNavContainer .toc .navBreadcrumb {
     display: none;
-}}
+  }
+}
 
 .button {
   border: 1px solid transparent;
@@ -611,12 +615,12 @@ code {
   transition: background 0.3s, color 0.3s;
 }
 
-button:hover{
+button:hover {
   background: rgba(0, 28, 46, 0.459);
 }
 
-.onPageNav .toc-headings > li > a.active,
-.onPageNav .toc-headings > li > a.hover {
+.onPageNav .toc-headings>li>a.active,
+.onPageNav .toc-headings>li>a.hover {
   font-weight: 600;
   color: #90f2ff;
 }
@@ -625,12 +629,13 @@ button:hover{
   background-color: #90f2ff41;
 }
 
-table th, table td {
+table th,
+table td {
   border: 1px solid #90f2ff41;
   padding: 6px 13px;
 }
 
-td{
+td {
   background: rgb(0, 28, 46);
 }
 
@@ -641,13 +646,13 @@ table th {
 }
 
 .nav-tabs {
-  
+
   border-bottom: 4px solid #90f2ff41;
- 
+
 }
 
 .tabs {
-   border-top: 1px solid transparent; 
+  border-top: 1px solid transparent;
 }
 
 a {
@@ -658,11 +663,17 @@ a {
 h1 {
   font-size: 24px;
 }
+
 h2 {
   font-size: 20px;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   color: hsla(187, 94%, 67%, 0.831);
   font-weight: 300;
   line-height: 1.25;
