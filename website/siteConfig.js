@@ -48,14 +48,14 @@ const siteConfig = {
   /* Colors for website */
   // See Brand Manual for more info on these
   colors: {
-    primaryColor: 'rgb(1, 38, 63)', // green
+    primaryColor: 'hsl(0, 0%, 11%)', // green
     secondaryColor: '#90f2ff8c', // black
   },
 
   /* Custom fonts for website */
   fonts: {
     myFont: [
-      "Raleway"
+      "Montserrat"
     ]
   },
 
@@ -95,7 +95,7 @@ const siteConfig = {
   highlight: {
     defaultLang: 'bash',
     version: '9.12.0',
-    theme: 'atom-one-dark',
+    theme: 'arta',
   },
 
   // For 'Edit' button in top right of each doc

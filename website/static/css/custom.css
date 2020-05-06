@@ -6,10 +6,10 @@
       display: flex;
       flex-direction: column;
       justify-content: center;
-      background: rgb(1, 33, 55);
+      background: #1b1b1b;
       padding: 1rem;
       border-radius: 1rem;
-      color: #90f2ff8c;
+      color: #cfcfcf;
     }
 
     .inner promoSection .promoRow {
@@ -71,22 +71,22 @@
 
 
   body {
-    font-family: 'Roboto Mono', monospace;
-    background: rgb(1, 38, 63);
-    color: #90f2ff8c;
+    font-family: 'Montserrat', sans-serif;
+
+    color: #cfcfcf;
   }
 
   .footer {
-    background-color: #90f2ff;
+    background-color: #cfcfcf;
   }
 
   .nav-footer .copyright {
-    color: #90f2ff;
+    color: #cfcfcf;
     text-align: center;
   }
 
   .footer-wrapper {
-    background-color: rgb(1, 33, 55);
+    background-color: #1b1b1b;
     border-radius: 10px;
     margin: 1rem;
     padding: 2rem;
@@ -94,7 +94,7 @@
 
   docsSliderActive .toc .navBreadcrumb,
   .tocActive .navBreadcrumb {
-    border-bottom: 1px solid #90f2ff8c;
+    border-bottom: 1px solid #cfcfcf;
     margin-bottom: 20px;
     position: fixed;
     width: 100%;
@@ -103,8 +103,8 @@
   @media only screen and (min-width: 1024px) {
     .navigationSlider .slidingNav ul li a {
       border: 0;
-      background: rgb(1, 33, 55);
-      color: #90f2ff8c;
+      background: #1b1b1b;
+      color: #cfcfcf;
       display: flex;
       font-size: 16px;
       font-size: 1em;
@@ -118,20 +118,20 @@
   }
 
   .toc .toggleNav {
-    background-color: rgb(1, 38, 63);
-    color: #90f2ff8c;
+    background-color: hsl(0, 0%, 11%);
+    color: #cfcfcf;
     position: relative;
   }
 
   .navigationSlider .slidingNav ul {
-    background: rgb(1, 38, 63);
-    color: #90f2ff8c;
+    background: hsl(0, 0%, 11%);
+    color: #cfcfcf;
   }
 
   .algolia-docsearch-suggestion--category-header {
     display: none;
 
-    color: #90f2ff8c;
+    color: #cfcfcf;
     font-weight: 600;
     padding: 5px 10px;
     text-align: left;
@@ -144,11 +144,11 @@
   }
 
   .toc .toggleNav ul li a:hover {
-    color: #90f2ff;
+    color: #cfcfcf;
   }
 
   .toc .toggleNav .navGroup .navGroupSubcategoryTitle {
-    color: #90f2ff;
+    color: #cfcfcf;
     font-size: 14px;
     font-weight: 500;
     line-height: 1.5;
@@ -166,7 +166,7 @@
 
   .navigationSlider .slidingNav ul li {
     flex: 1 1 auto;
-    color: #90f2ff8c;
+    color: #cfcfcf;
     margin: 0;
     text-align: center;
     white-space: nowrap;
@@ -174,7 +174,7 @@
 
   @media only screen and (max-width: 1023px) {
     .docsNavContainer {
-      background: rgb(1, 38, 63);
+      background: hsl(0, 0%, 11%);
       left: 0;
       position: fixed;
       width: 100%;
@@ -196,7 +196,7 @@
 
   .docsSliderActive .toc .navBreadcrumb,
   .tocActive .navBreadcrumb {
-    border-bottom: 1px solid #90f2ff8c;
+    border-bottom: 1px solid #cfcfcf;
     margin-bottom: 20px;
     position: fixed;
     width: 100%;
@@ -206,7 +206,7 @@
     background-color: rgba(0, 0, 0, 0.2);
     border: none;
     border-radius: 20px;
-    color: #90f2ff8c;
+    color: #cfcfcf;
     font-size: 14px;
     font-weight: 300;
     line-height: 20px;
@@ -222,16 +222,16 @@
 
   .algolia-docsearch-suggestion--category-header {
     display: none;
-    background: rgb(1, 38, 63);
-    color: #90f2ff8c;
+    background: hsl(0, 0%, 11%);
+    color: #cfcfcf;
     font-weight: 600;
     padding: 5px 10px;
     text-align: left;
   }
 
   .docsNavContainer .toc .navBreadcrumb {
-    background-color: rgb(1, 38, 63);
-    color: #90f2ff8c;
+    background-color: hsl(0, 0%, 11%);
+    color: #cfcfcf;
     box-sizing: border-box;
     display: flex;
     flex-flow: row nowrap;
@@ -244,7 +244,7 @@
   .navBreadcrumb a,
   .navBreadcrumb span {
     border: 0;
-    color: #90f2ff8c;
+    color: #cfcfcf;
   }
 
   .line1,
@@ -252,21 +252,21 @@
   .line3 {
     width: 100%;
     height: 3px;
-    background-color: #90f2ff8c;
+    background-color: #cfcfcf;
     margin: 3px 0;
     transition: 0.4s;
     border-radius: 10px;
   }
 
   .inner {
-    background: rgb(1, 33, 55);
+    background: #1b1b1b;
     padding: 1rem;
     border-radius: 1rem;
-    color: #90f2ff8c;
+    color: #cfcfcf;
   }
 
   hr {
-    border-color: #90f2ff8c;
+    border-color: #cfcfcf;
     border-style: solid;
     border-width: 1px;
     box-sizing: content-box;
@@ -281,12 +281,12 @@
 
 
   path {
-    fill: #90f2ff8c;
+    fill: #cfcfcf;
     d: path("M 7.41 15.41 L 12 10.83 l 4.59 4.58 L 18 14 l -6 -6 l -6 6 Z");
   }
 
   .gridBlock {
-    background: rgb(1, 33, 55);
+    background: #1b1b1b;
 
     border-radius: 1rem;
     padding: 1rem;
@@ -312,26 +312,26 @@
   }
 
   .fixedHeaderContainer {
-    background: rgb(1, 38, 63);
-    color: #90f2ff8c;
+    background: hsl(0, 0%, 11%);
+    color: #cfcfcf;
   }
 
   .projectTitle {
-    color: #90f2ff8c;
+    color: #cfcfcf;
   }
 
   .toc .toggleNav .navGroup .navGroupCategoryTitle {
-    color: #90f2ff8c;
+    color: #cfcfcf;
   }
 
   .toc .toggleNav ul li.navListItemActive a {
-    color: #90f2ff8c;
+    color: #cfcfcf;
   }
 
   .button {
-    border: 1px solid #90f2ff8c;
+    border: 1px solid #cfcfcf;
     border-radius: 3px;
-    color: #90f2ff8c;
+    color: #cfcfcf;
     display: inline-block;
     font-size: 14px;
     font-weight: 400;
@@ -343,21 +343,21 @@
   }
 
   .button:hover {
-    color: #90f2ff;
+    color: #cfcfcf;
   }
 
   a {
-    color: #90f2ff8c;
+    color: #cfcfcf;
     text-decoration: none;
   }
 
   a:hover {
-    color: #90f2ff;
+    color: #cfcfcf;
   }
 
   .toc .toggleNav ul li a {
     border: none;
-    color: #90f2ff8c;
+    color: #cfcfcf;
     display: block;
     font-size: 14px;
     padding: 4px 0;
@@ -365,12 +365,12 @@
   }
 
   .onPageNav a {
-    color: #90f2ff8c;
+    color: #cfcfcf;
   }
 
   @media only screen and (min-width: 1024px) {
     .onPageNav>.toc-headings {
-      border-left: 1px solid #90f2ff8c;
+      border-left: 1px solid #cfcfcf;
       padding: 10px 0 2px 15px;
     }
   }
@@ -378,23 +378,23 @@
   .navigationSlider .slidingNav ul li a:hover,
   .navigationSlider .slidingNav ul li.siteNavItemActive a,
   .navigationSlider .slidingNav ul li.siteNavGroupActive a {
-    color: #90f2ff;
+    color: #cfcfcf;
   }
 
   .navigationSlider .slidingNav ul li>a:focus,
   .navigationSlider .slidingNav ul li>a:hover,
   .navigationSlider .slidingNav ul li.siteNavItemActive>a,
   .navigationSlider .slidingNav ul li.siteNavGroupActive>a {
-    background-color: rgb(1, 33, 55);
+    background-color: #1b1b1b;
   }
 
   @media only screen and (max-width: 1024px) {
     .reactNavSearchWrapper input#search_input_react {
-      background-color: rgb(1, 38, 63);
-      border: none;
+      background-color: hsl(0, 0%, 18%);
+      border: 1px solid transparent;
       border-radius: 20px;
       box-sizing: border-box;
-      color: #90f2ff8c;
+      color: #cfcfcf;
       font-size: 14px;
       line-height: 20px;
       outline: none;
@@ -408,23 +408,23 @@
 
   input::placeholder {
     /* Chrome, Firefox, Opera, Safari 10.1+ */
-    color: #90f2ff8c;
+    color: #cfcfcf;
     opacity: 1;
     /* Firefox */
   }
 
   :-ms-input-placeholder {
     /* Internet Explorer 10-11 */
-    color: #90f2ff8c;
+    color: #cfcfcf;
   }
 
   ::-ms-input-placeholder {
     /* Microsoft Edge */
-    color: #90f2ff8c;
+    color: #cfcfcf;
   }
 
   .navSearchWrapper:before {
-    border: 3px solid #90f2ff8c;
+    border: 3px solid #cfcfcf;
     border-radius: 50%;
     content: ' ';
     display: block;
@@ -439,7 +439,7 @@
   }
 
   .navSearchWrapper:after {
-    background: #90f2ff8c;
+    background: #cfcfcf;
 
     content: ' ';
     height: 7px;
@@ -452,30 +452,30 @@
   }
 
   .slidingNav {
-    background: rgb(1, 33, 55);
-    color: #90f2ff8c;
+    background: #1b1b1b;
+    color: #cfcfcf;
     height: 70%;
   }
 
   .slidingNav,
   a::after {
-    background: rgb(1, 33, 55);
-    color: #90f2ff8c;
+    background: #1b1b1b;
+    color: #cfcfcf;
   }
 
   .navigationSlider .slidingNav ul {
-    background: rgb(1, 33, 55);
-    color: #90f2ff8c;
+    background: #1b1b1b;
+    color: #cfcfcf;
   }
 
   .fixedHeaderContainer {
-    background: rgb(1, 33, 55);
-    color: #90f2ff8c;
+    background: #1b1b1b;
+    color: #cfcfcf;
   }
 
   .nav-footer {
-    background: rgb(1, 38, 63);
-    color: #90f2ff8c;
+    background: hsl(0, 0%, 11%);
+    color: #cfcfcf;
     padding-top: 1rem;
   }
 
@@ -496,9 +496,9 @@
 
   @media (min-width: 768px) {
     .algolia-docsearch-suggestion--subcategory-column {
-      border-right: 1px solid #90f2ff8c;
-      background: rgb(1, 38, 63);
-      color: #90f2ff8c;
+      border-right: 1px solid #cfcfcf;
+      background: hsl(0, 0%, 11%);
+      color: #cfcfcf;
       display: table-cell;
       overflow: hidden;
       padding: 5px 7px 5px 5px;
@@ -512,18 +512,18 @@
   }
 
   .algolia-docsearch-footer {
-    border-top: 1px solid #90f2ff8c;
-    background: rgb(1, 38, 63);
+    border-top: 1px solid #cfcfcf;
+    background: hsl(0, 0%, 11%);
     text-align: right;
     font-size: 12px;
     padding: 4px 2px 0 0;
-    color: #90f2ff8c;
+    color: #cfcfcf;
   }
 
   .navSearchWrapper .aa-dropdown-menu {
-    background: rgb(1, 38, 63);
-    border: 1px solid #90f2ff8c;
-    color: #90f2ff8c;
+    background: hsl(0, 0%, 11%);
+    border: 1px solid #cfcfcf;
+    color: #cfcfcf;
     font-size: 14px;
     left: auto !important;
     line-height: 1.2em;
@@ -531,59 +531,70 @@
   }
 
   .aa-cursor .algolia-docsearch-suggestion--content {
-    background: rgb(1, 38, 63);
-    border: 1px solid #90f2ff8c;
-    color: #90f2ff8c;
+    background: hsl(0, 0%, 11%);
+    border: 1px solid hsl(0, 0%, 11%);
+    color: #cfcfcf;
   }
 
   .algolia-docsearch-suggestion {
-    color: #90f2ff8c;
+    background: hsl(0, 0%, 11%);
+    color: #cfcfcf;
     cursor: pointer;
     overflow: hidden;
   }
 
+  @media only screen and (min-width: 1024px){
+.docMainWrapper > *:last-child {
+    margin-right: 0;
+    background: hsl(0, 0%, 11%);
+    padding: 1.2rem;
+    border-radius: 5px;
+}}
+
+
+
   /* Css fixes */
   blockquote {
-    background-color: rgb(0, 28, 46);
-    color: #90f2ffe4;
-    border-left: 8px solid #90f2ff41;
+    background-color: hsl(0, 0%, 13%);
+    color: #cfcfcf;
+    border-left: 8px solid #cfcfcf;
     padding: 15px 30px 15px 15px;
     border-radius: 10px;
   }
 
   code {
-    background-color: rgb(0, 28, 46);
-    color: #90f2ffe4;
+    background-color: hsl(0, 0%, 13%);
+    color: #cfcfcfa1;
     font-family: SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono',
       'Courier New', monospace;
-    font-size: 85%;
+    font-size: 80%;
     margin: 0;
-    padding: 5px 8px;
+    padding: 4px 6px;
   }
 
   .post {
-    background-color: rgb(1, 33, 55);
+    background-color: #1b1b1b;
     padding: 2rem;
     border-radius: 10px;
     margin-top: 50px;
   }
 
   .toc .toggleNav .navGroup {
-    background-color: rgb(1, 33, 55);
-    padding: 3px;
+    background-color: #1b1b1b;
+    padding: 0.6rem;
     border-radius: 10px;
     margin-bottom: 16px;
   }
 
   .toc .toggleNav .navGroup .navGroupCategoryTitle {
-    color: hsla(187, 100%, 78%, 0.5490196078431373);
-    padding: 3px;
+    color: #cfcfcf;
+    padding: 0.6rem;
   }
 
   .docsNavContainer .toc .navBreadcrumb {
-    background-color: rgb(1, 33, 55);
+    background-color: #1b1b1b;
     border-radius: 10px;
-    color: hsla(187, 100%, 78%, 0.5490196078431373);
+    color: #cfcfcf;
     border: transparent;
     box-sizing: border-box;
     display: flex;
@@ -603,8 +614,8 @@
   .button {
     border: 1px solid transparent;
     border-radius: 10px;
-    background: rgb(0, 28, 46);
-    color: hsla(187, 100%, 78%, 0.5490196078431373);
+    background: rgb(75, 75, 75);
+    color: #cfcfcf;
     display: inline-block;
     font-size: 14px;
     font-weight: 400;
@@ -615,39 +626,40 @@
     transition: background 0.3s, color 0.3s;
   }
 
-  button:hover {
-    background: rgba(0, 28, 46, 0.459);
+  .button:hover {
+    background: rgb(117, 117, 117);
+    color: black;
   }
 
   .onPageNav .toc-headings>li>a.active,
   .onPageNav .toc-headings>li>a.hover {
     font-weight: 600;
-    color: #90f2ff;
+    color: #cfcfcf;
   }
 
   #back-to-top {
-    background-color: #90f2ff41;
+    background-color: #cfcfcf41;
   }
 
   table th,
   table td {
-    border: 1px solid #90f2ff41;
+    border: 1px solid #cfcfcf41;
     padding: 6px 13px;
   }
 
   td {
-    background: rgb(0, 28, 46);
+    background: hsl(0, 0%, 11%);
   }
 
   table th {
-    background-color: rgb(0, 28, 46);
+    background-color: hsl(0, 0%, 11%);
     color: inherit;
     font-weight: 600;
   }
 
   .nav-tabs {
 
-    border-bottom: 4px solid #90f2ff41;
+    border-bottom: 4px solid #cfcfcf41;
 
   }
 
@@ -656,7 +668,7 @@
   }
 
   a {
-    color: hsla(187, 100%, 78%, 0.831);
+    color: #878787d4;
     text-decoration: none;
   }
 
@@ -674,7 +686,7 @@
   h4,
   h5,
   h6 {
-    color: hsla(187, 94%, 67%, 0.831);
+    color: #878787d4;
     font-weight: 300;
     line-height: 1.25;
     margin-bottom: 16px;
@@ -684,12 +696,17 @@
   p {
     margin-bottom: 1em;
     margin-top: 0;
-    color: #90f2ff8c;
+    color: #cfcfcf;
   }
 
   .projectTitle {
-    color: hsla(187, 100%, 78%, 0.5490196078431373);
+    color: #cfcfcf;
     font-size: 30px;
+  }
+
+  body{
+    background: rgb(32, 32, 32);
+    color: #878787d4;
   }
 }
 
@@ -767,7 +784,7 @@
   }
 
   body {
-    font-family: 'Roboto Mono', monospace;
+    font-family: 'Montserrat', sans-serif;
 
     color: rgb(19, 19, 19);
   }
@@ -1241,7 +1258,7 @@
 
   /* Css fixes */
   .blockquote {
-    background-color: rgb(0, 28, 46);
+    background-color: rgb(124, 124, 124);
     color: hsla(0, 0%, 10%, 0.788)e4;
     border-left: 8px solid hsla(0, 0%, 10%, 0.788);
     padding: 15px 30px 15px 15px;
@@ -1249,7 +1266,7 @@
   }
 
   .code {
-    background-color: rgb(0, 28, 46);
+    background-color: rgb(124, 124, 124);
     color: hsla(0, 0%, 10%, 0.788)e4;
     font-family: SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono',
       'Courier New', monospace;
@@ -1333,11 +1350,11 @@
   }
 
   td {
-    background: rgb(0, 28, 46);
+    background: rgb(124, 124, 124);
   }
 
   table th {
-    background-color: rgb(0, 28, 46);
+    background-color: rgb(124, 124, 124);
     color: inherit;
     font-weight: 600;
   }
@@ -1409,4 +1426,9 @@
 
 .logo {
   display: none;
+}
+
+.algolia-docsearch-suggestion__main .algolia-docsearch-suggestion--category-header {
+  display: block;
+  background: hsl(0, 0%, 11%);
 }
