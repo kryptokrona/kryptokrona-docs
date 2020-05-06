@@ -574,3 +574,15 @@ a {
   color: hsla(187, 100%, 78%, 0.831);
   text-decoration: none;
 }
+
+h1 {
+  font-size: 24px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: hsla(187, 94%, 67%, 0.831);
+  font-weight: 400;
+  line-height: 1.25;
+  margin-bottom: 16px;
+  margin-top: 1.5em;
+}
