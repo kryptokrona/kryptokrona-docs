@@ -48,9 +48,20 @@ cmake ..
 cmake .. -DCMAKE_C_FLAGS="-mcpu=cortex-a7 -mtune=cortex-a7" -DCMAKE_CXX_FLAGS="-mcpu=cortex-a7 -mtune=cortex-a7"
 ```
 
+* for the Raspberry Pi 2 if the command above doesn't work:
+```bash
+cmake .. -DARM_TARGET=7
+```
+
 * for the Raspberry Pi 3:
 ```bash
 cmake .. -DCMAKE_C_FLAGS="-mcpu=cortex-a53 -mtune=cortex-a53" -DCMAKE_CXX_FLAGS="-mcpu=cortex-a53 -mtune=cortex-a53"
+```
+
+
+* for the Raspberry Pi 4:
+```bash
+cmake .. -DCMAKE_C_FLAGS="-mcpu=cortex-a72 -mtune=cortex-a72" -DCMAKE_CXX_FLAGS="-mcpu=cortex-a72 -mtune=cortex-a72"
 ```
 
 * for the Asus Tinker Board:
