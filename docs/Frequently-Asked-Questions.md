@@ -26,7 +26,7 @@ Re-sync your daemon from scratch(see below question)
 Close any Kryptokrona-related software, then go to `%APPDATA%`, and delete the `Kryptokrona` folder.  
 Reopen Kryptokronad/the GUI wallet and let it re-sync.
 
-Alternatively, check [this guide](guides/wallets/Using-Checkpoints) for instructions on how to use checkpoints for a quicker sync, or try a [remote node](guides/wallets/Using-Remote-Nodes)
+Alternatively, check [this guide](/guides/wallets/Using-Checkpoints) for instructions on how to use checkpoints for a quicker sync, or try a [remote node](/guides/wallets/Using-Remote-Nodes)
 
 ##### Q: When I open Kryptokrona on a Mac, I get an error `Illegal instruction: 4`. How can I fix it?
 
@@ -67,7 +67,7 @@ You can also type `status` in the daemon and press enter to see the current heig
 
 ##### Q: I think I should have more money in my balance than it is showing, what should I do?
 
-Re-sync your daemon from scratch(see [here](#q-how-can-i-re-sync-the-blockchain)), sync [using checkpoints](guides/wallets/Using-Checkpoints) or use a [remote node](guides/wallets/Using-Remote-Nodes)) if you're using the GUI wallet.
+Re-sync your daemon from scratch(see [here](#q-how-can-i-re-sync-the-blockchain)), sync [using checkpoints](/guides/wallets/Using-Checkpoints) or use a [remote node](/guides/wallets/Using-Remote-Nodes)) if you're using the GUI wallet.
 If it still doesn't work, then [update](https://gota.kryptokrona.se)
 
 *  Then, close and reopen kkrwallet and Kryptokronad.
@@ -92,12 +92,12 @@ Your wallet is now being optimized. When it finishes, your transaction should be
 #### Q: How do I send XKR?
 
 
-You can check [this out](guides/wallets/Using-kkrwallet##sending-Kryptokrona-transactions) for steps on how to send XKR to someone.
+You can check [this out](/guides/wallets/Using-kkrwallet##sending-Kryptokrona-transactions) for steps on how to send XKR to someone.
 
 #### Q: How do I send money to exchanges / use payment ID?
 
 
-You can check [this out](guides/wallets/Using-kkrwallet#payment-id) for steps on how to send XKR with the payment ID.
+You can check [this out](/guides/wallets/Using-kkrwallet#payment-id) for steps on how to send XKR with the payment ID.
 
 #### Q: What is mixin?
 
@@ -118,12 +118,12 @@ Currently it takes a couple of hours. This number will increase as more people u
 #### Q: Can I speed up the syncing of the blockchain?
 
 
-You can sync [with checkpoints](guides/wallets/Using-Checkpoints) (only with kkrwallet) or use a [remote node](guides/wallets/Using-Remote-Nodes)
+You can sync [with checkpoints](/guides/wallets/Using-Checkpoints) (only with kkrwallet) or use a [remote node](/guides/wallets/Using-Remote-Nodes)
 
 #### Q: Can I skip the syncing?
 
 
-Yes, you can currently use a remote node with kkrwallet and the desktopwallet. The keys stay on your PC, so it's secure. Check [this guide](guides/wallets/Using-Remote-Nodes) for more information. [Checkpoints](guides/wallets/Using-Checkpoints) are also an option if you're using kkrwallet.
+Yes, you can currently use a remote node with kkrwallet and the desktopwallet. The keys stay on your PC, so it's secure. Check [this guide](/guides/wallets/Using-Remote-Nodes) for more information. [Checkpoints](/guides/wallets/Using-Checkpoints) are also an option if you're using kkrwallet.
 
 #### Q: What does it mean if my balance is locked?
 
@@ -145,7 +145,7 @@ Go into this folder and delete the files in there. Then reboot, and try again.
 
 #### Q: How do I get started mining?
 
-You can check [this guide](guides/mining/Mining)
+You can check [this guide](/guides/mining/Mining)
 
 #### Q: I'm using a Mac, can I still mine?
 
@@ -204,7 +204,7 @@ Yes, in case you get banned, or a pool goes down for some time, you can keep min
 #### Q: Where can I find a list of pools?
 
 
-[Here](guides/mining/Pools) is a list. It also has other nifty stats like the pool's fee, minimum payout and server location.
+[Here](/guides/mining/Pools) is a list. It also has other nifty stats like the pool's fee, minimum payout and server location.
 
 
 #### Q: What pool should I choose?
@@ -222,7 +222,7 @@ There are a few factors to consider when choosing a pool.
 
   This is the amount you need to mine before you get paid. Most pools will list this under the "Payments" tab.
 
-  You can check [this list](guides/mining/Pools) of pools. It specifies each pool's minimum payout as well as server location.
+  You can check [this list](/guides/mining/Pools) of pools. It specifies each pool's minimum payout as well as server location.
 
 #### Q: How many hashes per second is good for my hardware?
 
@@ -275,12 +275,12 @@ Thus to protect against that scenario you could transfer any XKR balance to one 
 #### Q: Can I make a paper wallet?
 
 
-Yes, you can view the guide [here](guides/wallets/Making-a-Paper-Wallet)
+Yes, you can view the guide [here](/guides/wallets/Making-a-Paper-Wallet)
 
 #### Q: I made a paper wallet, how do I use it?
 
 
-You can check out [this guide](guides/wallets/Recovering-your-Wallet) for steps on how to import your paper wallet into a wallet of your choice(choose a wallet and import the keys).
+You can check out [this guide](/guides/wallets/Recovering-your-Wallet) for steps on how to import your paper wallet into a wallet of your choice(choose a wallet and import the keys).
 
 #### Q: Can I view the balance of my wallet online?
 
@@ -299,7 +299,7 @@ Read a great post about the justification for it [here](https://medium.com/@Kryp
 
 There are multiple ways to acquire XKR, for example:
 
-* Mining - see [here](guides/mining/Mining)
+* Mining - see [here](/guides/mining/Mining)
 * Bounties - Bounties for developing XKR software, spreading the word of XKR, and many other things are often posted in the #bounties channel on [Discord][discord_link]. Check the pinned messages for current bounties.
 * Tips - In the Kryptokrona discord we often tip each other, especially if you make spicy memes in the `#memes` channel
 
@@ -319,7 +319,7 @@ None are ready for usage right now, but they are being worked on. Check the deve
 
 #### Q: How do I register my wallet on Discord?
 
-  A: You can check out this guide [here](guides/Using-XKRbot-plus-plus#registering-your-wallet).
+  A: You can check out this guide [here](/guides/Using-XKRbot-plus-plus#registering-your-wallet).
 
 #### Q: Where is the blockchain stored?
 

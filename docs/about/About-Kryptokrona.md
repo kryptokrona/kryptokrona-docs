@@ -29,14 +29,14 @@ Some of the main features of Kryptokrona include:
 
 To learn more about us, check out our other various articles, describing:
 
-- [Our Background and History](Background-and-History)
+- [Our Background and History](/about/Background-and-History)
 
-- [Our Community](Community)
+- [Our Community](/about/Community)
 
-- [How to Contribute](Contributing)
+- [How to Contribute](/about/Contributing)
 
-- [its Technical Data](Technical-Data)
+- [its Technical Data](/about/Technical-Data)
 
-- [Our Timeline](Timeline)
+- [Our Timeline](/about/Timeline)
 
 We recommend you check em out, to get acquainted with Kryptokrona!

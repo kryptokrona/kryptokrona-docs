@@ -2,7 +2,7 @@
 title: Mining Pools
 ---
 
-Unless you want to [solo mine](CPU-Solo-Mining), which is unfeasible for many people, you will need a pool to mine towards. Make sure to choose the one closest to you!
+Unless you want to [solo mine](/guides/mining/CPU-Solo-Mining), which is unfeasible for many people, you will need a pool to mine towards. Make sure to choose the one closest to you!
 
 To view a list of pools, check out [the explorer](https://explorer.kryptokrona.se/pools.html)
 

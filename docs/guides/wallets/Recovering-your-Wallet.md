@@ -6,8 +6,8 @@ In case you have lost your wallet, but still have either your private spend and 
 
 ## kkrwallet
 
-View [this guide](Using-kkrwallet#restoring-your-wallet) for steps on recovering your wallet with your private spend and view keys, or your 25 word mnemonic seed with kkrwallet
+View [this guide](/guides/wallets/Using-kkrwallet#restoring-your-wallet) for steps on recovering your wallet with your private spend and view keys, or your 25 word mnemonic seed with kkrwallet
 
 ## Kryptokrona Wallet
 
-View [this guide](Using-Kryptokrona-wallet#restoring-a-wallet-from-seed-or-keys) for steps on recovering your wallet with your private spend and view keys, or your 25 word mnemonic seed with Proton Wallet.
+View [this guide](/guides/wallets/Using-Kryptokrona-Wallet#restoring-a-wallet-from-seed-or-keys) for steps on recovering your wallet with your private spend and view keys, or your 25 word mnemonic seed with Proton Wallet.

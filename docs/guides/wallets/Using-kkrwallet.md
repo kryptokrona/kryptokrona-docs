@@ -36,11 +36,11 @@ unzip kryptokrona-...-linux.zip
 
 Running `kryptokrona` will start the *kryptokrona* network daemon, which will connect to the network and begin downloading and verifying the kryptokrona blockchain.  
 
-Because the blockchain is constantly growing, the file size always increases (the blockchain is currently over 35 GB), and *kryptokrona must verify every block*, which is both CPU and disk intensive. An SSD with at least this much free disk space is recommended, unless you plan to use [remote nodes](Using-Remote-Nodes). 
+Because the blockchain is constantly growing, the file size always increases (the blockchain is currently over 35 GB), and *kryptokrona must verify every block*, which is both CPU and disk intensive. An SSD with at least this much free disk space is recommended, unless you plan to use [remote nodes](/guides/wallets/Using-Remote-Nodes). 
 
 ### Using Checkpoints
 
-In **versions 0.4.3+** you can sync a fresh chain from block 0 much quicker by using checkpoints. Follow [this guide](Using-Checkpoints) to learn more.
+In **versions 0.4.3+** you can sync a fresh chain from block 0 much quicker by using checkpoints. Follow [this guide](/guides/wallets/Using-Checkpoints) to learn more.
 
 ### Windows
 
