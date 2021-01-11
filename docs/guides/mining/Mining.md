@@ -25,20 +25,20 @@ There are currently a few different ways in which you can start mining Kryptokro
 
 XMRig comes as a CPU and GPU miner separately and run two separate instances in your computer. One will use your CPU and the other one will use your GPU.
 
-Please follow [this guide](XMRIG-Guide) to start mining Kryptokrona with XMRig.
+Please follow [this guide](../XMRIG-Guide) to start mining Kryptokrona with XMRig.
 
 ### Solo Mining
 
-Solo Mining is where you, alone, try to solve a block. It is extremely difficult and not recommended. If you'd like to give it a hand regardless see [this guide](CPU-Solo-Mining)
+Solo Mining is where you, alone, try to solve a block. It is extremely difficult and not recommended. If you'd like to give it a hand regardless see [this guide](../CPU-Solo-Mining)
 
 ## SBC/Raspberry Pi Mining
 
-Please follow [this guide](Mining-with-SBC) to mine with a SBC/Rasperry Pi.
+Please follow [this guide](../Mining-with-SBC) to mine with a SBC/Rasperry Pi.
 
 
 ## Pools
 
-You may view more info on mining pools [here](Pools).
+You may view more info on mining pools [here](../Pools).
 
 ## Have Questions or Need Help?
 

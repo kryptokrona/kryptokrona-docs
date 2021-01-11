@@ -6,7 +6,7 @@ The main purpose of a paper wallet is to quickly create a wallet to start receiv
 
 **You will not be able to spend or send your funds to other people until you set up a CLI, GUI or Web Wallet.**
 
-You can view a guide on how to make a wallet [here](Making-a-Wallet)
+You can view a guide on how to make a wallet [here](../Making-a-Wallet)
 
 There are two options for a paper wallet.
 
