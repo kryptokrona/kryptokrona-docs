@@ -43,9 +43,9 @@ Needs to be compiled. Instructions [here](https://github.com/xmrig/xmrig/wiki/OS
 * `"user: "[wallet address]"`
 
 - Instead of `[wallet address]`, simply paste your Kryptokrona wallet's address. Make sure to keep the `"`!
-  - If you don't have one yet, you can find out how to create a wallet [here](../wallets/Making-a-Wallet)
+  - If you don't have one yet, you can find out how to create a wallet [here](../../wallets/Making-a-Wallet)
 
-- In place of `[pool address]`, you'll need to choose a pool to mine towards. You can learn more about them [here](Pools). Make sure to keep the `"`s!  
+- In place of `[pool address]`, you'll need to choose a pool to mine towards. You can learn more about them [here](../Pools). Make sure to keep the `"`s!  
 
 1.  Save the file and:
   * start `xmrig.exe` if you're mining with your CPU,

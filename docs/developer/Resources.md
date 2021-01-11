@@ -18,11 +18,11 @@ Since Kryptokronan is a fork of turtlecoin, these links will also prove useful.
 
 ## TurtleCoin Core RPC APIs
 
-* [TurtleCoind](api/Daemon-JSON-RPC-API) - Blockchain daemon
+* [TurtleCoind](../api/Daemon-JSON-RPC-API/) - Blockchain daemon
 
 * [wallet-api](https://turtlecoin.github.io/wallet-api-docs/) - Recommended RPC API to use for new projects or to migrate to from existing projects. Swagger based REST interface.
 
-* [turtle-service](api/Legacy-Wallet-RPC-API) - Turtle Service Wallet API. Will eventually be deprecated, suggested to use wallet-api for new projects.
+* [turtle-service](../api/Legacy-Wallet-RPC-API) - Turtle Service Wallet API. Will eventually be deprecated, suggested to use wallet-api for new projects.
 
 ## RPC API Clients
 
@@ -49,5 +49,5 @@ Since Kryptokronan is a fork of turtlecoin, these links will also prove useful.
 
 ## Misc
 
-* [RPC API Error Conditions](api/RPC-API-Error-Conditions) - un-exhaustive list of commons errors which TurtleCoind and turtle-service make, why they happen, and solutions.
+* [RPC API Error Conditions](../api/RPC-API-Error-Conditions) - un-exhaustive list of commons errors which TurtleCoind and turtle-service make, why they happen, and solutions.
 

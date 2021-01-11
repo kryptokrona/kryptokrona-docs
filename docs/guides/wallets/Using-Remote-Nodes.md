@@ -17,7 +17,7 @@ In case you don't want to download the blockchain and verify it everytime, you c
 
 - You may also click "Find node..." which will select a random node
 
-![proton remote node](../../assets/kryptokrona-remote-nodes.png)
+![proton remote node](../../../assets/kryptokrona-remote-nodes.png)
 
 ## kkrwallet
 
