@@ -16,7 +16,7 @@ One of Kryptokrona's main goals is to make things as simple and as accessible as
 
 | **About Kryptokrona** | **Wallets** | **Mining** | **Contributing** |
 |:----------------------:|:-------------:|:------------:|:------------------:|
-| ![Logo](assets/xkr-logo-color-small.png) | ![Wallets](assets/wallet.png =48x48) | ![Mining](assets/mining.png =48x48) | ![Dev](assets/dev.png =48x48) |
+| ![Logo](assets/xkr-logo-color-small.png) | ![Wallets](assets/wallet.png) | ![Mining](assets/mining.png) | ![Dev](assets/dev.png) |
 | [About Kryptokrona](about) | [Setting up a New Wallet](../guides/wallets/Making-a-Wallet.md) | [Mining Kryptokrona](../guides/mining/Mining.md) | [Contributing to Kryptokrona](../about/Contributing.md) |
 | Learn more about Kryptokrona and the community | A guide on setting up a Kryptokrona wallet to start receiving some turtles! | A step-by-step guide to start mining Kryptokrona | Information on contributing to Kryptokrona |
 
