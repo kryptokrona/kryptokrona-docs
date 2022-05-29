@@ -11,5 +11,4 @@ This is a timeline dedicated to important dates in the history of Kryptokrona
 
 10 Juli 2019 - Hugin was born.
 
-2 April 2020 - Kryptokronan network online for 1 year
-
+2 April 2020 - Kryptokrona network online for 1 year

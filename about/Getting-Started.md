@@ -2,7 +2,7 @@
 title: Getting Started
 ---
 
-## What is Kryptokrona? 
+## What is Kryptokrona?
 
 Kryptokrona is a fast, easy and private cryptocurrency which allows you to send money to friends and businesses.
 
@@ -14,7 +14,7 @@ Below is essentially a checklist of tasks you have to do to get started with Kry
 
 There are multiple types of wallets you can use with Kryptokrona.
 
-To view a list of them, their interface and a brief description, as a well as guides on how to use them, you can check [this guide](../guides/wallets/Making-a-Wallet).
+To view a list of them, their interface and a brief description, as a well as guides on how to use them, you can check [this guide](../guides/wallets/Making-a-Wallet.md).
 
 ## 2. Start Mining Kryptokrona
 
@@ -22,10 +22,10 @@ Mining is essentially the process of using your computer to help verify and secu
 
 If you want to learn about cryptocurrencies, mining is a great place to start!
 
-To view an in-depth guide on how to mine Kryptokrona, you can view [this guide](../guides/mining/Mining)
+To view an in-depth guide on how to mine Kryptokrona, you can view [this guide](../guides/mining/Mining.md)
 
 ## 3. Socialize!
 
 We have an awesome community and would love for you to join in!
 
-You can join our [Discord](http://chat.Kryptokrona.se/) We can't wait to see you :)
+You can join our [Discord](https://discord.gg/nRK5k7wYy8) We can't wait to see you :)

@@ -11,7 +11,11 @@ Huge thank you to everyone here, they've made major commits to the wiki and help
 * @SoreGums
 * the TurtleCoin Community
 * The Kryptokrona Community
-* @fruktstav
+* @f-r00t
 * @nilsjr
 * @ulviux
 * @vildet
+* @Swepool
+* @TechyGuy
+* @coffeboi
+* @mjovanc

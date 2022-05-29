@@ -2,7 +2,7 @@
 title: Frequently Asked Questions
 ---
 
-## Kryptokronad / kkrwallet Issues
+## Kryptokrona node / xkrwallet Issues
 
 #### Q: I'm seeing an error in Kryptokrona `Proof of work too weak for block...` and the syncing stopped.
 
@@ -62,29 +62,29 @@ You need to also open up `Kryptokrona.exe` and let it sync. Kryptokrona is your 
 Until you are fully synced, you won't be able to send transactions, and your balance may be missing or incorrect!
 ```
 
-Your daemon hasn't finished syncing yet. Keep kkrwallet open, and wait until you are 0 days behind the current block, and for the daemon to print out a green message saying `Successfully synchronized with the Kryptokrona Network.`  
+Your daemon hasn't finished syncing yet. Keep xkrwallet open, and wait until you are 0 days behind the current block, and for the daemon to print out a green message saying `Successfully synchronized with the Kryptokrona Network.`  
 You can also type `status` in the daemon and press enter to see the current height it's at.
 
 ##### Q: I think I should have more money in my balance than it is showing, what should I do?
 
-Re-sync your daemon from scratch(see [here](#q-how-can-i-re-sync-the-blockchain)), sync [using checkpoints](../guides/wallets/Using-Checkpoints) or use a [remote node](../guides/wallets/Using-Remote-Nodes)) if you're using the GUI wallet.
-If it still doesn't work, then [update](https://gota.kryptokrona.se)
+Re-sync your daemon from scratch(see [here](#q-how-can-i-re-sync-the-blockchain)) or use a [remote node](../guides/wallets/Using-Remote-Nodes.md)) if you're using the GUI wallet.
+If it still doesn't work, then [update](https://github.com/kryptokrona/kryptokrona/releases)
 
-*  Then, close and reopen kkrwallet and Kryptokronad.
-*  Type `reset` in kkrwallet after reopening your wallet file.
+*  Then, close and reopen xkrwallet and Kryptokronad.
+*  Type `reset` in xkrwallet after reopening your wallet file.
 *  It should start resetting your wallet, but the progress might not be immediately obvious - wait a while, and it should start counting up the blocks and printing out your transactions as it gets to them.
 
 #### Q: How do I backup my wallet?
 
 
-Open kkrwallet and type `export_keys`.  
+Open xkrwallet and type `export_keys`.  
 Save the view and spend key somewhere safe, and you can use them to reimport your wallet if you lose it.
 
 #### Q: My transactions are very slow
 
 Try attemping a fusion transaction:
 
-* Open up kkrwallet, and type `optimize`, then press enter.
+* Open up xkrwallet, and type `optimize`, then press enter.
 * It will confirm if you want to optimize your wallet; it will take a bit. If you're fine with that, type `Y` and press enter again.
 
 Your wallet is now being optimized. When it finishes, your transaction should be able to send
@@ -92,12 +92,12 @@ Your wallet is now being optimized. When it finishes, your transaction should be
 #### Q: How do I send XKR?
 
 
-You can check [this out](../guides/wallets/Using-kkrwallet##sending-Kryptokrona-transactions) for steps on how to send XKR to someone.
+You can check [this out](../guides/wallets/Using-xkrwallet.md##sending-Kryptokrona-transactions) for steps on how to send XKR to someone.
 
 #### Q: How do I send money to exchanges / use payment ID?
 
 
-You can check [this out](../guides/wallets/Using-kkrwallet#payment-id) for steps on how to send XKR with the payment ID.
+You can check [this out](../guides/wallets/Using-xkrwallet.md#payment-id) for steps on how to send XKR with the payment ID.
 
 #### Q: What is mixin?
 
@@ -108,7 +108,7 @@ Mixin is locked by the network to `7` as of block `620,000` and is not adjustabl
 #### Q: How can I view my balance?
 
 
-If `Kryptokrona.exe` is fully synced, in kkrwallet, simply type `balance`.
+If `Kryptokrona.exe` is fully synced, in xkrwallet, simply type `balance`.
 
 #### Q: How long does it take to sync Kryptokrona.exe?
 
@@ -118,19 +118,19 @@ Currently it takes a couple of hours. This number will increase as more people u
 #### Q: Can I speed up the syncing of the blockchain?
 
 
-You can sync [with checkpoints](../guides/wallets/Using-Checkpoints) (only with kkrwallet) or use a [remote node](../guides/wallets/Using-Remote-Nodes)
+You can sync [with checkpoints](../guides/wallets/Using-Checkpoints.md) (only with xkrwallet) or use a [remote node](../guides/wallets/Using-Remote-Nodes.md)
 
 #### Q: Can I skip the syncing?
 
 
-Yes, you can currently use a remote node with kkrwallet and the desktopwallet. The keys stay on your PC, so it's secure. Check [this guide](../guides/wallets/Using-Remote-Nodes) for more information. [Checkpoints](../guides/wallets/Using-Checkpoints) are also an option if you're using kkrwallet.
+Yes, you can currently use a remote node with xkrwallet and the desktopwallet. The keys stay on your PC, so it's secure. Check [this guide](../guides/wallets/Using-Remote-Nodes.md) for more information.
 
 #### Q: What does it mean if my balance is locked?
 
 
 This is a transfer which hasn't been confirmed by the network yet. It will move into your main balance shortly, generally after 3 minutes.
 
-#### Q: In kkrwallet.exe, I get an error `Error: failed to save new wallet: boost::filesystem::unique__path: Keyset as registered is invalid`. How can I fix it?
+#### Q: In xkrwallet.exe, I get an error `Error: failed to save new wallet: boost::filesystem::unique__path: Keyset as registered is invalid`. How can I fix it?
 
 
 This is caused by some broken Windows crypto keys. In the address bar in Windows Explorer, type `%AppData%/Microsoft/Crypto/RSA/`.
@@ -145,12 +145,14 @@ Go into this folder and delete the files in there. Then reboot, and try again.
 
 #### Q: How do I get started mining?
 
-You can check [this guide](../guides/mining/Mining)
+You can check [this guide](../guides/mining/Mining.md)
 
 #### Q: I'm using a Mac, can I still mine?
 
 
-Yes, of course! We're working on a guide.
+Yes, of course! We're working on a guide. You can install xmrig with [Brew](https://brew.sh/) and then use xmrig directly in your terminal. You can generate a config-file for xmrig [here](https://kryptokrona.org/mining) and then use:
+  xmrig -c ../path/to/config.json
+to start mining.
 
 #### Q: I've started mining, how can I view my stats?
 
@@ -179,7 +181,7 @@ To save money on fees, the pools send payouts in chunks. [Check your pool websit
 #### Q: Why are my results being rejected from the pool?
 
 
-You're using a incorrect algorithm. You should be using `chukwa`.
+You're using a incorrect algorithm. You should be using `cn-pico/trtl`.
 
 #### Q: I got banned from my mining pool. Why?
 
@@ -204,7 +206,7 @@ Yes, in case you get banned, or a pool goes down for some time, you can keep min
 #### Q: Where can I find a list of pools?
 
 
-[Here](../guides/mining/Pools) is a list. It also has other nifty stats like the pool's fee, minimum payout and server location.
+[Here](../guides/mining/Pools.md) is a list. It also has other nifty stats like the pool's fee, minimum payout and server location.
 
 
 #### Q: What pool should I choose?
@@ -222,18 +224,18 @@ There are a few factors to consider when choosing a pool.
 
   This is the amount you need to mine before you get paid. Most pools will list this under the "Payments" tab.
 
-  You can check [this list](../guides/mining/Pools) of pools. It specifies each pool's minimum payout as well as server location.
+  You can check [this list](../guides/mining/Pools.md) of pools. It specifies each pool's minimum payout as well as server location.
 
 #### Q: How many hashes per second is good for my hardware?
 
 
-<http://monerobenchmarks.info/> is a good source for this. You can look up your [CPU](http://monerobenchmarks.info/searchCPU.php) and [GPU](http://monerobenchmarks.info/searchGPU.php).
+<http://monerobenchmarks.info/> is a good source for this. You can look up your [CPU](http://monerobenchmarks.info/searchCPU.php) and [GPU](http://monerobenchmarks.info/searchGPU.php). We also have our own benchmarks [here](https://kryptokrona.org/benchmarks).
 
 #### Q: I can't get the miner working, is there an easier way to mine?
 
-You can try the web miner [here](https://webturtle.de.cool/). You will get a lower hashrate than native mining, and it doesn't have GPU support, however it's very easy to setup.
+You can get some free XKR [here](https://kryptokrona.org/faucet).
 
-Alternatively, you can hop onto the [Discord][discord_link] if you're having issues and we'll help you out.
+Alternatively, you can hop onto the [Discord][https://discord.gg/nRK5k7wYy8] if you're having issues and we'll help you out.
 
 #### Q: What is the miner executable / why isn't it working?
 
@@ -249,7 +251,7 @@ Nevertheless, if you want to try it out, open a command prompt in the same direc
 
 replacing `SEKR...` with your full XKR address.
 
-You need to have `Kryptokrona` open and synced to use this miner, unlike conventional miners, where the pool hosts the daemon.
+You need to have `Kryptokrona` open and synced to use this miner, unlike conventional miners, where the pool hosts the daemon. You can also use a public node with the -r flag.
 
 #### Q: Is there a calculator to see how much XKR I'll mine per day?
 
@@ -275,12 +277,12 @@ Thus to protect against that scenario you could transfer any XKR balance to one 
 #### Q: Can I make a paper wallet?
 
 
-Yes, you can view the guide [here](../guides/wallets/Making-a-Paper-Wallet)
+Yes, you can view the guide [here](../guides/wallets/Making-a-Paper-Wallet.md)
 
 #### Q: I made a paper wallet, how do I use it?
 
 
-You can check out [this guide](../guides/wallets/Recovering-your-Wallet) for steps on how to import your paper wallet into a wallet of your choice(choose a wallet and import the keys).
+You can check out [this guide](../guides/wallets/Recovering-your-Wallet.md) for steps on how to import your paper wallet into a wallet of your choice(choose a wallet and import the keys).
 
 #### Q: Can I view the balance of my wallet online?
 
@@ -289,58 +291,39 @@ You can check out [this guide](../guides/wallets/Recovering-your-Wallet) for ste
 It should be possible in the future to allow users to give away just their Private View Key to view transactions, but this hasn't been implemented by anyone so far, and would allow that website to see every transaction that you make.
 
 ## Other
-#### Q: Why does XKR have such a high amount of tokens/small amount of decimal places?
-
-
-Read a great post about the justification for it [here](https://medium.com/@Kryptokrona/one-trillion-turtles-coin-supply-and-unit-economics-5bfbea0aa1f1).
-
 #### Q: How can I get some XKR?
 
 
 There are multiple ways to acquire XKR, for example:
 
-* Mining - see [here](../guides/mining/Mining)
-* Bounties - Bounties for developing XKR software, spreading the word of XKR, and many other things are often posted in the #bounties channel on [Discord][discord_link]. Check the pinned messages for current bounties.
-* Tips - In the Kryptokrona discord we often tip each other, especially if you make spicy memes in the `#memes` channel
-
-  and enter your SEKR address.  
-  The amount you can receive is limited to share the XKR for all. Thanks to @madk, @polar-it and @fipsi for creating them.
-
-#### Q: Is there a web wallet?
-
-No, it is under construction.
+* Mining - see [here](../guides/mining/Mining.md)
+* Bounties - Bounties for developing XKR software, spreading the word of XKR, and many other things are often posted in the #bounties channel on [Discord][https://discord.gg/nRK5k7wYy8]. Check the pinned messages for current bounties.
+* Tips - In the Kryptokrona discord we often tip each other, especially if you make spicy memes in the `#memes` channel.
+* Buy at an exchange - Check out [this guide](../guides/How-to-buy-xkr.md).
 
 
-#### Q: Are there any light wallets / mobile wallets?
+#### Q: Are there any mobile wallets?
 
+There is currently an Android wallet available in the (Play Store)[https://play.google.com/store/apps/details?id=com.xkr].
 
-None are ready for usage right now, but they are being worked on. Check the development channels in [Discord][discord_link] to see how people are getting on, and feel free to join in if you're a programmer!
-
-
-#### Q: How do I register my wallet on Discord?
-
-  A: You can check out this guide [here](../guides/Using-XKRbot-plus-plus#registering-your-wallet).
 
 #### Q: Where is the blockchain stored?
 
 
-On Windows, it is in `%APPDATA%/Kryptokrona`. On Mac and Linux, it is in `~/.Kryptokrona`.
+On Windows, it is in `%APPDATA%/Kryptokrona`. On Mac and Linux, it is in `~/.kryptokrona`.
 
 #### Q: Is there a block explorer?
 
-
-Yes, the offical one is
+Yes, the official one is
 
 * https://explorer.Kryptokrona.se
 
-#### Q: How do I make sure a pool isn't forked? 
+#### Q: How do I make sure a pool isn't forked?
 
 
-You can type in `/forked` in the `#bots` channel in the [Discord][discord_link] server, which will return with a list of pools which are possibly forked.
+Check what network block height it is reporting, compared to other sources.
 
 #### Q: I have a question which wasn't answered here, what should I do?
 
 
-[Join the Discord server][discord_link], and come to the `#help` channel, we'll try and fix any issues.
-
-[discord_link]:http://chat.Kryptokrona.se/
+[Join the Discord server][https://discord.gg/nRK5k7wYy8], and come to the `#help` channel, we'll try and fix any issues.
