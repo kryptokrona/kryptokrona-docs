@@ -2,9 +2,7 @@
 title: Using kkrwallet
 ---
 
-# Using kkrwallet
-
-### Downloading
+## Downloading
 
 Binary distributions can be found [here](https://github.com/kryptokrona/kryptokrona/releases).
 
@@ -12,43 +10,43 @@ Select the appropriate file for the target platform (Windows, Mac, Linux).
 
 Binaries are provided in `.zip` format, while source code is provided in `.zip` and `.tar.gz` format.
 
-### Installing
+## Installing
 
-#### Installing on Windows
+### Installing on Windows
 
-Extract the _.zip_ file (`kryptokrona-...-windows.zip`).
+Extract the *.zip* file (`kryptokrona-...-windows.zip`).
 
-#### Installing on Mac
+### Installing on Mac
 
-Extract the _.zip_ file:
+Extract the *.zip* file:
 
 ```bash
 unzip kryptokrona-...-mac.zip
 ```
 
-#### Installing on Linux
+### Installing on Linux
 
-Extract the _.zip_ file:
+Extract the *.zip* file:
 
 ```bash
 unzip kryptokrona-...-linux.zip
 ```
 
-### Synchronizing the Blockchain
+## Synchronizing the Blockchain
 
-Running `kryptokrona` will start the _kryptokrona_ network daemon, which will connect to the network and begin downloading and verifying the kryptokrona blockchain.
+Running `kryptokrona` will start the *kryptokrona* network daemon, which will connect to the network and begin downloading and verifying the kryptokrona blockchain.  
 
-Because the blockchain is constantly growing, the file size always increases (the blockchain is currently over 35 GB), and _kryptokrona must verify every block_, which is both CPU and disk intensive. An SSD with at least this much free disk space is recommended, unless you plan to use [remote nodes](../../docs/guides/Using-Remote-Nodes/).
+Because the blockchain is constantly growing, the file size always increases (the blockchain is currently over 35 GB), and *kryptokrona must verify every block*, which is both CPU and disk intensive. An SSD with at least this much free disk space is recommended, unless you plan to use [remote nodes](../Using-Remote-Nodes). 
 
-#### Using Checkpoints
+### Using Checkpoints
 
-In **versions 0.4.3+** you can sync a fresh chain from block 0 much quicker by using checkpoints. Follow [this guide](../../docs/guides/Using-Checkpoints/) to learn more.
+In **versions 0.4.3+** you can sync a fresh chain from block 0 much quicker by using checkpoints. Follow [this guide](../Using-Checkpoints) to learn more.
 
-#### Windows
+### Windows
 
 Run the `kryptokrona.exe` executable extracted from the Windows binary zip:
 
-#### Mac / Linux
+### Mac / Linux
 
 Run the `kryptokrona` binary extracted from the `.zip` download:
 
@@ -56,25 +54,25 @@ Run the `kryptokrona` binary extracted from the `.zip` download:
 ./kryptokrona
 ```
 
-### Using kkrwallet
+## Using kkrwallet
 
 With `kryptokrona` still running in the background or another terminal/shell/command prompt, open kkrwallet:
 
-**Windows**
+#### Windows
 
 Run the `kkrwallet-beta.exe` executable from the extracted folder.
 
-**Mac / Linux**
+#### Mac / Linux
 
 ```bash
 ./kkrwallet-beta
 ```
 
-#### Using kkrwallet commands
+### Using kkrwallet commands
 
-kkrwallet has a twin command system; a numerical shortcut for navigating the menu, and typed commands you can access directly. The more you use kkrwallet the more typed commands you'll pick up. This guide is written using the written commnand system. Feel free to use the numbers associated with the command.
+kkrwallet has a twin command system; a numerical shortcut for navigating the menu, and typed commands you can access directly.  The more you use kkrwallet the more typed commands you'll pick up.  This guide is written using the written commnand system.  Feel free to use the numbers associated with the command.
 
-#### Creating a Wallet
+### Creating a Wallet
 
 To create a wallet, type `create` and press `enter`:
 
@@ -123,11 +121,12 @@ Use the status command to check the progress.
 [KKR newWallet]: 
 ```
 
-#### Opening a Wallet
+### Opening a Wallet
 
 To open an existing wallet; type `open` and press `enter`:
 
 ```
+
  1	open                     Open a wallet already on your system
  2	create                   Create a new wallet
  3	seed_restore             Restore a wallet using a seed phrase of words
@@ -165,9 +164,10 @@ Finished scanning blockchain!
  7	transfer                 Send XKR to someone
 
 [KKR newWallet]: 
+
 ```
 
-#### Viewing Wallet Address
+### Viewing Wallet Address
 
 To view a wallet's public address; at the menu, type `address` and press `enter`.
 
@@ -177,15 +177,17 @@ SEKRuxqfDys1pfQ1omkHMVViY4sFh6My5Ff3HBY8XPp3cJBkEfD7romVyzKug3mb9NNR4A8kEjZxZ9CH
 [KKR newWallet]:
 ```
 
-#### Exporting Keys
+### Exporting Keys
 
-Each kryptokrona wallet is essentially, just a pair of keys (_View Key_ and _Spend Key_) from which the public address is derived. It is **very** important to export these keys and back them up somewhere that is safe and secure (meaning somewhere reliable/permanent that no one else can access).
+Each kryptokrona  wallet is essentially, just a pair of keys (*View Key* and *Spend Key*) from which the public address is derived.
+It is **very** important to export these keys and back them up somewhere that is safe and secure (meaning somewhere reliable/permanent that no one else can access).
 
-In the event of a lost or corrupted wallet file, computer crash, etc., the _View Key_ and _Spend Key_ are the only way to restore a wallet and recover the funds it holds.
+In the event of a lost or corrupted wallet file, computer crash, etc., the *View Key* and *Spend Key* are the only way to restore a wallet and recover the funds it holds.
 
-**DO NOT SHARE IT WITH ANYONE**. **Anyone who has these can **_**access your funds**_** and has **_**complete control**_** over your wallet.**
+**DO NOT SHARE IT WITH ANYONE**. **Anyone who has these can *access your funds* and has *complete control* over your wallet.**
 
-To print your keys; at the menu type `backup` and press `enter`. The _View Key_ and _Spend Key_ will appear. Copy them and store them **safely and securely**.
+To print your keys; at the menu type `backup` and press `enter`.
+The *View Key* and *Spend Key* will appear. Copy them and store them **safely and securely**.
 
 ```
 [KKR newWallet]: backup
@@ -196,7 +198,7 @@ Mnemonic seed: truth neon vials ignore butterfly cactus soggy vibrate meant wiza
 [KKR newWallet]:
 ```
 
-#### Viewing Wallet Balance
+### Viewing Wallet Balance
 
 To view your wallet's balance; at the menu, type `balance` and press `enter`:
 
@@ -208,27 +210,35 @@ Total balance: 1100.00 XKR
 [KKR newWallet]:
 ```
 
-#### Sending kryptokrona Transactions
+### Sending kryptokrona Transactions
 
 To send kryptokrona; at the kkrwallet menu:
 
-* Type: `transfer` and press `enter`
-* Type/paste the address you want to send the XKR to and press `enter`
-* Type the amount of XKR you want to send (like `100`) and press `enter`
-* Press `enter` to use the default fee of 0.1 XKR (or set it higher if you're sending a large amount of XKR)
-* Enter the payment ID if the recipient has provided one. Check the [payment ID section](Using-kkrwallet.md#payment-id) if you're not sure when/how to use it
-* If you make a mistake or need to stop the transaction, type `cancel` at any time
-* Confirm that the details are correct and enter `y`. If something is amiss, enter `n` and follow the steps again
-* Enter your password
+- Type: `transfer` and press `enter`
 
-Depending on the amount you transfer, you may need to wait a while for confirmation. If you have had too many small incoming transactions, or the amount you wish to send is too large; either break up your transfer into several smaller amounts, or optimise your wallet.
+- Type/paste the address you want to send the XKR to and press `enter`
 
-**Optimizing your Wallet**
+- Type the amount of XKR you want to send (like `100`) and press `enter`
+
+- Press `enter` to use the default fee of 0.1 XKR (or set it higher if you're sending a large amount of XKR)
+
+- Enter the payment ID if the recipient has provided one. Check the [payment ID section](#payment-id) if you're not sure when/how to use it
+
+- If you make a mistake or need to stop the transaction, type `cancel` at any time
+
+- Confirm that the details are correct and enter `y`. If something is amiss, enter `n` and follow the steps again
+
+- Enter your password
+
+Depending on the amount you transfer, you may need to wait a while for confirmation.  If you have had too many small incoming transactions, or the amount you wish to send is too large; either break up your transfer into several smaller amounts, or optimise your wallet.
+
+
+
+#### Optimizing your Wallet
 
 Fusion transactions take all your (small) incoming payments and combine them into bigger ones, allowing you to send huge sums at once!
 
 To optimize your wallet, type `optimize` and press `enter`:
-
 ```
 [KKR newWallet]: optimize
 Attempting to optimize your wallet to allow you to send large amounts at once. 
@@ -239,17 +249,24 @@ Full optimization completed!
 [KKR newWallet]: 
 ```
 
-**Payment ID**
+
+#### Payment ID
 
 Because transactions on the kryptokrona blockchain are privatikkr, in some situations a payment ID is necessary for the recipient to be able to determine where the payment came from, for instance when depositing to an exchange or other service.
 
+<!-- **You need it if you're sending XKR to an exchange**.
+
+To send a transaction with a payment ID, enter it when prompted to.
+
+![p-id](../../assets/p-id-simple.png) -->
+
 Note that typically, the service/recipient will generate and provide the required payment ID.
 
-#### Exiting the Wallet
+### Exiting the Wallet
 
-Wallets loaded into the _kkrwallet_ client must be synced with the blockchain in order to properly calculate balance, view transaction history, etc.
+Wallets loaded into the *kkrwallet* client must be synced with the blockchain in order to properly calculate balance, view transaction history, etc.
 
-It is important to properly save the wallet data before exiting _kkrwallet_ so that the synchronikkr data is not lost.
+It is important to properly save the wallet data before exiting *kkrwallet* so that the synchronikkr data is not lost.
 
 To save a wallet's data and exit; at the menu, type `exit` and press `enter`:
 
@@ -262,9 +279,9 @@ Shutting down node connection...
 Bye.
 ```
 
-#### Restoring your Wallet
+### Restoring your Wallet
 
-**Private Spend and View Keys**
+#### Private Spend and View Keys
 
 To restore a wallet using spend and view keys; at the menu type `key_restore` and press `enter`, then follow the prompts:
 
@@ -315,9 +332,10 @@ Finished scanning blockchain!
  7	transfer                 Send XKR to someone
 
 [KKR newWallet2]: 
+
 ```
 
-**25 Word Mnemonic Seed**
+#### 25 Word Mnemonic Seed
 
 To restore a wallet using spend and view keys; at the menu type `seed_restore` and press `enter`, then follow the prompts:
 
@@ -370,9 +388,12 @@ What would you like to do?: 2
  7	transfer                 Send XKR to someone
 
 [KKR test]: 
+
 ```
 
-#### Other Commands
+
+
+### Other Commands
 
 To see a list of additional commands not already covered; at the menu type `advanced` and press `enter`:
 
@@ -404,7 +425,7 @@ To see a list of additional commands not already covered; at the menu type `adva
  22	status                   Display sync status and network hashrate
 ```
 
-#### Help
+### Help
 
 To see the main menu of commands; type `help` and press `enter`:
 
@@ -418,4 +439,5 @@ To see the main menu of commands; type `help` and press `enter`:
  5	exit                     Exit and save your wallet
  6	help                     List this help message
  7	transfer                 Send XKR to someone
+
 ```

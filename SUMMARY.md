@@ -33,6 +33,7 @@
   * [🤖 Using the Discord Bot](guides/Using-kryptokrona-bot.md)
   * [🕸 Node](guides/config/README.md)
     * [How to config Kryptokrona?](guides/config/config.md)
+    * [😇 Run a Public Node](guides/config/run-a-public-node.md)
   * [⛏ Mining](guides/mining/README.md)
     * [Solo-mining Kryptokrona](guides/mining/CPU-Solo-Mining.md)
     * [Mining with a SBC](guides/mining/Mining-with-SBC.md)
