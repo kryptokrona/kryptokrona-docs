@@ -2,7 +2,7 @@
 title: Wallet Intro
 ---
 
-# Making a Kryptokrona Wallet
+# 👜 Making a Kryptokrona Wallet
 
 There are multiple different types of wallets you can choose to use for Kryptokrona, paper wallet, CLI wallet and GUI wallet.
 

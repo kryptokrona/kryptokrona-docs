@@ -2,7 +2,7 @@
 title: Using a Remote Node
 ---
 
-# Using Remote Nodes
+# 🛰 Using Remote Nodes
 
 In case you don't want to download the blockchain and verify it everytime, you can instead use a Remote Node to quickly sync the blockchain.
 
@@ -15,14 +15,14 @@ In case you don't want to download the blockchain and verify it everytime, you c
 3. In the text box below, enter the URL and Port of the node you wish to connect to
 4. Click "Connect"
 
-- You may also click "Find node..." which will select a random node
+* You may also click "Find node..." which will select a random node
 
-![proton remote node](../../../assets/kryptokrona-remote-nodes.png)
+![proton remote node](../../assets/kryptokrona-remote-nodes.png)
 
 ## kkrwallet
 
-1. Open up a command prompt window and navigate to the folder that contains *kkrwallet*.
-2. Use the following command to start kkrwallet  
+1. Open up a command prompt window and navigate to the folder that contains _kkrwallet_.
+2. Use the following command to start kkrwallet
 
 ### Windows:
 
@@ -48,11 +48,11 @@ kkrwallet.exe --remote-daemon public.kryptokrona.online:11898
 
 ### Making a Script to Do it Automatically
 
-*Note*: This only works on Windows, and for kkrwallet
+_Note_: This only works on Windows, and for kkrwallet
 
 1. Open NotePad/a text editor of your choice and type the following lines inside:
 
-```text
+```
 @echo off
 kkrwallet-beta.exe --remote-daemon host:port
 pause

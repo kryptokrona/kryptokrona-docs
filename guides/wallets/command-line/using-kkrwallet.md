@@ -2,7 +2,7 @@
 title: Using kkrwallet
 ---
 
-# Using kkrwallet
+# Using xkrwallet
 
 ### Downloading
 
@@ -38,11 +38,11 @@ unzip kryptokrona-...-linux.zip
 
 Running `kryptokrona` will start the _kryptokrona_ network daemon, which will connect to the network and begin downloading and verifying the kryptokrona blockchain.
 
-Because the blockchain is constantly growing, the file size always increases (the blockchain is currently over 35 GB), and _kryptokrona must verify every block_, which is both CPU and disk intensive. An SSD with at least this much free disk space is recommended, unless you plan to use [remote nodes](../../docs/guides/Using-Remote-Nodes/).
+Because the blockchain is constantly growing, the file size always increases (the blockchain is currently over 35 GB), and _kryptokrona must verify every block_, which is both CPU and disk intensive. An SSD with at least this much free disk space is recommended, unless you plan to use [remote nodes](../Using-Remote-Nodes.md#kkrwallet).
 
 #### Using Checkpoints
 
-In **versions 0.4.3+** you can sync a fresh chain from block 0 much quicker by using checkpoints. Follow [this guide](../../docs/guides/Using-Checkpoints/) to learn more.
+In **versions 0.4.3+** you can sync a fresh chain from block 0 much quicker by using checkpoints. Follow [this guide](../../../docs/guides/Using-Checkpoints/) to learn more.
 
 #### Windows
 
@@ -56,23 +56,23 @@ Run the `kryptokrona` binary extracted from the `.zip` download:
 ./kryptokrona
 ```
 
-### Using kkrwallet
+### Using xkrwallet
 
-With `kryptokrona` still running in the background or another terminal/shell/command prompt, open kkrwallet:
+With `kryptokrona` still running in the background or another terminal/shell/command prompt, open xkrwallet:
 
 **Windows**
 
-Run the `kkrwallet-beta.exe` executable from the extracted folder.
+Run the x`krwallet-beta.exe` executable from the extracted folder.
 
 **Mac / Linux**
 
 ```bash
-./kkrwallet-beta
+./xkrwallet-beta
 ```
 
-#### Using kkrwallet commands
+#### Using xkrwallet commands
 
-kkrwallet has a twin command system; a numerical shortcut for navigating the menu, and typed commands you can access directly. The more you use kkrwallet the more typed commands you'll pick up. This guide is written using the written commnand system. Feel free to use the numbers associated with the command.
+xkrwallet has a twin command system; a numerical shortcut for navigating the menu, and typed commands you can access directly. The more you use xkrwallet the more typed commands you'll pick up. This guide is written using the written commnand system. Feel free to use the numbers associated with the command.
 
 #### Creating a Wallet
 
@@ -210,13 +210,13 @@ Total balance: 1100.00 XKR
 
 #### Sending kryptokrona Transactions
 
-To send kryptokrona; at the kkrwallet menu:
+To send kryptokrona; at the xkrwallet menu:
 
 * Type: `transfer` and press `enter`
 * Type/paste the address you want to send the XKR to and press `enter`
 * Type the amount of XKR you want to send (like `100`) and press `enter`
 * Press `enter` to use the default fee of 0.1 XKR (or set it higher if you're sending a large amount of XKR)
-* Enter the payment ID if the recipient has provided one. Check the [payment ID section](Using-kkrwallet.md#payment-id) if you're not sure when/how to use it
+* Enter the payment ID if the recipient has provided one. Check the [payment ID section](using-kkrwallet.md#payment-id) if you're not sure when/how to use it
 * If you make a mistake or need to stop the transaction, type `cancel` at any time
 * Confirm that the details are correct and enter `y`. If something is amiss, enter `n` and follow the steps again
 * Enter your password
@@ -247,9 +247,9 @@ Note that typically, the service/recipient will generate and provide the require
 
 #### Exiting the Wallet
 
-Wallets loaded into the _kkrwallet_ client must be synced with the blockchain in order to properly calculate balance, view transaction history, etc.
+Wallets loaded into the x_krwallet_ client must be synced with the blockchain in order to properly calculate balance, view transaction history, etc.
 
-It is important to properly save the wallet data before exiting _kkrwallet_ so that the synchronikkr data is not lost.
+It is important to properly save the wallet data before exiting xk_rwallet_ so that the synchronikkr data is not lost.
 
 To save a wallet's data and exit; at the menu, type `exit` and press `enter`:
 
