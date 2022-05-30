@@ -2,15 +2,16 @@
 title: Optimizing Mining on a RPi
 ---
 
-### Notes
+# Notes
 
-Looking for a more general SBC setup guide? Check out [this guide](../Mining-with-SBC).
+Looking for a more general SBC setup guide? Check out [this guide](../../docs/guides/Mining-with-SBC/).
 
-## Overview
+**Overview**
 
 To maximize your hashrate, it is very important that you select a 64-bit OS image, a quality miner and the most current compiler that you can.
 
-## OS Image
+**OS Image**
+
 The 64-bit Ubuntu Server for Raspberry Pi3 is a good choice:
 
 http://cdimage.ubuntu.com/releases/18.04/release/ubuntu-18.04.3-preinstalled-server-arm64+raspi3.img.xz
@@ -21,13 +22,14 @@ Once you've got it booted, you'll be asked for a username and password. These ar
 
 Once you've logged in, you'll be asked to change the password. For the current password, enter `ubuntu` again. Then, enter a new password, and confirm it.
 
-## Get the Latest Compiler
+**Get the Latest Compiler**
 
 You will need to edit your sources.list file and add the debian testing repository in order to install gcc-8 and g++-8 on your system:
 
 ```
 sudo nano /etc/apt/sources.list
 ```
+
 Add this line to the end of the file:
 
 ```
@@ -41,7 +43,7 @@ sudo apt-get update
 sudo apt-get install gcc-8 g++-8
 ```
 
-## Download Compile, and Configure Your Miner
+**Download Compile, and Configure Your Miner**
 
 Now you need to install the required dependencies and the latest release of the xmrig miner and compile it with gcc-8.
 
@@ -119,8 +121,6 @@ Now you can start the miner using the start script:
 ./minexkr
 ```
 
-## Conclusion
+**Conclusion**
 
 Happy mining and make sure to support small pools and keep Kryptokrona mining decentralized.
-
-
