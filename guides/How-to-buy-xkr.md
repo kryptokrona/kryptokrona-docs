@@ -1,24 +1,24 @@
 ---
 title: How to buy XKR
 ---
+
+# 📈 How to buy XKR
+
 In this guide I will show you how to buy XKR on the exchange [Exbitron](exbitron.com).
 
-## 1. Make an account
+### 1. Make an account
 
 First we are going registrer an account on Exbitron, so we can send, trade and recive crypto.
 
-Open up the webpage and click the red "Register" button at the top right. You could also paste in https://www.exbitron.com/signup in your browser.
-Fill in your email and choose a password. Confirm this password and check off the Terms Of Service box. Then do the chapta and click the yellow "Register Button".
+Open up the webpage and click the red "Register" button at the top right. You could also paste in https://www.exbitron.com/signup in your browser. Fill in your email and choose a password. Confirm this password and check off the Terms Of Service box. Then do the chapta and click the yellow "Register Button".
 
 ![sign-up](https://user-images.githubusercontent.com/83395536/166160687-85e302bb-f146-4d73-9c5a-9d377bfebb8b.png)
 
-You will then get a verification email, so move over to your inbox. Double check that the email comes from info@exbitron.com, and click the blue "Confirm" button.
-Log so in with your email and password.
+You will then get a verification email, so move over to your inbox. Double check that the email comes from info@exbitron.com, and click the blue "Confirm" button. Log so in with your email and password.
 
 You will now see your wallet.
 
 ![wallet-overview](https://user-images.githubusercontent.com/83395536/166160700-bf5b31b7-0b0d-478d-a1fa-55815a8790e9.png)
-
 
 For this guide I will show you how to buy XKR with DOGE. To do that we need to generate a DOGE wallet.
 
@@ -32,7 +32,7 @@ Do the same to XKR
 
 _WARNINIG : MINING DIRECTLY TO THIS DEPOSIT ADDRESS IS PROHIBITED. WE PROVIDE NO SUPPORT FOR COINS SENT FROM POOL._
 
-## Send funds to your wallet
+### Send funds to your wallet
 
 You will now see your deposit address. I will swap some BTC for DOGE on THORSwap, and send the DOGE to my deposit address. I do this with copying the address and send the funds to it.
 
@@ -50,7 +50,7 @@ The status will show up as 1/6 if it has only been confirmed once. In my example
 
 Now you got your DOGE, but we want XKR, right?
 
-## How to buy XKR for DOGE
+### How to buy XKR for DOGE
 
 Click on the Exbitron logo at the top left to get in the homepage.
 
@@ -92,7 +92,7 @@ And as that, it is confirmed!
 
 ![image](https://user-images.githubusercontent.com/83395536/166161440-06c76d8c-4494-420c-80c7-c9ea766b9ee3.png)
 
-## Check you balance and send XKR to your own wallet
+### Check you balance and send XKR to your own wallet
 
 Click on the menu at the top right, and so on balance.
 
@@ -108,8 +108,7 @@ _Remember, not your keys, not your crypto!_
 
 _As Swepool says it_
 
-![image](https://user-images.githubusercontent.com/83395536/166161750-4462919a-75af-4035-9e94-0c7ac2f3778d.png)
-===
+## ![image](https://user-images.githubusercontent.com/83395536/166161750-4462919a-75af-4035-9e94-0c7ac2f3778d.png)
 
 In my example I will use the [desktop wallet](https://github.com/kryptokrona/kryptokrona-desktop-wallet/releases). I am taking for granted that you have set up your wallet, and stored your seedphrase somewhere safe.
 
@@ -133,7 +132,7 @@ Press the "All" button to send all of your XKR to the wallet, and fill in the 2F
 
 ![image](https://user-images.githubusercontent.com/83395536/166162285-540d93a7-dcf7-4a55-b7a4-2a7aace6237d.png)
 
-_For Withdrawal, please check the [fees list](https://www.exbitron.com/kb/fees.html)._
+_For Withdrawal, please check the_ [_fees list_](https://www.exbitron.com/kb/fees.html)_._
 
 Click so on the yellow "WITHDRAW" button, and press confirm.
 

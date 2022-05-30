@@ -2,6 +2,8 @@
 title: Turtle Service Wallet RPC API
 ---
 
+# Turtle Service Wallet RPC API
+
 The TurtleCoin RPC Wallet is a HTTP server which provides JSON 2.0 RPC interface for TurtleCoin payment operations and address management.
 
 Currently we support the following official client bindings:
@@ -10,38 +12,31 @@ Currently we support the following official client bindings:
 * [Python](https://github.com/turtlecoin/turtlecoin-rpc-python)
 * [Go](https://github.com/turtlecoin/turtlecoin-rpc-go)
 
-## Note: Eventually, turtle-service will be deprecated. It is suggested to use [wallet-api](https://turtlecoin.github.io/wallet-api-docs) for new applications.
+### Note: Eventually, turtle-service will be deprecated. It is suggested to use [wallet-api](https://turtlecoin.github.io/wallet-api-docs) for new applications.
 
-## Installation
+### Installation
 
-<!--DOCUSAURUS_CODE_TABS-->
-
-<!--PHP-->
 ```
 composer require turtlecoin/turtlecoin-rpc-php
 ```
 
-<!--Python-->
 ```
 pip3 install turtlecoin
 ```
 
-<!--Go-->
 ```
 go get github.com/turtlecoin/turtlecoin-rpc-go
 ```
 
-<!--END_DOCUSAURUS_CODE_TABS-->
+### Interacting with the API
 
-## Interacting with the API
-
-### API endpoint example
+#### API endpoint example
 
 ```
 http://localhost:8070/json_rpc
 ```
 
-### Configuration and instantiation
+#### Configuration and instantiation
 
 To make a JSON RPC request to your TurtleCoin RPC Wallet you should use a GET request that looks like this:
 
@@ -52,9 +47,6 @@ To make a JSON RPC request to your TurtleCoin RPC Wallet you should use a GET re
 | `<service address>` | IP of TurtleCoin RPC Wallet, if RPC Wallet is located on local machine it is either 127.0.0.1 or localhost         |
 | `<service port>`    | TurtleCoin RPC Wallet port, by default it is bound to 8070 port, but it can be manually bound to any port you want |
 
-<!--DOCUSAURUS_CODE_TABS-->
-
-<!--PHP-->
 ```php
 <?php
 use TurtleCoin\TurtleService;
@@ -68,7 +60,6 @@ $config = [
 $turtleService = new TurtleService($config);
 ```
 
-<!--Python-->
 ```py
 from turtlecoin import Walletd
 
@@ -79,7 +70,6 @@ rpc_password = 'passw0rd'
 walletd = Walletd(rpc_password, rpc_host, rpc_port)
 ```
 
-<!--Go-->
 ```go
 import (
   "fmt"
@@ -96,9 +86,7 @@ service := trpc.Walletd{
   RPCPassword: rpcPassword}
 ```
 
-<!--END_DOCUSAURUS_CODE_TABS-->
-
-## reset
+### reset
 
 `reset()` method allows you to re-sync your wallet.
 
@@ -108,15 +96,10 @@ service := trpc.Walletd{
 | ---------- | --------- | ------------------------------------------------------------------------------------------------ | ------ |
 | scanHeight | No        | The height to begin scanning for transactions at. This can greatly speed up wallet syncing time. | int    |
 
-
-<!--DOCUSAURUS_CODE_TABS-->
-
-<!--Shell-->
-```sh
+```
 curl -d '{"jsonrpc":"2.0","id":1,"password":"passw0rd","method":"reset","params":{"scanHeight":100000}}' http://localhost:8070/json_rpc
 ```
 
-<!--PHP-->
 ```php
 <?php
 $scanHeight = 100000;
@@ -124,14 +107,12 @@ $response = $turtleService->reset($scanHeight);
 echo $response;
 ```
 
-<!--Python-->
 ```py
 scan_height = 100000
 response = walletd.reset(scan_height)
 print(response)
 ```
 
-<!--Go-->
 ```go
 scanHeight := 0 // starting height to scan
 response, err := service.Reset(scanHeight)
@@ -142,9 +123,7 @@ if err != nil {
 }
 ```
 
-<!--END_DOCUSAURUS_CODE_TABS-->
-
-#### Expected Output:
+**Expected Output:**
 
 ```json
 {
@@ -158,34 +137,27 @@ No output in case of success.
 
 > **Note**: If the `viewSecretKey` argument is not provided, the `reset()` method resets the wallet and re-syncs it. If the `viewSecretKey` argument is provided, the `reset()` method substitutes the existing wallet with a new one with the specified key.
 
-## save
+### save
 
 `save()` method allows you to save your wallet by request.
 
-No input.
-No output in case of success.
+No input. No output in case of success.
 
-<!--DOCUSAURUS_CODE_TABS-->
-
-<!--Shell-->
-```sh
+```
 curl -d '{"jsonrpc":"2.0","id":1,"password":"passw0rd","method":"save","params":{}}' http://localhost:8070/json_rpc
 ```
 
-<!--PHP-->
 ```php
 <?php
 $response = $turtleService->save();
 echo $response;
 ```
 
-<!--Python-->
 ```py
 response = walletd.save()
 print(response)
 ```
 
-<!--Go-->
 ```go
 response, err := service.Save()
 if err != nil {
@@ -195,9 +167,7 @@ if err != nil {
 }
 ```
 
-<!--END_DOCUSAURUS_CODE_TABS-->
-
-#### Expected Output:
+**Expected Output:**
 
 ```json
 {
@@ -207,7 +177,7 @@ if err != nil {
 }
 ```
 
-## getViewKey
+### getViewKey
 
 `getViewKey()` method returns your view key.
 
@@ -219,28 +189,21 @@ No input.
 | ------------- | ---------------- | ------ |
 | viewSecretKey | Private view key | string |
 
-
-<!--DOCUSAURUS_CODE_TABS-->
-
-<!--Shell-->
-```sh
+```
 curl -d '{"jsonrpc":"2.0","id":1,"password":"passw0rd","method":"getViewKey","params":{}}' http://localhost:8070/json_rpc
 ```
 
-<!--PHP-->
 ```php
 <?php
 $response = $turtleService->getViewKey();
 echo $response;
 ```
 
-<!--Python-->
 ```py
 response = walletd.get_view_key()
 print(response)
 ```
 
-<!--Go-->
 ```go
 response, err := service.GetViewKey()
 if err != nil {
@@ -250,9 +213,7 @@ if err != nil {
 }
 ```
 
-<!--END_DOCUSAURUS_CODE_TABS-->
-
-#### Expected Output:
+**Expected Output:**
 
 ```json
 {
@@ -264,7 +225,7 @@ if err != nil {
 }
 ```
 
-## getSpendKeys
+### getSpendKeys
 
 `getSpendKeys()` method returns your spend keys.
 
@@ -281,14 +242,10 @@ if err != nil {
 | spendSecretKey | Private spend key | string |
 | spendPublicKey | Public spend key  | string |
 
-<!--DOCUSAURUS_CODE_TABS-->
-
-<!--Shell-->
-```sh
+```
 curl -d '{"jsonrpc":"2.0","id":1,"password":"passw0rd","method":"getSpendKeys","params":{"address":"TRTLxxxx..."}}' http://localhost:8070/json_rpc
 ```
 
-<!--PHP-->
 ```php
 <?php
 $address = 'TRTLxxxx...';
@@ -296,14 +253,12 @@ $response = $turtleService->getSpendKeys($address);
 echo $response;
 ```
 
-<!--Python-->
 ```py
 address = 'TRTLxxxx...'
 response = walletd.get_spend_keys(address)
 print(response)
 ```
 
-<!--Go-->
 ```go
 address := "TRTLxxxx..."
 response, err := service.GetSpendKeys(address)
@@ -314,9 +269,7 @@ if err != nil {
 }
 ```
 
-<!--END_DOCUSAURUS_CODE_TABS-->
-
-#### Expected Output:
+**Expected Output:**
 
 ```json
 {
@@ -329,7 +282,7 @@ if err != nil {
 }
 ```
 
-## getMnemonicSeed
+### getMnemonicSeed
 
 `getMnemonicSeed()` method returns the mnemonic seed for the given _deterministic_ address. A mnemonic seed is a list of words which can be used to recover a wallet.
 
@@ -347,14 +300,10 @@ if err != nil {
 
 > **Note:** The first wallet address that is generated when the container is created is the deterministic address. Only one wallet from a multi-wallet container can be deterministic. If a non-deterministic address is given, the RPC response will be an error with the message: "Keys not deterministic."
 
-<!--DOCUSAURUS_CODE_TABS-->
-
-<!--Shell-->
-```sh
+```
 curl -d '{"jsonrpc":"2.0","id":1,"password":"passw0rd","method":"getMnemonicSeed","params":{"address":"TRTLxxxx..."}}' http://localhost:8070/json_rpc
 ```
 
-<!--PHP-->
 ```php
 <?php
 $address = 'TRTLxxxx...';
@@ -362,14 +311,12 @@ $response = $turtleService->getMnemonicSeed($address);
 echo $response;
 ```
 
-<!--Python-->
 ```py
 address = 'TRTLxxxx...'
 response = walletd.get_mnemonic_seed(address)
 print(response)
 ```
 
-<!--Go-->
 ```go
 address := "TRTLxxxx..."
 response, err := service.GetMnemonicSeed(address)
@@ -380,9 +327,7 @@ if err != nil {
 }
 ```
 
-<!--END_DOCUSAURUS_CODE_TABS-->
-
-#### Expected Output:
+**Expected Output:**
 
 ```json
 {
@@ -394,7 +339,7 @@ if err != nil {
 }
 ```
 
-## getStatus
+### getStatus
 
 `getStatus()` method returns information about the current RPC Wallet state: block count, known block count, last block hash and peer count.
 
@@ -409,27 +354,21 @@ No input.
 | lastBlockHash   | Hash of the last known block                                               | string |
 | peerCount       | Connected peers number                                                     | int    |
 
-<!--DOCUSAURUS_CODE_TABS-->
-
-<!--Shell-->
-```sh
+```
 curl -d '{"jsonrpc":"2.0","id":1,"password":"passw0rd","method":"getStatus","params":{}}' http://localhost:8070/json_rpc
 ```
 
-<!--PHP-->
 ```php
 <?php
 $response = $turtleService->getStatus();
 echo $response;
 ```
 
-<!--Python-->
 ```py
 response = walletd.get_status()
 print(response)
 ```
 
-<!--Go-->
 ```go
 response, err := service.GetStatus()
 if err != nil {
@@ -439,9 +378,7 @@ if err != nil {
 }
 ```
 
-<!--END_DOCUSAURUS_CODE_TABS-->
-
-#### Expected Output:
+**Expected Output:**
 
 ```json
 {
@@ -456,7 +393,7 @@ if err != nil {
 }
 ```
 
-## getAddresses
+### getAddresses
 
 `getAddresses()` method returns an array of your RPC Wallet's addresses.
 
@@ -468,27 +405,21 @@ No input.
 | --------- | ------------------------------------------------- | ------ |
 | addresses | Array of strings, where each string is an address | array  |
 
-<!--DOCUSAURUS_CODE_TABS-->
-
-<!--Shell-->
-```sh
+```
 curl -d '{"jsonrpc":"2.0","id":1,"password":"passw0rd","method":"getAddresses","params":{}}' http://localhost:8070/json_rpc
 ```
 
-<!--PHP-->
 ```php
 <?php
 $response = $turtleService->getAddresses();
 echo $response;
 ```
 
-<!--Python-->
 ```py
 response = walletd.get_addresses()
 print(response)
 ```
 
-<!--Go-->
 ```go
 response, err := service.GetAddresses()
 if err != nil {
@@ -498,9 +429,7 @@ if err != nil {
 }
 ```
 
-<!--END_DOCUSAURUS_CODE_TABS-->
-
-#### Expected Output:
+**Expected Output:**
 
 ```json
 {
@@ -515,7 +444,7 @@ if err != nil {
 }
 ```
 
-## createAddress
+### createAddress
 
 `createAddress()` method creates an additional address in your wallet.
 
@@ -528,14 +457,10 @@ if err != nil {
 | newAddress     | No        | Is this a new address being created? If so, blocks before the creation timestamp will not be scanned. Defaults to true if neither keys are given, as it is guaranteed to be a new address. | bool   |
 | scanHeight     | No        | The height to begin scanning for transactions at. Only applies if a public/secret key is supplied. This can greatly speed up wallet syncing time.                                          | int    |
 
-<!--DOCUSAURUS_CODE_TABS-->
-
-<!--Shell-->
-```sh
+```
 curl -d '{"jsonrpc":"2.0","id":1,"password":"passw0rd","method":"createAddress","params":{}}' http://localhost:8070/json_rpc
 ```
 
-<!--PHP-->
 ```php
 <?php
 $spendSecretKey = null;
@@ -544,7 +469,6 @@ $response = $turtleService->createAddress($spendSecretKey, $spendPublicKey);
 echo $response;
 ```
 
-<!--Python-->
 ```py
 spend_secret_key = ''
 spend_public_key = ''
@@ -552,7 +476,6 @@ response = walletd.create_address(spend_secret_key, spend_public_key)
 print(response)
 ```
 
-<!--Go-->
 ```go
 spendSecretKey := ""
 spendPublicKey := ""
@@ -566,9 +489,7 @@ if err != nil {
 }
 ```
 
-<!--END_DOCUSAURUS_CODE_TABS-->
-
-#### Expected Output:
+**Expected Output:**
 
 ```json
 {
@@ -580,7 +501,7 @@ if err != nil {
 }
 ```
 
-## deleteAddress
+### deleteAddress
 
 `deleteAddress()` method deletes a specified address.
 
@@ -594,14 +515,10 @@ if err != nil {
 
 In case of success returns an empty JSON object.
 
-<!--DOCUSAURUS_CODE_TABS-->
-
-<!--Shell-->
-```sh
+```
 curl -d '{"jsonrpc":"2.0","id":1,"password":"passw0rd","method":"deleteAddress","params":{"address":"TRTLxxxx..."}}' http://localhost:8070/json_rpc
 ```
 
-<!--PHP-->
 ```php
 <?php
 $address = 'TRTLxxxx...';
@@ -609,7 +526,6 @@ $response = $turtleService->deleteAddress($address);
 echo $response;
 ```
 
-<!--Python-->
 ```py
 address = 'TRTLxxxx...'
 response = walletd.delete_address(address)
@@ -618,7 +534,6 @@ response = walletd.delete_address(address)
 print(response)
 ```
 
-<!--Go-->
 ```go
 address := "TRTLxxxx..."
 response, err := service.DeleteAddress(address)
@@ -629,9 +544,7 @@ if err != nil {
 }
 ```
 
-<!--END_DOCUSAURUS_CODE_TABS-->
-
-#### Expected Output:
+**Expected Output:**
 
 ```json
 {
@@ -641,7 +554,7 @@ if err != nil {
 }
 ```
 
-## getBalance
+### getBalance
 
 `getBalance()` method returns a balance for a specified address.
 
@@ -658,18 +571,14 @@ if err != nil {
 | availableBalance | Available balance of the specified address in shells | int    |
 | lockedAmount     | Locked amount of the specified address in shells     | int    |
 
-> **Note:** If an address is not specified, `getBalance()` returns a cumulative balance of all RPC Wallet's addresses.  
+> **Note:** If an address is not specified, `getBalance()` returns a cumulative balance of all RPC Wallet's addresses.
 
 > **Note:** Balances are expressed in shells, so a balance of 10000 is equal to 100.00 TRTL
 
-<!--DOCUSAURUS_CODE_TABS-->
-
-<!--Shell-->
-```sh
+```
 curl -d '{"jsonrpc":"2.0","id":1,"password":"passw0rd","method":"getBalance","params":{"address":"TRTLxxxx..."}}' http://localhost:8070/json_rpc
 ```
 
-<!--PHP-->
 ```php
 <?php
 $address = 'TRTLxxxx...';
@@ -677,14 +586,12 @@ $response = $turtleService->getBalance($address);
 echo $response;
 ```
 
-<!--Python-->
 ```py
 address = 'TRTLxxxx...'
 response = walletd.get_balance(address)
 print(response)
 ```
 
-<!--Go-->
 ```go
 address := "TRTLxxxx..."
 response, err := service.GetBalance(address)
@@ -695,9 +602,7 @@ if err != nil {
 }
 ```
 
-<!--END_DOCUSAURUS_CODE_TABS-->
-
-#### Expected Output:
+**Expected Output:**
 
 ```json
 {
@@ -710,31 +615,27 @@ if err != nil {
 }
 ```
 
-## getBlockHashes
+### getBlockHashes
 
 `getBlockHashes()` method returns an array of block hashes for a specified block range.
 
 **Input**
 
-Argument         | Mandatory    | Description                                     | Format
----------------- | ------------ | ----------------------------------------------- | -------
-firstBlockIndex  | Yes          | Starting height	                                | int
-blockCount       | Yes          | Number of blocks to process		                  | int
+| Argument        | Mandatory | Description                 | Format |
+| --------------- | --------- | --------------------------- | ------ |
+| firstBlockIndex | Yes       | Starting height             | int    |
+| blockCount      | Yes       | Number of blocks to process | int    |
 
 **Output**
 
-Argument              | Description                                             | Format
---------------------- | ------------------------------------------------------- | ------
-blockHashes		      | Array of strings, where each element is a block hash	    | array
+| Argument    | Description                                          | Format |
+| ----------- | ---------------------------------------------------- | ------ |
+| blockHashes | Array of strings, where each element is a block hash | array  |
 
-<!--DOCUSAURUS_CODE_TABS-->
-
-<!--Shell-->
-```sh
+```
 curl -d '{"jsonrpc":"2.0","id":1,"password":"passw0rd","method":"getBlockHashes","params":{"firstBlockIndex":0,"blockCount":3}}' http://localhost:8070/json_rpc
 ```
 
-<!--PHP-->
 ```php
 <?php
 $firstBlockIndex = 0;
@@ -743,7 +644,6 @@ $response = $turtleService->getBlockHashes($firstBlockIndex, $blockCount);
 echo $response;
 ```
 
-<!--Python-->
 ```py
 first_block_index = 0
 block_count = 3
@@ -751,7 +651,6 @@ response = walletd.get_block_hashes(first_block_index, block_count)
 print(response)
 ```
 
-<!--Go-->
 ```go
 firstBlockIndex := 0
 blockCount := 3
@@ -763,9 +662,7 @@ if err != nil {
 }
 ```
 
-<!--END_DOCUSAURUS_CODE_TABS-->
-
-#### Expected Output:
+**Expected Output:**
 
 ```json
 {
@@ -781,20 +678,19 @@ if err != nil {
 }
 ```
 
-## getTransactionHashes
+### getTransactionHashes
 
-`getTransactionHashes()` method returns an array of block and transaction hashes. A transaction consists of transfers.
-A transfer is an amount-address pair. There could be several transfers in a single transaction.
+`getTransactionHashes()` method returns an array of block and transaction hashes. A transaction consists of transfers. A transfer is an amount-address pair. There could be several transfers in a single transaction.
 
 **Input**
 
-Argument         | Mandatory                                                                | Description                                                   | Format
----------------- | ------------------------------------------------------------------------ | ------------------------------------------------------------- | -------
-addresses        | No                                                                       | Array of strings, where each string is an address	            | array
-blockHash        | Only one of these parameters (blockHash or firstBlockIndex) is allowed   | Hash of the starting block                                    | string
-firstBlockIndex  | Only one of these parameters (blockHash or firstBlockIndex) is allowed   | Starting height	                                            | int
-blockCount       | Yes                                                                      | Number of blocks to return transaction hashes from	        | int
-paymentId        | No                                                                       | Valid payment ID (64char hex string)	                        | string
+| Argument        | Mandatory                                                              | Description                                        | Format |
+| --------------- | ---------------------------------------------------------------------- | -------------------------------------------------- | ------ |
+| addresses       | No                                                                     | Array of strings, where each string is an address  | array  |
+| blockHash       | Only one of these parameters (blockHash or firstBlockIndex) is allowed | Hash of the starting block                         | string |
+| firstBlockIndex | Only one of these parameters (blockHash or firstBlockIndex) is allowed | Starting height                                    | int    |
+| blockCount      | Yes                                                                    | Number of blocks to return transaction hashes from | int    |
+| paymentId       | No                                                                     | Valid payment ID (64char hex string)               | string |
 
 * If `paymentId` parameter is set, `getTransactionHashes()` method returns transaction hashes of transactions that contain specified payment ID in the given block range.
 * If `addresses` parameter is set, `getTransactionHashes()` method returns transaction hashes of transactions that contain transfer from at least one of specified addresses.
@@ -802,22 +698,20 @@ paymentId        | No                                                           
 
 **Output**
 
-Argument   | Description                                         |                                                              |            |                                       
----------- | --------------------------------------------------- | ------------------------------------------------------------ | ---------- |
-items	   | **Array of**                                        |	                                                            |            |                                                                 
-    	   | **Attribute**            	                         | **Description**                                              | **Format** |                                        
-           | blockHash                                           | Hash of the block which contains transaction hashes          | string     |
-           | transactionHashes                                   | Array of strings, where each string is a transaction hash    | array      |
+| Argument | Description  |   |   |
+| -------- | ------------ | - | - |
+| items    | **Array of** |   |   |
 
+```
+	   | **Attribute**            	                         | **Description**                                              | **Format** |                                        
+       | blockHash                                           | Hash of the block which contains transaction hashes          | string     |
+       | transactionHashes                                   | Array of strings, where each string is a transaction hash    | array      |
+```
 
-<!--DOCUSAURUS_CODE_TABS-->
-
-<!--Shell-->
-```sh
+```
 curl -d '{"jsonrpc":"2.0","id":1,"password":"passw0rd","method":"getTransactionHashes","params":{"firstBlockIndex":400000,"blockCount":100000}}' http://localhost:8070/json_rpc
 ```
 
-<!--PHP-->
 ```php
 <?php
 $blockCount = 100000;
@@ -833,7 +727,6 @@ $response = $turtleService->getTransactionHashes(
 echo $response;
 ```
 
-<!--Python-->
 ```py
 block_count = 100000
 block_hash = '6c285...'
@@ -844,7 +737,6 @@ response = walletd.get_transaction_hashes(addresses, block_hash, block_count, pa
 print(response)
 ```
 
-<!--Go-->
 ```go
 addresses := []string{"TRTLxxxx..."}
 blockHash := ""
@@ -859,9 +751,7 @@ if err != nil {
 }
 ```
 
-<!--END_DOCUSAURUS_CODE_TABS-->
-
-#### Expected Output:
+**Expected Output:**
 
 ```json
 {
@@ -882,20 +772,19 @@ if err != nil {
 }
 ```
 
-## getTransactions
+### getTransactions
 
-`getTransactions()` method returns an array of block and transaction hashes.
-A transaction consists of transfers. A transfer is an amount-address pair. There could be several transfers in a single transaction.
+`getTransactions()` method returns an array of block and transaction hashes. A transaction consists of transfers. A transfer is an amount-address pair. There could be several transfers in a single transaction.
 
 **Input**
 
-Argument        | Mandatory                                                                    | Description                                            | Format
---------------- | ---------------------------------------------------------------------------- | ------------------------------------------------------ | -------
-addresses       | No                                                                           | Array of strings, where each string is an address		| array
-blockHash       | Only one of these parameters (`blockHash` or `firstBlockIndex`) is allowed.  | Hash of the starting block		                        | string
-firstBlockIndex | Only one of these parameters (`blockHash` or `firstBlockIndex`) is allowed.  | Starting height >0 (1,2,3...)		                    | int
-blockCount      | Yes                                                                          | Number of blocks to return transaction hashes from		| int
-paymentId       | No                                                                           | Valid payment ID (64char hex string)                   | string
+| Argument        | Mandatory                                                                   | Description                                        | Format |
+| --------------- | --------------------------------------------------------------------------- | -------------------------------------------------- | ------ |
+| addresses       | No                                                                          | Array of strings, where each string is an address  | array  |
+| blockHash       | Only one of these parameters (`blockHash` or `firstBlockIndex`) is allowed. | Hash of the starting block                         | string |
+| firstBlockIndex | Only one of these parameters (`blockHash` or `firstBlockIndex`) is allowed. | Starting height >0 (1,2,3...)                      | int    |
+| blockCount      | Yes                                                                         | Number of blocks to return transaction hashes from | int    |
+| paymentId       | No                                                                          | Valid payment ID (64char hex string)               | string |
 
 * If `paymentId` parameter is set, `getTransactions()` method returns transactions that contain specified payment ID in the given block range.
 * If `addresses` parameter is set, `getTransactions()` method returns transactions that contain transfer from at least one of specified addresses.
@@ -903,35 +792,34 @@ paymentId       | No                                                            
 
 **Output**
 
-Argument   |                              | Description                                       | Format
----------- | ---------------------------- | --------------------------------------------------|-----------
-items	   | **Array of**                 |                                                   |
-    	   | block_hash                   | hash of the block which contains a transaction    | string
-    	   | transactions                 | see below                                         | array
+| Argument |              | Description | Format |
+| -------- | ------------ | ----------- | ------ |
+| items    | **Array of** |             |        |
+
+```
+	   | block_hash                   | hash of the block which contains a transaction    | string
+	   | transactions                 | see below                                         | array
+```
 
 Transaction attributes:
 
-Argument            | Description                                       | Format
-------------------- | --------------------------------------------------|-----------
-transactionHash     | Hash of the transaction                                                       | string
-blockIndex          | Number of the block that contains a transaction                               | int
-timestamp           | Timestamp of the transaction                                                  | int
-isBase              | Shows if the transaction is a CoinBase transaction or not                     | boolean
-unlockTime          | Height of the block when transaction is going to be available for spending    | int
-amount              | Amount of the transaction                                                     | int
-fee                 | Transaction fee                                                               | int
-extra               | Hash of the  transaction                                                      | string
-paymentId           | Payment ID of the transaction (optional) (64char hex string)                  | string
-transfers           | Array of address (string), amount (int)                                       | array
+| Argument        | Description                                                                | Format  |
+| --------------- | -------------------------------------------------------------------------- | ------- |
+| transactionHash | Hash of the transaction                                                    | string  |
+| blockIndex      | Number of the block that contains a transaction                            | int     |
+| timestamp       | Timestamp of the transaction                                               | int     |
+| isBase          | Shows if the transaction is a CoinBase transaction or not                  | boolean |
+| unlockTime      | Height of the block when transaction is going to be available for spending | int     |
+| amount          | Amount of the transaction                                                  | int     |
+| fee             | Transaction fee                                                            | int     |
+| extra           | Hash of the transaction                                                    | string  |
+| paymentId       | Payment ID of the transaction (optional) (64char hex string)               | string  |
+| transfers       | Array of address (string), amount (int)                                    | array   |
 
-<!--DOCUSAURUS_CODE_TABS-->
-
-<!--Shell-->
-```sh
+```
 curl -d '{"jsonrpc":"2.0","id":1,"password":"passw0rd","method":"getTransactions","params":{"firstBlockIndex":400000,"blockCount":100000}}' http://localhost:8070/json_rpc
 ```
 
-<!--PHP-->
 ```php
 <?php
 $blockCount = 100000;
@@ -947,7 +835,6 @@ $response = $turtleService->getTransactions(
 echo $response;
 ```
 
-<!--Python-->
 ```py
 block_count = 100000
 block_hash = '6c285...'
@@ -958,7 +845,6 @@ response = walletd.get_transactions(addresses, block_hash, block_count, payment_
 print(response)
 ```
 
-<!--Go-->
 ```go
 addresses := []string{"TRTLxxxx..."}
 blockHash := ""
@@ -973,9 +859,7 @@ if err != nil {
 }
 ```
 
-<!--END_DOCUSAURUS_CODE_TABS-->
-
-#### Expected Output:
+**Expected Output:**
 
 ```json
 {
@@ -1032,7 +916,7 @@ if err != nil {
 }
 ```
 
-## getUnconfirmedTransactionHashes
+### getUnconfirmedTransactionHashes
 
 `getUnconfirmedTransactionHashes()` method returns information about the current unconfirmed transaction pool or for a specified addresses.
 
@@ -1040,26 +924,22 @@ Transaction consists of transfers. Transfer is an amount-address pair. There cou
 
 **Input**
 
-Argument    | Mandatory     | Description                                                | Format
------------ | ------------- | ---------------------------------------------------------- | -------
-addresses   | No            | Array of strings, where each string is a valid address     | array
+| Argument  | Mandatory | Description                                            | Format |
+| --------- | --------- | ------------------------------------------------------ | ------ |
+| addresses | No        | Array of strings, where each string is a valid address | array  |
 
 > **Note:** If addresses parameter is set, transactions that contain transfer from at least one of specified addresses are returned.
 
 **Output**
 
-Argument               | Description                                                                    | Format
----------------------- | ------------------------------------------------------------------------------ | ------
-transactionHashes      | Array of strings, where each string is a hash of an unconfirmed transaction	  | array
+| Argument          | Description                                                                 | Format |
+| ----------------- | --------------------------------------------------------------------------- | ------ |
+| transactionHashes | Array of strings, where each string is a hash of an unconfirmed transaction | array  |
 
-<!--DOCUSAURUS_CODE_TABS-->
-
-<!--Shell-->
-```sh
+```
 curl -d '{"jsonrpc":"2.0","id":1,"password":"passw0rd","method":"getUnconfirmedTransactionHashes","params":{}}' http://localhost:8070/json_rpc
 ```
 
-<!--PHP-->
 ```php
 <?php
 $addresses = null;
@@ -1067,14 +947,12 @@ $response = $turtleService->getUnconfirmedTransactionHashes($addresses);
 echo $response;
 ```
 
-<!--Python-->
 ```py
 addresses = []
 response = walletd.get_unconfirmed_transaction_hashes(addresses)
 print(response)
 ```
 
-<!--Go-->
 ```go
 addresses := []string{"TRTLxxxx..."}
 response, err := service.GetUnconfirmedTransactionHashes(addresses)
@@ -1085,9 +963,7 @@ if err != nil {
 }
 ```
 
-<!--END_DOCUSAURUS_CODE_TABS-->
-
-#### Expected Output:
+**Expected Output:**
 
 ```json
 {
@@ -1101,7 +977,7 @@ if err != nil {
 }
 ```
 
-## getTransaction
+### getTransaction
 
 `getTransaction()` method returns information about a particular transaction.
 
@@ -1109,39 +985,35 @@ Transaction consists of transfers. Transfer is an amount-address pair. There cou
 
 **Input**
 
-Argument            | Mandatory     | Description                                                | Format
-------------------- | ------------- | ---------------------------------------------------------- | -------
-transactionHash     | Yes           | Hash of the requested transaction                          | string
+| Argument        | Mandatory | Description                       | Format |
+| --------------- | --------- | --------------------------------- | ------ |
+| transactionHash | Yes       | Hash of the requested transaction | string |
 
 **Output**
 
-Argument   | Description
----------- | ------------
-transaction| see below
+| Argument    | Description |
+| ----------- | ----------- |
+| transaction | see below   |
 
 Transaction attributes:
 
-Argument            | Description                                                                   | Format
-------------------- | ------------------------------------------------------------------------------|-------
-transactionHash     | Hash of the transaction                                                       | string
-blockIndex          | Number of the block that contains a transaction                               | int
-timestamp           | Timestamp of the transaction                                                  | int
-isBase              | Shows if the transaction is a CoinBase transaction or not                     | boolean
-unlockTime          | Height of the block when transaction is going to be available for spending    | int
-amount              | Amount of the transaction                                                     | int
-fee                 | Transaction fee                                                               | int
-extra               | Hash of the  transaction                                                      | string
-paymentId           | Payment ID of the transaction (optional)  (64char hex string)                 | string
-transfers           | Array of addresses (string), amount (int)                                     | array
+| Argument        | Description                                                                | Format  |
+| --------------- | -------------------------------------------------------------------------- | ------- |
+| transactionHash | Hash of the transaction                                                    | string  |
+| blockIndex      | Number of the block that contains a transaction                            | int     |
+| timestamp       | Timestamp of the transaction                                               | int     |
+| isBase          | Shows if the transaction is a CoinBase transaction or not                  | boolean |
+| unlockTime      | Height of the block when transaction is going to be available for spending | int     |
+| amount          | Amount of the transaction                                                  | int     |
+| fee             | Transaction fee                                                            | int     |
+| extra           | Hash of the transaction                                                    | string  |
+| paymentId       | Payment ID of the transaction (optional) (64char hex string)               | string  |
+| transfers       | Array of addresses (string), amount (int)                                  | array   |
 
-<!--DOCUSAURUS_CODE_TABS-->
-
-<!--Shell-->
-```sh
+```
 curl -d '{"jsonrpc":"2.0","id":1,"password":"passw0rd","method":"getTransaction","params":{"transactionHash":"55a23..."}}' http://localhost:8070/json_rpc
 ```
 
-<!--PHP-->
 ```php
 <?php
 $transactionHash = '55a23...';
@@ -1149,14 +1021,12 @@ $response = $turtleService->getTransaction($transactionHash);
 echo $response;
 ```
 
-<!--Python-->
 ```py
 transaction_hash = '55a23...'
 response = walletd.get_transaction(transaction_hash)
 print(response)
 ```
 
-<!--Go-->
 ```go
 transactionHash := "55a23..."
 response, err := service.GetTransaction(transactionHash)
@@ -1167,9 +1037,7 @@ if err != nil {
 }
 ```
 
-<!--END_DOCUSAURUS_CODE_TABS-->
-
-#### Expected Output:
+**Expected Output:**
 
 ```json
 {
@@ -1197,23 +1065,23 @@ if err != nil {
 }
 ```
 
-## sendTransaction
+### sendTransaction
 
 `sendTransaction()` method allows you to send transaction(s) to one or several addresses. Also, it allows you to use a payment ID for a transaction to a single address.
 
 **Input**
 
-Argument        | Mandatory     | Description                                                                              | Format
---------------- | ------------- | ---------------------------------------------------------------------------------------- | -------
-addresses       | No            | Array of strings, where each string is an address to take the funds from                 | array
-transfers       | Yes           | Array of objects, address: (string address), amount: (int amount)                        | array
-fee             | No            | Transaction fee. Should be given in atomic units. Leave blank to use the minimum fee possible.    | int
-feePerByte      | No            | Fee to pay per byte of the transaction. Should be given in atomic units. If given, should be greater than 1.953125, the minimum network fee per byte.  | float
-unlockTime      | No            | The block height at which the transaction will be unlocked for spending.                 | int
-anonymity       | Yes           | Privacy (mixin) level from block 800,000 three (3)                                       | int
-extra           | No            | String of variable length. Can contain A-Z, 0-9 characters.                              | string
-paymentId       | No            | Payment ID (64char hex string)                                                           | string
-changeAddress   | No            | Valid and existing address in this container.                                            | string
+| Argument      | Mandatory | Description                                                                                                                                           | Format |
+| ------------- | --------- | ----------------------------------------------------------------------------------------------------------------------------------------------------- | ------ |
+| addresses     | No        | Array of strings, where each string is an address to take the funds from                                                                              | array  |
+| transfers     | Yes       | Array of objects, address: (string address), amount: (int amount)                                                                                     | array  |
+| fee           | No        | Transaction fee. Should be given in atomic units. Leave blank to use the minimum fee possible.                                                        | int    |
+| feePerByte    | No        | Fee to pay per byte of the transaction. Should be given in atomic units. If given, should be greater than 1.953125, the minimum network fee per byte. | float  |
+| unlockTime    | No        | The block height at which the transaction will be unlocked for spending.                                                                              | int    |
+| anonymity     | Yes       | Privacy (mixin) level from block 800,000 three (3)                                                                                                    | int    |
+| extra         | No        | String of variable length. Can contain A-Z, 0-9 characters.                                                                                           | string |
+| paymentId     | No        | Payment ID (64char hex string)                                                                                                                        | string |
+| changeAddress | No        | Valid and existing address in this container.                                                                                                         | string |
 
 * If container contains only 1 address, `changeAddress` field can be left empty and the change is going to be sent to this address.
 * If addresses field contains only 1 address, `changeAddress` can be left empty and the change is going to be sent to this address.
@@ -1221,19 +1089,15 @@ changeAddress   | No            | Valid and existing address in this container. 
 
 **Output**
 
-Argument              | Description                         | Format
---------------------- | ----------------------------------- | ------
-transactionHash	      | Hash of the sent transaction		| string
-fee                   | The fee of the send transaction     | int
+| Argument        | Description                     | Format |
+| --------------- | ------------------------------- | ------ |
+| transactionHash | Hash of the sent transaction    | string |
+| fee             | The fee of the send transaction | int    |
 
-<!--DOCUSAURUS_CODE_TABS-->
-
-<!--Shell-->
-```sh
+```
 curl -d '{"jsonrpc":"2.0","id":1,"password":"passw0rd","method":"sendTransaction","params":{"transfers":[{"address":"TRTLxxxx...","amount":5000}],"anonymity":3,"changeAddress":"TRTLyyyy..."}}' http://localhost:8070/json_rpc
 ```
 
-<!--PHP-->
 ```php
 <?php
 $anonymity = 3;
@@ -1255,7 +1119,6 @@ $response = $turtleService->sendTransaction(
 echo $response;
 ```
 
-<!--Python-->
 ```py
 anonymity = 3
 fee = 243000
@@ -1275,7 +1138,6 @@ response = walletd.send_transaction(
 print(response)
 ```
 
-<!--Go-->
 ```go
 addresses := []string{"TRTLyyyy..."} // can be empty
 unlockTime := 0
@@ -1299,9 +1161,7 @@ if err != nil {
 }
 ```
 
-<!--END_DOCUSAURUS_CODE_TABS-->
-
-#### Expected Output:
+**Expected Output:**
 
 ```json
 {
@@ -1314,23 +1174,23 @@ if err != nil {
 }
 ```
 
-## createDelayedTransaction
+### createDelayedTransaction
 
 `createDelayedTransaction()` method creates a delayed transaction. Such transactions are not sent into the network automatically and should be pushed using `sendDelayedTransaction` method.
 
 **Input**
 
-Argument        | Mandatory     | Description                                                                              | Format
---------------- | ------------- | ---------------------------------------------------------------------------------------- | -------
-addresses       | No            | Array of strings, where each string is an address                                        | array
-transfers       | Yes           | Array of address (string), amount (int)                                                  | array
-fee             | No            | Transaction fee. Should be given in atomic units. Leave blank to use the minimum fee possible.    | int
-feePerByte      | No            | Fee to pay per byte of the transaction. Should be given in atomic units. If given, should be greater than 1.953125, the minimum network fee per byte.  | float
-unlockTime      | No	        | Height of the block until which transaction is going to be locked for spending.	       | int
-anonymity       | Yes           | Privacy (mixin) level from block 800,000 three (3)                                       | int
-extra           | No            | String of variable length. Can contain A-Z, 0-9 characters.                              | string
-paymentId       | No            | Payment ID  (64char hex string)                                                          | string
-changeAddress   | No            | Valid and existing in this container address.                                            | string
+| Argument      | Mandatory | Description                                                                                                                                           | Format |
+| ------------- | --------- | ----------------------------------------------------------------------------------------------------------------------------------------------------- | ------ |
+| addresses     | No        | Array of strings, where each string is an address                                                                                                     | array  |
+| transfers     | Yes       | Array of address (string), amount (int)                                                                                                               | array  |
+| fee           | No        | Transaction fee. Should be given in atomic units. Leave blank to use the minimum fee possible.                                                        | int    |
+| feePerByte    | No        | Fee to pay per byte of the transaction. Should be given in atomic units. If given, should be greater than 1.953125, the minimum network fee per byte. | float  |
+| unlockTime    | No        | Height of the block until which transaction is going to be locked for spending.                                                                       | int    |
+| anonymity     | Yes       | Privacy (mixin) level from block 800,000 three (3)                                                                                                    | int    |
+| extra         | No        | String of variable length. Can contain A-Z, 0-9 characters.                                                                                           | string |
+| paymentId     | No        | Payment ID (64char hex string)                                                                                                                        | string |
+| changeAddress | No        | Valid and existing in this container address.                                                                                                         | string |
 
 * If container contains only 1 address, `changeAddress` field can be left empty and the change is going to be sent to this address
 * If addresses field contains only 1 address, `changeAddress` can be left empty and the change is going to be sent to this address
@@ -1339,19 +1199,15 @@ changeAddress   | No            | Valid and existing in this container address. 
 
 **Output**
 
-Argument              | Description                         | Format
---------------------- | ----------------------------------- | ------
-transactionHash	      | Hash of the sent transaction		    | string
-fee                   | The fee of the send transaction     | int
+| Argument        | Description                     | Format |
+| --------------- | ------------------------------- | ------ |
+| transactionHash | Hash of the sent transaction    | string |
+| fee             | The fee of the send transaction | int    |
 
-<!--DOCUSAURUS_CODE_TABS-->
-
-<!--Shell-->
-```sh
+```
 curl -d '{"jsonrpc":"2.0","id":1,"password":"passw0rd","method":"createDelayedTransaction","params":{"transfers":[{"address":"TRTLxxxx...","amount":5000}],"anonymity":3,"changeAddress":"TRTLyyyy..."}}' http://localhost:8070/json_rpc
 ```
 
-<!--PHP-->
 ```php
 <?php
 $anonymity = 3;
@@ -1373,7 +1229,6 @@ $response = $turtleService->createDelayedTransaction(
 echo $response;
 ```
 
-<!--Python-->
 ```py
 anonymity = 3
 fee = 243000
@@ -1393,7 +1248,6 @@ response = walletd.create_delayed_transaction(
 print(response)
 ```
 
-<!--Go-->
 ```go
 addresses := []string{"TRTLyyyy..."} // can be empty
 unlockTime := 0
@@ -1417,9 +1271,7 @@ if err != nil {
 }
 ```
 
-<!--END_DOCUSAURUS_CODE_TABS-->
-
-#### Expected Output:
+**Expected Output:**
 
 ```json
 {
@@ -1432,7 +1284,7 @@ if err != nil {
 }
 ```
 
-## getDelayedTransactionHashes
+### getDelayedTransactionHashes
 
 `getDelayedTransactionHashes()` method returns hashes of delayed transactions.
 
@@ -1440,31 +1292,25 @@ No input.
 
 **Output**
 
-Argument              | Description                                                     | Format
---------------------- | --------------------------------------------------------------- | ------
-transactionHashes	  | Array of strings, where each string is a transaction hash		      | array
+| Argument          | Description                                               | Format |
+| ----------------- | --------------------------------------------------------- | ------ |
+| transactionHashes | Array of strings, where each string is a transaction hash | array  |
 
-<!--DOCUSAURUS_CODE_TABS-->
-
-<!--Shell-->
-```sh
+```
 curl -d '{"jsonrpc":"2.0","id":1,"password":"passw0rd","method":"getDelayedTransactionHashes","params":{}}' http://localhost:8070/json_rpc
 ```
 
-<!--PHP-->
 ```php
 <?php
 $response = $turtleService->getDelayedTransactionHashes();
 echo $response;
 ```
 
-<!--Python-->
 ```py
 response = walletd.get_delayed_transaction_hashes()
 print(response)
 ```
 
-<!--Go-->
 ```go
 response, err := service.GetDelayedTransactionHashes()
 if err != nil {
@@ -1474,9 +1320,7 @@ if err != nil {
 }
 ```
 
-<!--END_DOCUSAURUS_CODE_TABS-->
-
-#### Expected Output:
+**Expected Output:**
 
 ```json
 {
@@ -1488,28 +1332,24 @@ if err != nil {
 }
 ```
 
-## deleteDelayedTransaction
+### deleteDelayedTransaction
 
 `deleteDelayedTransaction()` method deletes a specified delayed transaction.
 
 **Input**
 
-Argument              | Mandatory      | Description                              | Format
---------------------- | -------------- | ---------------------------------------- | -------
-transactionHash       | Yes            | Valid, existing delayed transaction      | string
+| Argument        | Mandatory | Description                         | Format |
+| --------------- | --------- | ----------------------------------- | ------ |
+| transactionHash | Yes       | Valid, existing delayed transaction | string |
 
 **Output**
 
 In case of success returns an empty JSON object.
 
-<!--DOCUSAURUS_CODE_TABS-->
-
-<!--Shell-->
-```sh
+```
 curl -d '{"jsonrpc":"2.0","id":1,"password":"passw0rd","method":"deleteDelayedTransaction","params":{"transactionHash":"b3e37..."}}' http://localhost:8070/json_rpc
 ```
 
-<!--PHP-->
 ```php
 <?php
 $transactionHash = 'b3e37...';
@@ -1517,7 +1357,6 @@ $response = $turtleService->deleteDelayedTransaction($transactionHash);
 echo $response;
 ```
 
-<!--Python-->
 ```py
 transaction_hash = '50d83...'
 response = walletd.delete_delayed_transaction(transaction_hash)
@@ -1526,7 +1365,6 @@ response = walletd.delete_delayed_transaction(transaction_hash)
 print(response)
 ```
 
-<!--Go-->
 ```go
 transactionHash := "50d83..."
 response, err := service.DeleteDelayedTransaction(transactionHash)
@@ -1537,9 +1375,7 @@ if err != nil {
 }
 ```
 
-<!--END_DOCUSAURUS_CODE_TABS-->
-
-#### Expected Output:
+**Expected Output:**
 
 ```json
 {
@@ -1549,28 +1385,24 @@ if err != nil {
 }
 ```
 
-## sendDelayedTransaction
+### sendDelayedTransaction
 
 `sendDelayedTransaction()` method sends a specified delayed transaction.
 
 **Input**
 
-Argument              | Mandatory      | Description                              | Format
---------------------- | -------------- | ---------------------------------------- | -------
-transactionHash       | Yes            | Valid, existing delayed transaction      | string
+| Argument        | Mandatory | Description                         | Format |
+| --------------- | --------- | ----------------------------------- | ------ |
+| transactionHash | Yes       | Valid, existing delayed transaction | string |
 
 **Output**
 
 In case of success returns an empty JSON object.
 
-<!--DOCUSAURUS_CODE_TABS-->
-
-<!--Shell-->
-```sh
+```
 curl -d '{"jsonrpc":"2.0","id":1,"password":"passw0rd","method":"sendDelayedTransaction","params":{"transactionHash":"c37cd..."}}' http://localhost:8070/json_rpc
 ```
 
-<!--PHP-->
 ```php
 <?php
 $transactionHash = 'c37cd...';
@@ -1579,7 +1411,6 @@ $response = $turtleService->sendDelayedTransaction($transactionHash);
 echo $response;
 ```
 
-<!--Python-->
 ```py
 transaction_hash = '50d83...'
 response = walletd.send_delayed_transaction(transaction_hash)
@@ -1588,7 +1419,6 @@ response = walletd.send_delayed_transaction(transaction_hash)
 print(response)
 ```
 
-<!--Go-->
 ```go
 transactionHash := "50d83..."
 response, err := service.SendDelayedTransaction(transactionHash)
@@ -1599,9 +1429,7 @@ if err != nil {
 }
 ```
 
-<!--END_DOCUSAURUS_CODE_TABS-->
-
-#### Expected Output:
+**Expected Output:**
 
 ```json
 {
@@ -1611,21 +1439,18 @@ if err != nil {
 }
 ```
 
-## sendFusionTransaction
+### sendFusionTransaction
 
-`sendFusionTransaction()` method allows you to send a fusion transaction, by taking funds from selected addresses and
-transferring them to the destination address.
-If there aren't any outputs that can be optimized, `sendFusionTransaction()` will return an error. You can
-use `estimateFusion` to check the outputs, available for the optimization.
+`sendFusionTransaction()` method allows you to send a fusion transaction, by taking funds from selected addresses and transferring them to the destination address. If there aren't any outputs that can be optimized, `sendFusionTransaction()` will return an error. You can use `estimateFusion` to check the outputs, available for the optimization.
 
 **Input**
 
-Argument            | Mandatory  | Description                                                                                          | Format
-------------------- | ---------- | ---------------------------------------------------------------------------------------------------- | -------
-threshold           | Yes        | Value that determines which outputs will be optimized. Only the outputs, lesser than the threshold value, will be included into a fusion transaction. | int
-anonymity           | Yes        | Privacy (mixin) level from block 800,000 three (3)                                                 | int
-addresses           | No         | Array of strings, where each string is an address to take the funds from.	                        | array
-destinationAddress  | No         | An address that the optimized funds will be sent to. Valid and existing in this container address.	| string
+| Argument           | Mandatory | Description                                                                                                                                           | Format |
+| ------------------ | --------- | ----------------------------------------------------------------------------------------------------------------------------------------------------- | ------ |
+| threshold          | Yes       | Value that determines which outputs will be optimized. Only the outputs, lesser than the threshold value, will be included into a fusion transaction. | int    |
+| anonymity          | Yes       | Privacy (mixin) level from block 800,000 three (3)                                                                                                    | int    |
+| addresses          | No        | Array of strings, where each string is an address to take the funds from.                                                                             | array  |
+| destinationAddress | No        | An address that the optimized funds will be sent to. Valid and existing in this container address.                                                    | string |
 
 * If container contains only 1 address, `destinationAddress` field can be left empty and the funds are going to be sent to this address.
 * If addresses field contains only 1 address, `destinationAddress` can be left empty and the funds are going to be sent to this address.
@@ -1633,19 +1458,14 @@ destinationAddress  | No         | An address that the optimized funds will be s
 
 **Output**
 
-Argument              | Description                         | Format
---------------------- | ----------------------------------- | ------
-transactionHash	      | Hash of the sent transaction		    | string
+| Argument        | Description                  | Format |
+| --------------- | ---------------------------- | ------ |
+| transactionHash | Hash of the sent transaction | string |
 
-
-<!--DOCUSAURUS_CODE_TABS-->
-
-<!--Shell-->
-```sh
+```
 curl -d '{"jsonrpc":"2.0","id":1,"password":"passw0rd","method":"sendFusionTransaction","params":{"threshold":1000000,"anonymity":3,"addresses":["TRTLxxxx...","TRTLyyyy..."],"destinationAddress":"TRTLzzzz..."}}' http://localhost:8070/json_rpc
 ```
 
-<!--PHP-->
 ```php
 <?php
 $threshold = 1000000;
@@ -1657,7 +1477,6 @@ $response = $turtleService->sendFusionTransaction($threshold, $anonymity, $addre
 echo $response;
 ```
 
-<!--Python-->
 ```py
 threshold = 1000000
 anonymity = 3
@@ -1668,7 +1487,6 @@ response = walletd.send_fusion_transaction(threshold, anonymity, addresses, dest
 print(response)
 ```
 
-<!--Go-->
 ```go
 threshold := 1000000
 addresses := []string{"TRTLxxxx...", "TRTLyyyy..."}
@@ -1681,9 +1499,7 @@ if err != nil {
 }
 ```
 
-<!--END_DOCUSAURUS_CODE_TABS-->
-
-#### Expected Output:
+**Expected Output:**
 
 ```json
 {
@@ -1695,33 +1511,28 @@ if err != nil {
 }
 ```
 
-## estimateFusion
+### estimateFusion
 
-`estimateFusion()` method counts the number of unspent outputs of the specified addresses and returns how many of those outputs can be optimized.
-This method is used to understand if a fusion transaction can be created. If `fusionReadyCount` returns a value = 0, then a fusion transaction cannot be created.
+`estimateFusion()` method counts the number of unspent outputs of the specified addresses and returns how many of those outputs can be optimized. This method is used to understand if a fusion transaction can be created. If `fusionReadyCount` returns a value = 0, then a fusion transaction cannot be created.
 
 **Input**
 
-Argument            | Mandatory  | Description                                                                                          | Format
-------------------- | ---------- | ---------------------------------------------------------------------------------------------------- | -------
-threshold           | Yes        | Value that determines which outputs will be optimized. Only the outputs, lesser than the threshold value, will be included into a fusion transaction. | int
-addresses           | No         | Array of strings, where each string is an address to take the funds from.	                        | string
+| Argument  | Mandatory | Description                                                                                                                                           | Format |
+| --------- | --------- | ----------------------------------------------------------------------------------------------------------------------------------------------------- | ------ |
+| threshold | Yes       | Value that determines which outputs will be optimized. Only the outputs, lesser than the threshold value, will be included into a fusion transaction. | int    |
+| addresses | No        | Array of strings, where each string is an address to take the funds from.                                                                             | string |
 
 **Output**
 
-Argument            | Description                                                 | Format
-------------------- | ----------------------------------------------------------- | ------
-totalOutputCount	  | Total number of unspent outputs of the specified addresses. | int
-fusionReadyCount    | Number of outputs that can be optimized.                    | int
+| Argument         | Description                                                 | Format |
+| ---------------- | ----------------------------------------------------------- | ------ |
+| totalOutputCount | Total number of unspent outputs of the specified addresses. | int    |
+| fusionReadyCount | Number of outputs that can be optimized.                    | int    |
 
-<!--DOCUSAURUS_CODE_TABS-->
-
-<!--Shell-->
-```sh
+```
 curl -d '{"jsonrpc":"2.0","id":1,"password":"passw0rd","method":"estimateFusion","params":{"threshold":1000000,"addresses":["TRTLxxxx...","TRTLyyyy..."]}}' http://localhost:8070/json_rpc
 ```
 
-<!--PHP-->
 ```php
 <?php
 $threshold = 1000000;
@@ -1731,7 +1542,6 @@ $response = $turtleService->estimateFusion($threshold, $addresses);
 echo $response;
 ```
 
-<!--Python-->
 ```py
 threshold = 1000000
 addresses = ['TRTLxxxx...', 'TRTLyyyy...']
@@ -1739,7 +1549,6 @@ response = walletd.estimate_fusion(threshold, addresses)
 print(response)
 ```
 
-<!--Go-->
 ```go
 threshold := 1000000
 addresses := []string{"TRTLxxxx...","TRTLyyyy..."}
@@ -1751,9 +1560,7 @@ if err != nil {
 }
 ```
 
-<!--END_DOCUSAURUS_CODE_TABS-->
-
-#### Expected Output:
+**Expected Output:**
 
 ```json
 {
@@ -1766,31 +1573,27 @@ if err != nil {
 }
 ```
 
-## createIntegratedAddress
+### createIntegratedAddress
 
 `createIntegratedAddress()` method allows you to create a combined address, containing a standard address and a paymentId, to be used in sendTransaction() or for supplying to a user, instead of using an address and paymentId as separate parameters. This is helpful to ensure users cannot forget to supply a payment Id.
 
 **Input**
 
-Argument              | Mandatory      | Description                           | Format
---------------------- | -------------- | ------------------------------------- | -------
-address               | Yes            | A valid address                       | string
-paymentId             | Yes            | A valid paymentId (64char hex string) | string
+| Argument  | Mandatory | Description                           | Format |
+| --------- | --------- | ------------------------------------- | ------ |
+| address   | Yes       | A valid address                       | string |
+| paymentId | Yes       | A valid paymentId (64char hex string) | string |
 
 **Output**
 
-Argument              | Description                         | Format
---------------------- | ----------------------------------- | ------
-integratedAddress	    | The created integrated address		  | string
+| Argument          | Description                    | Format |
+| ----------------- | ------------------------------ | ------ |
+| integratedAddress | The created integrated address | string |
 
-<!--DOCUSAURUS_CODE_TABS-->
-
-<!--Shell-->
-```sh
+```
 curl -d '{"jsonrpc":"2.0","id":1,"password":"passw0rd","method":"createIntegratedAddress","params":{"paymentId":"7FE73BD90EF05DEA0B5C15FC78696619C50DD5F2BA628F2FD16A2E3445B1922F", "address":"TRTLxxxx..."}}' http://localhost:8070/json_rpc
 ```
 
-<!--PHP-->
 ```php
 <?php
 $address = 'TRTLxxxx...';
@@ -1800,7 +1603,6 @@ $response = $turtleService->createIntegratedAddress($address, $paymentId);
 echo $response;
 ```
 
-<!--Python-->
 ```py
 address = 'TRTLxxxx...'
 payment_id = '7FE73BD90EF05DEA0B5C15FC78696619C50DD5F2BA628F2FD16A2E3445B1922F'
@@ -1808,7 +1610,6 @@ response = walletd.create_integrated_address(address, payment_id)
 print(response)
 ```
 
-<!--Go-->
 ```go
 address := "TRTLxxxx..."
 paymentID := "7FE73BD90EF05DEA0B5C15FC78696619C50DD5F2BA628F2FD16A2E3445B1922F"
@@ -1820,9 +1621,7 @@ if err != nil {
 }
 ```
 
-<!--END_DOCUSAURUS_CODE_TABS-->
-
-#### Expected Output:
+**Expected Output:**
 
 ```json
 {
@@ -1834,7 +1633,7 @@ if err != nil {
 }
 ```
 
-## getFeeInfo
+### getFeeInfo
 
 `getFeeInfo()` method retrieves the fee and address (if any) that that TurtleCoind walletd is connecting to is using. This fee will automatically be added to any transactions sent by sendTransaction() or sendDelayedTransaction(). Note it does not apply to sendFusionTransaction().
 
@@ -1842,19 +1641,15 @@ No input.
 
 **Output**
 
-Argument              | Description                         | Format
---------------------- | ----------------------------------- | ------
-address               | The address of the node owner 		  | string
-amount                | The fee that will be sent to the node owners address with each transaction | int
+| Argument | Description                                                                | Format |
+| -------- | -------------------------------------------------------------------------- | ------ |
+| address  | The address of the node owner                                              | string |
+| amount   | The fee that will be sent to the node owners address with each transaction | int    |
 
-<!--DOCUSAURUS_CODE_TABS-->
-
-<!--Shell-->
-```sh
+```
 curl -d '{"jsonrpc":"2.0","id":1,"password":"passw0rd","method":"getFeeInfo","params":{}}' http://localhost:8070/json_rpc
 ```
 
-<!--PHP-->
 ```php
 <?php
 $response = $turtleService->getFeeInfo();
@@ -1862,13 +1657,11 @@ $response = $turtleService->getFeeInfo();
 echo $response;
 ```
 
-<!--Python-->
 ```py
 response = walletd.get_fee_info()
 print(response)
 ```
 
-<!--Go-->
 ```go
 response, err := service.GetFeeInfo()
 if err != nil {
@@ -1878,9 +1671,7 @@ if err != nil {
 }
 ```
 
-<!--END_DOCUSAURUS_CODE_TABS-->
-
-#### Expected Output:
+**Expected Output:**
 
 ```json
 {
@@ -1893,9 +1684,9 @@ if err != nil {
 }
 ```
 
-## License
+### License
 
-[![Creative Commons License](../../assets/cc-by-sa.png)](https://creativecommons.org/licenses/by-sa/3.0/)
+[![Creative Commons License](broken-reference)](https://creativecommons.org/licenses/by-sa/3.0/)
 
 The content in this document was originally written by the [Bytecoin (BCN) Developers](https://bytecoin.org/). It is licensed under the [CC BY SA 3.0 license](https://creativecommons.org/licenses/by-sa/3.0/). The source material can be found at the [Bytecoin Wiki](https://github.com/bcndev/bytecoin).
 

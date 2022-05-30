@@ -32,6 +32,7 @@
   * [📈 How to buy XKR](guides/How-to-buy-xkr.md)
   * [🤖 Using the Discord Bot](guides/Using-kryptokrona-bot.md)
   * [🕸 Node](guides/config/README.md)
+    * [🍇 Run a Node on a Raspberry Pi](guides/config/run-a-node-on-a-raspberry-pi.md)
     * [✏ How to config Kryptokrona?](guides/config/config.md)
     * [😇 Run a Public Node](guides/config/run-a-public-node.md)
   * [⛏ Mining](guides/mining/README.md)

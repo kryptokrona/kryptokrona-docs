@@ -2,48 +2,49 @@
 title: Mining Pools
 ---
 
-Unless you want to [solo mine](../CPU-Solo-Mining), which is unfeasible for many people, you will need a pool to mine towards. Make sure to choose the one closest to you!
+# Mining Pools
+
+Unless you want to [solo mine](../../docs/guides/CPU-Solo-Mining/), which is unfeasible for many people, you will need a pool to mine towards. Make sure to choose the one closest to you!
 
 To view a list of pools, check out [the explorer](https://explorer.kryptokrona.se/pools.html)
 
-## Pinging a Pool
+### Pinging a Pool
 
-The best pool is the one that is closest to you; this can easily be determined by *pinging* the pool through your terminal
+The best pool is the one that is closest to you; this can easily be determined by _pinging_ the pool through your terminal
 
 Open up your terminal; look for "Command Prompt" or "Terminal" in your Start/Applications menu
 
 When open, enter this command: `ping <pool url>`, replacing `<pool url>` with the address of your pool.
 
 For example, if I was mining at gota.kryptokrona.se, then the pool url (what you put into your miner) is `geo.kryptokrona.se`. Thus, I would enter:
+
 ```
 ping geo.kryptokrona.se
 ```
+
 The port number is not necessary
 
-Analyze the number before the `ms`; this is how long it takes for you to send a receive a packet from the pool. The *lower it is, the better*. 
-
-<!-- ![ping pool](../../assets/pool-ping.png) -->
+Analyze the number before the `ms`; this is how long it takes for you to send a receive a packet from the pool. The _lower it is, the better_.
 
 You may need to press Ctrl + C on your keyboard to exit the command.
 
-## Definition of Fees
+### Definition of Fees
 
 Rather simple; the pool operator will take a percentage of the reward of the block found for himself.
 
 Example-
 
-- the fee is 0.1%
-- the block reward is 30000 XKR
-- 30000 x 0.1% = 30
+* the fee is 0.1%
+* the block reward is 30000 XKR
+* 30000 x 0.1% = 30
 
 Therefore, the pool operator will take 30 XKR for himself.
 
-
-## Definition of Different Types of Methods
+### Definition of Different Types of Methods
 
 These will be found on the pool website; if not specified, it is most likely proportional.
 
-### Proportional (share-based)
+#### Proportional (share-based)
 
 A proportional pool carries no risk to the pool operator as miners are simply paid out when a block is found. No blocks, no payout!
 
@@ -51,9 +52,9 @@ With a proportional pool the risk is all on the miners if it takes longer than e
 
 Example-
 
-- A block is found after 100,000 shares
-- You submitted 1,000 of those shares (you have 1% of the pool's total hash power)
-- There’s 30000 XKR per block
+* A block is found after 100,000 shares
+* You submitted 1,000 of those shares (you have 1% of the pool's total hash power)
+* There’s 30000 XKR per block
 
 Quite simply you will get 1% of the block = 300 XKR.
 
@@ -67,7 +68,7 @@ The drawbacks to a proportional pool are that there is often a fee, although som
 
 Also they are susceptible to “pool hoppers” where PPLNS pools are not.
 
-### PPLNS (Pay Per Last *n* Shares)
+#### PPLNS (Pay Per Last _n_ Shares)
 
 PPLNS does not pay out per block found, rather it pays based on the number of shares you last submitted, and helps to dissuade pool hoppers.
 
@@ -79,5 +80,5 @@ How it works is,
 
 Basically, you get paid based on
 
-- the number of shares you submitted (how good what you're mining with is)
-- and how long you have been mining.
+* the number of shares you submitted (how good what you're mining with is)
+* and how long you have been mining.
