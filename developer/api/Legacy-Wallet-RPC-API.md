@@ -1,31 +1,31 @@
 ---
-title: Turtle Service Wallet RPC API
+title: kryptokrona-service
 ---
 
 # kryptokrona-service
 
-The TurtleCoin RPC Wallet is a HTTP server which provides JSON 2.0 RPC interface for TurtleCoin payment operations and address management.
+The kryptokrona RPC Wallet is a HTTP server which provides JSON 2.0 RPC interface for kryptokrona payment operations and address management.
 
 Currently we support the following official client bindings:
 
-* [PHP](https://github.com/turtlecoin/turtlecoin-rpc-php)
-* [Python](https://github.com/turtlecoin/turtlecoin-rpc-python)
-* [Go](https://github.com/turtlecoin/turtlecoin-rpc-go)
+* [PHP](https://github.com/kryptokrona/kryptokrona-rpc-php)
+* [Python](https://github.com/kryptokrona/kryptokrona-rpc-python)
+* [Go](https://github.com/kryptokrona/kryptokrona-rpc-go)
 
-### Note: Eventually, turtle-service will be deprecated. It is suggested to use [wallet-api](https://turtlecoin.github.io/wallet-api-docs) for new applications.
+### Note: Eventually, kryptokrona-service will be deprecated. It is suggested to use [wallet-api](https://kryptokrona.github.io/wallet-api-docs) for new applications.
 
 ### Installation
 
 ```
-composer require turtlecoin/turtlecoin-rpc-php
+composer require kryptokrona/kryptokrona-rpc-php
 ```
 
 ```
-pip3 install turtlecoin
+pip3 install kryptokrona
 ```
 
 ```
-go get github.com/turtlecoin/turtlecoin-rpc-go
+go get github.com/kryptokrona/kryptokrona-rpc-go
 ```
 
 ### Interacting with the API
@@ -38,18 +38,18 @@ http://localhost:8070/json_rpc
 
 #### Configuration and instantiation
 
-To make a JSON RPC request to your TurtleCoin RPC Wallet you should use a GET request that looks like this:
+To make a JSON RPC request to your kryptokrona RPC Wallet you should use a GET request that looks like this:
 
 `http://<service address>:<service port>/json_rpc`
 
 | Parameter           | Description                                                                                                        |
 | ------------------- | ------------------------------------------------------------------------------------------------------------------ |
-| `<service address>` | IP of TurtleCoin RPC Wallet, if RPC Wallet is located on local machine it is either 127.0.0.1 or localhost         |
-| `<service port>`    | TurtleCoin RPC Wallet port, by default it is bound to 8070 port, but it can be manually bound to any port you want |
+| `<service address>` | IP of kryptokrona RPC Wallet, if RPC Wallet is located on local machine it is either 127.0.0.1 or localhost         |
+| `<service port>`    | kryptokrona RPC Wallet port, by default it is bound to 8070 port, but it can be manually bound to any port you want |
 
 ```
 <?php
-use TurtleCoin\TurtleService;
+use kryptokrona\kryptokronaService;
 
 $config = [
     'rpcHost'     => 'http://localhost',
@@ -57,11 +57,11 @@ $config = [
     'rpcPassword' => 'passw0rd',
 ];
 
-$turtleService = new TurtleService($config);
+$kryptokronaService = new kryptokronaService($config);
 ```
 
 ```
-from turtlecoin import Walletd
+from kryptokrona import Walletd
 
 rpc_host = 'localhost'
 rpc_port = 8070
@@ -73,7 +73,7 @@ walletd = Walletd(rpc_password, rpc_host, rpc_port)
 ```
 import (
   "fmt"
-  trpc "github.com/turtlecoin/turtlecoin-rpc-go"
+  trpc "github.com/kryptokrona/kryptokrona-rpc-go"
 )
 
 rpcHost := "localhost"
@@ -103,7 +103,7 @@ curl -d '{"jsonrpc":"2.0","id":1,"password":"passw0rd","method":"reset","params"
 ```
 <?php
 $scanHeight = 100000;
-$response = $turtleService->reset($scanHeight);
+$response = $kryptokronaService->reset($scanHeight);
 echo $response;
 ```
 
@@ -149,7 +149,7 @@ curl -d '{"jsonrpc":"2.0","id":1,"password":"passw0rd","method":"save","params":
 
 ```
 <?php
-$response = $turtleService->save();
+$response = $kryptokronaService->save();
 echo $response;
 ```
 
@@ -195,7 +195,7 @@ curl -d '{"jsonrpc":"2.0","id":1,"password":"passw0rd","method":"getViewKey","pa
 
 ```
 <?php
-$response = $turtleService->getViewKey();
+$response = $kryptokronaService->getViewKey();
 echo $response;
 ```
 
@@ -243,24 +243,24 @@ if err != nil {
 | spendPublicKey | Public spend key  | string |
 
 ```
-curl -d '{"jsonrpc":"2.0","id":1,"password":"passw0rd","method":"getSpendKeys","params":{"address":"TRTLxxxx..."}}' http://localhost:8070/json_rpc
+curl -d '{"jsonrpc":"2.0","id":1,"password":"passw0rd","method":"getSpendKeys","params":{"address":"SEKRxxxx..."}}' http://localhost:8070/json_rpc
 ```
 
 ```
 <?php
-$address = 'TRTLxxxx...';
-$response = $turtleService->getSpendKeys($address);
+$address = 'SEKRxxxx...';
+$response = $kryptokronaService->getSpendKeys($address);
 echo $response;
 ```
 
 ```
-address = 'TRTLxxxx...'
+address = 'SEKRxxxx...'
 response = walletd.get_spend_keys(address)
 print(response)
 ```
 
 ```
-address := "TRTLxxxx..."
+address := "SEKRxxxx..."
 response, err := service.GetSpendKeys(address)
 if err != nil {
   fmt.Println(err)
@@ -301,24 +301,24 @@ if err != nil {
 > **Note:** The first wallet address that is generated when the container is created is the deterministic address. Only one wallet from a multi-wallet container can be deterministic. If a non-deterministic address is given, the RPC response will be an error with the message: "Keys not deterministic."
 
 ```
-curl -d '{"jsonrpc":"2.0","id":1,"password":"passw0rd","method":"getMnemonicSeed","params":{"address":"TRTLxxxx..."}}' http://localhost:8070/json_rpc
+curl -d '{"jsonrpc":"2.0","id":1,"password":"passw0rd","method":"getMnemonicSeed","params":{"address":"SEKRxxxx..."}}' http://localhost:8070/json_rpc
 ```
 
 ```
 <?php
-$address = 'TRTLxxxx...';
-$response = $turtleService->getMnemonicSeed($address);
+$address = 'SEKRxxxx...';
+$response = $kryptokronaService->getMnemonicSeed($address);
 echo $response;
 ```
 
 ```
-address = 'TRTLxxxx...'
+address = 'SEKRxxxx...'
 response = walletd.get_mnemonic_seed(address)
 print(response)
 ```
 
 ```
-address := "TRTLxxxx..."
+address := "SEKRxxxx..."
 response, err := service.GetMnemonicSeed(address)
 if err != nil {
   fmt.Println(err)
@@ -360,7 +360,7 @@ curl -d '{"jsonrpc":"2.0","id":1,"password":"passw0rd","method":"getStatus","par
 
 ```
 <?php
-$response = $turtleService->getStatus();
+$response = $kryptokronaService->getStatus();
 echo $response;
 ```
 
@@ -411,7 +411,7 @@ curl -d '{"jsonrpc":"2.0","id":1,"password":"passw0rd","method":"getAddresses","
 
 ```
 <?php
-$response = $turtleService->getAddresses();
+$response = $kryptokronaService->getAddresses();
 echo $response;
 ```
 
@@ -437,8 +437,8 @@ if err != nil {
   "jsonrpc":"2.0",
   "result":{
     "addresses":[
-      "TRTLxxxx...",
-      "TRTLxxxx..."
+      "SEKRxxxx...",
+      "SEKRxxxx..."
     ]
   }
 }
@@ -465,7 +465,7 @@ curl -d '{"jsonrpc":"2.0","id":1,"password":"passw0rd","method":"createAddress",
 <?php
 $spendSecretKey = null;
 $spendPublicKey = null;
-$response = $turtleService->createAddress($spendSecretKey, $spendPublicKey);
+$response = $kryptokronaService->createAddress($spendSecretKey, $spendPublicKey);
 echo $response;
 ```
 
@@ -496,7 +496,7 @@ if err != nil {
   "id":1,
   "jsonrpc":"2.0",
   "result":{
-    "address":"TRTLxxxx..."
+    "address":"SEKRxxxx..."
   }
 }
 ```
@@ -516,18 +516,18 @@ if err != nil {
 In case of success returns an empty JSON object.
 
 ```
-curl -d '{"jsonrpc":"2.0","id":1,"password":"passw0rd","method":"deleteAddress","params":{"address":"TRTLxxxx..."}}' http://localhost:8070/json_rpc
+curl -d '{"jsonrpc":"2.0","id":1,"password":"passw0rd","method":"deleteAddress","params":{"address":"SEKRxxxx..."}}' http://localhost:8070/json_rpc
 ```
 
 ```
 <?php
-$address = 'TRTLxxxx...';
-$response = $turtleService->deleteAddress($address);
+$address = 'SEKRxxxx...';
+$response = $kryptokronaService->deleteAddress($address);
 echo $response;
 ```
 
 ```
-address = 'TRTLxxxx...'
+address = 'SEKRxxxx...'
 response = walletd.delete_address(address)
 
 # If the delete was successful, response will be True
@@ -535,7 +535,7 @@ print(response)
 ```
 
 ```
-address := "TRTLxxxx..."
+address := "SEKRxxxx..."
 response, err := service.DeleteAddress(address)
 if err != nil {
   fmt.Println(err)
@@ -573,27 +573,27 @@ if err != nil {
 
 > **Note:** If an address is not specified, `getBalance()` returns a cumulative balance of all RPC Wallet's addresses.
 
-> **Note:** Balances are expressed in shells, so a balance of 10000 is equal to 100.00 TRTL
+> **Note:** Balances are expressed in shells, so a balance of 10000 is equal to 100.00 SEKR
 
 ```
-curl -d '{"jsonrpc":"2.0","id":1,"password":"passw0rd","method":"getBalance","params":{"address":"TRTLxxxx..."}}' http://localhost:8070/json_rpc
+curl -d '{"jsonrpc":"2.0","id":1,"password":"passw0rd","method":"getBalance","params":{"address":"SEKRxxxx..."}}' http://localhost:8070/json_rpc
 ```
 
 ```
 <?php
-$address = 'TRTLxxxx...';
-$response = $turtleService->getBalance($address);
+$address = 'SEKRxxxx...';
+$response = $kryptokronaService->getBalance($address);
 echo $response;
 ```
 
 ```
-address = 'TRTLxxxx...'
+address = 'SEKRxxxx...'
 response = walletd.get_balance(address)
 print(response)
 ```
 
 ```
-address := "TRTLxxxx..."
+address := "SEKRxxxx..."
 response, err := service.GetBalance(address)
 if err != nil {
   fmt.Println(err)
@@ -640,7 +640,7 @@ curl -d '{"jsonrpc":"2.0","id":1,"password":"passw0rd","method":"getBlockHashes"
 <?php
 $firstBlockIndex = 0;
 $blockCount = 3;
-$response = $turtleService->getBlockHashes($firstBlockIndex, $blockCount);
+$response = $kryptokronaService->getBlockHashes($firstBlockIndex, $blockCount);
 echo $response;
 ```
 
@@ -720,7 +720,7 @@ $blockHash = null;
 $addresses = null;
 $paymentId = null;
 
-$response = $turtleService->getTransactionHashes(
+$response = $kryptokronaService->getTransactionHashes(
     $blockCount, $firstBlockIndex, $blockHash, $addresses, $paymentId
 );
 
@@ -738,7 +738,7 @@ print(response)
 ```
 
 ```
-addresses := []string{"TRTLxxxx..."}
+addresses := []string{"SEKRxxxx..."}
 blockHash := ""
 firstBlockIndex := 0
 blockCount := 3
@@ -828,7 +828,7 @@ $blockHash = null;
 $addresses = null;
 $paymentId = null;
 
-$response = $turtleService->getTransactions(
+$response = $kryptokronaService->getTransactions(
     $blockCount, $firstBlockIndex, $blockHash, $addresses, $paymentId
 );
 
@@ -846,7 +846,7 @@ print(response)
 ```
 
 ```
-addresses := []string{"TRTLxxxx..."}
+addresses := []string{"SEKRxxxx..."}
 blockHash := ""
 firstBlockIndex := 0
 blockCount := 3
@@ -881,7 +881,7 @@ if err != nil {
             "timestamp":1526458339,
             "transactionHash":"529ea...",
             "transfers":[
-              {"address":"TRTLxxxx...","amount":10000,"type":0},
+              {"address":"SEKRxxxx...","amount":10000,"type":0},
               {"address":"","amount":-100000,"type":0},
               {"address":"","amount":89990,"type":0}
             ],
@@ -903,7 +903,7 @@ if err != nil {
             "timestamp":1526460243,
             "transactionHash":"2e709...",
             "transfers":[
-              {"address":"TRTLxxxx...","amount":5000,"type":0},
+              {"address":"SEKRxxxx...","amount":5000,"type":0},
               {"address":"","amount":-8000,"type":0},
               {"address":"","amount":2990,"type":0}
             ],
@@ -943,7 +943,7 @@ curl -d '{"jsonrpc":"2.0","id":1,"password":"passw0rd","method":"getUnconfirmedT
 ```
 <?php
 $addresses = null;
-$response = $turtleService->getUnconfirmedTransactionHashes($addresses);
+$response = $kryptokronaService->getUnconfirmedTransactionHashes($addresses);
 echo $response;
 ```
 
@@ -954,7 +954,7 @@ print(response)
 ```
 
 ```
-addresses := []string{"TRTLxxxx..."}
+addresses := []string{"SEKRxxxx..."}
 response, err := service.GetUnconfirmedTransactionHashes(addresses)
 if err != nil {
 		fmt.Println(err)
@@ -1017,7 +1017,7 @@ curl -d '{"jsonrpc":"2.0","id":1,"password":"passw0rd","method":"getTransaction"
 ```
 <?php
 $transactionHash = '55a23...';
-$response = $turtleService->getTransaction($transactionHash);
+$response = $kryptokronaService->getTransaction($transactionHash);
 echo $response;
 ```
 
@@ -1055,7 +1055,7 @@ if err != nil {
       "timestamp":1526477499,
       "transactionHash":"55a23...",
       "transfers":[
-        {"address":"TRTLxxxx...","amount":5000,"type":0},
+        {"address":"SEKRxxxx...","amount":5000,"type":0},
         {"address":"","amount":-10000,"type":0},
         {"address":"","amount":4990,"type":0}
       ],
@@ -1095,7 +1095,7 @@ if err != nil {
 | fee             | The fee of the send transaction | int    |
 
 ```
-curl -d '{"jsonrpc":"2.0","id":1,"password":"passw0rd","method":"sendTransaction","params":{"transfers":[{"address":"TRTLxxxx...","amount":5000}],"anonymity":3,"changeAddress":"TRTLyyyy..."}}' http://localhost:8070/json_rpc
+curl -d '{"jsonrpc":"2.0","id":1,"password":"passw0rd","method":"sendTransaction","params":{"transfers":[{"address":"SEKRxxxx...","amount":5000}],"anonymity":3,"changeAddress":"SEKRyyyy..."}}' http://localhost:8070/json_rpc
 ```
 
 ```
@@ -1106,13 +1106,13 @@ $addresses = null;
 $unlockTime = null;
 $extra = null;
 $paymentId = null;
-$changeAddress = 'TRTLyyyy...';
+$changeAddress = 'SEKRyyyy...';
 
 $transfers = [
-    ["address" => "TRTLxxxx...", "amount"  => 5000],
+    ["address" => "SEKRxxxx...", "amount"  => 5000],
 ];
 
-$response = $turtleService->sendTransaction(
+$response = $kryptokronaService->sendTransaction(
     $anonymity, $transfers, $fee, $addresses, $unlockTime, $extra, $paymentId, $changeAddress
 );
 
@@ -1126,10 +1126,10 @@ addresses = []
 unlock_time = 0
 extra = ''
 payment_id = ''
-change_address = 'TRTLyyyy...'
+change_address = 'SEKRyyyy...'
 
 transfers = [
-    {"address" : "TRTLxxxx...", "amount" : 5000},
+    {"address" : "SEKRxxxx...", "amount" : 5000},
 ]
 
 response = walletd.send_transaction(
@@ -1139,16 +1139,16 @@ print(response)
 ```
 
 ```
-addresses := []string{"TRTLyyyy..."} // can be empty
+addresses := []string{"SEKRyyyy..."} // can be empty
 unlockTime := 0
 extra := ""
 paymentID := ""
 fee := 243000
-changeAddress := "TRTLyyyy..."
+changeAddress := "SEKRyyyy..."
 
 transfers := []map[string]interface{}{
   {
-    "address" : "TRTLxxxx...",
+    "address" : "SEKRxxxx...",
     "amount" : 5000,
   },
 }
@@ -1205,7 +1205,7 @@ if err != nil {
 | fee             | The fee of the send transaction | int    |
 
 ```
-curl -d '{"jsonrpc":"2.0","id":1,"password":"passw0rd","method":"createDelayedTransaction","params":{"transfers":[{"address":"TRTLxxxx...","amount":5000}],"anonymity":3,"changeAddress":"TRTLyyyy..."}}' http://localhost:8070/json_rpc
+curl -d '{"jsonrpc":"2.0","id":1,"password":"passw0rd","method":"createDelayedTransaction","params":{"transfers":[{"address":"SEKRxxxx...","amount":5000}],"anonymity":3,"changeAddress":"SEKRyyyy..."}}' http://localhost:8070/json_rpc
 ```
 
 ```
@@ -1216,13 +1216,13 @@ $addresses = null;
 $unlockTime = null;
 $extra = null;
 $paymentId = null;
-$changeAddress = 'TRTLyyyy...';
+$changeAddress = 'SEKRyyyy...';
 
 $transfers = [
-    ["address" => "TRTLxxxx...", "amount"  => 5000],
+    ["address" => "SEKRxxxx...", "amount"  => 5000],
 ];
 
-$response = $turtleService->createDelayedTransaction(
+$response = $kryptokronaService->createDelayedTransaction(
     $anonymity, $transfers, $fee, $addresses, $unlockTime, $extra, $paymentId, $changeAddress
 );
 
@@ -1236,10 +1236,10 @@ addresses = []
 unlock_time = 0
 extra = ''
 payment_id = ''
-change_address = 'TRTLyyyy...'
+change_address = 'SEKRyyyy...'
 
 transfers = [
-    {"address" : "TRTLxxxx...", "amount" : 5000},
+    {"address" : "SEKRxxxx...", "amount" : 5000},
 ]
 
 response = walletd.create_delayed_transaction(
@@ -1249,16 +1249,16 @@ print(response)
 ```
 
 ```
-addresses := []string{"TRTLyyyy..."} // can be empty
+addresses := []string{"SEKRyyyy..."} // can be empty
 unlockTime := 0
 extra := ""
 paymentID := ""
 fee := 243000
-changeAddress := "TRTLyyyy..."
+changeAddress := "SEKRyyyy..."
 
 transfers := []map[string]interface{}{
   {
-    "address" : "TRTLxxxx...",
+    "address" : "SEKRxxxx...",
     "amount" : 5000,
   },
 }
@@ -1302,7 +1302,7 @@ curl -d '{"jsonrpc":"2.0","id":1,"password":"passw0rd","method":"getDelayedTrans
 
 ```
 <?php
-$response = $turtleService->getDelayedTransactionHashes();
+$response = $kryptokronaService->getDelayedTransactionHashes();
 echo $response;
 ```
 
@@ -1353,7 +1353,7 @@ curl -d '{"jsonrpc":"2.0","id":1,"password":"passw0rd","method":"deleteDelayedTr
 ```
 <?php
 $transactionHash = 'b3e37...';
-$response = $turtleService->deleteDelayedTransaction($transactionHash);
+$response = $kryptokronaService->deleteDelayedTransaction($transactionHash);
 echo $response;
 ```
 
@@ -1406,7 +1406,7 @@ curl -d '{"jsonrpc":"2.0","id":1,"password":"passw0rd","method":"sendDelayedTran
 ```
 <?php
 $transactionHash = 'c37cd...';
-$response = $turtleService->sendDelayedTransaction($transactionHash);
+$response = $kryptokronaService->sendDelayedTransaction($transactionHash);
 
 echo $response;
 ```
@@ -1463,16 +1463,16 @@ if err != nil {
 | transactionHash | Hash of the sent transaction | string |
 
 ```
-curl -d '{"jsonrpc":"2.0","id":1,"password":"passw0rd","method":"sendFusionTransaction","params":{"threshold":1000000,"anonymity":3,"addresses":["TRTLxxxx...","TRTLyyyy..."],"destinationAddress":"TRTLzzzz..."}}' http://localhost:8070/json_rpc
+curl -d '{"jsonrpc":"2.0","id":1,"password":"passw0rd","method":"sendFusionTransaction","params":{"threshold":1000000,"anonymity":3,"addresses":["SEKRxxxx...","SEKRyyyy..."],"destinationAddress":"SEKRzzzz..."}}' http://localhost:8070/json_rpc
 ```
 
 ```
 <?php
 $threshold = 1000000;
 $anonymity = 3;
-$addresses = ['TRTLxxxx...', 'TRTLyyyy...'];
-$destinationAddress = 'TRTLzzzz...';
-$response = $turtleService->sendFusionTransaction($threshold, $anonymity, $addresses, $destinationAddress);
+$addresses = ['SEKRxxxx...', 'SEKRyyyy...'];
+$destinationAddress = 'SEKRzzzz...';
+$response = $kryptokronaService->sendFusionTransaction($threshold, $anonymity, $addresses, $destinationAddress);
 
 echo $response;
 ```
@@ -1480,8 +1480,8 @@ echo $response;
 ```
 threshold = 1000000
 anonymity = 3
-addresses = ['TRTLxxxx...', 'TRTLyyyy...']
-destination_address = 'TRTLzzzz...'
+addresses = ['SEKRxxxx...', 'SEKRyyyy...']
+destination_address = 'SEKRzzzz...'
 response = walletd.send_fusion_transaction(threshold, anonymity, addresses, destination_address)
 
 print(response)
@@ -1489,8 +1489,8 @@ print(response)
 
 ```
 threshold := 1000000
-addresses := []string{"TRTLxxxx...", "TRTLyyyy..."}
-destinationAddress := "TRTLzzzz..."
+addresses := []string{"SEKRxxxx...", "SEKRyyyy..."}
+destinationAddress := "SEKRzzzz..."
 response, err := service.SendfusionTransaction(threshold, addresses, destinationAddress)
 if err != nil {
 	fmt.Println(err)
@@ -1530,28 +1530,28 @@ if err != nil {
 | fusionReadyCount | Number of outputs that can be optimized.                    | int    |
 
 ```
-curl -d '{"jsonrpc":"2.0","id":1,"password":"passw0rd","method":"estimateFusion","params":{"threshold":1000000,"addresses":["TRTLxxxx...","TRTLyyyy..."]}}' http://localhost:8070/json_rpc
+curl -d '{"jsonrpc":"2.0","id":1,"password":"passw0rd","method":"estimateFusion","params":{"threshold":1000000,"addresses":["SEKRxxxx...","SEKRyyyy..."]}}' http://localhost:8070/json_rpc
 ```
 
 ```
 <?php
 $threshold = 1000000;
-$addresses = ['TRTLxxxx...', 'TRTLyyyy...'];
-$response = $turtleService->estimateFusion($threshold, $addresses);
+$addresses = ['SEKRxxxx...', 'SEKRyyyy...'];
+$response = $kryptokronaService->estimateFusion($threshold, $addresses);
 
 echo $response;
 ```
 
 ```
 threshold = 1000000
-addresses = ['TRTLxxxx...', 'TRTLyyyy...']
+addresses = ['SEKRxxxx...', 'SEKRyyyy...']
 response = walletd.estimate_fusion(threshold, addresses)
 print(response)
 ```
 
 ```
 threshold := 1000000
-addresses := []string{"TRTLxxxx...","TRTLyyyy..."}
+addresses := []string{"SEKRxxxx...","SEKRyyyy..."}
 response, err := service.EstimateFusion(threshold, addresses)
 if err != nil {
 	fmt.Println(err)
@@ -1591,27 +1591,27 @@ if err != nil {
 | integratedAddress | The created integrated address | string |
 
 ```
-curl -d '{"jsonrpc":"2.0","id":1,"password":"passw0rd","method":"createIntegratedAddress","params":{"paymentId":"7FE73BD90EF05DEA0B5C15FC78696619C50DD5F2BA628F2FD16A2E3445B1922F", "address":"TRTLxxxx..."}}' http://localhost:8070/json_rpc
+curl -d '{"jsonrpc":"2.0","id":1,"password":"passw0rd","method":"createIntegratedAddress","params":{"paymentId":"7FE73BD90EF05DEA0B5C15FC78696619C50DD5F2BA628F2FD16A2E3445B1922F", "address":"SEKRxxxx..."}}' http://localhost:8070/json_rpc
 ```
 
 ```
 <?php
-$address = 'TRTLxxxx...';
+$address = 'SEKRxxxx...';
 $paymentId = '7FE73BD90EF05DEA0B5C15FC78696619C50DD5F2BA628F2FD16A2E3445B1922F';
-$response = $turtleService->createIntegratedAddress($address, $paymentId);
+$response = $kryptokronaService->createIntegratedAddress($address, $paymentId);
 
 echo $response;
 ```
 
 ```
-address = 'TRTLxxxx...'
+address = 'SEKRxxxx...'
 payment_id = '7FE73BD90EF05DEA0B5C15FC78696619C50DD5F2BA628F2FD16A2E3445B1922F'
 response = walletd.create_integrated_address(address, payment_id)
 print(response)
 ```
 
 ```
-address := "TRTLxxxx..."
+address := "SEKRxxxx..."
 paymentID := "7FE73BD90EF05DEA0B5C15FC78696619C50DD5F2BA628F2FD16A2E3445B1922F"
 response, err := service.CreateIntegratedAddress(address, paymentID)
 if err != nil {
@@ -1628,14 +1628,14 @@ if err != nil {
   "id": 1,
   "jsonrpc": "2.0",
   "result": {
-    "integratedAddress": "TRTLxxx..."
+    "integratedAddress": "SEKRxxx..."
   }
 }
 ```
 
 ### getFeeInfo
 
-`getFeeInfo()` method retrieves the fee and address (if any) that that TurtleCoind walletd is connecting to is using. This fee will automatically be added to any transactions sent by sendTransaction() or sendDelayedTransaction(). Note it does not apply to sendFusionTransaction().
+`getFeeInfo()` method retrieves the fee and address (if any) that that kryptokronad walletd is connecting to is using. This fee will automatically be added to any transactions sent by sendTransaction() or sendDelayedTransaction(). Note it does not apply to sendFusionTransaction().
 
 No input.
 
@@ -1652,7 +1652,7 @@ curl -d '{"jsonrpc":"2.0","id":1,"password":"passw0rd","method":"getFeeInfo","pa
 
 ```
 <?php
-$response = $turtleService->getFeeInfo();
+$response = $kryptokronaService->getFeeInfo();
 
 echo $response;
 ```
@@ -1678,7 +1678,7 @@ if err != nil {
   "id": 1,
   "jsonrpc": "2.0",
   "result": {
-    "address": "TRTLxxx...",
+    "address": "SEKRxxx...",
     "amount": 5000
   }
 }
@@ -1686,8 +1686,8 @@ if err != nil {
 
 ### License
 
-[![Creative Commons License](https://github.com/turtlecoin/turtlecoin-docs/raw/master/docs/assets/cc-by-sa.png)](https://creativecommons.org/licenses/by-sa/3.0/)
+[![Creative Commons License](https://github.com/kryptokrona/kryptokrona-docs/raw/master/docs/assets/cc-by-sa.png)](https://creativecommons.org/licenses/by-sa/3.0/)
 
 The content in this document was originally written by the [Bytecoin (BCN) Developers](https://bytecoin.org/). It is licensed under the [CC BY SA 3.0 license](https://creativecommons.org/licenses/by-sa/3.0/). The source material can be found at the [Bytecoin Wiki](https://github.com/bcndev/bytecoin).
 
-Also of note, TurtleCoin developers have altered and adapted the content to suit our implementation of the API. This was done independently of the Bytecoin development team. They neither endorse or acknowledge our changes. Feel free to adopt or change our content as per the [CC BY SA 3.0 license](https://creativecommons.org/licenses/by-sa/3.0/) requirements.
+Also of note, kryptokrona developers have altered and adapted the content to suit our implementation of the API. This was done independently of the Bytecoin development team. They neither endorse or acknowledge our changes. Feel free to adopt or change our content as per the [CC BY SA 3.0 license](https://creativecommons.org/licenses/by-sa/3.0/) requirements.
