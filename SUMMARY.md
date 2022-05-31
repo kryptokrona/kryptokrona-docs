@@ -24,7 +24,7 @@
   * [Kryptokrona API Docs](developer/api/README.md)
     * [Daemon JSON RPC API](developer/api/Daemon-JSON-RPC-API.md)
     * [kryptokrona-wallet-backend-js](developer/api/Kryptokrona-wallet-backend-js.md)
-    * [Turtle Service Wallet RPC API](developer/api/Legacy-Wallet-RPC-API.md)
+    * [kryptokrona-service](developer/api/Legacy-Wallet-RPC-API.md)
     * [RPC Errors](developer/api/RPC-API-Error-Conditions.md)
     * [Wallet RPC API](developer/api/Wallet-RPC-API.md)
     * [Daemon HTTP RPC API](developer/api/Daemon-HTTP-RPC-API.md)

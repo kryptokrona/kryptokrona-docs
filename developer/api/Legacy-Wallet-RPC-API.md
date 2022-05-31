@@ -2,7 +2,7 @@
 title: Turtle Service Wallet RPC API
 ---
 
-# Turtle Service Wallet RPC API
+# kryptokrona-service
 
 The TurtleCoin RPC Wallet is a HTTP server which provides JSON 2.0 RPC interface for TurtleCoin payment operations and address management.
 
@@ -47,7 +47,7 @@ To make a JSON RPC request to your TurtleCoin RPC Wallet you should use a GET re
 | `<service address>` | IP of TurtleCoin RPC Wallet, if RPC Wallet is located on local machine it is either 127.0.0.1 or localhost         |
 | `<service port>`    | TurtleCoin RPC Wallet port, by default it is bound to 8070 port, but it can be manually bound to any port you want |
 
-```php
+```
 <?php
 use TurtleCoin\TurtleService;
 
@@ -60,7 +60,7 @@ $config = [
 $turtleService = new TurtleService($config);
 ```
 
-```py
+```
 from turtlecoin import Walletd
 
 rpc_host = 'localhost'
@@ -70,7 +70,7 @@ rpc_password = 'passw0rd'
 walletd = Walletd(rpc_password, rpc_host, rpc_port)
 ```
 
-```go
+```
 import (
   "fmt"
   trpc "github.com/turtlecoin/turtlecoin-rpc-go"
@@ -100,20 +100,20 @@ service := trpc.Walletd{
 curl -d '{"jsonrpc":"2.0","id":1,"password":"passw0rd","method":"reset","params":{"scanHeight":100000}}' http://localhost:8070/json_rpc
 ```
 
-```php
+```
 <?php
 $scanHeight = 100000;
 $response = $turtleService->reset($scanHeight);
 echo $response;
 ```
 
-```py
+```
 scan_height = 100000
 response = walletd.reset(scan_height)
 print(response)
 ```
 
-```go
+```
 scanHeight := 0 // starting height to scan
 response, err := service.Reset(scanHeight)
 if err != nil {
@@ -125,7 +125,7 @@ if err != nil {
 
 **Expected Output:**
 
-```json
+```
 {
   "id":1,
   "jsonrpc":"2.0",
@@ -135,7 +135,7 @@ if err != nil {
 
 No output in case of success.
 
-> **Note**: If the `viewSecretKey` argument is not provided, the `reset()` method resets the wallet and re-syncs it. If the `viewSecretKey` argument is provided, the `reset()` method substitutes the existing wallet with a new one with the specified key.
+> Note: If the `viewSecretKey` argument is not provided, the `reset()` method resets the wallet and re-syncs it. If the `viewSecretKey` argument is provided, the `reset()` method substitutes the existing wallet with a new one with the specified key.
 
 ### save
 
@@ -147,18 +147,18 @@ No input. No output in case of success.
 curl -d '{"jsonrpc":"2.0","id":1,"password":"passw0rd","method":"save","params":{}}' http://localhost:8070/json_rpc
 ```
 
-```php
+```
 <?php
 $response = $turtleService->save();
 echo $response;
 ```
 
-```py
+```
 response = walletd.save()
 print(response)
 ```
 
-```go
+```
 response, err := service.Save()
 if err != nil {
   fmt.Println(err)
@@ -169,7 +169,7 @@ if err != nil {
 
 **Expected Output:**
 
-```json
+```
 {
   "id":1,
   "jsonrpc":"2.0",
@@ -193,18 +193,18 @@ No input.
 curl -d '{"jsonrpc":"2.0","id":1,"password":"passw0rd","method":"getViewKey","params":{}}' http://localhost:8070/json_rpc
 ```
 
-```php
+```
 <?php
 $response = $turtleService->getViewKey();
 echo $response;
 ```
 
-```py
+```
 response = walletd.get_view_key()
 print(response)
 ```
 
-```go
+```
 response, err := service.GetViewKey()
 if err != nil {
   fmt.Println(err)
@@ -215,7 +215,7 @@ if err != nil {
 
 **Expected Output:**
 
-```json
+```
 {
   "id":1,
   "jsonrpc":"2.0",
@@ -246,20 +246,20 @@ if err != nil {
 curl -d '{"jsonrpc":"2.0","id":1,"password":"passw0rd","method":"getSpendKeys","params":{"address":"TRTLxxxx..."}}' http://localhost:8070/json_rpc
 ```
 
-```php
+```
 <?php
 $address = 'TRTLxxxx...';
 $response = $turtleService->getSpendKeys($address);
 echo $response;
 ```
 
-```py
+```
 address = 'TRTLxxxx...'
 response = walletd.get_spend_keys(address)
 print(response)
 ```
 
-```go
+```
 address := "TRTLxxxx..."
 response, err := service.GetSpendKeys(address)
 if err != nil {
@@ -271,7 +271,7 @@ if err != nil {
 
 **Expected Output:**
 
-```json
+```
 {
   "id":1,
   "jsonrpc":"2.0",
@@ -304,20 +304,20 @@ if err != nil {
 curl -d '{"jsonrpc":"2.0","id":1,"password":"passw0rd","method":"getMnemonicSeed","params":{"address":"TRTLxxxx..."}}' http://localhost:8070/json_rpc
 ```
 
-```php
+```
 <?php
 $address = 'TRTLxxxx...';
 $response = $turtleService->getMnemonicSeed($address);
 echo $response;
 ```
 
-```py
+```
 address = 'TRTLxxxx...'
 response = walletd.get_mnemonic_seed(address)
 print(response)
 ```
 
-```go
+```
 address := "TRTLxxxx..."
 response, err := service.GetMnemonicSeed(address)
 if err != nil {
@@ -329,7 +329,7 @@ if err != nil {
 
 **Expected Output:**
 
-```json
+```
 {
   "id":1,
   "jsonrpc":"2.0",
@@ -358,18 +358,18 @@ No input.
 curl -d '{"jsonrpc":"2.0","id":1,"password":"passw0rd","method":"getStatus","params":{}}' http://localhost:8070/json_rpc
 ```
 
-```php
+```
 <?php
 $response = $turtleService->getStatus();
 echo $response;
 ```
 
-```py
+```
 response = walletd.get_status()
 print(response)
 ```
 
-```go
+```
 response, err := service.GetStatus()
 if err != nil {
   fmt.Println(err)
@@ -380,7 +380,7 @@ if err != nil {
 
 **Expected Output:**
 
-```json
+```
 {
   "id":1,
   "jsonrpc":"2.0",
@@ -409,18 +409,18 @@ No input.
 curl -d '{"jsonrpc":"2.0","id":1,"password":"passw0rd","method":"getAddresses","params":{}}' http://localhost:8070/json_rpc
 ```
 
-```php
+```
 <?php
 $response = $turtleService->getAddresses();
 echo $response;
 ```
 
-```py
+```
 response = walletd.get_addresses()
 print(response)
 ```
 
-```go
+```
 response, err := service.GetAddresses()
 if err != nil {
   fmt.Println(err)
@@ -431,7 +431,7 @@ if err != nil {
 
 **Expected Output:**
 
-```json
+```
 {
   "id":1,
   "jsonrpc":"2.0",
@@ -461,7 +461,7 @@ if err != nil {
 curl -d '{"jsonrpc":"2.0","id":1,"password":"passw0rd","method":"createAddress","params":{}}' http://localhost:8070/json_rpc
 ```
 
-```php
+```
 <?php
 $spendSecretKey = null;
 $spendPublicKey = null;
@@ -469,14 +469,14 @@ $response = $turtleService->createAddress($spendSecretKey, $spendPublicKey);
 echo $response;
 ```
 
-```py
+```
 spend_secret_key = ''
 spend_public_key = ''
 response = walletd.create_address(spend_secret_key, spend_public_key)
 print(response)
 ```
 
-```go
+```
 spendSecretKey := ""
 spendPublicKey := ""
 scanHeight := 850000
@@ -491,7 +491,7 @@ if err != nil {
 
 **Expected Output:**
 
-```json
+```
 {
   "id":1,
   "jsonrpc":"2.0",
@@ -519,14 +519,14 @@ In case of success returns an empty JSON object.
 curl -d '{"jsonrpc":"2.0","id":1,"password":"passw0rd","method":"deleteAddress","params":{"address":"TRTLxxxx..."}}' http://localhost:8070/json_rpc
 ```
 
-```php
+```
 <?php
 $address = 'TRTLxxxx...';
 $response = $turtleService->deleteAddress($address);
 echo $response;
 ```
 
-```py
+```
 address = 'TRTLxxxx...'
 response = walletd.delete_address(address)
 
@@ -534,7 +534,7 @@ response = walletd.delete_address(address)
 print(response)
 ```
 
-```go
+```
 address := "TRTLxxxx..."
 response, err := service.DeleteAddress(address)
 if err != nil {
@@ -546,7 +546,7 @@ if err != nil {
 
 **Expected Output:**
 
-```json
+```
 {
   "id":1,
   "jsonrpc":"2.0",
@@ -579,20 +579,20 @@ if err != nil {
 curl -d '{"jsonrpc":"2.0","id":1,"password":"passw0rd","method":"getBalance","params":{"address":"TRTLxxxx..."}}' http://localhost:8070/json_rpc
 ```
 
-```php
+```
 <?php
 $address = 'TRTLxxxx...';
 $response = $turtleService->getBalance($address);
 echo $response;
 ```
 
-```py
+```
 address = 'TRTLxxxx...'
 response = walletd.get_balance(address)
 print(response)
 ```
 
-```go
+```
 address := "TRTLxxxx..."
 response, err := service.GetBalance(address)
 if err != nil {
@@ -604,7 +604,7 @@ if err != nil {
 
 **Expected Output:**
 
-```json
+```
 {
   "id":1,
   "jsonrpc":"2.0",
@@ -636,7 +636,7 @@ if err != nil {
 curl -d '{"jsonrpc":"2.0","id":1,"password":"passw0rd","method":"getBlockHashes","params":{"firstBlockIndex":0,"blockCount":3}}' http://localhost:8070/json_rpc
 ```
 
-```php
+```
 <?php
 $firstBlockIndex = 0;
 $blockCount = 3;
@@ -644,14 +644,14 @@ $response = $turtleService->getBlockHashes($firstBlockIndex, $blockCount);
 echo $response;
 ```
 
-```py
+```
 first_block_index = 0
 block_count = 3
 response = walletd.get_block_hashes(first_block_index, block_count)
 print(response)
 ```
 
-```go
+```
 firstBlockIndex := 0
 blockCount := 3
 response, err := service.GetBlockHashes(firstBlockIndex, blockCount)
@@ -664,7 +664,7 @@ if err != nil {
 
 **Expected Output:**
 
-```json
+```
 {
   "id":1,
   "jsonrpc":"2.0",
@@ -712,7 +712,7 @@ if err != nil {
 curl -d '{"jsonrpc":"2.0","id":1,"password":"passw0rd","method":"getTransactionHashes","params":{"firstBlockIndex":400000,"blockCount":100000}}' http://localhost:8070/json_rpc
 ```
 
-```php
+```
 <?php
 $blockCount = 100000;
 $firstBlockIndex = 400000;
@@ -727,7 +727,7 @@ $response = $turtleService->getTransactionHashes(
 echo $response;
 ```
 
-```py
+```
 block_count = 100000
 block_hash = '6c285...'
 addresses = []
@@ -737,7 +737,7 @@ response = walletd.get_transaction_hashes(addresses, block_hash, block_count, pa
 print(response)
 ```
 
-```go
+```
 addresses := []string{"TRTLxxxx..."}
 blockHash := ""
 firstBlockIndex := 0
@@ -753,7 +753,7 @@ if err != nil {
 
 **Expected Output:**
 
-```json
+```
 {
   "id":1,
   "jsonrpc":"2.0",
@@ -820,7 +820,7 @@ Transaction attributes:
 curl -d '{"jsonrpc":"2.0","id":1,"password":"passw0rd","method":"getTransactions","params":{"firstBlockIndex":400000,"blockCount":100000}}' http://localhost:8070/json_rpc
 ```
 
-```php
+```
 <?php
 $blockCount = 100000;
 $firstBlockIndex = 400000;
@@ -835,7 +835,7 @@ $response = $turtleService->getTransactions(
 echo $response;
 ```
 
-```py
+```
 block_count = 100000
 block_hash = '6c285...'
 addresses = []
@@ -845,7 +845,7 @@ response = walletd.get_transactions(addresses, block_hash, block_count, payment_
 print(response)
 ```
 
-```go
+```
 addresses := []string{"TRTLxxxx..."}
 blockHash := ""
 firstBlockIndex := 0
@@ -861,7 +861,7 @@ if err != nil {
 
 **Expected Output:**
 
-```json
+```
 {
   "id":1,
   "jsonrpc":"2.0",
@@ -940,20 +940,20 @@ Transaction consists of transfers. Transfer is an amount-address pair. There cou
 curl -d '{"jsonrpc":"2.0","id":1,"password":"passw0rd","method":"getUnconfirmedTransactionHashes","params":{}}' http://localhost:8070/json_rpc
 ```
 
-```php
+```
 <?php
 $addresses = null;
 $response = $turtleService->getUnconfirmedTransactionHashes($addresses);
 echo $response;
 ```
 
-```py
+```
 addresses = []
 response = walletd.get_unconfirmed_transaction_hashes(addresses)
 print(response)
 ```
 
-```go
+```
 addresses := []string{"TRTLxxxx..."}
 response, err := service.GetUnconfirmedTransactionHashes(addresses)
 if err != nil {
@@ -965,7 +965,7 @@ if err != nil {
 
 **Expected Output:**
 
-```json
+```
 {
   "id":1,
   "jsonrpc":"2.0",
@@ -1014,20 +1014,20 @@ Transaction attributes:
 curl -d '{"jsonrpc":"2.0","id":1,"password":"passw0rd","method":"getTransaction","params":{"transactionHash":"55a23..."}}' http://localhost:8070/json_rpc
 ```
 
-```php
+```
 <?php
 $transactionHash = '55a23...';
 $response = $turtleService->getTransaction($transactionHash);
 echo $response;
 ```
 
-```py
+```
 transaction_hash = '55a23...'
 response = walletd.get_transaction(transaction_hash)
 print(response)
 ```
 
-```go
+```
 transactionHash := "55a23..."
 response, err := service.GetTransaction(transactionHash)
 if err != nil {
@@ -1039,7 +1039,7 @@ if err != nil {
 
 **Expected Output:**
 
-```json
+```
 {
   "id":1,
   "jsonrpc":"2.0",
@@ -1098,7 +1098,7 @@ if err != nil {
 curl -d '{"jsonrpc":"2.0","id":1,"password":"passw0rd","method":"sendTransaction","params":{"transfers":[{"address":"TRTLxxxx...","amount":5000}],"anonymity":3,"changeAddress":"TRTLyyyy..."}}' http://localhost:8070/json_rpc
 ```
 
-```php
+```
 <?php
 $anonymity = 3;
 $fee = 243000;
@@ -1119,7 +1119,7 @@ $response = $turtleService->sendTransaction(
 echo $response;
 ```
 
-```py
+```
 anonymity = 3
 fee = 243000
 addresses = []
@@ -1138,7 +1138,7 @@ response = walletd.send_transaction(
 print(response)
 ```
 
-```go
+```
 addresses := []string{"TRTLyyyy..."} // can be empty
 unlockTime := 0
 extra := ""
@@ -1163,7 +1163,7 @@ if err != nil {
 
 **Expected Output:**
 
-```json
+```
 {
   "id":1,
   "jsonrpc":"2.0",
@@ -1208,7 +1208,7 @@ if err != nil {
 curl -d '{"jsonrpc":"2.0","id":1,"password":"passw0rd","method":"createDelayedTransaction","params":{"transfers":[{"address":"TRTLxxxx...","amount":5000}],"anonymity":3,"changeAddress":"TRTLyyyy..."}}' http://localhost:8070/json_rpc
 ```
 
-```php
+```
 <?php
 $anonymity = 3;
 $fee = 243000;
@@ -1229,7 +1229,7 @@ $response = $turtleService->createDelayedTransaction(
 echo $response;
 ```
 
-```py
+```
 anonymity = 3
 fee = 243000
 addresses = []
@@ -1248,7 +1248,7 @@ response = walletd.create_delayed_transaction(
 print(response)
 ```
 
-```go
+```
 addresses := []string{"TRTLyyyy..."} // can be empty
 unlockTime := 0
 extra := ""
@@ -1273,7 +1273,7 @@ if err != nil {
 
 **Expected Output:**
 
-```json
+```
 {
   "id":1,
   "jsonrpc":"2.0",
@@ -1300,18 +1300,18 @@ No input.
 curl -d '{"jsonrpc":"2.0","id":1,"password":"passw0rd","method":"getDelayedTransactionHashes","params":{}}' http://localhost:8070/json_rpc
 ```
 
-```php
+```
 <?php
 $response = $turtleService->getDelayedTransactionHashes();
 echo $response;
 ```
 
-```py
+```
 response = walletd.get_delayed_transaction_hashes()
 print(response)
 ```
 
-```go
+```
 response, err := service.GetDelayedTransactionHashes()
 if err != nil {
 	fmt.Println(err)
@@ -1322,7 +1322,7 @@ if err != nil {
 
 **Expected Output:**
 
-```json
+```
 {
   "id":1,
   "jsonrpc":"2.0",
@@ -1350,14 +1350,14 @@ In case of success returns an empty JSON object.
 curl -d '{"jsonrpc":"2.0","id":1,"password":"passw0rd","method":"deleteDelayedTransaction","params":{"transactionHash":"b3e37..."}}' http://localhost:8070/json_rpc
 ```
 
-```php
+```
 <?php
 $transactionHash = 'b3e37...';
 $response = $turtleService->deleteDelayedTransaction($transactionHash);
 echo $response;
 ```
 
-```py
+```
 transaction_hash = '50d83...'
 response = walletd.delete_delayed_transaction(transaction_hash)
 
@@ -1365,7 +1365,7 @@ response = walletd.delete_delayed_transaction(transaction_hash)
 print(response)
 ```
 
-```go
+```
 transactionHash := "50d83..."
 response, err := service.DeleteDelayedTransaction(transactionHash)
 if err != nil {
@@ -1377,7 +1377,7 @@ if err != nil {
 
 **Expected Output:**
 
-```json
+```
 {
   "id":1,
   "jsonrpc":"2.0",
@@ -1403,7 +1403,7 @@ In case of success returns an empty JSON object.
 curl -d '{"jsonrpc":"2.0","id":1,"password":"passw0rd","method":"sendDelayedTransaction","params":{"transactionHash":"c37cd..."}}' http://localhost:8070/json_rpc
 ```
 
-```php
+```
 <?php
 $transactionHash = 'c37cd...';
 $response = $turtleService->sendDelayedTransaction($transactionHash);
@@ -1411,7 +1411,7 @@ $response = $turtleService->sendDelayedTransaction($transactionHash);
 echo $response;
 ```
 
-```py
+```
 transaction_hash = '50d83...'
 response = walletd.send_delayed_transaction(transaction_hash)
 
@@ -1419,7 +1419,7 @@ response = walletd.send_delayed_transaction(transaction_hash)
 print(response)
 ```
 
-```go
+```
 transactionHash := "50d83..."
 response, err := service.SendDelayedTransaction(transactionHash)
 if err != nil {
@@ -1431,7 +1431,7 @@ if err != nil {
 
 **Expected Output:**
 
-```json
+```
 {
   "id":1,
   "jsonrpc":"2.0",
@@ -1466,7 +1466,7 @@ if err != nil {
 curl -d '{"jsonrpc":"2.0","id":1,"password":"passw0rd","method":"sendFusionTransaction","params":{"threshold":1000000,"anonymity":3,"addresses":["TRTLxxxx...","TRTLyyyy..."],"destinationAddress":"TRTLzzzz..."}}' http://localhost:8070/json_rpc
 ```
 
-```php
+```
 <?php
 $threshold = 1000000;
 $anonymity = 3;
@@ -1477,7 +1477,7 @@ $response = $turtleService->sendFusionTransaction($threshold, $anonymity, $addre
 echo $response;
 ```
 
-```py
+```
 threshold = 1000000
 anonymity = 3
 addresses = ['TRTLxxxx...', 'TRTLyyyy...']
@@ -1487,7 +1487,7 @@ response = walletd.send_fusion_transaction(threshold, anonymity, addresses, dest
 print(response)
 ```
 
-```go
+```
 threshold := 1000000
 addresses := []string{"TRTLxxxx...", "TRTLyyyy..."}
 destinationAddress := "TRTLzzzz..."
@@ -1501,7 +1501,7 @@ if err != nil {
 
 **Expected Output:**
 
-```json
+```
 {
   "id":1,
   "jsonrpc":"2.0",
@@ -1533,7 +1533,7 @@ if err != nil {
 curl -d '{"jsonrpc":"2.0","id":1,"password":"passw0rd","method":"estimateFusion","params":{"threshold":1000000,"addresses":["TRTLxxxx...","TRTLyyyy..."]}}' http://localhost:8070/json_rpc
 ```
 
-```php
+```
 <?php
 $threshold = 1000000;
 $addresses = ['TRTLxxxx...', 'TRTLyyyy...'];
@@ -1542,14 +1542,14 @@ $response = $turtleService->estimateFusion($threshold, $addresses);
 echo $response;
 ```
 
-```py
+```
 threshold = 1000000
 addresses = ['TRTLxxxx...', 'TRTLyyyy...']
 response = walletd.estimate_fusion(threshold, addresses)
 print(response)
 ```
 
-```go
+```
 threshold := 1000000
 addresses := []string{"TRTLxxxx...","TRTLyyyy..."}
 response, err := service.EstimateFusion(threshold, addresses)
@@ -1562,7 +1562,7 @@ if err != nil {
 
 **Expected Output:**
 
-```json
+```
 {
   "id":1,
   "jsonrpc":"2.0",
@@ -1594,7 +1594,7 @@ if err != nil {
 curl -d '{"jsonrpc":"2.0","id":1,"password":"passw0rd","method":"createIntegratedAddress","params":{"paymentId":"7FE73BD90EF05DEA0B5C15FC78696619C50DD5F2BA628F2FD16A2E3445B1922F", "address":"TRTLxxxx..."}}' http://localhost:8070/json_rpc
 ```
 
-```php
+```
 <?php
 $address = 'TRTLxxxx...';
 $paymentId = '7FE73BD90EF05DEA0B5C15FC78696619C50DD5F2BA628F2FD16A2E3445B1922F';
@@ -1603,14 +1603,14 @@ $response = $turtleService->createIntegratedAddress($address, $paymentId);
 echo $response;
 ```
 
-```py
+```
 address = 'TRTLxxxx...'
 payment_id = '7FE73BD90EF05DEA0B5C15FC78696619C50DD5F2BA628F2FD16A2E3445B1922F'
 response = walletd.create_integrated_address(address, payment_id)
 print(response)
 ```
 
-```go
+```
 address := "TRTLxxxx..."
 paymentID := "7FE73BD90EF05DEA0B5C15FC78696619C50DD5F2BA628F2FD16A2E3445B1922F"
 response, err := service.CreateIntegratedAddress(address, paymentID)
@@ -1623,7 +1623,7 @@ if err != nil {
 
 **Expected Output:**
 
-```json
+```
 {
   "id": 1,
   "jsonrpc": "2.0",
@@ -1650,19 +1650,19 @@ No input.
 curl -d '{"jsonrpc":"2.0","id":1,"password":"passw0rd","method":"getFeeInfo","params":{}}' http://localhost:8070/json_rpc
 ```
 
-```php
+```
 <?php
 $response = $turtleService->getFeeInfo();
 
 echo $response;
 ```
 
-```py
+```
 response = walletd.get_fee_info()
 print(response)
 ```
 
-```go
+```
 response, err := service.GetFeeInfo()
 if err != nil {
 	fmt.Println(err)
@@ -1673,7 +1673,7 @@ if err != nil {
 
 **Expected Output:**
 
-```json
+```
 {
   "id": 1,
   "jsonrpc": "2.0",
@@ -1686,7 +1686,7 @@ if err != nil {
 
 ### License
 
-[![Creative Commons License](broken-reference)](https://creativecommons.org/licenses/by-sa/3.0/)
+[![Creative Commons License](https://github.com/turtlecoin/turtlecoin-docs/raw/master/docs/assets/cc-by-sa.png)](https://creativecommons.org/licenses/by-sa/3.0/)
 
 The content in this document was originally written by the [Bytecoin (BCN) Developers](https://bytecoin.org/). It is licensed under the [CC BY SA 3.0 license](https://creativecommons.org/licenses/by-sa/3.0/). The source material can be found at the [Bytecoin Wiki](https://github.com/bcndev/bytecoin).
 
