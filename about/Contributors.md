@@ -2,7 +2,9 @@
 title: Contributors
 ---
 
-Huge thank you to everyone here, they've made major commits to the wiki and helped make it what it is today!
+# Contributors
+
+Huge thank you to everyone here, they've made major commits to the project and helped make it what it is today!
 
 * @zpalmtree
 * @ar-x
@@ -19,4 +21,3 @@ Huge thank you to everyone here, they've made major commits to the wiki and help
 * @TechyGuy
 * @coffeboi
 * @mjovanc
-* @Hoover
