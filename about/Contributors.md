@@ -19,3 +19,4 @@ Huge thank you to everyone here, they've made major commits to the wiki and help
 * @TechyGuy
 * @coffeboi
 * @mjovanc
+* @Hoover
