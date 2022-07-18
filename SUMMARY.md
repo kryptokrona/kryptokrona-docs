@@ -41,7 +41,7 @@
     * [Notes](guides/mining/Optimizing-RPi-TurtleCoin-Mining.md)
     * [Mining Pools](guides/mining/Pools.md)
     * [Mining with XMRig](guides/mining/XMRIG-Guide.md)
-    * [🏊♂ 🏊♂ 🏊♂ Run a Mining Pool](guides/mining/run-a-mining-pool.md)
+    * [🏊♂ Run a Mining Pool](guides/mining/run-a-mining-pool.md)
     * [📱 Mining on Android](guides/mining/mining-on-android.md)
   * [👛 Wallets](guides/wallets/README.md)
     * [📜 Making a Paper Wallet](guides/wallets/Making-a-Paper-Wallet.md)
