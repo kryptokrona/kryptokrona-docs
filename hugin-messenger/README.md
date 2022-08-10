@@ -16,7 +16,7 @@ Here are some of it's features:
 
 #### Mobile (Android)
 
-[https://play.google.com/store/apps/details?id=com.hugin](https://play.google.com/store/apps/details?id=com.hugin)
+{% embed url="https://play.google.com/store/apps/details?id=com.hugin" %}
 
 #### Desktop (macOS, Windows, Linux)
 
