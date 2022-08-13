@@ -16,7 +16,7 @@ After downloading the .apk-file, open it from your File-browser to start the ins
 
 After installing the app, open it up and you will be greeted by this welcome screen:
 
-<img src="../.gitbook/assets/Screenshot_20220810-215508 (1).png" alt="" data-size="original">
+<img src="../../.gitbook/assets/Screenshot_20220810-215508%20(1).png" alt="" data-size="original">
 
 As a first time user, tap "Create new account" and follow the instructions. If you have had an account before, you may choose the "Restore account" option instead.
 
@@ -40,7 +40,7 @@ Your profile page contains your contact details and your wallet balance. If you 
 
 The XKR wallet in Hugin is used both as a small stake while sending messages, and as a way to transfer funds privately.
 
-If you don't have any XKR, you can only receive messages, so make sure your account is always funded. You can get funds either by [mining](https://kryptokrona.org/en/mining), [buying](../guides/How-to-buy-xkr.md), or using the [faucet](https://kryptokrona.org/en/faucet). If you have 0 balance, you should be able to see the "Top up" button on your profile. Click it to go directly to the faucet, which will give you 5 XKR to start out with.
+If you don't have any XKR, you can only receive messages, so make sure your account is always funded. You can get funds either by [mining](https://kryptokrona.org/en/mining), [buying](../How-to-buy-xkr.md), or using the [faucet](https://kryptokrona.org/en/faucet). If you have 0 balance, you should be able to see the "Top up" button on your profile. Click it to go directly to the faucet, which will give you 5 XKR to start out with.
 
 ![](../.gitbook/assets/Screenshot\_20220810-215648.png)
 
