@@ -1,3 +1,7 @@
+---
+title: Sponsors
+---
+
 # Sponsors
 
 The following sponsors are either helping the project with free usage, great discounts of services or in other ways helping

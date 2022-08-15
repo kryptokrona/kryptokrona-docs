@@ -1,4 +1,8 @@
-# Test environment
+---
+title: Test Environment
+---
+
+# Test Environment
 
 To just test the code, the easiest way is to use Docker Compose to orchestrate up the environment since we then don't have to install and configure the PostgreSQL database.
 

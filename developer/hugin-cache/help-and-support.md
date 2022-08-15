@@ -1,3 +1,7 @@
+---
+title: Help and Support
+---
+
 # Help and Support
 
 For questions and support please use the channel #support in Kryptokrona Discord server. 

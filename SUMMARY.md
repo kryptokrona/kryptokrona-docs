@@ -66,5 +66,7 @@
     * [🛰 Using Remote Nodes](guides/wallets/Using-Remote-Nodes.md)
     * [👾 Command Line](guides/wallets/command-line/README.md)
       * [Using xkrwallet](guides/wallets/command-line/using-kkrwallet.md)
+  * [🐦 Hugin Cache](guides/hugin-cache/README.md)
+    * [⚙️ Deploy Your Own Hugin Cache](guides/hugin-cache/deploy-your-own-hugin-cache.md)
 * [🐦 Hugin Messenger](guides/hugin-messenger/README.md)
   * [📱 How to use Hugin Mobile](guides/hugin-messenger/how-to-use-hugin-mobile.md)

@@ -1,3 +1,7 @@
+---
+title: Setup
+---
+
 # Setup
 
 **NOTE**: Node version 18 LTS or higher is needed for this to work!

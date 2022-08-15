@@ -1,3 +1,7 @@
+---
+title: Database
+---
+
 # Database
 
 We use the RDBMS PostgreSQL to store our data in Hugin Cache. 

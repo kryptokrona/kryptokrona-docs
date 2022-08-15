@@ -1,3 +1,7 @@
+---
+title: Contribute
+---
+
 # Contribute
 
 ## Pull request
