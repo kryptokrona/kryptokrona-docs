@@ -1,3 +1,7 @@
+---
+title: Build, Test and Deployment
+---
+
 # Build, Test and Deployment
 
 This project is automatically built, tested and deployed using GitHub Actions. We have two pipelines:

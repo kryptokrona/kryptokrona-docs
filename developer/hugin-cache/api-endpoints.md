@@ -1,3 +1,7 @@
+---
+title: API Endpoints
+---
+
 # API Endpoints
 
 All available API endpoints can be seen here on our Postman: https://www.postman.com/kryptokrona?tab=collections.
