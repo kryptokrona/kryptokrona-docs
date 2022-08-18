@@ -1,2 +1,2 @@
-# 👑 Kryptokrona&#x20;
+# 👑 Kryptokrona
 
