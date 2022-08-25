@@ -21,3 +21,9 @@ Extra details?
 ```
 
 A pull request is approved if the GitHub Actions pipeline is marked green. Otherwise it will be closed directly. Always make sure to run the unit tests before creating a pull request.
+
+## Donate
+
+XKR: SEKReXXU9aJPiwjX2XkpbK8ACMWbUNXcYPxUVSiUYpNdhj8Z2snEy8CjjorZUNyswQNfzAmVWuGksU72Sf3Kq79Zd3fJWHq4Nyx
+
+![Kryptokrona QR Code](../../assets/kryptokrona-sdk/qr-code.png)
