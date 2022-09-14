@@ -12,16 +12,16 @@ Run the following to start orchestrating:
 
 If we have done some changes to our code we need to run `docker-compose up --build` to force rebuilding the images.
 
-We can also run `docker-compose up --scale postgres=0` to just run the Hugin Cache Docker container without the PostgreSQL database.
+We can also run `docker-compose up --scale postgres=0` to just run the Hugin API Docker container without the PostgreSQL database.
 
 If we already have a database up and configured we can run the following to build and start the Hugin Cache docker image:
 
 ```
 docker run -p 3000:3000 \
-    --name hugin-cache \
+    --name hugin-api \
     -e POSTGRESQL_HOSTNAME=postgres \
     -e POSTGRESQL_PORT=5432 \
-    -e POSTGRESQL_DB_NAME=hugin_cache_dev \
+    -e POSTGRESQL_DB_NAME=hugin_api_dev \
     -e POSTGRESQL_DB_USER=postgres \
     -e POSTGRESQL_DB_PASSWORD=test1234 \
     -e NODE_ENV=development

@@ -8,5 +8,5 @@ The following sponsors are either helping the project with free usage, great dis
 via advertisement.
 
 <p align="left">
-  <img src="../../assets/hugin-cache/novastack.png" alt="Novastack Hosting" width="300"/>
+  <img src="../../assets/hugin-api/novastack.png" alt="Novastack Hosting" width="300"/>
 </p>

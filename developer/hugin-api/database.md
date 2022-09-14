@@ -21,6 +21,6 @@ NOTE: For the above to function make sure you HAVE NOT ran the npm run db:migrat
 
 This Database Diagram demonstrates how we store the data:
 
-![Hugin Cache Database Diagram](../../assets/hugin-cache/database-diagram.drawio.png)
+![Hugin Cache Database Diagram](../../assets/hugin-api/database-diagram.drawio.png)
 
 To edit the diagram open up the file inside the directory **diagrams** called **database-diagram.drawio**.
