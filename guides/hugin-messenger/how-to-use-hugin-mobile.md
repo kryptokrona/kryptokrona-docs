@@ -16,19 +16,17 @@ After downloading the .apk-file, open it from your File-browser to start the ins
 
 After installing the app, open it up and you will be greeted by this welcome screen:
 
-<img src="../../.gitbook/assets/Screenshot_20220810-215508%20(1).png" alt="" data-size="original">
+<img src="../../.gitbook/assets/Screenshot_20220810-215508 (2).png" alt="" data-size="original">
 
 As a first time user, tap "Create new account" and follow the instructions. If you have had an account before, you may choose the "Restore account" option instead.
 
-If you created a new account, make sure to save the mnemonic seed at the step  shown in the picture below:
+If you created a new account, make sure to save the mnemonic seed at the step shown in the picture below:
 
 ![](../../.gitbook/assets/Screenshot\_20220810-215524.png)
 
 Your Hugin account is both your messaging account and a wallet for XKR. If you lose your device, the only way to restore your XKR balance is by restoring your account on another device with the mnemonic seed. **Store it somewhere safe!**
 
 ## **Funding your account**
-
-
 
 After following the instructions for creating/restoring your account, you should be greeted by your profile page:
 
@@ -86,9 +84,9 @@ This is the Home board and it collects message from all other boards. You may cl
 
 ![](../../.gitbook/assets/Screenshot\_20220810-220248.png)
 
-The picture above is the My Boards screen, you can tap 'Edit' to remove subscriptions to boards, or add a new board subscription by typing it's name in the 'Add board'-field directly under the title and then hitting enter on the keyboard.&#x20;
+The picture above is the My Boards screen, you can tap 'Edit' to remove subscriptions to boards, or add a new board subscription by typing it's name in the 'Add board'-field directly under the title and then hitting enter on the keyboard.
 
-To create a brand new board, you do the exact same thing as above.&#x20;
+To create a brand new board, you do the exact same thing as above.
 
 ![](../../.gitbook/assets/Screenshot\_20220810-221122.png)
 
