@@ -2,7 +2,7 @@
 title: Solo-mining Kryptokrona
 ---
 
-# Solo-mining Kryptokrona
+# 😎 Solo-mining Kryptokrona
 
 Solo-mining Kryptokrona means that you, alone, try to find the next block.\
 **It is extremely hard, and not recommended** - try our [other guides](../../docs/guides/Mining/) if you want a more steady flow of TRTL.\

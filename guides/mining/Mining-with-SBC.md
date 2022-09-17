@@ -2,7 +2,7 @@
 title: Mining with a SBC
 ---
 
-# Mining with a SBC
+# 🍇 Mining with a SBC
 
 The following guide will show you how to compile a CPU miner (XMRig) for SBCs like the Raspberry Pi.
 

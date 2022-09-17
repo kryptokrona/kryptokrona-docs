@@ -2,7 +2,7 @@
 title: Optimizing Mining on a RPi
 ---
 
-# Notes
+# 📒 Notes
 
 Looking for a more general SBC setup guide? Check out [this guide](../../docs/guides/Mining-with-SBC/).
 

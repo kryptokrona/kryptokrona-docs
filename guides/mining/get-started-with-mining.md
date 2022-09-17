@@ -12,7 +12,11 @@ So you want to start mining XKR? Great! This is the place to start.
 
 First order of business is to download the mining software, although there are many alternatives to choose between, we recommend XMRig.
 
-Download the latest version of XMRig [here](https://github.com/xmrig/xmrig/releases/latest).
+Download XMRig here:
+
+[Windows](https://github.com/xmrig/xmrig/releases/download/v5.11.1/xmrig-5.11.1-msvc-cuda10\_1-win64.zip)
+
+[Linux](https://github.com/xmrig/xmrig/releases/download/v5.11.1/xmrig-5.11.1-xenial-x64.tar.gz)
 
 _**Note to Windows users**_\
 ****_Your antivirus software may react to the mining software, this is because viruses often download mining software to unknowing peoples PC's, hijacking their computer for unwanted mining. Just add a rule in your anti virus software to prevent this._ [_Here's a guide_](https://www.nicehash.com/blog/post/exclude-nicehash-miner-from-windows-defender-immediately)_._

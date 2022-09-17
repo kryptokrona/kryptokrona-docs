@@ -2,7 +2,7 @@
 title: Mining with XMRig
 ---
 
-# Mining with XMRig
+# 🚚 Mining with XMRig
 
 XMRig uses separate miners for CPU and GPU, you need to download a CPU and GPU miner separately and run two separate instances on your computer.
 

@@ -2,7 +2,7 @@
 title: Mining Pools
 ---
 
-# Mining Pools
+# 🌊 Mining Pools
 
 Unless you want to [solo mine](../../docs/guides/CPU-Solo-Mining/), which is unfeasible for many people, you will need a pool to mine towards. Make sure to choose the one closest to you!
 
