@@ -1,5 +1,5 @@
 ---
-title: kryptokronad behind HAProxy
+title: Kryptokrona Daemon behind HAProxy
 ---
 
 From polar-it on Discord

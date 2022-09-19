@@ -1,3 +1,7 @@
+---
+title: Subwallets
+---
+
 # Subwallets
 
 Lets start with the obvious question.
