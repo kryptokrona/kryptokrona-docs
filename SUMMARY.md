@@ -70,6 +70,7 @@
     * [🚚 Mining with XMRig](guides/mining/XMRIG-Guide.md)
     * [🏊♂ 🏊♂ Run a Mining Pool](guides/mining/run-a-mining-pool.md)
     * [📱 Mining on Android](guides/mining/mining-on-android.md)
+    * [🍯 Mining on HiveOS](guides/mining/mining-on-hiveos.md)
   * [👛 Wallets](guides/wallets/README.md)
     * [📜 Making a Paper Wallet](guides/wallets/Making-a-Paper-Wallet.md)
     * [👜 Making a Kryptokrona Wallet](guides/wallets/Making-a-Wallet.md)
