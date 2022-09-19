@@ -1,9 +1,9 @@
-![Ansible](../../assets/hugin-cache/ansible.png)
+![Ansible](../../assets/hugin-api/ansible.png)
 
-# ⚙️ Deploy Your Own Hugin Cache
+# ⚙️ Deploy Your Own Hugin API
 
 This document will describe how to work with Ansible to either deploy to your
-own custom Hugin Cache VPS locally or how it simply works while running it through our
+own custom Hugin API VPS locally or how it simply works while running it through our
 continous deployment procedure when pushing to main.
 
 # Setup
