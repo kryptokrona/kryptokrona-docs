@@ -29,9 +29,9 @@ Which miner to use depends on what kind of hardware you're running on your miner
 
 * [CPU setup](mining-on-hiveos.md#undefined)
 * [NVIDIA setup](mining-on-hiveos.md#undefined)
-* **AMD setup**
+* ****[AMD setup](mining-on-hiveos.md#amd-setup)
 
-#### CPU mining setup
+### CPU mining setup
 
 For CPU mining you want to use _XMRig (new)_ that you may find in the Miner dropdown menu, then click **Setup Miner Config**.
 
@@ -47,7 +47,7 @@ Set password to `x` and enable CPU with the toggle. Also make sure the TLS setti
 
 Now, for any additional GPU miners we have to click "Add miner" in the bottom right corner of the flight sheet config page and a new mining config field will pop up. Fill these in as you did [in this step.](mining-on-hiveos.md#add-wallet-to-hiveos)
 
-#### NVIDIA Setup
+### NVIDIA Setup
 
 For NVIDIA we want to hit the **Add miner** button and fill out the form as shown below, if you've already created a wallet you can pick it in the list, otherwise add a new one. We also want to choose **XmRig Nvidia** for our miner. Next click **Setup Miner Config**.
 
@@ -59,7 +59,7 @@ On the setup miner screen you need to enter `%WAL%.%WORKER_NAME%` under Wallet t
 
 
 
-**AMD Setup**
+### **AMD Setup**
 
 For AMD we want to hit the **Add miner** button and fill out the form as below, if you've already created a wallet you can pick it in the list, otherwise add a new one. We also want to choose **XmRig AMD** for our miner. Next click **Setup Miner Config**.
 
@@ -69,7 +69,7 @@ On the setup miner screen you need to enter `%WAL%.%WORKER_NAME%` under Wallet t
 
 <figure><img src="../../.gitbook/assets/Screenshot 2022-09-19 at 21.12.46.png" alt=""><figcaption><p>A fully configured AMD miner</p></figcaption></figure>
 
-## Conclusion
+## Save and start mining
 
 Now you have your flight sheet that (depending on what kind of miner your setting up) looks a little something like this:
 
@@ -83,6 +83,12 @@ If everything worked out, you should see the XKR badge with your hashrate on you
 
 <figure><img src="../../.gitbook/assets/Screenshot 2022-09-19 at 21.29.36.png" alt=""><figcaption><p>Active hashrate on XKR</p></figcaption></figure>
 
+### Conclusion
+
 If you want to track your mining you may do so on the pool's website that you picked. In the examples above I used https://pool.kryptokrona.se. Simply paste your XKR address into the "Check stats" field on the pools website to track your mining progress.
+
+#### Need help?
+
+Come and say hello on our [Discord](https://chat.kryptokrona.org).
 
 Happy mining :tada:
