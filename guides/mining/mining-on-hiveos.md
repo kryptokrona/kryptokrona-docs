@@ -27,9 +27,9 @@ Back at the flight sheet screen, pick "Configure in miner" in the Pool dropdown 
 
 Which miner to use depends on what kind of hardware you're running on your miner, in the following sections we will go through setting up mining from CPUs, NVIDIA GPUs and AMD GPUS, as well as a combination of two or more of these.
 
-* [CPU setup](mining-on-hiveos.md#undefined)
-* [NVIDIA setup](mining-on-hiveos.md#undefined)
-* ****[AMD setup](mining-on-hiveos.md#amd-setup)
+* [CPU setup](mining-on-hiveos.md#cpu-mining-setup)
+* [NVIDIA setup](mining-on-hiveos.md#nvidia-setup)
+* [AMD setup](mining-on-hiveos.md#amd-setup)
 
 ### CPU mining setup
 
