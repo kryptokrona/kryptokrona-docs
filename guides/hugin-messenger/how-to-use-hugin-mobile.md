@@ -16,7 +16,7 @@ After downloading the .apk-file, open it from your File-browser to start the ins
 
 After installing the app, open it up and you will be greeted by this welcome screen:
 
-<img src="../../.gitbook/assets/Screenshot_20220810-215508 (2).png" alt="" data-size="original">
+<img src="../../.gitbook/assets/Screenshot_20220810-215508 (1) (2).png" alt="" data-size="original">
 
 As a first time user, tap "Create new account" and follow the instructions. If you have had an account before, you may choose the "Restore account" option instead.
 
