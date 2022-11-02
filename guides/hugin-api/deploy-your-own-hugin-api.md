@@ -1,23 +1,19 @@
-![Ansible](../../assets/hugin-api/ansible.png)
-
-# ⚙️ Deploy Your Own Hugin API
-
-This document will describe how to work with Ansible to either deploy to your
-own custom Hugin API VPS locally or how it simply works while running it through our
-continous deployment procedure when pushing to main.
-
 # Setup
 
-## Installation
+Let’s head over to the repository https://github.com/kryptokrona/hugin-api and download a latest release: https://github.com/kryptokrona/hugin-api/releases
+
+Unzip the directory to a directory such as `~/Projects` then use the terminal to navigate to the directory of hugin-api-`<version>`.
+
+# Installation
 
 First install Ansible locally.
 
-On Mac using brew package manager:
+## Mac using brew package manager:
 
 - `brew install ansible`
 - `brew install esolitos/ipa/sshpass`
 
-On Ubuntu/Debian:
+## Ubuntu/Debian
 
 ```sh
 sudo apt update
@@ -27,24 +23,47 @@ sudo apt install ansible
 sudo apt install sshpass
 ```
 
+## Windows using WSL
+
+Since Ansible can not run natively on Windows we need to use the subsystem for Linux in Windows. Please check out this tutorial on how to get it started: https://docs.ansible.com/ansible/latest/user_guide/windows_faq.html#windows-faq-ansible
+
+# Verify
+
 Then we need to run the following to verify that our installation was successful:
 
 `ansible --version`
 
-## Configuration
+# Configuration
 
-Now open up `hosts.inventory` and add the IP of the VPS we want to provision to:
+So now that we have Ansible up and running on our OS we will start looking into what kind of configuration we need to do in order for us to provision our VPS with Hugin API.
 
-```
+If you have never heard what provisioning are it simply means “providing” or making something available. What Ansible does is to setup Infrastructure as Code (IaC) that we define what we need to install and what needs to be configured in code and thus we do not need to manually set this up and do this everytime we make a change or add something new. It does everything for us in one command when running it. This can be a huge time and energy saver. If something would have happen of a server or infrastructure we could just spin up a new environment very easily.
+
+So let’s start by going into the ansible directory and open up the `prod.inventory` file (you can of course use your favorite text editor instead of Vim):
+
+``` 
 [vps]
 <ip address/hostname here>
 ```
 
-We can add multiple lines with IP/hostname addresses if we want to deploy it to many servers.
+Now we see a block of [vps] and under it are the domain name followed by the `letsencrypt_email`, `domain_name` on the same row. This is all the hosts we are going to use. In this case we are just going to provision to one VPS. You could put the IP address there instead of `api.hugin.chat` and it would work perfectly fine.
 
-Also update exporter_version to the latest release over at https://github.com/prometheus/node_exporter/releases/
+If we would like to provision to two or multiple VPS we could just copy the first one and change the ip/hostname and Ansible would pick them all up and setup everything on those VPS as well.
 
-# Provisioning
+So change `api.hugin.chat` to your ip/hostname and the `letencrypt_email` and the `domain_name`.
+
+Please bare in mind that fix the DNS settings first for this domain name and point to the VPS IP address a couple of hours before running this otherwise the certificate would not go through if it can not find that the DNS points to that domain name.
+
+Also update `exporter_version` to the latest release over at https://github.com/prometheus/node_exporter/releases/
+
+So now save the file and we will start looking at `provision_vps.yml` file.
+
+In this file we have some things we need to change in order for be able to run the playbook. First we need to set a hugin_node_server of where to pick up the data for the Hugin API application. It could be your own or just leave the value there if you would like.
+
+Then we need to uncomment the line “base” currently in the screenshot on line 30 so we do a configuration of the SSH public key on the VPS as well as disabling the default login with username/password so we will only use our private key to login to the VPS.
+
+
+## Ansible Vault
 
 Before we start with the provisioning we need to generate one vault file:
 
