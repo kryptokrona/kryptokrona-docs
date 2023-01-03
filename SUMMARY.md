@@ -73,6 +73,7 @@
       * [Using xkrwallet](guides/wallets/command-line/using-kkrwallet.md)
   * [👑 Kryptokrona](guides/kryptokrona/README.md)
     * [🚢 Deploy your own node](guides/kryptokrona/deploy-your-own-node.md)
+    * [🚢 Deploy your own full node](guides/kryptokrona/deploy-your-own-full-node.md)
   * [🐦 Hugin API](guides/hugin-api/README.md)
     * [🚢 Deploy Your Own Hugin API](guides/hugin-api/deploy-your-own-hugin-api.md)
 * [🐦 Hugin Messenger](guides/hugin-messenger/README.md)
