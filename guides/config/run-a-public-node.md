@@ -33,23 +33,23 @@ screen
 ```
 
 ```
-wget https://xkr.lingonbyran.se/Kryptokrona-linux.zip
+wget https://github.com/kryptokrona/kryptokrona/releases/latest/kryptokrona-ubuntu-18.zip
 ```
 
 ```
-unzip Kryptokrona-linux.zip
+unzip kryptokrona-ubuntu-18.zip
 ```
 
 ```
-rm -rf Kryptokrona-linux.zip
+rm kryptokrona-ubuntu-18.zip
 ```
 
 ```
-cd Kryptokrona
+cd kryptokrona
 ```
 
 ```
-./kryptokrona
+./kryptokronad
 ```
 
 Once fully synced open you can go ahead and close your node by hitting ctrl + c, now it is time to open port **11898**.\
@@ -59,6 +59,10 @@ Add a custom TCP rule specifying port **11898** and allow it anywhere and then s
 Repeat the process for outbound rules by clicking actions and edit outbound rules.\
 Now unmark the first security group and mark the second one and repeat the same process as above.\
 Then head back to your ssh terminal typ screen and hit enter and then start your node with:
+
+```
+./kryptokrona --enable-cors=* --enable-blockexplorer --rpc-bind-ip=0.0.0.0 --rpc-bind-port=11898
+```
 
 Please consider submitting your public node ip to our [GitHub-page](https://github.com/kryptokrona/kryptokrona-nodes-list) so others might find it.
 
@@ -91,7 +95,3 @@ curl -d '{"jsonrpc":"2.0", "method":"getblockcount", "params":{}}' http://0.0.0.
 Open a terminal on your local machine and check if your node is responding (replace 0.0.0.0 with your instance ip)
 
 Let your node sync.. then press ctrl + a and ctrl + d in rapid succession to mimize the node terminal window.
-
-```
-./kryptokrona --enable-cors=* --enable-blockexplorer --rpc-bind-ip=0.0.0.0 --rpc-bind-port=11898
-```
