@@ -61,7 +61,7 @@ Now unmark the first security group and mark the second one and repeat the same 
 Then head back to your ssh terminal typ screen and hit enter and then start your node with:
 
 ```
-./kryptokrona --enable-cors=* --enable-blockexplorer --rpc-bind-ip=0.0.0.0 --rpc-bind-port=11898
+./kryptokronad --enable-cors=* --enable-blockexplorer --rpc-bind-ip=0.0.0.0 --rpc-bind-port=11898
 ```
 
 Please consider submitting your public node ip to our [GitHub-page](https://github.com/kryptokrona/kryptokrona-nodes-list) so others might find it.
