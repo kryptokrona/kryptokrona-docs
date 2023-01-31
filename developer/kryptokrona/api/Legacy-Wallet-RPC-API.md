@@ -42,8 +42,8 @@ To make a JSON RPC request to your kryptokrona RPC Wallet you should use a GET r
 
 `http://<service address>:<service port>/json_rpc`
 
-| Parameter           | Description                                                                                                        |
-| ------------------- | ------------------------------------------------------------------------------------------------------------------ |
+| Parameter           | Description                                                                                                         |
+| ------------------- | ------------------------------------------------------------------------------------------------------------------- |
 | `<service address>` | IP of kryptokrona RPC Wallet, if RPC Wallet is located on local machine it is either 127.0.0.1 or localhost         |
 | `<service port>`    | kryptokrona RPC Wallet port, by default it is bound to 8070 port, but it can be manually bound to any port you want |
 
@@ -1095,7 +1095,7 @@ if err != nil {
 | fee             | The fee of the send transaction | int    |
 
 ```
-curl -d '{"jsonrpc":"2.0","id":1,"password":"passw0rd","method":"sendTransaction","params":{"transfers":[{"address":"SEKRxxxx...","amount":5000}],"anonymity":3,"changeAddress":"SEKRyyyy..."}}' http://localhost:8070/json_rpc
+curl -X POST -i -H "Accept: application/json" -d '{"jsonrpc":"2.0","id":"0","password":"passw0rd","method":"sendTransaction","params":{"transfers":[{"amount":5000,"address":"SEKReTFHsz8G4...Y5owuFxLd"}],"fee":100,"anonymity":3,"unlockTime":0}}' http://localhost:8070/json_rpc
 ```
 
 ```
