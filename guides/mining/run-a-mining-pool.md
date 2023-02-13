@@ -1,7 +1,8 @@
 ---
 description: >-
   This page will guide you through the process of setting up your very own
-  mining pool for XKR!
+  mining pool for XKR! Mining pools are essential for keeping the kryptokrona
+  network happy and decentralized.
 ---
 
 # 🏊♂ Run a Mining Pool
@@ -19,12 +20,12 @@ sudo apt-get install -y git curl wget screen build-essential libboost-all-dev cm
 sudo reboot
 ```
 
-### Node 11.x
+### Node 12.x
 
-Install Node version 11.x. currently required for cryptonote-nodejs-pool Add repository
+Install Node version 12.x. currently required for cryptonote-nodejs-pool Add repository
 
 ```
-curl -sL https://deb.nodesource.com/setup_11.x | sudo -E bash
+curl -sL https://deb.nodesource.com/setup_12.x | sudo -E bash
 ```
 
 Note: you will get warning "Node.js 11.x is no longer actively supported" but there is currently no other version working.
@@ -270,18 +271,17 @@ sudo su - pool
 * Download pool software, recommend this version for XKR pool. The newer "cryptonote-nodejs-pool" have problem with unlocker when used for XKR.
 
 ```
-git clone https://github.com/Swepool/cryptonote-nodejs-pool.git pool
-cd pool
+git clone https://github.com/kryptokrona/kryptokrona-nodejs-pool.git
+cd kryptokrona-nodejs-pool
 ```
 
 Install Node modules needed
 
 ```
-npm update
-npm audit fix --force
+npm i
 ```
 
-* Set the following in pool config.
+* Copy config\_examples/kryptokrona.json to config.json and edit the following:
 
 ```
         "poolHost": "your hostname or IP address here",
@@ -291,8 +291,8 @@ npm audit fix --force
         "coinUnits": 100000,
         "coinDecimalPlaces": 5,
         "coinDifficultyTarget": 90,
-        "blockchainExplorer": "https://explorer.kryptokrona.se/?hash={id}#blockchain_block'",
-        "transactionExplorer": "https://explorer.kryptokrona.se/?hash={id}#blockchain_transaction",
+        "blockchainExplorer": "https://explorer.kryptokrona.org/?hash={id}#blockchain_block'",
+        "transactionExplorer": "https://explorer.kryptokrona.org/?hash={id}#blockchain_transaction",
         "daemonType": "bytecoin",
         "cnAlgorithm": "cryptonight_pico",
         "cnVariant": 2,
