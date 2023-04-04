@@ -2,15 +2,6 @@
 title: How To Use Kryptokrona SDK
 ---
 
-A simple example of how to retrive blocks:
+We made a module inside our Kryptokrona Kotlin SDK repository on GitHub that will have example code. 
 
-```kotlin
-fun main(args: Array<String>) = runBlocking {
-    val node = Node("privacymine.net", 11898, false)
-    val blockClient = BlockClient(node)
-
-    blockClient.getBlocks().let {
-        println("Blocks: ${it?.blocks?.size}")
-    }
-}
-```
+Check it out here: https://github.com/kryptokrona/kryptokrona-kotlin-sdk/tree/master/playground/src/main/kotlin
