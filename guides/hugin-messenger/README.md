@@ -20,6 +20,6 @@ Here are some of it's features:
 
 #### Desktop (macOS, Windows, Linux)
 
-{% embed url="https://github.com/kryptokrona/hugin-messenger/releases/latest" %}
+{% embed url="https://github.com/kryptokrona/hugin-desktop/releases/latest" %}
 Download the .exe for Windows, .dmg for macOS & .AppImage for Linux.
 {% endembed %}
