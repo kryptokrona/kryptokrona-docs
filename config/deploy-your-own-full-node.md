@@ -1,8 +1,12 @@
 ---
 title: Deploy your own full node
+description: >-
+  This tutorial will guide you through the process of deploying a "Hugin Full
+  Node", that is, a publically available Kryptokrona node bundled with Hugin API
+  for extra functionality
 ---
 
-# 🚢 Deploy your own full node
+# 🦅 Deploy a Hugin Full Node with Docker
 
 ## Setup
 

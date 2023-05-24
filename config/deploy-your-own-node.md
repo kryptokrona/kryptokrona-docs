@@ -1,8 +1,11 @@
 ---
 title: Deploy your own node
+description: >-
+  With this guide you will learn how to deploy a public node quickly and easily
+  with Docker.
 ---
 
-# 🚢 Deploy your own node
+# 🚢 Deploy node with Docker
 
 ## Get the script
 

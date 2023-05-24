@@ -4,7 +4,7 @@ description: Step by step guide to get started with mining
 
 # ⛏ Get started with mining
 
-<figure><img src="../../.gitbook/assets/xmrig-600x467.png" alt=""><figcaption><p>XMRig mining kryptokrona on Windows</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/xmrig-600x467.png" alt=""><figcaption><p>XMRig mining kryptokrona on Windows</p></figcaption></figure>
 
 So you want to start mining XKR? Great! This is the place to start.
 
@@ -19,9 +19,9 @@ Download XMRig here:
 [Linux](https://github.com/xmrig/xmrig/releases/download/v5.11.1/xmrig-5.11.1-xenial-x64.tar.gz)
 
 _**Note to Windows users**_\
-****_Your antivirus software may react to the mining software, this is because viruses often download mining software to unknowing peoples PC's, hijacking their computer for unwanted mining. Just add a rule in your anti virus software to prevent this._ [_Here's a guide_](https://www.nicehash.com/blog/post/exclude-nicehash-miner-from-windows-defender-immediately)_._
+_Your antivirus software may react to the mining software, this is because viruses often download mining software to unknowing peoples PC's, hijacking their computer for unwanted mining. Just add a rule in your anti virus software to prevent this._ [_Here's a guide_](https://www.nicehash.com/blog/post/exclude-nicehash-miner-from-windows-defender-immediately)_._
 
-__
+
 
 ## Configure
 
@@ -31,13 +31,13 @@ Don’t have a XKR address? Get one [here](https://explorer.kryptokrona.se/tools
 
 After you've generated your config.json file, place it into your XMRig folder.
 
-<figure><img src="../../.gitbook/assets/cfgmap-600x433.png" alt=""><figcaption><p>Config file properly placed inside the XMRig-folder.</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/cfgmap-600x433.png" alt=""><figcaption><p>Config file properly placed inside the XMRig-folder.</p></figcaption></figure>
 
 ## Start the miner
 
 Simply open **start** to start mining.
 
-<figure><img src="../../.gitbook/assets/startmap-600x447.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/startmap-600x447.png" alt=""><figcaption></figcaption></figure>
 
 Congratulations!\
 You’re mining!

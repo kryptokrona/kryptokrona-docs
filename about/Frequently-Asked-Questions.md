@@ -135,7 +135,7 @@ Go into this folder and delete the files in there. Then reboot, and try again.
 
 **Q: How do I get started mining?**
 
-You can check [this guide](../guides/mining/Mining.md)
+You can check [this guide](../mining/mining.md)
 
 **Q: I'm using a Mac, can I still mine?**
 
@@ -183,7 +183,7 @@ Yes, in case you get banned, or a pool goes down for some time, you can keep min
 
 **Q: Where can I find a list of pools?**
 
-[Here](../guides/mining/Pools.md) is a list. It also has other nifty stats like the pool's fee, minimum payout and server location.
+[Here](../mining/pools.md) is a list. It also has other nifty stats like the pool's fee, minimum payout and server location.
 
 **Q: What pool should I choose?**
 
@@ -197,7 +197,7 @@ There are a few factors to consider when choosing a pool.
 
     This is the amount you need to mine before you get paid. Most pools will list this under the "Payments" tab.
 
-    You can check [this list](../guides/mining/Pools.md) of pools. It specifies each pool's minimum payout as well as server location.
+    You can check [this list](../mining/pools.md) of pools. It specifies each pool's minimum payout as well as server location.
 
 **Q: How many hashes per second is good for my hardware?**
 
@@ -264,10 +264,10 @@ It should be possible in the future to allow users to give away just their Priva
 
 There are multiple ways to acquire XKR, for example:
 
-* Mining - see [here](../guides/mining/Mining.md)
+* Mining - see [here](../mining/mining.md)
 * Bounties - Bounties for developing XKR software, spreading the word of XKR, and many other things are often posted in the #bounties channel on \[Discord]\[https://discord.gg/nRK5k7wYy8]. Check the pinned messages for current bounties.
 * Tips - In the Kryptokrona discord we often tip each other, especially if you make spicy memes in the `#memes` channel.
-* Buy at an exchange - Check out [this guide](../guides/How-to-buy-xkr.md).
+* Buy at an exchange - Check out [this guide](broken-reference).
 
 **Q: Are there any mobile wallets?**
 

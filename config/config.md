@@ -2,9 +2,9 @@
 title: Kryptokrona config
 ---
 
-# ✏ How to config Kryptokrona?
+# ✏ How to configure the node?
 
-Run Kryptokrona with arg `--help` will print all options.
+Run kryptokronad with arg `--help` will print all options.
 
 Kryptokrona can start with these options by command line args, or use `-c` followed a json file for configuration.
 

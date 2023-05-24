@@ -1,4 +1,8 @@
-# 😇 Run a Public Node
+---
+description: How to deploy a public node on Ubuntu Linux
+---
+
+# 😇 Deploy a Public Node (manually)
 
 **Have you ever considered what you can do for Kryptokrona?**
 
