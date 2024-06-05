@@ -11,8 +11,7 @@ Thanks to [@glen487](https://github.com/glen487) for this guide!
 
 
 
-First make sure you are using **Ubuntu 18.04 LTS** (problems with the old node version 11 on 20.04)
-
+First make sure you are using **Ubuntu 22/20.04 LTS** 
 ```
 sudo apt update
 sudo apt upgrade
@@ -25,10 +24,11 @@ sudo reboot
 Install Node version 12.x. currently required for cryptonote-nodejs-pool Add repository
 
 ```
-curl -sL https://deb.nodesource.com/setup_12.x | sudo -E bash
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.7/install.sh | bash
+nvm install 12
 ```
 
-Note: you will get warning "Node.js 11.x is no longer actively supported" but there is currently no other version working.
+Note: Node 12 is old, we are actively working on porting the software to a more up to date version
 
 ```
 sudo apt-get install gcc g++ make  nodejs
@@ -37,7 +37,6 @@ sudo apt-get install gcc g++ make  nodejs
 ### Install Redis server
 
 ```
-sudo add-apt-repository ppa:chris-lea/redis-server
 sudo apt-get update
 sudo apt-get install redis-server
 ```
@@ -127,20 +126,19 @@ sudo su - kryptokrona
 
 [https://github.com/kryptokrona/kryptokrona/releases/](https://github.com/kryptokrona/kryptokrona/releases/)
 
-Currently 1.0.2:
+Currently 1.1.3:
 
 * Download and unpack
 
 ```
-wget https://github.com/kryptokrona/kryptokrona/releases/download/v.0.1.0.2/kryptokrona-linux.zip
-7z x kryptokrona-linux.zip
+wget https://github.com/kryptokrona/kryptokrona/releases/download/v1.1.3/kryptokrona-ubuntu-22.zip
+7z x kryptokrona-ubuntu-22.zip
 ```
 
 * Download and unpack bootstrap of the Kryptokrona blockchain quickly get going.
 
 ```
-wget https://swenode.org/bootstrap.zip
-7z x bootstrap.zip
+cd ~ && rm -rf .kryptokrona && wget http://wasa.kryptokrona.se/xkr-bootstrap/latest.7z && 7z x latest.7z
 ```
 
 ### Start the kryptokrona node
@@ -162,7 +160,7 @@ vi node.bash
 
 ```
 #!/bin/bash
-./kryptokrona --rpc-bind-ip=127.0.0.1 --rpc-bind-port=11898
+./kryptokronad --rpc-bind-ip=127.0.0.1 --rpc-bind-port=11898
 ```
 
 * Make the new script executable
