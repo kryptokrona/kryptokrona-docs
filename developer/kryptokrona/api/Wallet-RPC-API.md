@@ -2,4 +2,6 @@
 title: Wallet RPC API
 ---
 
-API Documentation is available [here](https://turtlecoin.github.io/wallet-api-docs) for wallet-api
+# Wallet RPC API
+
+API Documentation is available [here](https://kryptokrona.se/wallet-api) for wallet-api

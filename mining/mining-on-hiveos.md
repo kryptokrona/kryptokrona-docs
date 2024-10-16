@@ -43,7 +43,7 @@ In this example I'm using `pool.kryptokrona.se:7777` as my pool of choice, but i
 
 Set password to `x` and enable CPU with the toggle. Also make sure the TLS setting is on or off based on your chosen pool and finally click **Apply changes**.
 
-<figure><img src="../.gitbook/assets/screencapture-the-hiveos-farm-farms-410464-fs-2022-09-19-20_11_20 (1).png" alt=""><figcaption><p>CPU Mining config with XMRig (new)</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/screencapture-the-hiveos-farm-farms-410464-fs-2022-09-19-20_11_20.png" alt=""><figcaption><p>CPU Mining config with XMRig (new)</p></figcaption></figure>
 
 Now, for any additional GPU miners we have to click "Add miner" in the bottom right corner of the flight sheet config page and a new mining config field will pop up. Fill these in as you did [in this step.](mining-on-hiveos.md#add-wallet-to-hiveos)
 
