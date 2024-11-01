@@ -1684,6 +1684,38 @@ if err != nil {
 }
 ```
 
+### validateAddress
+
+`validateAddress()` method takes an address as it's only argument and returns isValid: true/false, depending on the validity of the address provided.
+
+**Input**
+
+| Argument | Description             | Format |
+| -------- | ----------------------- | ------ |
+| address  | The address to validate | string |
+
+**Output**
+
+| Argument | Description                                                  | Format  |
+| -------- | ------------------------------------------------------------ | ------- |
+| isValid  | The result, i.e. wheter the provided address is valid or not | boolean |
+
+```
+curl -X POST -i -H "Content-Type: application/json" -d '{"jsonrpc":"2.0","id":"0","password":"passw0rd","method":"validateAddress","params":{"address":"SEKReYisjz5FqzU4bxS48aA5BTcercMddeqsYnoCU2WLNJeeRf1gVwqUHJx3paXBzuVGUJimRsMtKaNABCZLnSUBE2YpVKeyxuj"}}' http://localhost:8070/json_rpc
+```
+
+**Expected Output:**
+
+```
+{
+  "id":"0",
+  "jsonrpc":"2.0",
+  "result": {
+    "isValid":true
+  }
+}
+```
+
 ### License
 
 [![Creative Commons License](https://github.com/kryptokrona/kryptokrona-docs/raw/master/docs/assets/cc-by-sa.png)](https://creativecommons.org/licenses/by-sa/3.0/)
