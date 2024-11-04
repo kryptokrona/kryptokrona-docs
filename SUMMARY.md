@@ -54,6 +54,7 @@
     * [👜 Making a Kryptokrona Wallet](guides/wallets/Making-a-Wallet.md)
     * [🚑 Recovering your Wallet](guides/wallets/Recovering-your-Wallet.md)
     * [💻 Using Kryptokrona Desktop Wallet](guides/wallets/Using-Kryptokrona-Wallet.md)
+    * [💻 Using Kryptokrona Desktop Wallet \*deprecated\*](guides/wallets/using-kryptokrona-wallet-1.md)
     * [🛰️ Using Remote Nodes](guides/wallets/Using-Remote-Nodes.md)
     * [👾 Command Line](guides/wallets/command-line/README.md)
       * [Using xkrwallet](guides/wallets/command-line/using-kkrwallet.md)
