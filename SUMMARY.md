@@ -78,4 +78,5 @@
   * [🚚 Mining with XMRig](mining/xmrig-guide.md)
   * [🏊‍♂️ 🏊♂ Run a Mining Pool](mining/run-a-mining-pool.md)
   * [📱 Mining on Android](mining/mining-on-android.md)
+  * [Mining on macOS](mining/mining-on-macos.md)
   * [🍯 Mining on HiveOS](mining/mining-on-hiveos.md)

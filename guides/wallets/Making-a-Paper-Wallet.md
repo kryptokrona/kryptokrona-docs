@@ -49,7 +49,7 @@ To use it, follow these steps:
 * The letters and numbers in the green box, starting with `SEKR`, is your public address. You can share it freely.
 * Save the `Seed Phrase`, the 25 words in the red box, safely.\
   **DO NOT SHARE IT WITH ANYONE**.\
-  **Anyone who has access to this can **_**access your funds**_** and has **_**complete control**_** over your wallet.**
+  **Anyone who has access to this can&#x20;**_**access your funds**_**&#x20;and has&#x20;**_**complete control**_**&#x20;over your wallet.**
 * Save the `Spend Key` and the `View Key`, the two very long strings of (seemingly) random letters and numbers, safely.\
   **DO NOT SHARE IT WITH ANYONE**.\
-  **Anyone who has access to this can **_**access your funds**_** and has **_**complete control**_** over your wallet.**
+  **Anyone who has access to this can&#x20;**_**access your funds**_**&#x20;and has&#x20;**_**complete control**_**&#x20;over your wallet.**

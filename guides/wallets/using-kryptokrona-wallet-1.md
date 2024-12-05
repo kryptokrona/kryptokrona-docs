@@ -134,7 +134,7 @@ Each kryptokrona™ wallet is essentially just a pair of keys (the _view key_ an
 
 In the event of a lost or corrupted wallet file, computer crash, etc., the _view key_, _spend key_, or _mnemonic seed_ are the **only** way to restore a wallet and recover the funds it holds.
 
-**DO NOT SHARE IT WITH ANYONE**. **Anyone who has these can **_**access your funds**_** and has **_**complete control**_** over your wallet.**
+**DO NOT SHARE IT WITH ANYONE**. **Anyone who has these can&#x20;**_**access your funds**_**&#x20;and has&#x20;**_**complete control**_**&#x20;over your wallet.**
 
 Click on `Wallet` in the top left, and then `Backup`. A screen will appear with your address, private spend and view keys, and your mnemonic seed.
 

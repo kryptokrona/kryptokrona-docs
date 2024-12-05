@@ -2,7 +2,7 @@
 description: Step by step guide to get started with mining
 ---
 
-# ⛏ Get started with mining
+# ⛏️ Get started with mining
 
 <figure><img src="../.gitbook/assets/xmrig-600x467.png" alt=""><figcaption><p>XMRig mining kryptokrona on Windows</p></figcaption></figure>
 
@@ -14,12 +14,12 @@ First order of business is to download the mining software, although there are m
 
 Download XMRig here:
 
-[Windows](https://github.com/xmrig/xmrig/releases/download/v5.11.1/xmrig-5.11.1-msvc-cuda10\_1-win64.zip)
+[Windows](https://github.com/xmrig/xmrig/releases/download/v5.11.1/xmrig-5.11.1-msvc-cuda10_1-win64.zip)
 
 [Linux](https://github.com/xmrig/xmrig/releases/download/v5.11.1/xmrig-5.11.1-xenial-x64.tar.gz)
 
 _**Note to Windows users**_\
-_Your antivirus software may react to the mining software, this is because viruses often download mining software to unknowing peoples PC's, hijacking their computer for unwanted mining. Just add a rule in your anti virus software to prevent this._ [_Here's a guide_](https://www.nicehash.com/blog/post/exclude-nicehash-miner-from-windows-defender-immediately)_._
+&#xNAN;_&#x59;our antivirus software may react to the mining software, this is because viruses often download mining software to unknowing peoples PC's, hijacking their computer for unwanted mining. Just add a rule in your anti virus software to prevent this._ [_Here's a guide_](https://www.nicehash.com/blog/post/exclude-nicehash-miner-from-windows-defender-immediately)_._
 
 
 

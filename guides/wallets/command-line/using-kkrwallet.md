@@ -183,7 +183,7 @@ Each kryptokrona wallet is essentially, just a pair of keys (_View Key_ and _Spe
 
 In the event of a lost or corrupted wallet file, computer crash, etc., the _View Key_ and _Spend Key_ are the only way to restore a wallet and recover the funds it holds.
 
-**DO NOT SHARE IT WITH ANYONE**. **Anyone who has these can **_**access your funds**_** and has **_**complete control**_** over your wallet.**
+**DO NOT SHARE IT WITH ANYONE**. **Anyone who has these can&#x20;**_**access your funds**_**&#x20;and has&#x20;**_**complete control**_**&#x20;over your wallet.**
 
 To print your keys; at the menu type `backup` and press `enter`. The _View Key_ and _Spend Key_ will appear. Copy them and store them **safely and securely**.
 
@@ -247,9 +247,9 @@ Note that typically, the service/recipient will generate and provide the require
 
 #### Exiting the Wallet
 
-Wallets loaded into the x_krwallet_ client must be synced with the blockchain in order to properly calculate balance, view transaction history, etc.
+Wallets loaded into the &#x78;_&#x6B;rwallet_ client must be synced with the blockchain in order to properly calculate balance, view transaction history, etc.
 
-It is important to properly save the wallet data before exiting xk_rwallet_ so that the synchronikkr data is not lost.
+It is important to properly save the wallet data before exiting x&#x6B;_&#x72;wallet_ so that the synchronikkr data is not lost.
 
 To save a wallet's data and exit; at the menu, type `exit` and press `enter`:
 
