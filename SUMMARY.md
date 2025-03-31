@@ -68,6 +68,7 @@
   * [🦅 Deploy a Hugin Full Node with Docker](config/deploy-your-own-full-node.md)
   * [🍇 Run a Node on a Raspberry Pi](config/run-a-node-on-a-raspberry-pi.md)
   * [✏️ How to configure the node?](config/config.md)
+  * [🥾 Node bootstrap](config/node-bootstrap.md)
 * [⛏️ Mining](mining/README.md)
   * [⛏️ Get started with mining](mining/get-started-with-mining.md)
   * [😎 Solo-mining Kryptokrona](mining/cpu-solo-mining.md)
