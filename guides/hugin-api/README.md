@@ -1,2 +1,0 @@
-# 🐦 Hugin Cache
-

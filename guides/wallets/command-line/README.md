@@ -8,24 +8,24 @@ description: >-
 
 {% tabs %}
 {% tab title="Terminal/CLI" %}
-#### [xkr-wallet](using-kkrwallet.md)
+[**xkr-wallet**](using-kkrwallet.md)
 
-An easy to use terminal (CLI) interface for Mac/Windows/Linux.&#x20;
+An easy to use terminal (CLI) interface for Mac/Windows/Linux.
 
-#### [wallet-api](../../../developer/kryptokrona/api/Wallet-RPC-API.md)
+[**wallet-api**](../../../kryptokrona/api/wallet-rpc-api.md)
 
 A high performance api that can handle multiple wallets.
 
-#### [kryptokrona-service](../../../developer/kryptokrona/api/Legacy-Wallet-RPC-API.md)
+[**kryptokrona-service**](../../../kryptokrona/api/legacy-wallet-rpc-api.md)
 
 A somewhat outdated api that should be deferred.
 {% endtab %}
 
 {% tab title="JavaScript" %}
-#### [wallet-backend-js](../../../developer/kryptokrona/api/Kryptokrona-wallet-backend-js.md)
+[**wallet-backend-js**](../../../kryptokrona/api/kryptokrona-wallet-backend-js.md)
 
 wallet-backend-js is a JavaScript implementation of a fully capable XKR-wallet that may be used for developing JavaScript (node.js) apps.
 {% endtab %}
 {% endtabs %}
 
-There are more options available for developers, check them out [here](../../../developer/kryptokrona/api/).
+There are more options available for developers, check them out [here](../../../kryptokrona/api/).

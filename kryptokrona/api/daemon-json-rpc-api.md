@@ -803,7 +803,7 @@ daemon.getTransactionPool().then((transactions) => {
 
 ### License
 
-[![Creative Commons License](broken-reference)](https://creativecommons.org/licenses/by-sa/3.0/)
+[![Creative Commons License](/broken/files/EU6IlMk8og1YjvlfUR2k)](https://creativecommons.org/licenses/by-sa/3.0/)
 
 The content in this document was originally written by the [Bytecoin (BCN) Developers](https://bytecoin.org/). It is licensed under the [CC BY SA 3.0 license](https://creativecommons.org/licenses/by-sa/3.0/). The source material can be found at the [Bytecoin Wiki](https://github.com/bcndev/bytecoin).
 

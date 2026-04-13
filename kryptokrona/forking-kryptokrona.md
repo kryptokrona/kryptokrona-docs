@@ -246,16 +246,13 @@ Open up the file `CryptoNoteConfig.h`, located in the `src` folder.
 
 Let's start at the top. We'll only focus on the constants which need changing, as some of them are fine to keep as they are.
 
-**`const uint64_t DIFFICULTY_TARGET = 30; // seconds`**\
-
+**`const uint64_t DIFFICULTY_TARGET = 30; // seconds`**<br>
 
 This is how fast you want blocks to be. In Kryptokrona, we have blocks on average every 30 seconds. If you wanted blocks to be every 2 minutes, you would set this to be:
 
-* `const uint64_t DIFFICULTY_TARGET = 120; // seconds`\
+* `const uint64_t DIFFICULTY_TARGET = 120; // seconds`<br>
 
-
-**`const uint64_t CRYPTONOTE_PUBLIC_ADDRESS_BASE58_PREFIX = 3914525;`**\
-
+**`const uint64_t CRYPTONOTE_PUBLIC_ADDRESS_BASE58_PREFIX = 3914525;`**<br>
 
 This defines what the addresses will start with. In Kryptokrona, this decodes to `XKR`.
 
@@ -269,11 +266,9 @@ You may note that XKR's prefix is a number, while the output of this generator i
 
 So, if we wanted our prefix to be 'aPPLE', we would set this to be:
 
-* `const uint64_t CRYPTONOTE_PUBLIC_ADDRESS_BASE58_PREFIX = 0x1e1f8cc7;`\
+* `const uint64_t CRYPTONOTE_PUBLIC_ADDRESS_BASE58_PREFIX = 0x1e1f8cc7;`<br>
 
-
-**`const uint32_t CRYPTONOTE_MINED_MONEY_UNLOCK_WINDOW = 40;`**\
-
+**`const uint32_t CRYPTONOTE_MINED_MONEY_UNLOCK_WINDOW = 40;`**<br>
 
 This value defines how many blocks need to be followed in the current chain before releasing the reward for mining a block for spending.
 
@@ -281,11 +276,9 @@ We would suggest you set this value to be roughly equal to 20 minutes - in Krypt
 
 If you have a block time of 2 minutes for example, we would set this value to 10.
 
-* `const uint32_t CRYPTONOTE_MINED_MONEY_UNLOCK_WINDOW = 10;`\
+* `const uint32_t CRYPTONOTE_MINED_MONEY_UNLOCK_WINDOW = 10;`<br>
 
-
-**`const uint64_t MONEY_SUPPLY = UINT64_C(100000000000000);`**\
-
+**`const uint64_t MONEY_SUPPLY = UINT64_C(100000000000000);`**<br>
 
 This line is a pretty significant one. It determines the max supply of coins your cryptocurrency will have. In Kryptokrona, this is 1 trillion XKR, but as previously mentioned, all these values are in _atomic units_, so this value also includes the amount after the decimal point. Thus, this value is 1 trillion \* 100, as Kryptokrona has 2 places after the decimal point.
 
@@ -295,11 +288,9 @@ If you want your coin to have 6 decimal places, and the total supply to be ten t
 
 So, we would then pop this value in to give us:
 
-* `const uint64_t MONEY_SUPPLY = UINT64_C(10000000000);`\
+* `const uint64_t MONEY_SUPPLY = UINT64_C(10000000000);`<br>
 
-
-**`const uint32_t ZAWY_DIFFICULTY_BLOCK_INDEX = 187000;`**\
-
+**`const uint32_t ZAWY_DIFFICULTY_BLOCK_INDEX = 187000;`**<br>
 
 This section will cover all of these, since they are all related:
 
@@ -315,38 +306,29 @@ These values set the heights where the different difficulty algorithms go live. 
 Difficulty algorithms are pretty hard to write, so we have quite a lot of revisions! We strongly suggest you use the latest version, to make you more resistant to pulse mining and timewarp attacks. The below section will activate each one at the first available block height, so you will be running the latest LWMA-2 by block 3.
 
 * `const uint32_t ZAWY_DIFFICULTY_BLOCK_INDEX = 0;`\
-  \
-
+  <br>
 * `const uint32_t LWMA_2_DIFFICULTY_BLOCK_INDEX = 1;`\
-  \
-
+  <br>
 * `const uint32_t LWMA_2_DIFFICULTY_BLOCK_INDEX = 2;`\
-  \
-
+  <br>
 * `const uint32_t LWMA_2_DIFFICULTY_BLOCK_INDEX = 3;`\
-  \
+  <br>
 
-
-**`const unsigned EMISSION_SPEED_FACTOR = 25;`**\
-
+**`const unsigned EMISSION_SPEED_FACTOR = 25;`**<br>
 
 This value defines how fast the maximum supply will be emitted. A smaller value means the supply will be emitted faster, and a higher values means it will take longer for the supply to be released. You can again use the website [linked earlier](https://cryptonotestarter.org/tools.html) to experiment with different values for the emission and how they will affect how long it takes for the supply to be distributed.
 
 If we wanted a fast emission, we could set this to a value like 21.
 
-* `const unsigned EMISSION_SPEED_FACTOR = 21;`\
+* `const unsigned EMISSION_SPEED_FACTOR = 21;`<br>
 
-
-**`const size_t CRYPTONOTE_DISPLAY_DECIMAL_POINT = 2;`**\
-
+**`const size_t CRYPTONOTE_DISPLAY_DECIMAL_POINT = 2;`**<br>
 
 This value defines how many numbers there are after the decimal point in your currency. In Kryptokrona, this value is 2, so we have amounts like 10.23 XKR. If we set this to 6, we would have an amount like 10.234567 XKR instead. Remember, as previously mentioned, this affects your money supply and other parameters which depend upon atomic units.
 
-* `const size_t CRYPTONOTE_DISPLAY_DECIMAL_POINT = 6;`\
+* `const size_t CRYPTONOTE_DISPLAY_DECIMAL_POINT = 6;`<br>
 
-
-**`const uint64_t MINIMUM_FEE = UINT64_C(10);`**\
-
+**`const uint64_t MINIMUM_FEE = UINT64_C(10);`**<br>
 
 This value defines what the minimum fee a user must spend to send a transaction is. Note this doesn't apply to fusion transactions.
 
@@ -356,11 +338,9 @@ A happy medium is generally desired, though you could optionally raise this at a
 
 This value is defined again in _atomic units_, so multiply your desired minimum fee by 10 \* the number of numbers after the decimal point in your coin.
 
-* `const uint64_t MINIMUM_FEE = UINT64_C(1000);`\
+* `const uint64_t MINIMUM_FEE = UINT64_C(1000);`<br>
 
-
-**`const uint64_t MINIMUM_MIXIN_V1 = 0;`**\
-
+**`const uint64_t MINIMUM_MIXIN_V1 = 0;`**<br>
 
 This section will cover all of these, because they are all related:
 
@@ -396,11 +376,9 @@ const uint32_t MIXIN_LIMITS_V2_HEIGHT                        = 1;
 const uint64_t DEFAULT_MIXIN = MINIMUM_MIXIN_V2;
 ```
 
-\
+<br>
 
-
-**`const uint64_t DEFAULT_DUST_THRESHOLD = UINT64_C(10);`**\
-
+**`const uint64_t DEFAULT_DUST_THRESHOLD = UINT64_C(10);`**<br>
 
 This section will cover all of these, because they are all related:
 
@@ -417,11 +395,9 @@ Setting the dust threshold to zero prevents this, but has a side effect of makin
 
 I suggest setting DUST\_THRESHOLD\_V2\_HEIGHT to 0, to make small amounts always spendable.
 
-* `const uint32_t DUST_THRESHOLD_V2_HEIGHT = 0;`\
+* `const uint32_t DUST_THRESHOLD_V2_HEIGHT = 0;`<br>
 
-
-**`const uint32_t UPGRADE_HEIGHT_V4 = 350000;`**\
-
+**`const uint32_t UPGRADE_HEIGHT_V4 = 350000;`**<br>
 
 This value determines when the mining algorithm will transition to Original CryptoNight, also known as CN v0, to CryptoNight Lite v1, also known as CryptoNight Lite v7.
 
@@ -431,11 +407,9 @@ However, if you would prefer to stay on original CryptoNight, you can either fin
 
 (You will probably need to add `#include <limits>` to the top of the file if you choose this option)
 
-* `const uint32_t UPGRADE_HEIGHT_V4 = 3; // Upgrade height for CN-Lite Variant 1 switch.`\
+* `const uint32_t UPGRADE_HEIGHT_V4 = 3; // Upgrade height for CN-Lite Variant 1 switch.`<br>
 
-
-**`const uint64_t FORK_HEIGHTS[] =`**\
-
+**`const uint64_t FORK_HEIGHTS[] =`**<br>
 
 This variable is used by the `status` command in zedwallet and Kryptokrona to notify users when a fork is upcoming, or their software is outdated. We suggest you set up some regular forks ahead of time, if you then need to update the software this will let users know when to expect this.
 
@@ -451,26 +425,21 @@ This will set the status command to notify of a fork at 100k and 300k blocks.
     };
     ```
 
-    \
+    <br>
 
-
-**`const uint8_t CURRENT_FORK_INDEX = FORK_HEIGHTS_SIZE == 0 ? 0 : 3;`**\
-
+**`const uint8_t CURRENT_FORK_INDEX = FORK_HEIGHTS_SIZE == 0 ? 0 : 3;`**<br>
 
 This value relates to the previous FORK\_HEIGHTS array. It determines which fork heights the software supports. (This value is zero-indexed). For example, if our `FORK_HEIGHTS = {100, 200, 300}` and `CURRENT_FORK_INDEX = 1` then the software will support the fork at FORK\_HEIGHTS\[1] - which is the fork at 200 blocks.
 
 We have a ternary to check FORK\_HEIGHTS\_SIZE so if you wish to empty the FORK\_HEIGHTS array, you don't need to set a CURRENT\_FORK\_INDEX.
 
-* `const uint8_t CURRENT_FORK_INDEX = FORK_HEIGHTS_SIZE == 0 ? 0 : 1;`\
+* `const uint8_t CURRENT_FORK_INDEX = FORK_HEIGHTS_SIZE == 0 ? 0 : 1;`<br>
 
-
-**`const char CRYPTONOTE_NAME[] = "Kryptokrona";`**\
-
+**`const char CRYPTONOTE_NAME[] = "Kryptokrona";`**<br>
 
 This is an obvious one. It's the name of your coin!
 
-* `const char CRYPTONOTE_NAME[] = "SuperCoolCoin";`\
-
+* `const char CRYPTONOTE_NAME[] = "SuperCoolCoin";`<br>
 
 **`const int P2P_DEFAULT_PORT` and `const int RPC_DEFAULT_PORT`**
 
@@ -479,8 +448,7 @@ These values define the ports that are used by the daemon to communicate. There 
 Ports can be in the range of 0 - 65535, however using ports in the 0 - 1023 range is not recommended, as on unix systems a program will require administrative permissions to use these ports.
 
 * `const int P2P_DEFAULT_PORT = 10101;`
-* `const int RPC_DEFAULT_PORT = 10102;`\
-
+* `const int RPC_DEFAULT_PORT = 10102;`<br>
 
 **`const static boost::uuids::uuid CRYPTONOTE_NETWORK =`**
 
@@ -495,11 +463,9 @@ This value is using hex values, which should be in the form 0x?? where `?` is a 
   };
   ```
 
-\
+<br>
 
-
-**`const char* const SEED_NODES[] = {`**\
-
+**`const char* const SEED_NODES[] = {`**<br>
 
 This variable defines the seed nodes daemons will connect to on the very first launch, before they are aware of any peers. You will need to run these on different servers, to bootstrap other nodes. Once your coin is established, it might be a good idea to ask other trusted community members to host some seed nodes, to help decentralize your coin.
 
@@ -511,8 +477,7 @@ This variable defines the seed nodes daemons will connect to on the very first l
     };
     ```
 
-    \
-
+    <br>
 
 ### CryptoNoteCheckpoints.h
 
@@ -530,50 +495,39 @@ It would be a good idea to add some checkpoints here for your new chain when you
 
 Next up to modify is WalletConfig.h, located in `src/zedwallet/WalletConfig.h`
 
-These fields are all pretty well documented already, but we'll go over them anyway.\
+These fields are all pretty well documented already, but we'll go over them anyway.<br>
 
-
-**`const std::string addressPrefix = "XKR";`**\
-
+**`const std::string addressPrefix = "XKR";`**<br>
 
 This value is used to check inputted addresses are correct. This value corresponds to the value you chose for your address prefix earlier, in `const uint64_t CRYPTONOTE_PUBLIC_ADDRESS_BASE58_PREFIX =`
 
-* `const std::string addressPrefix = "aPPLE";`\
+* `const std::string addressPrefix = "aPPLE";`<br>
 
-
-**`const std::string ticker = "XKR";`**\
-
+**`const std::string ticker = "XKR";`**<br>
 
 This refers to the 'short name' your coin has, which is often used as a ticker on exchanges. For example, in Kryptokrona this is XKR, in Monero this is XMR, and in Bitcoin this is BTC.
 
-* `const std::string ticker = "APPLE";`\
+* `const std::string ticker = "APPLE";`<br>
 
-
-**`const std::string daemonName = "Kryptokrona";`**\
-
+**`const std::string daemonName = "Kryptokrona";`**<br>
 
 This variable determines what the name of your daemon is. We'll talk about changing the names of the executables generated in the `CmakeLists.txt` section. We'll skip mentioning `walletName`, and `walletdName` as these both follow the same format.
 
-* `const std::string daemonName = "AppleCoind";`\
+* `const std::string daemonName = "AppleCoind";`<br>
 
-
-**`const std::string contactLink = "http://chat.kryptokrona.se";`**\
-
+**`const std::string contactLink = "http://chat.kryptokrona.se";`**<br>
 
 This value is used to let the user know where they can get support if their wallet gets stuck whilst syncing. In our case, this is the Kryptokrona discord. Maybe you have a forum or an IRC chat instead?
 
-* `const std::string contactLink = "https://applecoin.com/livechat"`\
-
+* `const std::string contactLink = "https://applecoin.com/livechat"`<br>
 
 **`const long unsigned int standardAddressLength = 99;`**
 
 This value is used to verify inputted addresses are correct. You can easily get this value by compiling, generating an address with zedwallet, and checking how long it is.
 
-* `const long unsigned int addressLength = 100;`\
+* `const long unsigned int addressLength = 100;`<br>
 
-
-**`const long unsigned int integratedAddressLength = 236;`**\
-
+**`const long unsigned int integratedAddressLength = 236;`**<br>
 
 This value is used to verify inputted addresses are correct. An integrated address is an address which also contains an embedded payment ID, to alleviate users from having to remember to supply one with the transaction.
 
@@ -583,29 +537,23 @@ You can use your own address with this command, and any payment ID. If you don't
 
 `8eba031ca60bf9b9f680309819bddf071e619c53ff71766e48e365812e229452`
 
-* `const long unsigned int integratedAddressLength = 237;`\
+* `const long unsigned int integratedAddressLength = 237;`<br>
 
-
-**`const uint64_t defaultMixin = CryptoNote::parameters::DEFAULT_MIXIN;`**\
-
+**`const uint64_t defaultMixin = CryptoNote::parameters::DEFAULT_MIXIN;`**<br>
 
 This sets the mixin value to be used with transactions. Make sure this is in the bounds you set earlier, with `MINIMUM_MIXIN_V1/V2` and `MAXIMUM_MIXIN_V1/V2`.
 
-* `const uint64_t defaultMixin = 7;`\
+* `const uint64_t defaultMixin = 7;`<br>
 
-
-**`const uint64_t defaultFee = CryptoNote::parameters::MINIMUM_FEE`**\
-
+**`const uint64_t defaultFee = CryptoNote::parameters::MINIMUM_FEE`**<br>
 
 If you want to set a higher default fee, perhaps to make transactions go through quicker, you can do that here. As usual, this is in _atomic units_. You may also wish to change `const uint64_t minimumFee = CryptoNote::parameters::MINIMUM_FEE;` to prevent users from sending a lower fee than desired.
 
 Remember this limit is only enforced by zedwallet, and the user can change the limit and recompile, or use a different wallet program. If you want to enforce higher fees across the network, change the value of `CryptoNote::parameters::MINIMUM_FEE` in `CryptoNoteConfig.h`.
 
-* `const uint64_t defaultFee = 100;`\
+* `const uint64_t defaultFee = 100;`<br>
 
-
-**`const bool mixinZeroDisabled = true;`**\
-
+**`const bool mixinZeroDisabled = true;`**<br>
 
 Is a mixin of zero allowed on the network? If at some point a mixin of zero will be disabled, but that point is at a later fork, still set this to `true`.
 
@@ -626,8 +574,7 @@ If you want to allow zero mixins, then `mixinZeroDisabledHeight` does nothing.
     const uint64_t mixinZeroDisabledHeight = 0;
     ```
 
-    \
-
+    <br>
 
 ### Setup
 

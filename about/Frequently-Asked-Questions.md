@@ -267,7 +267,7 @@ There are multiple ways to acquire XKR, for example:
 * Mining - see [here](../mining/mining.md)
 * Bounties - Bounties for developing XKR software, spreading the word of XKR, and many other things are often posted in the #bounties channel on \[Discord]\[https://discord.gg/nRK5k7wYy8]. Check the pinned messages for current bounties.
 * Tips - In the Kryptokrona discord we often tip each other, especially if you make spicy memes in the `#memes` channel.
-* Buy at an exchange - Check out [this guide](broken-reference).
+* Buy at an exchange - Check out [this guide](/broken/pages/jqxT9vu7KmdNq8hCkhL0).
 
 **Q: Are there any mobile wallets?**
 
