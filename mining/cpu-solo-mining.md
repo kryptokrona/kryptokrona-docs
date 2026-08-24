@@ -2,10 +2,10 @@
 title: Solo-mining Kryptokrona
 ---
 
-# 😎 Solo-mining Kryptokrona
+# Solo-mining Kryptokrona
 
 Solo-mining Kryptokrona means that you, alone, try to find the next block.\
-**It is extremely hard, and not recommended** - try our [other guides](../../docs/guides/Mining/) if you want a more steady flow of XKR.\
+**It is extremely hard, and not recommended** - try our [other guides](https://github.com/kryptokrona/kryptokrona-docs/blob/master/docs/guides/Mining/README.md) if you want a more steady flow of XKR.\
 Solo-mining is limited to _only your CPU_.
 
 If you're sure you want to solo mine, let's continue.

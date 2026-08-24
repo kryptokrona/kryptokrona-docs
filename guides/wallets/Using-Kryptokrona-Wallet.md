@@ -2,7 +2,7 @@
 title: Using Kryptokrona Wallet
 ---
 
-# 💻 Using Kryptokrona Desktop Wallet
+# Using Kryptokrona Desktop Wallet
 
 <figure><img src="../../.gitbook/assets/Screenshot 2024-11-04 at 23.45.45.png" alt=""><figcaption></figcaption></figure>
 

@@ -2,7 +2,7 @@
 title: Wallet Intro
 ---
 
-# 👜 Making a Kryptokrona Wallet
+# Making a Kryptokrona Wallet
 
 There are multiple different types of wallets you can choose to use for Kryptokrona, paper wallet, CLI wallet and GUI wallet.
 
@@ -14,7 +14,7 @@ The main purpose of a paper wallet is to quickly create a wallet to start receiv
 
 **You will not be able to spend or send your funds to other people until you set up a CLI, GUI or Web Wallet.**
 
-To view a guide on how to make a paper wallet, you can go [here](../../docs/guides/Making-a-paper-wallet/).
+To view a guide on how to make a paper wallet, you can go [here](https://github.com/kryptokrona/kryptokrona-docs/blob/master/docs/guides/Making-a-paper-wallet/README.md).
 
 ## xkr-wallet (CLI Wallet)
 
@@ -26,7 +26,7 @@ You can find a guide on how to use xkr-wallet [here](Making-a-Wallet.md#xkr-wall
 
 Kryptokrona also has a GUI wallet, It's open sourced and available on every major OS. You can download it [here](https://kryptokrona.se/en/kryptokrona-wallet-2/), or view the source code [here](https://github.com/kryptokrona/kryptokrona-wallet)
 
-If you would like to use it, you can check out [this guide](../../docs/guides/Using-Remote-Nodes/#proton-wallet).
+If you would like to use it, you can check out [this guide](https://github.com/kryptokrona/kryptokrona-docs/blob/master/docs/guides/Using-Remote-Nodes/README.md#proton-wallet).
 
 ## Android wallet
 

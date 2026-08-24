@@ -2,7 +2,7 @@
 description: How to deploy a public node on Ubuntu Linux
 ---
 
-# 😇 Deploy a Public Node (manually)
+# Deploy a Public Node (manually)
 
 **Have you ever considered what you can do for Kryptokrona?**
 
@@ -21,7 +21,7 @@ This method requires registering a credit/debit card with AWS, they will charge 
 
 _**Skip step 1-4  if you already have access to a VPS or a machine to run the node on.**_
 
-1. Start by creating a AWS free tier account: [https://aws.amazon.com/?nc2=h\_lg](https://aws.amazon.com/?nc2=h\_lg)
+1. Start by creating a AWS free tier account: [https://aws.amazon.com/?nc2=h\_lg](https://aws.amazon.com/?nc2=h_lg)
 2. Deploy an instance in US east Virginia, choose ubuntu server 18.04 LTS and then t2 micro instance.
 3. Make sure to save the .pem file in your home folder.
 4. Once it is ready, choose connect and copy the example line

@@ -28,7 +28,7 @@ Re-sync your daemon from scratch(see below question)
 Close any Kryptokrona-related software, then go to `%APPDATA%`, and delete the `Kryptokrona` folder.\
 Reopen Kryptokronad/the GUI wallet and let it re-sync.
 
-Alternatively, check [this guide](../guides/wallets/Using-Checkpoints/) for instructions on how to use checkpoints for a quicker sync, or try a [remote node](../guides/wallets/Using-Remote-Nodes/)
+Alternatively, check [this guide](https://github.com/kryptokrona/kryptokrona-docs/blob/master/guides/wallets/Using-Checkpoints/README.md) for instructions on how to use checkpoints for a quicker sync, or try a [remote node](https://github.com/kryptokrona/kryptokrona-docs/blob/master/guides/wallets/Using-Remote-Nodes/README.md)
 
 **Q: When I open Kryptokrona on a Mac, I get an error `Illegal instruction: 4`. How can I fix it?**
 
@@ -68,7 +68,7 @@ You can also type `status` in the daemon and press enter to see the current heig
 
 **Q: I think I should have more money in my balance than it is showing, what should I do?**
 
-Re-sync your daemon from scratch(see [here](Frequently-Asked-Questions.md#q-how-can-i-re-sync-the-blockchain)) or use a [remote node](../guides/wallets/Using-Remote-Nodes.md)) if you're using the GUI wallet. If it still doesn't work, then [update](https://github.com/kryptokrona/kryptokrona/releases)
+Re-sync your daemon from scratch(see [here](Frequently-Asked-Questions.md#q-how-can-i-re-sync-the-blockchain)) or use a [remote node](/broken/pages/xNbusqzPgZZnR1j6zHDf)) if you're using the GUI wallet. If it still doesn't work, then [update](https://github.com/kryptokrona/kryptokrona/releases)
 
 * Then, close and reopen xkrwallet and Kryptokronad.
 * Type `reset` in xkrwallet after reopening your wallet file.
@@ -90,11 +90,11 @@ Your wallet is now being optimized. When it finishes, your transaction should be
 
 **Q: How do I send XKR?**
 
-You can check [this out](../guides/wallets/Using-xkrwallet.md##sending-Kryptokrona-transactions) for steps on how to send XKR to someone.
+You can check [this out](https://github.com/kryptokrona/kryptokrona-docs/blob/master/guides/wallets/Using-xkrwallet.md##sending-Kryptokrona-transactions) for steps on how to send XKR to someone.
 
 **Q: How do I send money to exchanges / use payment ID?**
 
-You can check [this out](../guides/wallets/Using-xkrwallet.md#payment-id) for steps on how to send XKR with the payment ID.
+You can check [this out](https://github.com/kryptokrona/kryptokrona-docs/blob/master/guides/wallets/Using-xkrwallet.md#payment-id) for steps on how to send XKR with the payment ID.
 
 **Q: What is mixin?**
 
@@ -111,11 +111,11 @@ Currently it takes a couple of hours. This number will increase as more people u
 
 **Q: Can I speed up the syncing of the blockchain?**
 
-You can sync [with checkpoints](../guides/wallets/Using-Checkpoints.md) (only with xkrwallet) or use a [remote node](../guides/wallets/Using-Remote-Nodes.md)
+You can sync [with checkpoints](https://github.com/kryptokrona/kryptokrona-docs/blob/master/guides/wallets/Using-Checkpoints.md) (only with xkrwallet) or use a [remote node](/broken/pages/xNbusqzPgZZnR1j6zHDf)
 
 **Q: Can I skip the syncing?**
 
-Yes, you can currently use a remote node with xkrwallet and the desktopwallet. The keys stay on your PC, so it's secure. Check [this guide](../guides/wallets/Using-Remote-Nodes.md) for more information.
+Yes, you can currently use a remote node with xkrwallet and the desktopwallet. The keys stay on your PC, so it's secure. Check [this guide](/broken/pages/xNbusqzPgZZnR1j6zHDf) for more information.
 
 **Q: What does it mean if my balance is locked?**
 

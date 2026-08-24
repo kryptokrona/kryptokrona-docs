@@ -5,7 +5,7 @@ description: >-
   network happy and decentralized.
 ---
 
-# 🏊♂ Run a Mining Pool
+# Run a Mining Pool
 
 Thanks to [@glen487](https://github.com/glen487) for this guide!
 

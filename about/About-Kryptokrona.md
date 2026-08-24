@@ -2,6 +2,8 @@
 title: About Kryptokrona
 ---
 
+# About Kryptokrona
+
 Kryptokrona is a fast, easy and private cryptocurrency which allows you to send money to friends and businesses.
 
 One of Kryptokrona's main goals is to make things as simple and as accessible as possible for everyday people, creating a cryptocurrency which is inviting, fun and friendly.
@@ -10,33 +12,21 @@ Kryptokrona's code is forked from the Bytecoin code, and it has majorly the same
 
 Some of the main features of Kryptokrona include:
 
-- On-chain privacy
-
-- Only two decimal places
-
-- Fast transactions
-
-- User-centric developers
-
-- Easy to mine
-
-- Easy to use
-
-- Amazing community
-
-- Send to anyone, around the world
-
+* On-chain privacy
+* Only two decimal places
+* Fast transactions
+* User-centric developers
+* Easy to mine
+* Easy to use
+* Amazing community
+* Send to anyone, around the world
 
 To learn more about us, check out our other various articles, describing:
 
-- [Our Background and History](../Background-and-History.md)
-
-- [Our Community](../Community.md)
-
-- [How to Contribute](../Contributing.md)
-
-- [its Technical Data](../Technical-Data.md)
-
-- [Our Timeline](../Timeline.md)
+* [Our Background and History](https://github.com/kryptokrona/kryptokrona-docs/blob/master/Background-and-History.md)
+* [Our Community](https://github.com/kryptokrona/kryptokrona-docs/blob/master/Community.md)
+* [How to Contribute](https://github.com/kryptokrona/kryptokrona-docs/blob/master/Contributing.md)
+* [its Technical Data](https://github.com/kryptokrona/kryptokrona-docs/blob/master/Technical-Data.md)
+* [Our Timeline](https://github.com/kryptokrona/kryptokrona-docs/blob/master/Timeline.md)
 
 We recommend you check em out, to get acquainted with Kryptokrona!

@@ -2,7 +2,7 @@
 description: This guide goes into detail on how to run a XKR node on a Raspberry Pi
 ---
 
-# 🍇 Run a Node on a Raspberry Pi
+# Run a Node on a Raspberry Pi
 
 ![](../.gitbook/assets/pi-plug-in.gif)
 
@@ -13,7 +13,7 @@ _**For Raspberry Pi 3B+:**_<br>
 `unzip kryptokrona-rpi-3b.zip`<br>
 
 \
-&#xNAN;_**For Raspberry Pi 4B:**_
+_**For Raspberry Pi 4B:**_
 
 `wget https://kryptokrona.se/downloads/xkr-rpi-4b.zip`\
 \

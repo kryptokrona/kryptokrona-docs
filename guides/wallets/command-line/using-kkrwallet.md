@@ -38,11 +38,11 @@ unzip kryptokrona-...-linux.zip
 
 Running `kryptokrona` will start the _kryptokrona_ network daemon, which will connect to the network and begin downloading and verifying the kryptokrona blockchain.
 
-Because the blockchain is constantly growing, the file size always increases (the blockchain is currently over 35 GB), and _kryptokrona must verify every block_, which is both CPU and disk intensive. An SSD with at least this much free disk space is recommended, unless you plan to use [remote nodes](../Using-Remote-Nodes.md#kkrwallet).
+Because the blockchain is constantly growing, the file size always increases (the blockchain is currently over 35 GB), and _kryptokrona must verify every block_, which is both CPU and disk intensive. An SSD with at least this much free disk space is recommended, unless you plan to use [remote nodes](/broken/pages/xNbusqzPgZZnR1j6zHDf#kkrwallet).
 
 #### Using Checkpoints
 
-In **versions 0.4.3+** you can sync a fresh chain from block 0 much quicker by using checkpoints. Follow [this guide](../../../docs/guides/Using-Checkpoints/) to learn more.
+In **versions 0.4.3+** you can sync a fresh chain from block 0 much quicker by using checkpoints. Follow [this guide](https://github.com/kryptokrona/kryptokrona-docs/blob/master/docs/guides/Using-Checkpoints/README.md) to learn more.
 
 #### Windows
 
@@ -53,7 +53,7 @@ Run the `kryptokrona.exe` executable extracted from the Windows binary zip:
 Run the `kryptokrona` binary extracted from the `.zip` download:
 
 ```bash
-./kryptokrona
+./kryptokronad
 ```
 
 ### Using xkrwallet
@@ -62,12 +62,12 @@ With `kryptokrona` still running in the background or another terminal/shell/com
 
 **Windows**
 
-Run the x`krwallet-beta.exe` executable from the extracted folder.
+Run the `xkrwallet.exe` executable from the extracted folder.
 
 **Mac / Linux**
 
 ```bash
-./xkrwallet-beta
+./xkrwallet
 ```
 
 #### Using xkrwallet commands
@@ -164,7 +164,7 @@ Finished scanning blockchain!
  6	help                     List this help message
  7	transfer                 Send XKR to someone
 
-[KKR newWallet]: 
+[XKR newWallet]: 
 ```
 
 #### Viewing Wallet Address
@@ -172,9 +172,9 @@ Finished scanning blockchain!
 To view a wallet's public address; at the menu, type `address` and press `enter`.
 
 ```
-[KKR newWallet]: address
+[XKR newWallet]: address
 SEKRuxqfDys1pfQ1omkHMVViY4sFh6My5Ff3HBY8XPp3cJBkEfD7romVyzKug3mb9NNR4A8kEjZxZ9CHUgWckBSpPfbxnWAQUGL
-[KKR newWallet]:
+[XKR newWallet]:
 ```
 
 #### Exporting Keys
@@ -188,12 +188,12 @@ In the event of a lost or corrupted wallet file, computer crash, etc., the _View
 To print your keys; at the menu type `backup` and press `enter`. The _View Key_ and _Spend Key_ will appear. Copy them and store them **safely and securely**.
 
 ```
-[KKR newWallet]: backup
+[XKR newWallet]: backup
 Enter password: **********
 Private spend key: 41c834f7c26e12373e5c39a9c9b1f8beb665324ad0d098cabda1234567b5d30f
 Private view key: df51e85dfa4fe48d0123475ec966124b1234c98abda6789060fe6d69b503490b
 Mnemonic seed: truth neon vials ignore butterfly cactus soggy vibrate meant wizard awesome fountain axis skater itself egotistic pumpkins ultimate foaming fatal request sifting merger egotistic fierce
-[KKR newWallet]:
+[XKR newWallet]:
 ```
 
 #### Viewing Wallet Balance
@@ -201,11 +201,11 @@ Mnemonic seed: truth neon vials ignore butterfly cactus soggy vibrate meant wiza
 To view your wallet's balance; at the menu, type `balance` and press `enter`:
 
 ```
-[KKR newWallet]: balance
+[XKR newWallet]: balance
 Available balance: 1000.00 XKR
 Locked (unconfirmed) balance: 100.00 XKR
 Total balance: 1100.00 XKR
-[KKR newWallet]:
+[XKR newWallet]:
 ```
 
 #### Sending kryptokrona Transactions
@@ -230,13 +230,13 @@ Fusion transactions take all your (small) incoming payments and combine them int
 To optimize your wallet, type `optimize` and press `enter`:
 
 ```
-[KKR newWallet]: optimize
+[XKR newWallet]: optimize
 Attempting to optimize your wallet to allow you to send large amounts at once. 
 This may take a very long time!
 Do you want to proceed? (Y/n): y
 Running optimization round 1...
 Full optimization completed!
-[KKR newWallet]: 
+[XKR newWallet]: 
 ```
 
 **Payment ID**
@@ -254,7 +254,7 @@ It is important to properly save the wallet data before exiting x&#x6B;_&#x72;wa
 To save a wallet's data and exit; at the menu, type `exit` and press `enter`:
 
 ```
-[KKR newWallet]: exit
+[XKR newWallet]: exit
 Shutting down...
 Saving wallet file...
 Shutting down wallet interface...
@@ -314,7 +314,7 @@ Finished scanning blockchain!
  6	help                     List this help message
  7	transfer                 Send XKR to someone
 
-[KKR newWallet2]: 
+[XKR newWallet2]: 
 ```
 
 **25 Word Mnemonic Seed**
@@ -369,7 +369,7 @@ What would you like to do?: 2
  6	help                     List this help message
  7	transfer                 Send XKR to someone
 
-[KKR test]: 
+[XKR test]: 
 ```
 
 #### Other Commands
@@ -385,7 +385,7 @@ To see a list of additional commands not already covered; at the menu type `adva
  6	help                     List this help message
  7	transfer                 Send XKR to someone
 
-[KKR newWallet]: advanced
+[XKR newWallet]: advanced
 
  8	ab_add                   Add a person to your address book
  9	ab_delete                Delete a person in your address book
@@ -409,7 +409,7 @@ To see a list of additional commands not already covered; at the menu type `adva
 To see the main menu of commands; type `help` and press `enter`:
 
 ```
-[KKR newWallet]: help
+[XKR newWallet]: help
 
  1	advanced                 List available advanced commands
  2	address                  Display your payment address

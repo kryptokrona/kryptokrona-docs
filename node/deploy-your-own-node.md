@@ -5,7 +5,7 @@ description: >-
   with Docker.
 ---
 
-# 🚢 Deploy node with Docker
+# Deploy node with Docker
 
 ## Get the script
 

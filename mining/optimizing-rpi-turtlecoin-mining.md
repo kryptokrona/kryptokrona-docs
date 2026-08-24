@@ -2,9 +2,9 @@
 title: Optimizing Mining on a RPi
 ---
 
-# 📒 Notes
+# Notes
 
-Looking for a more general SBC setup guide? Check out [this guide](../../docs/guides/Mining-with-SBC/).
+Looking for a more general SBC setup guide? Check out [this guide](https://github.com/kryptokrona/kryptokrona-docs/blob/master/docs/guides/Mining-with-SBC/README.md).
 
 **Overview**
 

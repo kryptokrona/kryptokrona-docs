@@ -2,13 +2,13 @@
 title: Making a Paper Wallet
 ---
 
-# 📜 Making a Paper Wallet
+# Making a Paper Wallet
 
 The main purpose of a paper wallet is to quickly create a wallet to start receiving funds.
 
 **You will not be able to spend or send your funds to other people until you set up a CLI, GUI or Web Wallet.**
 
-You can view a guide on how to make a wallet [here](../../docs/guides/Making-a-Wallet/)
+You can view a guide on how to make a wallet [here](https://github.com/kryptokrona/kryptokrona-docs/blob/master/docs/guides/Making-a-Wallet/README.md)
 
 There are two options for a paper wallet.
 

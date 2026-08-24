@@ -4,7 +4,7 @@ description: >-
   expert users/developers)
 ---
 
-# 👾 Command Line
+# Command Line
 
 {% tabs %}
 {% tab title="Terminal/CLI" %}
