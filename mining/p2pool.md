@@ -1,8 +1,14 @@
 ---
-description: Mine Kryptokrona on the decentralized p2pool — no pool operator, paid straight to your wallet.
+description: >-
+  Mine Kryptokrona on the decentralized p2pool — no pool operator, paid straight
+  to your wallet.
 ---
 
-# 🌀 p2pool
+# p2pool
+
+<figure><img src="../.gitbook/assets/p2pool.png" alt="" width="375"><figcaption></figcaption></figure>
+
+
 
 > ⚠️ **Alpha software.** Kryptokrona p2pool is brand new and still being tested. Great for trying out and helping the network — just don't rely on it for anything critical yet.
 
@@ -19,13 +25,13 @@ The trade-off is that you run one small extra program (p2pool) yourself. This gu
 
 ### p2pool vs. a normal pool
 
-| | Normal pool | p2pool |
-| --- | --- | --- |
-| Who holds your coins? | The pool operator, until you withdraw | **Nobody — paid straight to you** |
-| Payout | Manual/minimum withdrawal | **Automatic, on every block** |
-| Fee | Usually 0.1%–2% | **~0%** |
-| Trust | You trust the operator | **Trustless** |
-| Setup | Point miner at a URL | Run a small program + point miner at it |
+|                       | Normal pool                           | p2pool                                  |
+| --------------------- | ------------------------------------- | --------------------------------------- |
+| Who holds your coins? | The pool operator, until you withdraw | **Nobody — paid straight to you**       |
+| Payout                | Manual/minimum withdrawal             | **Automatic, on every block**           |
+| Fee                   | Usually 0.1%–2%                       | **\~0%**                                |
+| Trust                 | You trust the operator                | **Trustless**                           |
+| Setup                 | Point miner at a URL                  | Run a small program + point miner at it |
 
 ## What you'll need
 
@@ -51,12 +57,12 @@ Grab the file for your operating system from the latest release:
 
 👉 [**github.com/kryptokrona/p2pool/releases**](https://github.com/kryptokrona/p2pool/releases)
 
-| Your system | File to download |
-| --- | --- |
-| Windows | `p2pool-msys2-gcc.exe` |
-| macOS (Apple Silicon, M1–M4) | `p2pool-macos-aarch64` |
-| macOS (Intel) | `p2pool-macos` |
-| Linux | `p2pool-ubuntu-24.04-gcc-14` |
+| Your system                  | File to download             |
+| ---------------------------- | ---------------------------- |
+| Windows                      | `p2pool-msys2-gcc.exe`       |
+| macOS (Apple Silicon, M1–M4) | `p2pool-macos-aarch64`       |
+| macOS (Intel)                | `p2pool-macos`               |
+| Linux                        | `p2pool-ubuntu-24.04-gcc-14` |
 
 Put it in its own folder. On macOS/Linux, make it runnable first:
 
