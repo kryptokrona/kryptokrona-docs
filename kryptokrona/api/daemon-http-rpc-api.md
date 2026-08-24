@@ -2,31 +2,25 @@
 title: Daemon HTTP RPC API
 ---
 
+# Daemon HTTP RPC API
+
 The daemon HTTP RPC is a HTTP server which provides additional information regarding network and daemon connections.
 
-
-## Installation
-
-<!--DOCUSAURUS_CODE_TABS-->
-
-<!--NodeJS-->
+### Installation
 
 ```
 npm i kryptokrona-rpc
 ```
 
+### Interacting with the API
 
-<!--END_DOCUSAURUS_CODE_TABS-->
-
-## Interacting with the API
-
-### API endpoint example
+#### API endpoint example
 
 ```
 http://localhost:11898
 ```
 
-### Configuration and Instantiation
+#### Configuration and Instantiation
 
 To start the Daemon JSON RPC API server at `http://localhost:11898`, run:
 
@@ -52,7 +46,6 @@ and, locally at
 
 `http://localhost:11898`
 
-
 To make a HTTP RPC request to your Daemon RPC you should use a GET request that looks like this:
 
 `http://<service address>:<service port>`
@@ -62,9 +55,6 @@ To make a HTTP RPC request to your Daemon RPC you should use a GET request that 
 | `<service address>` | IP of Daemon RPC, if it is located on local machine it is either 127.0.0.1 or localhost                  |
 | `<service port>`    | Daemon RPC port, by default it is bound to 11898 port, but it can be manually bound to any port you want |
 
-<!--DOCUSAURUS_CODE_TABS-->
-
-<!--NodeJS-->
 ```js
 const kryptokrona = require('kryptokrona-rpc').kryptokrona
 
@@ -76,9 +66,7 @@ const daemon = new kryptokrona({
 })
 ```
 
-<!--END_DOCUSAURUS_CODE_TABS-->
-
-## getheight
+### getheight
 
 `getheight()` returns the height of the daemon and the network
 
@@ -86,20 +74,16 @@ No Input.
 
 **Output**
 
-| Argument       | Description            | Format |
-| -------------- | ---------------------- | ------ |
-| height         | Current daemon height  | int    |
-| network_height | Current Network height | int    |
-| status         | Status of request      | string |
+| Argument        | Description            | Format |
+| --------------- | ---------------------- | ------ |
+| height          | Current daemon height  | int    |
+| network\_height | Current Network height | int    |
+| status          | Status of request      | string |
 
-<!--DOCUSAURUS_CODE_TABS-->
-
-<!--Shell-->
 ```shell
 curl http://localhost:11898/getheight
 ```
 
-<!--NodeJS-->
 ```js
 daemon.getHeight().then((result) => {
   // do something
@@ -108,9 +92,7 @@ daemon.getHeight().then((result) => {
 })
 ```
 
-<!--END_DOCUSAURUS_CODE_TABS-->
-
-#### Expected Output
+**Expected Output**
 
 ```json
 {
@@ -120,8 +102,7 @@ daemon.getHeight().then((result) => {
 }
 ```
 
-## getinfo
-
+### getinfo
 
 `getinfo()` returns information related to the network and daemon connection
 
@@ -129,39 +110,34 @@ No Input.
 
 **Output**
 
-| Argument                   | Description                                    | Format |
-| -------------------------- | ---------------------------------------------- | ------ |
-| alt_blocks_count           | the number of blocks on alternative (split) chains since the start of the daemon | int    |
-| difficulty                 | difficulty of the top block                    | int    |
-| grey_peerlist_size         | list of peers that were alive but not any more (offline) | int    |
-| hashrate                   | estimated network hashrate for given block (top block if general chain info) = difficulty / 30s (block time target)                        | int    |
-| height                     | daemon height. index of the last locally stored block. different from network_height when syncing the network, or when just found a block. | int    |
-| incoming_connections_count | Number of peers connected to and pulling from this daemon node.   | int    |
-| last_known_block_index     | ?                                              | int    |
-| major_version              | blockchain major version. such as hash algorithm change   | int    |
-| minor_version              | blockchain minor version. for example, difficulty algo adjustment. rarely used. | int    |
-| network_height             | blockchain length reported by peers. the longest value given by any connected peer.  | int    |
-| outgoing_connections_count | number of outgoing connections from the daemon | int    |
-| start_time                 | the time when this daemon was started. epoch time in seconds | int    |
-| status                     | Status of request                              | string |
-| supported_height           | the height of the blockchain for supported fork. if forked after this block height, this version does not support it | int    |
-| synced                     | sync status. does the height of this node match the height of the network? | bool   |
-| testnet                    | whether the daemon is on testnet or not        | bool   |
-| tx_count                   | Total number of non-coinbase transaction in the chain.  | int    |
-| tx_pool_size               | Number of transactions that have been broadcast but not included in a block. | int    |
-| upgrade_heights            | pre-determined fork heights. blockchain heights where it forked. | array  |
-| version                    | version of the daemon software                  | string |
-| white_peerlist_size        | list of online peers                           | int    |
+| Argument                     | Description                                                                                                                                 | Format |
+| ---------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------- | ------ |
+| alt\_blocks\_count           | the number of blocks on alternative (split) chains since the start of the daemon                                                            | int    |
+| difficulty                   | difficulty of the top block                                                                                                                 | int    |
+| grey\_peerlist\_size         | list of peers that were alive but not any more (offline)                                                                                    | int    |
+| hashrate                     | estimated network hashrate for given block (top block if general chain info) = difficulty / 30s (block time target)                         | int    |
+| height                       | daemon height. index of the last locally stored block. different from network\_height when syncing the network, or when just found a block. | int    |
+| incoming\_connections\_count | Number of peers connected to and pulling from this daemon node.                                                                             | int    |
+| last\_known\_block\_index    | ?                                                                                                                                           | int    |
+| major\_version               | blockchain major version. such as hash algorithm change                                                                                     | int    |
+| minor\_version               | blockchain minor version. for example, difficulty algo adjustment. rarely used.                                                             | int    |
+| network\_height              | blockchain length reported by peers. the longest value given by any connected peer.                                                         | int    |
+| outgoing\_connections\_count | number of outgoing connections from the daemon                                                                                              | int    |
+| start\_time                  | the time when this daemon was started. epoch time in seconds                                                                                | int    |
+| status                       | Status of request                                                                                                                           | string |
+| supported\_height            | the height of the blockchain for supported fork. if forked after this block height, this version does not support it                        | int    |
+| synced                       | sync status. does the height of this node match the height of the network?                                                                  | bool   |
+| testnet                      | whether the daemon is on testnet or not                                                                                                     | bool   |
+| tx\_count                    | Total number of non-coinbase transaction in the chain.                                                                                      | int    |
+| tx\_pool\_size               | Number of transactions that have been broadcast but not included in a block.                                                                | int    |
+| upgrade\_heights             | pre-determined fork heights. blockchain heights where it forked.                                                                            | array  |
+| version                      | version of the daemon software                                                                                                              | string |
+| white\_peerlist\_size        | list of online peers                                                                                                                        | int    |
 
-
-<!--DOCUSAURUS_CODE_TABS-->
-
-<!--Shell-->
 ```shell
 curl http://localhost:11898/getinfo
 ```
 
-<!--NodeJS-->
 ```js
 daemon.getInfo().then((result) => {
   // do something
@@ -170,9 +146,7 @@ daemon.getInfo().then((result) => {
 })
 ```
 
-<!--END_DOCUSAURUS_CODE_TABS-->
-
-#### Expected Output
+**Expected Output**
 
 ```json
 {
@@ -206,31 +180,24 @@ daemon.getInfo().then((result) => {
 }
 ```
 
-## gettransactions
+### gettransactions
 
-`gettransactions()` method returns list of missed transactions.
-"Missed transactions" are invalid transactions in the sense that they do not exist in the blockchain.
-Input should include the transaction hashes to check. Try figuring that out.
-This method is likely to go away in near future.
+`gettransactions()` method returns list of missed transactions. "Missed transactions" are invalid transactions in the sense that they do not exist in the blockchain. Input should include the transaction hashes to check. Try figuring that out. This method is likely to go away in near future.
 
 No Input
 
 **Output**
 
-| Argument   | Description                                | Format |
-| ---------- | ------------------------------------------ | ------ |
-| missed_tx  | array of missed transactions               | array  |
-| status     | Status of request                          | string |
-| txs_as_hex | array of hex values of missed transactions | array  |
+| Argument     | Description                                | Format |
+| ------------ | ------------------------------------------ | ------ |
+| missed\_tx   | array of missed transactions               | array  |
+| status       | Status of request                          | string |
+| txs\_as\_hex | array of hex values of missed transactions | array  |
 
-<!--DOCUSAURUS_CODE_TABS-->
-
-<!--Shell-->
 ```shell
 curl http://localhost:11898/gettransactions
 ```
 
-<!--NodeJS-->
 ```js
 daemon.getTransactions({
   hashes: [
@@ -244,10 +211,7 @@ daemon.getTransactions({
 })
 ```
 
-
-<!--END_DOCUSAURUS_CODE_TABS-->
-
-#### Expected Output
+**Expected Output**
 
 ```json
 {
@@ -257,7 +221,7 @@ daemon.getTransactions({
 }
 ```
 
-## getpeers
+### getpeers
 
 `getpeers()` method returns the list of peers connected to the daemon
 
@@ -265,19 +229,15 @@ No Input.
 
 **Output**
 
-| Argument | Description                        | Format |
-| -------- | ---------------------------------- | ------ |
-| peers    | array of peers (peer_ip:peer_port) | array  |
-| status   | Status of request                  | string |
+| Argument | Description                          | Format |
+| -------- | ------------------------------------ | ------ |
+| peers    | array of peers (peer\_ip:peer\_port) | array  |
+| status   | Status of request                    | string |
 
-<!--DOCUSAURUS_CODE_TABS-->
-
-<!--Shell-->
 ```shell
 curl http://localhost:11898/getpeers
 ```
 
-<!--NodeJS-->
 ```js
 daemon.getPeers().then((result) => {
   // do something
@@ -286,9 +246,7 @@ daemon.getPeers().then((result) => {
 })
 ```
 
-<!--END_DOCUSAURUS_CODE_TABS-->
-
-#### Expected Output
+**Expected Output**
 
 ```json
 {
@@ -302,7 +260,7 @@ daemon.getPeers().then((result) => {
 }
 ```
 
-## feeinfo
+### feeinfo
 
 `feeinfo()` method returns information about the fee set for the remote node.
 
@@ -316,15 +274,10 @@ No Input.
 | amount   | fee amount                       | int    |
 | status   | Status of fees for the node      | string |
 
-
-<!--DOCUSAURUS_CODE_TABS-->
-
-<!--Shell-->
 ```shell
 curl http://localhost:11898/feeinfo
 ```
 
-<!--NodeJS-->
 ```js
 daemon.feeInfo().then((result) => {
   // do something
@@ -333,9 +286,7 @@ daemon.feeInfo().then((result) => {
 })
 ```
 
-<!--END_DOCUSAURUS_CODE_TABS-->
-
-#### Expected Output
+**Expected Output**
 
 ```json
 {
@@ -345,11 +296,10 @@ daemon.feeInfo().then((result) => {
 }
 ```
 
-## License
+### License
 
-[![Creative Commons License](../../../assets/cc-by-sa.png)](https://creativecommons.org/licenses/by-sa/3.0/)
+[![Creative Commons License](https://github.com/kryptokrona/kryptokrona-docs/blob/master/assets/cc-by-sa.png)](https://creativecommons.org/licenses/by-sa/3.0/)
 
 The content in this document was originally written by the [Bytecoin (BCN) Developers](https://bytecoin.org/). It is licensed under the [CC BY SA 3.0 license](https://creativecommons.org/licenses/by-sa/3.0/). The source material can be found at the [Bytecoin Wiki](https://github.com/bcndev/bytecoin).
 
 Also of note, kryptokrona developers have altered and adapted the content to suit our implementation of the API. This was done independently of the Bytecoin development team. They neither endorse or acknowledge our changes. Feel free to adopt or change our content as per the [CC BY SA 3.0 license](https://creativecommons.org/licenses/by-sa/3.0/) requirements.
-

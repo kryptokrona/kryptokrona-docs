@@ -2,7 +2,7 @@
 title: Kryptokrona config
 ---
 
-# ✏ How to configure the node?
+# How to configure the node?
 
 Run kryptokronad with arg `--help` will print all options.
 

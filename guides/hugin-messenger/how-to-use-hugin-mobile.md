@@ -1,4 +1,4 @@
-# 📱 How to use Hugin Mobile
+# How to use Hugin Mobile
 
 ## Download the app
 

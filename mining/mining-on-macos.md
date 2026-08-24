@@ -1,6 +1,5 @@
 ---
 description: Learn how to start mining on your mac computer, it's very fast and easy!
-icon: apple
 ---
 
 # Mining on macOS

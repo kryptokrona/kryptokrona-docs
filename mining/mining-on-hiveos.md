@@ -2,11 +2,11 @@
 description: This guide takes you through the process of setting up XKR mining on HiveOS
 ---
 
-# 🍯 Mining on HiveOS
+# Mining on HiveOS
 
 Before we begin, you need to make sure you have the following:
 
-* A HiveOS account and a connected mining rig ([Click here for a guide on how to set this up](https://hiveon.com/knowledge-base/getting\_started/quick\_install/))
+* A HiveOS account and a connected mining rig ([Click here for a guide on how to set this up](https://hiveon.com/knowledge-base/getting_started/quick_install/))
 * A kryptokrona wallet ([Click here to generate one](https://explorer.kryptokrona.se/tools.html))
 
 If you have fulfilled the requirements above, go to your HiveOS dashboard.

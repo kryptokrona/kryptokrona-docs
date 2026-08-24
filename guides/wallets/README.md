@@ -1,2 +1,2 @@
-# 👛 Wallets
+# Wallets
 

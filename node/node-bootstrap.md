@@ -4,7 +4,7 @@ description: >-
   the initial sync a lot faster!
 ---
 
-# 🥾 Node bootstrap
+# Node bootstrap
 
 Starting in your home folder (cd \~), the first order of business is to download our bootstrap with this command:
 

@@ -6,7 +6,7 @@ description: >-
   for extra functionality
 ---
 
-# 🦅 Deploy a Hugin Full Node with Docker
+# Deploy a Hugin Full Node with Docker
 
 ## Setup
 

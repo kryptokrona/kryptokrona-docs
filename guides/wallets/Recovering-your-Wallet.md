@@ -2,7 +2,7 @@
 title: Recovering your Wallet
 ---
 
-# 🚑 Recovering your Wallet
+# Recovering your Wallet
 
 In case you have lost your wallet, but still have either your private spend and view keys _or_ your 25 word mnemonic seed, you can still recover it. Below are the guides for various types of wallets.
 

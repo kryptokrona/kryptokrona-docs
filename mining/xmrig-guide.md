@@ -2,7 +2,7 @@
 title: Mining with XMRig
 ---
 
-# 🚚 Mining with XMRig
+# Mining with XMRig
 
 XMRig uses separate miners for CPU and GPU, you need to download a CPU and GPU miner separately and run two separate instances on your computer.
 
@@ -43,8 +43,8 @@ Needs to be compiled. Instructions [here](https://github.com/xmrig/xmrig/wiki/OS
 * `"url: "[pool address]"`
 * `"user: "[wallet address]"`
 * Instead of `[wallet address]`, simply paste your Kryptokrona wallet's address. Make sure to keep the `"`!
-  * If you don't have one yet, you can find out how to create a wallet [here](../../docs/wallets/Making-a-Wallet/)
-* In place of `[pool address]`, you'll need to choose a pool to mine towards. You can learn more about them [here](../../docs/guides/Pools/). Make sure to keep the `"`s!
+  * If you don't have one yet, you can find out how to create a wallet [here](https://github.com/kryptokrona/kryptokrona-docs/blob/master/docs/wallets/Making-a-Wallet/README.md)
+* In place of `[pool address]`, you'll need to choose a pool to mine towards. You can learn more about them [here](https://github.com/kryptokrona/kryptokrona-docs/blob/master/docs/guides/Pools/README.md). Make sure to keep the `"`s!
 
 1. Save the file and:
 

@@ -12,11 +12,11 @@ One of Kryptokrona's main goals is to make things as simple and as accessible as
 
 ### Quick Navigation
 
-|               **About Kryptokrona**               |                                 **Wallets**                                 |                    **Mining**                    |                   **Contributing**                   |
-| :-----------------------------------------------: | :-------------------------------------------------------------------------: | :----------------------------------------------: | :--------------------------------------------------: |
-| ![Logo](.gitbook/assets/xkr-logo-color-small.png) |                    ![Wallets](.gitbook/assets/wallet.png)                   |       ![Mining](.gitbook/assets/mining.png)      |            ![Dev](.gitbook/assets/dev.png)           |
-|            [About Kryptokrona](about/)            |         [Setting up a New Wallet](guides/wallets/Making-a-Wallet.md)        |      [Mining Kryptokrona](mining/mining.md)      | [Contributing to Kryptokrona](about/Contributing.md) |
-|   Learn more about Kryptokrona and the community  | A guide on setting up a Kryptokrona wallet to start receiving some turtles! | A step-by-step guide to start mining Kryptokrona |      Information on contributing to Kryptokrona      |
+|                                       **About Kryptokrona**                                      |                                 **Wallets**                                 |                    **Mining**                    |                   **Contributing**                   |
+| :----------------------------------------------------------------------------------------------: | :-------------------------------------------------------------------------: | :----------------------------------------------: | :--------------------------------------------------: |
+|                         ![Logo](.gitbook/assets/xkr-logo-color-small.png)                        |                    ![Wallets](.gitbook/assets/wallet.png)                   |       ![Mining](.gitbook/assets/mining.png)      |            ![Dev](.gitbook/assets/dev.png)           |
+| [About Kryptokrona](https://github.com/kryptokrona/kryptokrona-docs/blob/master/about/README.md) |         [Setting up a New Wallet](guides/wallets/Making-a-Wallet.md)        |      [Mining Kryptokrona](mining/mining.md)      | [Contributing to Kryptokrona](about/Contributing.md) |
+|                          Learn more about Kryptokrona and the community                          | A guide on setting up a Kryptokrona wallet to start receiving some turtles! | A step-by-step guide to start mining Kryptokrona |      Information on contributing to Kryptokrona      |
 
 ### Have Questions or Need Help?
 

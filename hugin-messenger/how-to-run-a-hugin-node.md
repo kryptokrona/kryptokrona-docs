@@ -2,7 +2,7 @@
 description: This page will help you get started with starting a Hugin Node.
 ---
 
-# 🦅 How to run a Hugin Node
+# How to run a Hugin Node
 
 ### What are Hugin Nodes?
 
