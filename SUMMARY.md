@@ -52,6 +52,7 @@
   * [How to configure the node?](node/config.md)
   * [Node bootstrap](node/node-bootstrap.md)
 * [⛏️ Mining](mining/README.md)
+  * [p2pool](mining/p2pool.md)
   * [Get started with mining](mining/get-started-with-mining.md)
   * [Solo-mining Kryptokrona](mining/cpu-solo-mining.md)
   * [Mining with a SBC](mining/mining-with-sbc.md)
