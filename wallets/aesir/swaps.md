@@ -2,7 +2,7 @@
 
 Aesir can swap directly between **Bitcoin** and **XKR** using **atomic swaps** — a trustless, peer‑to‑peer exchange where neither side can run off with the other's money. No exchange account, no custodian, no wrapped or bridged tokens, no KYC. Just two wallets and the two blockchains.
 
-> 📷 **Screenshot:** The Swap tab — maker list on one side, amount entry and quote on the other. _(add to `assets/aesir/swap-overview.png`)_
+![The Swap tab — maker list on one side, amount entry and quote on the other](../../assets/aesir/swap-overview.png)
 
 ## Why atomic swaps?
 
@@ -47,9 +47,9 @@ Anyone can be either. Most people will use the **taker** side to buy XKR with Bi
 4. Press **Swap** and confirm.
 5. Follow the **timeline**: your BTC lock is broadcast and waits for confirmation, the maker locks XKR, and then the swap redeems — the XKR lands in your wallet.
 
-> 📷 **Screenshot:** Confirm‑swap dialog (rate, amount, network fee, fiat value). _(add to `assets/aesir/swap-confirm.png`)_
+![Confirm‑swap dialog — rate, amount, network fee, fiat value](../../assets/aesir/swap-confirm.png)
 
-> 📷 **Screenshot:** The swap timeline in progress (BTC locked → waiting for confirmation → XKR locked → redeemed). _(add to `assets/aesir/swap-timeline.png`)_
+![The swap timeline in progress — BTC locked → waiting for confirmation → XKR locked → redeemed](../../assets/aesir/swap-timeline.png)
 
 **Tips**
 
@@ -70,7 +70,7 @@ Beyond the plain maker list, Aesir has a **market‑maker explorer** — a live,
 
 Switch between the simple **list** and the **book / explorer** view from the Swap tab. Pick a maker straight from the explorer to start a swap.
 
-> 📷 **Screenshot:** The market‑maker explorer — makers ranked by price with the cumulative sell‑book depth chart. _(add to `assets/aesir/maker-explorer.png`)_
+![The market‑maker explorer — makers ranked by price with the cumulative sell‑book depth chart](../../assets/aesir/makerbook.png)
 
 ---
 
@@ -85,7 +85,7 @@ Running as a maker lets you earn Bitcoin by providing XKR liquidity to takers.
 3. Aesir starts the maker engine and **advertises you on the peer‑to‑peer board**, so takers can discover and reach you — even behind NAT, with no server to run.
 4. When a taker starts a swap, Aesir handles the whole exchange automatically. Your XKR is locked, and once the swap completes you receive BTC.
 
-> 📷 **Screenshot:** Maker / market‑making controls (price, spread, status). _(add to `assets/aesir/maker-controls.png`)_
+![Maker / market‑making controls — price, spread, status](../../assets/aesir/maker-controls.png)
 
 **Good to know**
 

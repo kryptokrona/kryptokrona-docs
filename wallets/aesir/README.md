@@ -2,7 +2,7 @@
 
 **Aesir** is the official Kryptokrona desktop wallet. It's a cross‑platform app (Windows, macOS, Linux) for managing your **XKR**, and it's the first wallet with built‑in, trustless **Bitcoin ⇄ XKR atomic swaps** — swap between BTC and XKR peer‑to‑peer, with no exchange, custodian, or wrapped tokens.
 
-> 📷 **Screenshot:** The Aesir dashboard (balance, recent activity, price chart). _(add to `assets/aesir/dashboard.png`)_
+![The Aesir dashboard — balance, recent activity, price chart](../../assets/aesir/dashboard.png)
 
 ## Features
 
@@ -38,7 +38,7 @@ Grab the latest build for your platform from the releases page:
 3. **Write down your recovery seed** and store it offline — it's the only way to restore your funds.
 4. Let the wallet sync with a node, and you're ready to send, receive, and swap.
 
-> 📷 **Screenshot:** The create/import wallet screen. _(add to `assets/aesir/create-wallet.png`)_
+![The create / import wallet screen](../../assets/aesir/create-wallet.png)
 
 ## Next steps
 
